@@ -121,29 +121,22 @@ export default function ProjectsPage({ setActivePage, colorPalette = 4 }) {
   const rest     = filtered.filter((p) => !p.featured)
 
   return (
-    <main style={{ backgroundColor: 'var(--th-bg)' }}>
+    <main className="pt-20" style={{ backgroundColor: 'var(--th-bg)' }}>
 
-      {/* ── Hero ── */}
-      <section className="relative py-36 overflow-hidden" style={{ background: 'linear-gradient(135deg,var(--th-primary-darker) 0%,var(--th-primary) 50%,var(--th-accent) 100%)' }}>
-        <div className="absolute inset-0 opacity-10">
-          <svg viewBox="0 0 1400 500" className="w-full h-full" preserveAspectRatio="xMidYMid slice">
-            <circle cx="1100" cy="100" r="350" fill="white"/>
-            <circle cx="200" cy="400" r="200" fill="white"/>
-          </svg>
-        </div>
-        <div className="relative z-10 max-w-[1400px] mx-auto px-6 lg:px-14 pt-10">
-          <p className="text-[11px] font-black tracking-[0.35em] uppercase mb-6 flex items-center gap-3" style={{ color: 'var(--th-accent)' }}>
-            <span className="inline-block w-8 h-px" style={{ backgroundColor: 'var(--th-accent)' }} />
-            Proje Portföyümüz
-          </p>
-          <div className="grid lg:grid-cols-2 gap-12 items-end">
-            <h1 className="font-black text-white leading-[1.0]" style={{ fontSize: 'clamp(2.5rem,5.5vw,5rem)' }}>
-              Dünyaya<br />
-              <span style={{ color: 'var(--th-accent)' }}>İz Bırakan</span><br />
-              Projeler
-            </h1>
+      {/* ── Page Hero ── */}
+      <section className="py-28" style={{ backgroundColor: 'var(--th-primary)' }}>
+        <div className="max-w-7xl mx-auto px-6 lg:px-12">
+          <div className="grid lg:grid-cols-2 gap-16 items-end">
+            <div>
+              <p className="text-xs font-bold tracking-[0.3em] uppercase mb-4" style={{ color: 'var(--th-text)' }}>
+                Proje Portföyümüz
+              </p>
+              <h1 className="text-5xl lg:text-6xl font-black text-white leading-[1.02]">
+                Dünyaya<br />İz Bırakan<br />Projeler
+              </h1>
+            </div>
             <p className="text-white/50 text-lg leading-relaxed">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
             </p>
           </div>
         </div>

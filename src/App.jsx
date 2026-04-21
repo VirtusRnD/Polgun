@@ -70,11 +70,11 @@ const PAGES = {
 // Sayfa-spesifik renk paletleri
 const PAGE_COLOR_PALETTES = {
   home: 1,         // Orijinal renk paleti
-  products: 4,     // Soft Blue
-  services: 3,     // Deep Navy
-  projects: 5,     // Default
-  about: 6,        // Default
-  contact: 2,      // Default
+  products: 1,     // Soft Blue
+  services: 1,     // Deep Navy
+  projects: 1,     // Default
+  about: 1,        // Default
+  contact: 1,      // Default
 }
 
 export default function App() {

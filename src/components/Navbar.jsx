@@ -299,23 +299,12 @@ export default function Navbar({ activePage, setActivePage, colorPalette }) {
             onClick={() => handleNav('contact')}
             className={`text-sm font-semibold px-5 py-2 rounded-full transition-all duration-200`}
             style={isLightNavbar ? {
-              color: 'var(--th-primary-darker)',
+              color: 'var(--th-text)',
               textShadow: '0 1px 2px rgba(255,255,255,0.5)',
             } : {
-              color: 'var(--th-accent)',
+              color: 'var(--th-text)',
             }}
-            onMouseEnter={(e) => {
-              if (isDarkNavbar) {
-                e.currentTarget.style.color = 'var(--th-accent)'
-                e.currentTarget.style.opacity = '0.8';
-              }
-            }}
-            onMouseLeave={(e) => {
-              if (isDarkNavbar) {
-                e.currentTarget.style.color = 'var(--th-accent)'
-                e.currentTarget.style.opacity = '1';
-              }
-            }}
+            
           >
             İletişim
           </button>

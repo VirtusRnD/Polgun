@@ -144,50 +144,40 @@ export default function ProductsPage({ setActivePage, colorPalette = 1 }) {
 			: PRODUCTS.filter((p) => p.category === activeFilter)
 
 	return (
-		<main style={{ backgroundColor: 'var(--th-bg)' }}>
-			{/* ── Hero Landing ── */}
-			<section className="relative min-h-[600px] overflow-hidden flex items-center pt-[72px]" style={{ backgroundColor: palette.light }}>
-				{/* Background image */}
-				<div className="absolute inset-0 z-0">
-					<img
-						src={heroImage}
-						alt="Polgün Ürünleri"
-						className="w-full h-full object-cover"
-					/>
-					<div className="absolute inset-0" style={{ background: `linear-gradient(135deg, ${palette.primary}66, ${palette.secondary}4D)` }} />
-				</div>
-
+		<main className="pt-20" style={{ backgroundColor: 'var(--th-bg)' }}>
+			{/* ── Page Hero ── */}
+      <section className="py-28" style={{ backgroundColor: 'var(--th-primary)' }}>
 				{/* Content */}
-				<div className="relative z-10 max-w-[1400px] mx-auto px-6 lg:px-14 w-full">
-					<div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-						{/* Left: Text Content */}
+        <div className="max-w-7xl mx-auto px-6 lg:px-12">
+          <div className="grid lg:grid-cols-2 gap-16 items-end">
+						
 						<div>
-							<p className="text-sm font-bold tracking-widest uppercase mb-4 flex items-center gap-3" style={{ color: 'rgba(255,255,255,0.7)' }}>
-								<span className="inline-block w-8 h-px" style={{ backgroundColor: '#ffffff' }} />
-								Ürün Kataloğu
-							</p>
-							<h1 className="font-black leading-[1.1] mb-6" style={{ fontSize: 'clamp(2.5rem,5vw,4.5rem)', color: '#ffffff', textShadow: '0 2px 8px rgba(0,0,0,0.3)' }}>
+							<p className="text-xs font-bold tracking-[0.3em] uppercase mb-4" style={{ color: 'var(--th-text)' }}>
+                Ürün Kataloğu
+              </p>
+              <h1 className="text-5xl lg:text-6xl font-black text-white leading-[1.02]">
 								Çözümlerimiz
 							</h1>
-							<p className="text-lg leading-relaxed mb-10" style={{ color: 'rgba(255,255,255,0.9)' }}>
+							</div>
+            <p className="text-white/50 text-lg leading-relaxed">
 								Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
 							</p>
 							<div className="flex gap-4 flex-wrap">
 								<button
 									onClick={() => setActivePage('contact')}
 									className="px-8 py-4 font-bold text-white rounded-full transition-all duration-300 hover:-translate-y-1"
-									style={{ backgroundColor: palette.primary, boxShadow: `0 0 32px ${palette.primary}66` }}
-									onMouseEnter={(e) => e.currentTarget.style.backgroundColor = palette.secondary}
-									onMouseLeave={(e) => e.currentTarget.style.backgroundColor = palette.primary}
+									style={{ backgroundColor: palette.secondary, boxShadow: `0 0 32px ${palette.secondary}66` }}
+									onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'var(--th-text-muted)'}
+									onMouseLeave={(e) => e.currentTarget.style.backgroundColor = palette.secondary}
 								>
 									Ürün Talebi
 								</button>
 								<button
 									onClick={() => setActivePage('contact')}
 									className="px-8 py-4 font-bold rounded-full transition-all duration-300 border-2"
-									style={{ color: palette.accent, borderColor: palette.accent, backgroundColor: `${palette.accent}0D`, backdropFilter: 'blur(8px)' }}
+									style={{ color: palette.secondary, borderColor: palette.secondary, backgroundColor: `${palette.accent}0D`, backdropFilter: 'blur(8px)' }}
 									onMouseEnter={(e) => {
-										e.currentTarget.style.backgroundColor = `${palette.accent}26`;
+										e.currentTarget.style.backgroundColor = `${palette.secondary}26`;
 										e.currentTarget.style.transform = 'translateY(-4px)';
 									}}
 									onMouseLeave={(e) => {
@@ -199,47 +189,8 @@ export default function ProductsPage({ setActivePage, colorPalette = 1 }) {
 								</button>
 							</div>
 						</div>
-
-						{/* Right: Glass Cards */}
-						<div className="space-y-4 lg:col-span-1">
-							{[
-								{ label: 'Ürün', val: '50+', desc: 'Çeşitli kategoride' },
-								{ label: 'Kapasite', val: '5000+', desc: 'Bireye uygun' },
-								{ label: 'Deneyim', val: '20+', desc: 'Yıl uzun başarı' },
-							].map((item, i) => (
-								<div
-									key={i}
-									className="group p-6 rounded-2xl backdrop-blur-xl border transition-all duration-300 cursor-default hover:shadow-xl"
-									style={{ 
-										backgroundColor: 'rgba(255,255,255,0.15)',
-										borderColor: 'rgba(255,255,255,0.3)',
-										boxShadow: '0 8px 32px rgba(0,0,0,0.1)'
-									}}
-									onMouseEnter={(e) => {
-										e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.25)';
-										e.currentTarget.style.borderColor = 'rgba(255,255,255,0.4)';
-										e.currentTarget.style.transform = 'translateY(-4px)';
-									}}
-									onMouseLeave={(e) => {
-										e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.15)';
-										e.currentTarget.style.borderColor = 'rgba(255,255,255,0.3)';
-										e.currentTarget.style.transform = 'translateY(0)';
-									}}
-								>
-									<div className="text-sm font-black tracking-widest uppercase mb-2" style={{ color: 'rgba(255,255,255,0.6)' }}>
-										{item.label}
-									</div>
-									<div className="text-3xl font-black mb-1" style={{ color: '#ffffff' }}>
-										{item.val}
-									</div>
-									<div className="text-xs" style={{ color: 'rgba(255,255,255,0.7)' }}>
-										{item.desc}
-									</div>
-								</div>
-							))}
-						</div>
 					</div>
-				</div>
+				
 			</section>
 
 			{/* ── Filtre Şeridi ── */}

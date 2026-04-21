@@ -29,8 +29,9 @@
   --th-accent-light: #B3E5FC;
   --th-bg:           #F4F4F0;   /* açık krem arka plan */
   --th-surface:      #ffffff;
-  --th-text:         #1E1E1E;   /* antrasit metin */
+  --th-text:         #3D3D4E;   /* antrasit metin */
   --th-text-muted:   #5A5A5A;
+  --th-text-light:   #455055;
   --th-border:       #D8D8D4;
   --th-hero-from:    #2E5A7E;
   --th-hero-side:    #5CA3E1;

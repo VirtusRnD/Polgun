@@ -93,7 +93,7 @@ export default function AboutPage({ setActivePage, colorPalette = 1 }) {
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <div className="grid lg:grid-cols-2 gap-16 items-end">
             <div>
-              <p className="text-xs font-bold tracking-[0.3em] uppercase mb-4" style={{ color: 'var(--th-accent)' }}>
+              <p className="text-xs font-bold tracking-[0.3em] uppercase mb-4" style={{ color: 'var(--th-text)' }}>
                 Hakkımızda
               </p>
               <h1 className="text-5xl lg:text-6xl font-black text-white leading-[1.02]">

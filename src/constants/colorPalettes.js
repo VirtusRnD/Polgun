@@ -6,8 +6,8 @@
 export const COLOR_PALETTES = {
   1: {
     primary: '#5CA3E1',
-    secondary: '#0B1F3A',
-    accent: '#2B6CB0',
+    secondary: '#3D3D4E',
+    accent: '#27c0c8',
     light: '#F5FAFF',
     name: 'Azure Blue'
   },

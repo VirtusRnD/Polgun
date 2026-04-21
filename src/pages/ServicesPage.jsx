@@ -122,56 +122,43 @@ export default function ServicesPage({ setActivePage, colorPalette = 1 }) {
 	const palette = COLOR_PALETTES[colorPalette] || COLOR_PALETTES[1]
 	
 	return (
-		<main style={{ backgroundColor: 'var(--th-bg)' }}>
+		<main className="pt-20" style={{ backgroundColor: 'var(--th-bg)' }}>
 
-			{/* ── Hero Landing ── */}
-			<section
-				className="relative h-[900px] overflow-hidden flex items-center pt-[72px]"
-				style={{ backgroundColor: 'color-mix(in srgb, var(--th-bg) 75%, #ffffff)' }}
-			>
-				{/* Arka plan dekor - Baby blue accent shapes */}
-				<div className="absolute inset-0 opacity-30 overflow-hidden">
-					<div className="absolute top-0 right-0 w-96 h-96 rounded-full" style={{ backgroundColor: 'color-mix(in srgb, var(--th-accent) 22%, #ffffff)' }} />
-					<div className="absolute bottom-0 left-0 w-80 h-80 rounded-full" style={{ backgroundColor: 'color-mix(in srgb, var(--th-primary) 22%, #ffffff)' }} />
-				</div>
-
-				<div className="max-w-[1400px] mx-auto w-full px-6 lg:px-14 relative z-10">
-					<div className="grid lg:grid-cols-2 gap-12 items-center">
-						{/* Sol Taraf - Metin İçeriği */}
-						<div className="order-2 lg:order-1">
-							<p className="text-sm font-black tracking-[0.35em] uppercase mb-6 flex items-center gap-3" 
-								style={{ color: 'var(--th-accent)' }}>
-								<span className="inline-block w-8 h-px" style={{ backgroundColor: 'var(--th-accent)' }} />
-								Servislerimiz
-							</p>
-							<h1 className="font-black leading-[1.1] mb-8" style={{ fontSize: 'clamp(2.5rem,5vw,4.5rem)', color: 'var(--th-primary-darker)' }}>
-								Başından<br />
-								<span style={{ color: 'var(--th-accent)' }}>Sonuna</span><br />
-								Tam Destek
-							</h1>
-							<p className="text-lg leading-relaxed mb-10" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 70%, transparent)' }}>
-								Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
-							</p>
+      {/* ── Page Hero ── */}
+      <section className="py-28" style={{ backgroundColor: 'var(--th-primary)' }}>
+        <div className="max-w-7xl mx-auto px-6 lg:px-12">
+          <div className="grid lg:grid-cols-2 gap-16 items-end">
+            <div>
+              <p className="text-xs font-bold tracking-[0.3em] uppercase mb-4" style={{ color: 'var(--th-text)' }}>
+                Servislerimiz
+              </p>
+              <h1 className="text-5xl lg:text-6xl font-black text-white leading-[1.02]">
+                Başından<br />Sonuna<br />Tam Destek
+              </h1>
+            </div>
+            <p className="text-white/50 text-lg leading-relaxed">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </p>
 							<div className="flex gap-4 flex-wrap">
 								<button
 									onClick={() => setActivePage('contact')}
 									className="px-8 py-4 font-bold text-white rounded-full transition-all duration-300 hover:-translate-y-1"
-									style={{ backgroundColor: 'var(--th-accent)', boxShadow: '0 0 32px color-mix(in srgb, var(--th-accent) 30%, transparent)' }}
-									onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'var(--th-accent-dark)'}
-									onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'var(--th-accent)'}
+									style={{ backgroundColor: palette.secondary, boxShadow: `0 0 32px ${palette.secondary}66` }}
+									onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'var(--th-text-muted)'}
+									onMouseLeave={(e) => e.currentTarget.style.backgroundColor = palette.secondary}
 								>
 									Teklif Al
 								</button>
 								<button
 									onClick={() => setActivePage('contact')}
 									className="px-8 py-4 font-bold rounded-full transition-all duration-300 border-2"
-									style={{ color: 'var(--th-accent-dark)', borderColor: 'var(--th-accent)', backgroundColor: 'rgba(255,255,255,0.8)' }}
+									style={{ color: palette.secondary, borderColor: palette.secondary, backgroundColor: `${palette.accent}0D`, backdropFilter: 'blur(8px)' }}
 									onMouseEnter={(e) => {
-										e.currentTarget.style.backgroundColor = 'color-mix(in srgb, var(--th-accent) 10%, transparent)';
+										e.currentTarget.style.backgroundColor = `${palette.secondary}26`;
 										e.currentTarget.style.transform = 'translateY(-4px)';
 									}}
 									onMouseLeave={(e) => {
-										e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.8)';
+										e.currentTarget.style.backgroundColor = `${palette.accent}0D`;
 										e.currentTarget.style.transform = 'translateY(0)';
 									}}
 								>
@@ -180,34 +167,8 @@ export default function ServicesPage({ setActivePage, colorPalette = 1 }) {
 							</div>
 						</div>
 
-						{/* Sağ Taraf - Görsel */}
-						<div className="order-1 lg:order-2">
-							<div className="relative rounded-3xl overflow-hidden shadow-2xl aspect-[5/5]">
-								<img
-									src={heroImage}
-									alt="Polgün Su Parkı Hizmetleri"
-									className="w-full h-full object-cover"
-								/>
-								{/* Gradient overlay */}
-								<div className="absolute inset-0 opacity-40 pointer-events-none"
-									style={{
-										background: 'linear-gradient(135deg, color-mix(in srgb, var(--th-primary-darker) 40%, transparent), color-mix(in srgb, var(--th-accent) 25%, transparent))',
-									}}
-								/>
-								
-								{/* Premium badge */}
-								<div className="absolute top-6 right-6 px-5 py-3 rounded-full backdrop-blur-xl border"
-									style={{ 
-										backgroundColor: 'rgba(255,255,255,0.15)',
-										borderColor: 'rgba(255,255,255,0.3)',
-										boxShadow: '0 8px 32px rgba(0,0,0,0.1)'
-									}}>
-									<span className="text-white font-bold text-sm" style={{ color: 'color-mix(in srgb, #ffffff 85%, var(--th-accent))' }}>Premium Hizmet</span>
-								</div>
-							</div>
-						</div>
 					</div>
-				</div>
+				
 			</section>
 
 			{/* ── Neden Polgün Band ── */}

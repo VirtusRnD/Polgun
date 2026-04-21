@@ -101,15 +101,21 @@ export default function ContactPage({ colorPalette = 1 }) {
     <main className="pt-20" style={{ backgroundColor: 'var(--th-bg)' }}>
 
       {/* ── Page Hero ── */}
-      <section className="py-24" style={{ backgroundColor: 'var(--th-primary-darker)' }}>
+      <section className="py-28" style={{ backgroundColor: 'var(--th-primary)' }}>
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
-          <p className="text-xs font-bold tracking-[0.3em] uppercase mb-4" style={{ color: 'var(--th-accent)' }}>İletişim</p>
-          <h1 className="text-5xl lg:text-6xl font-black text-white leading-tight mb-6">
-            Sizinle<br />Tanışalım
-          </h1>
-          <p className="text-white/50 max-w-lg leading-relaxed">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </p>
+          <div className="grid lg:grid-cols-2 gap-16 items-end">
+            <div>
+              <p className="text-xs font-bold tracking-[0.3em] uppercase mb-4" style={{ color: 'var(--th-text)' }}>
+                İletişim
+              </p>
+              <h1 className="text-5xl lg:text-6xl font-black text-white leading-[1.02]">
+                Sizinle<br />Tanışalım
+              </h1>
+            </div>
+            <p className="text-white/50 text-lg leading-relaxed">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -271,7 +277,7 @@ export default function ContactPage({ colorPalette = 1 }) {
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <div className="overflow-hidden rounded-3xl" style={{ boxShadow: '0 24px 80px rgba(0,0,0,0.10)' }}>
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3195.8523849999997!2d28.261!3d37.207!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14b9e5e5e5e5e5e5%3A0x0!2sK%C3%B6stekli%2C%20Denizli%20Yolu%20Bulvar%C4%B1%20No%3A%204%2FB%20D%3A28%2C%2048000%20Mente%C5%9Fe%2FMu%C4%9Fla!5e0!3m2!1str!2str!4v1234567890"
+              src="https://www.google.com/maps/place/Polgün+Waterparks+%26+Attractions/@37.2548751,28.2337589,17z/data=!3m1!4b1!4m6!3m5!1s0x14bf1273f2d14e7b:0x919c29cfc29c8790!8m2!3d37.2548751!4d28.2337589!16s%2Fg%2F11gvrq9w75?entry=ttu&g_ep=EgoyMDI2MDQxOS4wIKXMDSoASAFQAw%3D%3D"
               width="100%"
               height="500"
               style={{ border: 0, display: 'block' }}

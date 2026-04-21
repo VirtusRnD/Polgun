@@ -155,7 +155,7 @@ export default function HomePage({ setActivePage, colorPalette = 1 }) {
             >
               Let's <span
                 style={{
-                  background: 'linear-gradient(135deg, var(--th-primary) 0%, var(--th-accent) 100%)',
+                  background: 'linear-gradient(90deg, #f83838, #f7923a, #f0f033, #56f856, #5CA3E1, #1565C0, #a344f1)',
                   WebkitBackgroundClip: 'text',
                   backgroundClip: 'text',
                   WebkitTextFillColor: 'transparent',
