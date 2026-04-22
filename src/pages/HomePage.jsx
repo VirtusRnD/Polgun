@@ -23,6 +23,10 @@ import refTitanic      from '../assets/references/titanic-hotels-logo.jpg'
 import refValamar      from '../assets/references/valamar-logo.jpg'
 import refVoyage       from '../assets/references/voyage-logo.jpg'
 import heroImage       from '../assets/polgun-featured-projects-4.jpeg'
+import guralPremier    from '../assets/kategori/GüralPremierBelek.jpg'
+import syHotel        from '../assets/kategori/SYHotel.png'
+import frenzy         from '../assets/kategori/FrenzyWaterpark.png'
+import rixosWaterpark from '../assets/kategori/RixosKaec.png'
 
 const REFS = [
   { src: refAmara,        alt: 'Amara Prestige Elite' },
@@ -212,7 +216,7 @@ export default function HomePage({ setActivePage, colorPalette = 1 }) {
               className="relative w-full overflow-hidden"
               style={{
                 borderRadius: '2.5rem',
-                aspectRatio: '16/10',
+                aspectRatio: '16/9.1',
                 background: 'linear-gradient(135deg, rgba(92,163,225,0.08) 0%, rgba(21,101,192,0.04) 100%)',
                 backdropFilter: 'blur(32px)',
                 WebkitBackdropFilter: 'blur(32px)',
@@ -223,7 +227,7 @@ export default function HomePage({ setActivePage, colorPalette = 1 }) {
             >
               {/* YouTube iframe — kartın içinde, tam kaplı */}
               <iframe
-                src="https://www.youtube.com/embed/toORLlZ_F00?autoplay=1&mute=1&loop=1&playlist=toORLlZ_F00&controls=0&modestbranding=1&showinfo=0&rel=0"
+                src="https://www.youtube.com/embed/hmR2harSPj0?autoplay=1&mute=1&loop=1&playlist=hmR2harSPj0&controls=0&modestbranding=1&showinfo=0&rel=0"
                 title="Polgün Waterpark Video"
                 allow="autoplay; encrypted-media"
                 allowFullScreen
@@ -264,36 +268,29 @@ export default function HomePage({ setActivePage, colorPalette = 1 }) {
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {[
-              { title:'Su Kaydırakları', sub:'Tüp, açık & thrill', g:'linear-gradient(135deg, var(--th-primary-darker), var(--th-primary), var(--th-accent))' },
-              { title:'Dalga Havuzları',  sub:'Pnömatik & mekanik',  g:'linear-gradient(135deg, var(--th-primary-dark), var(--th-accent), var(--th-accent-dark))' },
-              { title:'Aquatik Oyun',    sub:'Çocuk & aile',         g:'linear-gradient(135deg, var(--th-accent-dark), var(--th-accent), var(--th-primary))' },
-              { title:'Lazy River',      sub:'Sakin akış sistemleri', g:'linear-gradient(135deg, var(--th-primary), color-mix(in srgb, var(--th-primary) 60%, var(--th-accent)), var(--th-accent))' },
+              { title:'Su Kaydırakları', sub:'Tüp, açık & thrill', img: guralPremier, g:'linear-gradient(to top,rgba(0,0,0,0.4),transparent)' },
+              { title:'Dalga Havuzları',  sub:'Pnömatik & mekanik',  img: syHotel, g:'linear-gradient(to top,rgba(0,0,0,0.4),transparent)' },
+              { title:'Aquatik Oyun',    sub:'Çocuk & aile',         img: frenzy, g:'linear-gradient(to top,rgba(0,0,0,0.4),transparent)' },
+              { title:'Lazy River',      sub:'Sakin akış sistemleri', img: rixosWaterpark, g:'linear-gradient(to top,rgba(0,0,0,0.4),transparent)' },
             ].map((cat, i) => (
               <button
                 key={i}
                 onClick={() => setActivePage('products')}
                 className="group relative h-72 rounded-2xl overflow-hidden text-left"
-                style={{ background: cat.g }}
+                style={{ 
+                  backgroundImage: `${cat.g}, url(${cat.img})`,
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center'
+                }}
               >
                 {/* Dekoratif dalgalar */}
-                <div className="absolute inset-0 opacity-20">
-                  <svg viewBox="0 0 200 200" className="w-full h-full" preserveAspectRatio="xMidYMid slice">
-                    <path d="M0 120 Q50 90 100 120 Q150 150 200 120 L200 200 L0 200Z" fill="white" opacity="0.3"/>
-                    <path d="M0 140 Q50 110 100 140 Q150 170 200 140 L200 200 L0 200Z" fill="white" opacity="0.2"/>
-                    <circle cx="160" cy="50" r="60" fill="white" opacity="0.05"/>
-                  </svg>
-                </div>
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                   style={{ background:'linear-gradient(to top,rgba(0,0,0,0.4),transparent)' }} />
                 <div className="absolute inset-0 p-7 flex flex-col justify-between">
-                  <div className="w-10 h-10 rounded-xl flex items-center justify-center"
-                    style={{ background:'rgba(255,255,255,0.15)', backdropFilter:'blur(8px)', border:'1px solid rgba(255,255,255,0.2)' }}>
-                    <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z"/>
-                    </svg>
+                  <div className="w-10 h-10 rounded-xl flex items-center justify-center">
                   </div>
                   <div>
-                    <div className="text-white/50 text-xs mb-2">{cat.sub}</div>
+                    <div className="text-white text-xs mb-2">{cat.sub}</div>
                     <div className="text-white font-black text-xl leading-tight">{cat.title}</div>
                     <div className="mt-4 flex items-center gap-2 text-white/60 text-xs font-semibold
                       group-hover:text-white group-hover:gap-3 transition-all duration-200">

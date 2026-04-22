@@ -3,7 +3,7 @@
 // Servislerimiz / Projelerimiz / Ürünlerimiz / Hakkımızda
 // ============================================================
 import { useState, useEffect, useRef } from 'react'
-import polgunLogo from '../assets/polgun-logo-beyaz2.png'
+import polgunLogo from '../assets/logoPolgun.png'
 
 // ── Menü Yapısı (WWW ile birebir karşılıklı) ───────────────
 const NAV_ITEMS = [
@@ -142,16 +142,16 @@ export default function Navbar({ activePage, setActivePage, colorPalette }) {
             <img
               src={polgunLogo}
               alt="Polgün Waterparks"
-              className="h-10 object-contain"
-              style={{ filter: 'brightness(2) invert(1) drop-shadow(0 0 4px rgba(255,255,255,0.5))' }}
+              className="h-60 object-contain"
+              style={{ filter: 'drop-shadow(0 0 4px rgba(255,255,255,0.5))' }}
             />
           ) : (
             /* Opaque navbar → Polgün bright blue logo */
             <img
               src={polgunLogo}
               alt="Polgün Waterparks"
-              className="h-10 object-contain"
-              style={{ filter: 'invert(1) sepia(0.6) saturate(1.8) hue-rotate(195deg) brightness(1.15)' }}
+              className="h-60 object-contain"
+              style={{ filter: 'drop-shadow(0 0 4px rgba(134, 134, 134, 0.5))' }}
             />
           )}
         </button>

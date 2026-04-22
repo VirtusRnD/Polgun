@@ -3,6 +3,10 @@
 // ============================================================
 import { useState } from 'react'
 import heroImage from '../assets/polgun-featured-projects-4.jpeg'
+import eftaliaBlue from '../assets/products/eftalia-blue-antalya.png'
+import nirvana from '../assets/products/nirvana-cosmopolitan-antalya.jpg'
+import seignosse from '../assets/products/SeignosseAtlanticPark-fransa.webp'
+import delphinPalace from '../assets/products/delphin-palace-antalya.jpg'
 import { COLOR_PALETTES } from '../constants/colorPalettes'
 
 // ── Proje Verisi ───────────────────────────────────────────
@@ -16,7 +20,7 @@ const PROJECTS = [
     region: 'Türkiye & Orta Doğu',
     scope: ['12 Su Kaydırağı', 'Dalga Havuzu', 'Lazy River', 'Çocuk Alanı'],
     desc: 'İstanbul\'un en büyük su parkı projelerinden biri: 12 farklı kaydırak, dev dalga havuzu ve aile dostu tasarımıyla 2023 sezonunun gözdesi.',
-    img: heroImage,
+    img: eftaliaBlue,
     imgAlt: 'AquaDream Water Park İstanbul',
     featured: true,
   },
@@ -29,7 +33,7 @@ const PROJECTS = [
     region: 'Türkiye & Orta Doğu',
     scope: ['8 Kaydırak', 'Infinity Pool', 'Çocuk Parkı'],
     desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    img: heroImage,
+    img: seignosse,
     imgAlt: 'OceanSplash Resort Antalya',
     featured: false,
   },
@@ -42,7 +46,7 @@ const PROJECTS = [
     region: 'Avrupa',
     scope: ['Dalga Havuzu', '10 Kaydırak', 'FlowRider'],
     desc: 'Polonya\'nın ilk büyük ölçekli kapalı su parkı: dört mevsim açık, çocuklardan yetişkinlere her yaşa hitap eden etkinlikleri.',
-    img: heroImage,
+    img: nirvana,
     imgAlt: 'Mega Wave Indoor Park Varşova',
     featured: true,
   },
@@ -55,7 +59,7 @@ const PROJECTS = [
     region: 'Türkiye & Orta Doğu',
     scope: ['20 Kaydırak', '2 Dalga Havuzu', 'Lazy River', 'Sörf Alanı'],
     desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    img: heroImage,
+    img: delphinPalace,
     imgAlt: 'Desert Oasis Water World Dubai',
     featured: false,
   },
@@ -70,19 +74,6 @@ const PROJECTS = [
     desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     img: heroImage,
     imgAlt: 'AquaVenture Cruise gemisi',
-    featured: false,
-  },
-  {
-    id: 6,
-    name: 'KidZone Community Aquatic',
-    location: 'Brüksel, Belçika',
-    year: '2020',
-    type: 'Belediye & Kamu',
-    region: 'Avrupa',
-    scope: ['Çok Katlı Oyun Yapısı', 'Toddler Pool', 'Sprey Alanı'],
-    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    img: heroImage,
-    imgAlt: 'KidZone Community Aquatic Brüksel',
     featured: false,
   },
 ]
