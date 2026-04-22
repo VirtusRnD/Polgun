@@ -183,12 +183,12 @@ export default function AboutPage({ setActivePage, colorPalette = 1 }) {
         </div>
       </section>
 
-      {/* ── Liderlik Ekibi ── */}
+      {/* ── Satış Ekibi ── */}
       <section className="py-24" style={{ backgroundColor: 'var(--th-surface)' }}>
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <div className="mb-16">
             <p className="text-xs font-bold tracking-[0.25em] uppercase mb-4" style={{ color: 'var(--th-accent)' }}>Ekibimiz</p>
-            <h2 className="text-4xl font-black" style={{ color: 'var(--th-text)' }}>Liderlik Kadromuz</h2>
+            <h2 className="text-4xl font-black" style={{ color: 'var(--th-text)' }}>Satış Ekibimiz</h2>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {TEAM.map((member) => (

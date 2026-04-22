@@ -2,7 +2,7 @@
 // HOMEPAGE — WWW tarzı büyük tipografi + Apple glass efect
 // "Let's color the water" hero
 // ============================================================
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { COLOR_PALETTES } from '../constants/colorPalettes'
 
 // ── Referans Logo İmportları ───────────────────────────────
@@ -22,12 +22,19 @@ import refSherwood     from '../assets/references/sherwood-logo.jpg'
 import refTitanic      from '../assets/references/titanic-hotels-logo.jpg'
 import refValamar      from '../assets/references/valamar-logo.jpg'
 import refVoyage       from '../assets/references/voyage-logo.jpg'
-import heroImage       from '../assets/polgun-featured-projects-4.jpeg'
 import guralPremier    from '../assets/kategori/GüralPremierBelek.jpg'
 import syHotel        from '../assets/kategori/SYHotel.png'
 import frenzy         from '../assets/kategori/FrenzyWaterpark.png'
 import curaCao        from '../assets/products/Kunuku-Aqua-Resort-CuraCao.png'
 import rixosWaterpark from '../assets/kategori/RixosKaec.png'
+import aqualand1 from '../assets//products/AqualandTorremolInos-Spain.png'
+import aqualand2 from '../assets//products/AqualandTorremolInos-Spain2.png'
+import frenzyFrance from '../assets//products/FrenzyWaterPark-France.png'
+import kaec from '../assets/products/KAEC-RixosJeddah-SaudiArabia.png'
+import navatu from '../assets/products/navatu.png'
+import syHotelAntalya from '../assets/products/SYHotel-Antalya.png'
+import nickelodeon from '../assets/products/NickelodeonHotel-Antalya.png'
+
 
 const REFS = [
   { src: refAmara,        alt: 'Amara Prestige Elite' },
@@ -52,7 +59,6 @@ const STATS = [
   { num: '3000+', label: 'Tamamlanan Proje' },
   { num: '70+',   label: 'Ülke' },
   { num: '2002',  label: 'Kuruluş Yılı' },
-  { num: '98%',   label: 'Müşteri Memnuniyeti' },
 ]
 
 // ── Glass Kart bileşeni ────────────────────────────────────
@@ -123,9 +129,30 @@ function MarqueeStrip() {
   )
 }
 
+// ── Carousel Görselleri ────────────────────────────────────
+const CAROUSEL_IMAGES = [
+  { src: curaCao,       alt: 'Kunuku Aqua Resort - Curaçao' },
+  { src: aqualand1,     alt: 'Aqualand Torremolinos - İspanya' },
+  { src: aqualand2,     alt: 'Aqualand Torremolinos - İspanya 2' },
+  { src: frenzyFrance,  alt: 'Frenzy Waterpark - Fransa' },
+  { src: kaec,          alt: 'KAEC Rixos Jeddah - Suudi Arabistan' },
+  { src: navatu,        alt: 'Navatu Su Parkı' },
+  { src: syHotelAntalya, alt: 'SY Hotel Antalya' },
+  { src: nickelodeon,   alt: 'Nickelodeon Hotel - Antalya' },
+]
+
 // ── Sayfa bileşeni ─────────────────────────────────────────
 export default function HomePage({ setActivePage, colorPalette = 1 }) {
   const palette = COLOR_PALETTES[colorPalette] || COLOR_PALETTES[1]
+  const [currentImageIndex, setCurrentImageIndex] = useState(0)
+
+  // ── Otomatik resim değiştirme
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prev) => (prev + 1) % CAROUSEL_IMAGES.length)
+    }, 5000) // Her 5 saniyede bir resim değiştirir
+    return () => clearInterval(interval)
+  }, [])
 
   return (
     <main style={{ backgroundColor: 'var(--th-bg)' }}>
@@ -316,10 +343,21 @@ export default function HomePage({ setActivePage, colorPalette = 1 }) {
           <div className="grid lg:grid-cols-2 gap-0 rounded-3xl overflow-hidden"
             style={{ boxShadow:'0 24px 80px rgba(0,0,0,0.10)' }}>
 
-            {/* Sol — Koyu gradient panel */}
-            <div className="relative min-h-[380px] flex items-end p-10"
+            {/* Sol — Carousel Panel */}
+            <div className="relative min-h-[380px] flex items-end p-10 group"
               style={{ background:'linear-gradient(to top,rgba(0,0,0,0.4),transparent)' }}>
-                <img src={curaCao} alt="Polgün Su Parkı" className="absolute inset-0 w-full h-full object-cover " />
+                {/* Carousel Görselleri */}
+                <div className="absolute inset-0 overflow-hidden">
+                  {CAROUSEL_IMAGES.map((img, idx) => (
+                    <img 
+                      key={idx}
+                      src={img.src} 
+                      alt={img.alt} 
+                      className="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000"
+                      style={{ opacity: idx === currentImageIndex ? 1 : 0 }}
+                    />
+                  ))}
+                </div>
               
               <div className="relative z-10 w-full">
                 <GlassCard className="p-5">
@@ -336,6 +374,23 @@ export default function HomePage({ setActivePage, colorPalette = 1 }) {
                     ))}
                   </div>
                 </GlassCard>
+              </div>
+
+              {/* Carousel Navigasyon Noktaları */}
+              <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 z-20 flex gap-2">
+                {CAROUSEL_IMAGES.map((_, idx) => (
+                  <button
+                    key={idx}
+                    onClick={() => setCurrentImageIndex(idx)}
+                    className="transition-all duration-300 rounded-full"
+                    style={{
+                      width: idx === currentImageIndex ? '28px' : '8px',
+                      height: '8px',
+                      backgroundColor: idx === currentImageIndex ? 'rgba(255,255,255,0.9)' : 'rgba(255,255,255,0.4)',
+                      border: '1px solid rgba(255,255,255,0.6)',
+                    }}
+                  />
+                ))}
               </div>
             </div>
 

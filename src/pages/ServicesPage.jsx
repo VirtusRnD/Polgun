@@ -94,7 +94,7 @@ const STEPS = [
 
 const WHY = [
 	{  title: 'Tam Hizmet', desc: 'Tasarımdan montaja, bakımdan yazılıma — her adımda.' },
-	{  title: '48+ Ülke', desc: 'Global proje deneyimi ve yerel uzmanlık.' },
+	{  title: '70+ Ülke', desc: 'Global proje deneyimi ve yerel uzmanlık.' },
 	{  title: 'ISO 9001', desc: 'Sertifikalı üretim ve kalite süreçleri.' },
 	{  title: 'Ömür Boyu', desc: 'Uzun vadeli teknik destek ve yedek parça garantisi.' },
 ];
