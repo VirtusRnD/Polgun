@@ -26,6 +26,7 @@ import heroImage       from '../assets/polgun-featured-projects-4.jpeg'
 import guralPremier    from '../assets/kategori/GüralPremierBelek.jpg'
 import syHotel        from '../assets/kategori/SYHotel.png'
 import frenzy         from '../assets/kategori/FrenzyWaterpark.png'
+import curaCao        from '../assets/products/Kunuku-Aqua-Resort-CuraCao.png'
 import rixosWaterpark from '../assets/kategori/RixosKaec.png'
 
 const REFS = [
@@ -48,8 +49,8 @@ const REFS = [
 ]
 
 const STATS = [
-  { num: '1450+', label: 'Tamamlanan Proje' },
-  { num: '48+',   label: 'Ülke' },
+  { num: '3000+', label: 'Tamamlanan Proje' },
+  { num: '70+',   label: 'Ülke' },
   { num: '2002',  label: 'Kuruluş Yılı' },
   { num: '98%',   label: 'Müşteri Memnuniyeti' },
 ]
@@ -155,7 +156,7 @@ export default function HomePage({ setActivePage, colorPalette = 1 }) {
 
             <h1
               className="font-black leading-[1.0] tracking-tight"
-              style={{ color: 'var(--th-primary-darker)', fontSize: 'clamp(3rem,6vw,5.5rem)' }}
+              style={{ color: 'var(--th-primary-darker)', fontSize: 'clamp(3rem,9vw,7rem)' }}
             >
               Let's <span
                 style={{
@@ -317,23 +318,19 @@ export default function HomePage({ setActivePage, colorPalette = 1 }) {
 
             {/* Sol — Koyu gradient panel */}
             <div className="relative min-h-[380px] flex items-end p-10"
-              style={{ background:'linear-gradient(135deg,var(--th-primary-darker) 0%,var(--th-primary) 100%)' }}>
-              <div className="absolute inset-0 overflow-hidden opacity-15">
-                <svg viewBox="0 0 500 400" className="w-full h-full" preserveAspectRatio="xMidYMid slice">
-                  <circle cx="400" cy="80" r="200" fill="white"/>
-                  <path d="M0 300 Q125 220 250 300 Q375 380 500 300 L500 400 L0 400Z" fill="white"/>
-                </svg>
-              </div>
+              style={{ background:'linear-gradient(to top,rgba(0,0,0,0.4),transparent)' }}>
+                <img src={curaCao} alt="Polgün Su Parkı" className="absolute inset-0 w-full h-full object-cover " />
+              
               <div className="relative z-10 w-full">
                 <GlassCard className="p-5">
-                  <p className="text-[10px] font-black tracking-[0.25em] uppercase mb-2 text-white/50">Mühendislik</p>
-                  <h3 className="text-xl font-black text-white leading-tight mb-3">
+                  <p className="text-[10px] font-black tracking-[0.25em] uppercase mb-2 text-white">Mühendislik</p>
+                  <h3 className="text-xl font-black text-white leading-tight mb-3" style={{  textShadow:'0 4px 12px rgba(97, 97, 97, 0.6)' }}>
                     Tasarımdan<br />Sahaya, Eksiksiz
                   </h3>
-                  <div className="flex flex-wrap gap-2">
+                  <div className="flex flex-wrap gap-2 --th-text-muted">
                     {['ISO Sertifikalı','GRP Üretim','3D Tasarım','Anahtar Teslim'].map((tag) => (
                       <span key={tag} className="text-[11px] font-semibold px-3 py-1 rounded-full"
-                        style={{ background:'rgba(255,255,255,0.12)', color:'rgba(255,255,255,0.8)', border:'1px solid rgba(255,255,255,0.15)' }}>
+                        style={{ background:'rgba(255,255,255,0.12)', color:'rgba(110, 110, 110, 0.8)', border:'1px solid rgba(255,255,255,0.15)', boxShadow:'0 2px 6px rgba(76, 76, 76, 0.1)' }}>
                         {tag}
                       </span>
                     ))}
@@ -353,12 +350,11 @@ export default function HomePage({ setActivePage, colorPalette = 1 }) {
                 20+ yıllık deneyimle ikonik su parkı deneyimleri yaratıyoruz
               </h2>
               <p className="leading-relaxed mb-6 text-base" style={{ color:'color-mix(in srgb,var(--th-text-muted) 70%,transparent)' }}>
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.
-              </p>
+Polgün, su parkı projelerinde tasarım, mühendislik, üretim ve uygulama süreçlerini tek çatı altında yöneten güçlü bir çözüm ortağıdır. Yirmi yılı aşkın sektör tecrübemiz, yüksek üretim kapasitemiz ve uluslararası proje deneyimimizle, her ölçekte projeye güvenilir, yenilikçi ve sürdürülebilir çözümler sunuyoruz. Estetik, güvenlik, kalite ve operasyonel verimliliği bir araya getirerek, markalara ve yatırımcılara uzun vadeli değer katan özgün su parkı deneyimleri tasarlıyor ve hayata geçiriyoruz.              </p>
               <div className="grid grid-cols-2 gap-3 mb-8">
                 {[
                   { label:'Tam Hizmet', desc:'Tasarım & üretim & montaj' },
-                  { label:'48 Ülke',    desc:'Global deneyim' },
+                  { label:'70+ Ülke',    desc:'Global deneyim' },
                   { label:'ISO Kalitesi',desc:'Sertifikalı üretim' },
                   { label:'Sürdürülebilir',desc:'Çevre dostu tasarım' },
                 ].map((f) => (
