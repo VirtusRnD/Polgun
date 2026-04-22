@@ -277,7 +277,7 @@ export default function ContactPage({ colorPalette = 1 }) {
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <div className="overflow-hidden rounded-3xl" style={{ boxShadow: '0 24px 80px rgba(0,0,0,0.10)' }}>
             <iframe
-              src="https://www.google.com/maps/place/Polgün+Waterparks+%26+Attractions/@37.2548751,28.2337589,17z/data=!3m1!4b1!4m6!3m5!1s0x14bf1273f2d14e7b:0x919c29cfc29c8790!8m2!3d37.2548751!4d28.2337589!16s%2Fg%2F11gvrq9w75?entry=ttu&g_ep=EgoyMDI2MDQxOS4wIKXMDSoASAFQAw%3D%3D"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3175.6978761271644!2d28.2337589!3d37.2548751!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14bf1273f2d14e7b%3A0x919c29cfc29c8790!2sPolg%C3%BCn%20Waterparks%20%26%20Attractions!5e0!3m2!1str!2str!4v1776841519573!5m2!1str!2str"
               width="100%"
               height="500"
               style={{ border: 0, display: 'block' }}
