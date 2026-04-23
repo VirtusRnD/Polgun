@@ -3,12 +3,11 @@
 // ============================================================
 import { useState } from 'react'
 import heroImage from '../assets/polgun-featured-projects-4.jpeg'
-import { COLOR_PALETTES } from '../constants/colorPalettes'
 
 // ── Ürün Verisi ────────────────────────────────────────────
 const PRODUCTS = [
 	{
-		category: 'Kaydıraklar',
+		category: 'Su Kaydırakları',
 		title: 'AquaRush Pro Series',
 		sub: 'Yüksek Hızlı Kapalı Tüp Kaydırak',
 		desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
@@ -23,7 +22,7 @@ const PRODUCTS = [
 		badge: 'Çok Satılan',
 	},
 	{
-		category: 'Dalga Havuzları',
+		category: 'Splash Tower',
 		title: 'OceanWave 2800',
 		sub: 'Teknolojik Pnömatik Dalga Sistemi',
 		desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
@@ -38,7 +37,7 @@ const PRODUCTS = [
 		badge: 'Yeni',
 	},
 	{
-		category: 'Çocuk Alanları',
+		category: 'Splash Zone',
 		title: 'KidsSplash Universe',
 		sub: 'Tema Entegreli Çocuk Su Oyun Alanı',
 		desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
@@ -53,7 +52,7 @@ const PRODUCTS = [
 		badge: null,
 	},
 	{
-		category: 'Lazy River',
+		category: 'Animasyonlar',
 		title: 'DriftStream Classic',
 		sub: 'Sakin Akış Nehir Sistemi',
 		desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
@@ -67,45 +66,15 @@ const PRODUCTS = [
 		imgAlt: 'DriftStream lazy river',
 		badge: null,
 	},
-	{
-		category: 'Kaydıraklar',
-		title: 'TwistMaster Family',
-		sub: 'Aile Tipi Çoklu Şeritli Kaydırak',
-		desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-		specs: [
-			{ label: 'Uzunluk', val: '85 m x4' },
-			{ label: 'Kapasite', val: '720 kişi/saat' },
-			{ label: 'Min. Boy', val: '120 cm' },
-			{ label: 'Şerit', val: '4' },
-		],
-		img: heroImage,
-		imgAlt: 'TwistMaster aile kaydırağı',
-		badge: null,
-	},
-	{
-		category: 'Özel Projeler',
-		title: 'Signature Collection',
-		sub: 'Anahtar Teslim Waterpark Tasarımı',
-		desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-		specs: [
-			{ label: 'Kapsam', val: 'Tam Entegre' },
-			{ label: 'Süre', val: 'Proje bazlı' },
-			{ label: 'Destek', val: '7/24' },
-			{ label: 'Garanti', val: '5 Yıl' },
-		],
-		img: heroImage,
-		imgAlt: 'Signature koleksiyon su parkı',
-		badge: 'Premium',
-	},
+	
 ]
 
 const CATEGORIES = [
 	'Tümü',
-	'Kaydıraklar',
-	'Dalga Havuzları',
-	'Çocuk Alanları',
-	'Lazy River',
-	'Özel Projeler',
+	'Su Kaydırakları',
+	'Splash Tower',
+	'Splash Zone',
+	'Animasyonlar',
 ]
 
 // ── Glass Kart bileşeni ────────────────────────────────────
@@ -125,17 +94,14 @@ function GlassTag({ children }) {
 	)
 }
 
-export default function ProductsPage({ setActivePage, colorPalette = 1 }) {
+export default function ProductsPage({ setActivePage}) {
 	const [activeFilter, setActiveFilter] = useState('Tümü')
-	
-	// Seçili palette'i al
-	const palette = COLOR_PALETTES[colorPalette] || COLOR_PALETTES[4]
-	
-	// Badge stilleri palette'e göre
+		
+	// Badge stilleri
 	const BADGE_STYLE = {
-		'Çok Satılan': { backgroundColor: palette.primary, color: '#fff' },
-		'Yeni': { backgroundColor: palette.primary, color: '#fff' },
-		Premium: { backgroundColor: palette.secondary, color: '#fff' },
+		'Çok Satılan': { backgroundColor: 'var(--th-primary)', color: '#fff' },
+		'Yeni': { backgroundColor: 'var(--th-polgun-blue)', color: '#fff' },
+		'Premium': { backgroundColor: 'var(--th-polgun-antrasit)', color: '#fff' },
 	}
 
 	const filtered =
@@ -166,22 +132,22 @@ export default function ProductsPage({ setActivePage, colorPalette = 1 }) {
 								<button
 									onClick={() => setActivePage('contact')}
 									className="px-8 py-4 font-bold text-white rounded-full transition-all duration-300 hover:-translate-y-1"
-									style={{ backgroundColor: palette.secondary, boxShadow: `0 0 32px ${palette.secondary}66` }}
+									style={{ backgroundColor: 'var(--th-polgun-antrasit)', boxShadow: `0 0 32px var(--th-polgun-antrasit)66` }}
 									onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'var(--th-text-muted)'}
-									onMouseLeave={(e) => e.currentTarget.style.backgroundColor = palette.secondary}
+									onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'var(--th-polgun-antrasit)'}
 								>
 									Ürün Talebi
 								</button>
 								<button
 									onClick={() => setActivePage('contact')}
 									className="px-8 py-4 font-bold rounded-full transition-all duration-300 border-2"
-									style={{ color: palette.secondary, borderColor: palette.secondary, backgroundColor: `${palette.accent}0D`, backdropFilter: 'blur(8px)' }}
+									style={{ color: 'var(--th-polgun-antrasit)', borderColor: 'var(--th-polgun-antrasit)', backgroundColor: `var(--th-surface)0D`, backdropFilter: 'blur(8px)' }}
 									onMouseEnter={(e) => {
-										e.currentTarget.style.backgroundColor = `${palette.secondary}26`;
+										e.currentTarget.style.backgroundColor = `var(--th-polgun-antrasit)26`;
 										e.currentTarget.style.transform = 'translateY(-4px)';
 									}}
 									onMouseLeave={(e) => {
-										e.currentTarget.style.backgroundColor = `${palette.accent}0D`;
+										e.currentTarget.style.backgroundColor = `var(--th-surface)0D`;
 										e.currentTarget.style.transform = 'translateY(0)';
 									}}
 								>
@@ -195,7 +161,7 @@ export default function ProductsPage({ setActivePage, colorPalette = 1 }) {
 
 			{/* ── Filtre Şeridi ── */}
 			<div
-				className="sticky top-[72px] z-30 border-b"
+				className="top-[72px] z-30 border-b"
 				style={{
 					backgroundColor:
 						'color-mix(in srgb,var(--th-bg) 95%,transparent)',
@@ -214,17 +180,17 @@ export default function ProductsPage({ setActivePage, colorPalette = 1 }) {
 								style={
 									activeFilter === cat
 										? {
-											backgroundColor: palette.primary,
+											backgroundColor: 'var(--th-primary)',
 											color: '#fff',
 											boxShadow:
-												`0 4px 16px ${palette.primary}4D`,
+												`0 4px 16px var(--th-primary)4D`,
 									  }
 									: { color: 'var(--th-text-muted)' }
 							}
 							onMouseEnter={(e) => {
 								if (activeFilter !== cat)
 									e.currentTarget.style.backgroundColor =
-										`${palette.primary}1A`
+										`var(--th-primary-light)`
 								}}
 								onMouseLeave={(e) => {
 									if (activeFilter !== cat)
@@ -294,7 +260,7 @@ export default function ProductsPage({ setActivePage, colorPalette = 1 }) {
 								<div className="p-8">
 									<p
 										className="text-[10px] font-black tracking-[0.2em] uppercase mb-2"
-										style={{ color: 'var(--th-accent)' }}
+										style={{ color: 'var(--th-polgun-blue)' }}
 									>
 										{product.sub}
 									</p>
@@ -302,7 +268,7 @@ export default function ProductsPage({ setActivePage, colorPalette = 1 }) {
 										className="text-xl font-black mb-3 transition-colors"
 										style={{ color: 'var(--th-text)' }}
 										onMouseEnter={(e) =>
-											(e.currentTarget.style.color = 'var(--th-accent)')
+											(e.currentTarget.style.color = 'var(--th-polgun-blue)')
 										}
 										onMouseLeave={(e) =>
 											(e.currentTarget.style.color = 'var(--th-text)')
@@ -358,33 +324,33 @@ export default function ProductsPage({ setActivePage, colorPalette = 1 }) {
 										<button
 											onClick={() => setActivePage('contact')}
 											className="flex-1 py-3 text-white text-sm font-bold rounded-full transition-all duration-200 hover:-translate-y-0.5"
-										style={{ backgroundColor: palette.primary }}
+										style={{ backgroundColor: 'var(--th-polgun-blue)', boxShadow: `0 0 32px var(--th-polgun-blue)66` }}
 										onMouseEnter={(e) =>
 											(e.currentTarget.style.backgroundColor =
-												palette.secondary)
+												'var(--th-primary)')
 										}
 										onMouseLeave={(e) =>
 											(e.currentTarget.style.backgroundColor =
-												palette.primary)
+												'var(--th-polgun-blue)')
 											}
 										>
 											Teklif Al
 										</button>
 										<button
-											className="px-5 py-3 text-sm font-bold rounded-full transition-all duration-200"
+											className="px-5 py-3 text-sm font-bold rounded-full transition-all duration-200 hover:-translate-y-0.5"
 											style={{
 												border:
-												`1px solid ${palette.primary}4D`,
-											color: palette.primary,
+												`1px solid var(--th-polgun-blue)`,
+											color: 'var(--th-polgun-blue)',
 										}}
 										onMouseEnter={(e) => {
-											e.currentTarget.style.borderColor = palette.primary
-											e.currentTarget.style.color = palette.secondary
+											e.currentTarget.style.borderColor = 'var(--th-primary)';
+											e.currentTarget.style.color = 'var(--th-primary)'
 										}}
 										onMouseLeave={(e) => {
 											e.currentTarget.style.borderColor =
-												`${palette.primary}4D`
-											e.currentTarget.style.color = palette.primary
+												`var(--th-polgun-blue)`
+											e.currentTarget.style.color = 'var(--th-polgun-blue)'
 											}}
 										>
 											Detaylar
@@ -400,7 +366,7 @@ export default function ProductsPage({ setActivePage, colorPalette = 1 }) {
 			{/* ── Özel Proje CTA ── */}
 			<section className="py-32" style={{ backgroundColor: 'var(--th-bg)' }}>
 				<div className="max-w-[1400px] mx-auto px-6 lg:px-14">
-					<div className="relative rounded-3xl overflow-hidden px-12 py-20" style={{ background: `linear-gradient(135deg,${palette.primary} 0%,${palette.accent} 100%)` }}>
+					<div className="relative rounded-3xl overflow-hidden px-12 py-20" style={{ background: `linear-gradient(135deg,var(--th-primary) 0%,var(--th-polgun-blue) 100%)` }}>
 						<div className="absolute inset-0 opacity-10">
 							<svg
 								viewBox="0 0 1400 300"
@@ -430,8 +396,8 @@ export default function ProductsPage({ setActivePage, colorPalette = 1 }) {
 							className="shrink-0 px-10 py-4 text-sm font-bold rounded-full transition-all duration-300 hover:-translate-y-1"
 							style={{
 								backgroundColor: '#FFFFFF',
-								color: palette.primary,
-								boxShadow: `0 0 40px ${palette.primary}33`,
+								color: 'var(--th-primary)',
+								boxShadow: `0 0 40px var(--th-primary)33`,
 								}}
 								onMouseEnter={(e) => e.currentTarget.style.opacity = '0.9'}
 								onMouseLeave={(e) => e.currentTarget.style.opacity = '1'}

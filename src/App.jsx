@@ -88,17 +88,9 @@ export default function App() {
   // Sayfaların çoğu `var(--th-*)` kullanıyor; index.css sabit değerlerini burada palette'e göre override ediyoruz.
   const themeVars = {
     '--th-primary': palette.primary,
-    '--th-primary-dark': shade(palette.primary, -0.18),
     '--th-primary-darker': shade(palette.primary, -0.34),
-    '--th-secondary': palette.secondary,
-    '--th-secondary-dark': shade(palette.secondary, -0.12),
-    '--th-secondary-darker': shade(palette.secondary, -0.24),
-    '--th-accent': palette.accent,
-    '--th-accent-dark': shade(palette.accent, -0.18),
-    '--th-accent-light': shade(palette.accent, 0.62),
+    
     '--th-bg': palette.light,
-    '--th-hero-from': shade(palette.primary, -0.34),
-    '--th-hero-side': palette.primary,
   }
 
   return (

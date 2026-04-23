@@ -2,7 +2,6 @@
 // CONTACT PAGE — Form + Lokasyon + İletişim Bilgileri
 // ============================================================
 import { useState } from 'react'
-import { COLOR_PALETTES } from '../constants/colorPalettes'
 
 // ── Input Bileşeni ─────────────────────────────────────────
 function Field({ label, type = 'text', placeholder, name, value, onChange, required = false }) {
@@ -13,7 +12,7 @@ function Field({ label, type = 'text', placeholder, name, value, onChange, requi
         className="text-xs font-semibold tracking-wide uppercase"
         style={{ color: 'color-mix(in srgb, var(--th-text) 60%, transparent)' }}
       >
-        {label}{required && <span className="ml-0.5" style={{ color: 'var(--th-accent)' }}>*</span>}
+        {label}{required && <span className="ml-0.5" style={{ color: 'var(--th-polgun-blue)' }}>*</span>}
       </label>
       <input
         id={name}
@@ -27,7 +26,7 @@ function Field({ label, type = 'text', placeholder, name, value, onChange, requi
           text-[var(--th-text)]
           border-[color-mix(in_srgb,var(--th-border)_20%,transparent)]
           placeholder:text-[color-mix(in_srgb,var(--th-text-muted)_35%,transparent)]
-          focus:outline-none focus:border-[var(--th-accent)] focus:ring-2 focus:ring-[color-mix(in_srgb,var(--th-accent)_10%,transparent)]"
+          focus:outline-none focus:border-[var(--th-polgun-blue-polgun-blue-polgun-blue)] focus:ring-2 focus:ring-[color-mix(in_srgb,var(--th-polgun-blue)_10%,transparent)]"
       />
     </div>
   )
@@ -52,7 +51,7 @@ function SelectField({ label, name, value, onChange, options }) {
         className="w-full px-5 py-3.5 bg-white border rounded-xl text-sm transition-all duration-200 appearance-none cursor-pointer
           text-[var(--th-text)]
           border-[color-mix(in_srgb,var(--th-border)_20%,transparent)]
-          focus:outline-none focus:border-[var(--th-accent)] focus:ring-2 focus:ring-[color-mix(in_srgb,var(--th-accent)_10%,transparent)]"
+          focus:outline-none focus:border-[var(--th-polgun-blue)] focus:ring-2 focus:ring-[color-mix(in_srgb,var(--th-polgun-blue)_10%,transparent)]"
       >
         {options.map((opt) => (
           <option key={opt} value={opt}>{opt}</option>
@@ -68,12 +67,12 @@ function ContactCard({ icon, title, lines }) {
     <div className="flex gap-5 items-start">
       <div
         className="w-10 h-10 rounded-full flex items-center justify-center shrink-0 text-lg"
-        style={{ backgroundColor: 'color-mix(in srgb, var(--th-accent) 10%, transparent)' }}
+        style={{ backgroundColor: 'color-mix(in srgb, var(--th-polgun-blue) 10%, transparent)' }}
       >
         {icon}
       </div>
       <div>
-        <p className="text-xs font-bold tracking-widest uppercase mb-1.5" style={{ color: 'var(--th-accent)' }}>{title}</p>
+        <p className="text-xs font-bold tracking-widest uppercase mb-1.5" style={{ color: 'var(--th-polgun-blue)' }}>{title}</p>
         {lines.map((line, i) => (
           <p key={i} className="text-sm leading-relaxed" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 70%, transparent)' }}>{line}</p>
         ))}
@@ -82,8 +81,7 @@ function ContactCard({ icon, title, lines }) {
   )
 }
 
-export default function ContactPage({ colorPalette = 1 }) {
-  const palette = COLOR_PALETTES[colorPalette] || COLOR_PALETTES[1]
+export default function ContactPage({ setActivePage }) {
   const [form, setForm] = useState({
     name: '', email: '', phone: '', company: '',
     interest: 'Su Kaydırakları', message: '',
@@ -136,15 +134,15 @@ export default function ContactPage({ colorPalette = 1 }) {
                 <div
                   className="rounded-2xl p-10 text-center"
                   style={{
-                    backgroundColor: 'color-mix(in srgb, var(--th-accent) 8%, transparent)',
-                    border: '1px solid color-mix(in srgb, var(--th-accent) 20%, transparent)',
+                    backgroundColor: 'color-mix(in srgb, var(--th-polgun-blue) 8%, transparent)',
+                    border: '1px solid color-mix(in srgb, var(--th-polgun-blue) 20%, transparent)',
                   }}
                 >
                   <div
                     className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-5"
-                    style={{ backgroundColor: 'color-mix(in srgb, var(--th-accent) 15%, transparent)' }}
+                    style={{ backgroundColor: 'color-mix(in srgb, var(--th-polgun-blue) 15%, transparent)' }}
                   >
-                    <svg className="w-8 h-8" style={{ color: 'var(--th-accent)' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-8 h-8" style={{ color: 'var(--th-polgun-blue)' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
@@ -183,7 +181,7 @@ export default function ContactPage({ colorPalette = 1 }) {
                   {/* Mesaj */}
                   <div className="flex flex-col gap-2">
                     <label htmlFor="message" className="text-xs font-semibold tracking-wide uppercase" style={{ color: 'color-mix(in srgb, var(--th-text) 60%, transparent)' }}>
-                      Mesajınız <span style={{ color: 'var(--th-accent)' }}>*</span>
+                      Mesajınız <span style={{ color: 'var(--th-polgun-blue)' }}>*</span>
                     </label>
                     <textarea
                       id="message"
@@ -197,17 +195,17 @@ export default function ContactPage({ colorPalette = 1 }) {
                         text-[var(--th-text)]
                         border-[color-mix(in_srgb,var(--th-border)_20%,transparent)]
                         placeholder:text-[color-mix(in_srgb,var(--th-text-muted)_35%,transparent)]
-                        focus:outline-none focus:border-[var(--th-accent)] focus:ring-2 focus:ring-[color-mix(in_srgb,var(--th-accent)_10%,transparent)]"
+                        focus:outline-none focus:border-[var(--th-polgun-blue)] focus:ring-2 focus:ring-[color-mix(in_srgb,var(--th-polgun-blue)_10%,transparent)]"
                     />
                   </div>
 
                   {/* KVKK */}
                   <label className="flex items-start gap-3 cursor-pointer group">
                     <input type="checkbox" required
-                      className="mt-0.5 w-4 h-4 rounded cursor-pointer shrink-0 border-[color-mix(in_srgb,var(--th-border)_30%,transparent)] accent-[var(--th-accent)]" />
+                      className="mt-0.5 w-4 h-4 rounded cursor-pointer shrink-0 border-[color-mix(in_srgb,var(--th-border)_30%,transparent)] accent-[var(--th-polgun-blue)]" />
                     <span className="text-xs leading-relaxed" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 60%, transparent)' }}>
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.{' '}
-                      <a href="#" className="hover:underline" style={{ color: 'var(--th-accent)' }}>KVKK Aydınlatma Metni</a>'ni okudum ve onaylıyorum.
+                      <a href="#" className="hover:underline" style={{ color: 'var(--th-polgun-blue)' }}>KVKK Aydınlatma Metni</a>'ni okudum ve onaylıyorum.
                     </span>
                   </label>
 
@@ -215,7 +213,7 @@ export default function ContactPage({ colorPalette = 1 }) {
                   <button
                     type="submit"
                     className="w-full sm:w-auto sm:self-start px-10 py-4 text-white text-sm font-semibold rounded-full transition-all duration-200
-                      bg-[var(--th-accent)] hover:opacity-90 hover:shadow-xl hover:shadow-[color-mix(in_srgb,var(--th-accent)_25%,transparent)] hover:-translate-y-0.5"
+                      bg-[var(--th-polgun-blue)] hover:opacity-90 hover:shadow-xl hover:shadow-[color-mix(in_srgb,var(--th-polgun-blue)_25%,transparent)] hover:-translate-y-0.5"
                   >
                     Talebi Gönder
                   </button>
@@ -261,7 +259,7 @@ export default function ContactPage({ colorPalette = 1 }) {
                       className="flex items-center gap-3 py-3.5 border-b last:border-0"
                       style={{ borderColor: 'color-mix(in srgb, var(--th-border) 35%, transparent)' }}
                     >
-                      <div className="w-1.5 h-1.5 rounded-full shrink-0" style={{ backgroundColor: 'var(--th-accent)' }} />
+                      <div className="w-1.5 h-1.5 rounded-full shrink-0" style={{ backgroundColor: 'var(--th-polgun-blue)' }} />
                       <span className="text-sm" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 70%, transparent)' }}>{office}</span>
                     </div>
                   ))}

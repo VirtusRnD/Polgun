@@ -7,7 +7,6 @@ import eftaliaBlue from '../assets/products/eftalia-blue-antalya.png'
 import nirvana from '../assets/products/nirvana-cosmopolitan-antalya.jpg'
 import seignosse from '../assets/products/SeignosseAtlanticPark-fransa.webp'
 import delphinPalace from '../assets/products/delphin-palace-antalya.jpg'
-import { COLOR_PALETTES } from '../constants/colorPalettes'
 
 // ── Proje Verisi ───────────────────────────────────────────
 const PROJECTS = [
@@ -22,7 +21,6 @@ const PROJECTS = [
     desc: 'İstanbul\'un en büyük su parkı projelerinden biri: 12 farklı kaydırak, dev dalga havuzu ve aile dostu tasarımıyla 2023 sezonunun gözdesi.',
     img: eftaliaBlue,
     imgAlt: 'AquaDream Water Park İstanbul',
-    featured: true,
   },
   {
     id: 2,
@@ -35,7 +33,6 @@ const PROJECTS = [
     desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     img: seignosse,
     imgAlt: 'OceanSplash Resort Antalya',
-    featured: false,
   },
   {
     id: 3,
@@ -48,7 +45,6 @@ const PROJECTS = [
     desc: 'Polonya\'nın ilk büyük ölçekli kapalı su parkı: dört mevsim açık, çocuklardan yetişkinlere her yaşa hitap eden etkinlikleri.',
     img: nirvana,
     imgAlt: 'Mega Wave Indoor Park Varşova',
-    featured: true,
   },
   {
     id: 4,
@@ -61,7 +57,6 @@ const PROJECTS = [
     desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     img: delphinPalace,
     imgAlt: 'Desert Oasis Water World Dubai',
-    featured: false,
   },
   {
     id: 5,
@@ -74,7 +69,6 @@ const PROJECTS = [
     desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     img: heroImage,
     imgAlt: 'AquaVenture Cruise gemisi',
-    featured: false,
   },
 ]
 
@@ -98,8 +92,7 @@ function GlassTag({ children }) {
   )
 }
 
-export default function ProjectsPage({ setActivePage, colorPalette = 4 }) {
-  const palette = COLOR_PALETTES[colorPalette] || COLOR_PALETTES[5]
+export default function ProjectsPage({ setActivePage}) {
   const [region, setRegion] = useState('Tümü')
   const [type, setType]     = useState('Tümü')
 
@@ -108,8 +101,6 @@ export default function ProjectsPage({ setActivePage, colorPalette = 4 }) {
     (type   === 'Tümü' || p.type   === type)
   )
 
-  const featured = filtered.filter((p) => p.featured)
-  const rest     = filtered.filter((p) => !p.featured)
 
   return (
     <main className="pt-20" style={{ backgroundColor: 'var(--th-bg)' }}>
@@ -168,10 +159,10 @@ export default function ProjectsPage({ setActivePage, colorPalette = 4 }) {
                 onClick={() => setType(t)}
                 className="px-4 py-1.5 rounded-full text-xs font-semibold transition-all duration-200"
                 style={type === t
-                  ? { backgroundColor: 'var(--th-accent)', color: '#fff' }
+                  ? { backgroundColor: 'var(--th-polgun-blue)', color: '#fff' }
                   : { color: 'var(--th-text-muted)' }
                 }
-                onMouseEnter={(e) => { if (type !== t) e.currentTarget.style.backgroundColor = 'color-mix(in srgb,var(--th-accent) 10%,transparent)' }}
+                onMouseEnter={(e) => { if (type !== t) e.currentTarget.style.backgroundColor = 'color-mix(in srgb,var(--th-polgun-blue) 10%,transparent)' }}
                 onMouseLeave={(e) => { if (type !== t) e.currentTarget.style.backgroundColor = 'transparent' }}
               >
                 {t}
@@ -181,12 +172,12 @@ export default function ProjectsPage({ setActivePage, colorPalette = 4 }) {
         </div>
       </div>
 
-      {/* ── Featured Projeler (büyük) ── */}
-      {featured.length > 0 && (
+      {/* ── Projeler ── */}
+      
         <section className="py-16">
           <div className="max-w-[1400px] mx-auto px-6 lg:px-14">
             <div className="grid lg:grid-cols-2 gap-6">
-              {featured.map((proj) => (
+              {filtered.map((proj) => (
                 <article
                   key={proj.id}
                   className="group relative overflow-hidden rounded-2xl cursor-pointer transition-all duration-300 hover:-translate-y-1"
@@ -208,7 +199,7 @@ export default function ProjectsPage({ setActivePage, colorPalette = 4 }) {
                   <div className="absolute bottom-0 left-0 right-0 p-8">
                     <div className="flex flex-wrap gap-2 mb-3">
                       <span className="text-[10px] font-black tracking-widest uppercase px-3 py-1.5 rounded-full text-white"
-                        style={{ backgroundColor: 'var(--th-accent)' }}>
+                        style={{ backgroundColor: 'var(--th-polgun-blue)' }}>
                         {proj.type}
                       </span>
                       <GlassTag>{proj.year}</GlassTag>
@@ -228,74 +219,6 @@ export default function ProjectsPage({ setActivePage, colorPalette = 4 }) {
                 </article>
               ))}
             </div>
-          </div>
-        </section>
-      )}
-
-      {/* ── Diğer Projeler (3 kolonlu) ── */}
-      {rest.length > 0 && (
-        <section className="pb-24">
-          <div className="max-w-[1400px] mx-auto px-6 lg:px-14">
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {rest.map((proj) => (
-                <article
-                  key={proj.id}
-                  className="group rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1"
-                  style={{
-                    backgroundColor: 'var(--th-surface)',
-                    border: '1px solid color-mix(in srgb,var(--th-border) 8%,transparent)',
-                    boxShadow: '0 2px 12px rgba(0,0,0,0.04)',
-                  }}
-                  onMouseEnter={(e) => e.currentTarget.style.boxShadow = '0 16px 48px rgba(0,0,0,0.1)'}
-                  onMouseLeave={(e) => e.currentTarget.style.boxShadow = '0 2px 12px rgba(0,0,0,0.04)'}
-                >
-                  {/* Gerçek görsel */}
-                  <div className="relative h-48 overflow-hidden">
-                    <img
-                      src={proj.img}
-                      alt={proj.imgAlt}
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                    />
-                    <div className="absolute inset-0" style={{ background: 'linear-gradient(to top,rgba(0,0,0,0.4),transparent)' }} />
-                    <div className="absolute top-4 left-4">
-                      <span className="text-[10px] font-black tracking-widest uppercase px-3 py-1.5 rounded-full text-white"
-                        style={{ backgroundColor: 'var(--th-accent)' }}>
-                        {proj.type}
-                      </span>
-                    </div>
-                  </div>
-                  <div className="p-6">
-                    <p className="text-xs font-semibold tracking-widest uppercase mb-2"
-                      style={{ color: 'color-mix(in srgb,var(--th-text-muted) 60%,transparent)' }}>
-                      {proj.location} · {proj.year}
-                    </p>
-                    <h2 className="text-lg font-black mb-3 transition-colors" style={{ color: 'var(--th-text)' }}
-                      onMouseEnter={(e) => e.currentTarget.style.color = 'var(--th-accent)'}
-                      onMouseLeave={(e) => e.currentTarget.style.color = 'var(--th-text)'}
-                    >
-                      {proj.name}
-                    </h2>
-                    <p className="text-sm leading-relaxed mb-5 line-clamp-2"
-                      style={{ color: 'color-mix(in srgb,var(--th-text-muted) 65%,transparent)' }}>
-                      {proj.desc}
-                    </p>
-                    <div className="flex flex-wrap gap-1.5">
-                      {proj.scope.map((s) => (
-                        <span key={s} className="text-[10px] font-medium px-2.5 py-1 rounded-full"
-                          style={{
-                            color: 'var(--th-accent)',
-                            border: '1px solid color-mix(in srgb,var(--th-accent) 25%,transparent)',
-                            backgroundColor: 'color-mix(in srgb,var(--th-accent) 8%,transparent)',
-                          }}>
-                          {s}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                </article>
-              ))}
-            </div>
-
             {filtered.length === 0 && (
               <div className="text-center py-24" style={{ color: 'color-mix(in srgb,var(--th-text-muted) 50%,transparent)' }}>
                 <p className="text-lg font-semibold">Bu filtrede proje bulunamadı.</p>
@@ -303,12 +226,12 @@ export default function ProjectsPage({ setActivePage, colorPalette = 4 }) {
             )}
           </div>
         </section>
-      )}
+
 
       {/* ── CTA ── */}
       <section className="py-32" style={{ backgroundColor: 'var(--th-bg)' }}>
         <div className="max-w-[1400px] mx-auto px-6 lg:px-14">
-          <div className="relative rounded-3xl overflow-hidden px-12 py-20" style={{ background: 'linear-gradient(135deg,var(--th-primary-darker) 0%,var(--th-primary) 50%,var(--th-accent) 100%)' }}>
+          <div className="relative rounded-3xl overflow-hidden px-12 py-20" style={{ background: 'linear-gradient(135deg,var(--th-primary) 0%,var(--th-polgun-blue) 100%)' }}>
             <div className="absolute inset-0 opacity-10">
               <svg viewBox="0 0 1400 300" className="w-full h-full" preserveAspectRatio="xMidYMid slice">
                 <circle cx="200" cy="150" r="250" fill="white"/>

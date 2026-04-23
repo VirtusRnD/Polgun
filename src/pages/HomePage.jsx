@@ -3,7 +3,6 @@
 // "Let's color the water" hero
 // ============================================================
 import { useState, useEffect } from 'react'
-import { COLOR_PALETTES } from '../constants/colorPalettes'
 
 // ── Referans Logo İmportları ───────────────────────────────
 import refAmara        from '../assets/references/amara-prestige-elite-logo.jpg'
@@ -143,8 +142,7 @@ const CAROUSEL_IMAGES = [
 ]
 
 // ── Sayfa bileşeni ─────────────────────────────────────────
-export default function HomePage({ setActivePage, colorPalette = 1 }) {
-  const palette = COLOR_PALETTES[colorPalette] || COLOR_PALETTES[1]
+export default function HomePage({ setActivePage}) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
 
   // ── Otomatik resim değiştirme
@@ -476,7 +474,7 @@ Polgün, su parkı projelerinde tasarım, mühendislik, üretim ve uygulama sür
       <section className="py-32" style={{ backgroundColor:'var(--th-bg)' }}>
         <div className="max-w-[1400px] mx-auto px-6 lg:px-14">
           <div className="relative rounded-3xl overflow-hidden px-12 py-20 text-center"
-            style={{ background:'linear-gradient(135deg,var(--th-polgun-logo) 0%,var(--th-polgun-blue) 100%)' }}>
+            style={{ background:'linear-gradient(135deg,var(--th-primary) 0%,var(--th-polgun-blue) 100%)' }}>
             <div className="absolute inset-0 opacity-10">
               <svg viewBox="0 0 800 300" className="w-full h-full" preserveAspectRatio="xMidYMid slice">
                 <circle cx="100" cy="150" r="200" fill="white"/>

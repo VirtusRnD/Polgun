@@ -2,17 +2,16 @@
 // ABOUT PAGE — Şirket tarihçesi, değerler, ekip, text-heavy
 // ============================================================
 import heroImage from '../assets/polgun-featured-projects-4.jpeg'
-import { COLOR_PALETTES } from '../constants/colorPalettes'
 
 function ImgPlaceholder({ label = '', aspect = 'aspect-square', className = '' }) {
   return (
     <div
       className={`${aspect} ${className} flex flex-col items-center justify-center gap-2 rounded-2xl overflow-hidden`}
-      style={{ backgroundColor: 'color-mix(in srgb, var(--th-accent) 10%, transparent)' }}
+      style={{ backgroundColor: 'color-mix(in srgb, var(--th-polgun-blue) 10%, transparent)' }}
     >
       <svg
         className="w-10 h-10"
-        style={{ color: 'color-mix(in srgb, var(--th-accent) 30%, transparent)' }}
+        style={{ color: 'color-mix(in srgb, var(--th-polgun-blue) 30%, transparent)' }}
         fill="none"
         stroke="currentColor"
         viewBox="0 0 24 24"
@@ -20,7 +19,7 @@ function ImgPlaceholder({ label = '', aspect = 'aspect-square', className = '' }
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1}
           d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
       </svg>
-      <span className="text-[10px] font-medium" style={{ color: 'color-mix(in srgb, var(--th-accent) 40%, transparent)' }}>{label}</span>
+      <span className="text-[10px] font-medium" style={{ color: 'color-mix(in srgb, var(--th-polgun-blue) 40%, transparent)' }}>{label}</span>
     </div>
   )
 }
@@ -82,8 +81,7 @@ const TEAM = [
   { name: 'Tura Pisc', role: 'Tasarım Direktörü', initials: 'TP' },
 ]
 
-export default function AboutPage({ setActivePage, colorPalette = 1 }) {
-  const palette = COLOR_PALETTES[colorPalette] || COLOR_PALETTES[1]
+export default function AboutPage({ setActivePage}) {
   
   return (
     <main className="pt-20" style={{ backgroundColor: 'var(--th-bg)' }}>
@@ -112,7 +110,7 @@ export default function AboutPage({ setActivePage, colorPalette = 1 }) {
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <div className="grid lg:grid-cols-2 gap-20 items-center">
             <div>
-              <p className="text-xs font-bold tracking-[0.25em] uppercase mb-5" style={{ color: 'var(--th-accent)' }}>Misyonumuz</p>
+              <p className="text-xs font-bold tracking-[0.25em] uppercase mb-5" style={{ color: 'var(--th-polgun-blue)' }}>Misyonumuz</p>
               <h2 className="text-4xl font-black leading-tight mb-8" style={{ color: 'var(--th-text)' }}>
                 Lorem ipsum dolor<br />sit amet consectetur
               </h2>
@@ -132,7 +130,7 @@ export default function AboutPage({ setActivePage, colorPalette = 1 }) {
       <section className="py-24" style={{ backgroundColor: 'var(--th-surface)' }}>
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <div className="text-center mb-16">
-            <p className="text-xs font-bold tracking-[0.25em] uppercase mb-4" style={{ color: 'var(--th-accent)' }}>Temel Değerlerimiz</p>
+            <p className="text-xs font-bold tracking-[0.25em] uppercase mb-4" style={{ color: 'var(--th-polgun-blue)' }}>Temel Değerlerimiz</p>
             <h2 className="text-4xl font-black" style={{ color: 'var(--th-text)' }}>Bizi biz yapan ilkeler</h2>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-px rounded-2xl overflow-hidden" style={{ backgroundColor: 'color-mix(in srgb, var(--th-border) 8%, transparent)' }}>
@@ -156,20 +154,20 @@ export default function AboutPage({ setActivePage, colorPalette = 1 }) {
       <section className="py-28" style={{ backgroundColor: 'var(--th-surface)' }}>
         <div className="max-w-5xl mx-auto px-6 lg:px-12">
           <div className="text-center mb-20">
-            <p className="text-xs font-bold tracking-[0.25em] uppercase mb-4" style={{ color: 'var(--th-accent)' }}>Tarihçemiz</p>
+            <p className="text-xs font-bold tracking-[0.25em] uppercase mb-4" style={{ color: 'var(--th-polgun-blue)' }}>Tarihçemiz</p>
             <h2 className="text-4xl font-black" style={{ color: 'var(--th-text)' }}>20 Yıllık Yolculuk</h2>
           </div>
           <div className="relative">
-            <div className="absolute left-16 top-0 bottom-0 w-px hidden sm:block" style={{ backgroundColor: 'color-mix(in srgb, var(--th-accent) 20%, transparent)' }} />
+            <div className="absolute left-16 top-0 bottom-0 w-px hidden sm:block" style={{ backgroundColor: 'color-mix(in srgb, var(--th-polgun-blue) 20%, transparent)' }} />
             <div className="flex flex-col gap-12">
               {TIMELINE.map((item, i) => (
                 <div key={i} className="flex gap-12 items-start">
                   <div className="hidden sm:flex flex-col items-center shrink-0 w-8 pt-1">
-                    <div className="w-3 h-3 rounded-full shrink-0" style={{ backgroundColor: 'var(--th-accent)', boxShadow: '0 0 0 4px color-mix(in srgb, var(--th-accent) 15%, transparent)' }} />
+                    <div className="w-3 h-3 rounded-full shrink-0" style={{ backgroundColor: 'var(--th-polgun-blue)', boxShadow: '0 0 0 4px color-mix(in srgb, var(--th-polgun-blue) 15%, transparent)' }} />
                   </div>
                   <div className="flex-1 pb-12 last:pb-0" style={{ borderBottom: '1px solid color-mix(in srgb, var(--th-border) 8%, transparent)' }}>
                     <div className="flex items-center gap-4 mb-3">
-                      <span className="text-xs font-black tracking-widest px-3 py-1.5 rounded-full" style={{ color: 'var(--th-accent)', backgroundColor: 'color-mix(in srgb, var(--th-accent) 10%, transparent)' }}>
+                      <span className="text-xs font-black tracking-widest px-3 py-1.5 rounded-full" style={{ color: 'var(--th-polgun-blue)', backgroundColor: 'color-mix(in srgb, var(--th-polgun-blue) 10%, transparent)' }}>
                         {item.year}
                       </span>
                       <h3 className="text-lg font-bold" style={{ color: 'var(--th-text)' }}>{item.title}</h3>
@@ -187,18 +185,18 @@ export default function AboutPage({ setActivePage, colorPalette = 1 }) {
       <section className="py-24" style={{ backgroundColor: 'var(--th-surface)' }}>
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <div className="mb-16">
-            <p className="text-xs font-bold tracking-[0.25em] uppercase mb-4" style={{ color: 'var(--th-accent)' }}>Ekibimiz</p>
+            <p className="text-xs font-bold tracking-[0.25em] uppercase mb-4" style={{ color: 'var(--th-polgun-blue)' }}>Ekibimiz</p>
             <h2 className="text-4xl font-black" style={{ color: 'var(--th-text)' }}>Satış Ekibimiz</h2>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {TEAM.map((member) => (
               <div key={member.name} className="group">
                 <div className="aspect-square rounded-2xl flex items-center justify-center mb-5 transition-colors"
-                  style={{ backgroundColor: 'color-mix(in srgb, var(--th-accent) 10%, transparent)' }}
-                  onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'color-mix(in srgb, var(--th-accent) 20%, transparent)'}
-                  onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'color-mix(in srgb, var(--th-accent) 10%, transparent)'}
+                  style={{ backgroundColor: 'color-mix(in srgb, var(--th-polgun-blue) 10%, transparent)' }}
+                  onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'color-mix(in srgb, var(--th-polgun-blue) 20%, transparent)'}
+                  onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'color-mix(in srgb, var(--th-polgun-blue) 10%, transparent)'}
                 >
-                  <span className="text-3xl font-black" style={{ color: 'color-mix(in srgb, var(--th-accent) 50%, transparent)' }}>{member.initials}</span>
+                  <span className="text-3xl font-black" style={{ color: 'color-mix(in srgb, var(--th-polgun-blue) 50%, transparent)' }}>{member.initials}</span>
                 </div>
                 <h3 className="font-bold transition-colors" style={{ color: 'var(--th-text)' }}>{member.name}</h3>
                 <p className="text-sm mt-1" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 60%, transparent)' }}>{member.role}</p>
@@ -213,7 +211,7 @@ export default function AboutPage({ setActivePage, colorPalette = 1 }) {
       {/* ── CTA ── */}
       <section className="py-32" style={{ backgroundColor: 'var(--th-surface)' }}>
         <div className="max-w-[1400px] mx-auto px-6 lg:px-14">
-          <div className="relative rounded-3xl overflow-hidden px-12 py-20 text-center" style={{ background: 'linear-gradient(135deg,var(--th-primary) 0%, var(--th-accent-light) 100%)' }}>
+          <div className="relative rounded-3xl overflow-hidden px-12 py-20 text-center" style={{ background: 'linear-gradient(135deg,var(--th-primary) 0%, var(--th-polgun-blue) 100%)' }}>
             <div className="absolute inset-0 opacity-10">
               <svg viewBox="0 0 800 300" className="w-full h-full" preserveAspectRatio="xMidYMid slice">
                 <circle cx="100" cy="150" r="200" fill="white"/>

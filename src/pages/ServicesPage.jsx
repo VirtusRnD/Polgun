@@ -2,7 +2,6 @@
 // SERVICES PAGE — Gerçek görseller + CSS değişkenleri + glass efekt
 // ============================================================
 import heroImage from '../assets/polgun-featured-projects-4.jpeg'
-import { COLOR_PALETTES } from '../constants/colorPalettes'
 
 // ── Hizmet Adımları ────────────────────────────────────────
 const STEPS = [
@@ -100,8 +99,7 @@ function GlassCard({ children, className = '', style = {} }) {
 	);
 }
 
-export default function ServicesPage({ setActivePage, colorPalette = 1 }) {
-	const palette = COLOR_PALETTES[colorPalette] || COLOR_PALETTES[1]
+export default function ServicesPage({ setActivePage}) {
 	
 	return (
 		<main className="pt-20" style={{ backgroundColor: 'var(--th-bg)' }}>
@@ -125,22 +123,22 @@ export default function ServicesPage({ setActivePage, colorPalette = 1 }) {
 								<button
 									onClick={() => setActivePage('contact')}
 									className="px-8 py-4 font-bold text-white rounded-full transition-all duration-300 hover:-translate-y-1"
-									style={{ backgroundColor: palette.secondary, boxShadow: `0 0 32px ${palette.secondary}66` }}
+									style={{ backgroundColor: 'var(--th-polgun-antrasit)', boxShadow: `0 0 32px var(--th-polgun-antrasit)66` }}
 									onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'var(--th-text-muted)'}
-									onMouseLeave={(e) => e.currentTarget.style.backgroundColor = palette.secondary}
+									onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'var(--th-polgun-antrasit)'}
 								>
 									Teklif Al
 								</button>
 								<button
 									onClick={() => setActivePage('contact')}
 									className="px-8 py-4 font-bold rounded-full transition-all duration-300 border-2"
-									style={{ color: palette.secondary, borderColor: palette.secondary, backgroundColor: `${palette.accent}0D`, backdropFilter: 'blur(8px)' }}
+									style={{ color: 'var(--th-polgun-antrasit)', borderColor: 'var(--th-polgun-antrasit)', backgroundColor: 'var(--th-primary)', backdropFilter: 'blur(8px)' }}
 									onMouseEnter={(e) => {
-										e.currentTarget.style.backgroundColor = `${palette.secondary}26`;
+										e.currentTarget.style.backgroundColor = 'var(--th-polgun-antrasit)26';
 										e.currentTarget.style.transform = 'translateY(-4px)';
 									}}
 									onMouseLeave={(e) => {
-										e.currentTarget.style.backgroundColor = `${palette.accent}0D`;
+										e.currentTarget.style.backgroundColor = 'var(--th-primary)';
 										e.currentTarget.style.transform = 'translateY(0)';
 									}}
 								>
@@ -172,10 +170,10 @@ export default function ServicesPage({ setActivePage, colorPalette = 1 }) {
 			<section className="py-24 lg:py-32">
 				<div className="max-w-[1400px] mx-auto px-6 lg:px-14">
 					<div className="text-center mb-20">
-						<p className="text-[11px] font-black tracking-[0.3em] uppercase mb-5 flex items-center justify-center gap-3" style={{ color: 'var(--th-accent)' }}>
-							<span className="inline-block w-6 h-px" style={{ backgroundColor: 'var(--th-accent)' }} />
+						<p className="text-[11px] font-black tracking-[0.3em] uppercase mb-5 flex items-center justify-center gap-3" style={{ color: 'var(--th-polgun-blue)' }}>
+							<span className="inline-block w-6 h-px" style={{ backgroundColor: 'var(--th-polgun-blue)' }} />
 							Hizmet Sürecimiz
-							<span className="inline-block w-6 h-px" style={{ backgroundColor: 'var(--th-accent)' }} />
+							<span className="inline-block w-6 h-px" style={{ backgroundColor: 'var(--th-polgun-blue)' }} />
 						</p>
 						<h2 className="font-black leading-tight" style={{ color: 'var(--th-text)', fontSize: 'clamp(2rem,4vw,3.5rem)' }}>
 							Başından sonuna<br />her adımda yanınızdayız
@@ -192,7 +190,7 @@ export default function ServicesPage({ setActivePage, colorPalette = 1 }) {
 								<div>
 									<div className="flex items-center gap-4 mb-7">
 										<span className="text-6xl font-black leading-none select-none"
-											style={{ color: 'color-mix(in srgb,var(--th-accent) 15%,transparent)' }}>
+											style={{ color: 'color-mix(in srgb,var(--th-polgun-blue) 15%,transparent)' }}>
 											{step.number}
 										</span>
 										<div>

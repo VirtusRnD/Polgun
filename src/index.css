@@ -19,26 +19,18 @@
 :root,
 [data-theme="A"] {
   --th-primary:      #22ABE6;   /* Polgün Blue - başlıklar, koyu arka planlar */
-  --th-primary-dark: #3B7FB5;
-  --th-primary-darker: #1565C0;   /* Darker blue - contrast & depth */
-  --th-secondary:    #0B1F3A;
-  --th-secondary-dark: #08172B;
-  --th-secondary-darker: #06101E;
-  --th-accent:       #0288D1;   /* Vibrant Blue - butonlar, vurgular */
-  --th-accent-dark:  #0277BD;
-  --th-accent-light: #B3E5FC;
+  --th-primary-darker: #1565C0; 
+  --th-primary-light:      #bae8fc;   /* Darker blue - contrast & depth */
+
+  
   --th-bg:           #F4F4F0;   /* açık krem arka plan */
   --th-surface:      #ffffff;
-  --th-text:         #3D3D4E;   /* antrasit metin */
+  --th-text:         #373F43;   /* antrasit metin */
   --th-text-muted:   #5A5A5A;
-  --th-text-light:   #455055;
   --th-border:       #D8D8D4;
-  --th-hero-from:    #2E5A7E;
-  --th-hero-side:    #5CA3E1;
 
   --th-polgun-blue: #2874B2;
   --th-polgun-antrasit: #373F43;
-  --th-polgun-logo: #22ABE6;
 }
 
 * {
