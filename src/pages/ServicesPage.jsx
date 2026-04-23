@@ -8,88 +8,70 @@ import { COLOR_PALETTES } from '../constants/colorPalettes'
 const STEPS = [
 	{
 		number: '01',
-		title: 'Tasarım & Mühendislik',
-		sub: 'Design & Engineering',
-		desc: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.',
-		bullets: [
-			'Konsept ve fizibilite çalışmaları',
-			'Master plan ve 3D modelleme',
-			'Yapısal ve hidrolik mühendislik',
-			'Tema entegrasyonu ve görsel tasarım',
-		],
+		title: 'Müşteri Hizmetleri',
+		sub: 'Customer Servıce',
+		desc: 'Polgün, müşterilerine mümkün olan en iyi müşteri hizmetini sunmaya kararlıdır. Yatırımınızın değerinin bilincinde olarak, projenizle ilgili her ayrıntı önemlidir ve öncelikli olarak ele alınmaktadır. Bizim için müşteri hizmetleri, müşteri ihtiyaçlarını olabildiğince çabuk çözmek, yüz yüze hızlı bağlantı kurmak, her soruya 7/24 ulaşılabilir olmak ve iletişimimizin her adımında Türk misafirperverliği ile hizmet vermek demektir.',
 		img: heroImage,
-		imgAlt: 'Su parkı tasarım çalışması',
+		imgAlt: 'Su parkı yenileme projesi',
 	},
 	{
 		number: '02',
-		title: 'Üretim & İnşaat',
-		sub: 'Manufacturing & Build',
-		desc: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.',
-		bullets: [
-			'ISO sertifikalı üretim tesisleri',
-			'GRP / HDPE kompozit üretim',
-			'Kalite kontrol ve test süreçleri',
-			'Zamanında teslimat garantisi',
-		],
+		title: 'Tasarım',
+		sub: 'Desıgn',
+		desc: 'Tasarımcılar, geliştiriciler ve 3D sanatçılardan oluşan ekibimiz, yeni nesil ürünleri, deneyimleri ve hizmetleri tasarlamak ve inşa etmek için büyüme, etki ve çeviklik arayışı içindedir. Bu, tasarım departmanının çok sayıda farklı yüksek kaliteli proje üretmesini sağlar. Polgün olarak dünyanın dört bir yanındaki müşterilere arzu edilen tasarımları sunmak istiyoruz. Uzun yıllar, işimizi büyütürken ve yeni pazarlara girerken, misafirlerinize daha iyi bir yolculuk deneyimi yaratma vizyonumuzu sunuyoruz.',
 		img: heroImage,
 		imgAlt: 'Su parkı üretim tesisi',
 	},
 	{
 		number: '03',
-		title: 'Montaj & Devreye Alma',
-		sub: 'Installation & Commissioning',
-		desc: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.',
-		bullets: [
-			'Uzman saha ekipleri',
-			'Güvenlik testleri ve sertifikasyon',
-			'Personel eğitim programları',
-			'Devreye alma desteği',
-		],
+		title: 'Planlama',
+		sub: 'Plannıng',
+		desc: 'Planlama, şirketimiz için temel bir değerdir çünkü tüm projelerin arkasındaki başarı, iyi yönetilen proje planlamasına dayanır. Polgün Proje Planlama bölümü, proje başlangıcından detaylı tasarıma kadar tüm görevleri kapsayan tüm proje aşamasından sorumludur. Projeyle ilgili risklerin analiz edildiği ve spesifik proje yürütme yaklaşımının tanımlandığı bu önemli aşamadadır. Yatırımınızın değeri planlama sürecimizde önceliğimizdir; bununla birlikte başarı, projenizin her aşamasında gelir.',
+		img: heroImage,
+		imgAlt: 'Su parkı tasarım çalışması',
+	},
+	{
+		number: '04',
+		title: 'Mühendislik',
+		sub: 'Engıneerıng',
+		desc: 'Polgün’ün bünyesindeki mühendis ve mimarlardan oluşan ekip, tüm yapının tasarlanmasından her türlü çevresel koşulun belirlenmesine kadar fonksiyonları yürüten projelerin çeşitli aşamalarının çekirdeğini oluşturur. Deneyim ve vizyon bizim için anahtar sözcüklerdir, mühendislik süreci projeyi bir vizyondan devasa bir gerçekliğe götürürken, güvenlik ve görsel gerçekleri sağlar. Bir projenin kendisi, tasarımcılar ve mühendisler tarafından, büyük ölçüde, projenin kurulacağı çevresel koşullar, bir su kaydırağının tam eğriliği için hesaplamalar ve güvenlik hususlarının analizleri açısından yönlendirilir.',
 		img: heroImage,
 		imgAlt: 'Su parkı montaj sahnesi',
 	},
 	{
-		number: '04',
-		title: 'Bakım & Onarım',
-		sub: 'Maintenance & Repair',
-		desc: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.',
-		bullets: [
-			'Yıllık bakım sözleşmeleri',
-			'Yedek parça stok yönetimi',
-			'7/24 teknik destek hattı',
-			'Uzaktan izleme sistemi',
-		],
-		img: heroImage,
-		imgAlt: 'Su parkı bakım ekibi',
-	},
-	{
 		number: '05',
-		title: 'Yenileme Hizmetleri',
-		sub: 'Refurbishment & Renovation',
-		desc: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.',
-		bullets: [
-			'Mevcut kaydırak yüzey yenileme',
-			'Teknik güncelleme ve modernizasyon',
-			'Tema yenileme ve renk değişimi',
-			'Enerji verimliliği iyileştirme',
-		],
+		title: 'Üretim',
+		sub: 'Productıon',
+		desc: 'Tesisimiz, Türkiye’de bulunan Muğla İlinde; tüm taleplerinize hızlı ve güvenilir bir şekilde cevap vermemizi sağlayan modern, entegre bir üretim tesisimiz var.Türkiye’de bulunan Muğla İlinde; tüm taleplerinize hızlı ve güvenilir bir şekilde cevap vermemizi sağlayan modern, entegre bir üretim tesisidir. Üretim tesisimiz, hem çelik konstrüksiyon hem de fiberglas imalatını işlememizi sağlayan verimli, yüksek teknolojili ekipmanlara sahiptir ki bu durum sektörümüzde çok nadir görülen bir durumdur. Tamamen otomatik üretim kontrol sistemi ve her bir bileşenin barkod tanımlaması sayesinde projelerimizi optimum sürelerde ve uygun bir sırada yönetebiliriz.',
 		img: heroImage,
 		imgAlt: 'Su parkı yenileme projesi',
 	},
 	{
 		number: '06',
-		title: 'Park Yönetim Yazılımı',
-		sub: 'Park Management Software',
-		desc: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.',
-		bullets: [
-			'Gerçek zamanlı kapasite yönetimi',
-			'Ziyaretçi deneyim platformu',
-			'Gelir optimizasyon araçları',
-			' kapsamlı raporlama ve analitik',
-		],
+		title: 'Montaj',
+		sub: 'Installatıon & Commıssıonıng',
+		desc: 'Proje sahasına ulaşan ürünlerimiz montaj öncesi ilgili ekip tarafından son kontrollere tabi tutulur ve her proje için mühendislik departmanı tarafından hazırlanan montaj kılavuzuna göre ürünler monte edilir. Bu aşamada nakliye sırasında ürünlerin eksiksiz ve hasarsız olmasına özen gösteriyoruz. Montaj süresinin aşılmaması için nakliye sırasında hasar gören ürünleri acilen değiştirmek görevimizdir. Montaj süresinin aşılmaması için nakliye sırasında hasar gören ürünleri acilen değiştirmek görevimizdir. Anahtar teslimi sürecimiz montaj ve uygulama ekibimiz tarafından ancak testler yapıldıktan, doğru kullanım eğitimi alındıktan ve gerekli uyarı tabelalarının asılmasıyla tamamlanacaktır. Güvenliği sağlamak ana ilkelerimizden biri olup, uzun yıllardır firmamızda çalışan ve çeşitli ülkelere giderek montaj ve uygulama görevlerini yürüten profesyonel montaj ekibimizle projelerimizi yürütüyoruz.',
+		img: heroImage,
+		imgAlt: 'Su parkı yenileme projesi',
+	},
+	{
+		number: '07',
+		title: 'Satış Sonrası',
+		sub: 'After-Sales Support',
+		desc: 'Müşterilerimizin satış sonrası eğitim, yedek parça temini, teknik servis taleplerini karşılamak ve müşteri memnuniyetini en üst seviyede tutmak öncelikli amacımızdır. Her türlü su parkı, su kaydırağı, havuz sistemlerine, kaydırak yenileme işleminin yanı sıra, uzman ekibimiz ile periyodik ve yıllık bakım, parça değişimi ve yenileme hizmeti vermekteyiz. % 100 müşteri memnuniyeti ilkesinden hareketle amacımız, benzersiz satış sonrası hizmetimizle tüm ilişkilerimizde de güvenilirlik, gizlilik ve dürüstlük ilkelerine önem vermektir. Verimlilik ve sürekli iyileştirmeye dayalı bir kurum kültürü olarak, dünya çapındaki müşteri ve bayilerimize kaliteli, hızlı, esnek ve çözüm odaklı satış sonrası hizmet sunmakla her zaman bir adım öndeyiz.',
 		img: heroImage,
 		imgAlt: 'Park yönetim yazılımı ekranı',
 	},
+	{
+		number: '08',
+		title: 'Bakım & Yenileme',
+		sub: 'Maıntenance & Renovatıon',
+		desc: 'Dış gerçekler ve hava koşulları, su parkınızın bazı kısımlarında korozyona neden olabilir. Polgün’ün müşteri hizmetleri ekibi, hidrolik tesisat, elektrik tesisatı ve mekanik parçaları kontrol eder, değiştirilmesi veya yenilenmesi gereken parçaları değiştirir. Misafirleriniz için görsel görünüm önemli olduğundan, parlak renkler hiç şüphesiz caziptir, Polgün’ün bakım hizmeti su parkınızın parlak ve yepyeni görünmesini sağlar, yıllarca daha sorunsuz bir kullanım sağlar.',
+		img: heroImage,
+		imgAlt: 'Su parkı bakım ekibi',
+	},
+	
+	
 ];
 
 const WHY = [
@@ -214,25 +196,12 @@ export default function ServicesPage({ setActivePage, colorPalette = 1 }) {
 											{step.number}
 										</span>
 										<div>
-											<p className="text-[10px] font-black tracking-[0.2em] uppercase mb-1" style={{ color: 'var(--th-accent)' }}>{step.sub}</p>
+											<p className="text-[10px] font-black tracking-[0.2em] uppercase mb-1" style={{ color: 'var(--th-primary)' }}>{step.sub}</p>
 											<h2 className="font-black leading-tight" style={{ color: 'var(--th-text)', fontSize: 'clamp(1.5rem,2.5vw,2rem)' }}>{step.title}</h2>
 										</div>
 									</div>
 									<p className="leading-relaxed mb-8" style={{ color: 'color-mix(in srgb,var(--th-text-muted) 70%,transparent)' }}>{step.desc}</p>
-									<div className="flex flex-col gap-3">
-										{step.bullets.map((b) => (
-											<div key={b} className="flex items-center gap-3">
-												<div className="w-5 h-5 rounded-full flex items-center justify-center shrink-0"
-													style={{ backgroundColor: 'color-mix(in srgb,var(--th-accent) 15%,transparent)' }}>
-													<svg className="w-2.5 h-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-														style={{ color: 'var(--th-accent)' }}>
-														<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-													</svg>
-												</div>
-												<span className="text-sm" style={{ color: 'color-mix(in srgb,var(--th-text) 75%,transparent)' }}>{b}</span>
-											</div>
-										))}
-									</div>
+									
 								</div>
 
 								{/* Gerçek Görsel */}
@@ -261,7 +230,7 @@ export default function ServicesPage({ setActivePage, colorPalette = 1 }) {
 		{/* ── CTA ── */}
 		<section className="py-32" style={{ backgroundColor: 'var(--th-bg)' }}>
 			<div className="max-w-[1400px] mx-auto px-6 lg:px-14">
-				<div className="relative rounded-3xl overflow-hidden px-12 py-20 text-center" style={{ background: 'linear-gradient(135deg,var(--th-primary-darker) 0%,var(--th-primary) 50%,var(--th-accent) 100%)' }}>
+				<div className="relative rounded-3xl overflow-hidden px-12 py-20 text-center" style={{ background: 'linear-gradient(135deg,var(--th-primary) 0%,var(--th-polgun-blue) 100%)' }}>
 					<div className="absolute inset-0 opacity-10">
 						<svg viewBox="0 0 800 300" className="w-full h-full" preserveAspectRatio="xMidYMid slice">
 							<circle cx="100" cy="150" r="200" fill="white"/>

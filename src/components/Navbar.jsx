@@ -1,6 +1,6 @@
 // ============================================================
 // NAVBAR — WhiteWater West mimarisiyle birebir 4 mega-menü
-// Servislerimiz / Projelerimiz / Ürünlerimiz / Hakkımızda
+// Servislerimiz / Projelerimiz / Ürünlerimiz / Hakkımızda /Ar-Ge
 // ============================================================
 import { useState, useEffect, useRef } from 'react'
 import polgunLogo from '../assets/logoPolgun.png'
@@ -16,12 +16,12 @@ const NAV_ITEMS = [
       {
         title: null,
         links: [
-          { label: 'Tasarım & Mühendislik', desc: 'Konseptten teknik çizime', page: 'services' },
-          { label: 'Üretim & İnşaat',        desc: 'Fabrikadan sahaya',       page: 'services' },
-          { label: 'Montaj & Devreye Alma',  desc: 'Kusursuz kurulum',        page: 'services' },
-          { label: 'Bakım & Onarım',         desc: 'Kesintisiz operasyon',    page: 'services' },
-          { label: 'Yenileme Hizmetleri',    desc: 'Mevcut parkı modernize',  page: 'services' },
-          { label: 'Park Yönetim Yazılımı',  desc: 'Akıllı operasyon çözümleri', page: 'services' },
+          { label: 'Planlama', desc: '', page: 'services' },
+          { label: 'Tasarım',        desc: '',       page: 'services' },
+          { label: 'Mühendislik',  desc: '',        page: 'services' },
+          { label: 'Kurulum & Montaj',         desc: '',    page: 'services' },
+          { label: 'Bakım & Onarım',    desc: '',  page: 'services' },
+          { label: 'Yenileme',  desc: '', page: 'services' },
         ],
       },
     ],
@@ -84,6 +84,25 @@ const NAV_ITEMS = [
       },
     ],
   },
+  {
+    id: 'arge',
+    label: 'Ar-Ge',
+    page: 'arge',
+    mega: true,
+    sections: [
+      {
+        title: null,
+        links: [
+          { label: 'Ekibimiz',        desc: 'Uzman kadromuzla tanışın',              page: 'about' },
+          { label: 'Tarihçemiz',      desc: '40 yıllık deneyim ve büyüme',           page: 'about' },
+          { label: 'Ödüller & Patent',desc: 'Sektörün öncü inovasyonları',           page: 'about' },
+          { label: 'Sürdürülebilirlik',desc: 'Çevre dostu waterpark vizyonu',         page: 'about' },
+          { label: 'Haberler & Etkinlikler', desc: 'Güncel gelişmeler ve fuarlar',   page: 'about' },
+          { label: 'Kariyer',         desc: 'Polgün ailesine katılın',               page: 'about' },
+        ],
+      },
+    ],
+  },
 ]
 
 export default function Navbar({ activePage, setActivePage, colorPalette }) {
@@ -128,7 +147,7 @@ export default function Navbar({ activePage, setActivePage, colorPalette }) {
       className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 backdrop-blur-md"
       style={{
         backgroundColor: `rgba(255, 255, 255, ${glassOpacity})`,
-        borderBottom: `1px solid color-mix(in srgb, var(--th-accent) ${scrolled ? 15 : 20}%, transparent)`,
+        borderBottom: `1px solid color-mix(in srgb, var(--th-polgun-blue) ${scrolled ? 15 : 20}%, transparent)`,
         backdropFilter: `blur(${blurAmount})`,
         WebkitBackdropFilter: `blur(${blurAmount})`,
       }}
@@ -138,7 +157,7 @@ export default function Navbar({ activePage, setActivePage, colorPalette }) {
         {/* ══ Logo ══ */}
         <button onClick={() => handleNav('home')} className="shrink-0 flex items-center">
           {isLightNavbar ? (
-            /* Glass navbar → Beyaz logo */
+            /* Glass navbar */
             <img
               src={polgunLogo}
               alt="Polgün Waterparks"
@@ -146,7 +165,7 @@ export default function Navbar({ activePage, setActivePage, colorPalette }) {
               style={{ filter: 'drop-shadow(0 0 4px rgba(255,255,255,0.5))' }}
             />
           ) : (
-            /* Opaque navbar → Polgün bright blue logo */
+            /* Opaque navbar */
             <img
               src={polgunLogo}
               alt="Polgün Waterparks"
@@ -169,18 +188,18 @@ export default function Navbar({ activePage, setActivePage, colorPalette }) {
                 onClick={() => handleNav(item.page)}
                 className={`flex items-center gap-1 px-4 py-2 text-sm font-semibold tracking-wide transition-colors`}
                 style={isLightNavbar ? {
-                  color: activePage === item.page ? 'var(--th-primary-darker)' : 'var(--th-text)',
+                  color: activePage === item.page ? 'var(--th-polgun-blue)' : 'var(--th-text)',
                   textShadow: '0 1px 2px rgba(255,255,255,0.5)',
                 } : {
-                  color: activePage === item.page ? 'var(--th-accent)' : 'var(--th-text)',
+                  color: activePage === item.page ? 'var(--th-polgun-blue)' : 'var(--th-text)',
                 }}
                 onMouseEnter={(e) => {
-                  if (isLightNavbar) e.currentTarget.style.color = 'var(--th-accent)'
-                  else e.currentTarget.style.color = 'var(--th-accent)'
+                  if (isLightNavbar) e.currentTarget.style.color = 'var(--th-polgun-blue)'
+                  else e.currentTarget.style.color = 'var(--th-polgun-blue)'
                 }}
                 onMouseLeave={(e) => {
-                  if (isLightNavbar) e.currentTarget.style.color = activePage === item.page ? 'var(--th-accent)' : 'var(--th-text)'
-                  else e.currentTarget.style.color = activePage === item.page ? 'var(--th-accent)' : 'var(--th-text)'
+                  if (isLightNavbar) e.currentTarget.style.color = activePage === item.page ? 'var(--th-polgun-blue)' : 'var(--th-text)'
+                  else e.currentTarget.style.color = activePage === item.page ? 'var(--th-polgun-blue)' : 'var(--th-text)'
                 }}
               >
                 {item.label}
@@ -213,13 +232,13 @@ export default function Navbar({ activePage, setActivePage, colorPalette }) {
                   onMouseLeave={() => onLeave()}
                 >
                   {/* Üst aksent çizgisi */}
-                  <div className="h-0.5" style={{ background: 'linear-gradient(to right, var(--th-accent), color-mix(in srgb, var(--th-accent) 60%, transparent), transparent)' }} />
+                  <div className="h-0.5" style={{ background: 'linear-gradient(to right, var(--th-polgun-blue), color-mix(in srgb, var(--th-polgun-blue) 60%, transparent), transparent)' }} />
 
                   <div className={`p-3 ${item.sections?.length > 1 ? 'grid grid-cols-2 gap-3' : ''}`}>
                     {item.sections?.map((section, si) => (
                       <div key={si}>
                         {section.title && (
-                          <p className="px-4 pt-3 pb-2 text-[10px] font-bold tracking-[0.18em] uppercase" style={{ color: 'var(--th-accent)' }}>
+                          <p className="px-4 pt-3 pb-2 text-[10px] font-bold tracking-[0.18em] uppercase" style={{ color: 'var(--th-polgun-blue)' }}>
                             {section.title}
                           </p>
                         )}
@@ -235,7 +254,7 @@ export default function Navbar({ activePage, setActivePage, colorPalette }) {
                             >
                               {/* Aksent bullet */}
                               <span className="mt-1.5 w-1.5 h-1.5 rounded-full shrink-0 transition-colors"
-                                style={{ backgroundColor: 'color-mix(in srgb, var(--th-accent) 30%, transparent)' }}
+                                style={{ backgroundColor: 'color-mix(in srgb, var(--th-polgun-blue) 30%, transparent)' }}
                               />
                               <div>
                                 <span className="block text-sm font-semibold leading-snug transition-colors" style={{ color: 'var(--th-text)' }}>
@@ -271,13 +290,13 @@ export default function Navbar({ activePage, setActivePage, colorPalette }) {
                       onClick={() => handleNav(item.page)}
                       className="text-xs font-bold flex items-center gap-1.5 transition-colors"
                       style={{
-                        color: 'var(--th-accent)',
+                        color: 'var(--th-polgun-blue)',
                       }}
                       onMouseEnter={(e) => {
-                        e.currentTarget.style.color = 'var(--th-accent-dark)'
+                        e.currentTarget.style.color = 'var(--th-primary)'
                       }}
                       onMouseLeave={(e) => {
-                        e.currentTarget.style.color = 'var(--th-accent)'
+                        e.currentTarget.style.color = 'var(--th-polgun-blue)'
                       }}
                     >
                       Tümünü Gör
@@ -312,28 +331,28 @@ export default function Navbar({ activePage, setActivePage, colorPalette }) {
             onClick={() => handleNav('contact')}
             className="px-6 py-2.5 text-sm font-bold tracking-wide rounded-full hover:shadow-lg hover:-translate-y-px transition-all duration-200"
             style={isLightNavbar ? {
-              backgroundColor: 'var(--th-primary-darker)',
+              backgroundColor: 'var(--th-primary)',
               color: 'var(--th-surface)',
-              border: '1px solid var(--th-primary-darker)',
+              boxShadow: '0 4px 12px color-mix(in srgb, var(--th-primary) 30%, transparent)',
             } : {
-              backgroundColor: 'var(--th-accent)',
+              backgroundColor: 'var(--th-polgun-blue)',
               color: 'var(--th-surface)',
-              boxShadow: '0 4px 12px color-mix(in srgb, var(--th-accent) 30%, transparent)',
+              boxShadow: '0 4px 12px color-mix(in srgb, var(--th-polgun-blue) 30%, transparent)',
             }}
             onMouseEnter={(e) => {
               if (isLightNavbar) {
-                e.currentTarget.style.backgroundColor = 'var(--th-primary)'
+                e.currentTarget.style.backgroundColor = 'var(--th-polgun-blue)'
               } else if (isDarkNavbar) {
-                e.currentTarget.style.backgroundColor = 'var(--th-accent-dark)'
-                e.currentTarget.style.boxShadow = '0 6px 16px color-mix(in srgb, var(--th-accent) 38%, transparent)'
+                e.currentTarget.style.backgroundColor = 'var(--th-primary)'
+                e.currentTarget.style.boxShadow = '0 6px 16px color-mix(in srgb, var(--th-polgun-blue) 38%, transparent)'
               }
             }}
             onMouseLeave={(e) => {
               if (isLightNavbar) {
-                e.currentTarget.style.backgroundColor = 'var(--th-primary-darker)'
+                e.currentTarget.style.backgroundColor = 'var(--th-primary)'
               } else if (isDarkNavbar) {
-                e.currentTarget.style.backgroundColor = 'var(--th-accent)'
-                e.currentTarget.style.boxShadow = '0 4px 12px color-mix(in srgb, var(--th-accent) 30%, transparent)'
+                e.currentTarget.style.backgroundColor = 'var(--th-polgun-blue)'
+                e.currentTarget.style.boxShadow = '0 4px 12px color-mix(in srgb, var(--th-primary) 30%, transparent)'
               }
             }}
           >
@@ -347,12 +366,12 @@ export default function Navbar({ activePage, setActivePage, colorPalette }) {
           className="lg:hidden p-2 flex flex-col gap-[5px] justify-center"
           aria-label="Menü"
         >
-          <span className={`block w-6 h-[2px] transition-all duration-200 ${isLightNavbar ? 'bg-white' : 'bg-[var(--th-text)]'} ${mobileOpen ? 'rotate-45 translate-y-[7px]' : ''}`} />
+          <span className={`block w-6 h-[2px] transition-all duration-200 ${isLightNavbar ? 'bg-[var(--th-text)]' : 'bg-[var(--th-text)]'} ${mobileOpen ? 'rotate-45 translate-y-[7px]' : ''}`} />
           <span className={`block w-6 h-[2px] transition-all duration-200
-            ${isLightNavbar ? 'bg-white' : 'bg-[var(--th-text)]'}
+            ${isLightNavbar ? 'bg-[var(--th-text)]' : 'bg-[var(--th-text)]'}
             ${mobileOpen ? 'opacity-0 scale-x-0' : ''}`} />
           <span className={`block w-6 h-[2px] transition-all duration-200
-            ${isLightNavbar ? 'bg-white' : 'bg-[var(--th-text)]'}
+            ${isLightNavbar ? 'bg-[var(--th-text)]' : 'bg-[var(--th-text)]'}
             ${mobileOpen ? '-rotate-45 -translate-y-[7px]' : ''}`} />
         </button>
       </nav>
@@ -384,7 +403,7 @@ export default function Navbar({ activePage, setActivePage, colorPalette }) {
                     <svg
                       className="w-4 h-4 transition-transform duration-200"
                       style={{
-                        color: 'var(--th-accent)',
+                        color: 'var(--th-polgun-blue)',
                         transform: mobileExpanded === item.id ? 'rotateZ(180deg)' : 'rotateZ(0deg)',
                       }}
                       fill="none" stroke="currentColor" viewBox="0 0 24 24"
@@ -397,7 +416,7 @@ export default function Navbar({ activePage, setActivePage, colorPalette }) {
                       <div key={si} className="mb-2">
                         {section.title && (
                           <p className="px-3 py-1.5 text-[10px] font-bold tracking-widest uppercase"
-                            style={{ color: 'var(--th-accent)' }}
+                            style={{ color: 'var(--th-polgun-blue)' }}
                           >
                             {section.title}
                           </p>
@@ -411,8 +430,8 @@ export default function Navbar({ activePage, setActivePage, colorPalette }) {
                               color: 'var(--th-text-muted)',
                             }}
                             onMouseEnter={(e) => {
-                              e.currentTarget.style.color = 'var(--th-accent)'
-                              e.currentTarget.style.backgroundColor = 'color-mix(in srgb, var(--th-accent) 6%, transparent)'
+                              e.currentTarget.style.color = 'var(--th-polgun-blue)'
+                              e.currentTarget.style.backgroundColor = 'color-mix(in srgb, var(--th-polgun-blue) 6%, transparent)'
                             }}
                             onMouseLeave={(e) => {
                               e.currentTarget.style.color = 'var(--th-text-muted)'
@@ -432,7 +451,7 @@ export default function Navbar({ activePage, setActivePage, colorPalette }) {
                   className="w-full text-left py-4 text-sm font-bold transition-colors"
                   style={{ color: 'var(--th-text)' }}
                   onMouseEnter={(e) => {
-                    e.currentTarget.style.color = 'var(--th-accent)'
+                    e.currentTarget.style.color = 'var(--th-polgun-blue)'
                   }}
                   onMouseLeave={(e) => {
                     e.currentTarget.style.color = 'var(--th-text)'
@@ -450,13 +469,13 @@ export default function Navbar({ activePage, setActivePage, colorPalette }) {
               onClick={() => handleNav('contact')}
               className="w-full py-3.5 text-white text-sm font-bold rounded-full transition-all duration-300"
               style={{
-                backgroundColor: 'var(--th-accent)',
+                backgroundColor: 'var(--th-polgun-blue)',
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.backgroundColor = 'var(--th-accent-dark)'
+                e.currentTarget.style.backgroundColor = 'var(--th-primary)'
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.backgroundColor = 'var(--th-accent)'
+                e.currentTarget.style.backgroundColor = 'var(--th-polgun-blue)'
               }}
             >
               Teklif Al
@@ -465,12 +484,12 @@ export default function Navbar({ activePage, setActivePage, colorPalette }) {
               onClick={() => handleNav('contact')}
               className="w-full py-3.5 text-sm font-semibold rounded-full transition-all duration-300 border-2"
               style={{
-                borderColor: 'var(--th-accent)',
-                color: 'var(--th-accent)',
+                borderColor: 'var(--th-polgun-blue)',
+                color: 'var(--th-polgun-blue)',
                 backgroundColor: 'transparent',
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.backgroundColor = 'color-mix(in srgb, var(--th-accent) 10%, transparent)'
+                e.currentTarget.style.backgroundColor = 'color-mix(in srgb, var(--th-polgun-blue) 10%, transparent)'
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.backgroundColor = 'transparent';

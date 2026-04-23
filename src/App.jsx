@@ -81,11 +81,6 @@ export default function App() {
   const [activePage, setActivePage] = useState('home')
   const [colorPalette, setColorPalette] = useState(PAGE_COLOR_PALETTES.home)
 
-  // Sayfa değiştiğinde renk paletini otomatik güncelle
-  useEffect(() => {
-    const newPalette = PAGE_COLOR_PALETTES[activePage] || 1
-    setColorPalette(newPalette)
-  }, [activePage])
 
   const PageComponent = PAGES[activePage] ?? HomePage
   const palette = COLOR_PALETTES[colorPalette] || COLOR_PALETTES[1]

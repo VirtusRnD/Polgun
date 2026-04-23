@@ -1,6 +1,7 @@
 // ============================================================
 // FOOTER — Kurumsal, minimal, 4 kolonlu yapı
 // ============================================================
+import polgunLogo from '../assets/logoPolgun.png';
 
 const FOOTER_LINKS = {
   'Ürünler': ['Su Kaydırakları', 'Dalga Havuzları', 'Lazy River', 'Çocuk Parkları', 'Interaktif Alanlar'],
@@ -10,22 +11,25 @@ const FOOTER_LINKS = {
 
 export default function Footer({ setActivePage }) {
   return (
-    <footer className="text-white" style={{ backgroundColor: 'var(--th-primary)' }}>
+    <footer className="text-white" style={{ backgroundColor: 'var(--th-polgun-blue)' }}>
 
       {/* ── Link Kolonları ── */}
       <div className="max-w-7xl mx-auto px-6 lg:px-12 py-16">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5">
           {/* Brand Kolon */}
-          <div className="lg:col-span-2">
-            <div className="mb-6">
-              <div className="text-2xl font-black tracking-tight text-white">POLGÜN</div>
-              <div className="text-[9px] font-semibold tracking-[0.25em] uppercase" style={{ color: 'var(--th-accent)' }}>Waterparks</div>
-            </div>
-            <p className="text-sm text-white/50 leading-relaxed max-w-xs">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </p>
+          <div className="lg:col-span-2 flex flex-col gap-0 mt-0">
+            <button onClick={() => setActivePage('home')} className="shrink-0 flex items-center">
+              <img
+                          src={polgunLogo}
+                          alt="Polgün Waterparks"
+                          loading="lazy"
+                          className="h-75 w-auto object-contain"
+                          style={{ filter: 'drop-shadow(-4px 8px 4px rgba(53, 53, 53, 0.5))' }}
+                        />
+            </button>
+            
             {/* Sosyal İkonlar */}
-            <div className="flex gap-4 mt-8">
+            <div className="flex gap-4 mt-0">
               {[
                 { name: 'Facebook', url: 'https://facebook.com', icon: (
                   <svg className="w-6 h-6" fill="white" viewBox="0 0 24 24">
@@ -52,14 +56,15 @@ export default function Footer({ setActivePage }) {
                   className="w-12 h-12 rounded-full flex items-center justify-center
                     text-white transition-all duration-300 hover:-translate-y-1"
                   style={{ 
-                    backgroundColor: 'var(--th-primary-darker)',
+                    backgroundColor: 'var(--th-polgun-logo)',
+                      boxShadow: '-4px 5px 12px color-mix(in srgb, var(--th-polgun-antrasit) 30%, transparent)'
                   }}
                   title={social.name}
                   onMouseEnter={(e) => {
-                    e.currentTarget.style.backgroundColor = 'var(--th-accent-dark)'
+                    e.currentTarget.style.backgroundColor = 'var(--th-polgun-antrasit)'
                   }}
                   onMouseLeave={(e) => {
-                    e.currentTarget.style.backgroundColor = 'var(--th-primary-darker)'
+                    e.currentTarget.style.backgroundColor = 'var(--th-polgun-logo)'
                   }}
                 >
                   {social.icon}
@@ -71,7 +76,7 @@ export default function Footer({ setActivePage }) {
           {/* Link Kolonları */}
           {Object.entries(FOOTER_LINKS).map(([title, links]) => (
             <div key={title}>
-              <h4 className="text-xs font-bold tracking-[0.15em] text-white/40 uppercase mb-5">{title}</h4>
+              <h4 className="text-xs font-bold tracking-[0.15em] text-white uppercase mb-5">{title}</h4>
               <ul className="flex flex-col gap-3">
                 {links.map((link) => (
                   <li key={link}>
@@ -87,12 +92,12 @@ export default function Footer({ setActivePage }) {
 
         {/* ── Alt Bar ── */}
         <div className="mt-16 pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-white/30">
+          <p className="text-xs text-white">
             © 2026 Polgün Waterparks. Tüm hakları saklıdır.
           </p>
           <div className="flex gap-6">
             {['Gizlilik Politikası', 'Kullanım Koşulları', 'KVKK'].map((item) => (
-              <a key={item} href="#" className="text-xs text-white/30 hover:text-white/60 transition-colors">
+              <a key={item} href="#" className="text-xs text-white hover:text-white/60 transition-colors">
                 {item}
               </a>
             ))}

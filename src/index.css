@@ -18,7 +18,7 @@
 
 :root,
 [data-theme="A"] {
-  --th-primary:      #5CA3E1;   /* Polgün Blue - başlıklar, koyu arka planlar */
+  --th-primary:      #22ABE6;   /* Polgün Blue - başlıklar, koyu arka planlar */
   --th-primary-dark: #3B7FB5;
   --th-primary-darker: #1565C0;   /* Darker blue - contrast & depth */
   --th-secondary:    #0B1F3A;
@@ -35,6 +35,10 @@
   --th-border:       #D8D8D4;
   --th-hero-from:    #2E5A7E;
   --th-hero-side:    #5CA3E1;
+
+  --th-polgun-blue: #2874B2;
+  --th-polgun-antrasit: #373F43;
+  --th-polgun-logo: #22ABE6;
 }
 
 * {

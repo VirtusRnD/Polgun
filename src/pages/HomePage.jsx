@@ -117,6 +117,7 @@ function MarqueeStrip() {
             <img
               src={r.src}
               alt={r.alt}
+              loading="lazy"
               className="max-h-16 max-w-full object-contain transition-opacity duration-300"
               style={{ opacity: 0.9 }}
               onMouseEnter={(e) => (e.currentTarget.style.opacity = '1')}
@@ -170,7 +171,7 @@ export default function HomePage({ setActivePage, colorPalette = 1 }) {
           className="absolute inset-0 pointer-events-none"
           style={{
             background:
-              'radial-gradient(ellipse 80% 60% at 70% 50%, color-mix(in srgb,var(--th-accent) 6%,transparent), transparent)',
+              'radial-gradient(ellipse 80% 60% at 70% 50%, color-mix(in srgb,var(--th-polgun-blue) 6%,transparent), transparent)',
           }}
         />
 
@@ -183,7 +184,7 @@ export default function HomePage({ setActivePage, colorPalette = 1 }) {
 
             <h1
               className="font-black leading-[1.0] tracking-tight"
-              style={{ color: 'var(--th-primary-darker)', fontSize: 'clamp(3rem,9vw,7rem)' }}
+              style={{ color: 'var(--th-polgun-blue)', fontSize: 'clamp(3rem,9vw,7rem)' }}
             >
               Let's <span
                 style={{
@@ -208,7 +209,7 @@ export default function HomePage({ setActivePage, colorPalette = 1 }) {
                 <div key={s.label}>
                   <div
                     className="text-2xl font-black leading-none"
-                    style={{ color: 'var(--th-primary-darker)' }}
+                    style={{ color: 'var(--th-primary)' }}
                   >
                     {s.num}
                   </div>
@@ -275,8 +276,8 @@ export default function HomePage({ setActivePage, colorPalette = 1 }) {
           <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-14">
             <div>
               <p className="text-[11px] font-black tracking-[0.3em] uppercase mb-4 flex items-center gap-3"
-                style={{ color: 'var(--th-accent)' }}>
-                <span className="inline-block w-6 h-px" style={{ backgroundColor: 'var(--th-accent)' }} />
+                style={{ color: 'var(--th-primary)' }}>
+                <span className="inline-block w-6 h-px" style={{ backgroundColor: 'var(--th-primary)' }} />
                 Ürün Kategorileri
               </p>
               <h2 className="font-black leading-tight" style={{ color:'var(--th-text)', fontSize:'clamp(2rem,4vw,3.5rem)' }}>
@@ -308,7 +309,8 @@ export default function HomePage({ setActivePage, colorPalette = 1 }) {
                 style={{ 
                   backgroundImage: `${cat.g}, url(${cat.img})`,
                   backgroundSize: 'cover',
-                  backgroundPosition: 'center'
+                  backgroundPosition: 'center',
+                  backgroundColor: 'rgba(0,0,0,0.2)'
                 }}
               >
                 {/* Dekoratif dalgalar */}
@@ -352,7 +354,8 @@ export default function HomePage({ setActivePage, colorPalette = 1 }) {
                     <img 
                       key={idx}
                       src={img.src} 
-                      alt={img.alt} 
+                      alt={img.alt}
+                      loading={idx === currentImageIndex ? 'eager' : 'lazy'}
                       className="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000"
                       style={{ opacity: idx === currentImageIndex ? 1 : 0 }}
                     />
@@ -397,8 +400,8 @@ export default function HomePage({ setActivePage, colorPalette = 1 }) {
             {/* Sağ — Metin */}
             <div className="p-6 lg:p-8 flex flex-col justify-center" style={{ backgroundColor:'var(--th-surface)' }}>
               <p className="text-[11px] font-black tracking-[0.3em] uppercase mb-4 flex items-center gap-3"
-                style={{ color:'var(--th-accent)' }}>
-                <span className="inline-block w-6 h-px" style={{ backgroundColor:'var(--th-accent)' }} />
+                style={{ color:'var(--th-primary)' }}>
+                <span className="inline-block w-6 h-px" style={{ backgroundColor:'var(--th-primary)' }} />
                 Neden Polgün?
               </p>
               <h2 className="font-black leading-tight mb-6" style={{ color:'var(--th-text)', fontSize:'clamp(1.5rem,2.5vw,2.25rem)' }}>
@@ -442,7 +445,7 @@ Polgün, su parkı projelerinde tasarım, mühendislik, üretim ve uygulama sür
       {/* ══════════════════════════════════════════════════════
           REFERANSLAR — Kayan marquee, belirgin
       ══════════════════════════════════════════════════════ */}
-        <section className="py-24 overflow-hidden" style={{ backgroundColor: 'var(--th-accent)' }}>
+        <section className="py-24 overflow-hidden" style={{ backgroundColor: 'var(--th-polgun-antrasit)' }}>
         <div className="max-w-[1400px] mx-auto px-6 lg:px-14 mb-14 text-center">
           <p className="text-[11px] font-black tracking-[0.35em] uppercase mb-4"
             style={{ color: 'rgba(255,255,255,0.7)' }}>
@@ -457,10 +460,10 @@ Polgün, su parkı projelerinde tasarım, mühendislik, üretim ve uygulama sür
         <div className="relative">
           {/* Sol silik geçiş */}
           <div className="absolute left-0 top-0 bottom-0 w-24 z-10 pointer-events-none"
-            style={{ background: 'linear-gradient(to right,var(--th-accent),transparent)' }} />
+            style={{ background: 'linear-gradient(to right,var(--th-polgun-antrasit),transparent)' }} />
           {/* Sağ silik geçiş */}
           <div className="absolute right-0 top-0 bottom-0 w-24 z-10 pointer-events-none"
-            style={{ background: 'linear-gradient(to left,var(--th-accent),transparent)' }} />
+            style={{ background: 'linear-gradient(to left,var(--th-polgun-antrasit),transparent)' }} />
 
           {/* Marquee container */}
           <MarqueeStrip />
@@ -473,7 +476,7 @@ Polgün, su parkı projelerinde tasarım, mühendislik, üretim ve uygulama sür
       <section className="py-32" style={{ backgroundColor:'var(--th-bg)' }}>
         <div className="max-w-[1400px] mx-auto px-6 lg:px-14">
           <div className="relative rounded-3xl overflow-hidden px-12 py-20 text-center"
-            style={{ background:'linear-gradient(135deg,var(--th-accent) 0%,var(--th-primary) 50%,var(--th-primary) 100%)' }}>
+            style={{ background:'linear-gradient(135deg,var(--th-polgun-logo) 0%,var(--th-polgun-blue) 100%)' }}>
             <div className="absolute inset-0 opacity-10">
               <svg viewBox="0 0 800 300" className="w-full h-full" preserveAspectRatio="xMidYMid slice">
                 <circle cx="100" cy="150" r="200" fill="white"/>
@@ -481,13 +484,13 @@ Polgün, su parkı projelerinde tasarım, mühendislik, üretim ve uygulama sür
               </svg>
             </div>
             <div className="relative z-10 max-w-3xl mx-auto">
-              <p className="text-[11px] font-black tracking-[0.35em] uppercase mb-6 text-white/50">
+              <p className="text-[11px] font-black tracking-[0.35em] uppercase mb-6 text-white/80">
                 Projenizi Birlikte Tasarlayalım
               </p>
               <h2 className="font-black text-white leading-tight mb-8" style={{ fontSize:'clamp(2rem,4.5vw,3.75rem)' }}>
                 Hayalinizdeki su parkını<br />hayata geçiriyoruz
               </h2>
-              <p className="text-white/50 mb-12 max-w-lg mx-auto leading-relaxed">
+              <p className="text-white/80 mb-12 max-w-lg mx-auto leading-relaxed">
                 Dünyanın dört bir yanındaki su parklarında hayatı renklendiriyoruz. Sıradaki projeniz için bizimle iletişime geçin.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
