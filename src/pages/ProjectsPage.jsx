@@ -1,7 +1,7 @@
 // ============================================================
 // PROJECTS PAGE — Gerçek görseller + CSS değişkenleri + glass efekt
 // ============================================================
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import heroImage from '../assets/polgun-featured-projects-4.jpeg'
 import eftaliaBlue from '../assets/products/eftalia-blue-antalya.png'
 import nirvana from '../assets/products/nirvana-cosmopolitan-antalya.jpg'
@@ -21,6 +21,11 @@ const PROJECTS = [
     desc: 'İstanbul\'un en büyük su parkı projelerinden biri: 12 farklı kaydırak, dev dalga havuzu ve aile dostu tasarımıyla 2023 sezonunun gözdesi.',
     img: eftaliaBlue,
     imgAlt: 'AquaDream Water Park İstanbul',
+    slides: [
+      { id: 1, title: 'AquaDream Water Park', location: 'İstanbul, Türkiye', img: eftaliaBlue },
+      { id: 2, title: 'AquaDream Water Park', location: 'İstanbul, Türkiye', img: nirvana },
+      { id: 3, title: 'AquaDream Water Park', location: 'İstanbul, Türkiye', img: seignosse },
+    ],
   },
   {
     id: 2,
@@ -33,6 +38,11 @@ const PROJECTS = [
     desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     img: seignosse,
     imgAlt: 'OceanSplash Resort Antalya',
+    slides: [
+      { id: 1, title: 'OceanSplash Resort', location: 'Antalya, Türkiye', img: seignosse },
+      { id: 2, title: 'OceanSplash Resort', location: 'Antalya, Türkiye', img: delphinPalace },
+      { id: 3, title: 'OceanSplash Resort', location: 'Antalya, Türkiye', img: eftaliaBlue },
+    ],
   },
   {
     id: 3,
@@ -45,6 +55,11 @@ const PROJECTS = [
     desc: 'Polonya\'nın ilk büyük ölçekli kapalı su parkı: dört mevsim açık, çocuklardan yetişkinlere her yaşa hitap eden etkinlikleri.',
     img: nirvana,
     imgAlt: 'Mega Wave Indoor Park Varşova',
+    slides: [
+      { id: 1, title: 'Mega Wave Indoor Park', location: 'Varşova, Polonya', img: nirvana },
+      { id: 2, title: 'Mega Wave Indoor Park', location: 'Varşova, Polonya', img: heroImage },
+      { id: 3, title: 'Mega Wave Indoor Park', location: 'Varşova, Polonya', img: seignosse },
+    ],
   },
   {
     id: 4,
@@ -57,6 +72,11 @@ const PROJECTS = [
     desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     img: delphinPalace,
     imgAlt: 'Desert Oasis Water World Dubai',
+    slides: [
+      { id: 1, title: 'Desert Oasis Water World', location: 'Dubai, BAE', img: delphinPalace },
+      { id: 2, title: 'Desert Oasis Water World', location: 'Dubai, BAE', img: eftaliaBlue },
+      { id: 3, title: 'Desert Oasis Water World', location: 'Dubai, BAE', img: nirvana },
+    ],
   },
   {
     id: 5,
@@ -69,6 +89,11 @@ const PROJECTS = [
     desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     img: heroImage,
     imgAlt: 'AquaVenture Cruise gemisi',
+    slides: [
+      { id: 1, title: 'AquaVenture Cruise', location: 'Akdeniz', img: heroImage },
+      { id: 2, title: 'AquaVenture Cruise', location: 'Akdeniz', img: seignosse },
+      { id: 3, title: 'AquaVenture Cruise', location: 'Akdeniz', img: delphinPalace },
+    ],
   },
 ]
 
@@ -92,9 +117,129 @@ function GlassTag({ children }) {
   )
 }
 
+// ── Slider Modal Bileşeni ──────────────────────────────────
+function ProjectSliderModal({ project, isOpen, onClose }) {
+  const [currentIndex, setCurrentIndex] = useState(0)
+  const autoplayInterval = useRef(null)
+
+  // Otomatik geçiş: 2 saniye
+  useEffect(() => {
+    if (!isOpen) return
+
+    autoplayInterval.current = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % project.slides.length)
+    }, 2000)
+
+    return () => clearInterval(autoplayInterval.current)
+  }, [isOpen, project.slides.length])
+
+  const handlePrev = () => {
+    setCurrentIndex((prev) =>
+      prev === 0 ? project.slides.length - 1 : prev - 1
+    )
+  }
+
+  const handleNext = () => {
+    setCurrentIndex((prev) => (prev + 1) % project.slides.length)
+  }
+
+  if (!isOpen) return null
+
+  const currentSlide = project.slides[currentIndex]
+
+  return (
+    <div
+      className="fixed inset-0 z-50 flex items-center justify-center p-4"
+      style={{ backgroundColor: 'rgba(0, 0, 0, 0.85)' }}
+      onClick={onClose}
+    >
+      <div
+        className="relative w-full max-w-3xl rounded-2xl overflow-hidden bg-black shadow-2xl"
+        onClick={(e) => e.stopPropagation()}
+      >
+        {/* ── Slider Görsel ── */}
+        <div className="relative aspect-[16/10] bg-gray-900">
+          <img
+            src={currentSlide.img}
+            alt={currentSlide.title}
+            loading="lazy"
+            className="w-full h-full object-cover"
+          />
+          {/* Gradient overlay */}
+          <div className="absolute inset-0" style={{
+            background: 'linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 50%, transparent 100%)'
+          }} />
+
+          {/* ── Bilgi ── */}
+          <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+            <p className="text-xs font-bold tracking-widest uppercase mb-2 opacity-70">
+              {currentSlide.location}
+            </p>
+            <h3 className="text-2xl font-black leading-tight">
+              {currentSlide.title}
+            </h3>
+          </div>
+
+          {/* ── Prev Buton ── */}
+          <button
+            onClick={handlePrev}
+            className="absolute left-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white/20 hover:bg-white/40 transition-all backdrop-blur-sm flex items-center justify-center"
+          >
+            <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
+
+          {/* ── Next Buton ── */}
+          <button
+            onClick={handleNext}
+            className="absolute right-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white/20 hover:bg-white/40 transition-all backdrop-blur-sm flex items-center justify-center"
+          >
+            <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
+
+          {/* ── Gösterge Noktaları ── */}
+          <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-10">
+            {project.slides.map((_, idx) => (
+              <button
+                key={idx}
+                onClick={() => setCurrentIndex(idx)}
+                className="w-2 h-2 rounded-full transition-all"
+                style={{
+                  backgroundColor: idx === currentIndex ? 'rgba(255,255,255,1)' : 'rgba(255,255,255,0.4)',
+                  width: idx === currentIndex ? '24px' : '8px',
+                }}
+              />
+            ))}
+          </div>
+        </div>
+
+        {/* ── Kapatma Buton ── */}
+        <button
+          onClick={onClose}
+          className="absolute top-4 right-4 z-10 w-8 h-8 rounded-full bg-white/20 hover:bg-white/40 transition-all backdrop-blur-sm flex items-center justify-center text-white"
+        >
+          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+
+        {/* ── Sayfa Bilgisi ── */}
+        <div className="px-6 py-3 bg-white/5 border-t border-white/10 flex items-center justify-between text-white text-sm">
+          <span>{currentIndex + 1} / {project.slides.length}</span>
+        </div>
+      </div>
+    </div>
+  )
+}
+
 export default function ProjectsPage({ setActivePage}) {
   const [region, setRegion] = useState('Tümü')
   const [type, setType]     = useState('Tümü')
+  const [selectedProject, setSelectedProject] = useState(null)
+  const [sliderOpen, setSliderOpen] = useState(false)
 
   const filtered = PROJECTS.filter((p) =>
     (region === 'Tümü' || p.region === region) &&
@@ -182,6 +327,10 @@ export default function ProjectsPage({ setActivePage}) {
                   key={proj.id}
                   className="group relative overflow-hidden rounded-2xl cursor-pointer transition-all duration-300 hover:-translate-y-1"
                   style={{ boxShadow: '0 4px 24px rgba(0,0,0,0.08)' }}
+                  onClick={() => {
+                    setSelectedProject(proj)
+                    setSliderOpen(true)
+                  }}
                   onMouseEnter={(e) => e.currentTarget.style.boxShadow = '0 24px 72px rgba(0,0,0,0.18)'}
                   onMouseLeave={(e) => e.currentTarget.style.boxShadow = '0 4px 24px rgba(0,0,0,0.08)'}
                 >
@@ -190,6 +339,7 @@ export default function ProjectsPage({ setActivePage}) {
                     <img
                       src={proj.img}
                       alt={proj.imgAlt}
+                      loading="lazy"
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                     />
                   </div>
@@ -227,6 +377,15 @@ export default function ProjectsPage({ setActivePage}) {
           </div>
         </section>
 
+
+      {/* ── Slider Modal ── */}
+      {selectedProject && (
+        <ProjectSliderModal
+          project={selectedProject}
+          isOpen={sliderOpen}
+          onClose={() => setSliderOpen(false)}
+        />
+      )}
 
       {/* ── CTA ── */}
       <section className="py-32" style={{ backgroundColor: 'var(--th-bg)' }}>

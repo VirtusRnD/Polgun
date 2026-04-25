@@ -42,7 +42,7 @@ const NAV_ITEMS = [
         title: 'Ürün Kategorileri',
         links: [
           { label: 'Su Kaydırakları',        desc: '', page: 'products' },
-          { label: 'Splash Tower',  desc: '',           page: 'products' },
+          { label: 'Splash Tower',  desc: '',           page: 'splash-tower' },
           { label: 'Splash Zone',               desc: '',        page: 'products' },
           { label: 'Animasyonlar',        desc: '',    page: 'products' },
                 ],
@@ -91,12 +91,12 @@ const NAV_ITEMS = [
       {
         title: null,
         links: [
-          { label: 'Ekibimiz',        desc: 'Uzman kadromuzla tanışın',              page: 'about' },
-          { label: 'Tarihçemiz',      desc: '40 yıllık deneyim ve büyüme',           page: 'about' },
-          { label: 'Ödüller & Patent',desc: 'Sektörün öncü inovasyonları',           page: 'about' },
-          { label: 'Sürdürülebilirlik',desc: 'Çevre dostu waterpark vizyonu',         page: 'about' },
-          { label: 'Haberler & Etkinlikler', desc: 'Güncel gelişmeler ve fuarlar',   page: 'about' },
-          { label: 'Kariyer',         desc: 'Polgün ailesine katılın',               page: 'about' },
+          { label: 'Ekibimiz',        desc: '',              page: 'about' },
+          { label: 'Tarihçemiz',      desc: '',           page: 'about' },
+          { label: 'Ödüller & Patent',desc: '',           page: 'about' },
+          { label: 'Sürdürülebilirlik',desc: '',         page: 'about' },
+          { label: 'Haberler & Etkinlikler', desc: '',   page: 'about' },
+          { label: 'Kariyer',         desc: '',               page: 'about' },
         ],
       },
     ],

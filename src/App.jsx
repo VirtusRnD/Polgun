@@ -12,6 +12,7 @@ import ServicesPage from './pages/ServicesPage'
 import ProjectsPage from './pages/ProjectsPage'
 import AboutPage from './pages/AboutPage'
 import ContactPage from './pages/ContactPage'
+import SplashTowerPage from './pages/SplashTower'
 import { COLOR_PALETTES } from './constants/colorPalettes'
 
 function clamp01(n) {
@@ -61,6 +62,7 @@ function shade(hex, amount) {
 const PAGES = {
   home: HomePage,
   products: ProductsPage,
+  'splash-tower': SplashTowerPage,
   services: ServicesPage,
   projects: ProjectsPage,
   about: AboutPage,
@@ -71,6 +73,7 @@ const PAGES = {
 const PAGE_COLOR_PALETTES = {
   home: 1,         // Orijinal renk paleti
   products: 1,     // Soft Blue
+  'splash-tower': 1,  // Default
   services: 1,     // Deep Navy
   projects: 1,     // Default
   about: 1,        // Default
