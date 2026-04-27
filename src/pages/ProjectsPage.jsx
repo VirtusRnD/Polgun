@@ -154,11 +154,12 @@ function ProjectSliderModal({ project, isOpen, onClose }) {
       onClick={onClose}
     >
       <div
-        className="relative w-full max-w-3xl rounded-2xl overflow-hidden bg-black shadow-2xl"
+        className="relative w-full max-w-none rounded-2xl overflow-hidden bg-black shadow-2xl"
+        style={{ width: 'min(96vw, var(--layout-max))' }}
         onClick={(e) => e.stopPropagation()}
       >
         {/* ── Slider Görsel ── */}
-        <div className="relative aspect-[16/10] bg-gray-900">
+        <div className="relative bg-gray-900 h-[min(78vh,60vw)]">
           <img
             src={currentSlide.img}
             alt={currentSlide.title}
