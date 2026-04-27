@@ -23,7 +23,7 @@ const PROJECTS = [
     imgAlt: 'AquaDream Water Park İstanbul',
     slides: [
       { id: 1, title: 'AquaDream Water Park', location: 'İstanbul, Türkiye', img: eftaliaBlue },
-      { id: 2, title: 'AquaDream Water Park', location: 'İstanbul, Türkiye', img: nirvana },
+      { id: 2, title: 'AquaDream Water Park', location: 'Antalya, Türkiye', img: nirvana },
       { id: 3, title: 'AquaDream Water Park', location: 'İstanbul, Türkiye', img: seignosse },
     ],
   },
