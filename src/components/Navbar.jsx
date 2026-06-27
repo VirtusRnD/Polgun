@@ -44,7 +44,6 @@ const NAV_ITEMS = [
           { label: 'Su Kaydırakları',        desc: '', page: 'products' },
           { label: 'Splash Tower',  desc: '',           page: 'splash-tower' },
           { label: 'Splash Zone',               desc: '',        page: 'products' },
-          { label: 'Animasyonlar',        desc: '',    page: 'products' },
                 ],
       },
       /*{

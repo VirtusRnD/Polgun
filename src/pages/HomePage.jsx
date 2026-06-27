@@ -212,7 +212,7 @@ export default function HomePage({ setActivePage}) {
 
         {/* İçerik grid */}
         <div className="relative z-10 w-full max-w-[var(--layout-max)] mx-auto px-6 lg:px-16 pt-28 pb-20
-          grid lg:grid-cols-[0.8fr_1.2fr] gap-10 xl:gap-16 items-center">
+          grid lg:grid-cols-[0.6fr_1.4fr] gap-10 xl:gap-16 items-center">
 
           {/* ── Sol: Tipografi ── */}
           <div className="flex flex-col gap-8">
@@ -251,7 +251,7 @@ export default function HomePage({ setActivePage}) {
             <div
               className="relative w-full"
               style={{
-                maxWidth: 'clamp(560px, 62vw, 1320px)',
+                maxWidth: 'clamp(600px, 72vw, 1600px)',
                 borderRadius: '2.5rem',
                 padding: '12px',
                 background: 'rgba(34,171,230,0.18)',
@@ -270,7 +270,7 @@ export default function HomePage({ setActivePage}) {
                 <div
                   className="relative overflow-hidden rounded-[1.75rem]"
                   style={{
-                    aspectRatio: '3 / 2',
+                    aspectRatio: '16 / 9',
                     background: 'rgba(15,43,91,0.12)',
                   }}
                 >

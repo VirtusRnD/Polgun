@@ -348,24 +348,10 @@ export default function ProjectsPage({ setActivePage}) {
                   <div className="absolute inset-0" style={{ background: 'linear-gradient(to top,rgba(0,0,0,0.75) 0%,rgba(0,0,0,0.2) 50%,transparent 100%)' }} />
                   {/* İçerik */}
                   <div className="absolute bottom-0 left-0 right-0 p-8">
-                    <div className="flex flex-wrap gap-2 mb-3">
-                      <span className="text-[10px] font-black tracking-widest uppercase px-3 py-1.5 rounded-full text-white"
-                        style={{ backgroundColor: 'var(--th-polgun-blue)' }}>
-                        {proj.type}
-                      </span>
-                      <GlassTag>{proj.year}</GlassTag>
-                    </div>
                     <h2 className="text-2xl font-black text-white mb-1 transition-colors group-hover:opacity-90">
                       {proj.name}
                     </h2>
-                    <p className="text-sm text-white/50 mb-4">{proj.location}</p>
-                    <div className="flex flex-wrap gap-2">
-                      {proj.scope.map((s) => (
-                        <span key={s} className="text-[10px] text-white/60 border border-white/20 px-2.5 py-1 rounded-full">
-                          {s}
-                        </span>
-                      ))}
-                    </div>
+                    <p className="text-sm text-white/50">{proj.location}</p>
                   </div>
                 </article>
               ))}

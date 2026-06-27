@@ -81,12 +81,46 @@ function ContactCard({ icon, title, lines }) {
   )
 }
 
+const OFFICES = [
+  {
+    id: 'mugla',
+    name: 'Merkez',
+    country: 'Türkiye',
+    address: 'Salihpaşalar Mh. Köyiçi Sokak 241 A Blok S.Room Menteşe/MUĞLA',
+    phone: '+90 (252) 225 58 88',
+    mobile: '+90 (555) 800 34 76',
+    email: 'info@polgun.com',
+    mapSrc: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d50800.393605116005!2d28.22280050951588!3d37.27084374291052!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xd7c286e8d07e2efa!2sPolg%C3%BCn%20Waterparks%20%26%20Attractions!5e0!3m2!1str!2str!4v1581819551188!5m2!1str!2str',
+  },
+  {
+    id: 'antalya',
+    name: 'Antalya Ofis',
+    country: 'Türkiye',
+    address: 'Soğucaksu Mahallesi, Serik Caddesi No:113 Antalya/Turkey',
+    phone: '+90 (252) 225 58 88',
+    mobile: '+90 (555) 800 34 76',
+    email: 'info@polgun.com',
+    mapSrc: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3189.0991793070643!2d30.812185015594952!3d36.935797167754224!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14c38358c24efb21%3A0xd7d5e2e7cc816194!2sPolgun%20Waterparks%20%26%20Attractions%20Antalya!5e0!3m2!1str!2str!4v1595760966578!5m2!1str!2str',
+  },
+  {
+    id: 'valencia',
+    name: 'Avrupa Ofis',
+    country: 'İspanya',
+    address: 'Calle Isabel la Catolica No:6/8, 46004 Piso:4, Valencia, Spain',
+    phone: '+34 962 024 439',
+    mobile: null,
+    email: 'info@polgun.com',
+    mapSrc: 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3079.9872521394327!2d-0.3726334!3d39.4696167!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd6049f05c99fa7d%3A0x39e397a9f05f448!2sPolgun%20Europe%20Waterparks%20%26%20Attractions!5e0!3m2!1str!2str!4v1595760948220!5m2!1str!2str',
+  },
+]
+
 export default function ContactPage({ setActivePage }) {
   const [form, setForm] = useState({
     name: '', email: '', phone: '', company: '',
     interest: 'Su Kaydırakları', message: '',
   })
   const [sent, setSent] = useState(false)
+  const [activeMap, setActiveMap] = useState('mugla')
 
   const handleChange = (e) => setForm((p) => ({ ...p, [e.target.name]: e.target.value }))
 
@@ -228,23 +262,23 @@ export default function ContactPage({ setActivePage }) {
                 <h3 className="text-lg font-black" style={{ color: 'var(--th-text)' }}>İletişim Bilgileri</h3>
                 <ContactCard
                   icon="📍"
-                  title="Adres"
-                  lines={['Köstekli, Denizli Yolu Bulvarı', 'No: 4/B D:28, 48000 Menteşe/Muğla']}
+                  title="Merkez Adres"
+                  lines={['Salihpaşalar Mh. Köyiçi Sokak', '241 A Blok S.Room Menteşe/MUĞLA']}
                 />
                 <ContactCard
                   icon="📞"
                   title="Telefon"
-                  lines={['+90 212 XXX XX XX', '+90 533 XXX XX XX']}
+                  lines={['+90 (252) 225 58 88', '+90 (555) 800 34 76']}
                 />
                 <ContactCard
                   icon="✉️"
                   title="E-posta"
-                  lines={['info@polgun.com.tr', 'sales@polgun.com.tr']}
+                  lines={['info@polgun.com']}
                 />
                 <ContactCard
                   icon="🕐"
                   title="Çalışma Saatleri"
-                  lines={['Pzt–Cum: 08:30–18:00', 'Cumartesi: 09:00–14:00']}
+                  lines={['Pzt–Cmt: 08:30–18:00', 'Pazar: Kapalı']}
                 />
               </div>
 
@@ -254,13 +288,18 @@ export default function ContactPage({ setActivePage }) {
                   Ofislerimiz
                 </h3>
                 <div className="flex flex-col gap-3">
-                  {['İstanbul — Genel Merkez', 'Ankara — Bölge Ofisi', 'Dubai — MENA', 'Münih — Avrupa'].map((office) => (
-                    <div key={office}
-                      className="flex items-center gap-3 py-3.5 border-b last:border-0"
+                  {OFFICES.map((office) => (
+                    <div key={office.id}
+                      className="flex flex-col gap-1 py-3.5 border-b last:border-0"
                       style={{ borderColor: 'color-mix(in srgb, var(--th-border) 35%, transparent)' }}
                     >
-                      <div className="w-1.5 h-1.5 rounded-full shrink-0" style={{ backgroundColor: 'var(--th-polgun-blue)' }} />
-                      <span className="text-sm" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 70%, transparent)' }}>{office}</span>
+                      <div className="flex items-center gap-3">
+                        <div className="w-1.5 h-1.5 rounded-full shrink-0" style={{ backgroundColor: 'var(--th-polgun-blue)' }} />
+                        <span className="text-sm font-bold" style={{ color: 'var(--th-text)' }}>{office.name}</span>
+                        <span className="text-xs px-2 py-0.5 rounded-full" style={{ backgroundColor: 'color-mix(in srgb, var(--th-polgun-blue) 10%, transparent)', color: 'var(--th-polgun-blue)' }}>{office.country}</span>
+                      </div>
+                      <p className="text-xs ml-[18px] leading-relaxed" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 60%, transparent)' }}>{office.address}</p>
+                      <p className="text-xs ml-[18px]" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 60%, transparent)' }}>{office.phone}{office.mobile ? ` / ${office.mobile}` : ''}</p>
                     </div>
                   ))}
                 </div>
@@ -270,20 +309,57 @@ export default function ContactPage({ setActivePage }) {
         </div>
       </section>
 
-      {/* ── Harita ── */}
+      {/* ── Haritalar ── */}
       <section className="py-16 lg:py-24" style={{ backgroundColor: 'var(--th-bg)' }}>
         <div className="max-w-7xl max-w-[var(--layout-max)] mx-auto px-6 lg:px-12">
+          {/* Ofis Sekmeleri */}
+          <div className="flex flex-wrap gap-2 mb-6">
+            {OFFICES.map((office) => (
+              <button
+                key={office.id}
+                onClick={() => setActiveMap(office.id)}
+                className="px-5 py-2.5 rounded-full text-xs font-semibold tracking-wide transition-all duration-200"
+                style={
+                  activeMap === office.id
+                    ? {
+                        backgroundColor: 'var(--th-polgun-blue)',
+                        color: '#fff',
+                        boxShadow: '0 4px 16px color-mix(in srgb, var(--th-polgun-blue) 30%, transparent)',
+                      }
+                    : {
+                        color: 'var(--th-text-muted)',
+                        backgroundColor: 'color-mix(in srgb, var(--th-border) 15%, transparent)',
+                      }
+                }
+                onMouseEnter={(e) => {
+                  if (activeMap !== office.id)
+                    e.currentTarget.style.backgroundColor = 'color-mix(in srgb, var(--th-polgun-blue) 12%, transparent)'
+                }}
+                onMouseLeave={(e) => {
+                  if (activeMap !== office.id)
+                    e.currentTarget.style.backgroundColor = 'color-mix(in srgb, var(--th-border) 15%, transparent)'
+                }}
+              >
+                📍 {office.name} — {office.country}
+              </button>
+            ))}
+          </div>
+
+          {/* Harita */}
           <div className="overflow-hidden rounded-3xl" style={{ boxShadow: '0 24px 80px rgba(0,0,0,0.10)' }}>
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3175.6978761271644!2d28.2337589!3d37.2548751!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14bf1273f2d14e7b%3A0x919c29cfc29c8790!2sPolg%C3%BCn%20Waterparks%20%26%20Attractions!5e0!3m2!1str!2str!4v1776841519573!5m2!1str!2str"
-              width="100%"
-              height="500"
-              style={{ border: 0, display: 'block' }}
-              allowFullScreen=""
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title="Polgün Muğla Ofisi"
-            />
+            {OFFICES.map((office) => (
+              <iframe
+                key={office.id}
+                src={office.mapSrc}
+                width="100%"
+                height="500"
+                style={{ border: 0, display: activeMap === office.id ? 'block' : 'none' }}
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title={`Polgün ${office.name}`}
+              />
+            ))}
           </div>
         </div>
       </section>

@@ -3,6 +3,8 @@
 // ============================================================
 import { useState } from 'react'
 import heroImage from '../assets/polgun-featured-projects-4.jpeg'
+import underwater1 from '../assets/hero/13.MaxeriaBlue.png'
+import pirate1 from '../assets/splash/pirateTheme/1001.jpg'
 
 // ── Ürün Verisi ────────────────────────────────────────────
 const PRODUCTS = [
@@ -23,18 +25,33 @@ const PRODUCTS = [
 	},
 	{
 		category: 'Splash Tower',
-		title: 'OceanWave 2800',
-		sub: 'Teknolojik Pnömatik Dalga Sistemi',
-		desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+		title: 'Pirate Theme',
+		sub: 'Korsan Temalı Su Kaydırakları',
+		desc: 'Polgün’ün imza teması olan Korsan Tema, çocukların korsanlarla dolu açık denizlerde yelken açmaları ve bu hayal dünyasında eğlenmeleri için tasarlanmıştır.',
 		specs: [
-			{ label: 'Havuz Alan', val: '2800 m²' },
-			{ label: 'Dalga Yük.', val: '1.5 m' },
-			{ label: 'Kapasite', val: '1200 kişi' },
-			{ label: 'Dalga Tipi', val: 'Progressif' },
+			{ label: 'Tema', val: 'Korsan' },
+			{ label: 'Aktivite', val: 'Özelleştirilebilir' },
+			{ label: 'Yaş Grubu', val: 'Tüm Yaşlar' },
+			{ label: 'Kapasite', val: 'Yüksek' },
 		],
-		img: heroImage,
-		imgAlt: 'OceanWave dalga havuzu',
-		badge: 'Yeni',
+		img: pirate1,
+		imgAlt: 'Pirate Theme Splash Tower',
+		badge: 'İmza Tema',
+	},
+	{
+		category: 'Splash Tower',
+		title: 'Underwater Theme',
+		sub: 'Sualtı Dünyası Temalı Yapılar',
+		desc: 'Çocukların sualtı dünyası ile ilgili merakını uyandıran, keşfedilmeyi bekleyen farklı türler ve rengarenk mercanlardan yola çıkılarak tasarlanmış interaktif oyun alanı.',
+		specs: [
+			{ label: 'Tema', val: 'Sualtı' },
+			{ label: 'Aktivite', val: 'Özelleştirilebilir' },
+			{ label: 'Yaş Grubu', val: 'Tüm Yaşlar' },
+			{ label: 'Kapasite', val: 'Yüksek' },
+		],
+		img: underwater1,
+		imgAlt: 'Underwater Theme Splash Tower',
+		badge: null,
 	},
 	{
 		category: 'Splash Zone',
@@ -52,7 +69,7 @@ const PRODUCTS = [
 		badge: null,
 	},
 	{
-		category: 'Animasyonlar',
+		category: 'Splash Zone',
 		title: 'DriftStream Classic',
 		sub: 'Sakin Akış Nehir Sistemi',
 		desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
@@ -66,7 +83,6 @@ const PRODUCTS = [
 		imgAlt: 'DriftStream lazy river',
 		badge: null,
 	},
-	
 ]
 
 const CATEGORIES = [
@@ -74,7 +90,6 @@ const CATEGORIES = [
 	'Su Kaydırakları',
 	'Splash Tower',
 	'Splash Zone',
-	'Animasyonlar',
 ]
 
 // ── Glass Kart bileşeni ────────────────────────────────────
@@ -207,7 +222,7 @@ export default function ProductsPage({ setActivePage}) {
 			{/* ── Ürün Grid ── */}
 			<section className="py-16 lg:py-24">
 				<div className="max-w-[var(--layout-max)] mx-auto px-6 lg:px-14">
-					<div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+					<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
 						{filtered.map((product, i) => (
 							<article
 								key={i}

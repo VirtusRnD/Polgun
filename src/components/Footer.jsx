@@ -4,9 +4,24 @@
 import polgunLogo from '../assets/logoPolgun.png';
 
 const FOOTER_LINKS = {
-  'Ürünler': ['Su Kaydırakları', 'Splash Tower', 'Splash Zone', 'Animasyonlar'],
-  'Kurumsal': ['Hakkımızda', 'Projeler', 'Sürdürülebilirlik', 'Kariyer', 'Basın'],
-  'Destek': ['İletişim', 'Teknik Destek', 'Yedek Parça', 'Bakım Hizmetleri'],
+  'Ürünler': [
+    { label: 'Su Kaydırakları', page: 'products' },
+    { label: 'Splash Tower', page: 'splash-tower' },
+    { label: 'Splash Zone', page: 'products' },
+  ],
+  'Kurumsal': [
+    { label: 'Hakkımızda', page: 'about' },
+    { label: 'Projeler', page: 'projects' },
+    { label: 'Hizmetler', page: 'services' },
+    { label: 'İletişim', page: 'contact' },
+    { label: 'KVKK', page: null },
+  ],
+  'Destek': [
+    { label: 'İletişim', page: 'contact' },
+    { label: 'Teknik Destek', page: 'contact' },
+    { label: 'Yedek Parça', page: 'contact' },
+    { label: 'Bakım Hizmetleri', page: 'services' },
+  ],
 }
 
 export default function Footer({ setActivePage }) {
@@ -79,10 +94,18 @@ export default function Footer({ setActivePage }) {
               <h4 className="text-xs font-bold tracking-[0.15em] text-white uppercase mb-5">{title}</h4>
               <ul className="flex flex-col gap-3">
                 {links.map((link) => (
-                  <li key={link}>
-                    <a href="#" className="text-sm text-white/60 hover:text-white transition-colors">
-                      {link}
-                    </a>
+                  <li key={link.label}>
+                    <button
+                      onClick={() => {
+                        if (link.page) {
+                          setActivePage(link.page)
+                          window.scrollTo({ top: 0, behavior: 'smooth' })
+                        }
+                      }}
+                      className="text-sm text-white/60 hover:text-white transition-colors text-left"
+                    >
+                      {link.label}
+                    </button>
                   </li>
                 ))}
               </ul>
@@ -96,7 +119,7 @@ export default function Footer({ setActivePage }) {
             © 2026 Polgün Waterparks. Tüm hakları saklıdır.
           </p>
           <div className="flex gap-6">
-            {['Gizlilik Politikası', 'Kullanım Koşulları', 'KVKK'].map((item) => (
+            {['Gizlilik Politikası', 'Kullanım Koşulları', 'Çerez Politikası'].map((item) => (
               <a key={item} href="#" className="text-xs text-white hover:text-white/60 transition-colors">
                 {item}
               </a>
