@@ -145,7 +145,7 @@ export default function ContactPage({ setActivePage }) {
               </h1>
             </div>
             <p className="text-white/50 text-lg leading-relaxed">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              Yeni bir su parkı projesi geliştirmek, mevcut tesisinizi yenilemek veya ürünlerimiz hakkında detaylı bilgi almak için uzman ekibimizle iletişime geçebilirsiniz. Projenizin her aşamasında size destek olmaktan memnuniyet duyarız.
             </p>
           </div>
         </div>
@@ -160,7 +160,7 @@ export default function ContactPage({ setActivePage }) {
             <div className="lg:col-span-3">
               <h2 className="text-2xl font-black mb-2" style={{ color: 'var(--th-text)' }}>Proje Talebi</h2>
               <p className="text-sm mb-10" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 60%, transparent)' }}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Tüm alanları eksiksiz doldurarak bize ulaşabilirsiniz.
               </p>
 
               {sent ? (
@@ -182,16 +182,16 @@ export default function ContactPage({ setActivePage }) {
                   </div>
                   <h3 className="text-xl font-black mb-3" style={{ color: 'var(--th-text)' }}>Mesajınız Alındı</h3>
                   <p className="text-sm leading-relaxed" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 60%, transparent)' }}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. En kısa sürede size dönüş yapacağız.
+                    Talebiniz alınmıştır, uzman ekibimiz en kısa sürede size dönüş yapacaktır.
                   </p>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="flex flex-col gap-6">
                   {/* Ad - Soyad / E-posta */}
                   <div className="grid sm:grid-cols-2 gap-6">
-                    <Field label="Ad Soyad" name="name" placeholder="Lorem Ipsum"
+                    <Field label="Ad Soyad" name="name" placeholder="Örn. Ahmet Yılmaz"
                       value={form.name} onChange={handleChange} required />
-                    <Field label="E-posta" name="email" type="email" placeholder="lorem@ipsum.com"
+                    <Field label="E-posta" name="email" type="email" placeholder="ornek@sirketiniz.com"
                       value={form.email} onChange={handleChange} required />
                   </div>
 
@@ -199,7 +199,7 @@ export default function ContactPage({ setActivePage }) {
                   <div className="grid sm:grid-cols-2 gap-6">
                     <Field label="Telefon" name="phone" type="tel" placeholder="+90 5XX XXX XX XX"
                       value={form.phone} onChange={handleChange} />
-                    <Field label="Şirket / Proje Adı" name="company" placeholder="Lorem Ipsum A.Ş."
+                    <Field label="Şirket / Proje Adı" name="company" placeholder="Polgün Waterparks"
                       value={form.company} onChange={handleChange} />
                   </div>
 
@@ -223,7 +223,7 @@ export default function ContactPage({ setActivePage }) {
                       rows={6}
                       value={form.message}
                       onChange={handleChange}
-                      placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit..."
+                      placeholder="Projeniz veya talebiniz hakkında detaylı bilgi verebilirsiniz..."
                       required
                       className="w-full px-5 py-3.5 bg-white border rounded-xl text-sm transition-all duration-200 resize-none
                         text-[var(--th-text)]
@@ -238,8 +238,8 @@ export default function ContactPage({ setActivePage }) {
                     <input type="checkbox" required
                       className="mt-0.5 w-4 h-4 rounded cursor-pointer shrink-0 border-[color-mix(in_srgb,var(--th-border)_30%,transparent)] accent-[var(--th-polgun-blue)]" />
                     <span className="text-xs leading-relaxed" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 60%, transparent)' }}>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.{' '}
-                      <a href="#" className="hover:underline" style={{ color: 'var(--th-polgun-blue)' }}>KVKK Aydınlatma Metni</a>'ni okudum ve onaylıyorum.
+                      Müşteri - Tedarikçi{' '}
+                      <a href="/documents/kvkk/musteri-tedarikci-aydinlatma.doc" target="_blank" className="hover:underline" style={{ color: 'var(--th-polgun-blue)' }}>Aydınlatma Metni</a>'ni okudum ve onaylıyorum.
                     </span>
                   </label>
 

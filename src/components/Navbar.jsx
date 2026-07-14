@@ -16,12 +16,12 @@ const NAV_ITEMS = [
       {
         title: null,
         links: [
-          { label: 'Planlama', desc: '', page: 'services' },
-          { label: 'Tasarım',        desc: '',       page: 'services' },
-          { label: 'Mühendislik',  desc: '',        page: 'services' },
-          { label: 'Kurulum & Montaj',         desc: '',    page: 'services' },
-          { label: 'Bakım & Onarım',    desc: '',  page: 'services' },
-          { label: 'Yenileme',  desc: '', page: 'services' },
+          { label: 'Planlama', desc: '', page: 'services', anchor: 'planlama' },
+          { label: 'Tasarım',        desc: '',       page: 'services', anchor: 'tasarim' },
+          { label: 'Mühendislik',  desc: '',        page: 'services', anchor: 'muhendislik' },
+          { label: 'Kurulum & Montaj',         desc: '',    page: 'services', anchor: 'montaj' },
+          { label: 'Bakım & Onarım',    desc: '',  page: 'services', anchor: 'bakim-onarim' },
+          { label: 'Yenileme',  desc: '', page: 'services', anchor: 'bakim-onarim' },
         ],
       },
     ],
@@ -71,12 +71,11 @@ const NAV_ITEMS = [
       {
         title: null,
         links: [
-          { label: 'Ekibimiz',        desc: '',              page: 'about' },
-          { label: 'Tarihçemiz',      desc: '',           page: 'about' },
-          { label: 'Ödüller & Patent',desc: '',           page: 'about' },
-          { label: 'Sürdürülebilirlik',desc: '',         page: 'about' },
-          { label: 'Haberler & Etkinlikler', desc: '',   page: 'about' },
-          { label: 'Kariyer',         desc: '',               page: 'about' },
+          { label: 'Ekibimiz',        desc: '',              page: 'team' },
+          { label: 'Tarihçemiz',      desc: '',           page: 'history' },
+          { label: 'Ödüller & Patent',desc: '',           page: 'awards' },
+          { label: 'Fabrikalarımız',  desc: '',           page: 'factories' },
+          { label: 'Haberler & Etkinlikler', desc: '',   page: 'news' },
         ],
       },
     ],
@@ -85,20 +84,13 @@ const NAV_ITEMS = [
     id: 'arge',
     label: 'Ar-Ge',
     page: 'arge',
-    mega: true,
-    sections: [
-      {
-        title: null,
-        links: [
-          { label: 'Ekibimiz',        desc: '',              page: 'about' },
-          { label: 'Tarihçemiz',      desc: '',           page: 'about' },
-          { label: 'Ödüller & Patent',desc: '',           page: 'about' },
-          { label: 'Sürdürülebilirlik',desc: '',         page: 'about' },
-          { label: 'Haberler & Etkinlikler', desc: '',   page: 'about' },
-          { label: 'Kariyer',         desc: '',               page: 'about' },
-        ],
-      },
-    ],
+    mega: false,
+  },
+  {
+    id: 'career',
+    label: 'Kariyer',
+    page: 'career',
+    mega: false,
   },
 ]
 
@@ -115,11 +107,23 @@ export default function Navbar({ activePage, setActivePage, colorPalette }) {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
-  const handleNav = (page) => {
+  const handleNav = (page, anchor = null) => {
     setActivePage(page)
     setMobileOpen(false)
     setOpenMenu(null)
-    window.scrollTo({ top: 0 })
+    
+    if (anchor) {
+      setTimeout(() => {
+        const el = document.getElementById(anchor)
+        if (el) {
+          const yOffset = -100 // adjust for navbar height
+          const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset
+          window.scrollTo({ top: y, behavior: 'smooth' })
+        }
+      }, 100)
+    } else {
+      window.scrollTo({ top: 0 })
+    }
   }
 
   // hover ile açma — kısa gecikme ile kapanma (UX)
@@ -243,7 +247,7 @@ export default function Navbar({ activePage, setActivePage, colorPalette }) {
                           {section.links.map((link) => (
                             <button
                               key={link.label}
-                              onClick={() => handleNav(link.page)}
+                              onClick={() => handleNav(link.page, link.anchor)}
                               className="flex items-start gap-3 px-4 py-3 rounded-xl transition-colors text-left group"
                               style={{ '--hover-bg': 'var(--th-bg)' }}
                               onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'var(--th-bg)'}
@@ -421,7 +425,7 @@ export default function Navbar({ activePage, setActivePage, colorPalette }) {
                         {section.links.map((link) => (
                           <button
                             key={link.label}
-                            onClick={() => handleNav(link.page)}
+                            onClick={() => handleNav(link.page, link.anchor)}
                             className="w-full text-left px-4 py-2.5 text-sm rounded-lg transition-colors"
                             style={{
                               color: 'var(--th-text-muted)',

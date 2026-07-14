@@ -7,14 +7,16 @@ const FOOTER_LINKS = {
   'Ürünler': [
     { label: 'Su Kaydırakları', page: 'products' },
     { label: 'Splash Tower', page: 'splash-tower' },
+    { label: 'Ar-Ge Ürünleri', page: 'products' },
     { label: 'Splash Zone', page: 'products' },
   ],
   'Kurumsal': [
     { label: 'Hakkımızda', page: 'about' },
     { label: 'Projeler', page: 'projects' },
     { label: 'Hizmetler', page: 'services' },
+    { label: 'Kariyer', page: 'career' },
     { label: 'İletişim', page: 'contact' },
-    { label: 'KVKK', page: null },
+    { label: 'KVKK', page: null, href: '/documents/kvkk/musteri-tedarikci-aydinlatma.doc' },
   ],
   'Destek': [
     { label: 'İletişim', page: 'contact' },
@@ -95,17 +97,28 @@ export default function Footer({ setActivePage }) {
               <ul className="flex flex-col gap-3">
                 {links.map((link) => (
                   <li key={link.label}>
-                    <button
-                      onClick={() => {
-                        if (link.page) {
-                          setActivePage(link.page)
-                          window.scrollTo({ top: 0, behavior: 'smooth' })
-                        }
-                      }}
-                      className="text-sm text-white/60 hover:text-white transition-colors text-left"
-                    >
-                      {link.label}
-                    </button>
+                    {link.href ? (
+                      <a
+                        href={link.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-sm text-white/60 hover:text-white transition-colors text-left"
+                      >
+                        {link.label}
+                      </a>
+                    ) : (
+                      <button
+                        onClick={() => {
+                          if (link.page) {
+                            setActivePage(link.page)
+                            window.scrollTo({ top: 0, behavior: 'smooth' })
+                          }
+                        }}
+                        className="text-sm text-white/60 hover:text-white transition-colors text-left"
+                      >
+                        {link.label}
+                      </button>
+                    )}
                   </li>
                 ))}
               </ul>
@@ -119,11 +132,9 @@ export default function Footer({ setActivePage }) {
             © 2026 Polgün Waterparks. Tüm hakları saklıdır.
           </p>
           <div className="flex gap-6">
-            {['Gizlilik Politikası', 'Kullanım Koşulları', 'Çerez Politikası'].map((item) => (
-              <a key={item} href="#" className="text-xs text-white hover:text-white/60 transition-colors">
-                {item}
-              </a>
-            ))}
+            <a href="/documents/kvkk/calisan-adayi-aydinlatma.doc" target="_blank" className="text-xs text-white hover:text-white/60 transition-colors">Aydınlatma Metni</a>
+            <a href="/documents/kvkk/cerez-aydinlatma.doc" target="_blank" className="text-xs text-white hover:text-white/60 transition-colors">Çerez Politikası</a>
+            <a href="/documents/kvkk/musteri-tedarikci-aydinlatma.doc" target="_blank" className="text-xs text-white hover:text-white/60 transition-colors">Kullanım Koşulları</a>
           </div>
         </div>
       </div>

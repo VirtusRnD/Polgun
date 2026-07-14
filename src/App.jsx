@@ -13,6 +13,13 @@ import ProjectsPage from './pages/ProjectsPage'
 import AboutPage from './pages/AboutPage'
 import ContactPage from './pages/ContactPage'
 import SplashTowerPage from './pages/SplashTower'
+import CareerPage from './pages/CareerPage'
+import ArGePage from './pages/ArGePage'
+import FactoriesPage from './pages/FactoriesPage'
+import TeamPage from './pages/TeamPage'
+import HistoryPage from './pages/HistoryPage'
+import AwardsPage from './pages/AwardsPage'
+import NewsPage from './pages/NewsPage'
 import { COLOR_PALETTES } from './constants/colorPalettes'
 
 function clamp01(n) {
@@ -67,6 +74,13 @@ const PAGES = {
   projects: ProjectsPage,
   about: AboutPage,
   contact: ContactPage,
+  career: CareerPage,
+  arge: ArGePage,
+  factories: FactoriesPage,
+  team: TeamPage,
+  history: HistoryPage,
+  awards: AwardsPage,
+  news: NewsPage,
 }
 
 // Sayfa-spesifik renk paletleri
@@ -78,6 +92,11 @@ const PAGE_COLOR_PALETTES = {
   projects: 1,     // Default
   about: 1,        // Default
   contact: 1,      // Default
+  factories: 1,    // Default
+  team: 1,         // Default
+  history: 1,      // Default
+  awards: 1,       // Default
+  news: 1,         // Default
 }
 
 export default function App() {

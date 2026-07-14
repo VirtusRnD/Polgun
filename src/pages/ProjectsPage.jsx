@@ -35,7 +35,7 @@ const PROJECTS = [
     type: 'Otel & Tatil Köyü',
     region: 'Türkiye & Orta Doğu',
     scope: ['8 Kaydırak', 'Infinity Pool', 'Çocuk Parkı'],
-    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    desc: 'Eşsiz bir tasarım ve mühendislik harikası.',
     img: seignosse,
     imgAlt: 'OceanSplash Resort Antalya',
     slides: [
@@ -69,7 +69,7 @@ const PROJECTS = [
     type: 'Açık Hava Su Parkı',
     region: 'Türkiye & Orta Doğu',
     scope: ['20 Kaydırak', '2 Dalga Havuzu', 'Lazy River', 'Sörf Alanı'],
-    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    desc: 'Bölgenin en büyük eğlence merkezlerinden biri.',
     img: delphinPalace,
     imgAlt: 'Desert Oasis Water World Dubai',
     slides: [
@@ -86,7 +86,7 @@ const PROJECTS = [
     type: 'Cruise Gemisi',
     region: 'Avrupa',
     scope: ['6 Kaydırak', 'Splash Zone', 'FlowRider'],
-    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    desc: 'Maksimum adrenalin ve ziyaretçi memnuniyeti için tasarlandı.',
     img: heroImage,
     imgAlt: 'AquaVenture Cruise gemisi',
     slides: [
@@ -264,7 +264,7 @@ export default function ProjectsPage({ setActivePage}) {
               </h1>
             </div>
             <p className="text-white/50 text-lg leading-relaxed">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              Konsept aşamasından anahtar teslimine kadar tamamladığımız global projeler. Dünya çapında imza attığımız su parkı ve eğlence merkezleri.
             </p>
           </div>
         </div>
@@ -388,7 +388,7 @@ export default function ProjectsPage({ setActivePage}) {
               <div>
                 <p className="text-[11px] font-black tracking-[0.3em] uppercase mb-3 text-white/50">Sonraki Proje</p>
                 <h2 className="text-3xl font-black text-white">Projeniz bu listede olsun.</h2>
-                <p className="text-white/40 mt-2 max-w-md">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <p className="text-white/40 mt-2 max-w-md">Hayalinizdeki su parkını veya eğlence merkezini tasarlamak için uzman mühendis ve mimar kadromuzla iletişime geçin.</p>
               </div>
               <button
                 onClick={() => setActivePage('contact')}
