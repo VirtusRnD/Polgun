@@ -241,20 +241,44 @@ export default function HomePage({ setActivePage }) {
             </h1>
             <h2
               className="font-black leading-[1.05] tracking-tight"
-              style={{ color: 'var(--th-polgun-blue)', fontSize: 'clamp(1.6rem,3vw,3.6rem)' }}
+              style={{ fontSize: 'clamp(1.6rem,3vw,3.6rem)', letterSpacing: '-0.01em' }}
             >
-              Let's <span
+              {/* LET'S */}
+              {["L","E","T","'","S"].map((char, i) => (
+                <span key={`lets-${i}`} style={{ color: '#29a8e0' }}>{char}</span>
+              ))}
+              {/* boşluk */}
+              &nbsp;
+              {/* COLOR */}
+              {["C","O","L","O","R"].map((char, i) => (
+                <span key={`color-${i}`} style={{ color: '#29a8e0' }}>{char}</span>
+              ))}
+              {/* boşluk */}
+              &nbsp;
+              {/* THE — tek gradient span */}
+              <span
                 style={{
-                  background: 'linear-gradient(90deg, #0b67aa, #48abe4, #2f7abd)',
+                  background: 'linear-gradient(90deg, #e04020 0%, #c05080 45%, #8878b8 75%, #7a90c8 100%)',
                   WebkitBackgroundClip: 'text',
                   backgroundClip: 'text',
                   WebkitTextFillColor: 'transparent',
-                  textShadow: '0 8px 16px color-mix(in srgb, #0b67aa 25%, transparent)',
-                  filter: 'drop-shadow(0 2px 4px color-mix(in srgb, #0b67aa 30%, transparent))',
                 }}
               >
-                Color
-              </span> the Water.
+                THE
+              </span>
+              {/* boşluk */}
+              &nbsp;
+              {/* WATER — tek gradient span */}
+              <span
+                style={{
+                  background: 'linear-gradient(90deg, #7a90c8 0%, #48c8e0 30%, #68d8a8 60%, #a8e040 100%)',
+                  WebkitBackgroundClip: 'text',
+                  backgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                }}
+              >
+                WATER
+              </span>
             </h2>
           </div>
 
