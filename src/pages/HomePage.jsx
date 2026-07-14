@@ -234,14 +234,14 @@ export default function HomePage({ setActivePage }) {
 
             <h1
               className="font-black leading-[1.05] tracking-tight"
-              style={{ color: 'var(--th-polgun-antrasit)', fontSize: 'clamp(3.6rem,2vw,4.6rem)' }}
+              style={{ color: 'var(--th-polgun-antrasit)', fontSize: 'clamp(2.4rem,2.8vw,3.2rem)' }}
             >
               We don’t just build slides.
               <br />We create destinations.
             </h1>
             <h2
               className="font-black leading-[1.05] tracking-tight"
-              style={{ fontSize: 'clamp(1.6rem,3vw,3.6rem)', letterSpacing: '-0.01em' }}
+              style={{ fontSize: 'clamp(1.1rem,2vw,2.2rem)', letterSpacing: '-0.01em' }}
             >
               {/* LET'S */}
               {["L","E","T","'","S"].map((char, i) => (
@@ -290,7 +290,7 @@ export default function HomePage({ setActivePage }) {
             <div
               className="relative w-full"
               style={{
-                maxWidth: 'clamp(600px, 72vw, 1600px)',
+                maxWidth: 'clamp(700px, 88vw, 1800px)',
                 borderRadius: '2.5rem',
                 padding: '12px',
                 background: 'rgba(34,171,230,0.18)',
