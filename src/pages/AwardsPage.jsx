@@ -1,18 +1,13 @@
 // ============================================================
 // AWARDS PAGE — Ödüller & Patent
 // ============================================================
-import { useEffect } from 'react'
+import { useState, useEffect } from 'react'
 
-// Ödüller görselleri
-import rdconf2024 from '../assets/awards/rdconf-2024.png'
-import rdconf2025 from '../assets/awards/rdconf-2025.png'
-import bestBusinessman from '../assets/awards/best-businessman-award.jpg'
-import designInnovation from '../assets/awards/design-innovation-award.jpeg'
-import iaapaBrassRing1 from '../assets/awards/iaapa-brass-ring-1.png'
-import iaapaBrassRing2 from '../assets/awards/iaapa-brass-ring-2.png'
+// Ziyaret görselleri
 import egekafVisit from '../assets/awards/egekaf-visit.jpeg'
 import mskuRectorVisit from '../assets/awards/msku-rector-visit.jpeg'
 
+/* Mock awards retained only as a reference. Awards must be published in CMS.
 const AWARDS = [
   {
     tag: 'IAAPA Expo Orlando – Brass Ring',
@@ -46,6 +41,7 @@ const AWARDS = [
     img: designInnovation,
   },
 ]
+*/
 
 const VISITS = [
   {
@@ -78,7 +74,36 @@ const KALITE_BELGELERI = [
 ]
 
 export default function AwardsPage({ setActivePage }) {
-  useEffect(() => { window.scrollTo(0, 0) }, [])
+  const [liveAwards, setLiveAwards] = useState([])
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+    let cancelled = false
+
+    async function fetchAwards() {
+      try {
+        const res = await fetch('/api/award/visible')
+        if (!res.ok) return
+        const contentType = res.headers.get('content-type') ?? ''
+        if (!contentType.includes('json')) return
+        const data = await res.json()
+        if (!cancelled && Array.isArray(data)) {
+          const mapped = data.map(item => ({
+            tag: item.tag,
+            title: item.title,
+            desc: item.description,
+            img: item.image_path
+          }))
+          setLiveAwards(mapped)
+        }
+      } catch {
+        // Keep the list empty when the CMS is unavailable.
+      }
+    }
+
+    fetchAwards()
+    return () => { cancelled = true }
+  }, [])
 
   return (
     <main className="pt-20" style={{ backgroundColor: 'var(--th-bg)' }}>
@@ -105,7 +130,12 @@ export default function AwardsPage({ setActivePage }) {
           <div className="mb-20">
             <h3 className="text-xl font-black mb-10" style={{ color: 'var(--th-text)' }}>🏆 Ödüllerimiz</h3>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {AWARDS.map((award, i) => (
+              {liveAwards.length === 0 && (
+                <p className="sm:col-span-2 lg:col-span-3 text-center text-sm" style={{ color: 'var(--th-text-muted)' }}>
+                  Henüz yayınlanmış ödül bulunmuyor.
+                </p>
+              )}
+              {liveAwards.map((award, i) => (
                 <div key={i} className="rounded-2xl overflow-hidden group" style={{ backgroundColor: 'var(--th-bg)', border: '1px solid color-mix(in srgb, var(--th-border) 12%, transparent)', boxShadow: '0 4px 24px rgba(0,0,0,0.06)' }}>
                   <div className={`overflow-hidden ${award.img2 ? 'grid grid-cols-2' : ''}`} style={{ aspectRatio: award.img2 ? 'auto' : '16/10' }}>
                     <img src={award.img} alt={award.title} className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105" />

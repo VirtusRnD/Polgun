@@ -1,259 +1,1865 @@
 // ============================================================
-// PROJECTS PAGE — Gerçek görseller + CSS değişkenleri + glass efekt
+// PROJECTS PAGE — Virtus ArGe Gerçek Proje Verileri (88 proje)
 // ============================================================
 import { useState, useEffect, useRef } from 'react'
-import heroImage from '../assets/polgun-featured-projects-4.jpeg'
-import eftaliaBlue from '../assets/products/eftalia-blue-antalya.png'
-import nirvana from '../assets/hero/12.NirvanaCosmopolitan.png'
-import seignosse from '../assets/hero/2.SeignosseAtlanticPark.png'
-import delphinPalace from '../assets/products/delphin-palace-antalya.jpg'
+
+// ── Proje Görselleri ──────────────────────────────────────────────────────────
+// Dev: Vite serves src/assets at /src/assets. Prod: static files are served from /img (copied from src/assets).
+const ASSETS_URL = import.meta.env.DEV ? '/src/assets' : '/img';
+
+const p1i0 = `${ASSETS_URL}/projects/adenya-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-asya/001.jpg`;
+const p1i1 = `${ASSETS_URL}/projects/adenya-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-asya/002.jpg`;
+const p1i2 = `${ASSETS_URL}/projects/adenya-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-asya/003.jpg`;
+const p1i3 = `${ASSETS_URL}/projects/adenya-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-asya/004.jpg`;
+const p1i4 = `${ASSETS_URL}/projects/adenya-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-asya/005.jpg`;
+const p1i5 = `${ASSETS_URL}/projects/adenya-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-asya/1001.jpeg`;
+const p1i6 = `${ASSETS_URL}/projects/adenya-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-asya/1002.jpeg`;
+const p2i0 = `${ASSETS_URL}/projects/amazonia-aquapark-timis-oara-romanya-ac-ik-alan-su-parki-avr/1001.png`;
+const p2i1 = `${ASSETS_URL}/projects/amazonia-aquapark-timis-oara-romanya-ac-ik-alan-su-parki-avr/1002.png`;
+const p2i2 = `${ASSETS_URL}/projects/amazonia-aquapark-timis-oara-romanya-ac-ik-alan-su-parki-avr/1003.png`;
+const p2i3 = `${ASSETS_URL}/projects/amazonia-aquapark-timis-oara-romanya-ac-ik-alan-su-parki-avr/1004.png`;
+const p2i4 = `${ASSETS_URL}/projects/amazonia-aquapark-timis-oara-romanya-ac-ik-alan-su-parki-avr/1005.png`;
+const p3i0 = `${ASSETS_URL}/projects/apollonion-asterias-resort-and-spa-kefalonya-yunanistan-ac-i/1001.jpg`;
+const p3i1 = `${ASSETS_URL}/projects/apollonion-asterias-resort-and-spa-kefalonya-yunanistan-ac-i/1002.jpg`;
+const p3i2 = `${ASSETS_URL}/projects/apollonion-asterias-resort-and-spa-kefalonya-yunanistan-ac-i/1003.jpg`;
+const p4i0 = `${ASSETS_URL}/projects/aqualand-benidorm-benidorm-i-spanya-ac-ik-alan-su-parki-avru/1001.png`;
+const p4i1 = `${ASSETS_URL}/projects/aqualand-benidorm-benidorm-i-spanya-ac-ik-alan-su-parki-avru/1002.png`;
+const p4i2 = `${ASSETS_URL}/projects/aqualand-benidorm-benidorm-i-spanya-ac-ik-alan-su-parki-avru/1003.png`;
+const p5i0 = `${ASSETS_URL}/projects/aqualand-costa-adeje-tenerife-i-spanya-ac-ik-alan-su-parki-a/1001.png`;
+const p5i1 = `${ASSETS_URL}/projects/aqualand-costa-adeje-tenerife-i-spanya-ac-ik-alan-su-parki-a/1002.png`;
+const p5i2 = `${ASSETS_URL}/projects/aqualand-costa-adeje-tenerife-i-spanya-ac-ik-alan-su-parki-a/1004.png`;
+const p5i3 = `${ASSETS_URL}/projects/aqualand-costa-adeje-tenerife-i-spanya-ac-ik-alan-su-parki-a/1005.png`;
+const p6i0 = `${ASSETS_URL}/projects/aqualand-maspalomas-gran-canaria-i-spanya-ac-ik-alan-su-park/001.jpeg`;
+const p6i1 = `${ASSETS_URL}/projects/aqualand-maspalomas-gran-canaria-i-spanya-ac-ik-alan-su-park/002.jpeg`;
+const p6i2 = `${ASSETS_URL}/projects/aqualand-maspalomas-gran-canaria-i-spanya-ac-ik-alan-su-park/003.jpeg`;
+const p6i3 = `${ASSETS_URL}/projects/aqualand-maspalomas-gran-canaria-i-spanya-ac-ik-alan-su-park/1002.png`;
+const p7i0 = `${ASSETS_URL}/projects/aqualand-moravia-moravya-c-ekya-ac-ik-alan-su-parki-avrupa/1001.jpg`;
+const p7i1 = `${ASSETS_URL}/projects/aqualand-moravia-moravya-c-ekya-ac-ik-alan-su-parki-avrupa/1002.png`;
+const p7i2 = `${ASSETS_URL}/projects/aqualand-moravia-moravya-c-ekya-ac-ik-alan-su-parki-avrupa/1003.png`;
+const p8i0 = `${ASSETS_URL}/projects/aqualand-saint-cyprien-saint-cyprien-fransa-ac-ik-alan-su-pa/1001.png`;
+const p8i1 = `${ASSETS_URL}/projects/aqualand-saint-cyprien-saint-cyprien-fransa-ac-ik-alan-su-pa/1003.png`;
+const p9i0 = `${ASSETS_URL}/projects/aqualand-mallorca-i-spanya-ac-ik-alan-su-parki-avrupa/1001.jpeg`;
+const p9i1 = `${ASSETS_URL}/projects/aqualand-mallorca-i-spanya-ac-ik-alan-su-parki-avrupa/1002.jpeg`;
+const p9i2 = `${ASSETS_URL}/projects/aqualand-mallorca-i-spanya-ac-ik-alan-su-parki-avrupa/1003.jpeg`;
+const p9i3 = `${ASSETS_URL}/projects/aqualand-mallorca-i-spanya-ac-ik-alan-su-parki-avrupa/1004.jpeg`;
+const p9i4 = `${ASSETS_URL}/projects/aqualand-mallorca-i-spanya-ac-ik-alan-su-parki-avrupa/1005.jpeg`;
+const p9i5 = `${ASSETS_URL}/projects/aqualand-mallorca-i-spanya-ac-ik-alan-su-parki-avrupa/1006.jpeg`;
+const p9i6 = `${ASSETS_URL}/projects/aqualand-mallorca-i-spanya-ac-ik-alan-su-parki-avrupa/1007.png`;
+const p9i7 = `${ASSETS_URL}/projects/aqualand-mallorca-i-spanya-ac-ik-alan-su-parki-avrupa/Aqualand Mallorca - Spaın.png`;
+const p10i0 = `${ASSETS_URL}/projects/aqualand-torremolinos-i-spanya-ac-ik-alan-su-parki-avrupa/Torremolinos001.png`;
+const p10i1 = `${ASSETS_URL}/projects/aqualand-torremolinos-i-spanya-ac-ik-alan-su-parki-avrupa/Torremolinos002.png`;
+const p11i0 = `${ASSETS_URL}/projects/aquila-rithymna-beach-rethymno-yunanistan-otel-ac-ik-alan-su/1002.jpg`;
+const p11i1 = `${ASSETS_URL}/projects/aquila-rithymna-beach-rethymno-yunanistan-otel-ac-ik-alan-su/1003.jpg`;
+const p11i2 = `${ASSETS_URL}/projects/aquila-rithymna-beach-rethymno-yunanistan-otel-ac-ik-alan-su/1004.png`;
+const p11i3 = `${ASSETS_URL}/projects/aquila-rithymna-beach-rethymno-yunanistan-otel-ac-ik-alan-su/1005.png`;
+const p11i4 = `${ASSETS_URL}/projects/aquila-rithymna-beach-rethymno-yunanistan-otel-ac-ik-alan-su/1006.png`;
+const p12i0 = `${ASSETS_URL}/projects/arcanus-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-asya/1001.jpg`;
+const p12i1 = `${ASSETS_URL}/projects/arcanus-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-asya/1002.JPG`;
+const p12i2 = `${ASSETS_URL}/projects/arcanus-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-asya/1003.JPG`;
+const p13i0 = `${ASSETS_URL}/projects/blue-waters-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-asya/1020.jpg`;
+const p13i1 = `${ASSETS_URL}/projects/blue-waters-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-asya/Blue Waters Club 001.png`;
+const p14i0 = `${ASSETS_URL}/projects/blue-wave-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-asya/1001.jpg`;
+const p14i1 = `${ASSETS_URL}/projects/blue-wave-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-asya/1002.jpg`;
+const p15i0 = `${ASSETS_URL}/projects/boga-cs-gyo-gy-e-s-strandfu-rdo-boga-cs-macaristan-ac-ik-ala/1001.jpg`;
+const p15i1 = `${ASSETS_URL}/projects/boga-cs-gyo-gy-e-s-strandfu-rdo-boga-cs-macaristan-ac-ik-ala/1002.png`;
+const p15i2 = `${ASSETS_URL}/projects/boga-cs-gyo-gy-e-s-strandfu-rdo-boga-cs-macaristan-ac-ik-ala/1003.jpg`;
+const p16i0 = `${ASSETS_URL}/projects/caldera-beach-hanya-yunanistan-ac-ik-alan-su-parki-avrupa/1002.jpg`;
+const p16i1 = `${ASSETS_URL}/projects/caldera-beach-hanya-yunanistan-ac-ik-alan-su-parki-avrupa/1007.jpg`;
+const p16i2 = `${ASSETS_URL}/projects/caldera-beach-hanya-yunanistan-ac-ik-alan-su-parki-avrupa/1009.jpg`;
+const p16i3 = `${ASSETS_URL}/projects/caldera-beach-hanya-yunanistan-ac-ik-alan-su-parki-avrupa/1010.jpg`;
+const p16i4 = `${ASSETS_URL}/projects/caldera-beach-hanya-yunanistan-ac-ik-alan-su-parki-avrupa/1015.jpg`;
+const p16i5 = `${ASSETS_URL}/projects/caldera-beach-hanya-yunanistan-ac-ik-alan-su-parki-avrupa/1018.jpg`;
+const p16i6 = `${ASSETS_URL}/projects/caldera-beach-hanya-yunanistan-ac-ik-alan-su-parki-avrupa/1019.jpg`;
+const p16i7 = `${ASSETS_URL}/projects/caldera-beach-hanya-yunanistan-ac-ik-alan-su-parki-avrupa/1025.jpg`;
+const p16i8 = `${ASSETS_URL}/projects/caldera-beach-hanya-yunanistan-ac-ik-alan-su-parki-avrupa/1026.jpg`;
+const p17i0 = `${ASSETS_URL}/projects/calimera-serra-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-asy/DAP01836-Enhanced-NR.jpg`;
+const p17i1 = `${ASSETS_URL}/projects/calimera-serra-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-asy/DAP01846-Enhanced-NR.jpg`;
+const p17i2 = `${ASSETS_URL}/projects/calimera-serra-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-asy/DAP01881-Enhanced-NR.jpg`;
+const p17i3 = `${ASSETS_URL}/projects/calimera-serra-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-asy/DAP02189-Enhanced-NR.jpg`;
+const p17i4 = `${ASSETS_URL}/projects/calimera-serra-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-asy/DAP02336-Enhanced-NR.jpg`;
+const p17i5 = `${ASSETS_URL}/projects/calimera-serra-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-asy/DAP02387-Enhanced-NR.jpg`;
+const p17i6 = `${ASSETS_URL}/projects/calimera-serra-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-asy/DAP07148-Enhanced-NR.jpg`;
+const p17i7 = `${ASSETS_URL}/projects/calimera-serra-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-asy/DAP07156-Enhanced-NR.jpg`;
+const p17i8 = `${ASSETS_URL}/projects/calimera-serra-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-asy/DJI_0370-Enhanced-NR.jpg`;
+const p17i9 = `${ASSETS_URL}/projects/calimera-serra-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-asy/DJI_0373-Enhanced-NR.jpg`;
+const p17i10 = `${ASSETS_URL}/projects/calimera-serra-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-asy/DJI_0385-Enhanced-NR.jpg`;
+const p17i11 = `${ASSETS_URL}/projects/calimera-serra-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-asy/DJI_0388-Enhanced-NR.jpg`;
+const p17i12 = `${ASSETS_URL}/projects/calimera-serra-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-asy/DJI_0389-Enhanced-NR.jpg`;
+const p17i13 = `${ASSETS_URL}/projects/calimera-serra-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-asy/DJI_0425-Enhanced-NR.jpg`;
+const p18i0 = `${ASSETS_URL}/projects/calyptus-kirman-premium-antalya-tu-rkiye-otel-ac-ik-alan-su-/1001.png`;
+const p18i1 = `${ASSETS_URL}/projects/calyptus-kirman-premium-antalya-tu-rkiye-otel-ac-ik-alan-su-/1002.png`;
+const p18i2 = `${ASSETS_URL}/projects/calyptus-kirman-premium-antalya-tu-rkiye-otel-ac-ik-alan-su-/1003.png`;
+const p19i0 = `${ASSETS_URL}/projects/camping-le-domaine-du-clarys-saint-jean-de-monts-fransa-ac-i/1001.jpg`;
+const p19i1 = `${ASSETS_URL}/projects/camping-le-domaine-du-clarys-saint-jean-de-monts-fransa-ac-i/1002.jpg`;
+const p20i0 = `${ASSETS_URL}/projects/cha-teau-de-l-hom-fransa-ac-ik-alan-su-parki-avrupa/1001.jpg`;
+const p20i1 = `${ASSETS_URL}/projects/cha-teau-de-l-hom-fransa-ac-ik-alan-su-parki-avrupa/1002.jpg`;
+const p20i2 = `${ASSETS_URL}/projects/cha-teau-de-l-hom-fransa-ac-ik-alan-su-parki-avrupa/1003.png`;
+const p20i3 = `${ASSETS_URL}/projects/cha-teau-de-l-hom-fransa-ac-ik-alan-su-parki-avrupa/1004.jpg`;
+const p20i4 = `${ASSETS_URL}/projects/cha-teau-de-l-hom-fransa-ac-ik-alan-su-parki-avrupa/1005.png`;
+const p21i0 = `${ASSETS_URL}/projects/crystal-centro-pearl-collection-antalya-tu-rkiye-otel-ac-ik-/1001.png`;
+const p21i1 = `${ASSETS_URL}/projects/crystal-centro-pearl-collection-antalya-tu-rkiye-otel-ac-ik-/1002.png`;
+const p22i0 = `${ASSETS_URL}/projects/danialand-agadir-fas-ac-ik-alan-su-parki-afrika/1001.jpg`;
+const p22i1 = `${ASSETS_URL}/projects/danialand-agadir-fas-ac-ik-alan-su-parki-afrika/1002.jpg`;
+const p22i2 = `${ASSETS_URL}/projects/danialand-agadir-fas-ac-ik-alan-su-parki-afrika/1003.jpg`;
+const p22i3 = `${ASSETS_URL}/projects/danialand-agadir-fas-ac-ik-alan-su-parki-afrika/1004.jpg`;
+const p22i4 = `${ASSETS_URL}/projects/danialand-agadir-fas-ac-ik-alan-su-parki-afrika/1005.jpg`;
+const p22i5 = `${ASSETS_URL}/projects/danialand-agadir-fas-ac-ik-alan-su-parki-afrika/1006.jpg`;
+const p22i6 = `${ASSETS_URL}/projects/danialand-agadir-fas-ac-ik-alan-su-parki-afrika/1007.jpg`;
+const p23i0 = `${ASSETS_URL}/projects/delphin-imperial-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-a/DAP01274-Enhanced-NR.jpg`;
+const p23i1 = `${ASSETS_URL}/projects/delphin-imperial-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-a/DAP01277-Enhanced-NR.jpg`;
+const p23i2 = `${ASSETS_URL}/projects/delphin-imperial-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-a/DAP01282-Enhanced-NR.jpg`;
+const p23i3 = `${ASSETS_URL}/projects/delphin-imperial-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-a/DAP01288-Enhanced-NR.jpg`;
+const p23i4 = `${ASSETS_URL}/projects/delphin-imperial-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-a/DAP01334-Enhanced-NR.jpg`;
+const p23i5 = `${ASSETS_URL}/projects/delphin-imperial-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-a/DAP01347-Enhanced-NR.jpg`;
+const p23i6 = `${ASSETS_URL}/projects/delphin-imperial-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-a/DAP01401-Enhanced-NR.jpg`;
+const p24i0 = `${ASSETS_URL}/projects/delphin-palace-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-asy/DAP00843-Enhanced-NR.jpg`;
+const p24i1 = `${ASSETS_URL}/projects/delphin-palace-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-asy/DAP00979-Enhanced-NR.jpg`;
+const p24i2 = `${ASSETS_URL}/projects/delphin-palace-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-asy/DAP01210-Enhanced-NR.jpg`;
+const p24i3 = `${ASSETS_URL}/projects/delphin-palace-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-asy/DAP01254-Enhanced-NR.jpg`;
+const p24i4 = `${ASSETS_URL}/projects/delphin-palace-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-asy/DAP07140-Enhanced-NR.jpg`;
+const p24i5 = `${ASSETS_URL}/projects/delphin-palace-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-asy/DJI_0993-Enhanced-NR.jpg`;
+const p24i6 = `${ASSETS_URL}/projects/delphin-palace-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-asy/DJI_0997-Enhanced-NR.jpg`;
+const p24i7 = `${ASSETS_URL}/projects/delphin-palace-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-asy/delphin palace001.png`;
+const p24i8 = `${ASSETS_URL}/projects/delphin-palace-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-asy/delphin palace002.png`;
+const p25i0 = `${ASSETS_URL}/projects/dream-fun-world-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-as/1002.webp`;
+const p25i1 = `${ASSETS_URL}/projects/dream-fun-world-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-as/1003.webp`;
+const p26i0 = `${ASSETS_URL}/projects/dream-world-palace-antalya-tu-rkiye-otel-ac-ik-alan-su-parki/1001.png`;
+const p26i1 = `${ASSETS_URL}/projects/dream-world-palace-antalya-tu-rkiye-otel-ac-ik-alan-su-parki/1002.png`;
+const p26i2 = `${ASSETS_URL}/projects/dream-world-palace-antalya-tu-rkiye-otel-ac-ik-alan-su-parki/1003.png`;
+const p27i0 = `${ASSETS_URL}/projects/duja-didim-aydin-tu-rkiye-otel-ac-ik-alan-su-parki-asya/1006.JPG`;
+const p27i1 = `${ASSETS_URL}/projects/duja-didim-aydin-tu-rkiye-otel-ac-ik-alan-su-parki-asya/1039.JPG`;
+const p27i2 = `${ASSETS_URL}/projects/duja-didim-aydin-tu-rkiye-otel-ac-ik-alan-su-parki-asya/1052.JPG`;
+const p27i3 = `${ASSETS_URL}/projects/duja-didim-aydin-tu-rkiye-otel-ac-ik-alan-su-parki-asya/1055.JPG`;
+const p27i4 = `${ASSETS_URL}/projects/duja-didim-aydin-tu-rkiye-otel-ac-ik-alan-su-parki-asya/1079.JPG`;
+const p27i5 = `${ASSETS_URL}/projects/duja-didim-aydin-tu-rkiye-otel-ac-ik-alan-su-parki-asya/1080.JPG`;
+const p27i6 = `${ASSETS_URL}/projects/duja-didim-aydin-tu-rkiye-otel-ac-ik-alan-su-parki-asya/1095.jpg`;
+const p27i7 = `${ASSETS_URL}/projects/duja-didim-aydin-tu-rkiye-otel-ac-ik-alan-su-parki-asya/1096.jpg`;
+const p28i0 = `${ASSETS_URL}/projects/eftalia-blue-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-asya/1001.png`;
+const p28i1 = `${ASSETS_URL}/projects/eftalia-blue-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-asya/1002.png`;
+const p28i2 = `${ASSETS_URL}/projects/eftalia-blue-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-asya/1003.png`;
+const p28i3 = `${ASSETS_URL}/projects/eftalia-blue-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-asya/1004.png`;
+const p29i0 = `${ASSETS_URL}/projects/eftalia-sol-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-asya/Eftalia Sol001.jpg`;
+const p29i1 = `${ASSETS_URL}/projects/eftalia-sol-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-asya/Eftalia Sol002.jpg`;
+const p29i2 = `${ASSETS_URL}/projects/eftalia-sol-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-asya/Eftalia Sol003.jpg`;
+const p29i3 = `${ASSETS_URL}/projects/eftalia-sol-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-asya/Eftalia Sol004.jpg`;
+const p30i0 = `${ASSETS_URL}/projects/ethno-belek-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-asya/ethno belek001.png`;
+const p30i1 = `${ASSETS_URL}/projects/ethno-belek-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-asya/ethno belek002.png`;
+const p30i2 = `${ASSETS_URL}/projects/ethno-belek-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-asya/ethno belek003.png`;
+const p31i0 = `${ASSETS_URL}/projects/fairy-park-selangor-malezya-ac-ik-alan-su-parki-asya/1009.jpg`;
+const p31i1 = `${ASSETS_URL}/projects/fairy-park-selangor-malezya-ac-ik-alan-su-parki-asya/1010.jpg`;
+const p32i0 = `${ASSETS_URL}/projects/fantazia-marsa-alam-marsa-alam-misir-otel-ac-ik-alan-su-park/Fantazia Marsa Alam001 (1).png`;
+const p32i1 = `${ASSETS_URL}/projects/fantazia-marsa-alam-marsa-alam-misir-otel-ac-ik-alan-su-park/Fantazia Marsa Alam002.png`;
+const p33i0 = `${ASSETS_URL}/projects/frenzy-waterpark-torreilles-fransa-ac-ik-alan-su-parki-avrup/frenzy001.png`;
+const p33i1 = `${ASSETS_URL}/projects/frenzy-waterpark-torreilles-fransa-ac-ik-alan-su-parki-avrup/frenzy002.png`;
+const p33i2 = `${ASSETS_URL}/projects/frenzy-waterpark-torreilles-fransa-ac-ik-alan-su-parki-avrup/frenzy003.png`;
+const p33i3 = `${ASSETS_URL}/projects/frenzy-waterpark-torreilles-fransa-ac-ik-alan-su-parki-avrup/frenzy004.png`;
+const p33i4 = `${ASSETS_URL}/projects/frenzy-waterpark-torreilles-fransa-ac-ik-alan-su-parki-avrup/frenzy005.png`;
+const p34i0 = `${ASSETS_URL}/projects/golden-beach-nana-girit-yunanistan-ac-ik-alan-su-parki-avrup/Golden Beach Nana001.png`;
+const p34i1 = `${ASSETS_URL}/projects/golden-beach-nana-girit-yunanistan-ac-ik-alan-su-parki-avrup/Golden Beach Nana002.png`;
+const p35i0 = `${ASSETS_URL}/projects/gu-ral-premier-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-asy/Güral Premier001.jpg`;
+const p35i1 = `${ASSETS_URL}/projects/gu-ral-premier-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-asy/Güral Premier002.jpg`;
+const p35i2 = `${ASSETS_URL}/projects/gu-ral-premier-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-asy/Güral Premier003.jpg`;
+const p35i3 = `${ASSETS_URL}/projects/gu-ral-premier-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-asy/Güral Premier004.jpg`;
+const p36i0 = `${ASSETS_URL}/projects/iberostar-waves-creta-panorama-and-mare-rethymno-yunanistan-/1002.jpg`;
+const p36i1 = `${ASSETS_URL}/projects/iberostar-waves-creta-panorama-and-mare-rethymno-yunanistan-/1003.jpg`;
+const p36i2 = `${ASSETS_URL}/projects/iberostar-waves-creta-panorama-and-mare-rethymno-yunanistan-/1007.jpg`;
+const p36i3 = `${ASSETS_URL}/projects/iberostar-waves-creta-panorama-and-mare-rethymno-yunanistan-/1008.jpg`;
+const p36i4 = `${ASSETS_URL}/projects/iberostar-waves-creta-panorama-and-mare-rethymno-yunanistan-/1010.jpg`;
+const p36i5 = `${ASSETS_URL}/projects/iberostar-waves-creta-panorama-and-mare-rethymno-yunanistan-/1011.jpg`;
+const p37i0 = `${ASSETS_URL}/projects/jazeerat-bag-dat-irak-ac-ik-alan-su-parki-asya/1001.jpg`;
+const p37i1 = `${ASSETS_URL}/projects/jazeerat-bag-dat-irak-ac-ik-alan-su-parki-asya/1004.jpg`;
+const p37i2 = `${ASSETS_URL}/projects/jazeerat-bag-dat-irak-ac-ik-alan-su-parki-asya/1006.jpg`;
+const p37i3 = `${ASSETS_URL}/projects/jazeerat-bag-dat-irak-ac-ik-alan-su-parki-asya/1014.jpg`;
+const p37i4 = `${ASSETS_URL}/projects/jazeerat-bag-dat-irak-ac-ik-alan-su-parki-asya/1015.jpg`;
+const p37i5 = `${ASSETS_URL}/projects/jazeerat-bag-dat-irak-ac-ik-alan-su-parki-asya/1016.jpg`;
+const p37i6 = `${ASSETS_URL}/projects/jazeerat-bag-dat-irak-ac-ik-alan-su-parki-asya/1017.jpg`;
+const p38i0 = `${ASSETS_URL}/projects/justiniano-park-conti-antalya-tu-rkiye-otel-ac-ik-alan-su-pa/1001.png`;
+const p38i1 = `${ASSETS_URL}/projects/justiniano-park-conti-antalya-tu-rkiye-otel-ac-ik-alan-su-pa/1003.png`;
+const p39i0 = `${ASSETS_URL}/projects/kass-splash-d-city-i-srail-kapali-alan-su-parki-asya/Kass Splash 003 (1).png`;
+const p39i1 = `${ASSETS_URL}/projects/kass-splash-d-city-i-srail-kapali-alan-su-parki-asya/Kass Splash 005.png`;
+const p39i2 = `${ASSETS_URL}/projects/kass-splash-d-city-i-srail-kapali-alan-su-parki-asya/Kass Splash001.png`;
+const p39i3 = `${ASSETS_URL}/projects/kass-splash-d-city-i-srail-kapali-alan-su-parki-asya/Kass Splash002.png`;
+const p39i4 = `${ASSETS_URL}/projects/kass-splash-d-city-i-srail-kapali-alan-su-parki-asya/KassSplash001.png`;
+const p39i5 = `${ASSETS_URL}/projects/kass-splash-d-city-i-srail-kapali-alan-su-parki-asya/KassSplash002.png`;
+const p40i0 = `${ASSETS_URL}/projects/kirman-sidera-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-asya/1007.png`;
+const p40i1 = `${ASSETS_URL}/projects/kirman-sidera-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-asya/1009.png`;
+const p40i2 = `${ASSETS_URL}/projects/kirman-sidera-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-asya/1010.png`;
+const p40i3 = `${ASSETS_URL}/projects/kirman-sidera-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-asya/1011.png`;
+const p40i4 = `${ASSETS_URL}/projects/kirman-sidera-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-asya/1012.png`;
+const p40i5 = `${ASSETS_URL}/projects/kirman-sidera-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-asya/Kirman Sidera001.png`;
+const p40i6 = `${ASSETS_URL}/projects/kirman-sidera-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-asya/Kirman Sidera002.png`;
+const p40i7 = `${ASSETS_URL}/projects/kirman-sidera-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-asya/Kirman Sidera003.png`;
+const p40i8 = `${ASSETS_URL}/projects/kirman-sidera-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-asya/Kirman Sidera004.png`;
+const p41i0 = `${ASSETS_URL}/projects/kremlin-palace-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-asy/Kremlin Palace001.png`;
+const p41i1 = `${ASSETS_URL}/projects/kremlin-palace-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-asy/Kremlin Palace002.png`;
+const p42i0 = `${ASSETS_URL}/projects/kunuku-resort-karayipler-asyapasifik-resort-tatil-ko-yu-amer/kunuku aqua resort001.png`;
+const p42i1 = `${ASSETS_URL}/projects/kunuku-resort-karayipler-asyapasifik-resort-tatil-ko-yu-amer/kunuku aqua resort002.png`;
+const p42i2 = `${ASSETS_URL}/projects/kunuku-resort-karayipler-asyapasifik-resort-tatil-ko-yu-amer/kunuku aqua resort003.jpg`;
+const p43i0 = `${ASSETS_URL}/projects/liu-resorts-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-asya/1001.png`;
+const p43i1 = `${ASSETS_URL}/projects/liu-resorts-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-asya/1002.png`;
+const p43i2 = `${ASSETS_URL}/projects/liu-resorts-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-asya/1003.png`;
+const p43i3 = `${ASSETS_URL}/projects/liu-resorts-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-asya/1004.png`;
+const p44i0 = `${ASSETS_URL}/projects/long-beach-club-nature-aydin-tu-rkiye-otel-ac-ik-alan-su-par/1001.png`;
+const p44i1 = `${ASSETS_URL}/projects/long-beach-club-nature-aydin-tu-rkiye-otel-ac-ik-alan-su-par/1002.png`;
+const p44i2 = `${ASSETS_URL}/projects/long-beach-club-nature-aydin-tu-rkiye-otel-ac-ik-alan-su-par/1003.png`;
+const p45i0 = `${ASSETS_URL}/projects/lonicera-premium-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-a/DAP02961-Enhanced-NR.jpg`;
+const p45i1 = `${ASSETS_URL}/projects/lonicera-premium-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-a/DAP03099-Enhanced-NR.jpg`;
+const p45i2 = `${ASSETS_URL}/projects/lonicera-premium-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-a/DAP07167-Enhanced-NR.jpg`;
+const p45i3 = `${ASSETS_URL}/projects/lonicera-premium-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-a/DJI_0539-Enhanced-NR.jpg`;
+const p45i4 = `${ASSETS_URL}/projects/lonicera-premium-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-a/DJI_0583-Enhanced-NR.jpg`;
+const p45i5 = `${ASSETS_URL}/projects/lonicera-premium-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-a/DJI_0586-Enhanced-NR.jpg`;
+const p45i6 = `${ASSETS_URL}/projects/lonicera-premium-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-a/DJI_0590-Enhanced-NR.jpg`;
+const p45i7 = `${ASSETS_URL}/projects/lonicera-premium-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-a/DJI_0597-Enhanced-NR.jpg`;
+const p45i8 = `${ASSETS_URL}/projects/lonicera-premium-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-a/DJI_20240719113402_0009_D.jpg`;
+const p45i9 = `${ASSETS_URL}/projects/lonicera-premium-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-a/DJI_20240719113905_0013_D.jpg`;
+const p46i0 = `${ASSETS_URL}/projects/lusso-sorgun-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-asya/1126.JPG`;
+const p46i1 = `${ASSETS_URL}/projects/lusso-sorgun-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-asya/1127.JPG`;
+const p46i2 = `${ASSETS_URL}/projects/lusso-sorgun-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-asya/1132.jpg`;
+const p46i3 = `${ASSETS_URL}/projects/lusso-sorgun-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-asya/1143.jpg`;
+const p46i4 = `${ASSETS_URL}/projects/lusso-sorgun-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-asya/1144.jpg`;
+const p46i5 = `${ASSETS_URL}/projects/lusso-sorgun-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-asya/1145.jpg`;
+const p47i0 = `${ASSETS_URL}/projects/maxeria-blue-aydin-tu-rkiye-otel-ac-ik-alan-su-parki-asya/1001.jpg`;
+const p47i1 = `${ASSETS_URL}/projects/maxeria-blue-aydin-tu-rkiye-otel-ac-ik-alan-su-parki-asya/1002.jpg`;
+const p47i2 = `${ASSETS_URL}/projects/maxeria-blue-aydin-tu-rkiye-otel-ac-ik-alan-su-parki-asya/1003.jpg`;
+const p47i3 = `${ASSETS_URL}/projects/maxeria-blue-aydin-tu-rkiye-otel-ac-ik-alan-su-parki-asya/1004.jpg`;
+const p47i4 = `${ASSETS_URL}/projects/maxeria-blue-aydin-tu-rkiye-otel-ac-ik-alan-su-parki-asya/1005.jpg`;
+const p47i5 = `${ASSETS_URL}/projects/maxeria-blue-aydin-tu-rkiye-otel-ac-ik-alan-su-parki-asya/1006.jpg`;
+const p47i6 = `${ASSETS_URL}/projects/maxeria-blue-aydin-tu-rkiye-otel-ac-ik-alan-su-parki-asya/1007.jpg`;
+const p47i7 = `${ASSETS_URL}/projects/maxeria-blue-aydin-tu-rkiye-otel-ac-ik-alan-su-parki-asya/1008.jpg`;
+const p48i0 = `${ASSETS_URL}/projects/melas-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-asya/IMG-20250925-WA0098.jpg`;
+const p48i1 = `${ASSETS_URL}/projects/melas-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-asya/IMG_1528.JPG`;
+const p48i2 = `${ASSETS_URL}/projects/melas-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-asya/IMG_1547.JPG`;
+const p48i3 = `${ASSETS_URL}/projects/melas-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-asya/IMG_1560.JPG`;
+const p48i4 = `${ASSETS_URL}/projects/melas-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-asya/WhatsApp Görsel 2025-11-28 saat 14.18.58_8f6abc13.jpg`;
+const p49i0 = `${ASSETS_URL}/projects/mo-venpick-resort-antalya-tu-rkiye-ac-ik-alan-su-parki-asya/Mövenpick Resort001.png`;
+const p49i1 = `${ASSETS_URL}/projects/mo-venpick-resort-antalya-tu-rkiye-ac-ik-alan-su-parki-asya/Mövenpick Resort002.png`;
+const p49i2 = `${ASSETS_URL}/projects/mo-venpick-resort-antalya-tu-rkiye-ac-ik-alan-su-parki-asya/Mövenpick Resort003.png`;
+const p49i3 = `${ASSETS_URL}/projects/mo-venpick-resort-antalya-tu-rkiye-ac-ik-alan-su-parki-asya/Mövenpick Resort004.png`;
+const p50i0 = `${ASSETS_URL}/projects/mo-venpick-waterpark-resort-and-spa-soma-bay-soma-bay-misir-/1001.png`;
+const p50i1 = `${ASSETS_URL}/projects/mo-venpick-waterpark-resort-and-spa-soma-bay-soma-bay-misir-/1002.png`;
+const p50i2 = `${ASSETS_URL}/projects/mo-venpick-waterpark-resort-and-spa-soma-bay-soma-bay-misir-/1003.png`;
+const p51i0 = `${ASSETS_URL}/projects/nirvana-cosmopolitan-antalya-otel-tu-rkiye-ac-ik-alan-su-par/1001.png`;
+const p51i1 = `${ASSETS_URL}/projects/nirvana-cosmopolitan-antalya-otel-tu-rkiye-ac-ik-alan-su-par/1002.png`;
+const p52i0 = `${ASSETS_URL}/projects/nirvana-cosmopolitan-antalya-tu-rkiye-otel-ac-ik-alan-su-par/Nirvana Cosmopolitan001.png`;
+const p52i1 = `${ASSETS_URL}/projects/nirvana-cosmopolitan-antalya-tu-rkiye-otel-ac-ik-alan-su-par/Nirvana Cosmopolitan002.png`;
+const p52i2 = `${ASSETS_URL}/projects/nirvana-cosmopolitan-antalya-tu-rkiye-otel-ac-ik-alan-su-par/Nirvana Cosmopolitan003.png`;
+const p52i3 = `${ASSETS_URL}/projects/nirvana-cosmopolitan-antalya-tu-rkiye-otel-ac-ik-alan-su-par/Nirvana Cosmopolitan004.png`;
+const p53i0 = `${ASSETS_URL}/projects/nirvana-dolce-vita-antalya-tu-rkiye-otel-ac-ik-alan-su-parki/webhh, (1).png`;
+const p53i1 = `${ASSETS_URL}/projects/nirvana-dolce-vita-antalya-tu-rkiye-otel-ac-ik-alan-su-parki/webhh,.png`;
+const p54i0 = `${ASSETS_URL}/projects/numa-bay-exclusive-antalya-tu-rkiye-otel-ac-ik-alan-su-parki/Numa Bay Exclusive001.jpg`;
+const p54i1 = `${ASSETS_URL}/projects/numa-bay-exclusive-antalya-tu-rkiye-otel-ac-ik-alan-su-parki/Numa Bay Exclusive002.jpg`;
+const p54i2 = `${ASSETS_URL}/projects/numa-bay-exclusive-antalya-tu-rkiye-otel-ac-ik-alan-su-parki/Numa Bay Exclusive003.jpg`;
+const p54i3 = `${ASSETS_URL}/projects/numa-bay-exclusive-antalya-tu-rkiye-otel-ac-ik-alan-su-parki/Numa Bay Exclusive004.jpg`;
+const p55i0 = `${ASSETS_URL}/projects/orka-world-waterpark-mug-la-tu-rkiye-ac-ik-alan-su-parki/1011.png`;
+const p55i1 = `${ASSETS_URL}/projects/orka-world-waterpark-mug-la-tu-rkiye-ac-ik-alan-su-parki/1012.png`;
+const p55i2 = `${ASSETS_URL}/projects/orka-world-waterpark-mug-la-tu-rkiye-ac-ik-alan-su-parki/1013.png`;
+const p55i3 = `${ASSETS_URL}/projects/orka-world-waterpark-mug-la-tu-rkiye-ac-ik-alan-su-parki/1014.png`;
+const p55i4 = `${ASSETS_URL}/projects/orka-world-waterpark-mug-la-tu-rkiye-ac-ik-alan-su-parki/1016.png`;
+const p55i5 = `${ASSETS_URL}/projects/orka-world-waterpark-mug-la-tu-rkiye-ac-ik-alan-su-parki/1019.png`;
+const p56i0 = `${ASSETS_URL}/projects/palm-wings-aydin-tu-rkiye-otel-ac-ik-alan-su-parki-asya/1004.JPG`;
+const p56i1 = `${ASSETS_URL}/projects/palm-wings-aydin-tu-rkiye-otel-ac-ik-alan-su-parki-asya/1024.JPG`;
+const p56i2 = `${ASSETS_URL}/projects/palm-wings-aydin-tu-rkiye-otel-ac-ik-alan-su-parki-asya/1025.JPG`;
+const p56i3 = `${ASSETS_URL}/projects/palm-wings-aydin-tu-rkiye-otel-ac-ik-alan-su-parki-asya/1031.JPG`;
+const p56i4 = `${ASSETS_URL}/projects/palm-wings-aydin-tu-rkiye-otel-ac-ik-alan-su-parki-asya/1042.JPG`;
+const p56i5 = `${ASSETS_URL}/projects/palm-wings-aydin-tu-rkiye-otel-ac-ik-alan-su-parki-asya/1051.JPG`;
+const p56i6 = `${ASSETS_URL}/projects/palm-wings-aydin-tu-rkiye-otel-ac-ik-alan-su-parki-asya/1059.JPG`;
+const p56i7 = `${ASSETS_URL}/projects/palm-wings-aydin-tu-rkiye-otel-ac-ik-alan-su-parki-asya/1078.JPG`;
+const p57i0 = `${ASSETS_URL}/projects/paloma-grida-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-asya/Palomaa Grida001.png`;
+const p57i1 = `${ASSETS_URL}/projects/paloma-grida-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-asya/Palomaa Grida002.png`;
+const p57i2 = `${ASSETS_URL}/projects/paloma-grida-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-asya/Palomaa Grida003.png`;
+const p57i3 = `${ASSETS_URL}/projects/paloma-grida-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-asya/Palomaa Grida004.png`;
+const p57i4 = `${ASSETS_URL}/projects/paloma-grida-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-asya/Palomaa Grida005.png`;
+const p58i0 = `${ASSETS_URL}/projects/paradise-spa-dogo-asan-gu-ney-kore-ac-ik-alan-su-parki-asya/Paadise Spa Dogo001.png`;
+const p58i1 = `${ASSETS_URL}/projects/paradise-spa-dogo-asan-gu-ney-kore-ac-ik-alan-su-parki-asya/Paadise Spa Dogo002.png`;
+const p58i2 = `${ASSETS_URL}/projects/paradise-spa-dogo-asan-gu-ney-kore-ac-ik-alan-su-parki-asya/Paadise Spa Dogo003.png`;
+const p59i0 = `${ASSETS_URL}/projects/parque-aqua-tico-de-fafe-fafe-portekiz-ac-ik-alan-su-parki-a/1001.jpg`;
+const p59i1 = `${ASSETS_URL}/projects/parque-aqua-tico-de-fafe-fafe-portekiz-ac-ik-alan-su-parki-a/1002.jpg`;
+const p59i2 = `${ASSETS_URL}/projects/parque-aqua-tico-de-fafe-fafe-portekiz-ac-ik-alan-su-parki-a/1005.jpg`;
+const p60i0 = `${ASSETS_URL}/projects/pickalbatros-aqua-fun-club-marakes-fas-ac-ik-alan-su-parki-a/1001.png`;
+const p60i1 = `${ASSETS_URL}/projects/pickalbatros-aqua-fun-club-marakes-fas-ac-ik-alan-su-parki-a/1002.png`;
+const p61i0 = `${ASSETS_URL}/projects/pickalbatros-laguna-vista-resort-s-arm-el-s-eyh-misir-ac-ik-/1003.png`;
+const p61i1 = `${ASSETS_URL}/projects/pickalbatros-laguna-vista-resort-s-arm-el-s-eyh-misir-ac-ik-/1004.png`;
+const p61i2 = `${ASSETS_URL}/projects/pickalbatros-laguna-vista-resort-s-arm-el-s-eyh-misir-ac-ik-/1005.png`;
+const p62i0 = `${ASSETS_URL}/projects/pickalbatros-port-ghalib-port-ghalib-misir-ac-ik-alan-su-par/7001.png`;
+const p62i1 = `${ASSETS_URL}/projects/pickalbatros-port-ghalib-port-ghalib-misir-ac-ik-alan-su-par/7002.png`;
+const p63i0 = `${ASSETS_URL}/projects/pickalbatros-sungo-hurgada-misir-ac-ik-alan-su-parki-afrika/Pickalbatros Sungo001.png`;
+const p63i1 = `${ASSETS_URL}/projects/pickalbatros-sungo-hurgada-misir-ac-ik-alan-su-parki-afrika/Pickalbatros Sungo002.png`;
+const p63i2 = `${ASSETS_URL}/projects/pickalbatros-sungo-hurgada-misir-ac-ik-alan-su-parki-afrika/Pickalbatros Sungo003.png`;
+const p63i3 = `${ASSETS_URL}/projects/pickalbatros-sungo-hurgada-misir-ac-ik-alan-su-parki-afrika/Pickalbatros Sungo004.png`;
+const p63i4 = `${ASSETS_URL}/projects/pickalbatros-sungo-hurgada-misir-ac-ik-alan-su-parki-afrika/Pickalbatros Sungo006.png`;
+const p64i0 = `${ASSETS_URL}/projects/pine-beach-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-asya/Pine Beach001.png`;
+const p64i1 = `${ASSETS_URL}/projects/pine-beach-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-asya/Pine Beach002.png`;
+const p64i2 = `${ASSETS_URL}/projects/pine-beach-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-asya/Pine Beach003.png`;
+const p64i3 = `${ASSETS_URL}/projects/pine-beach-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-asya/Pine Beach004.png`;
+const p64i4 = `${ASSETS_URL}/projects/pine-beach-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-asya/Pine Beach005.png`;
+const p64i5 = `${ASSETS_URL}/projects/pine-beach-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-asya/Pine Beach006.png`;
+const p65i0 = `${ASSETS_URL}/projects/rixos-murjana-cidde-suudi-arabistan-otel-ac-ik-alan-su-parki/Rixos Murjana001.png`;
+const p66i0 = `${ASSETS_URL}/projects/roj-park-nasiriye-irak-kapali-alan-su-parki-tu-rkiye-and-ort/Roj Park001.png`;
+const p66i1 = `${ASSETS_URL}/projects/roj-park-nasiriye-irak-kapali-alan-su-parki-tu-rkiye-and-ort/Roj Park002.png`;
+const p67i0 = `${ASSETS_URL}/projects/royal-garden-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-asya/DAP02494.jpg`;
+const p67i1 = `${ASSETS_URL}/projects/royal-garden-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-asya/DAP02566.jpg`;
+const p67i2 = `${ASSETS_URL}/projects/royal-garden-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-asya/DAP02755.jpg`;
+const p67i3 = `${ASSETS_URL}/projects/royal-garden-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-asya/DAP02803.jpg`;
+const p67i4 = `${ASSETS_URL}/projects/royal-garden-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-asya/DAP02808.jpg`;
+const p67i5 = `${ASSETS_URL}/projects/royal-garden-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-asya/DJI_0431.jpg`;
+const p67i6 = `${ASSETS_URL}/projects/royal-garden-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-asya/DJI_0440.jpg`;
+const p67i7 = `${ASSETS_URL}/projects/royal-garden-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-asya/DJI_0443.jpg`;
+const p67i8 = `${ASSETS_URL}/projects/royal-garden-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-asya/DJI_0466.jpg`;
+const p67i9 = `${ASSETS_URL}/projects/royal-garden-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-asya/DJI_0479.jpg`;
+const p67i10 = `${ASSETS_URL}/projects/royal-garden-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-asya/DJI_0486.jpg`;
+const p67i11 = `${ASSETS_URL}/projects/royal-garden-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-asya/DJI_20240718150037_0057_D.jpg`;
+const p67i12 = `${ASSETS_URL}/projects/royal-garden-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-asya/DJI_20240718150422_0062_D.jpg`;
+const p67i13 = `${ASSETS_URL}/projects/royal-garden-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-asya/DJI_20240718151729_0083_D.jpg`;
+const p67i14 = `${ASSETS_URL}/projects/royal-garden-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-asya/DJI_20240718151837_0090_D.jpg`;
+const p68i0 = `${ASSETS_URL}/projects/rusica-park-skikda-cezayir-ac-ik-alan-su-parki-afrika/1001.png`;
+const p68i1 = `${ASSETS_URL}/projects/rusica-park-skikda-cezayir-ac-ik-alan-su-parki-afrika/1002.png`;
+const p68i2 = `${ASSETS_URL}/projects/rusica-park-skikda-cezayir-ac-ik-alan-su-parki-afrika/1003.png`;
+const p68i3 = `${ASSETS_URL}/projects/rusica-park-skikda-cezayir-ac-ik-alan-su-parki-afrika/1004.png`;
+const p69i0 = `${ASSETS_URL}/projects/s-club-jakovo-sirbistan-otel-ac-ik-alan-su-parki-avrupa/1002.png`;
+const p69i1 = `${ASSETS_URL}/projects/s-club-jakovo-sirbistan-otel-ac-ik-alan-su-parki-avrupa/1003.png`;
+const p69i2 = `${ASSETS_URL}/projects/s-club-jakovo-sirbistan-otel-ac-ik-alan-su-parki-avrupa/1005.png`;
+const p69i3 = `${ASSETS_URL}/projects/s-club-jakovo-sirbistan-otel-ac-ik-alan-su-parki-avrupa/1006.png`;
+const p69i4 = `${ASSETS_URL}/projects/s-club-jakovo-sirbistan-otel-ac-ik-alan-su-parki-avrupa/S Club Jakovo giriş görseli.png`;
+const p70i0 = `${ASSETS_URL}/projects/sy-antalya-tu-rkiye-otelac-ik-alan-su-parki-asya/1001.png`;
+const p70i1 = `${ASSETS_URL}/projects/sy-antalya-tu-rkiye-otelac-ik-alan-su-parki-asya/1002.png`;
+const p70i2 = `${ASSETS_URL}/projects/sy-antalya-tu-rkiye-otelac-ik-alan-su-parki-asya/1003.png`;
+const p70i3 = `${ASSETS_URL}/projects/sy-antalya-tu-rkiye-otelac-ik-alan-su-parki-asya/1004.png`;
+const p70i4 = `${ASSETS_URL}/projects/sy-antalya-tu-rkiye-otelac-ik-alan-su-parki-asya/1005.png`;
+const p70i5 = `${ASSETS_URL}/projects/sy-antalya-tu-rkiye-otelac-ik-alan-su-parki-asya/1006.png`;
+const p70i6 = `${ASSETS_URL}/projects/sy-antalya-tu-rkiye-otelac-ik-alan-su-parki-asya/1007.png`;
+const p70i7 = `${ASSETS_URL}/projects/sy-antalya-tu-rkiye-otelac-ik-alan-su-parki-asya/1008.png`;
+const p71i0 = `${ASSETS_URL}/projects/sarvar-furdo-sa-rva-r-macaristan-ac-ik-alan-su-parki-avrupa/Sarvar001.png`;
+const p71i1 = `${ASSETS_URL}/projects/sarvar-furdo-sa-rva-r-macaristan-ac-ik-alan-su-parki-avrupa/Sarvar002.png`;
+const p71i2 = `${ASSETS_URL}/projects/sarvar-furdo-sa-rva-r-macaristan-ac-ik-alan-su-parki-avrupa/Sarvar003.png`;
+const p71i3 = `${ASSETS_URL}/projects/sarvar-furdo-sa-rva-r-macaristan-ac-ik-alan-su-parki-avrupa/Sarvar004.JPG`;
+const p71i4 = `${ASSETS_URL}/projects/sarvar-furdo-sa-rva-r-macaristan-ac-ik-alan-su-parki-avrupa/sarvar005.JPG`;
+const p71i5 = `${ASSETS_URL}/projects/sarvar-furdo-sa-rva-r-macaristan-ac-ik-alan-su-parki-avrupa/sarvar006.JPG`;
+const p72i0 = `${ASSETS_URL}/projects/sataya-resort-marsa-alam-misir-ac-ik-alan-su-parki-afrika/1001.jpg`;
+const p72i1 = `${ASSETS_URL}/projects/sataya-resort-marsa-alam-misir-ac-ik-alan-su-parki-afrika/1002.jpg`;
+const p72i2 = `${ASSETS_URL}/projects/sataya-resort-marsa-alam-misir-ac-ik-alan-su-parki-afrika/1003.jpg`;
+const p72i3 = `${ASSETS_URL}/projects/sataya-resort-marsa-alam-misir-ac-ik-alan-su-parki-afrika/1004.jpg`;
+const p73i0 = `${ASSETS_URL}/projects/seignosse-atlantic-seignosse-fransa-ac-ik-alan-su-parki-avru/Seignosse Atlantic Park001.png`;
+const p74i0 = `${ASSETS_URL}/projects/seven-seas-bay-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-asy/DAP03131-Enhanced-NR.jpg`;
+const p74i1 = `${ASSETS_URL}/projects/seven-seas-bay-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-asy/DAP07380-Enhanced-NR.jpg`;
+const p74i2 = `${ASSETS_URL}/projects/seven-seas-bay-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-asy/DAP07414-Enhanced-NR.jpg`;
+const p74i3 = `${ASSETS_URL}/projects/seven-seas-bay-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-asy/DJI_0622-Enhanced-NR.jpg`;
+const p74i4 = `${ASSETS_URL}/projects/seven-seas-bay-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-asy/DJI_0632-Enhanced-NR.jpg`;
+const p74i5 = `${ASSETS_URL}/projects/seven-seas-bay-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-asy/DJI_0659-Enhanced-NR.jpg`;
+const p74i6 = `${ASSETS_URL}/projects/seven-seas-bay-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-asy/DJI_0662-Enhanced-NR.jpg`;
+const p74i7 = `${ASSETS_URL}/projects/seven-seas-bay-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-asy/DJI_0676-Enhanced-NR.jpg`;
+const p74i8 = `${ASSETS_URL}/projects/seven-seas-bay-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-asy/DJI_0683-Enhanced-NR.jpg`;
+const p74i9 = `${ASSETS_URL}/projects/seven-seas-bay-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-asy/DJI_0676-Enhanced-NR.jpg`;
+const p74i10 = `${ASSETS_URL}/projects/seven-seas-bay-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-asy/DJI_0711-Enhanced-NR.jpg`;
+const p75i0 = `${ASSETS_URL}/projects/sofia-waterpark-sofya-bulgaristan-ac-ik-alan-su-parki-avrupa/1001.jpg`;
+const p75i1 = `${ASSETS_URL}/projects/sofia-waterpark-sofya-bulgaristan-ac-ik-alan-su-parki-avrupa/1002.jpg`;
+const p75i2 = `${ASSETS_URL}/projects/sofia-waterpark-sofya-bulgaristan-ac-ik-alan-su-parki-avrupa/1004.png`;
+const p76i0 = `${ASSETS_URL}/projects/stella-beach-resort-hurgada-misir-otel-ac-ik-alan-su-parki-a/Stella Beach Resort001.png`;
+const p76i1 = `${ASSETS_URL}/projects/stella-beach-resort-hurgada-misir-otel-ac-ik-alan-su-parki-a/Stella Beach Resort002.png`;
+const p77i0 = `${ASSETS_URL}/projects/stella-makadi-beach-makadi-bay-misir-ac-ik-alan-su-parki-afr/0001.png`;
+const p77i1 = `${ASSETS_URL}/projects/stella-makadi-beach-makadi-bay-misir-ac-ik-alan-su-parki-afr/0002.png`;
+const p77i2 = `${ASSETS_URL}/projects/stella-makadi-beach-makadi-bay-misir-ac-ik-alan-su-parki-afr/0003.png`;
+const p78i0 = `${ASSETS_URL}/projects/sterlitamak-sterlitamak-rusya-kapali-alan-su-parki-avrupa/1022.png`;
+const p78i1 = `${ASSETS_URL}/projects/sterlitamak-sterlitamak-rusya-kapali-alan-su-parki-avrupa/1024.png`;
+const p79i0 = `${ASSETS_URL}/projects/terra-mi-tica-benidorm-i-spanya-ac-ik-alan-su-parki-avrupa/1011.png`;
+const p79i1 = `${ASSETS_URL}/projects/terra-mi-tica-benidorm-i-spanya-ac-ik-alan-su-parki-avrupa/1012.png`;
+const p79i2 = `${ASSETS_URL}/projects/terra-mi-tica-benidorm-i-spanya-ac-ik-alan-su-parki-avrupa/1013.png`;
+const p79i3 = `${ASSETS_URL}/projects/terra-mi-tica-benidorm-i-spanya-ac-ik-alan-su-parki-avrupa/1014.png`;
+const p80i0 = `${ASSETS_URL}/projects/the-land-of-legends-antalya-tu-rkiye-ac-ik-alan-su-parki-asy/the land of legends001.png`;
+const p80i1 = `${ASSETS_URL}/projects/the-land-of-legends-antalya-tu-rkiye-ac-ik-alan-su-parki-asy/the land of legends002.png`;
+const p81i0 = `${ASSETS_URL}/projects/trendy-perge-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-asya/1002.jpeg`;
+const p82i0 = `${ASSETS_URL}/projects/vacances-camping-me-doc-plage-vendays-montalivet-fransa-ac-i/1001.jpg`;
+const p83i0 = `${ASSETS_URL}/projects/valamar-istra-premium-camping-resort-porec-hirvatistan-ac-ik/1001.png`;
+const p84i0 = `${ASSETS_URL}/projects/venosa-beach-resort-aydin-tu-rkiye-otel-ac-ik-alan-su-parki-/1001.jpg`;
+const p84i1 = `${ASSETS_URL}/projects/venosa-beach-resort-aydin-tu-rkiye-otel-ac-ik-alan-su-parki-/1002.jpg`;
+const p84i2 = `${ASSETS_URL}/projects/venosa-beach-resort-aydin-tu-rkiye-otel-ac-ik-alan-su-parki-/1003.jpg`;
+const p85i0 = `${ASSETS_URL}/projects/volgograd-volgograd-rusya-ac-ik-alan-su-parki-avrupa/2025-10-06 16-32-48.JPG`;
+const p85i1 = `${ASSETS_URL}/projects/volgograd-volgograd-rusya-ac-ik-alan-su-parki-avrupa/2025-10-06 16-33-41.JPG`;
+const p85i2 = `${ASSETS_URL}/projects/volgograd-volgograd-rusya-ac-ik-alan-su-parki-avrupa/2025-10-08 11-51-29.JPG`;
+const p85i3 = `${ASSETS_URL}/projects/volgograd-volgograd-rusya-ac-ik-alan-su-parki-avrupa/2025-10-08 12-04-36.JPG`;
+const p85i4 = `${ASSETS_URL}/projects/volgograd-volgograd-rusya-ac-ik-alan-su-parki-avrupa/2025-10-08 12-05-27.JPG`;
+const p86i0 = `${ASSETS_URL}/projects/voyage-torba-mug-la-tu-rkiye-otel-ac-ik-alan-su-parki-asya/1001.png`;
+const p86i1 = `${ASSETS_URL}/projects/voyage-torba-mug-la-tu-rkiye-otel-ac-ik-alan-su-parki-asya/1002.png`;
+const p87i0 = `${ASSETS_URL}/projects/wonderla-holidays-bangalore-hindistan-ac-ik-alan-su-parki-as/1001.jpeg`;
+const p88i0 = `${ASSETS_URL}/projects/xo-cape-arnna-mug-la-tu-rkiye-otel-ac-ik-alan-su-parki-asya/1001.jpg`;
+const p88i1 = `${ASSETS_URL}/projects/xo-cape-arnna-mug-la-tu-rkiye-otel-ac-ik-alan-su-parki-asya/1002.jpg`;
+const p88i2 = `${ASSETS_URL}/projects/xo-cape-arnna-mug-la-tu-rkiye-otel-ac-ik-alan-su-parki-asya/1003.jpg`;
+const p88i3 = `${ASSETS_URL}/projects/xo-cape-arnna-mug-la-tu-rkiye-otel-ac-ik-alan-su-parki-asya/1004.jpg`;
+const p88i4 = `${ASSETS_URL}/projects/xo-cape-arnna-mug-la-tu-rkiye-otel-ac-ik-alan-su-parki-asya/1005.jpg`;
+const p88i5 = `${ASSETS_URL}/projects/xo-cape-arnna-mug-la-tu-rkiye-otel-ac-ik-alan-su-parki-asya/1006.jpg`;
 
 // ── Proje Verisi ───────────────────────────────────────────
 const PROJECTS = [
   {
     id: 1,
-    name: 'AquaDream Water Park',
-    location: 'İstanbul, Türkiye',
-    year: '2023',
-    type: 'Açık Hava Su Parkı',
-    region: 'Türkiye & Orta Doğu',
-    scope: ['12 Su Kaydırağı', 'Dalga Havuzu', 'Lazy River', 'Çocuk Alanı'],
-    desc: 'İstanbul\'un en büyük su parkı projelerinden biri: 12 farklı kaydırak, dev dalga havuzu ve aile dostu tasarımıyla 2023 sezonunun gözdesi.',
-    img: eftaliaBlue,
-    imgAlt: 'AquaDream Water Park İstanbul',
+    name: 'Adenya',
+    location: 'Antalya',
+    type: 'Otel & Su Parkı',
+    region: 'Asya',
+    img: p1i0,
+    imgAlt: 'Adenya - Antalya',
     slides: [
-      { id: 1, title: 'AquaDream Water Park', location: 'İstanbul, Türkiye', img: eftaliaBlue },
-      { id: 2, title: 'AquaDream Water Park', location: 'Antalya, Türkiye', img: nirvana },
-      { id: 3, title: 'AquaDream Water Park', location: 'İstanbul, Türkiye', img: seignosse },
+      { id: 1, title: 'Adenya', location: 'Antalya', img: p1i0 },
+      { id: 2, title: 'Adenya', location: 'Antalya', img: p1i1 },
+      { id: 3, title: 'Adenya', location: 'Antalya', img: p1i2 },
+      { id: 4, title: 'Adenya', location: 'Antalya', img: p1i3 },
+      { id: 5, title: 'Adenya', location: 'Antalya', img: p1i4 },
+      { id: 6, title: 'Adenya', location: 'Antalya', img: p1i5 },
+      { id: 7, title: 'Adenya', location: 'Antalya', img: p1i6 }
     ],
   },
   {
     id: 2,
-    name: 'OceanSplash Resort',
-    location: 'Antalya, Türkiye',
-    year: '2022',
-    type: 'Otel & Tatil Köyü',
-    region: 'Türkiye & Orta Doğu',
-    scope: ['8 Kaydırak', 'Infinity Pool', 'Çocuk Parkı'],
-    desc: 'Eşsiz bir tasarım ve mühendislik harikası.',
-    img: seignosse,
-    imgAlt: 'OceanSplash Resort Antalya',
+    name: 'Amazonia Aquapark',
+    location: 'Timişoara, Romanya',
+    type: 'Açık Alan Su Parkı',
+    region: 'Avrupa',
+    img: p2i0,
+    imgAlt: 'Amazonia Aquapark - Timişoara, Romanya',
     slides: [
-      { id: 1, title: 'OceanSplash Resort', location: 'Antalya, Türkiye', img: seignosse },
-      { id: 2, title: 'OceanSplash Resort', location: 'Antalya, Türkiye', img: delphinPalace },
-      { id: 3, title: 'OceanSplash Resort', location: 'Antalya, Türkiye', img: eftaliaBlue },
+      { id: 1, title: 'Amazonia Aquapark', location: 'Timişoara, Romanya', img: p2i0 },
+      { id: 2, title: 'Amazonia Aquapark', location: 'Timişoara, Romanya', img: p2i1 },
+      { id: 3, title: 'Amazonia Aquapark', location: 'Timişoara, Romanya', img: p2i2 },
+      { id: 4, title: 'Amazonia Aquapark', location: 'Timişoara, Romanya', img: p2i3 },
+      { id: 5, title: 'Amazonia Aquapark', location: 'Timişoara, Romanya', img: p2i4 }
     ],
   },
   {
     id: 3,
-    name: 'Mega Wave Indoor Park',
-    location: 'Varşova, Polonya',
-    year: '2022',
-    type: 'Kapalı Su Parkı',
+    name: 'Apollonion Asterias Resort and Spa',
+    location: 'Kefalonya, Yunanistan',
+    type: 'Açık Alan Su Parkı',
     region: 'Avrupa',
-    scope: ['Dalga Havuzu', '10 Kaydırak', 'FlowRider'],
-    desc: 'Polonya\'nın ilk büyük ölçekli kapalı su parkı: dört mevsim açık, çocuklardan yetişkinlere her yaşa hitap eden etkinlikleri.',
-    img: nirvana,
-    imgAlt: 'Mega Wave Indoor Park Varşova',
+    img: p3i0,
+    imgAlt: 'Apollonion Asterias Resort and Spa - Kefalonya, Yunanistan',
     slides: [
-      { id: 1, title: 'Mega Wave Indoor Park', location: 'Varşova, Polonya', img: nirvana },
-      { id: 2, title: 'Mega Wave Indoor Park', location: 'Varşova, Polonya', img: heroImage },
-      { id: 3, title: 'Mega Wave Indoor Park', location: 'Varşova, Polonya', img: seignosse },
+      { id: 1, title: 'Apollonion Asterias Resort and Spa', location: 'Kefalonya, Yunanistan', img: p3i0 },
+      { id: 2, title: 'Apollonion Asterias Resort and Spa', location: 'Kefalonya, Yunanistan', img: p3i1 },
+      { id: 3, title: 'Apollonion Asterias Resort and Spa', location: 'Kefalonya, Yunanistan', img: p3i2 }
     ],
   },
   {
     id: 4,
-    name: 'Desert Oasis Water World',
-    location: 'Dubai, BAE',
-    year: '2021',
-    type: 'Açık Hava Su Parkı',
-    region: 'Türkiye & Orta Doğu',
-    scope: ['20 Kaydırak', '2 Dalga Havuzu', 'Lazy River', 'Sörf Alanı'],
-    desc: 'Bölgenin en büyük eğlence merkezlerinden biri.',
-    img: delphinPalace,
-    imgAlt: 'Desert Oasis Water World Dubai',
+    name: 'Aqualand Benidorm',
+    location: 'Benidorm',
+    type: 'Açık Alan Su Parkı',
+    region: 'Avrupa',
+    img: p4i0,
+    imgAlt: 'Aqualand Benidorm - Benidorm',
     slides: [
-      { id: 1, title: 'Desert Oasis Water World', location: 'Dubai, BAE', img: delphinPalace },
-      { id: 2, title: 'Desert Oasis Water World', location: 'Dubai, BAE', img: eftaliaBlue },
-      { id: 3, title: 'Desert Oasis Water World', location: 'Dubai, BAE', img: nirvana },
+      { id: 1, title: 'Aqualand Benidorm', location: 'Benidorm', img: p4i0 },
+      { id: 2, title: 'Aqualand Benidorm', location: 'Benidorm', img: p4i1 },
+      { id: 3, title: 'Aqualand Benidorm', location: 'Benidorm', img: p4i2 }
     ],
   },
   {
     id: 5,
-    name: 'AquaVenture Cruise',
-    location: 'Akdeniz',
-    year: '2021',
-    type: 'Cruise Gemisi',
+    name: 'Aqualand Costa Adeje',
+    location: 'Tenerife',
+    type: 'Açık Alan Su Parkı',
     region: 'Avrupa',
-    scope: ['6 Kaydırak', 'Splash Zone', 'FlowRider'],
-    desc: 'Maksimum adrenalin ve ziyaretçi memnuniyeti için tasarlandı.',
-    img: heroImage,
-    imgAlt: 'AquaVenture Cruise gemisi',
+    img: p5i0,
+    imgAlt: 'Aqualand Costa Adeje - Tenerife',
     slides: [
-      { id: 1, title: 'AquaVenture Cruise', location: 'Akdeniz', img: heroImage },
-      { id: 2, title: 'AquaVenture Cruise', location: 'Akdeniz', img: seignosse },
-      { id: 3, title: 'AquaVenture Cruise', location: 'Akdeniz', img: delphinPalace },
+      { id: 1, title: 'Aqualand Costa Adeje', location: 'Tenerife', img: p5i0 },
+      { id: 2, title: 'Aqualand Costa Adeje', location: 'Tenerife', img: p5i1 },
+      { id: 3, title: 'Aqualand Costa Adeje', location: 'Tenerife', img: p5i2 },
+      { id: 4, title: 'Aqualand Costa Adeje', location: 'Tenerife', img: p5i3 }
     ],
   },
+  {
+    id: 6,
+    name: 'Aqualand Maspalomas',
+    location: 'Gran Canaria',
+    type: 'Açık Alan Su Parkı',
+    region: 'Avrupa',
+    img: p6i0,
+    imgAlt: 'Aqualand Maspalomas - Gran Canaria',
+    slides: [
+      { id: 1, title: 'Aqualand Maspalomas', location: 'Gran Canaria', img: p6i0 },
+      { id: 2, title: 'Aqualand Maspalomas', location: 'Gran Canaria', img: p6i1 },
+      { id: 3, title: 'Aqualand Maspalomas', location: 'Gran Canaria', img: p6i2 },
+      { id: 4, title: 'Aqualand Maspalomas', location: 'Gran Canaria', img: p6i3 }
+    ],
+  },
+  {
+    id: 7,
+    name: 'Aqualand Moravia',
+    location: 'Moravya',
+    type: 'Açık Alan Su Parkı',
+    region: 'Avrupa',
+    img: p7i0,
+    imgAlt: 'Aqualand Moravia - Moravya',
+    slides: [
+      { id: 1, title: 'Aqualand Moravia', location: 'Moravya', img: p7i0 },
+      { id: 2, title: 'Aqualand Moravia', location: 'Moravya', img: p7i1 },
+      { id: 3, title: 'Aqualand Moravia', location: 'Moravya', img: p7i2 }
+    ],
+  },
+  {
+    id: 8,
+    name: 'Aqualand Saint-Cyprien',
+    location: 'Saint-Cyprien, Fransa',
+    type: 'Açık Alan Su Parkı',
+    region: 'Avrupa',
+    img: p8i0,
+    imgAlt: 'Aqualand Saint-Cyprien - Saint-Cyprien, Fransa',
+    slides: [
+      { id: 1, title: 'Aqualand Saint-Cyprien', location: 'Saint-Cyprien, Fransa', img: p8i0 },
+      { id: 2, title: 'Aqualand Saint-Cyprien', location: 'Saint-Cyprien, Fransa', img: p8i1 }
+    ],
+  },
+  {
+    id: 9,
+    name: 'Aqualand',
+    location: 'Mallorca',
+    type: 'Açık Alan Su Parkı',
+    region: 'Avrupa',
+    img: p9i0,
+    imgAlt: 'Aqualand - Mallorca',
+    slides: [
+      { id: 1, title: 'Aqualand', location: 'Mallorca', img: p9i0 },
+      { id: 2, title: 'Aqualand', location: 'Mallorca', img: p9i1 },
+      { id: 3, title: 'Aqualand', location: 'Mallorca', img: p9i2 },
+      { id: 4, title: 'Aqualand', location: 'Mallorca', img: p9i3 },
+      { id: 5, title: 'Aqualand', location: 'Mallorca', img: p9i4 },
+      { id: 6, title: 'Aqualand', location: 'Mallorca', img: p9i5 },
+      { id: 7, title: 'Aqualand', location: 'Mallorca', img: p9i6 },
+      { id: 8, title: 'Aqualand', location: 'Mallorca', img: p9i7 }
+    ],
+  },
+  {
+    id: 10,
+    name: 'Aqualand',
+    location: 'Torremolinos',
+    type: 'Açık Alan Su Parkı',
+    region: 'Avrupa',
+    img: p10i0,
+    imgAlt: 'Aqualand - Torremolinos',
+    slides: [
+      { id: 1, title: 'Aqualand', location: 'Torremolinos', img: p10i0 },
+      { id: 2, title: 'Aqualand', location: 'Torremolinos', img: p10i1 }
+    ],
+  },
+  {
+    id: 11,
+    name: 'Aquila Rithymna Beach',
+    location: 'Rethymno, Yunanistan',
+    type: 'Açık Alan Su Parkı',
+    region: 'Avrupa',
+    img: p11i0,
+    imgAlt: 'Aquila Rithymna Beach - Rethymno, Yunanistan',
+    slides: [
+      { id: 1, title: 'Aquila Rithymna Beach', location: 'Rethymno, Yunanistan', img: p11i0 },
+      { id: 2, title: 'Aquila Rithymna Beach', location: 'Rethymno, Yunanistan', img: p11i1 },
+      { id: 3, title: 'Aquila Rithymna Beach', location: 'Rethymno, Yunanistan', img: p11i2 },
+      { id: 4, title: 'Aquila Rithymna Beach', location: 'Rethymno, Yunanistan', img: p11i3 },
+      { id: 5, title: 'Aquila Rithymna Beach', location: 'Rethymno, Yunanistan', img: p11i4 }
+    ],
+  },
+  {
+    id: 12,
+    name: 'Arcanus',
+    location: 'Antalya',
+    type: 'Otel & Su Parkı',
+    region: 'Asya',
+    img: p12i0,
+    imgAlt: 'Arcanus - Antalya',
+    slides: [
+      { id: 1, title: 'Arcanus', location: 'Antalya', img: p12i0 },
+      { id: 2, title: 'Arcanus', location: 'Antalya', img: p12i1 },
+      { id: 3, title: 'Arcanus', location: 'Antalya', img: p12i2 }
+    ],
+  },
+  {
+    id: 13,
+    name: 'Blue Waters',
+    location: 'Antalya',
+    type: 'Otel & Su Parkı',
+    region: 'Asya',
+    img: p13i0,
+    imgAlt: 'Blue Waters - Antalya',
+    slides: [
+      { id: 1, title: 'Blue Waters', location: 'Antalya', img: p13i0 },
+      { id: 2, title: 'Blue Waters', location: 'Antalya', img: p13i1 }
+    ],
+  },
+  {
+    id: 14,
+    name: 'Blue Wave',
+    location: 'Antalya',
+    type: 'Otel & Su Parkı',
+    region: 'Asya',
+    img: p14i0,
+    imgAlt: 'Blue Wave - Antalya',
+    slides: [
+      { id: 1, title: 'Blue Wave', location: 'Antalya', img: p14i0 },
+      { id: 2, title: 'Blue Wave', location: 'Antalya', img: p14i1 }
+    ],
+  },
+  {
+    id: 15,
+    name: 'Bogács Gyógy- és Strandfürdő',
+    location: 'Bogács, Macaristan',
+    type: 'Açık Alan Su Parkı',
+    region: 'Avrupa',
+    img: p15i0,
+    imgAlt: 'Bogács Gyógy- és Strandfürdő - Bogács, Macaristan',
+    slides: [
+      { id: 1, title: 'Bogács Gyógy- és Strandfürdő', location: 'Bogács, Macaristan', img: p15i0 },
+      { id: 2, title: 'Bogács Gyógy- és Strandfürdő', location: 'Bogács, Macaristan', img: p15i1 },
+      { id: 3, title: 'Bogács Gyógy- és Strandfürdő', location: 'Bogács, Macaristan', img: p15i2 }
+    ],
+  },
+  {
+    id: 16,
+    name: 'Caldera Beach',
+    location: 'Hanya, Yunanistan',
+    type: 'Açık Alan Su Parkı',
+    region: 'Avrupa',
+    img: p16i0,
+    imgAlt: 'Caldera Beach - Hanya, Yunanistan',
+    slides: [
+      { id: 1, title: 'Caldera Beach', location: 'Hanya, Yunanistan', img: p16i0 },
+      { id: 2, title: 'Caldera Beach', location: 'Hanya, Yunanistan', img: p16i1 },
+      { id: 3, title: 'Caldera Beach', location: 'Hanya, Yunanistan', img: p16i2 },
+      { id: 4, title: 'Caldera Beach', location: 'Hanya, Yunanistan', img: p16i3 },
+      { id: 5, title: 'Caldera Beach', location: 'Hanya, Yunanistan', img: p16i4 },
+      { id: 6, title: 'Caldera Beach', location: 'Hanya, Yunanistan', img: p16i5 },
+      { id: 7, title: 'Caldera Beach', location: 'Hanya, Yunanistan', img: p16i6 },
+      { id: 8, title: 'Caldera Beach', location: 'Hanya, Yunanistan', img: p16i7 },
+      { id: 9, title: 'Caldera Beach', location: 'Hanya, Yunanistan', img: p16i8 }
+    ],
+  },
+  {
+    id: 17,
+    name: 'Calimera Serra',
+    location: 'Antalya',
+    type: 'Otel & Su Parkı',
+    region: 'Asya',
+    img: p17i0,
+    imgAlt: 'Calimera Serra - Antalya',
+    slides: [
+      { id: 1, title: 'Calimera Serra', location: 'Antalya', img: p17i0 },
+      { id: 2, title: 'Calimera Serra', location: 'Antalya', img: p17i1 },
+      { id: 3, title: 'Calimera Serra', location: 'Antalya', img: p17i2 },
+      { id: 4, title: 'Calimera Serra', location: 'Antalya', img: p17i3 },
+      { id: 5, title: 'Calimera Serra', location: 'Antalya', img: p17i4 },
+      { id: 6, title: 'Calimera Serra', location: 'Antalya', img: p17i5 },
+      { id: 7, title: 'Calimera Serra', location: 'Antalya', img: p17i6 },
+      { id: 8, title: 'Calimera Serra', location: 'Antalya', img: p17i7 },
+      { id: 9, title: 'Calimera Serra', location: 'Antalya', img: p17i8 },
+      { id: 10, title: 'Calimera Serra', location: 'Antalya', img: p17i9 },
+      { id: 11, title: 'Calimera Serra', location: 'Antalya', img: p17i10 },
+      { id: 12, title: 'Calimera Serra', location: 'Antalya', img: p17i11 },
+      { id: 13, title: 'Calimera Serra', location: 'Antalya', img: p17i12 },
+      { id: 14, title: 'Calimera Serra', location: 'Antalya', img: p17i13 }
+    ],
+  },
+  {
+    id: 18,
+    name: 'Calyptus Kirman Premium',
+    location: 'Antalya',
+    type: 'Otel & Su Parkı',
+    region: 'Asya',
+    img: p18i0,
+    imgAlt: 'Calyptus Kirman Premium - Antalya',
+    slides: [
+      { id: 1, title: 'Calyptus Kirman Premium', location: 'Antalya', img: p18i0 },
+      { id: 2, title: 'Calyptus Kirman Premium', location: 'Antalya', img: p18i1 },
+      { id: 3, title: 'Calyptus Kirman Premium', location: 'Antalya', img: p18i2 }
+    ],
+  },
+  {
+    id: 19,
+    name: 'Camping Le Domaine du Clarys',
+    location: 'Saint-Jean-de-Monts, Fransa',
+    type: 'Açık Alan Su Parkı',
+    region: 'Avrupa',
+    img: p19i0,
+    imgAlt: 'Camping Le Domaine du Clarys - Saint-Jean-de-Monts, Fransa',
+    slides: [
+      { id: 1, title: 'Camping Le Domaine du Clarys', location: 'Saint-Jean-de-Monts, Fransa', img: p19i0 },
+      { id: 2, title: 'Camping Le Domaine du Clarys', location: 'Saint-Jean-de-Monts, Fransa', img: p19i1 }
+    ],
+  },
+  {
+    id: 20,
+    name: 'Château de l\'Hom',
+    location: 'Fransa, Fransa',
+    type: 'Açık Alan Su Parkı',
+    region: 'Avrupa',
+    img: p20i0,
+    imgAlt: 'Château de l\'Hom - Fransa, Fransa',
+    slides: [
+      { id: 1, title: 'Château de l\'Hom', location: 'Fransa, Fransa', img: p20i0 },
+      { id: 2, title: 'Château de l\'Hom', location: 'Fransa, Fransa', img: p20i1 },
+      { id: 3, title: 'Château de l\'Hom', location: 'Fransa, Fransa', img: p20i2 },
+      { id: 4, title: 'Château de l\'Hom', location: 'Fransa, Fransa', img: p20i3 },
+      { id: 5, title: 'Château de l\'Hom', location: 'Fransa, Fransa', img: p20i4 }
+    ],
+  },
+  {
+    id: 21,
+    name: 'Crystal Centro Pearl Collection',
+    location: 'Antalya',
+    type: 'Otel & Su Parkı',
+    region: 'Asya',
+    img: p21i0,
+    imgAlt: 'Crystal Centro Pearl Collection - Antalya',
+    slides: [
+      { id: 1, title: 'Crystal Centro Pearl Collection', location: 'Antalya', img: p21i0 },
+      { id: 2, title: 'Crystal Centro Pearl Collection', location: 'Antalya', img: p21i1 }
+    ],
+  },
+  {
+    id: 22,
+    name: 'DaniaLand',
+    location: 'Agadir, Fas',
+    type: 'Açık Alan Su Parkı',
+    region: 'Afrika',
+    img: p22i0,
+    imgAlt: 'DaniaLand - Agadir, Fas',
+    slides: [
+      { id: 1, title: 'DaniaLand', location: 'Agadir, Fas', img: p22i0 },
+      { id: 2, title: 'DaniaLand', location: 'Agadir, Fas', img: p22i1 },
+      { id: 3, title: 'DaniaLand', location: 'Agadir, Fas', img: p22i2 },
+      { id: 4, title: 'DaniaLand', location: 'Agadir, Fas', img: p22i3 },
+      { id: 5, title: 'DaniaLand', location: 'Agadir, Fas', img: p22i4 },
+      { id: 6, title: 'DaniaLand', location: 'Agadir, Fas', img: p22i5 },
+      { id: 7, title: 'DaniaLand', location: 'Agadir, Fas', img: p22i6 }
+    ],
+  },
+  {
+    id: 23,
+    name: 'Delphin Imperial',
+    location: 'Antalya',
+    type: 'Otel & Su Parkı',
+    region: 'Asya',
+    img: p23i0,
+    imgAlt: 'Delphin Imperial - Antalya',
+    slides: [
+      { id: 1, title: 'Delphin Imperial', location: 'Antalya', img: p23i0 },
+      { id: 2, title: 'Delphin Imperial', location: 'Antalya', img: p23i1 },
+      { id: 3, title: 'Delphin Imperial', location: 'Antalya', img: p23i2 },
+      { id: 4, title: 'Delphin Imperial', location: 'Antalya', img: p23i3 },
+      { id: 5, title: 'Delphin Imperial', location: 'Antalya', img: p23i4 },
+      { id: 6, title: 'Delphin Imperial', location: 'Antalya', img: p23i5 },
+      { id: 7, title: 'Delphin Imperial', location: 'Antalya', img: p23i6 }
+    ],
+  },
+  {
+    id: 24,
+    name: 'Delphin Palace',
+    location: 'Antalya',
+    type: 'Otel & Su Parkı',
+    region: 'Asya',
+    img: p24i0,
+    imgAlt: 'Delphin Palace - Antalya',
+    slides: [
+      { id: 1, title: 'Delphin Palace', location: 'Antalya', img: p24i0 },
+      { id: 2, title: 'Delphin Palace', location: 'Antalya', img: p24i1 },
+      { id: 3, title: 'Delphin Palace', location: 'Antalya', img: p24i2 },
+      { id: 4, title: 'Delphin Palace', location: 'Antalya', img: p24i3 },
+      { id: 5, title: 'Delphin Palace', location: 'Antalya', img: p24i4 },
+      { id: 6, title: 'Delphin Palace', location: 'Antalya', img: p24i5 },
+      { id: 7, title: 'Delphin Palace', location: 'Antalya', img: p24i6 },
+      { id: 8, title: 'Delphin Palace', location: 'Antalya', img: p24i7 },
+      { id: 9, title: 'Delphin Palace', location: 'Antalya', img: p24i8 }
+    ],
+  },
+  {
+    id: 25,
+    name: 'Dream Fun World',
+    location: 'Antalya',
+    type: 'Otel & Su Parkı',
+    region: 'Asya',
+    img: p25i0,
+    imgAlt: 'Dream Fun World - Antalya',
+    slides: [
+      { id: 1, title: 'Dream Fun World', location: 'Antalya', img: p25i0 },
+      { id: 2, title: 'Dream Fun World', location: 'Antalya', img: p25i1 }
+    ],
+  },
+  {
+    id: 26,
+    name: 'Dream World Palace',
+    location: 'Antalya',
+    type: 'Otel & Su Parkı',
+    region: 'Asya',
+    img: p26i0,
+    imgAlt: 'Dream World Palace - Antalya',
+    slides: [
+      { id: 1, title: 'Dream World Palace', location: 'Antalya', img: p26i0 },
+      { id: 2, title: 'Dream World Palace', location: 'Antalya', img: p26i1 },
+      { id: 3, title: 'Dream World Palace', location: 'Antalya', img: p26i2 }
+    ],
+  },
+  {
+    id: 27,
+    name: 'Duja',
+    location: 'Didim',
+    type: 'Otel & Su Parkı',
+    region: 'Asya',
+    img: p27i0,
+    imgAlt: 'Duja - Didim',
+    slides: [
+      { id: 1, title: 'Duja', location: 'Didim', img: p27i0 },
+      { id: 2, title: 'Duja', location: 'Didim', img: p27i1 },
+      { id: 3, title: 'Duja', location: 'Didim', img: p27i2 },
+      { id: 4, title: 'Duja', location: 'Didim', img: p27i3 },
+      { id: 5, title: 'Duja', location: 'Didim', img: p27i4 },
+      { id: 6, title: 'Duja', location: 'Didim', img: p27i5 },
+      { id: 7, title: 'Duja', location: 'Didim', img: p27i6 },
+      { id: 8, title: 'Duja', location: 'Didim', img: p27i7 }
+    ],
+  },
+  {
+    id: 28,
+    name: 'Eftalia Blue',
+    location: 'Antalya',
+    type: 'Otel & Su Parkı',
+    region: 'Asya',
+    img: p28i0,
+    imgAlt: 'Eftalia Blue - Antalya',
+    slides: [
+      { id: 1, title: 'Eftalia Blue', location: 'Antalya', img: p28i0 },
+      { id: 2, title: 'Eftalia Blue', location: 'Antalya', img: p28i1 },
+      { id: 3, title: 'Eftalia Blue', location: 'Antalya', img: p28i2 },
+      { id: 4, title: 'Eftalia Blue', location: 'Antalya', img: p28i3 }
+    ],
+  },
+  {
+    id: 29,
+    name: 'Eftalia Sol',
+    location: 'Antalya',
+    type: 'Otel & Su Parkı',
+    region: 'Asya',
+    img: p29i0,
+    imgAlt: 'Eftalia Sol - Antalya',
+    slides: [
+      { id: 1, title: 'Eftalia Sol', location: 'Antalya', img: p29i0 },
+      { id: 2, title: 'Eftalia Sol', location: 'Antalya', img: p29i1 },
+      { id: 3, title: 'Eftalia Sol', location: 'Antalya', img: p29i2 },
+      { id: 4, title: 'Eftalia Sol', location: 'Antalya', img: p29i3 }
+    ],
+  },
+  {
+    id: 30,
+    name: 'Ethno Belek',
+    location: 'Antalya',
+    type: 'Otel & Su Parkı',
+    region: 'Asya',
+    img: p30i0,
+    imgAlt: 'Ethno Belek - Antalya',
+    slides: [
+      { id: 1, title: 'Ethno Belek', location: 'Antalya', img: p30i0 },
+      { id: 2, title: 'Ethno Belek', location: 'Antalya', img: p30i1 },
+      { id: 3, title: 'Ethno Belek', location: 'Antalya', img: p30i2 }
+    ],
+  },
+  {
+    id: 31,
+    name: 'Fairy Park',
+    location: 'Selangor, Malezya',
+    type: 'Açık Alan Su Parkı',
+    region: 'Asya',
+    img: p31i0,
+    imgAlt: 'Fairy Park - Selangor, Malezya',
+    slides: [
+      { id: 1, title: 'Fairy Park', location: 'Selangor, Malezya', img: p31i0 },
+      { id: 2, title: 'Fairy Park', location: 'Selangor, Malezya', img: p31i1 }
+    ],
+  },
+  {
+    id: 32,
+    name: 'Fantazia Marsa Alam',
+    location: 'Marsa Alam, Mısır',
+    type: 'Otel & Su Parkı',
+    region: 'Afrika',
+    img: p32i0,
+    imgAlt: 'Fantazia Marsa Alam - Marsa Alam, Mısır',
+    slides: [
+      { id: 1, title: 'Fantazia Marsa Alam', location: 'Marsa Alam, Mısır', img: p32i0 },
+      { id: 2, title: 'Fantazia Marsa Alam', location: 'Marsa Alam, Mısır', img: p32i1 }
+    ],
+  },
+  {
+    id: 33,
+    name: 'Frenzy Waterpark',
+    location: 'Torreilles, Fransa',
+    type: 'Açık Alan Su Parkı',
+    region: 'Avrupa',
+    img: p33i0,
+    imgAlt: 'Frenzy Waterpark - Torreilles, Fransa',
+    slides: [
+      { id: 1, title: 'Frenzy Waterpark', location: 'Torreilles, Fransa', img: p33i0 },
+      { id: 2, title: 'Frenzy Waterpark', location: 'Torreilles, Fransa', img: p33i1 },
+      { id: 3, title: 'Frenzy Waterpark', location: 'Torreilles, Fransa', img: p33i2 },
+      { id: 4, title: 'Frenzy Waterpark', location: 'Torreilles, Fransa', img: p33i3 },
+      { id: 5, title: 'Frenzy Waterpark', location: 'Torreilles, Fransa', img: p33i4 }
+    ],
+  },
+  {
+    id: 34,
+    name: 'Golden Beach Nana',
+    location: 'Girit, Yunanistan',
+    type: 'Açık Alan Su Parkı',
+    region: 'Avrupa',
+    img: p34i0,
+    imgAlt: 'Golden Beach Nana - Girit, Yunanistan',
+    slides: [
+      { id: 1, title: 'Golden Beach Nana', location: 'Girit, Yunanistan', img: p34i0 },
+      { id: 2, title: 'Golden Beach Nana', location: 'Girit, Yunanistan', img: p34i1 }
+    ],
+  },
+  {
+    id: 35,
+    name: 'Güral Premier',
+    location: 'Antalya',
+    type: 'Otel & Su Parkı',
+    region: 'Asya',
+    img: p35i0,
+    imgAlt: 'Güral Premier - Antalya',
+    slides: [
+      { id: 1, title: 'Güral Premier', location: 'Antalya', img: p35i0 },
+      { id: 2, title: 'Güral Premier', location: 'Antalya', img: p35i1 },
+      { id: 3, title: 'Güral Premier', location: 'Antalya', img: p35i2 },
+      { id: 4, title: 'Güral Premier', location: 'Antalya', img: p35i3 }
+    ],
+  },
+  {
+    id: 36,
+    name: 'Iberostar Waves Creta Panorama & Mare',
+    location: 'Rethymno, Yunanistan',
+    type: 'Açık Alan Su Parkı',
+    region: 'Avrupa',
+    img: p36i0,
+    imgAlt: 'Iberostar Waves Creta Panorama & Mare - Rethymno, Yunanistan',
+    slides: [
+      { id: 1, title: 'Iberostar Waves Creta Panorama & Mare', location: 'Rethymno, Yunanistan', img: p36i0 },
+      { id: 2, title: 'Iberostar Waves Creta Panorama & Mare', location: 'Rethymno, Yunanistan', img: p36i1 },
+      { id: 3, title: 'Iberostar Waves Creta Panorama & Mare', location: 'Rethymno, Yunanistan', img: p36i2 },
+      { id: 4, title: 'Iberostar Waves Creta Panorama & Mare', location: 'Rethymno, Yunanistan', img: p36i3 },
+      { id: 5, title: 'Iberostar Waves Creta Panorama & Mare', location: 'Rethymno, Yunanistan', img: p36i4 },
+      { id: 6, title: 'Iberostar Waves Creta Panorama & Mare', location: 'Rethymno, Yunanistan', img: p36i5 }
+    ],
+  },
+  {
+    id: 37,
+    name: 'Jazeerat',
+    location: 'Bağdat, Irak',
+    type: 'Açık Alan Su Parkı',
+    region: 'Asya',
+    img: p37i0,
+    imgAlt: 'Jazeerat - Bağdat, Irak',
+    slides: [
+      { id: 1, title: 'Jazeerat', location: 'Bağdat, Irak', img: p37i0 },
+      { id: 2, title: 'Jazeerat', location: 'Bağdat, Irak', img: p37i1 },
+      { id: 3, title: 'Jazeerat', location: 'Bağdat, Irak', img: p37i2 },
+      { id: 4, title: 'Jazeerat', location: 'Bağdat, Irak', img: p37i3 },
+      { id: 5, title: 'Jazeerat', location: 'Bağdat, Irak', img: p37i4 },
+      { id: 6, title: 'Jazeerat', location: 'Bağdat, Irak', img: p37i5 },
+      { id: 7, title: 'Jazeerat', location: 'Bağdat, Irak', img: p37i6 }
+    ],
+  },
+  {
+    id: 38,
+    name: 'Justiniano Park Conti',
+    location: 'Antalya',
+    type: 'Otel & Su Parkı',
+    region: 'Asya',
+    img: p38i0,
+    imgAlt: 'Justiniano Park Conti - Antalya',
+    slides: [
+      { id: 1, title: 'Justiniano Park Conti', location: 'Antalya', img: p38i0 },
+      { id: 2, title: 'Justiniano Park Conti', location: 'Antalya', img: p38i1 }
+    ],
+  },
+  {
+    id: 39,
+    name: 'Kass Splash',
+    location: 'D City',
+    type: 'Kapalı Alan Su Parkı',
+    region: 'Asya',
+    img: p39i0,
+    imgAlt: 'Kass Splash - D City',
+    slides: [
+      { id: 1, title: 'Kass Splash', location: 'D City', img: p39i0 },
+      { id: 2, title: 'Kass Splash', location: 'D City', img: p39i1 },
+      { id: 3, title: 'Kass Splash', location: 'D City', img: p39i2 },
+      { id: 4, title: 'Kass Splash', location: 'D City', img: p39i3 },
+      { id: 5, title: 'Kass Splash', location: 'D City', img: p39i4 },
+      { id: 6, title: 'Kass Splash', location: 'D City', img: p39i5 }
+    ],
+  },
+  {
+    id: 40,
+    name: 'Kirman Sidera',
+    location: 'Antalya',
+    type: 'Otel & Su Parkı',
+    region: 'Asya',
+    img: p40i0,
+    imgAlt: 'Kirman Sidera - Antalya',
+    slides: [
+      { id: 1, title: 'Kirman Sidera', location: 'Antalya', img: p40i0 },
+      { id: 2, title: 'Kirman Sidera', location: 'Antalya', img: p40i1 },
+      { id: 3, title: 'Kirman Sidera', location: 'Antalya', img: p40i2 },
+      { id: 4, title: 'Kirman Sidera', location: 'Antalya', img: p40i3 },
+      { id: 5, title: 'Kirman Sidera', location: 'Antalya', img: p40i4 },
+      { id: 6, title: 'Kirman Sidera', location: 'Antalya', img: p40i5 },
+      { id: 7, title: 'Kirman Sidera', location: 'Antalya', img: p40i6 },
+      { id: 8, title: 'Kirman Sidera', location: 'Antalya', img: p40i7 },
+      { id: 9, title: 'Kirman Sidera', location: 'Antalya', img: p40i8 }
+    ],
+  },
+  {
+    id: 41,
+    name: 'Kremlin Palace',
+    location: 'Antalya',
+    type: 'Otel & Su Parkı',
+    region: 'Asya',
+    img: p41i0,
+    imgAlt: 'Kremlin Palace - Antalya',
+    slides: [
+      { id: 1, title: 'Kremlin Palace', location: 'Antalya', img: p41i0 },
+      { id: 2, title: 'Kremlin Palace', location: 'Antalya', img: p41i1 }
+    ],
+  },
+  {
+    id: 42,
+    name: 'Kunuku Resort',
+    location: 'Karayipler',
+    type: 'Resort Tatil Köyü',
+    region: 'Amerika',
+    img: p42i0,
+    imgAlt: 'Kunuku Resort - Karayipler',
+    slides: [
+      { id: 1, title: 'Kunuku Resort', location: 'Karayipler', img: p42i0 },
+      { id: 2, title: 'Kunuku Resort', location: 'Karayipler', img: p42i1 },
+      { id: 3, title: 'Kunuku Resort', location: 'Karayipler', img: p42i2 }
+    ],
+  },
+  {
+    id: 43,
+    name: 'Liu Resorts',
+    location: 'Antalya',
+    type: 'Otel & Su Parkı',
+    region: 'Asya',
+    img: p43i0,
+    imgAlt: 'Liu Resorts - Antalya',
+    slides: [
+      { id: 1, title: 'Liu Resorts', location: 'Antalya', img: p43i0 },
+      { id: 2, title: 'Liu Resorts', location: 'Antalya', img: p43i1 },
+      { id: 3, title: 'Liu Resorts', location: 'Antalya', img: p43i2 },
+      { id: 4, title: 'Liu Resorts', location: 'Antalya', img: p43i3 }
+    ],
+  },
+  {
+    id: 44,
+    name: 'Long Beach Club Nature',
+    location: 'Aydın',
+    type: 'Otel & Su Parkı',
+    region: 'Asya',
+    img: p44i0,
+    imgAlt: 'Long Beach Club Nature - Aydın',
+    slides: [
+      { id: 1, title: 'Long Beach Club Nature', location: 'Aydın', img: p44i0 },
+      { id: 2, title: 'Long Beach Club Nature', location: 'Aydın', img: p44i1 },
+      { id: 3, title: 'Long Beach Club Nature', location: 'Aydın', img: p44i2 }
+    ],
+  },
+  {
+    id: 45,
+    name: 'Lonicera Premium',
+    location: 'Antalya',
+    type: 'Otel & Su Parkı',
+    region: 'Asya',
+    img: p45i0,
+    imgAlt: 'Lonicera Premium - Antalya',
+    slides: [
+      { id: 1, title: 'Lonicera Premium', location: 'Antalya', img: p45i0 },
+      { id: 2, title: 'Lonicera Premium', location: 'Antalya', img: p45i1 },
+      { id: 3, title: 'Lonicera Premium', location: 'Antalya', img: p45i2 },
+      { id: 4, title: 'Lonicera Premium', location: 'Antalya', img: p45i3 },
+      { id: 5, title: 'Lonicera Premium', location: 'Antalya', img: p45i4 },
+      { id: 6, title: 'Lonicera Premium', location: 'Antalya', img: p45i5 },
+      { id: 7, title: 'Lonicera Premium', location: 'Antalya', img: p45i6 },
+      { id: 8, title: 'Lonicera Premium', location: 'Antalya', img: p45i7 },
+      { id: 9, title: 'Lonicera Premium', location: 'Antalya', img: p45i8 },
+      { id: 10, title: 'Lonicera Premium', location: 'Antalya', img: p45i9 }
+    ],
+  },
+  {
+    id: 46,
+    name: 'Lusso Sorgun',
+    location: 'Antalya',
+    type: 'Otel & Su Parkı',
+    region: 'Asya',
+    img: p46i0,
+    imgAlt: 'Lusso Sorgun - Antalya',
+    slides: [
+      { id: 1, title: 'Lusso Sorgun', location: 'Antalya', img: p46i0 },
+      { id: 2, title: 'Lusso Sorgun', location: 'Antalya', img: p46i1 },
+      { id: 3, title: 'Lusso Sorgun', location: 'Antalya', img: p46i2 },
+      { id: 4, title: 'Lusso Sorgun', location: 'Antalya', img: p46i3 },
+      { id: 5, title: 'Lusso Sorgun', location: 'Antalya', img: p46i4 },
+      { id: 6, title: 'Lusso Sorgun', location: 'Antalya', img: p46i5 }
+    ],
+  },
+  {
+    id: 47,
+    name: 'Maxeria Blue',
+    location: 'Aydın',
+    type: 'Otel & Su Parkı',
+    region: 'Asya',
+    img: p47i0,
+    imgAlt: 'Maxeria Blue - Aydın',
+    slides: [
+      { id: 1, title: 'Maxeria Blue', location: 'Aydın', img: p47i0 },
+      { id: 2, title: 'Maxeria Blue', location: 'Aydın', img: p47i1 },
+      { id: 3, title: 'Maxeria Blue', location: 'Aydın', img: p47i2 },
+      { id: 4, title: 'Maxeria Blue', location: 'Aydın', img: p47i3 },
+      { id: 5, title: 'Maxeria Blue', location: 'Aydın', img: p47i4 },
+      { id: 6, title: 'Maxeria Blue', location: 'Aydın', img: p47i5 },
+      { id: 7, title: 'Maxeria Blue', location: 'Aydın', img: p47i6 },
+      { id: 8, title: 'Maxeria Blue', location: 'Aydın', img: p47i7 }
+    ],
+  },
+  {
+    id: 48,
+    name: 'Melas',
+    location: 'Antalya',
+    type: 'Otel & Su Parkı',
+    region: 'Asya',
+    img: p48i0,
+    imgAlt: 'Melas - Antalya',
+    slides: [
+      { id: 1, title: 'Melas', location: 'Antalya', img: p48i0 },
+      { id: 2, title: 'Melas', location: 'Antalya', img: p48i1 },
+      { id: 3, title: 'Melas', location: 'Antalya', img: p48i2 },
+      { id: 4, title: 'Melas', location: 'Antalya', img: p48i3 },
+      { id: 5, title: 'Melas', location: 'Antalya', img: p48i4 }
+    ],
+  },
+  {
+    id: 49,
+    name: 'Mövenpick Resort',
+    location: 'Antalya',
+    type: 'Açık Alan Su Parkı',
+    region: 'Asya',
+    img: p49i0,
+    imgAlt: 'Mövenpick Resort - Antalya',
+    slides: [
+      { id: 1, title: 'Mövenpick Resort', location: 'Antalya', img: p49i0 },
+      { id: 2, title: 'Mövenpick Resort', location: 'Antalya', img: p49i1 },
+      { id: 3, title: 'Mövenpick Resort', location: 'Antalya', img: p49i2 },
+      { id: 4, title: 'Mövenpick Resort', location: 'Antalya', img: p49i3 }
+    ],
+  },
+  {
+    id: 50,
+    name: 'Mövenpick Waterpark Resort & Spa Soma Bay',
+    location: 'Soma Bay, Mısır',
+    type: 'Açık Alan Su Parkı',
+    region: 'Afrika',
+    img: p50i0,
+    imgAlt: 'Mövenpick Waterpark Resort & Spa Soma Bay - Soma Bay, Mısır',
+    slides: [
+      { id: 1, title: 'Mövenpick Waterpark Resort & Spa Soma Bay', location: 'Soma Bay, Mısır', img: p50i0 },
+      { id: 2, title: 'Mövenpick Waterpark Resort & Spa Soma Bay', location: 'Soma Bay, Mısır', img: p50i1 },
+      { id: 3, title: 'Mövenpick Waterpark Resort & Spa Soma Bay', location: 'Soma Bay, Mısır', img: p50i2 }
+    ],
+  },
+  {
+    id: 51,
+    name: 'Nirvana Cosmopolitan',
+    location: 'Antalya',
+    type: 'Otel & Su Parkı',
+    region: 'Asya',
+    img: p51i0,
+    imgAlt: 'Nirvana Cosmopolitan - Antalya',
+    slides: [
+      { id: 1, title: 'Nirvana Cosmopolitan', location: 'Antalya', img: p51i0 },
+      { id: 2, title: 'Nirvana Cosmopolitan', location: 'Antalya', img: p51i1 }
+    ],
+  },
+  {
+    id: 52,
+    name: 'Nirvana Cosmopolitan',
+    location: 'Antalya',
+    type: 'Otel & Su Parkı',
+    region: 'Asya',
+    img: p52i0,
+    imgAlt: 'Nirvana Cosmopolitan - Antalya',
+    slides: [
+      { id: 1, title: 'Nirvana Cosmopolitan', location: 'Antalya', img: p52i0 },
+      { id: 2, title: 'Nirvana Cosmopolitan', location: 'Antalya', img: p52i1 },
+      { id: 3, title: 'Nirvana Cosmopolitan', location: 'Antalya', img: p52i2 },
+      { id: 4, title: 'Nirvana Cosmopolitan', location: 'Antalya', img: p52i3 }
+    ],
+  },
+  {
+    id: 53,
+    name: 'Nirvana Dolce Vita',
+    location: 'Antalya',
+    type: 'Otel & Su Parkı',
+    region: 'Asya',
+    img: p53i0,
+    imgAlt: 'Nirvana Dolce Vita - Antalya',
+    slides: [
+      { id: 1, title: 'Nirvana Dolce Vita', location: 'Antalya', img: p53i0 },
+      { id: 2, title: 'Nirvana Dolce Vita', location: 'Antalya', img: p53i1 }
+    ],
+  },
+  {
+    id: 54,
+    name: 'Numa Bay Exclusive',
+    location: 'Antalya',
+    type: 'Otel & Su Parkı',
+    region: 'Asya',
+    img: p54i0,
+    imgAlt: 'Numa Bay Exclusive - Antalya',
+    slides: [
+      { id: 1, title: 'Numa Bay Exclusive', location: 'Antalya', img: p54i0 },
+      { id: 2, title: 'Numa Bay Exclusive', location: 'Antalya', img: p54i1 },
+      { id: 3, title: 'Numa Bay Exclusive', location: 'Antalya', img: p54i2 },
+      { id: 4, title: 'Numa Bay Exclusive', location: 'Antalya', img: p54i3 }
+    ],
+  },
+  {
+    id: 55,
+    name: 'Orka World Waterpark',
+    location: 'Muğla',
+    type: 'Açık Alan Su Parkı',
+    region: 'Asya',
+    img: p55i0,
+    imgAlt: 'Orka World Waterpark - Muğla',
+    slides: [
+      { id: 1, title: 'Orka World Waterpark', location: 'Muğla', img: p55i0 },
+      { id: 2, title: 'Orka World Waterpark', location: 'Muğla', img: p55i1 },
+      { id: 3, title: 'Orka World Waterpark', location: 'Muğla', img: p55i2 },
+      { id: 4, title: 'Orka World Waterpark', location: 'Muğla', img: p55i3 },
+      { id: 5, title: 'Orka World Waterpark', location: 'Muğla', img: p55i4 },
+      { id: 6, title: 'Orka World Waterpark', location: 'Muğla', img: p55i5 }
+    ],
+  },
+  {
+    id: 56,
+    name: 'Palm Wings',
+    location: 'Aydın',
+    type: 'Otel & Su Parkı',
+    region: 'Asya',
+    img: p56i0,
+    imgAlt: 'Palm Wings - Aydın',
+    slides: [
+      { id: 1, title: 'Palm Wings', location: 'Aydın', img: p56i0 },
+      { id: 2, title: 'Palm Wings', location: 'Aydın', img: p56i1 },
+      { id: 3, title: 'Palm Wings', location: 'Aydın', img: p56i2 },
+      { id: 4, title: 'Palm Wings', location: 'Aydın', img: p56i3 },
+      { id: 5, title: 'Palm Wings', location: 'Aydın', img: p56i4 },
+      { id: 6, title: 'Palm Wings', location: 'Aydın', img: p56i5 },
+      { id: 7, title: 'Palm Wings', location: 'Aydın', img: p56i6 },
+      { id: 8, title: 'Palm Wings', location: 'Aydın', img: p56i7 }
+    ],
+  },
+  {
+    id: 57,
+    name: 'Paloma Grida',
+    location: 'Antalya',
+    type: 'Otel & Su Parkı',
+    region: 'Asya',
+    img: p57i0,
+    imgAlt: 'Paloma Grida - Antalya',
+    slides: [
+      { id: 1, title: 'Paloma Grida', location: 'Antalya', img: p57i0 },
+      { id: 2, title: 'Paloma Grida', location: 'Antalya', img: p57i1 },
+      { id: 3, title: 'Paloma Grida', location: 'Antalya', img: p57i2 },
+      { id: 4, title: 'Paloma Grida', location: 'Antalya', img: p57i3 },
+      { id: 5, title: 'Paloma Grida', location: 'Antalya', img: p57i4 }
+    ],
+  },
+  {
+    id: 58,
+    name: 'Paradise Spa Dogo',
+    location: 'Asan',
+    type: 'Açık Alan Su Parkı',
+    region: 'Asya',
+    img: p58i0,
+    imgAlt: 'Paradise Spa Dogo - Asan',
+    slides: [
+      { id: 1, title: 'Paradise Spa Dogo', location: 'Asan', img: p58i0 },
+      { id: 2, title: 'Paradise Spa Dogo', location: 'Asan', img: p58i1 },
+      { id: 3, title: 'Paradise Spa Dogo', location: 'Asan', img: p58i2 }
+    ],
+  },
+  {
+    id: 59,
+    name: 'Parque Aquático de Fafe',
+    location: 'Fafe, Portekiz',
+    type: 'Açık Alan Su Parkı',
+    region: 'Avrupa',
+    img: p59i0,
+    imgAlt: 'Parque Aquático de Fafe - Fafe, Portekiz',
+    slides: [
+      { id: 1, title: 'Parque Aquático de Fafe', location: 'Fafe, Portekiz', img: p59i0 },
+      { id: 2, title: 'Parque Aquático de Fafe', location: 'Fafe, Portekiz', img: p59i1 },
+      { id: 3, title: 'Parque Aquático de Fafe', location: 'Fafe, Portekiz', img: p59i2 }
+    ],
+  },
+  {
+    id: 60,
+    name: 'Pickalbatros Aqua Fun Club',
+    location: 'Marakeş, Fas',
+    type: 'Açık Alan Su Parkı',
+    region: 'Afrika',
+    img: p60i0,
+    imgAlt: 'Pickalbatros Aqua Fun Club - Marakeş, Fas',
+    slides: [
+      { id: 1, title: 'Pickalbatros Aqua Fun Club', location: 'Marakeş, Fas', img: p60i0 },
+      { id: 2, title: 'Pickalbatros Aqua Fun Club', location: 'Marakeş, Fas', img: p60i1 }
+    ],
+  },
+  {
+    id: 61,
+    name: 'Pickalbatros Laguna Vista Resort',
+    location: 'Şarm El-Şeyh, Mısır',
+    type: 'Açık Alan Su Parkı',
+    region: 'Afrika',
+    img: p61i0,
+    imgAlt: 'Pickalbatros Laguna Vista Resort - Şarm El-Şeyh, Mısır',
+    slides: [
+      { id: 1, title: 'Pickalbatros Laguna Vista Resort', location: 'Şarm El-Şeyh, Mısır', img: p61i0 },
+      { id: 2, title: 'Pickalbatros Laguna Vista Resort', location: 'Şarm El-Şeyh, Mısır', img: p61i1 },
+      { id: 3, title: 'Pickalbatros Laguna Vista Resort', location: 'Şarm El-Şeyh, Mısır', img: p61i2 }
+    ],
+  },
+  {
+    id: 62,
+    name: 'Pickalbatros Port Ghalib',
+    location: 'Port Ghalib, Mısır',
+    type: 'Açık Alan Su Parkı',
+    region: 'Afrika',
+    img: p62i0,
+    imgAlt: 'Pickalbatros Port Ghalib - Port Ghalib, Mısır',
+    slides: [
+      { id: 1, title: 'Pickalbatros Port Ghalib', location: 'Port Ghalib, Mısır', img: p62i0 },
+      { id: 2, title: 'Pickalbatros Port Ghalib', location: 'Port Ghalib, Mısır', img: p62i1 }
+    ],
+  },
+  {
+    id: 63,
+    name: 'Pickalbatros Sungo',
+    location: 'Hurgada, Mısır',
+    type: 'Açık Alan Su Parkı',
+    region: 'Afrika',
+    img: p63i0,
+    imgAlt: 'Pickalbatros Sungo - Hurgada, Mısır',
+    slides: [
+      { id: 1, title: 'Pickalbatros Sungo', location: 'Hurgada, Mısır', img: p63i0 },
+      { id: 2, title: 'Pickalbatros Sungo', location: 'Hurgada, Mısır', img: p63i1 },
+      { id: 3, title: 'Pickalbatros Sungo', location: 'Hurgada, Mısır', img: p63i2 },
+      { id: 4, title: 'Pickalbatros Sungo', location: 'Hurgada, Mısır', img: p63i3 },
+      { id: 5, title: 'Pickalbatros Sungo', location: 'Hurgada, Mısır', img: p63i4 }
+    ],
+  },
+  {
+    id: 64,
+    name: 'Pine Beach',
+    location: 'Antalya',
+    type: 'Otel & Su Parkı',
+    region: 'Asya',
+    img: p64i0,
+    imgAlt: 'Pine Beach - Antalya',
+    slides: [
+      { id: 1, title: 'Pine Beach', location: 'Antalya', img: p64i0 },
+      { id: 2, title: 'Pine Beach', location: 'Antalya', img: p64i1 },
+      { id: 3, title: 'Pine Beach', location: 'Antalya', img: p64i2 },
+      { id: 4, title: 'Pine Beach', location: 'Antalya', img: p64i3 },
+      { id: 5, title: 'Pine Beach', location: 'Antalya', img: p64i4 },
+      { id: 6, title: 'Pine Beach', location: 'Antalya', img: p64i5 }
+    ],
+  },
+  {
+    id: 65,
+    name: 'Rixos Murjana',
+    location: 'Cidde, Suudi Arabistan',
+    type: 'Otel & Su Parkı',
+    region: 'Asya',
+    img: p65i0,
+    imgAlt: 'Rixos Murjana - Cidde, Suudi Arabistan',
+    slides: [
+      { id: 1, title: 'Rixos Murjana', location: 'Cidde, Suudi Arabistan', img: p65i0 }
+    ],
+  },
+  {
+    id: 66,
+    name: 'Roj Park',
+    location: 'Nasıriye, Irak',
+    type: 'Kapalı Alan Su Parkı',
+    region: 'Asya',
+    img: p66i0,
+    imgAlt: 'Roj Park - Nasıriye, Irak',
+    slides: [
+      { id: 1, title: 'Roj Park', location: 'Nasıriye, Irak', img: p66i0 },
+      { id: 2, title: 'Roj Park', location: 'Nasıriye, Irak', img: p66i1 }
+    ],
+  },
+  {
+    id: 67,
+    name: 'Royal Garden',
+    location: 'Antalya',
+    type: 'Otel & Su Parkı',
+    region: 'Asya',
+    img: p67i0,
+    imgAlt: 'Royal Garden - Antalya',
+    slides: [
+      { id: 1, title: 'Royal Garden', location: 'Antalya', img: p67i0 },
+      { id: 2, title: 'Royal Garden', location: 'Antalya', img: p67i1 },
+      { id: 3, title: 'Royal Garden', location: 'Antalya', img: p67i2 },
+      { id: 4, title: 'Royal Garden', location: 'Antalya', img: p67i3 },
+      { id: 5, title: 'Royal Garden', location: 'Antalya', img: p67i4 },
+      { id: 6, title: 'Royal Garden', location: 'Antalya', img: p67i5 },
+      { id: 7, title: 'Royal Garden', location: 'Antalya', img: p67i6 },
+      { id: 8, title: 'Royal Garden', location: 'Antalya', img: p67i7 },
+      { id: 9, title: 'Royal Garden', location: 'Antalya', img: p67i8 },
+      { id: 10, title: 'Royal Garden', location: 'Antalya', img: p67i9 },
+      { id: 11, title: 'Royal Garden', location: 'Antalya', img: p67i10 },
+      { id: 12, title: 'Royal Garden', location: 'Antalya', img: p67i11 },
+      { id: 13, title: 'Royal Garden', location: 'Antalya', img: p67i12 },
+      { id: 14, title: 'Royal Garden', location: 'Antalya', img: p67i13 },
+      { id: 15, title: 'Royal Garden', location: 'Antalya', img: p67i14 }
+    ],
+  },
+  {
+    id: 68,
+    name: 'Rusica Park',
+    location: 'Skikda, Cezayir',
+    type: 'Açık Alan Su Parkı',
+    region: 'Afrika',
+    img: p68i0,
+    imgAlt: 'Rusica Park - Skikda, Cezayir',
+    slides: [
+      { id: 1, title: 'Rusica Park', location: 'Skikda, Cezayir', img: p68i0 },
+      { id: 2, title: 'Rusica Park', location: 'Skikda, Cezayir', img: p68i1 },
+      { id: 3, title: 'Rusica Park', location: 'Skikda, Cezayir', img: p68i2 },
+      { id: 4, title: 'Rusica Park', location: 'Skikda, Cezayir', img: p68i3 }
+    ],
+  },
+  {
+    id: 69,
+    name: 'S Club',
+    location: 'Jakovo, Sırbistan',
+    type: 'Otel & Su Parkı',
+    region: 'Avrupa',
+    img: p69i0,
+    imgAlt: 'S Club - Jakovo, Sırbistan',
+    slides: [
+      { id: 1, title: 'S Club', location: 'Jakovo, Sırbistan', img: p69i0 },
+      { id: 2, title: 'S Club', location: 'Jakovo, Sırbistan', img: p69i1 },
+      { id: 3, title: 'S Club', location: 'Jakovo, Sırbistan', img: p69i2 },
+      { id: 4, title: 'S Club', location: 'Jakovo, Sırbistan', img: p69i3 },
+      { id: 5, title: 'S Club', location: 'Jakovo, Sırbistan', img: p69i4 }
+    ],
+  },
+  {
+    id: 70,
+    name: 'SY',
+    location: 'Antalya',
+    type: 'Açık Alan Su Parkı',
+    region: 'Asya',
+    img: p70i0,
+    imgAlt: 'SY - Antalya',
+    slides: [
+      { id: 1, title: 'SY', location: 'Antalya', img: p70i0 },
+      { id: 2, title: 'SY', location: 'Antalya', img: p70i1 },
+      { id: 3, title: 'SY', location: 'Antalya', img: p70i2 },
+      { id: 4, title: 'SY', location: 'Antalya', img: p70i3 },
+      { id: 5, title: 'SY', location: 'Antalya', img: p70i4 },
+      { id: 6, title: 'SY', location: 'Antalya', img: p70i5 },
+      { id: 7, title: 'SY', location: 'Antalya', img: p70i6 },
+      { id: 8, title: 'SY', location: 'Antalya', img: p70i7 }
+    ],
+  },
+  {
+    id: 71,
+    name: 'Sarvar Furdo',
+    location: 'Sárvár, Macaristan',
+    type: 'Açık Alan Su Parkı',
+    region: 'Avrupa',
+    img: p71i0,
+    imgAlt: 'Sarvar Furdo - Sárvár, Macaristan',
+    slides: [
+      { id: 1, title: 'Sarvar Furdo', location: 'Sárvár, Macaristan', img: p71i0 },
+      { id: 2, title: 'Sarvar Furdo', location: 'Sárvár, Macaristan', img: p71i1 },
+      { id: 3, title: 'Sarvar Furdo', location: 'Sárvár, Macaristan', img: p71i2 },
+      { id: 4, title: 'Sarvar Furdo', location: 'Sárvár, Macaristan', img: p71i3 },
+      { id: 5, title: 'Sarvar Furdo', location: 'Sárvár, Macaristan', img: p71i4 },
+      { id: 6, title: 'Sarvar Furdo', location: 'Sárvár, Macaristan', img: p71i5 }
+    ],
+  },
+  {
+    id: 72,
+    name: 'Sataya Resort',
+    location: 'Marsa Alam, Mısır',
+    type: 'Açık Alan Su Parkı',
+    region: 'Afrika',
+    img: p72i0,
+    imgAlt: 'Sataya Resort - Marsa Alam, Mısır',
+    slides: [
+      { id: 1, title: 'Sataya Resort', location: 'Marsa Alam, Mısır', img: p72i0 },
+      { id: 2, title: 'Sataya Resort', location: 'Marsa Alam, Mısır', img: p72i1 },
+      { id: 3, title: 'Sataya Resort', location: 'Marsa Alam, Mısır', img: p72i2 },
+      { id: 4, title: 'Sataya Resort', location: 'Marsa Alam, Mısır', img: p72i3 }
+    ],
+  },
+  {
+    id: 73,
+    name: 'Seignosse Atlantic',
+    location: 'Seignosse, Fransa',
+    type: 'Açık Alan Su Parkı',
+    region: 'Avrupa',
+    img: p73i0,
+    imgAlt: 'Seignosse Atlantic - Seignosse, Fransa',
+    slides: [
+      { id: 1, title: 'Seignosse Atlantic', location: 'Seignosse, Fransa', img: p73i0 }
+    ],
+  },
+  {
+    id: 74,
+    name: 'Seven Seas Bay',
+    location: 'Antalya',
+    type: 'Otel & Su Parkı',
+    region: 'Asya',
+    img: p74i0,
+    imgAlt: 'Seven Seas Bay - Antalya',
+    slides: [
+      { id: 1, title: 'Seven Seas Bay', location: 'Antalya', img: p74i0 },
+      { id: 2, title: 'Seven Seas Bay', location: 'Antalya', img: p74i1 },
+      { id: 3, title: 'Seven Seas Bay', location: 'Antalya', img: p74i2 },
+      { id: 4, title: 'Seven Seas Bay', location: 'Antalya', img: p74i3 },
+      { id: 5, title: 'Seven Seas Bay', location: 'Antalya', img: p74i4 },
+      { id: 6, title: 'Seven Seas Bay', location: 'Antalya', img: p74i5 },
+      { id: 7, title: 'Seven Seas Bay', location: 'Antalya', img: p74i6 },
+      { id: 8, title: 'Seven Seas Bay', location: 'Antalya', img: p74i7 },
+      { id: 9, title: 'Seven Seas Bay', location: 'Antalya', img: p74i8 },
+      { id: 10, title: 'Seven Seas Bay', location: 'Antalya', img: p74i9 },
+      { id: 11, title: 'Seven Seas Bay', location: 'Antalya', img: p74i10 }
+    ],
+  },
+  {
+    id: 75,
+    name: 'Sofia Waterpark',
+    location: 'Sofya, Bulgaristan',
+    type: 'Açık Alan Su Parkı',
+    region: 'Avrupa',
+    img: p75i0,
+    imgAlt: 'Sofia Waterpark - Sofya, Bulgaristan',
+    slides: [
+      { id: 1, title: 'Sofia Waterpark', location: 'Sofya, Bulgaristan', img: p75i0 },
+      { id: 2, title: 'Sofia Waterpark', location: 'Sofya, Bulgaristan', img: p75i1 },
+      { id: 3, title: 'Sofia Waterpark', location: 'Sofya, Bulgaristan', img: p75i2 }
+    ],
+  },
+  {
+    id: 76,
+    name: 'Stella Beach Resort',
+    location: 'Hurgada, Mısır',
+    type: 'Otel & Su Parkı',
+    region: 'Afrika',
+    img: p76i0,
+    imgAlt: 'Stella Beach Resort - Hurgada, Mısır',
+    slides: [
+      { id: 1, title: 'Stella Beach Resort', location: 'Hurgada, Mısır', img: p76i0 },
+      { id: 2, title: 'Stella Beach Resort', location: 'Hurgada, Mısır', img: p76i1 }
+    ],
+  },
+  {
+    id: 77,
+    name: 'Stella Makadi Beach',
+    location: 'Makadi Bay, Mısır',
+    type: 'Açık Alan Su Parkı',
+    region: 'Afrika',
+    img: p77i0,
+    imgAlt: 'Stella Makadi Beach - Makadi Bay, Mısır',
+    slides: [
+      { id: 1, title: 'Stella Makadi Beach', location: 'Makadi Bay, Mısır', img: p77i0 },
+      { id: 2, title: 'Stella Makadi Beach', location: 'Makadi Bay, Mısır', img: p77i1 },
+      { id: 3, title: 'Stella Makadi Beach', location: 'Makadi Bay, Mısır', img: p77i2 }
+    ],
+  },
+  {
+    id: 78,
+    name: 'Sterlitamak',
+    location: 'Sterlitamak, Rusya',
+    type: 'Kapalı Alan Su Parkı',
+    region: 'Avrupa',
+    img: p78i0,
+    imgAlt: 'Sterlitamak - Sterlitamak, Rusya',
+    slides: [
+      { id: 1, title: 'Sterlitamak', location: 'Sterlitamak, Rusya', img: p78i0 },
+      { id: 2, title: 'Sterlitamak', location: 'Sterlitamak, Rusya', img: p78i1 }
+    ],
+  },
+  {
+    id: 79,
+    name: 'Terra Mítica',
+    location: 'Benidorm',
+    type: 'Açık Alan Su Parkı',
+    region: 'Avrupa',
+    img: p79i0,
+    imgAlt: 'Terra Mítica - Benidorm',
+    slides: [
+      { id: 1, title: 'Terra Mítica', location: 'Benidorm', img: p79i0 },
+      { id: 2, title: 'Terra Mítica', location: 'Benidorm', img: p79i1 },
+      { id: 3, title: 'Terra Mítica', location: 'Benidorm', img: p79i2 },
+      { id: 4, title: 'Terra Mítica', location: 'Benidorm', img: p79i3 }
+    ],
+  },
+  {
+    id: 80,
+    name: 'The Land of Legends',
+    location: 'Antalya',
+    type: 'Açık Alan Su Parkı',
+    region: 'Asya',
+    img: p80i0,
+    imgAlt: 'The Land of Legends - Antalya',
+    slides: [
+      { id: 1, title: 'The Land of Legends', location: 'Antalya', img: p80i0 },
+      { id: 2, title: 'The Land of Legends', location: 'Antalya', img: p80i1 }
+    ],
+  },
+  {
+    id: 81,
+    name: 'Trendy Perge',
+    location: 'Antalya',
+    type: 'Otel & Su Parkı',
+    region: 'Asya',
+    img: p81i0,
+    imgAlt: 'Trendy Perge - Antalya',
+    slides: [
+      { id: 1, title: 'Trendy Perge', location: 'Antalya', img: p81i0 }
+    ],
+  },
+  {
+    id: 82,
+    name: 'Vacances Camping Médoc Plage',
+    location: 'Vendays-Montalivet, Fransa',
+    type: 'Açık Alan Su Parkı',
+    region: 'Avrupa',
+    img: p82i0,
+    imgAlt: 'Vacances Camping Médoc Plage - Vendays-Montalivet, Fransa',
+    slides: [
+      { id: 1, title: 'Vacances Camping Médoc Plage', location: 'Vendays-Montalivet, Fransa', img: p82i0 }
+    ],
+  },
+  {
+    id: 83,
+    name: 'Valamar Istra Premium Camping Resort',
+    location: 'Poreč, Hırvatistan',
+    type: 'Açık Alan Su Parkı',
+    region: 'Avrupa',
+    img: p83i0,
+    imgAlt: 'Valamar Istra Premium Camping Resort - Poreč, Hırvatistan',
+    slides: [
+      { id: 1, title: 'Valamar Istra Premium Camping Resort', location: 'Poreč, Hırvatistan', img: p83i0 }
+    ],
+  },
+  {
+    id: 84,
+    name: 'Venosa Beach Resort',
+    location: 'Aydın',
+    type: 'Otel & Su Parkı',
+    region: 'Asya',
+    img: p84i0,
+    imgAlt: 'Venosa Beach Resort - Aydın',
+    slides: [
+      { id: 1, title: 'Venosa Beach Resort', location: 'Aydın', img: p84i0 },
+      { id: 2, title: 'Venosa Beach Resort', location: 'Aydın', img: p84i1 },
+      { id: 3, title: 'Venosa Beach Resort', location: 'Aydın', img: p84i2 }
+    ],
+  },
+  {
+    id: 85,
+    name: 'Volgograd',
+    location: 'Volgograd, Rusya',
+    type: 'Açık Alan Su Parkı',
+    region: 'Avrupa',
+    img: p85i0,
+    imgAlt: 'Volgograd - Volgograd, Rusya',
+    slides: [
+      { id: 1, title: 'Volgograd', location: 'Volgograd, Rusya', img: p85i0 },
+      { id: 2, title: 'Volgograd', location: 'Volgograd, Rusya', img: p85i1 },
+      { id: 3, title: 'Volgograd', location: 'Volgograd, Rusya', img: p85i2 },
+      { id: 4, title: 'Volgograd', location: 'Volgograd, Rusya', img: p85i3 },
+      { id: 5, title: 'Volgograd', location: 'Volgograd, Rusya', img: p85i4 }
+    ],
+  },
+  {
+    id: 86,
+    name: 'Voyage Torba',
+    location: 'Muğla',
+    type: 'Otel & Su Parkı',
+    region: 'Asya',
+    img: p86i0,
+    imgAlt: 'Voyage Torba - Muğla',
+    slides: [
+      { id: 1, title: 'Voyage Torba', location: 'Muğla', img: p86i0 },
+      { id: 2, title: 'Voyage Torba', location: 'Muğla', img: p86i1 }
+    ],
+  },
+  {
+    id: 87,
+    name: 'Wonderla Holidays',
+    location: 'Bangalore, Hindistan',
+    type: 'Açık Alan Su Parkı',
+    region: 'Asya',
+    img: p87i0,
+    imgAlt: 'Wonderla Holidays - Bangalore, Hindistan',
+    slides: [
+      { id: 1, title: 'Wonderla Holidays', location: 'Bangalore, Hindistan', img: p87i0 }
+    ],
+  },
+  {
+    id: 88,
+    name: 'XO Cape Arnna',
+    location: 'Muğla',
+    type: 'Otel & Su Parkı',
+    region: 'Asya',
+    img: p88i0,
+    imgAlt: 'XO Cape Arnna - Muğla',
+    slides: [
+      { id: 1, title: 'XO Cape Arnna', location: 'Muğla', img: p88i0 },
+      { id: 2, title: 'XO Cape Arnna', location: 'Muğla', img: p88i1 },
+      { id: 3, title: 'XO Cape Arnna', location: 'Muğla', img: p88i2 },
+      { id: 4, title: 'XO Cape Arnna', location: 'Muğla', img: p88i3 },
+      { id: 5, title: 'XO Cape Arnna', location: 'Muğla', img: p88i4 },
+      { id: 6, title: 'XO Cape Arnna', location: 'Muğla', img: p88i5 }
+    ],
+  }
 ]
 
-const REGIONS = ['Tümü', 'Türkiye & Orta Doğu', 'Avrupa', 'Asya Pasifik', 'Amerika']
-const TYPES   = ['Tümü', 'Açık Hava Su Parkı', 'Kapalı Su Parkı', 'Otel & Tatil Köyü', 'Cruise Gemisi', 'Belediye & Kamu']
-
-// ── Glass Etiket ───────────────────────────────────────────
-function GlassTag({ children }) {
-  return (
-    <span
-      className="text-[10px] font-bold tracking-widest uppercase px-3 py-1.5 rounded-full"
-      style={{
-        background: 'rgba(255,255,255,0.15)',
-        backdropFilter: 'blur(8px)',
-        border: '1px solid rgba(255,255,255,0.2)',
-        color: 'rgba(255,255,255,0.9)',
-      }}
-    >
-      {children}
-    </span>
-  )
-}
+const REGIONS = ['Tümü', 'Asya', 'Avrupa', 'Afrika', 'Amerika']
+const TYPES = ['Tümü', 'Açık Alan Su Parkı', 'Otel & Su Parkı', 'Kapalı Alan Su Parkı', 'Resort Tatil Köyü']
 
 // ── Slider Modal Bileşeni ──────────────────────────────────
 function ProjectSliderModal({ project, isOpen, onClose }) {
   const [currentIndex, setCurrentIndex] = useState(0)
-  const autoplayInterval = useRef(null)
+  const autoplayRef = useRef(null)
 
-  // Otomatik geçiş: 2 saniye
   useEffect(() => {
     if (!isOpen) return
-
-    autoplayInterval.current = setInterval(() => {
+    setCurrentIndex(0)
+    autoplayRef.current = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % project.slides.length)
-    }, 2000)
+    }, 2500)
+    return () => clearInterval(autoplayRef.current)
+  }, [isOpen, project.id])
 
-    return () => clearInterval(autoplayInterval.current)
-  }, [isOpen, project.slides.length])
-
-  const handlePrev = () => {
-    setCurrentIndex((prev) =>
-      prev === 0 ? project.slides.length - 1 : prev - 1
-    )
-  }
-
-  const handleNext = () => {
-    setCurrentIndex((prev) => (prev + 1) % project.slides.length)
+  const go = (dir) => {
+    clearInterval(autoplayRef.current)
+    setCurrentIndex((prev) => {
+      if (dir === 'prev') return prev === 0 ? project.slides.length - 1 : prev - 1
+      return (prev + 1) % project.slides.length
+    })
   }
 
   if (!isOpen) return null
-
-  const currentSlide = project.slides[currentIndex]
+  const slide = project.slides[currentIndex]
 
   return (
     <div
       className="fixed inset-0 z-50 flex items-center justify-center p-4"
-      style={{ backgroundColor: 'rgba(0, 0, 0, 0.85)' }}
+      style={{ backgroundColor: 'rgba(0,0,0,0.92)' }}
       onClick={onClose}
     >
       <div
-        className="relative w-full max-w-none rounded-2xl overflow-hidden bg-black shadow-2xl"
-        style={{ width: 'min(96vw, var(--layout-max))' }}
+        className="relative w-full rounded-2xl overflow-hidden bg-black shadow-2xl"
+        style={{ width: 'min(96vw,1200px)', maxHeight: '92vh' }}
         onClick={(e) => e.stopPropagation()}
       >
-        {/* ── Slider Görsel ── */}
-        <div className="relative bg-gray-900 h-[min(78vh,60vw)]">
+        {/* Görsel */}
+        <div className="relative bg-gray-900" style={{ height: 'min(76vh,65vw)', minHeight: '260px' }}>
           <img
-            src={currentSlide.img}
-            alt={currentSlide.title}
+            key={slide.img}
+            src={slide.img}
+            alt={slide.title}
             loading="lazy"
             className="w-full h-full object-cover"
           />
-          {/* Gradient overlay */}
-          <div className="absolute inset-0" style={{
-            background: 'linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 50%, transparent 100%)'
-          }} />
+          <div className="absolute inset-0" style={{ background: 'linear-gradient(to top,rgba(0,0,0,0.8) 0%,rgba(0,0,0,0.15) 55%,transparent 100%)' }} />
 
-          {/* ── Bilgi ── */}
+          {/* Bilgi */}
           <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-            <p className="text-xs font-bold tracking-widest uppercase mb-2 opacity-70">
-              {currentSlide.location}
-            </p>
-            <h3 className="text-2xl font-black leading-tight">
-              {currentSlide.title}
-            </h3>
+            <p className="text-[11px] font-bold tracking-[0.25em] uppercase mb-1.5 opacity-60">{slide.location}</p>
+            <h3 className="text-2xl font-black leading-tight">{slide.title}</h3>
           </div>
 
-          {/* ── Prev Buton ── */}
-          <button
-            onClick={handlePrev}
-            className="absolute left-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white/20 hover:bg-white/40 transition-all backdrop-blur-sm flex items-center justify-center"
-          >
-            <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M15 19l-7-7 7-7" />
-            </svg>
-          </button>
-
-          {/* ── Next Buton ── */}
-          <button
-            onClick={handleNext}
-            className="absolute right-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white/20 hover:bg-white/40 transition-all backdrop-blur-sm flex items-center justify-center"
-          >
-            <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
-            </svg>
-          </button>
-
-          {/* ── Gösterge Noktaları ── */}
-          <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-10">
-            {project.slides.map((_, idx) => (
-              <button
-                key={idx}
-                onClick={() => setCurrentIndex(idx)}
-                className="w-2 h-2 rounded-full transition-all"
-                style={{
-                  backgroundColor: idx === currentIndex ? 'rgba(255,255,255,1)' : 'rgba(255,255,255,0.4)',
-                  width: idx === currentIndex ? '24px' : '8px',
-                }}
-              />
-            ))}
-          </div>
+          {/* Nav butonlar */}
+          {project.slides.length > 1 && (<>
+            <button onClick={() => go('prev')}
+              className="absolute left-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white/20 hover:bg-white/40 backdrop-blur-sm flex items-center justify-center transition-all">
+              <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M15 19l-7-7 7-7" />
+              </svg>
+            </button>
+            <button onClick={() => go('next')}
+              className="absolute right-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white/20 hover:bg-white/40 backdrop-blur-sm flex items-center justify-center transition-all">
+              <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+            {/* Dots */}
+            <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5 z-10 flex-wrap justify-center px-4 max-w-full">
+              {project.slides.map((_, idx) => (
+                <button key={idx} onClick={() => { clearInterval(autoplayRef.current); setCurrentIndex(idx) }}
+                  className="h-1.5 rounded-full transition-all duration-300"
+                  style={{ backgroundColor: idx === currentIndex ? '#fff' : 'rgba(255,255,255,0.35)', width: idx === currentIndex ? '20px' : '6px' }}
+                />
+              ))}
+            </div>
+          </>)}
         </div>
 
-        {/* ── Kapatma Buton ── */}
-        <button
-          onClick={onClose}
-          className="absolute top-4 right-4 z-10 w-8 h-8 rounded-full bg-white/20 hover:bg-white/40 transition-all backdrop-blur-sm flex items-center justify-center text-white"
-        >
+        {/* Alt bar */}
+        <div className="px-6 py-4 bg-neutral-900 flex items-center justify-between text-white gap-4">
+          <div>
+            <p className="font-black text-base">{project.name}</p>
+            <p className="text-sm text-white/45 mt-0.5">{project.location} · {project.type}</p>
+          </div>
+          {project.slides.length > 1 && (
+            <span className="text-sm text-white/35 shrink-0">{currentIndex + 1} / {project.slides.length}</span>
+          )}
+        </div>
+
+        {/* Kapat */}
+        <button onClick={onClose}
+          className="absolute top-3 right-3 z-20 w-9 h-9 rounded-full bg-black/50 hover:bg-black/70 backdrop-blur-sm flex items-center justify-center text-white transition-all">
           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M6 18L18 6M6 6l12 12" />
           </svg>
         </button>
-
-        {/* ── Sayfa Bilgisi ── */}
-        <div className="px-6 py-3 bg-white/5 border-t border-white/10 flex items-center justify-between text-white text-sm">
-          <span>{currentIndex + 1} / {project.slides.length}</span>
-        </div>
       </div>
     </div>
   )
 }
 
-export default function ProjectsPage({ setActivePage}) {
+export default function ProjectsPage({ setActivePage }) {
   const [region, setRegion] = useState('Tümü')
-  const [type, setType]     = useState('Tümü')
+  const [type, setType] = useState('Tümü')
   const [selectedProject, setSelectedProject] = useState(null)
   const [sliderOpen, setSliderOpen] = useState(false)
 
   const filtered = PROJECTS.filter((p) =>
     (region === 'Tümü' || p.region === region) &&
-    (type   === 'Tümü' || p.type   === type)
+    (type === 'Tümü' || p.type === type)
   )
-
 
   return (
     <main className="pt-20" style={{ backgroundColor: 'var(--th-bg)' }}>
 
-      {/* ── Page Hero ── */}
+      {/* Hero */}
       <section className="py-28" style={{ backgroundColor: 'var(--th-primary)' }}>
-        <div className="max-w-7xl mx-auto px-6 max-w-[var(--layout-max)] lg:px-12">
+        <div className="max-w-[var(--layout-max)] mx-auto px-6 lg:px-12">
           <div className="grid lg:grid-cols-2 gap-16 items-end">
             <div>
               <p className="text-xs font-bold tracking-[0.3em] uppercase mb-4" style={{ color: 'var(--th-text)' }}>
@@ -263,125 +1869,125 @@ export default function ProjectsPage({ setActivePage}) {
                 Dünyaya<br />İz Bırakan<br />Projeler
               </h1>
             </div>
-            <p className="text-white/50 text-lg leading-relaxed">
-              Konsept aşamasından anahtar teslimine kadar tamamladığımız global projeler. Dünya çapında imza attığımız su parkı ve eğlence merkezleri.
-            </p>
+            <div>
+              <p className="text-white/50 text-lg leading-relaxed mb-6">
+                Konsept aşamasından anahtar teslimine kadar tamamladığımız global projeler.
+                Dünya çapında imza attığımız su parkı ve eğlence merkezleri.
+              </p>
+              <div className="flex gap-8 flex-wrap">
+                <div>
+                  <p className="text-4xl font-black text-white">88+</p>
+                  <p className="text-[11px] text-white/40 tracking-wider uppercase mt-1">Tamamlanan Proje</p>
+                </div>
+                <div>
+                  <p className="text-4xl font-black text-white">30+</p>
+                  <p className="text-[11px] text-white/40 tracking-wider uppercase mt-1">Ülke</p>
+                </div>
+                <div>
+                  <p className="text-4xl font-black text-white">4</p>
+                  <p className="text-[11px] text-white/40 tracking-wider uppercase mt-1">Kıta</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      
-
-      {/* ── Filtreler ── */}
-      <div className=" top-[72px] z-30 border-b"
-        style={{ backgroundColor: 'color-mix(in srgb,var(--th-bg) 97%,transparent)', backdropFilter: 'blur(12px)', borderColor: 'color-mix(in srgb,var(--th-border) 10%,transparent)' }}>
-        <div className="max-w-[var(--layout-max)] mx-auto px-6 lg:px-14 py-4 flex flex-wrap gap-6 items-center">
+      {/* Filtreler */}
+      <div className="border-b sticky top-[72px] z-30"
+        style={{ backgroundColor: 'color-mix(in srgb,var(--th-bg) 97%,transparent)', backdropFilter: 'blur(14px)', borderColor: 'color-mix(in srgb,var(--th-border) 10%,transparent)' }}>
+        <div className="max-w-[var(--layout-max)] mx-auto px-6 lg:px-14 py-3.5 flex flex-wrap gap-4 items-center">
           <div className="flex items-center gap-2 flex-wrap">
             <span className="text-[10px] font-black tracking-widest uppercase shrink-0"
               style={{ color: 'color-mix(in srgb,var(--th-text-muted) 50%,transparent)' }}>Bölge</span>
             {REGIONS.map((r) => (
-              <button
-                key={r}
-                onClick={() => setRegion(r)}
-                className="px-4 py-1.5 rounded-full text-xs font-semibold transition-all duration-200"
-                style={region === r
-                  ? { backgroundColor: 'var(--th-primary)', color: '#fff' }
-                  : { color: 'var(--th-text-muted)' }
-                }
+              <button key={r} onClick={() => setRegion(r)}
+                className="px-3.5 py-1.5 rounded-full text-xs font-semibold transition-all duration-200"
+                style={region === r ? { backgroundColor: 'var(--th-primary)', color: '#fff' } : { color: 'var(--th-text-muted)' }}
                 onMouseEnter={(e) => { if (region !== r) e.currentTarget.style.backgroundColor = 'color-mix(in srgb,var(--th-primary) 10%,transparent)' }}
                 onMouseLeave={(e) => { if (region !== r) e.currentTarget.style.backgroundColor = 'transparent' }}
-              >
-                {r}
-              </button>
+              >{r}</button>
             ))}
           </div>
           <div className="w-px h-5 hidden sm:block" style={{ backgroundColor: 'color-mix(in srgb,var(--th-border) 20%,transparent)' }} />
           <div className="flex items-center gap-2 flex-wrap">
             <span className="text-[10px] font-black tracking-widest uppercase shrink-0"
-              style={{ color: 'color-mix(in srgb,var(--th-text-muted) 50%,transparent)' }}>Mekan</span>
+              style={{ color: 'color-mix(in srgb,var(--th-text-muted) 50%,transparent)' }}>Tür</span>
             {TYPES.map((t) => (
-              <button
-                key={t}
-                onClick={() => setType(t)}
-                className="px-4 py-1.5 rounded-full text-xs font-semibold transition-all duration-200"
-                style={type === t
-                  ? { backgroundColor: 'var(--th-polgun-blue)', color: '#fff' }
-                  : { color: 'var(--th-text-muted)' }
-                }
+              <button key={t} onClick={() => setType(t)}
+                className="px-3.5 py-1.5 rounded-full text-xs font-semibold transition-all duration-200"
+                style={type === t ? { backgroundColor: 'var(--th-polgun-blue)', color: '#fff' } : { color: 'var(--th-text-muted)' }}
                 onMouseEnter={(e) => { if (type !== t) e.currentTarget.style.backgroundColor = 'color-mix(in srgb,var(--th-polgun-blue) 10%,transparent)' }}
                 onMouseLeave={(e) => { if (type !== t) e.currentTarget.style.backgroundColor = 'transparent' }}
-              >
-                {t}
-              </button>
+              >{t}</button>
             ))}
+          </div>
+          <div className="ml-auto text-xs font-bold shrink-0" style={{ color: 'var(--th-text-muted)' }}>
+            {filtered.length} proje
           </div>
         </div>
       </div>
 
-      {/* ── Projeler ── */}
-      
-        <section className="py-16">
-          <div className="max-w-[var(--layout-max)] mx-auto px-6 lg:px-14">
-            <div className="grid lg:grid-cols-2 gap-6">
-              {filtered.map((proj) => (
-                <article
-                  key={proj.id}
-                  className="group relative overflow-hidden rounded-2xl cursor-pointer transition-all duration-300 hover:-translate-y-1"
-                  style={{ boxShadow: '0 4px 24px rgba(0,0,0,0.08)' }}
-                  onClick={() => {
-                    setSelectedProject(proj)
-                    setSliderOpen(true)
-                  }}
-                  onMouseEnter={(e) => e.currentTarget.style.boxShadow = '0 24px 72px rgba(0,0,0,0.18)'}
-                  onMouseLeave={(e) => e.currentTarget.style.boxShadow = '0 4px 24px rgba(0,0,0,0.08)'}
-                >
-                  {/* Gerçek görsel */}
-                  <div className="aspect-[16/10] overflow-hidden">
-                    <img
-                      src={proj.img}
-                      alt={proj.imgAlt}
-                      loading="lazy"
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                    />
+      {/* Grid */}
+      <section className="py-14">
+        <div className="max-w-[var(--layout-max)] mx-auto px-6 lg:px-14">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {filtered.map((proj) => (
+              <article
+                key={proj.id}
+                className="group relative overflow-hidden rounded-2xl cursor-pointer transition-all duration-300 hover:-translate-y-1"
+                style={{ boxShadow: '0 2px 16px rgba(0,0,0,0.07)' }}
+                onClick={() => { setSelectedProject(proj); setSliderOpen(true) }}
+                onMouseEnter={(e) => e.currentTarget.style.boxShadow = '0 20px 60px rgba(0,0,0,0.16)'}
+                onMouseLeave={(e) => e.currentTarget.style.boxShadow = '0 2px 16px rgba(0,0,0,0.07)'}
+              >
+                <div className="aspect-[4/3] overflow-hidden">
+                  <img src={proj.img} alt={proj.imgAlt} loading="lazy"
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                </div>
+                <div className="absolute inset-0" style={{ background: 'linear-gradient(to top,rgba(0,0,0,0.78) 0%,rgba(0,0,0,0.12) 52%,transparent 100%)' }} />
+                {proj.slides.length > 1 && (
+                  <div className="absolute top-3 right-3 flex items-center gap-1 px-2.5 py-1 rounded-full text-white text-[10px] font-bold"
+                    style={{ background: 'rgba(0,0,0,0.55)', backdropFilter: 'blur(6px)' }}>
+                    <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                    </svg>
+                    {proj.slides.length}
                   </div>
-                  {/* Gradient overlay */}
-                  <div className="absolute inset-0" style={{ background: 'linear-gradient(to top,rgba(0,0,0,0.75) 0%,rgba(0,0,0,0.2) 50%,transparent 100%)' }} />
-                  {/* İçerik */}
-                  <div className="absolute bottom-0 left-0 right-0 p-8">
-                    <h2 className="text-2xl font-black text-white mb-1 transition-colors group-hover:opacity-90">
-                      {proj.name}
-                    </h2>
-                    <p className="text-sm text-white/50">{proj.location}</p>
-                  </div>
-                </article>
-              ))}
-            </div>
-            {filtered.length === 0 && (
-              <div className="text-center py-24" style={{ color: 'color-mix(in srgb,var(--th-text-muted) 50%,transparent)' }}>
-                <p className="text-lg font-semibold">Bu filtrede proje bulunamadı.</p>
-              </div>
-            )}
+                )}
+                <div className="absolute top-3 left-3">
+                  <span className="px-2.5 py-1 rounded-full text-[10px] font-bold text-white"
+                    style={{ background: 'rgba(0,0,0,0.55)', backdropFilter: 'blur(6px)' }}>{proj.type}</span>
+                </div>
+                <div className="absolute bottom-0 left-0 right-0 p-5">
+                  <h2 className="text-lg font-black text-white leading-tight mb-0.5">{proj.name}</h2>
+                  <p className="text-sm text-white/55">{proj.location}</p>
+                </div>
+              </article>
+            ))}
           </div>
-        </section>
+          {filtered.length === 0 && (
+            <div className="text-center py-24" style={{ color: 'var(--th-text-muted)' }}>
+              <p className="text-lg font-semibold">Bu filtrede proje bulunamadı.</p>
+            </div>
+          )}
+        </div>
+      </section>
 
-
-      {/* ── Slider Modal ── */}
+      {/* Slider Modal */}
       {selectedProject && (
-        <ProjectSliderModal
-          project={selectedProject}
-          isOpen={sliderOpen}
-          onClose={() => setSliderOpen(false)}
-        />
+        <ProjectSliderModal project={selectedProject} isOpen={sliderOpen} onClose={() => setSliderOpen(false)} />
       )}
 
-      {/* ── CTA ── */}
+      {/* CTA */}
       <section className="py-32" style={{ backgroundColor: 'var(--th-bg)' }}>
         <div className="max-w-[var(--layout-max)] mx-auto px-6 lg:px-14">
-          <div className="relative rounded-3xl overflow-hidden px-12 py-20" style={{ background: 'linear-gradient(135deg,var(--th-primary) 0%,var(--th-polgun-blue) 100%)' }}>
+          <div className="relative rounded-3xl overflow-hidden px-12 py-20"
+            style={{ background: 'linear-gradient(135deg,var(--th-primary) 0%,var(--th-polgun-blue) 100%)' }}>
             <div className="absolute inset-0 opacity-10">
               <svg viewBox="0 0 1400 300" className="w-full h-full" preserveAspectRatio="xMidYMid slice">
-                <circle cx="200" cy="150" r="250" fill="white"/>
-                <circle cx="1200" cy="150" r="200" fill="white"/>
+                <circle cx="200" cy="150" r="250" fill="white" />
+                <circle cx="1200" cy="150" r="200" fill="white" />
               </svg>
             </div>
             <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-10">
@@ -390,9 +1996,8 @@ export default function ProjectsPage({ setActivePage}) {
                 <h2 className="text-3xl font-black text-white">Projeniz bu listede olsun.</h2>
                 <p className="text-white/40 mt-2 max-w-md">Hayalinizdeki su parkını veya eğlence merkezini tasarlamak için uzman mühendis ve mimar kadromuzla iletişime geçin.</p>
               </div>
-              <button
-                onClick={() => setActivePage('contact')}
-                className="shrink-0 px-10 py-4 text-white font-bold text-sm rounded-full transition-all duration-300 hover:-translate-y-1"
+              <button onClick={() => setActivePage('contact')}
+                className="shrink-0 px-10 py-4 font-bold text-sm rounded-full transition-all duration-300 hover:-translate-y-1"
                 style={{ backgroundColor: '#FFFFFF', color: 'var(--th-primary-darker)', boxShadow: '0 0 40px rgba(0,0,0,0.2)' }}
                 onMouseEnter={(e) => e.currentTarget.style.opacity = '0.9'}
                 onMouseLeave={(e) => e.currentTarget.style.opacity = '1'}

@@ -7,6 +7,9 @@ import navatu2 from '../assets/navatu/navatu2.png'
 import savana1 from '../assets/savana/savana1.png'
 import savana2 from '../assets/savana/savana2.png'
 
+// CMS API — relative paths when frontend and backend share a server (see VITE_API_URL in .env.local for dev proxy)
+const API_URL = ''
+
 import bigholeImg from '../assets/products/slides/bighole.png'
 import bigraftImg from '../assets/products/slides/bigraft.png'
 import familyraftImg from '../assets/products/slides/familyraft.png'
@@ -547,18 +550,25 @@ export default function ProductsPage({ setActivePage}) {
 	const [catalogs, setCatalogs] = useState([])
 
 	useEffect(() => {
+		let cancelled = false
+
 		async function fetchCatalogs() {
 			try {
-				const res = await fetch('/api/catalog/visible');
-				const data = await res.json();
-				if (Array.isArray(data)) {
-					setCatalogs(data);
+				const res = await fetch(`${API_URL}/api/catalog/visible`)
+				if (!res.ok) return
+				const contentType = res.headers.get('content-type') ?? ''
+				if (!contentType.includes('json')) return
+				const data = await res.json()
+				if (!cancelled && Array.isArray(data)) {
+					setCatalogs(data)
 				}
-			} catch (err) {
-				console.error('Failed to fetch catalogs:', err);
+			} catch {
+				// CMS unavailable in local dev — Katalog İndir shows fallback message
 			}
 		}
-		fetchCatalogs();
+
+		fetchCatalogs()
+		return () => { cancelled = true }
 	}, []);
 
 	// Badge stilleri
@@ -606,7 +616,7 @@ export default function ProductsPage({ setActivePage}) {
 									onClick={() => {
 										if (catalogs.length > 0) {
 											const path = catalogs[0].file_path.startsWith('/') ? catalogs[0].file_path : '/' + catalogs[0].file_path;
-											window.open(path, '_blank');
+											window.open(`${API_URL}${path}`, '_blank', 'noopener,noreferrer');
 										} else {
 											alert('Şu anda indirilebilir katalog bulunmamaktadır.');
 										}

@@ -1,7 +1,9 @@
 // ============================================================
 // CONTACT PAGE — Form + Lokasyon + İletişim Bilgileri
-// ============================================================
 import { useState } from 'react'
+
+// CMS API — uses relative paths (frontend and backend are on the same server)
+const API_URL = ''
 
 // ── Input Bileşeni ─────────────────────────────────────────
 function Field({ label, type = 'text', placeholder, name, value, onChange, required = false }) {
@@ -121,12 +123,44 @@ export default function ContactPage({ setActivePage }) {
   })
   const [sent, setSent] = useState(false)
   const [activeMap, setActiveMap] = useState('mugla')
+  
+  const [submitting, setSubmitting] = useState(false)
+  const [submitError, setSubmitError] = useState('')
 
   const handleChange = (e) => setForm((p) => ({ ...p, [e.target.name]: e.target.value }))
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    setSent(true)
+    setSubmitting(true)
+    setSubmitError('')
+
+    try {
+      const payload = {
+        company_name: form.company,
+        contact_name: form.name,
+        email: form.email,
+        phone: form.phone,
+        interest_area: form.interest,
+        message: form.message,
+      }
+
+      const response = await fetch(`${API_URL}/api/partnership/apply`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      })
+
+      if (!response.ok) {
+        const data = await response.json().catch(() => ({}))
+        throw new Error(data.error || 'Mesaj gönderilemedi, lütfen tekrar deneyin.')
+      }
+
+      setSent(true)
+    } catch (err) {
+      setSubmitError(err.message || 'Bir hata oluştu.')
+    } finally {
+      setSubmitting(false)
+    }
   }
 
   return (
@@ -243,13 +277,20 @@ export default function ContactPage({ setActivePage }) {
                     </span>
                   </label>
 
-                  {/* Submit */}
+                  {/* Error Message */}
+                  {submitError && (
+                    <div className="text-red-500 text-xs font-bold px-4 py-3 bg-red-50 border border-red-200 rounded-xl">
+                      {submitError}
+                    </div>
+                  )}
+
+                  {/* Gönder Butonu */}
                   <button
                     type="submit"
-                    className="w-full sm:w-auto sm:self-start px-10 py-4 text-white text-sm font-semibold rounded-full transition-all duration-200
-                      bg-[var(--th-polgun-blue)] hover:opacity-90 hover:shadow-xl hover:shadow-[color-mix(in_srgb,var(--th-polgun-blue)_25%,transparent)] hover:-translate-y-0.5"
+                    disabled={submitting}
+                    className="w-full sm:w-auto self-start px-8 py-3.5 bg-[#22ABE6] hover:bg-[#1a8fc2] disabled:opacity-70 disabled:cursor-not-allowed text-white font-bold text-xs rounded-xl shadow-md shadow-blue-500/10 hover:shadow-lg transition-all duration-200 transform active:scale-[0.98] cursor-pointer"
                   >
-                    Talebi Gönder
+                    {submitting ? 'Gönderiliyor...' : 'Mesajı Gönder'}
                   </button>
                 </form>
               )}

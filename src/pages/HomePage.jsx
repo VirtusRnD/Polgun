@@ -315,7 +315,7 @@ export default function HomePage({ setActivePage }) {
                 >
                   {HERO_IMAGES.map((img, idx) => (
                     <img
-                      key={img.title}
+                      key={`${img.title}-${idx}`}
                       src={img.img}
                       alt={img.title}
                       loading={idx === heroImageIndex ? 'eager' : 'lazy'}

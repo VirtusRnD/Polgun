@@ -1,8 +1,11 @@
-import { useState, useRef } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import careerCover from '../assets/career/career-cover.png'
 import careerSample from '../assets/career/career-sample.png'
 
-// Positions array reflecting the mockup exactly
+// CMS API — uses relative paths (frontend and backend are on the same server)
+const API_URL = ''
+
+/* Mock positions retained only as a reference. Live jobs must be created in CMS.
 const POSITIONS = [
   {
     id: 'arge-muh',
@@ -55,6 +58,7 @@ const POSITIONS = [
     icon: 'satinalma',
   },
 ]
+*/
 
 // 6 core pillars for "Neden Polgün?"
 const WHY_POLGUN = [
@@ -241,6 +245,10 @@ export default function CareerPage() {
   const [selectedType, setSelectedType] = useState('All')
   const [searchQuery, setSearchQuery] = useState('')
 
+  // Live positions are managed exclusively in the CMS.
+  const [livePositions, setLivePositions] = useState([])
+  const selectedJobIdRef = useRef(null) // tracks the job_id when user clicks "Başvur"
+
   // Form State
   const [form, setForm] = useState({
     name: '',
@@ -256,10 +264,44 @@ export default function CareerPage() {
   const [cvFile, setCvFile] = useState(null)
   const [isDragOver, setIsDragOver] = useState(false)
   const [submitted, setSubmitted] = useState(false)
+  const [submitting, setSubmitting] = useState(false)
+  const [submitError, setSubmitError] = useState('')
 
   // Form reference for smooth scrolling
   const applyFormRef = useRef(null)
   const fileInputRef = useRef(null)
+
+  // Fetch live job listings from CMS on mount
+  useEffect(() => {
+    let cancelled = false
+    async function loadJobs() {
+      try {
+        const res = await fetch(`${API_URL}/api/career/jobs`)
+        if (!res.ok) throw new Error('API error')
+        const data = await res.json()
+        if (!cancelled && Array.isArray(data)) {
+          // Map CMS job shape to the shape the UI expects
+          setLivePositions(data.map((job) => ({
+            id: String(job.id),
+            cmsId: job.id,           // numeric id used when submitting application
+            title: job.title || '',
+            department: job.location || 'Genel', // CMS jobs have location, not department
+            location: job.location || 'Muğla',
+            type: job.type || 'Tam Zamanlı',
+            date: job.created_at
+              ? new Date(job.created_at).toLocaleDateString('tr-TR', { day: 'numeric', month: 'long', year: 'numeric' })
+              : '',
+            desc: job.description || '',
+            icon: 'default',
+          })))
+        }
+      } catch {
+        // Keep the list empty when the CMS is unavailable.
+      }
+    }
+    loadJobs()
+    return () => { cancelled = true }
+  }, [])
 
   // Handler for regular inputs
   const handleChange = (e) => {
@@ -302,8 +344,8 @@ export default function CareerPage() {
     if (fileInputRef.current) fileInputRef.current.value = ''
   }
 
-  // Handle Form Submission
-  const handleSubmit = (e) => {
+  // Handle Form Submission — POSTs to CMS /api/career/apply as multipart/form-data
+  const handleSubmit = async (e) => {
     e.preventDefault()
     if (!form.kvkk) {
       alert('Lütfen Aday Çalışan Aydınlatma Metni\'ni onaylayın.')
@@ -313,27 +355,63 @@ export default function CareerPage() {
       alert('Lütfen CV belgenizi yükleyin.')
       return
     }
-    setSubmitted(true)
+
+    setSubmitting(true)
+    setSubmitError('')
+    try {
+      const fd = new FormData()
+      fd.append('name', form.name)
+      fd.append('email', form.email)
+      fd.append('phone', form.phone)
+      // Combine city + locationPreference + note into a single message field
+      const messageParts = []
+      if (form.city) messageParts.push(`Şehir: ${form.city}`)
+      if (form.locationPreference) messageParts.push(`Lokasyon tercihi: ${form.locationPreference}`)
+      if (form.note) messageParts.push(form.note)
+      fd.append('message', messageParts.join('\n'))
+      // Attach job_id only when the applicant clicked "Başvur" on a specific listing
+      if (selectedJobIdRef.current) {
+        fd.append('job_id', String(selectedJobIdRef.current))
+      }
+      fd.append('cv', cvFile)
+
+      const res = await fetch(`${API_URL}/api/career/apply`, {
+        method: 'POST',
+        body: fd,
+      })
+
+      if (!res.ok) {
+        const err = await res.json().catch(() => ({}))
+        throw new Error(err.error || 'Başvuru gönderilemedi.')
+      }
+
+      setSubmitted(true)
+    } catch (err) {
+      setSubmitError(err.message || 'Bir hata oluştu. Lütfen tekrar deneyin.')
+    } finally {
+      setSubmitting(false)
+    }
   }
 
-  // Filter dynamic logic
-  const filteredPositions = POSITIONS.filter((pos) => {
+  // Filter dynamic logic — uses livePositions (CMS data or static fallback)
+  const filteredPositions = livePositions.filter((pos) => {
     const deptMatch = selectedDept === 'All' || pos.department === selectedDept
     const locMatch = selectedLoc === 'All' || pos.location === selectedLoc
     const typeMatch = selectedType === 'All' || pos.type === selectedType
-    const searchMatch = pos.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
+    const searchMatch = pos.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                         pos.desc.toLowerCase().includes(searchQuery.toLowerCase())
     return deptMatch && locMatch && typeMatch && searchMatch
   })
 
-  // Action: Clicking "Başvur" on a specific card
+  // Action: Clicking "Başvur" on a specific listing
   const handleApplyToPosition = (position) => {
+    // Store the CMS job id (numeric) so the form submission includes it
+    selectedJobIdRef.current = position.cmsId ?? null
     setForm((prev) => ({
       ...prev,
       department: position.department,
       note: `Sayın Yetkili,\n\n${position.title} pozisyonu için başvuruda bulunmak istiyorum.`,
     }))
-    
     // Smooth scroll to the general application form
     applyFormRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' })
   }
@@ -347,10 +425,10 @@ export default function CareerPage() {
     setCurrentSlide((prev) => (prev === 0 ? TESTIMONIALS.length - 1 : prev - 1))
   }
 
-  // Unique lists from data for filters
-  const uniqueDepartments = ['All', ...new Set(POSITIONS.map(p => p.department))]
-  const uniqueLocations = ['All', 'Muğla', 'Marmara Teknopark']
-  const uniqueTypes = ['All', 'Tam Zamanlı', 'Yarı Zamanlı']
+  // Unique lists from live positions for filters
+  const uniqueDepartments = ['All', ...new Set(livePositions.map((p) => p.department))]
+  const uniqueLocations = ['All', ...new Set(livePositions.map((p) => p.location))]
+  const uniqueTypes = ['All', ...new Set(livePositions.map((p) => p.type))]
 
   // Position-specific icon selectors
   const getPositionIcon = (key) => {
@@ -845,15 +923,22 @@ export default function CareerPage() {
                       </label>
                     </div>
 
+                    {/* Error Message */}
+                    {submitError && (
+                      <div className="text-red-500 text-xs font-bold px-4 py-3 bg-red-50 border border-red-200 rounded-xl">
+                        {submitError}
+                      </div>
+                    )}
+
                     {/* Submit Button */}
                     <button 
                       type="submit"
-                      className="w-full py-3.5 bg-[#22ABE6] hover:bg-[#1a8fc2] text-white font-bold text-xs rounded-xl shadow-md shadow-blue-500/10 hover:shadow-lg transition-all duration-200 transform active:scale-[0.98] cursor-pointer"
+                      disabled={submitting}
+                      className="w-full py-3.5 bg-[#22ABE6] hover:bg-[#1a8fc2] disabled:opacity-70 disabled:cursor-not-allowed text-white font-bold text-xs rounded-xl shadow-md shadow-blue-500/10 hover:shadow-lg transition-all duration-200 transform active:scale-[0.98] cursor-pointer"
                     >
-                      Başvuruyu Gönder
+                      {submitting ? 'Gönderiliyor...' : 'Başvuruyu Gönder'}
                     </button>
-                    
-                    {/* Security Info */}
+
                     <div className="flex items-center justify-center gap-1.5 text-[10px] text-gray-400 text-center pt-2">
                       <svg className="w-3.5 h-3.5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
