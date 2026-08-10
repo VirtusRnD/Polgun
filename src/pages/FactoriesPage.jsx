@@ -1,8 +1,8 @@
 import { useEffect } from 'react'
 
-import istanbulImg from '../assets/factories/istanbul-factory.png'
-import bursaImg from '../assets/factories/bursa-factory.png'
-import muglaImg from '../assets/factories/mugla-factory.png'
+import istanbulImg from '../assets/factories/istanbul-factory.avif'
+import bursaImg from '../assets/factories/bursa-factory.avif'
+import muglaImg from '../assets/factories/mugla-factory.avif'
 
 const FACTORIES = [
   {

@@ -4,8 +4,8 @@
 import { useState, useEffect } from 'react'
 
 // Ziyaret görselleri
-import egekafVisit from '../assets/awards/egekaf-visit.jpeg'
-import mskuRectorVisit from '../assets/awards/msku-rector-visit.jpeg'
+import egekafVisit from '../assets/awards/egekaf-visit.avif'
+import mskuRectorVisit from '../assets/awards/msku-rector-visit.avif'
 
 /* Mock awards retained only as a reference. Awards must be published in CMS.
 const AWARDS = [

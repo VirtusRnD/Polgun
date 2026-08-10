@@ -1,9 +1,9 @@
 // ============================================================
 // ARGE SAYFASI — ArGe Metni
 // ============================================================
-import heroImage from '../assets/polgun-featured-projects-4.jpeg'
-import navatu1 from '../assets/navatu/navatu1.png'
-import savana1 from '../assets/savana/savana1.png'
+import heroImage from '../assets/polgun-featured-projects-4.avif'
+import navatu1 from '../assets/navatu/navatu1.avif'
+import savana1 from '../assets/savana/savana1.avif'
 
 export default function ArGePage({ setActivePage }) {
   return (

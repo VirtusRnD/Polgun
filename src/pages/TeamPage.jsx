@@ -2,16 +2,16 @@
 // TEAM PAGE — Ekibimiz (About/Team)
 // ============================================================
 import { useEffect } from 'react'
-import heroImage from '../assets/polgun-featured-projects-4.jpeg'
+import heroImage from '../assets/polgun-featured-projects-4.avif'
 
 // Üretim görselleri
-import cncOperator from '../assets/production/cnc-operator.png'
-import pipeCutting from '../assets/production/pipe-cutting.png'
-import paintApplication from '../assets/production/paint-application.png'
-import inotekCnc from '../assets/production/inotek-cnc.png'
-import compositeControl from '../assets/production/composite-control.png'
-import mechanicalOperator from '../assets/production/mechanical-operator.png'
-import cncCutting from '../assets/production/cnc-cutting.png'
+import cncOperator from '../assets/production/cnc-operator.avif'
+import pipeCutting from '../assets/production/pipe-cutting.avif'
+import paintApplication from '../assets/production/paint-application.avif'
+import inotekCnc from '../assets/production/inotek-cnc.avif'
+import compositeControl from '../assets/production/composite-control.avif'
+import mechanicalOperator from '../assets/production/mechanical-operator.avif'
+import cncCutting from '../assets/production/cnc-cutting.avif'
 
 const PRODUCTION_SECTIONS = [
   {

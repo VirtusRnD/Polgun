@@ -3,9 +3,9 @@
 // ============================================================
 import { useEffect } from 'react'
 
-import bursaFactory from '../assets/factories/bursa-factory.png'
-import istanbulFactory from '../assets/factories/istanbul-factory.png'
-import muglaFactory from '../assets/factories/mugla-factory.png'
+import bursaFactory from '../assets/factories/bursa-factory.avif'
+import istanbulFactory from '../assets/factories/istanbul-factory.avif'
+import muglaFactory from '../assets/factories/mugla-factory.avif'
 
 const FACTORIES = [
   { city: 'Muğla', label: 'Merkez Üretim Tesisi', desc: 'Ana üretim ve Ar-Ge merkezi. Çelik konstrüksiyon, kompozit üretim ve dijital imalat altyapısının bulunduğu merkez tesis.', img: muglaFactory },

@@ -5,28 +5,28 @@
 import { useState, useEffect, useRef } from 'react'
 
 // Pirate Theme — yeni görseller
-import pirate1 from '../assets/splash/pirateThemeNew/pirate1.jpg'
-import pirate2 from '../assets/splash/pirateThemeNew/pirate2.jpg'
-import pirate3 from '../assets/splash/pirateThemeNew/pirate3.jpg'
-import pirate4 from '../assets/splash/pirateThemeNew/pirate4.jpg'
-import pirate5 from '../assets/splash/pirateThemeNew/pirate5.jpg'
-import pirate6 from '../assets/splash/pirateThemeNew/pirate6.png'
-import pirate7 from '../assets/splash/pirateThemeNew/pirate7.png'
-import pirate8 from '../assets/splash/pirateThemeNew/pirate8.jpg'
+import pirate1 from '../assets/splash/pirateThemeNew/pirate1.avif'
+import pirate2 from '../assets/splash/pirateThemeNew/pirate2.avif'
+import pirate3 from '../assets/splash/pirateThemeNew/pirate3.avif'
+import pirate4 from '../assets/splash/pirateThemeNew/pirate4.avif'
+import pirate5 from '../assets/splash/pirateThemeNew/pirate5.avif'
+import pirate6 from '../assets/splash/pirateThemeNew/pirate6.avif'
+import pirate7 from '../assets/splash/pirateThemeNew/pirate7.avif'
+import pirate8 from '../assets/splash/pirateThemeNew/pirate8.avif'
 
 // Underwater Theme — yeni görseller
-import underwater1 from '../assets/splash/underwaterThemeNew/underwater1.jpg'
-import underwater2 from '../assets/splash/underwaterThemeNew/underwater2.jpg'
-import underwater3 from '../assets/splash/underwaterThemeNew/underwater3.jpg'
-import underwater4 from '../assets/splash/underwaterThemeNew/underwater4.jpg'
-import underwater5 from '../assets/splash/underwaterThemeNew/underwater5.jpg'
-import underwater6 from '../assets/splash/underwaterThemeNew/underwater6.jpg'
-import underwater7 from '../assets/splash/underwaterThemeNew/underwater7.jpg'
+import underwater1 from '../assets/splash/underwaterThemeNew/underwater1.avif'
+import underwater2 from '../assets/splash/underwaterThemeNew/underwater2.avif'
+import underwater3 from '../assets/splash/underwaterThemeNew/underwater3.avif'
+import underwater4 from '../assets/splash/underwaterThemeNew/underwater4.avif'
+import underwater5 from '../assets/splash/underwaterThemeNew/underwater5.avif'
+import underwater6 from '../assets/splash/underwaterThemeNew/underwater6.avif'
+import underwater7 from '../assets/splash/underwaterThemeNew/underwater7.avif'
 
 // Candy Theme — yeni görseller
-import candy1 from '../assets/splash/candyTheme/candy1.jpg'
-import candy2 from '../assets/splash/candyTheme/candy2.jpg'
-import candy3 from '../assets/splash/candyTheme/candy3.jpg'
+import candy1 from '../assets/splash/candyTheme/candy1.avif'
+import candy2 from '../assets/splash/candyTheme/candy2.avif'
+import candy3 from '../assets/splash/candyTheme/candy3.avif'
 
 // ── Tema Verisi ────────────────────────────────────────────
 const THEMES = [

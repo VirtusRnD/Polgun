@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from 'react'
-import careerCover from '../assets/career/career-cover.png'
-import careerSample from '../assets/career/career-sample.png'
+import careerCover from '../assets/career/career-cover.avif'
+import careerSample from '../assets/career/career-sample.avif'
 
 // CMS API — uses relative paths (frontend and backend are on the same server)
 const API_URL = ''

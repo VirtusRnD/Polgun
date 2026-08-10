@@ -2,25 +2,25 @@ import { useState, useEffect } from 'react'
 // ============================================================
 // ABOUT PAGE — Gerçek metinler + Ödüller & Ziyaretler bölümü
 // ============================================================
-import heroImage from '../assets/polgun-featured-projects-4.jpeg'
+import heroImage from '../assets/polgun-featured-projects-4.avif'
 
 // Ziyaret görselleri
-import egekafVisit from '../assets/awards/egekaf-visit.jpeg'
-import mskuRectorVisit from '../assets/awards/msku-rector-visit.jpeg'
+import egekafVisit from '../assets/awards/egekaf-visit.avif'
+import mskuRectorVisit from '../assets/awards/msku-rector-visit.avif'
 
 // Üretim görselleri
-import cncOperator from '../assets/production/cnc-operator.png'
-import pipeCutting from '../assets/production/pipe-cutting.png'
-import paintApplication from '../assets/production/paint-application.png'
-import inotekCnc from '../assets/production/inotek-cnc.png'
-import compositeControl from '../assets/production/composite-control.png'
-import mechanicalOperator from '../assets/production/mechanical-operator.png'
-import cncCutting from '../assets/production/cnc-cutting.png'
+import cncOperator from '../assets/production/cnc-operator.avif'
+import pipeCutting from '../assets/production/pipe-cutting.avif'
+import paintApplication from '../assets/production/paint-application.avif'
+import inotekCnc from '../assets/production/inotek-cnc.avif'
+import compositeControl from '../assets/production/composite-control.avif'
+import mechanicalOperator from '../assets/production/mechanical-operator.avif'
+import cncCutting from '../assets/production/cnc-cutting.avif'
 
 // Fabrika görselleri
-import bursaFactory from '../assets/factories/bursa-factory.png'
-import istanbulFactory from '../assets/factories/istanbul-factory.png'
-import muglaFactory from '../assets/factories/mugla-factory.png'
+import bursaFactory from '../assets/factories/bursa-factory.avif'
+import istanbulFactory from '../assets/factories/istanbul-factory.avif'
+import muglaFactory from '../assets/factories/mugla-factory.avif'
 
 /* Mock awards retained only as a reference. Awards must be published in CMS.
 const AWARDS = [
