@@ -8,7 +8,7 @@ import paintApplication from '../assets/production/paint-application.avif'
 import inotekCnc from '../assets/production/inotek-cnc.avif'
 import compositeControl from '../assets/production/composite-control.avif'
 import mechanicalOperator from '../assets/production/mechanical-operator.avif'
-import cncCutting from '../assets/production/cnc-cutting.png'
+import cncCutting from '../assets/production/cnc-cutting.avif'
 
 // ── Hizmet Adımları ────────────────────────────────────────
 const STEPS = [
