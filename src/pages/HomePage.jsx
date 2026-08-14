@@ -3,6 +3,7 @@
 // "Let's color the water" hero
 // ============================================================
 import { useState, useEffect } from 'react'
+import { Link, useOutletContext } from 'react-router-dom';
 
 // ── Referans Logo İmportları ───────────────────────────────
 import refAmara from '../assets/references/amara-prestige-elite-logo.avif'
@@ -185,7 +186,8 @@ const CAROUSEL_IMAGES = [
 ]
 
 // ── Sayfa bileşeni ─────────────────────────────────────────
-export default function HomePage({ setActivePage }) {
+export default function HomePage() {
+  const { setActivePage } = useOutletContext();
   const [heroImageIndex, setHeroImageIndex] = useState(0)
   const [carouselImageIndex, setCarouselImageIndex] = useState(0)
 
@@ -382,15 +384,15 @@ export default function HomePage({ setActivePage }) {
                 Su parkının her<br />köşesi için çözüm
               </h2>
             </div>
-            <button
-              onClick={() => setActivePage('products')}
+            <Link
+              to="/products"
               className="shrink-0 px-7 py-3.5 text-sm font-bold rounded-full transition-all duration-200 hover:-translate-y-0.5"
               style={{ backgroundColor: 'var(--th-primary)', color: '#fff' }}
               onMouseEnter={(e) => e.currentTarget.style.opacity = '0.85'}
               onMouseLeave={(e) => e.currentTarget.style.opacity = '1'}
             >
               Tüm Ürünler
-            </button>
+            </Link>
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -400,9 +402,9 @@ export default function HomePage({ setActivePage }) {
               { title: 'Ar-Ge Ürünleri', sub: 'Navatu & Savana', img: navatu1, g: 'linear-gradient(to top,rgba(0,0,0,0.4),transparent)' },
               { title: 'Splash Zone', sub: 'Çocuk & Aile', img: frenzy, g: 'linear-gradient(to top,rgba(0,0,0,0.4),transparent)' },
             ].map((cat, i) => (
-              <button
+              <Link
                 key={i}
-                onClick={() => setActivePage('products')}
+                to="/products"
                 className="group relative h-72 rounded-2xl overflow-hidden text-left"
                 style={{
                   backgroundImage: `${cat.g}, url(${cat.img})`,
@@ -429,7 +431,7 @@ export default function HomePage({ setActivePage }) {
                     </div>
                   </div>
                 </div>
-              </button>
+              </Link>
             ))}
           </div>
         </div>
@@ -524,15 +526,15 @@ export default function HomePage({ setActivePage }) {
                   </div>
                 ))}
               </div>
-              <button
-                onClick={() => setActivePage('about')}
+              <Link
+                to="/about"
                 className="self-start px-7 py-3 text-sm font-bold rounded-full transition-all duration-200 hover:-translate-y-0.5"
                 style={{ backgroundColor: 'var(--th-primary)', color: '#fff' }}
                 onMouseEnter={(e) => e.currentTarget.style.opacity = '0.85'}
                 onMouseLeave={(e) => e.currentTarget.style.opacity = '1'}
               >
                 Hakkımızda
-              </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -592,24 +594,24 @@ export default function HomePage({ setActivePage }) {
                 Dünyanın dört bir yanındaki su parklarında hayatı renklendiriyoruz. Sıradaki projeniz için bizimle iletişime geçin.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
-                <button
-                  onClick={() => setActivePage('contact')}
+                <Link
+                  to="/contact"
                   className="px-10 py-4 font-bold text-sm tracking-wide rounded-full transition-all duration-300 hover:-translate-y-1"
                   style={{ backgroundColor: '#FFFFFF', color: 'var(--th-primary-darker)', boxShadow: '0 0 40px rgba(0,0,0,0.2)' }}
                   onMouseEnter={(e) => e.currentTarget.style.opacity = '0.9'}
                   onMouseLeave={(e) => e.currentTarget.style.opacity = '1'}
                 >
                   Hemen Teklif Al
-                </button>
-                <button
-                  onClick={() => setActivePage('projects')}
+                </Link>
+                <Link
+                  to="/projects"
                   className="px-10 py-4 font-bold text-sm tracking-wide rounded-full transition-all duration-300 hover:-translate-y-1"
                   style={{ background: 'rgba(255,255,255,0.2)', backdropFilter: 'blur(12px)', border: '2px solid rgba(255,255,255,0.4)', color: 'rgba(255,255,255,0.95)' }}
                   onMouseEnter={(e) => e.currentTarget.style.background = 'rgba(255,255,255,0.3)'}
                   onMouseLeave={(e) => e.currentTarget.style.background = 'rgba(255,255,255,0.2)'}
                 >
                   Projelerimizi İncele
-                </button>
+                </Link>
               </div>
             </div>
           </div>

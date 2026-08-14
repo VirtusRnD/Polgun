@@ -3,7 +3,16 @@
 // Sabit tema: Navy + Anthracite + Teal
 // Sayfa-spesifik renk paletleri
 // ============================================================
-import { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react';
+import {
+  Routes,
+  Route,
+  useLocation,
+  Outlet,
+  useNavigate,
+  createSearchParams,
+} from 'react-router-dom';
+
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import HomePage from './pages/HomePage'
@@ -21,6 +30,16 @@ import HistoryPage from './pages/HistoryPage'
 import AwardsPage from './pages/AwardsPage'
 import NewsPage from './pages/NewsPage'
 import { COLOR_PALETTES } from './constants/colorPalettes'
+
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
 
 function clamp01(n) {
   return Math.min(1, Math.max(0, n))
@@ -66,23 +85,6 @@ function shade(hex, amount) {
   return mixHex(hex, '#FFFFFF', amount)
 }
 
-const PAGES = {
-  home: HomePage,
-  products: ProductsPage,
-  'splash-tower': SplashTowerPage,
-  services: ServicesPage,
-  projects: ProjectsPage,
-  about: AboutPage,
-  contact: ContactPage,
-  career: CareerPage,
-  arge: ArGePage,
-  factories: FactoriesPage,
-  team: TeamPage,
-  history: HistoryPage,
-  awards: AwardsPage,
-  news: NewsPage,
-}
-
 // Sayfa-spesifik renk paletleri
 const PAGE_COLOR_PALETTES = {
   home: 1,         // Orijinal renk paleti
@@ -99,29 +101,83 @@ const PAGE_COLOR_PALETTES = {
   news: 1,         // Default
 }
 
+const pageToPathMapping = {
+  home: '/',
+  products: '/products',
+  'splash-tower': '/splash-tower',
+  services: '/services',
+  projects: '/projects',
+  about: '/about',
+  contact: '/contact',
+  career: '/career',
+  arge: '/arge',
+  factories: '/factories',
+  team: '/team',
+  history: '/history',
+  awards: '/awards',
+  news: '/news',
+};
+
+const MainLayout = ({ palette }) => {
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const activePage = Object.keys(pageToPathMapping).find(key => pageToPathMapping[key] === location.pathname) || 'home';
+
+  const setActivePage = (page, anchor = null) => {
+    const path = pageToPathMapping[page] || '/';
+    if (anchor) {
+      navigate({ pathname: path, search: createSearchParams({ anchor }).toString() });
+    } else {
+      navigate(path);
+    }
+  };
+
+  return (
+    <>
+      <Navbar activePage={activePage} setActivePage={setActivePage} colorPalette={palette} location={location} />
+      <div className="flex-1">
+        <Outlet context={{ setActivePage, colorPalette: palette }} />
+      </div>
+      <Footer setActivePage={setActivePage} />
+    </>
+  );
+};
+
 export default function App() {
-  const [activePage, setActivePage] = useState('home')
-  const [colorPalette, setColorPalette] = useState(PAGE_COLOR_PALETTES.home)
-
-
-  const PageComponent = PAGES[activePage] ?? HomePage
-  const palette = COLOR_PALETTES[colorPalette] || COLOR_PALETTES[1]
+  const location = useLocation();
+  const activePage = Object.keys(pageToPathMapping).find(key => pageToPathMapping[key] === location.pathname) || 'home';
+  const colorPaletteId = PAGE_COLOR_PALETTES[activePage] || 1;
+  const palette = COLOR_PALETTES[colorPaletteId] || COLOR_PALETTES[1];
 
   // Sayfaların çoğu `var(--th-*)` kullanıyor; index.css sabit değerlerini burada palette'e göre override ediyoruz.
   const themeVars = {
     '--th-primary': palette.primary,
     '--th-primary-darker': shade(palette.primary, -0.34),
-    
     '--th-bg': palette.light,
   }
 
   return (
     <div className="min-h-screen flex flex-col" data-theme="A" style={themeVars}>
-      <Navbar activePage={activePage} setActivePage={setActivePage} colorPalette={colorPalette} />
-      <div className="flex-1">
-        <PageComponent setActivePage={setActivePage} colorPalette={colorPalette} setColorPalette={setColorPalette} />
-      </div>
-      <Footer setActivePage={setActivePage} />
+      <ScrollToTop />
+      <Routes>
+        <Route element={<MainLayout palette={palette} />}>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/products" element={<ProductsPage />} />
+          <Route path="/splash-tower" element={<SplashTowerPage />} />
+          <Route path="/services" element={<ServicesPage />} />
+          <Route path="/projects" element={<ProjectsPage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+          <Route path="/career" element={<CareerPage />} />
+          <Route path="/arge" element={<ArGePage />} />
+          <Route path="/factories" element={<FactoriesPage />} />
+          <Route path="/team" element={<TeamPage />} />
+          <Route path="/history" element={<HistoryPage />} />
+          <Route path="/awards" element={<AwardsPage />} />
+          <Route path="/news" element={<NewsPage />} />
+        </Route>
+      </Routes>
     </div>
   )
 }

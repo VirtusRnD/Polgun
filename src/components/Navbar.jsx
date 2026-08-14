@@ -3,7 +3,8 @@
 // Servislerimiz / Projelerimiz / Ürünlerimiz / Hakkımızda /Ar-Ge
 // ============================================================
 import { useState, useEffect, useRef } from 'react'
-import polgunLogo from '../assets/logoPolgun.png'
+import { Link } from 'react-router-dom';
+import polgunLogo from '../assets/logoPolgun.png';
 
 // ── Menü Yapısı (WWW ile birebir karşılıklı) ───────────────
 const NAV_ITEMS = [
@@ -16,12 +17,12 @@ const NAV_ITEMS = [
       {
         title: null,
         links: [
-          { label: 'Planlama', desc: '', page: 'services', anchor: 'planlama' },
-          { label: 'Tasarım',        desc: '',       page: 'services', anchor: 'tasarim' },
-          { label: 'Mühendislik',  desc: '',        page: 'services', anchor: 'muhendislik' },
-          { label: 'Kurulum & Montaj',         desc: '',    page: 'services', anchor: 'montaj' },
-          { label: 'Bakım & Onarım',    desc: '',  page: 'services', anchor: 'bakim-onarim' },
-          { label: 'Yenileme',  desc: '', page: 'services', anchor: 'bakim-onarim' },
+          { label: 'Planlama', desc: '', page: 'services', anchor: 'planlama', to: '/services?anchor=planlama' },
+          { label: 'Tasarım',        desc: '',       page: 'services', anchor: 'tasarim', to: '/services?anchor=tasarim' },
+          { label: 'Mühendislik',  desc: '',        page: 'services', anchor: 'muhendislik', to: '/services?anchor=muhendislik' },
+          { label: 'Kurulum & Montaj',         desc: '',    page: 'services', anchor: 'montaj', to: '/services?anchor=montaj' },
+          { label: 'Bakım & Onarım',    desc: '',  page: 'services', anchor: 'bakim-onarim', to: '/services?anchor=bakim-onarim' },
+          { label: 'Yenileme',  desc: '', page: 'services', anchor: 'bakim-onarim', to: '/services?anchor=bakim-onarim' },
         ],
       },
     ],
@@ -31,6 +32,7 @@ const NAV_ITEMS = [
     label: 'Projelerimiz',
     page: 'projects',
     mega: false,
+    to: '/projects',
   },
   {
     id: 'products',
@@ -41,9 +43,9 @@ const NAV_ITEMS = [
       {
         title: 'Ürün Kategorileri',
         links: [
-          { label: 'Su Kaydırakları',        desc: '', page: 'products' },
-          { label: 'Splash Tower',  desc: '',           page: 'splash-tower' },
-          { label: 'Splash Zone',               desc: '',        page: 'products' },
+          { label: 'Su Kaydırakları',        desc: '', page: 'products', to: '/products' },
+          { label: 'Splash Tower',  desc: '',           page: 'splash-tower', to: '/splash-tower' },
+          { label: 'Splash Zone',               desc: '',        page: 'products', to: '/products' },
                 ],
       },
       /*{
@@ -71,11 +73,11 @@ const NAV_ITEMS = [
       {
         title: null,
         links: [
-          { label: 'Ekibimiz',        desc: '',              page: 'team' },
-          { label: 'Tarihçemiz',      desc: '',           page: 'history' },
-          { label: 'Ödüller & Patent',desc: '',           page: 'awards' },
-          { label: 'Fabrikalarımız',  desc: '',           page: 'factories' },
-          { label: 'Haberler & Etkinlikler', desc: '',   page: 'news' },
+          { label: 'Ekibimiz',        desc: '',              page: 'team', to: '/team' },
+          { label: 'Tarihçemiz',      desc: '',           page: 'history', to: '/history' },
+          { label: 'Ödüller & Patent',desc: '',           page: 'awards', to: '/awards' },
+          { label: 'Fabrikalarımız',  desc: '',           page: 'factories', to: '/factories' },
+          { label: 'Haberler & Etkinlikler', desc: '',   page: 'news', to: '/news' },
         ],
       },
     ],
@@ -85,16 +87,18 @@ const NAV_ITEMS = [
     label: 'Ar-Ge',
     page: 'arge',
     mega: false,
+    to: '/arge',
   },
   {
     id: 'career',
     label: 'Kariyer',
     page: 'career',
     mega: false,
+    to: '/career',
   },
 ]
 
-export default function Navbar({ activePage, setActivePage, colorPalette }) {
+export default function Navbar({ activePage, setActivePage, colorPalette, location }) {
   const [scrolled, setScrolled]       = useState(false)
   const [openMenu, setOpenMenu]       = useState(null)   // mega açık menü id'si
   const [mobileOpen, setMobileOpen]   = useState(false)
@@ -108,26 +112,23 @@ export default function Navbar({ activePage, setActivePage, colorPalette }) {
   }, [])
 
   const handleNav = (page, anchor = null) => {
-    setActivePage(page)
+    setActivePage(page, anchor);
     setMobileOpen(false)
     setOpenMenu(null)
-    
-    if (anchor) {
-      setTimeout(() => {
-        const el = document.getElementById(anchor)
-        if (el) {
-          const yOffset = -100 // adjust for navbar height
-          const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset
-          window.scrollTo({ top: y, behavior: 'smooth' })
-        }
-      }, 100)
-    } else {
-      window.scrollTo({ top: 0 })
-    }
   }
 
+  useEffect(() => {
+    const params = new URLSearchParams(location.search);
+    const anchor = params.get('anchor');
+    if (anchor) {
+      const el = document.getElementById(anchor);
+      const yOffset = -100; // adjust for navbar height
+      if (el) window.scrollTo({ top: el.getBoundingClientRect().top + window.pageYOffset + yOffset, behavior: 'smooth' });
+    }
+  }, [location.search])
+
   // hover ile açma — kısa gecikme ile kapanma (UX)
-  const onEnter = (id) => {
+    const onEnter = (id) => {
     clearTimeout(closeTimer.current)
     setOpenMenu(id)
   }
@@ -156,7 +157,7 @@ export default function Navbar({ activePage, setActivePage, colorPalette }) {
       <nav className="max-w-[var(--layout-max)] mx-auto px-6 lg:px-14 flex items-center justify-between h-[72px]">
 
         {/* ══ Logo ══ */}
-        <button onClick={() => handleNav('home')} className="shrink-0 flex items-center">
+        <Link to="/" onClick={() => setOpenMenu(null)} className="shrink-0 flex items-center">
           {isLightNavbar ? (
             /* Glass navbar */
             <img
@@ -174,7 +175,7 @@ export default function Navbar({ activePage, setActivePage, colorPalette }) {
               style={{ filter: 'drop-shadow(0 0 4px rgba(134, 134, 134, 0.5))' }}
             />
           )}
-        </button>
+        </Link>
 
         {/* ══ Desktop Nav ══ */}
         <ul className="hidden lg:flex items-center h-full">
@@ -185,8 +186,8 @@ export default function Navbar({ activePage, setActivePage, colorPalette }) {
               onMouseEnter={() => item.mega && onEnter(item.id)}
               onMouseLeave={() => item.mega && onLeave()}
             >
-              <button
-                onClick={() => handleNav(item.page)}
+              <Link
+                to={item.to || `/${item.page}`}
                 className={`flex items-center gap-1 px-4 py-2 text-sm font-semibold tracking-wide transition-colors`}
                 style={isLightNavbar ? {
                   color: activePage === item.page ? 'var(--th-polgun-blue)' : 'var(--th-text)',
@@ -212,7 +213,7 @@ export default function Navbar({ activePage, setActivePage, colorPalette }) {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 9l-7 7-7-7" />
                   </svg>
                 )}
-              </button>
+              </Link>
 
               {/* ── Mega Menü Paneli ── */}
               {item.mega && (
@@ -245,9 +246,9 @@ export default function Navbar({ activePage, setActivePage, colorPalette }) {
                         )}
                         <div className="flex flex-col">
                           {section.links.map((link) => (
-                            <button
+                            <Link
                               key={link.label}
-                              onClick={() => handleNav(link.page, link.anchor)}
+                              to={link.to}
                               className="flex items-start gap-3 px-4 py-3 rounded-xl transition-colors text-left group"
                               style={{ '--hover-bg': 'var(--th-bg)' }}
                               onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'var(--th-bg)'}
@@ -267,7 +268,7 @@ export default function Navbar({ activePage, setActivePage, colorPalette }) {
                                   </span>
                                 )}
                               </div>
-                            </button>
+                            </Link>
                           ))}
                         </div>
                       </div>
@@ -287,8 +288,8 @@ export default function Navbar({ activePage, setActivePage, colorPalette }) {
                       {item.id === 'services' && 'Anahtar teslim proje süreçlerimizi inceleyin'}
                       {item.id === 'about' && "Polgün'ün 40 yıllık hikayesini keşfedin"}
                     </span>
-                    <button
-                      onClick={() => handleNav(item.page)}
+                    <Link
+                      to={item.to || `/${item.page}`}
                       className="text-xs font-bold flex items-center gap-1.5 transition-colors"
                       style={{
                         color: 'var(--th-polgun-blue)',
@@ -304,7 +305,7 @@ export default function Navbar({ activePage, setActivePage, colorPalette }) {
                       <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
                       </svg>
-                    </button>
+                    </Link>
                   </div>
                 </div>
               )}
@@ -315,8 +316,8 @@ export default function Navbar({ activePage, setActivePage, colorPalette }) {
         {/* ══ Sağ: CTA ══ */}
         <div className="hidden lg:flex items-center gap-4 shrink-0">
           {/* İletişim & Teklif Al */}
-          <button
-            onClick={() => handleNav('contact')}
+          <Link
+            to="/contact"
             className={`text-sm font-semibold px-5 py-2 rounded-full transition-all duration-200`}
             style={isLightNavbar ? {
               color: 'var(--th-text)',
@@ -327,9 +328,9 @@ export default function Navbar({ activePage, setActivePage, colorPalette }) {
             
           >
             İletişim
-          </button>
-          <button
-            onClick={() => handleNav('contact')}
+          </Link>
+          <Link
+            to="/contact"
             className="px-6 py-2.5 text-sm font-bold tracking-wide rounded-full hover:shadow-lg hover:-translate-y-px transition-all duration-200"
             style={isLightNavbar ? {
               backgroundColor: 'var(--th-primary)',
@@ -358,7 +359,7 @@ export default function Navbar({ activePage, setActivePage, colorPalette }) {
             }}
           >
             Teklif Al
-          </button>
+          </Link>
         </div>
 
         {/* ══ Mobile Burger ══ */}
@@ -379,8 +380,8 @@ export default function Navbar({ activePage, setActivePage, colorPalette }) {
 
       {/* ══ Mobile Menü Paneli ══ */}
       <div
-        className={`lg:hidden border-t overflow-hidden transition-all duration-300
-        ${mobileOpen ? 'max-h-[90vh] opacity-100 overflow-y-auto' : 'max-h-0 opacity-0'}`}
+        className={`lg:hidden border-t overflow-hidden transition-all duration-300 transform origin-top
+        ${mobileOpen ? 'scale-y-100 opacity-100 overflow-y-auto' : 'scale-y-0 opacity-0'}`}
         style={{
           backgroundColor: 'var(--th-surface)',
           borderColor: 'color-mix(in srgb, var(--th-border) 55%, transparent)',
@@ -423,9 +424,9 @@ export default function Navbar({ activePage, setActivePage, colorPalette }) {
                           </p>
                         )}
                         {section.links.map((link) => (
-                          <button
+                          <Link
                             key={link.label}
-                            onClick={() => handleNav(link.page, link.anchor)}
+                            to={link.to}
                             className="w-full text-left px-4 py-2.5 text-sm rounded-lg transition-colors"
                             style={{
                               color: 'var(--th-text-muted)',
@@ -440,15 +441,15 @@ export default function Navbar({ activePage, setActivePage, colorPalette }) {
                             }}
                           >
                             {link.label}
-                          </button>
+                          </Link>
                         ))}
                       </div>
                     ))}
                   </div>
                 </>
               ) : (
-                <button
-                  onClick={() => handleNav(item.page)}
+                <Link
+                  to={item.to || `/${item.page}`}
                   className="w-full text-left py-4 text-sm font-bold transition-colors"
                   style={{ color: 'var(--th-text)' }}
                   onMouseEnter={(e) => {
@@ -459,15 +460,15 @@ export default function Navbar({ activePage, setActivePage, colorPalette }) {
                   }}
                 >
                   {item.label}
-                </button>
+                </Link>
               )}
             </div>
           ))}
 
           {/* Mobile CTA */}
           <div className="flex flex-col gap-3 pt-5 pb-2">
-            <button
-              onClick={() => handleNav('contact')}
+            <Link
+              to="/contact"
               className="w-full py-3.5 text-white text-sm font-bold rounded-full transition-all duration-300"
               style={{
                 backgroundColor: 'var(--th-polgun-blue)',
@@ -480,9 +481,9 @@ export default function Navbar({ activePage, setActivePage, colorPalette }) {
               }}
             >
               Teklif Al
-            </button>
-            <button
-              onClick={() => handleNav('contact')}
+            </Link>
+            <Link
+              to="/contact"
               className="w-full py-3.5 text-sm font-semibold rounded-full transition-all duration-300 border-2"
               style={{
                 borderColor: 'var(--th-polgun-blue)',
@@ -497,7 +498,7 @@ export default function Navbar({ activePage, setActivePage, colorPalette }) {
               }}
             >
               İletişim
-            </button>
+            </Link>
           </div>
         </div>
       </div>
