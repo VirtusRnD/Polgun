@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { Link, useNavigate } from 'react-router-dom' // useNavigate eklendi
 import heroImage from '../assets/polgun-featured-projects-4.avif'
 import underwater1 from '../assets/hero/13.MaxeriaBlue.avif'
 import pirate1 from '../assets/splash/pirateTheme/1001.avif'
@@ -6,7 +7,6 @@ import navatu1 from '../assets/navatu/navatu1.avif'
 import navatu2 from '../assets/navatu/navatu2.avif'
 import savana1 from '../assets/savana/savana1.avif'
 import savana2 from '../assets/savana/savana2.avif'
-
 import bigholeImg from '../assets/products/slides/bighole.avif'
 import bigraftImg from '../assets/products/slides/bigraft.avif'
 import familyraftImg from '../assets/products/slides/familyraft.avif'
@@ -142,372 +142,372 @@ const PRODUCTS = [
 
 {
     category: 'Family Slides',
-    title: 'BIG HOLE',
+    title: 'Big Hole',
     sub: '',
-    desc: `Big Hole is a large-scale enclosed family raft slide designed for shared ride experiences. Its spacious tube creates an immersive sense of speed and motion, transforming the classic closed-slide concept into a fun, social, and memorable attraction for families and groups.`,
+    desc: `Big Hole, aile tipi botlarla ortak kullanım deneyimi sunmak üzere tasarlanmış, büyük ölçekli kapalı bir su kaydırağıdır. Geniş kesitli tüp yapısı, hız ve hareket hissini etkileyici bir şekilde yaşatırken, klasik kapalı kaydırak konseptini aileler ve gruplar için eğlenceli, sosyal ve unutulmaz bir su parkı deneyimine dönüştürür.`,
     specs: [],
     img: bigholeImg,
-    imgAlt: 'BIG HOLE',
+    imgAlt: 'Big Hole',
     badge: null,
   },
   {
     category: 'Family Slides',
-    title: 'BIG RAFT',
+    title: 'Big Raft',
     sub: '',
-    desc: `Big Raft offers a spacious and comfortable family rafting experience designed for shared rides. Its wide slide form allows families and friends to enjoy the flow, speed, and excitement together, creating a fun and social attraction with high family appeal.`,
+    desc: `Big Raft, ortak kullanım için tasarlanmış geniş ve konforlu bir aile botu kaydırağıdır. Geniş kayma yüzeyi sayesinde ailelerin ve arkadaş gruplarının akış, hız ve heyecanı birlikte deneyimlemesine olanak tanır. Yüksek aile çekiciliğine sahip bu kaydırak, eğlenceyi ve sosyal etkileşimi bir araya getiren keyifli bir su parkı deneyimi sunar.`,
     specs: [],
     img: bigraftImg,
-    imgAlt: 'BIG RAFT',
+    imgAlt: 'Big Raft',
     badge: null,
   },
   {
     category: 'Family Slides',
-    title: 'FAMILY RAFT',
+    title: 'Family Slide',
     sub: '',
-    desc: `Family Slide is a multi-person raft attraction designed for families and groups to enjoy together. Featuring wide curves, smooth transitions, and rafts for up to four riders, it delivers interactive fun, dynamic movement, and high-capacity entertainment for any water park.`,
+    desc: `Family Slide, ailelerin ve grupların birlikte keyifle kullanabilmesi için tasarlanmış çok kişilik botlu bir su kaydırağıdır. Geniş virajları, yumuşak geçişleri ve dört kişiye kadar kullanım imkânı sunan botları sayesinde etkileşimli eğlence, dinamik bir kayış deneyimi ve yüksek kapasiteli su parkı eğlencesi sunar.`,
     specs: [],
     img: familyraftImg,
-    imgAlt: 'FAMILY RAFT',
+    imgAlt: 'Famil Slide',
     badge: null,
   },
   {
     category: 'Family Slides',
-    title: 'FAMILY TORNADO',
+    title: 'Family Tornado',
     sub: '',
-    desc: `Family Tornado brings the iconic funnel experience to a larger scale, allowing bigger groups to share the excitement together. Featuring a large funnel element and powerful oscillating motion, it delivers thrilling acceleration, moments of weightlessness, and dynamic transitions, making it a high-capacity attraction with strong visual appeal and replay value.`,
+    desc: `Family Tornado, ikonik huni (funnel) deneyimini daha büyük ölçekte sunarak daha kalabalık grupların heyecanı birlikte yaşamasına olanak tanır. Geniş huni yapısı ve güçlü salınım hareketi sayesinde yüksek hızlanma, anlık ağırlıksızlık hissi ve dinamik geçişler sunar. Yüksek kapasitesi, etkileyici görsel yapısı ve tekrar binme isteği uyandıran deneyimiyle su parklarının öne çıkan aile tipi kaydıraklarından biridir.`,
     specs: [],
     img: familytornadoImg,
-    imgAlt: 'FAMILY TORNADO',
+    imgAlt: 'Family Tornado',
     badge: null,
   },
   {
     category: 'Family Slides',
-    title: 'MID HOLE',
+    title: 'Mid Hole',
     sub: '',
-    desc: `Mid Hole is an enclosed family slide that offers a spacious and immersive ride experience. Its closed tube design creates anticipation and excitement throughout the journey, delivering a fun and comfortable shared adventure for families and groups.`,
+    desc: `Mid Hole, geniş ve etkileyici bir sürüş deneyimi sunan kapalı aile tipi bir su kaydırağıdır. Kapalı tüp tasarımı, yolculuk boyunca merak ve heyecan duygusunu artırırken, aileler ve gruplar için eğlenceli, konforlu ve birlikte paylaşılabilen bir kayma deneyimi sunar.`,
     specs: [],
     img: midholeImg,
-    imgAlt: 'MID HOLE',
+    imgAlt: 'Mid Hole',
     badge: null,
   },
   {
     category: 'Family Slides',
-    title: 'UFO SLIDE',
+    title: 'UFO Slide',
     sub: '',
-    desc: `UFO Slide is a family-friendly raft slide inspired by its distinctive elliptical form. Its enclosed tube structure provides a smooth and comfortable ride experience for up to four riders, combining shared fun with high entertainment value for water parks.`,
+    desc: `UFO Slide, kendine özgü eliptik formundan ilham alan aile dostu bir botlu su kaydırağıdır. Kapalı tüp yapısı sayesinde dört kişiye kadar kullanıcı için akıcı ve konforlu bir kayma deneyimi sunarken, paylaşılan eğlenceyi yüksek eğlence değeriyle birleştirerek su parklarına dikkat çekici bir aile atraksiyonu kazandırır.`,
     specs: [],
     img: ufoslideImg,
-    imgAlt: 'UFO SLIDE',
+    imgAlt: 'UFO Slide',
     badge: null,
   },
   {
     category: 'Fast Slide',
-    title: 'FREEFALL',
+    title: 'Freefall',
     sub: '',
-    desc: `Freefall is a high-adrenaline water slide designed to deliver the intense sensation of free fall. Its near-vertical drop and uninterrupted high-speed course create a short but powerful ride experience, making it a must-have attraction for thrill seekers.`,
+    desc: `Freefall, serbest düşüş hissini en yoğun şekilde yaşatmak için tasarlanmış yüksek adrenalinli bir su kaydırağıdır. Neredeyse dikey iniş açısı ve kesintisiz yüksek hızlı parkuru sayesinde kısa ancak son derece etkileyici bir kayma deneyimi sunar. Heyecan arayan kullanıcılar için vazgeçilmez bir su parkı atraksiyonudur.`,
     specs: [],
     img: freefallImg,
-    imgAlt: 'FREEFALL',
+    imgAlt: 'Freefall',
     badge: null,
   },
   {
     category: 'Fast Slide',
-    title: 'HYDRO RIVER',
+    title: 'Hydro River',
     sub: '',
-    desc: `Hydro River is a next-generation raft slide powered by advanced water jet technology. By using water jets to maintain continuous movement, it delivers a smooth, dynamic, and uninterrupted ride experience, combining innovation, comfort, and entertainment in a unique attraction.`,
+    desc: `Hydro River, gelişmiş su jeti teknolojisiyle çalışan yeni nesil bir botlu su kaydırağıdır. Sürekli hareketi su jetleriyle sağlayarak akıcı, dinamik ve kesintisiz bir kayma deneyimi sunar. Yenilikçi teknolojiyi, konforu ve eğlenceyi bir araya getirerek su parkları için benzersiz bir atraksiyon oluşturur.`,
     specs: [],
     img: hydroriverImg,
-    imgAlt: 'HYDRO RIVER',
+    imgAlt: 'Hydro River',
     badge: null,
   },
   {
     category: 'Fast Slide',
-    title: 'ROCKET SLIDE',
+    title: 'Rocket Slide',
     sub: '',
-    desc: `Rocket Slide is a high-adrenaline attraction that starts with a trapdoor launch, sending riders into a gravity-driven descent. The suspense of the countdown-free drop, combined with free-fall or looping options, creates one of the most thrilling experiences in the high-speed slide category.`,
+    desc: `Rocket Slide, kapan (trapdoor) mekanizmalı başlangıç sistemiyle kullanıcıyı aniden serbest bırakarak yerçekimi etkisiyle yüksek hızda inişe geçiren yüksek adrenalinli bir su kaydırağıdır. Geri sayımın ardından beklenmedik şekilde açılan zemin, serbest düşüş hissi ve isteğe bağlı döngü (looping) seçenekleriyle birleşerek yüksek hızlı kaydırak kategorisinin en heyecan verici deneyimlerinden birini sunar.`,
     specs: [],
     img: rocketsldeImg,
-    imgAlt: 'ROCKET SLIDE',
+    imgAlt: 'Rocket Slide',
     badge: null,
   },
   {
     category: 'Fast Slide',
-    title: 'UPHILL',
+    title: 'Uphill Slide',
     sub: '',
-    desc: `Uphill Slide delivers a dynamic ride experience with a series of descents and climbs along its wavy course. The alternating acceleration and deceleration create a smooth, rhythmic flow, providing long-lasting excitement and high entertainment value for water park guests.`,
+    desc: `Uphill Slide, dalgalı parkuru boyunca ardışık iniş ve çıkışlar sunarak dinamik bir kayma deneyimi yaşatır. Değişen hızlanma ve yavaşlama etkisi, akıcı ve ritmik bir hareket hissi oluşturarak kullanıcılarına uzun süreli heyecan ve yüksek eğlence değeri sunar.`,
     specs: [],
     img: uphillImg,
-    imgAlt: 'UPHILL',
+    imgAlt: 'Uphill Slide',
     badge: null,
   },
   {
     category: 'Fast Slide',
-    title: 'KAMIKAZE',
+    title: 'Kamikaze',
     sub: '',
-    desc: `Kamikaze is a high-speed water slide that delivers intense adrenaline through its stepped sliding surface. Sudden acceleration and deceleration effects enhance the sensation of speed, while its smooth ride experience makes it a popular attraction for thrill-seekers in water parks.`,
+    desc: `Kamikaze, kademeli kayma yüzeyi sayesinde yüksek hız ve yoğun adrenalin sunan klasik bir su kaydırağıdır. Ani hızlanma ve yavaşlama etkileri, hız hissini daha da artırırken akıcı kayma deneyimiyle heyecan arayan kullanıcılar için su parklarının en popüler atraksiyonlarından biridir.`,
     specs: [],
     img: kamikazeImg,
-    imgAlt: 'KAMIKAZE',
+    imgAlt: 'Kamikaze',
     badge: null,
   },
   {
     category: 'Fast Slide',
-    title: 'SLIP AND FLY',
+    title: 'Slip & Fly',
     sub: '',
-    desc: `Slip & Fly is a unique water slide pioneered by Polgün, designed to deliver extreme jumps and the sensation of flying above the water. Combining high speeds, strong visual impact, and intense thrills, it creates a standout attraction that takes excitement to the next level.`,
+    desc: `Slip & Fly, Polgün tarafından geliştirilen özgün bir su kaydırağı olup, su yüzeyinin üzerinde sıçrama ve uçuyormuş hissi yaşatacak şekilde tasarlanmıştır. Yüksek hız, etkileyici görsel deneyim ve yoğun adrenalin hissini bir araya getirerek heyecanı bir üst seviyeye taşıyan, su parklarının öne çıkan atraksiyonlarından biridir.`,
     specs: [],
     img: slipandflyImg,
-    imgAlt: 'SLIP AND FLY',
+    imgAlt: 'Slip and Fly',
     badge: null,
   },
   {
     category: 'Jumbo Slides',
-    title: 'BABOCHKA',
+    title: 'Babochka',
     sub: '',
-    desc: `Babochka combines butterfly-inspired geometry with a family-friendly raft experience. Wide banking transitions and controlled acceleration create a smooth, dynamic ride, while its distinctive symmetrical form provides strong visual appeal and customization opportunities.`,
+    desc: `Babochka, kelebekten ilham alan özgün geometrisini aile tipi botlu kaydırak deneyimiyle birleştirir. Geniş eğimli geçişleri ve kontrollü hızlanma yapısı sayesinde akıcı ve dinamik bir kayma deneyimi sunarken, simetrik ve dikkat çekici tasarımı su parklarına güçlü bir görsel etki ve farklı tema konseptlerine uyarlanabilen özelleştirme imkânı sağlar.`,
     specs: [],
     img: babochkaImg,
-    imgAlt: 'BABOCHKA',
+    imgAlt: 'Babochka',
     badge: null,
   },
   {
     category: 'Jumbo Slides',
-    title: 'BOOMERANGO',
+    title: 'Boomerango',
     sub: '',
-    desc: `Boomerango delivers a high-thrill raft experience inspired by the returning motion of a boomerang. Riders descend at high speed, climb a near-vertical wall, and experience moments of weightlessness before sweeping back into the slide course. Its dynamic motion and iconic design make it a standout attraction for adrenaline-focused water parks.`,
+    desc: `Boomerango, bumerangın geri dönüş hareketinden ilham alan yüksek adrenalinli bir botlu su kaydırağıdır. Kullanıcılar yüksek hızla iniş yaptıktan sonra neredeyse dik bir duvara tırmanır, anlık ağırlıksızlık hissini yaşar ve ardından kaydırak parkuruna geri dönerek yolculuğuna devam eder. Dinamik hareket yapısı ve ikonik tasarımıyla, adrenalin odaklı su parklarının en dikkat çekici atraksiyonlarından biridir.`,
     specs: [],
     img: boomerangoImg,
-    imgAlt: 'BOOMERANGO',
+    imgAlt: 'Boomerango',
     badge: null,
   },
   {
     category: 'Jumbo Slides',
-    title: 'CANYON SLIDE',
+    title: 'Canyon Slide',
     sub: '',
-    desc: `Canyon offers an exciting raft slide experience with a compact, space-efficient design. Riders move through a dynamic path that creates a strong sensation of rise, sweep, and return, delivering a memorable tube ride in a smaller footprint.`,
+    desc: `Canyon, kompakt ve alan tasarrufu sağlayan tasarımıyla heyecan verici bir botlu su kaydırağı deneyimi sunar. Dinamik parkuru boyunca kullanıcılar yükselme, savrulma ve geri dönüş hissini bir arada yaşarken, sınırlı kurulum alanlarında bile unutulmaz bir kayma deneyimi sunan etkileyici bir atraksiyon oluşturur.`,
     specs: [],
     img: canyonslideImg,
-    imgAlt: 'CANYON SLIDE',
+    imgAlt: 'Canyon Slide',
     badge: null,
   },
   {
     category: 'Jumbo Slides',
-    title: 'CRAZY CONE',
+    title: 'Crazy Cone',
     sub: '',
-    desc: `Crazy Cone delivers a playful and energetic ride experience through its distinctive conical design and smooth oscillating motion. Riders transition into the wide cone element, where changing directions create a fun sense of excitement and unpredictability. Its striking appearance and versatile layout make it a standout addition to family and youth-focused water attractions.`,
+    desc: `Crazy Cone, kendine özgü konik tasarımı ve akıcı salınım hareketiyle eğlenceli ve enerjik bir kayma deneyimi sunar. Kullanıcılar geniş koni bölümüne geçiş yaptıktan sonra değişen yön hareketleri sayesinde heyecan verici ve sürprizlerle dolu bir yolculuk yaşar. Dikkat çekici görünümü ve farklı yerleşim seçeneklerine uyum sağlayan yapısıyla, ailelere ve gençlere yönelik su parkı projeleri için öne çıkan bir atraksiyondur.`,
     specs: [],
     img: crazyconeImg,
-    imgAlt: 'CRAZY CONE',
+    imgAlt: 'Crazy Cone',
     badge: null,
   },
   {
     category: 'Jumbo Slides',
-    title: 'DRONE',
+    title: 'Drone',
     sub: '',
-    desc: `Drone is a visually striking slide module that enhances ride experiences with a sudden expansion effect and immersive spatial sensation. The enlarged dome section creates a feeling of openness before riders continue along the slide path, adding visual impact, lighting opportunities, and excitement to a wide range of slide systems.`,
+    desc: `Drone, ani genişleme etkisi ve etkileyici mekânsal hissiyle kayma deneyimini zenginleştiren, görsel açıdan dikkat çekici bir kaydırak modülüdür. Geniş kubbe formundaki bölüm, kullanıcıya ferah ve etkileyici bir alan hissi yaşattıktan sonra kayma parkuru devam eder. Görsel etkisi, aydınlatma uygulamalarına uygun yapısı ve farklı kaydırak sistemlerine kolayca entegre edilebilmesi sayesinde su parklarına heyecan ve estetik değer katan yenilikçi bir çözümdür.`,
     specs: [],
     img: droneImg,
-    imgAlt: 'DRONE',
+    imgAlt: 'Drone',
     badge: null,
   },
   {
     category: 'Jumbo Slides',
-    title: 'HILL SLIDE',
+    title: 'Hill Slide',
     sub: '',
-    desc: `Hill Slide is a high-adrenaline raft slide featuring a steep descent followed by a dramatic uphill climb, creating a thrilling sense of speed and excitement. With its dynamic ride path, strong replay value, and customizable colors and patterns, it offers a distinctive addition to any water park.`,
+    desc: `Hill Slide, dik bir inişin ardından etkileyici bir yokuş tırmanışı sunarak yüksek hız ve adrenalin hissi yaşatan botlu bir su kaydırağıdır. Dinamik parkur yapısı, tekrar binme isteği uyandıran sürüş deneyimi ve farklı renk ile desen seçenekleriyle özelleştirilebilen tasarımı sayesinde her su parkına dikkat çekici ve özgün bir atraksiyon kazandırır.`,
     specs: [],
     img: hillslideImg,
-    imgAlt: 'HILL SLIDE',
+    imgAlt: 'Hill Slide',
     badge: null,
   },
   {
     category: 'Jumbo Slides',
-    title: 'HYDRA SLIDE',
+    title: 'Hydra Slide',
     sub: '',
-    desc: `Hydra combines high-capacity performance with a bold architectural design. Its iconic multi-head structure delivers synchronized high-speed descents that enhance competition and guest interaction, transforming a traditional mat racer into a landmark water park attraction.`,
+    desc: `Hydra, yüksek kapasiteyi cesur ve ikonik bir mimari tasarımla bir araya getiren çok şeritli bir yarış kaydırağıdır. Çok başlı özgün yapısı, eş zamanlı yüksek hızlı inişler sunarak rekabet duygusunu ve kullanıcı etkileşimini artırır. Klasik mat yarış kaydırağı konseptini, su parklarının simge atraksiyonlarından biri hâline getiren etkileyici bir deneyime dönüştürür.`,
     specs: [],
     img: hydraslideImg,
-    imgAlt: 'HYDRA SLIDE',
+    imgAlt: 'Hydra Slide',
     badge: null,
   },
   {
     category: 'Jumbo Slides',
-    title: 'MAGIC TRAY',
+    title: 'Magic Tray',
     sub: '',
-    desc: `Magic Tray delivers a dynamic raft experience with smooth banking movements, continuous directional changes, and controlled acceleration. Its saucer-inspired design creates a flowing ride rhythm, offering a balanced mix of family-friendly excitement, comfort, and visual appeal.`,
+    desc: `Magic Tray, akıcı eğimli dönüşler, sürekli yön değişimleri ve kontrollü hızlanma sayesinde dinamik bir botlu kaydırak deneyimi sunar. Tabak (saucer) formundan ilham alan özgün tasarımı, kesintisiz ve ritmik bir kayma hissi oluştururken; aile dostu heyecanı, konforu ve güçlü görsel etkisiyle su parklarına dikkat çekici bir atraksiyon kazandırır.`,
     specs: [],
     img: magictrayImg,
-    imgAlt: 'MAGIC TRAY',
+    imgAlt: 'Magic Tray',
     badge: null,
   },
   {
     category: 'Jumbo Slides',
-    title: 'MINI BOOMERANGO',
+    title: 'Mini Boomerango',
     sub: '',
-    desc: `Mini Boomerango brings the signature back-and-forth thrill of a boomerang slide into a compact format. Its reduced height and footprint make it ideal for space-constrained projects, Splash Towers, and compact water parks, delivering a big ride experience in a smaller, more flexible design.`,
+    desc: `Mini Boomerango, bumerang kaydırağının karakteristik ileri–geri hareketini ve heyecanını kompakt bir tasarımla sunar. Daha düşük yüksekliği ve daha az yer kaplayan yapısı sayesinde sınırlı alana sahip projeler, Splash Tower sistemleri ve kompakt su parkları için ideal bir çözümdür. Küçük ölçülerine rağmen büyük bir kayma deneyimi sunarak esnek ve verimli bir atraksiyon alternatifi oluşturur.`,
     specs: [],
     img: miniboomerangoImg,
-    imgAlt: 'MINI BOOMERANGO',
+    imgAlt: 'Mini Boomerango',
     badge: null,
   },
   {
     category: 'Jumbo Slides',
-    title: 'SPACE ROCKET',
+    title: 'Space Rocket',
     sub: '',
-    desc: `Space Rocket combines futuristic design with high-speed motion for an exciting themed adventure. Riders experience rapid transitions through its signature rocket-inspired feature, creating a memorable ride with strong visual impact.`,
+    desc: `Space Rocket, fütüristik tasarımı yüksek hızlı kayma deneyimiyle birleştirerek heyecan dolu tematik bir macera sunar. Roketten ilham alan özgün yapısı boyunca kullanıcılar hızlı ve akıcı geçişler yaşarken, güçlü görsel etkisiyle unutulmaz bir kayma deneyimi elde eder.`,
     specs: [],
     img: spacerocketImg,
-    imgAlt: 'SPACE ROCKET',
+    imgAlt: 'Space Rocket',
     badge: null,
   },
   {
     category: 'Jumbo Slides',
-    title: 'SUPER BOWL',
+    title: 'Super Bowl',
     sub: '',
-    desc: `Super Bowl reimagines the classic bowl-slide experience with extended spinning motion and dynamic acceleration. Riders complete multiple revolutions inside the oversized bowl before entering the exit section, creating a thrilling and visually engaging ride experience with strong operational flexibility.`,
+    desc: 'Super Bowl, klasik çanak (bowl) kaydırak deneyimini daha uzun dönüş hareketi ve dinamik hızlanma ile yeniden yorumlar. Kullanıcılar, geniş çanak bölümünün içinde birden fazla tur attıktan sonra çıkış parkuruna geçerek yüksek adrenalinli ve görsel açıdan etkileyici bir kayma deneyimi yaşar. Esnek tasarım seçenekleri ve yüksek operasyonel verimliliği sayesinde su parkları için öne çıkan, dikkat çekici bir atraksiyondur.',
     specs: [],
     img: superbowlImg,
-    imgAlt: 'SUPER BOWL',
+    imgAlt: 'Super Bowl',
     badge: null,
   },
   {
     category: 'Jumbo Slides',
-    title: 'SPACE BOWL',
+    title: 'Space Bowl',
     sub: '',
-    desc: `Space Bowl is a compact, high-impact attraction combining speed, rotation, and visual excitement. Riders enter through a high-velocity enclosed flume, complete multiple revolutions inside the bowl, and finish with a thrilling final drop. Its iconic shape, strong spectator appeal, and efficient footprint make it a standout addition to any water park.`,
+    desc: `Space Bowl, hız, dönüş hareketi ve görsel heyecanı bir araya getiren kompakt ancak etkileyici bir su kaydırağıdır. Kullanıcılar yüksek hızlı kapalı tüp parkurundan çanak bölümüne girer, burada birden fazla tur attıktan sonra heyecan verici son düşüşle kayma deneyimini tamamlar. İkonik tasarımı, izleyiciler üzerinde bıraktığı güçlü görsel etki ve az alan gerektiren kompakt yapısıyla her su parkına değer katan dikkat çekici bir atraksiyondur.`,
     specs: [],
     img: spacebowlImg,
-    imgAlt: 'SPACE BOWL',
+    imgAlt: 'Space Bowl',
     badge: null,
   },
   {
     category: 'Jumbo Slides',
-    title: 'TORNADO SLIDE',
+    title: 'Tornado Slide',
     sub: '',
-    desc: `Tornado delivers an intense raft experience through its large funnel element and powerful oscillating motion. Riders climb high along the funnel walls before sweeping through dynamic transitions, creating the sensation of a natural vortex. Its striking design and high-thrill experience make it a standout signature attraction.`,
+    desc: `Tornado, geniş huni (funnel) yapısı ve güçlü salınım hareketiyle yüksek adrenalinli bir botlu su kaydırağı deneyimi sunar. Kullanıcılar huni duvarlarında yüksek noktalara kadar yükseldikten sonra dinamik geçişlerle parkura devam ederek doğal bir girdabın içinde hareket ediyormuş hissini yaşar. Etkileyici tasarımı ve yoğun heyecan sunan sürüş deneyimiyle, su parklarının simge atraksiyonlarından biri olarak öne çıkar.`,
     specs: [],
     img: tornadoslideImg,
-    imgAlt: 'TORNADO SLIDE',
+    imgAlt: 'Tornado Slide',
     badge: null,
   },
   {
     category: 'Jumbo Slides',
-    title: 'PLANETA',
+    title: 'Planeta',
     sub: '',
-    desc: `With its rounded planetary form and immersive ride profile, Planeta creates a visually iconic attraction that blends family-friendly excitement with dynamic motion. Riders experience smooth transitions, sweeping turns, and accelerating spirals that simulate the feeling of orbiting through space. The attraction’s sculptural appearance enhances the visual identity of the park while delivering a balanced combination of entertainment, movement and repeat ride appeal for guests of all ages.`,
+    desc: `Planeta, gezegeni andıran yuvarlak formu ve etkileyici kayma profiliyle aile dostu heyecanı dinamik hareketlerle buluşturan ikonik bir su kaydırağıdır. Kullanıcılar akıcı geçişler, geniş dönüşler ve hızlanan spiral hareketler boyunca uzayda yörüngede ilerliyormuş hissini deneyimler. Heykelsi tasarımı su parkının görsel kimliğini güçlendirirken, her yaştan ziyaretçi için eğlenceyi, hareketi ve tekrar binme isteğini bir araya getiren dengeli ve unutulmaz bir atraksiyon sunar.`,
     specs: [],
     img: planetaImg,
-    imgAlt: 'PLANETA',
+    imgAlt: 'Planeta',
     badge: null,
   },
   {
     category: 'Racer Slides',
-    title: 'BODY RACER',
+    title: 'Body Racer',
     sub: '',
-    desc: `Body Racer is a competitive multi-lane body slide designed for direct rider interaction. Available in open or enclosed configurations, it keeps participants visually connected throughout the race, creating an exciting, fast-paced, and highly engaging attraction for modern water parks.`,
+    desc: `Body Racer, kullanıcıların yan yana yarışabildiği, rekabet odaklı çok şeritli bir vücut kaydırağıdır. Açık veya kapalı tüp seçenekleriyle üretilebilen tasarımı, yarış boyunca kullanıcıların birbirini görebilmesini sağlayarak rekabet heyecanını artırır. Yüksek hız, eğlence ve etkileşimi bir araya getiren bu atraksiyon, modern su parklarının vazgeçilmez yarış kaydıraklarından biridir.`,
     specs: [],
     img: bodyracerImg,
-    imgAlt: 'BODY RACER',
+    imgAlt: 'Body Racer',
     badge: null,
   },
   {
     category: 'Racer Slides',
-    title: 'MULTI SLIDE',
+    title: 'Multi Slide',
     sub: '',
-    desc: `Multi Slide delivers the excitement of side-by-side racing with multiple lane options and a thrilling free-fall start. Combining high speeds, competitive fun, and excellent rider capacity, it creates a dynamic and social attraction for water parks.`,
+    desc: `Multi Slide, çoklu şerit seçenekleri ve heyecan verici serbest düşüş başlangıcıyla yan yana yarışmanın keyfini sunan çok şeritli bir su kaydırağıdır. Yüksek hız, rekabet dolu eğlence ve yüksek kullanıcı kapasitesini bir araya getirerek su parkları için dinamik, sosyal ve dikkat çekici bir atraksiyon oluşturur.`,
     specs: [],
     img: multislideImg,
-    imgAlt: 'MULTI SLIDE',
+    imgAlt: 'Multi Slide',
     badge: null,
   },
   {
     category: 'Racer Slides',
-    title: 'TWISTER SLIDE',
+    title: 'Twister Slide',
     sub: '',
-    desc: `Twister Slide is a competition-oriented water slide featuring 2 or 3 spiraling tubes that create a dynamic racing experience. Riders twist through enclosed sections as they compete side by side, with the winner remaining unknown until the finish, adding excitement, suspense, and high entertainment value.`,
+    desc: `Twister Slide, 2 veya 3 spiral tüpten oluşan, rekabet odaklı çok şeritli bir su kaydırağıdır. Kullanıcılar kapalı spiral parkurlar boyunca yan yana yarışırken, kıvrımlı geçişler ve sürekli yön değişimleri heyecanı artırır. Yarışın galibinin bitiş çizgisine kadar belli olmaması ise sürpriz, rekabet ve yüksek eğlence değerini bir araya getirerek unutulmaz bir deneyim sunar.`,
     specs: [],
     img: twisterslideImg,
-    imgAlt: 'TWISTER SLIDE',
+    imgAlt: 'Twister Slide',
     badge: null,
   },
   {
     category: 'Racer Slides',
-    title: 'RACER SLIDE',
+    title: 'Racer Slide',
     sub: '',
-    desc: `Racer Slide is a two-lane racing attraction that combines speed, competition, and social interaction. Riders race side by side on synchronized slide paths, creating a fun and repeatable experience, while customizable designs make it a vibrant addition to any water park.`,
+    desc: `Racer Slide, hız, rekabet ve sosyal etkileşimi bir araya getiren iki şeritli bir yarış kaydırağıdır. Kullanıcılar eş zamanlı parkurlarda yan yana yarışarak eğlenceli ve tekrar binme isteği uyandıran bir deneyim yaşar. Farklı renk ve desen seçenekleriyle özelleştirilebilen tasarımı sayesinde her su parkına dinamik ve dikkat çekici bir görünüm kazandırır.`,
     specs: [],
     img: racerslideImg,
-    imgAlt: 'RACER SLIDE',
+    imgAlt: 'Racer Slide',
     badge: null,
   },
   {
     category: 'Racer Slides',
-    title: 'SPIDER SLIDE',
+    title: 'Spider Slide',
     sub: '',
-    desc: `Spider Slide is a winding multi-lane water slide that delivers a dynamic and competitive ride experience through tight loops and sharp turns. Its intertwined tunnel layout allows up to four riders to race simultaneously, creating an exciting and interactive attraction with strong visual impact.`,
+    desc: `Spider Slide, sıkı dönüşleri ve keskin virajlarıyla dinamik ve rekabet dolu bir kayma deneyimi sunan çok şeritli bir su kaydırağıdır. Birbirine dolanmış tünel yapısı sayesinde aynı anda dört kullanıcıya kadar yan yana yarışma imkânı sunarak heyecanı ve etkileşimi artırır. Etkileyici mimari tasarımı ve güçlü görsel görünümüyle su parklarının dikkat çeken yarış atraksiyonlarından biridir.`,
     specs: [],
     img: spiderslideImg,
-    imgAlt: 'SPIDER SLIDE',
+    imgAlt: 'Spider Slide',
     badge: null,
   },
   {
     category: 'Classic Slides',
-    title: 'AQUATUBE',
+    title: 'Aquatube',
     sub: '',
-    desc: `Aquatube is a classic body slide that combines speed with an immersive enclosed ride experience. Available with lighting effects and transparent or translucent sections, it delivers a visually engaging adventure while remaining one of the most popular and timeless attractions in water parks.`,
+    desc: `Aquatube, yüksek hızı etkileyici kapalı tüp deneyimiyle birleştiren klasik bir vücut kaydırağıdır. Aydınlatma efektleri ile şeffaf veya yarı şeffaf bölümlerle zenginleştirilebilen tasarımı, kullanıcılarına görsel açıdan etkileyici bir kayma deneyimi sunar. Zamansız tasarımı ve geniş kullanıcı kitlesine hitap eden yapısıyla, su parklarının en popüler ve vazgeçilmez atraksiyonlarından biri olmaya devam etmektedir.`,
     specs: [],
     img: aquatubeImg,
-    imgAlt: 'AQUATUBE',
+    imgAlt: 'Aquatube',
     badge: null,
   },
   {
     category: 'Classic Slides',
-    title: 'BLACK HOLE',
+    title: 'Black Hole',
     sub: '',
-    desc: `Black Hole is a classic raft slide enhanced with striking light effects that transform the ride into a visually immersive adventure. Combining speed, atmosphere, and entertainment, it remains one of the most popular and timeless attractions in water parks.`,
+    desc: `Black Hole, etkileyici ışık efektleriyle zenginleştirilmiş klasik bir botlu su kaydırağıdır. Kapalı tüp yapısı boyunca sunulan görsel efektler, kayma deneyimini sürükleyici bir maceraya dönüştürür. Hızı, atmosferi ve eğlenceyi bir araya getiren yapısıyla, su parklarının en popüler ve zamana meydan okuyan atraksiyonlarından biri olmaya devam etmektedir.`,
     specs: [],
     img: blackholeImg,
-    imgAlt: 'BLACK HOLE',
+    imgAlt: 'Black Hole',
     badge: null,
   },
   {
     category: 'Classic Slides',
-    title: 'COMPACT SLIDE',
+    title: 'Compact Slide',
     sub: '',
-    desc: `Compact Slide is a practical water slide solution designed for limited spaces, offering easy installation and maintenance. Suitable for Splash Towers, water parks, and standalone applications, it can be customized in various sizes and colors to provide a flexible and efficient attraction.`,
+    desc: `Compact Slide, sınırlı alanlar için geliştirilmiş, kolay montaj ve bakım avantajı sunan pratik bir su kaydırağı çözümüdür. Splash Tower sistemlerinde, su parklarında veya bağımsız uygulamalarda kullanılabilen bu model; farklı ölçü, renk ve tasarım seçenekleriyle özelleştirilebilir. Esnek yapısı ve verimli alan kullanımı sayesinde her ölçekten projeye uygun, fonksiyonel ve ekonomik bir atraksiyon sunar.`,
     specs: [],
     img: compactslideImg,
-    imgAlt: 'COMPACT SLIDE',
+    imgAlt: 'Compact Slide',
     badge: null,
   },
   {
     category: 'Classic Slides',
-    title: 'RAFTING SLIDE',
+    title: 'Rafting Slide',
     sub: '',
-    desc: `Inspired by the world’s most successful family raft attractions, Rafting Slide delivers a high-capacity group ride experience built around speed, sweeping wall transitions, and continuous directional movement. Riders navigate through dynamic drops, wide-radius turns, and flowing slide sections that create a balanced combination of excitement and comfort for both families and thrill-seekers.`,
+    desc: `Rafting Slide, dünyanın en başarılı aile tipi botlu kaydıraklarından ilham alınarak tasarlanmış, yüksek kapasiteli bir grup kaydırağıdır. Hız, geniş duvar geçişleri ve kesintisiz yön değişimleri üzerine kurgulanan parkuru sayesinde kullanıcılarına dinamik bir kayma deneyimi sunar. Etkileyici inişler, geniş yarıçaplı virajlar ve akıcı parkur geçişleri; aileler ve heyecan arayan kullanıcılar için konfor ile adrenalini dengeli şekilde bir araya getirerek unutulmaz bir su parkı deneyimi oluşturur.`,
     specs: [],
     img: raftingslideImg,
-    imgAlt: 'RAFTING SLIDE',
+    imgAlt: 'Rafting Slide',
     badge: null,
   },
   {
     category: 'Classic Slides',
-    title: 'WIDE SLIDE',
+    title: 'Wide Slide',
     sub: '',
-    desc: `Wide Slide is a fun and social water slide that allows up to three riders to slide together. Its wide sliding surface creates an enjoyable shared experience, while customizable colors, patterns, and dimensions make it a flexible and visually appealing attraction for any water park.`,
+    desc: `Wide Slide, aynı anda üç kullanıcıya kadar birlikte kayma imkânı sunan eğlenceli ve sosyal bir su kaydırağıdır. Geniş kayma yüzeyi sayesinde ailelerin ve arkadaş gruplarının birlikte keyifli bir deneyim yaşamasına olanak tanır. Farklı renk, desen ve ölçü seçenekleriyle özelleştirilebilen yapısı, her su parkına uyum sağlayan esnek ve görsel açıdan dikkat çekici bir atraksiyon sunar.`,
     specs: [],
     img: wideslideImg,
-    imgAlt: 'WIDE SLIDE',
+    imgAlt: 'Wide Slide',
     badge: null,
   },
   {
     category: 'Classic Slides',
-    title: 'BODY SLIDE',
+    title: 'Body Slide',
     sub: '',
-    desc: `Body Slide is a classic water slide that offers a smooth and enjoyable ride experience. Its versatile design allows easy integration as a standalone attraction or part of larger slide complexes, making it a timeless and essential water park attraction.`,
+    desc: `Body Slide, akıcı ve keyifli bir kayma deneyimi sunan klasik bir vücut kaydırağıdır. Çok yönlü tasarımı sayesinde bağımsız bir atraksiyon olarak kullanılabileceği gibi daha büyük kaydırak komplekslerine de kolayca entegre edilebilir. Zamansız tasarımı, geniş kullanıcı kitlesine hitap eden yapısı ve yüksek uyarlanabilirliğiyle su parklar`,
     specs: [],
     img: bodyslideImg,
-    imgAlt: 'BODY SLIDE',
+    imgAlt: 'Body Slide',
     badge: null,
   },
 ]
@@ -542,7 +542,8 @@ function GlassTag({ children }) {
 	)
 }
 
-export default function ProductsPage({ setActivePage}) {
+export default function ProductsPage() {
+	const navigate = useNavigate();
 	const [activeFilter, setActiveFilter] = useState('Tümü')
 	const [catalogs, setCatalogs] = useState([])
 
@@ -578,7 +579,7 @@ export default function ProductsPage({ setActivePage}) {
 			{/* ── Page Hero ── */}
       <section className="py-28" style={{ backgroundColor: 'var(--th-primary)' }}>
 				{/* Content */}
-        <div className="max-w-7xl max-w-[var(--layout-max)]  mx-auto px-6 lg:px-12">
+        <div className="max-w-7xl  mx-auto px-6 lg:px-12">
           <div className="grid lg:grid-cols-2 gap-16 items-end">
 						
 						<div>
@@ -594,7 +595,8 @@ export default function ProductsPage({ setActivePage}) {
 							</p>
 							<div className="flex gap-4 flex-wrap">
 								<button
-									onClick={() => setActivePage('contact')}
+									type="button"
+									onClick={() => navigate('/contact')}
 									className="px-8 py-4 font-bold text-white rounded-full transition-all duration-300 hover:-translate-y-1"
 									style={{ backgroundColor: 'var(--th-polgun-antrasit)', boxShadow: `0 0 32px var(--th-polgun-antrasit)66` }}
 									onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'var(--th-text-muted)'}
@@ -771,7 +773,7 @@ export default function ProductsPage({ setActivePage}) {
 												className="px-3 py-3"
 												style={{ backgroundColor: 'var(--th-bg)' }}
 											>
-												<div
+												<div // İçeriğin sığmaması durumunda kelimelerin kırılmasını sağlar
 													className="text-[10px] font-semibold uppercase tracking-wider mb-1"
 													style={{
 														color:
@@ -780,7 +782,7 @@ export default function ProductsPage({ setActivePage}) {
 												>
 													{spec.label}
 												</div>
-												<div
+												<div // İçeriğin sığmaması durumunda kelimelerin kırılmasını sağlar
 													className="text-xs font-black"
 													style={{ color: 'var(--th-text)' }}
 												>
@@ -793,7 +795,7 @@ export default function ProductsPage({ setActivePage}) {
 									{/* CTA */}
 									<div className="flex gap-3">
 										<button
-											onClick={() => setActivePage('contact')}
+											onClick={() => navigate('/contact')}
 											className="flex-1 py-3 text-white text-sm font-bold rounded-full transition-all duration-200 hover:-translate-y-0.5"
 										style={{ backgroundColor: 'var(--th-polgun-blue)', boxShadow: `0 0 32px var(--th-polgun-blue)66` }}
 										onMouseEnter={(e) =>
