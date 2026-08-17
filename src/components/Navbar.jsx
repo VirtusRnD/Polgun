@@ -1,6 +1,6 @@
 // ============================================================
 // NAVBAR — WhiteWater West mimarisiyle birebir 4 mega-menü
-// Servislerimiz / Projelerimiz / Ürünlerimiz / Hakkımızda /Ar-Ge
+// Hizmetlerimiz / Projelerimiz / Ürünlerimiz / Hakkımızda /Ar-Ge
 // ============================================================
 import { useState, useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom';
@@ -10,7 +10,7 @@ import polgunLogo from '../assets/logoPolgun.png';
 const NAV_ITEMS = [
   {
     id: 'services',
-    label: 'Servislerimiz',
+    label: 'Hizmetlerimiz',
     page: 'services',
     mega: true,
     sections: [

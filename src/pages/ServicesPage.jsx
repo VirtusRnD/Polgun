@@ -2,92 +2,59 @@
 // SERVICES PAGE — Gerçek görseller + CSS değişkenleri + glass efekt
 // ============================================================
 import heroImage from '../assets/polgun-featured-projects-4.avif'
-import cncOperator from '../assets/production/cnc-operator.avif'
-import pipeCutting from '../assets/production/pipe-cutting.avif'
-import paintApplication from '../assets/production/paint-application.avif'
-import inotekCnc from '../assets/production/inotek-cnc.avif'
-import compositeControl from '../assets/production/composite-control.avif'
-import mechanicalOperator from '../assets/production/mechanical-operator.avif'
-import cncCutting from '../assets/production/cnc-cutting.avif'
-
+import concept_design from '../assets/production/concept_design.avif'
+import assemble from '../assets/production/assemble.avif'
+import engineering from '../assets/production/engineering.avif'
+import management from '../assets/production/management.avif'
+import ppw from '../assets/production/production_polgun_waterslides.avif'
 // ── Hizmet Adımları ────────────────────────────────────────
 const STEPS = [
-	{
-		id: 'musteri-hizmetleri',
-		number: '01',
-		title: 'Müşteri Hizmetleri',
-		sub: 'Customer Servıce',
-		desc: 'Polgün, müşterilerine mümkün olan en iyi müşteri hizmetini sunmaya kararlıdır. Yatırımınızın değerinin bilincinde olarak, projenizle ilgili her ayrıntı önemlidir ve öncelikli olarak ele alınmaktadır. Bizim için müşteri hizmetleri, müşteri ihtiyaçlarını olabildiğince çabuk çözmek, yüz yüze hızlı bağlantı kurmak, her soruya 7/24 ulaşılabilir olmak ve iletişimimizin her adımında Türk misafirperverliği ile hizmet vermek demektir.',
-		img: heroImage,
-		imgAlt: 'Müşteri hizmetleri',
-	},
-	{
-		id: 'planlama',
-		number: '02',
-		title: 'Planlama',
-		sub: 'Plannıng',
-		desc: 'Planlama, şirketimiz için temel bir değerdir çünkü tüm projelerin arkasındaki başarı, iyi yönetilen proje planlamasına dayanır. Polgün Proje Planlama bölümü, proje başlangıcından detaylı tasarıma kadar tüm görevleri kapsayan tüm proje aşamasından sorumludur.',
-		img: cncOperator,
-		imgAlt: 'Dijital üretim planlama',
-	},
-	{
-		id: 'tasarim',
-		number: '03',
-		title: 'Tasarım',
-		sub: 'Desıgn',
-		desc: 'Tasarımcılar, geliştiriciler ve 3D sanatçılardan oluşan ekibimiz, yeni nesil ürünleri, deneyimleri ve hizmetleri tasarlamak ve inşa etmek için büyüme, etki ve çeviklik arayışı içindedir. Bu, tasarım departmanının çok sayıda farklı yüksek kaliteli proje üretmesini sağlar. Polgün olarak dünyanın dört bir yanındaki müşterilere arzu edilen tasarımları sunmak istiyoruz.',
-		img: inotekCnc,
-		imgAlt: 'CNC model tasarım',
-	},
-	{
-		id: 'muhendislik',
-		number: '04',
-		title: 'Mühendislik',
-		sub: 'Engıneerıng',
-		desc: 'Polgün’ün bünyesindeki mühendis ve mimarlardan oluşan ekip, tüm yapının tasarlanmasından her türlü çevresel koşulun belirlenmesine kadar fonksiyonları yürüten projelerin çeşitli aşamalarının çekirdeğini oluşturur. Mühendislik süreci projeyi bir vizyondan devasa bir gerçekliğe götürürken güvenlik ve görsel gerçekleri sağlar.',
-		img: mechanicalOperator,
-		imgAlt: 'Mekanik mühendislik tezgahı',
-	},
-	{
-		id: 'uretim',
-		number: '05',
-		title: 'Üretim',
-		sub: 'Productıon',
-		desc: 'Muğla’da bulunan modern, entegre üretim tesisimiz tüm taleplerinize hızlı ve güvenilir bir şekilde yanıt vermektedir. Üretim tesisimiz hem çelik konstrüksiyon hem de fiberglas imalatını işlememizi sağlayan verimli, yüksek teknolojili ekipmanlara sahiptir. Tamamen otomatik üretim kontrol sistemi ve her bir bileşenin barkod tanımlaması sayesinde projelerimizi optimum sürelerde yönetebiliriz.',
-		img: cncCutting,
-		imgAlt: 'CNC kesim üretim',
-	},
-	{
-		id: 'montaj',
-		number: '06',
-		title: 'Montaj',
-		sub: 'Installatıon & Commıssıonıng',
-		desc: 'Proje sahasına ulaşan ürünlerimiz montaj öncesi ilgili ekip tarafından son kontrollere tabi tutulur ve her proje için mühendislik departmanı tarafından hazırlanan montaj kılavuzuna göre ürünler monte edilir. Bu aşamada nakliye sırasında ürünlerin eksiksiz ve hasarsız olmasına özen gösteriyoruz. Montaj süresinin aşılmaması için nakliye sırasında hasar gören ürünleri acilen değiştirmek görevimizdir. Montaj süresinin aşılmaması için nakliye sırasında hasar gören ürünleri acilen değiştirmek görevimizdir. Anahtar teslimi sürecimiz montaj ve uygulama ekibimiz tarafından ancak testler yapıldıktan, doğru kullanım eğitimi alındıktan ve gerekli uyarı tabelalarının asılmasıyla tamamlanacaktır. Güvenliği sağlamak ana ilkelerimizden biri olup, uzun yıllardır firmamızda çalışan ve çeşitli ülkelere giderek montaj ve uygulama görevlerini yürüten profesyonel montaj ekibimizle projelerimizi yürütüyoruz.',
-		img: pipeCutting,
-		imgAlt: 'Montaj süreci',
-	},
-	{
-		id: 'satis-sonrasi',
-		number: '07',
-		title: 'Satış Sonrası',
-		sub: 'After-Sales Support',
-		desc: 'Müşterilerimizin satış sonrası eğitim, yedek parça temini, teknik servis taleplerini karşılamak ve müşteri memnuniyetini en üst seviyede tutmak öncelikli amacımızdır. Her türlü su parkı, su kaydırağı, havuz sistemlerine, kaydırak yenileme işleminin yanı sıra, uzman ekibimiz ile periyodik ve yıllık bakım, parça değişimi ve yenileme hizmeti vermekteyiz.',
-		img: compositeControl,
-		imgAlt: 'Kalite kontrol',
-	},
-	{
-		id: 'bakim-onarim',
-		number: '08',
-		title: 'Bakım & Yenileme',
-		sub: 'Maıntenance & Renovatıon',
-		desc: 'Dış gerçekler ve hava koşulları, su parkınızın bazı kısımlarında korozyona neden olabilir. Polgün’ün müşteri hizmetleri ekibi, hidrolik tesisat, elektrik tesisatı ve mekanik parçaları kontrol eder. Bakım hizmetimiz su parkınızın parlak ve yepyeni görünmesini sağlar, yıllarca daha sorunsuz bir kullanım sağlar.',
-		img: paintApplication,
-		imgAlt: 'Boya ve yüzey yenileme',
-	},
-	
-	
+    {
+        id: 'urun-tasarimi-ve-temalandirma',
+        number: '01',
+        title: 'Ürün Tasarımı ve Temalandırma',
+        sub: 'Product Desıgn & Themıng',
+        desc: 'Su kaydırakları, çocuk oyun grupları ve su parkı atraksiyonları, projenin konseptine ve müşteri beklentilerine göre özel olarak tasarlanır. Renk, desen, tema ve görsel detaylar ürün geometrisiyle uyumlu şekilde geliştirilerek ziyaretçi deneyimini güçlendiren özgün tasarımlar oluşturulur.',
+        img: concept_design, // Orijinal diziden örnek bir görsel değişkeni, kendi görselinize göre güncelleyebilirsiniz.
+        imgAlt: 'Ürün tasarımı ve temalandırma',
+    },
+    {
+        id: 'muhendislik-ve-projelendirme',
+        number: '02',
+        title: 'Mühendislik ve Projelendirme',
+        sub: 'Engıneerıng & Projectıng',
+        desc: 'Kaydırak sistemleri, çelik taşıyıcı yapılar, mekanik ve hidrolik altyapılar mühendislik ekipleri tarafından detaylı şekilde projelendirilir. Yapısal hesaplamalar, teknik analizler, üretim çizimleri ve montaj dokümanları proje koşulları doğrultusunda hazırlanır. Tasarımın güvenli, üretilebilir ve sahada uygulanabilir bir sisteme dönüştürülmesi sağlanır.',
+        img: engineering,
+        imgAlt: 'Mühendislik ve projelendirme',
+    },
+    {
+        id: 'uretim',
+        number: '03',
+        title: 'Üretim',
+        sub: 'Productıon',
+        desc: 'Fiberglas kaydırak parçaları, çelik konstrüksiyonlar, modeller, kalıplar ve projeye özel bileşenler Polgün’ün üretim tesislerinde hazırlanır. Üretim süreçleri; ölçü doğruluğu, yüzey kalitesi, dayanıklılık ve izlenebilirlik esas alınarak yürütülür. Her ürün, proje gerekliliklerine ve belirlenen kalite standartlarına uygunluğu doğrulandıktan sonra sevkiyata hazırlanır.',
+        img: ppw,
+        imgAlt: 'Üretim',
+    },
+    {
+        id: 'proje-yonetimi-ve-sevkiyat',
+        number: '04',
+        title: 'Proje Yönetimi ve Sevkiyat',
+        sub: 'Project Management & Shıppıng',
+        desc: 'Tasarım, üretim, paketleme, lojistik ve saha süreçleri proje takvimine uygun şekilde koordine edilir. Ürünler doğru kodlama ve etiketleme sistemiyle hazırlanarak güvenli biçimde paketlenir ve proje sahasına eksiksiz ulaştırılır. Sürecin her aşaması düzenli olarak takip edilerek zaman, maliyet ve kalite hedeflerinin korunması sağlanır.',
+        img: management, // Orijinal listeden sevkiyat/kontrol adımı için seçildi.
+        imgAlt: 'Proje yönetimi ve sevkiyat',
+    },
+    {
+        id: 'montaj-ve-devreye-alma',
+        number: '05',
+        title: 'Montaj ve Devreye Alma',
+        sub: 'Installatıon & Commıssıonıng',
+        desc: 'Kaydıraklar, çelik konstrüksiyonlar ve ilgili ekipmanlar deneyimli saha ekipleri tarafından veya Polgün teknik gözetimi altında monte edilir. Montaj sonrasında bağlantılar, kayma yüzeyleri, su akışı ve sistem fonksiyonları detaylı olarak kontrol edilir. Gerekli testler tamamlandıktan sonra sistem güvenli ve verimli kullanıma hazır hâle getirilir.',
+        img: assemble,
+        imgAlt: 'Montaj ve devreye alma',
+    }
 ];
-
 const WHY = [
 	{ title: 'Tam Hizmet', desc: 'Tasarımdan montaja, bakımdan yazılıma her adımda.' },
 	{ title: '70+ Ülke', desc: 'Global proje deneyimi ve yerel uzmanlık.' },
@@ -120,19 +87,21 @@ export default function ServicesPage({ setActivePage }) {
 		<main className="pt-20" style={{ backgroundColor: 'var(--th-bg)' }}>
 
 			{/* ── Page Hero ── */}
-			<section className="py-28" style={{ backgroundColor: 'var(--th-primary)' }}>
+			<section className="py-10" style={{ backgroundColor: 'var(--th-primary)' }}>
 				<div className="max-w-7xl mx-auto px-6 max-w-[var(--layout-max)] lg:px-12">
 					<div className="grid lg:grid-cols-2 gap-16 items-end">
 						<div>
 							<p className="text-xs font-bold tracking-[0.3em] uppercase mb-4" style={{ color: 'var(--th-text)' }}>
-								Servislerimiz
+								Hizmetlerimiz
 							</p>
 							<h1 className="text-5xl lg:text-6xl font-black text-white leading-[1.02]">
 								Başından<br />Sonuna<br />Tam Destek
 							</h1>
 						</div>
 						<p className="text-white/50 text-lg leading-relaxed">
-							Polgün; su parkı ve eğlence sistemleri için geliştirdiği çözümleri, çelik konstrüksiyon, mekanik işleme, kompozit üretim, yüzey uygulamaları ve dijital üretim teknolojilerini bir araya getiren entegre üretim altyapısıyla hayata geçirir. Her aşamada kalite, hassasiyet ve proje gereksinimlerine uygun üretim yaklaşımı esas alınır.
+							Polgün, su parkı projelerinin konsept geliştirme ve tasarım aşamasından mühendislik, üretim, montaj ve satış sonrası desteğe kadar tüm süreçlerinde bütüncül çözümler sunar. <br></br><br></br>
+							Tasarım, mühendislik ve üretim ekiplerinin koordineli çalışması sayesinde her proje; bulunduğu alanın koşullarına, hedef kullanıcı kitlesine, kapasite gereksinimlerine ve yatırım hedeflerine uygun şekilde geliştirilir.<br></br><br></br>
+							Polgün’ün amacı yalnızca ürün tedarik etmek değil; güvenli, sürdürülebilir, görsel açıdan güçlü ve uzun yıllar yüksek performansla çalışabilecek su parkı deneyimleri oluşturmaktır.<br></br>
 						</p>
 						<div className="flex gap-4 flex-wrap">
 							<button
@@ -168,7 +137,7 @@ export default function ServicesPage({ setActivePage }) {
 
 			{/* ── Neden Polgün Band ── */}
 			<section style={{ backgroundColor: 'var(--th-surface)', borderBottom: '1px solid color-mix(in srgb,var(--th-border) 8%,transparent)' }}>
-				<div className="max-w-[var(--layout-max)] mx-auto px-6 lg:px-14">
+				<div className="py-16 max-w-[var(--layout-max)] mx-auto px-6 lg:px-14">
 					<div className="grid grid-cols-2 lg:grid-cols-4 gap-px" style={{ backgroundColor: 'color-mix(in srgb,var(--th-border) 8%,transparent)' }}>
 						{WHY.map((w) => (
 							<div key={w.title} className="px-8 py-10" style={{ backgroundColor: 'var(--th-surface)' }}>
@@ -182,7 +151,7 @@ export default function ServicesPage({ setActivePage }) {
 			</section>
 
 			{/* ── Adım Adım Hizmetler ── */}
-			<section className="py-24 lg:py-32">
+			<section className="py-24 lg:py-32 ">
 				<div className="max-w-[var(--layout-max)] mx-auto px-6 lg:px-14">
 					<div className="text-center mb-20">
 						<p className="text-[11px] font-black tracking-[0.3em] uppercase mb-5 flex items-center justify-center gap-3" style={{ color: 'var(--th-polgun-blue)' }}>

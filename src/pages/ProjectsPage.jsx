@@ -1876,17 +1876,14 @@ export default function ProjectsPage({ setActivePage }) {
               </p>
               <div className="flex gap-8 flex-wrap">
                 <div>
-                  <p className="text-4xl font-black text-white">88+</p>
+                  <p className="text-4xl font-black text-white">3000+</p>
                   <p className="text-[11px] text-white/40 tracking-wider uppercase mt-1">Tamamlanan Proje</p>
                 </div>
                 <div>
-                  <p className="text-4xl font-black text-white">30+</p>
+                  <p className="text-4xl font-black text-white">70+</p>
                   <p className="text-[11px] text-white/40 tracking-wider uppercase mt-1">Ülke</p>
                 </div>
-                <div>
-                  <p className="text-4xl font-black text-white">4</p>
-                  <p className="text-[11px] text-white/40 tracking-wider uppercase mt-1">Kıta</p>
-                </div>
+                
               </div>
             </div>
           </div>
