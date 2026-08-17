@@ -146,14 +146,12 @@ export default function Navbar({ activePage, setActivePage, colorPalette, locati
 
   return (
     <header
-      className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 backdrop-blur-md"
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 lg:backdrop-blur-md`}
       style={{
         backgroundColor: `rgba(255, 255, 255, ${glassOpacity})`,
         borderBottom: `1px solid color-mix(in srgb, var(--th-polgun-blue) ${scrolled ? 15 : 20}%, transparent)`,
-        backdropFilter: `blur(${blurAmount})`,
-        WebkitBackdropFilter: `blur(${blurAmount})`,
       }}
-    >
+      >
       <nav className="max-w-[var(--layout-max)] mx-auto px-6 lg:px-14 flex items-center justify-between h-[72px]">
 
         {/* ══ Logo ══ */}
@@ -325,7 +323,7 @@ export default function Navbar({ activePage, setActivePage, colorPalette, locati
             } : {
               color: 'var(--th-text)',
             }}
-            
+
           >
             İletişim
           </Link>
@@ -380,14 +378,14 @@ export default function Navbar({ activePage, setActivePage, colorPalette, locati
 
       {/* ══ Mobile Menü Paneli ══ */}
       <div
-        className={`lg:hidden border-t overflow-hidden transition-all duration-300 transform origin-top
-        ${mobileOpen ? 'scale-y-100 opacity-100 overflow-y-auto' : 'scale-y-0 opacity-0'}`}
+        className={`lg:hidden fixed left-0 right-0 z-40 overflow-hidden transition-all duration-300 ease-in-out
+        ${mobileOpen ? 'max-h-[calc(100vh-72px)] opacity-100' : 'max-h-0 opacity-0'}`}
         style={{
+          top: '72px', // Position below the main header
           backgroundColor: 'var(--th-surface)',
-          borderColor: 'color-mix(in srgb, var(--th-border) 55%, transparent)',
         }}
       >
-        <div className="px-5 py-4 flex flex-col">
+        <div className="px-5 py-4 flex flex-col h-full overflow-y-auto">
           {NAV_ITEMS.map((item) => (
             <div
               key={item.id}
@@ -408,12 +406,11 @@ export default function Navbar({ activePage, setActivePage, colorPalette, locati
                         color: 'var(--th-polgun-blue)',
                         transform: mobileExpanded === item.id ? 'rotateZ(180deg)' : 'rotateZ(0deg)',
                       }}
-                      fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                    >
+                      fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 9l-7 7-7-7" />
                     </svg>
                   </button>
-                  <div className={`overflow-hidden transition-all duration-200 ${mobileExpanded === item.id ? 'max-h-[600px] pb-3' : 'max-h-0'}`}>
+                  <div className={`overflow-hidden transition-all duration-200 ${mobileExpanded === item.id ? 'max-h-150 pb-3' : 'max-h-0'}`}>
                     {item.sections?.map((section, si) => (
                       <div key={si} className="mb-2">
                         {section.title && (
@@ -427,7 +424,7 @@ export default function Navbar({ activePage, setActivePage, colorPalette, locati
                           <Link
                             key={link.label}
                             to={link.to}
-                            className="w-full text-left px-4 py-2.5 text-sm rounded-lg transition-colors"
+                            className="block w-full text-left px-4 py-2.5 text-sm rounded-lg transition-colors"
                             style={{
                               color: 'var(--th-text-muted)',
                             }}
@@ -458,6 +455,7 @@ export default function Navbar({ activePage, setActivePage, colorPalette, locati
                   onMouseLeave={(e) => {
                     e.currentTarget.style.color = 'var(--th-text)'
                   }}
+                  onClick={() => handleNav(item.page)}
                 >
                   {item.label}
                 </Link>
@@ -469,7 +467,7 @@ export default function Navbar({ activePage, setActivePage, colorPalette, locati
           <div className="flex flex-col gap-3 pt-5 pb-2">
             <Link
               to="/contact"
-              className="w-full py-3.5 text-white text-sm font-bold rounded-full transition-all duration-300"
+              className="w-full py-3.5 ps-6 text-white text-sm font-bold rounded-full transition-all duration-300"
               style={{
                 backgroundColor: 'var(--th-polgun-blue)',
               }}
@@ -484,7 +482,7 @@ export default function Navbar({ activePage, setActivePage, colorPalette, locati
             </Link>
             <Link
               to="/contact"
-              className="w-full py-3.5 text-sm font-semibold rounded-full transition-all duration-300 border-2"
+              className="w-full py-3.5 ps-6 text-sm font-semibold rounded-full transition-all duration-300 border-2"
               style={{
                 borderColor: 'var(--th-polgun-blue)',
                 color: 'var(--th-polgun-blue)',
@@ -502,6 +500,4 @@ export default function Navbar({ activePage, setActivePage, colorPalette, locati
           </div>
         </div>
       </div>
-    </header>
-  )
-}
+      </header>)}
