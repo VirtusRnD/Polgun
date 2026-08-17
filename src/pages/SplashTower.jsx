@@ -28,6 +28,29 @@ import candy1 from '../assets/splash/candyTheme/candy1.avif'
 import candy2 from '../assets/splash/candyTheme/candy2.avif'
 import candy3 from '../assets/splash/candyTheme/candy3.avif'
 
+import carnaval1 from '../assets/splash/carnavalTheme/carnaval1.avif'
+import carnaval2 from '../assets/splash/carnavalTheme/carnaval2.avif'
+import carnaval3 from '../assets/splash/carnavalTheme/carnaval3.avif'
+
+import jurassic1 from '../assets/splash/jurassicTheme/j1.avif'
+import jurassic2 from '../assets/splash/jurassicTheme/j2.avif'
+import jurassic3 from '../assets/splash/jurassicTheme/j3.avif'
+
+import jungle1 from '../assets/splash/jungleTheme/jungle1.avif'
+import jungle2 from '../assets/splash/jungleTheme/jungle2.avif'
+import jungle3 from '../assets/splash/jungleTheme/jungle3.avif'
+import jungle4 from '../assets/splash/jungleTheme/jungle4.avif'
+
+import galaxy1 from '../assets/splash/galaxyTheme/galaxy1.avif'
+import galaxy2 from '../assets/splash/galaxyTheme/galaxy2.avif'
+import galaxy3 from '../assets/splash/galaxyTheme/galaxy3.avif'
+import galaxy4 from '../assets/splash/galaxyTheme/galaxy4.avif'
+
+import custom1 from '../assets/splash/customTheme/c1.avif'
+import custom2 from '../assets/splash/customTheme/c2.avif'
+import custom3 from '../assets/splash/customTheme/c3.avif'
+import custom4 from '../assets/splash/customTheme/c4.avif'
+
 // ── Tema Verisi ────────────────────────────────────────────
 const THEMES = [
   {
@@ -76,6 +99,74 @@ const THEMES = [
       { id: 1, title: 'Candy Theme', location: 'Proje', img: candy1 },
       { id: 2, title: 'Candy Theme', location: 'Proje', img: candy2 },
       { id: 3, title: 'Candy Theme', location: 'Proje', img: candy3 },
+    ],
+  },
+    {
+    id: 'carnaval',
+    name: 'Carnaval Theme',
+    location: 'Türkiye',
+    year: '2024',
+    desc: 'Çocukların hayal gücünü harekete geçirmek ve unutulmaz aile anları yaratmak için tasarlanmış canlı bir su oyun alanı olan Polgün Carnival Splash Tower ile karnavalın neşeli ruhunu hayata geçirin. Şenlikli bir panayırın büyülü atmosferinden ilham alan Karnaval Teması; renkli balonlar, şekerlemeleri andıran detaylar, devasa lolipoplar ve oyun alanını rüya gibi bir kutlama ortamına dönüştüren eğlenceli çadır tarzı dekorasyonlar içerir. Etkileşimli su unsurları ve canlı tematik öğeler, çocukları keşfetmeye, oynamaya ve sürükleyici bir su macerasının tadını çıkarmaya teşvik eder.Göz alıcı görselliği ve neşeli karakteriyle Carnival Splash Tower; tatil köyleri, oteller, su parkları ve aile eğlence merkezleri için büyüleyici bir odak noktası haline gelir. Boyut, yerleşim ve renk açısından tamamen özelleştirilebilir yapısıyla, her projenin kendine özgü konseptine ve kapasite ihtiyaçlarına göre uyarlanabilir.',
+    thumbnail: carnaval1,
+    slides: [
+      { id: 1, title: 'Carnaval Theme', location: 'Proje', img: carnaval1 },
+      { id: 2, title: 'Carnaval Theme', location: 'Proje', img: carnaval2 },
+      { id: 3, title: 'Carnaval Theme', location: 'Proje', img: carnaval3 },
+    ],
+  },
+   {
+    id: 'jurassic',
+    name: 'Jurassic Theme',
+    location: 'Türkiye',
+    year: '2024',
+    desc: 'Merak, heyecan ve macera duygularını harekete geçirmek üzere tasarlanan temalı bir su oyun alanı olan Polgün Jurassic Splash Tower ile tarih öncesi dünyayı canlandırın. Dinozorların büyüleyici çağından ilham alan Jurassic teması; Apatosaurus figürleri, dinozor yumurtaları, vahşi doğa bitkileri ve sevimli yavru T-Rex karakterleri gibi etkileyici unsurları, Mezozoik Çağ\'ı anımsatan bir atmosferde bir araya getiriyor. Bu yaratıcı detaylar, çocukların tarih öncesi biyoçeşitlilikten ilham alan bir dünyayı keşfederken hareketli su oyunlarının keyfini çıkarabilecekleri ilgi çekici bir ortam yaratıyor. Macera dolu görselleri interaktif su özellikleriyle birleştiren Jurassic Splash Tower; su parkları, tatil köyleri ve aile eğlence merkezleri için büyüleyici bir odak noktası haline geliyor. Boyut, yerleşim düzeni, renk paleti ve tematik bileşenler açısından tamamen özelleştirilebilir yapısıyla, her projenin konseptine ve kapasite ihtiyaçlarına göre uyarlanabiliyor.',
+    thumbnail: jurassic1,
+    slides: [
+      { id: 1, title: 'Jurassic Theme', location: 'Proje', img: jurassic1 },
+      { id: 2, title: 'Jurassic Theme', location: 'Proje', img: jurassic2 },
+      { id: 3, title: 'Jurassic Theme', location: 'Proje', img: jurassic3 },
+    ],
+  },
+   {
+    id: 'jungle',
+    name: 'Jungle Theme',
+    location: 'Türkiye',
+    year: '2024',
+    desc: 'Tropikal yağmur ormanlarının güzelliğinden, enerjisinden ve gizeminden ilham alan temalı bir su oyun alanı olan Polgün Jungle Splash Tower ile vahşi doğaya adım atın. Fil, papağan, baykuş, sincap ve dev ağaçlar gibi hayal gücünü harekete geçiren orman karakterleriyle hayat bulan bu tema; çocukların keşfedebileceği, oyun oynayabileceği ve hayal güçlerini özgürce kullanabileceği heyecan verici bir ortam yaratıyor. Doğadan ilham alan detaylar, interaktif su özellikleri ve macera dolu dekoratif unsurlar, oyun alanını canlı bir orman yolculuğuna dönüştürüyor. Toprak tonları, ahşap görünümlü yüzeyler ve zengin doğa temalı grafiklerle tasarlanan Jungle Splash Tower; su parkları, tatil köyleri ve aile eğlence merkezleri için özgün bir görsel kimlik sunuyor. Boyut, yerleşim düzeni, renk paleti ve tematik detaylar açısından tamamen özelleştirilebilir yapısıyla, her projenin konseptine ve kapasite ihtiyaçlarına göre uyarlanabiliyor.',
+    thumbnail: jungle1,
+    slides: [
+      { id: 1, title: 'Jungle Theme', location: 'Proje', img: jungle1 },
+      { id: 2, title: 'Jungle Theme', location: 'Proje', img: jungle2 },
+      { id: 3, title: 'Jungle Theme', location: 'Proje', img: jungle3 },
+      { id: 4, title: 'Jungle Theme', location: 'Proje', img: jungle4 },
+    ],
+  },
+  {
+    id: 'galaxy',
+    name: 'Galaxy Theme',
+    location: 'Türkiye',
+    year: '2024',
+    desc: 'Çocukları evrenin harikaları arasında heyecan verici bir yolculuğa çıkarmak için tasarlanmış temalı bir su oyun alanı olan Polgün Galaxy Splash Tower ile kalkışa hazır olun. Uzayın gizeminden ilham alan Galaxy teması; roketler, gezegenler, uzaylılar ve kozmik esintili animasyonlar gibi hayal gücünü harekete geçiren unsurları çarpıcı sanatsal detaylarla bir araya getiriyor. İnteraktif su özellikleri ve macera dolu tematik bileşenler; çocukları oynamaya, kaymaya ve keşfetmeye teşvik ederken, aynı zamanda hayal güçlerini ve bilinmeyene dair meraklarını canlandırıyor. Dinamik konsepti ve uzaydan ilham alan, görsel açıdan büyüleyici tasarımıyla Galaxy Splash Tower; su parkları, tatil köyleri ve aile eğlence merkezleri için unutulmaz bir cazibe noktası oluşturuyor. Boyut, yerleşim düzeni, renk paleti ve tematik detaylar açısından tamamen özelleştirilebilir yapısıyla, her projenin konseptine ve kapasite ihtiyaçlarına uyarlanabiliyor.',
+    thumbnail: galaxy1,
+    slides: [
+      { id: 1, title: 'Galaxy Theme', location: 'Proje', img: galaxy1 },
+      { id: 2, title: 'Galaxy Theme', location: 'Proje', img: galaxy2 },
+      { id: 3, title: 'Galaxy Theme', location: 'Proje', img: galaxy3 },
+      { id: 4, title: 'Galaxy Theme', location: 'Proje', img: galaxy4 },
+    ],
+  },
+  {
+    id: 'custom',
+    name: 'Custom Theme',
+    location: 'Türkiye',
+    year: '2024',
+    desc: 'Polgün\'de her proje, eşsiz bir hikayeye dönüştürülebilir. Özel Tema hizmetimiz; yaratıcı tasarımı, kavramsal geliştirmeyi ve özenle seçilmiş renk paletlerini bir araya getirerek, her bir mekanın kimliğini ve vizyonunu yansıtan su oyun alanları yaratır. Onlarca yıllık sektör deneyimi, şirket içi Ar-Ge ekibi ve gelişmiş CAD tasarım yetkinlikleriyle desteklenen tasarımcılarımız, her projenin gereksinimlerine özel özgün konseptler geliştirir. İlk fikirden nihai temalı eğlence alanına kadar her ayrıntı, ziyaretçiler için ilgi çekici, görsel açıdan etkileyici ve unutulmaz bir deneyim sunmak üzere titizlikle ele alınır. İster doğadan, fantastik dünyalardan veya maceradan ilham alsın, isterse tamamen özgün bir konseptten yola çıksın; Polgün; su parkları, tatil köyleri, oteller ve aile eğlence merkezleri için tamamen kişiselleştirilmiş tematik çözümler üretir.',
+    thumbnail: custom1,
+    slides: [
+      { id: 1, title: 'Custom Theme', location: 'Proje', img: custom1 },
+      { id: 2, title: 'Custom Theme', location: 'Proje', img: custom2 },
+      { id: 3, title: 'Custom Theme', location: 'Proje', img: custom3 },
+      { id: 4, title: 'Custom Theme', location: 'Proje', img: custom4 },
     ],
   },
 ]
