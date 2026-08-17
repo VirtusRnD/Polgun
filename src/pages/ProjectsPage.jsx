@@ -2,7 +2,7 @@
 // PROJECTS PAGE — Virtus ArGe Gerçek Proje Verileri (88 proje)
 // ============================================================
 import { useState, useEffect, useRef } from 'react'
-
+import {Link, useNavigate} from 'react-router-dom'
 // ── Proje Görselleri ──────────────────────────────────────────────────────────
 // Dev: Vite serves src/assets at /src/assets. Prod: static files are served from /img (copied from src/assets).
 const ASSETS_URL = import.meta.env.DEV ? '/src/assets' : '/img';
@@ -1844,6 +1844,7 @@ function ProjectSliderModal({ project, isOpen, onClose }) {
 }
 
 export default function ProjectsPage({ setActivePage }) {
+  const navigate = useNavigate()
   const [region, setRegion] = useState('Tümü')
   const [type, setType] = useState('Tümü')
   const [selectedProject, setSelectedProject] = useState(null)
@@ -1993,7 +1994,7 @@ export default function ProjectsPage({ setActivePage }) {
                 <h2 className="text-3xl font-black text-white">Projeniz bu listede olsun.</h2>
                 <p className="text-white/40 mt-2 max-w-md">Hayalinizdeki su parkını veya eğlence merkezini tasarlamak için uzman mühendis ve mimar kadromuzla iletişime geçin.</p>
               </div>
-              <button onClick={() => setActivePage('contact')}
+              <button onClick={() => navigate('/contact')}
                 className="shrink-0 px-10 py-4 font-bold text-sm rounded-full transition-all duration-300 hover:-translate-y-1"
                 style={{ backgroundColor: '#FFFFFF', color: 'var(--th-primary-darker)', boxShadow: '0 0 40px rgba(0,0,0,0.2)' }}
                 onMouseEnter={(e) => e.currentTarget.style.opacity = '0.9'}

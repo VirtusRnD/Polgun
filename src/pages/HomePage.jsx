@@ -30,11 +30,10 @@ import aqualand1 from '../assets//products/AqualandTorremolInos-Spain.avif'
 import aqualand2 from '../assets//products/AqualandTorremolInos-Spain2.avif'
 import kaec from '../assets/products/KAEC-RixosJeddah-SaudiArabia.avif'
 import navatu from '../assets/products/navatu.avif'
-import syHotelAntalya from '../assets/hero/10.SYHotel.avif'
 import nickelodeon from '../assets/products/NickelodeonHotel-Antalya.avif'
 import navatu1 from '../assets/navatu/navatu1.avif'
 import pirate1 from '../assets/splash/pirateTheme/1001.avif'
-import seignosse from '../assets/hero/2.SeignosseAtlanticPark.avif'
+
 import rixosKaec from '../assets/hero/3.RixosKAEC.avif'
 import pantheon from '../assets/hero/4.PantheonWaterpark.avif'
 import theLandOfLegends from '../assets/hero/5.TheLandofLegends.avif'
@@ -43,12 +42,12 @@ import kunuku from '../assets/hero/7.KunukuAquaResort.avif'
 import movenpick from '../assets/hero/9MövenpickResort.avif'
 import delphinPalace from '../assets/hero/11.DelphinPalace.avif'
 import nirvana from '../assets/hero/12.NirvanaCosmopolitan.avif'
-import maxeria from '../assets/hero/13.MaxeriaBlue.avif'
+
 import fantazia from '../assets/hero/14.FantaziaResortMarsaAlam.avif'
 import pickalbatros from '../assets/hero/15.PickalbatrosSungoClub.avif'
 import aquila from '../assets/hero/16.AquilaRithymnaBeach.avif'
 import ethno from '../assets/hero/17.EthnoHotels.avif'
-import aqualandMallorca from '../assets/hero/Aqualand Mallorca - Spain.avif'
+import syHotelAntalya from '../assets/hero/10.SYHotel.avif'
 import frenzyFrance from '../assets/hero/Frenzy Water Park - France.avif'
 import guralBelek from '../assets/hero/Gural Belek - Turkiye.avif'
 import movenpickNew from '../assets/hero/Movenpick Resort - Turkiye.avif'
@@ -57,7 +56,22 @@ import pineBeach from '../assets/hero/Pine Beach - Turkiye.avif'
 import sClubJakovo from '../assets/hero/S Club Jakovo - Serbia.avif'
 import seignosseNew from '../assets/hero/Seignosse Atlantic - France.avif'
 import landLegendsNew from '../assets/hero/The Land of Legends - Turkiye.avif'
-
+import hero1 from '../assets/hero/1.avif'
+import hero2 from '../assets/hero/2.avif'
+import hero3 from '../assets/hero/3.avif'
+import hero4 from '../assets/hero/4.avif'
+import hero5 from '../assets/hero/5.avif'
+import hero6 from '../assets/hero/6.avif'
+import hero7 from '../assets/hero/7.avif'
+import hero8 from '../assets/hero/8.avif'
+import hero9 from '../assets/hero/9.avif'
+import hero10 from '../assets/hero/10.avif'
+import hero11 from '../assets/hero/11.avif'
+import hero12 from '../assets/hero/12.avif'
+import hero13 from '../assets/hero/13.avif'
+import hero14 from '../assets/hero/14.avif'
+import hero15 from '../assets/hero/15.avif'
+import hero16 from '../assets/hero/16.avif'
 
 const REFS = [
   { src: refAmara, alt: 'Amara Prestige Elite' },
@@ -85,8 +99,8 @@ function GlassCard({ children, className = '', style = {} }) {
       className={`relative rounded-2xl overflow-hidden ${className}`}
       style={{
         background: 'rgba(255,255,255,0.55)',
-        backdropFilter: 'blur(24px)',
-        WebkitBackdropFilter: 'blur(24px)',
+        backdropFilter: 'blur(2px)',
+        WebkitBackdropFilter: 'blur(2px)',
         border: '1px solid rgba(255,255,255,0.7)',
         boxShadow: '0 8px 32px rgba(0,0,0,0.08),inset 0 1px 0 rgba(255,255,255,0.9)',
         ...style,
@@ -105,7 +119,7 @@ function MarqueeStrip() {
       <div
         className="flex gap-5 shrink-0"
         style={{
-          animation: 'marquee 32s linear infinite',
+          animation: 'marquee 64s linear infinite',
           animationPlayState: paused ? 'paused' : 'running',
         }}
       >
@@ -148,29 +162,23 @@ function MarqueeStrip() {
 }
 // Hero görselleri
 const HERO_IMAGES = [
-  { title: 'Aqualand Mallorca', location: 'İspanya', img: aqualandMallorca },
-  { title: 'Frenzy Water Park', location: 'Fransa', img: frenzyFrance },
-  { title: 'Güral Premier Belek', location: 'Antalya, Türkiye', img: guralBelek },
-  { title: 'Mövenpick Resort', location: 'Antalya, Türkiye', img: movenpickNew },
-  { title: 'Nirvana Dolce Vita', location: 'Antalya, Türkiye', img: nirvanaDolce },
-  { title: 'Pine Beach', location: 'Antalya, Türkiye', img: pineBeach },
-  { title: 'S Club Jakovo', location: 'Sırbistan', img: sClubJakovo },
-  { title: 'Seignosse Atlantic Park', location: 'Fransa', img: seignosseNew },
-  { title: 'The Land of Legends', location: 'Antalya, Türkiye', img: landLegendsNew },
-  { title: 'Seignosse Atlantic Park', location: 'Fransa', img: seignosse },
-  { title: 'Rixos KAEC', location: 'Suudi Arabistan', img: rixosKaec },
-  { title: 'Pantheon Waterpark', location: 'Yunanistan', img: pantheon },
-  { title: 'SClub Resort Hotel Aqua Park', location: 'Belgrad', img: sClub },
-  { title: 'Kunuku Aqua Resort', location: 'Curaçao', img: kunuku },
-  { title: 'Güral Premier', location: 'Antalya, Türkiye', img: guralPremier },
-  { title: 'SY Hotel', location: 'Antalya, Türkiye', img: syHotelAntalya },
-  { title: 'Delphin Palace', location: 'Antalya, Türkiye', img: delphinPalace },
-  { title: 'Nirvana Cosmopolitan', location: 'Antalya, Türkiye', img: nirvana },
-  { title: 'Maxeria Blue', location: 'Aydın, Türkiye', img: maxeria },
-  { title: 'Fantazia Resort Marsa Alam', location: 'Mısır', img: fantazia },
-  { title: 'Pickalbatros Sungo Club', location: 'Fas', img: pickalbatros },
-  { title: 'Aquila Rithymna Beach', location: 'Yunanistan', img: aquila },
-  { title: 'Ethno Hotels', location: 'Antalya, Türkiye', img: ethno },
+  { title: 'Frenzy Water Park', location: 'Fransa', img: hero1 },
+  { title: 'Seignosse Atlantic Park', location: 'Fransa', img: hero2 },
+  { title: 'Rixos Murjana Park', location: 'Suudi Arabistan', img: hero3 },
+  { title: 'S Club Park', location: 'Serbia', img: hero4 },
+  { title: 'Nirvana Dolce Vita', location: 'Türkiye', img: hero5 },
+  { title: 'Pine Beach', location: 'Türkiye', img: hero6 },
+  { title: 'The Land of Legends', location: 'Türkiye', img: hero7 },
+  { title: 'Aqualand Mallorca', location: 'İspanya', img: hero8 },
+  { title: 'Mövenpick Resort', location: 'Türkiye', img: hero9 },
+  { title: 'Güral Premier', location: 'Türkiye', img: hero10 },
+  { title: 'Fantazia Resort Marsa Alam', location: 'Mısır', img: hero11 },
+  { title: 'Sarvar Fürdö', location: 'Macaristan', img: hero12 },
+  { title: 'Paradise Spa Dogo', location: 'Güney Kore', img: hero13 },
+  { title: 'Aquila Rithymna Beach', location: 'Yunanistan', img: hero14},
+  { title: 'Kirman Sidera', location: 'Güney kore', img: hero15 },
+  { title: '', location: '', img: hero16 },
+  
 ]
 
 // ── Carousel Görselleri ────────────────────────────────────
@@ -218,7 +226,7 @@ export default function HomePage() {
 
         {/* Büyük blur baloncuklar */}
         <div
-          className="absolute -top-28 -left-28 w-[520px] h-[520px] rounded-full pointer-events-none"
+          className="absolute -top-28 -left-28 w-130 h-130 rounded-full pointer-events-none"
           style={{
             background: 'var(--th-primary-light)',
             filter: 'blur(90px)',
@@ -238,21 +246,28 @@ export default function HomePage() {
               className="font-black leading-[1.05] tracking-tight"
               style={{ color: 'var(--th-polgun-antrasit)', fontSize: 'clamp(2.4rem,2.8vw,3.2rem)' }}
             >
-              We don’t just build slides.
-              <br />We create destinations.
+              Bir su parkından daha fazlasını tasarlıyoruz.
+
             </h1>
+            <hr
+              className="w-1/4 h-1 border-0 "
+              style={{
+                background: 'linear-gradient(90deg, #e04020 0%, #c05080 22.5%, #8878b8 37.5%, #7a90c8 50%, #48c8e0 65%, #68d8a8 80%, #a8e040 100%)'
+
+              }}
+            />
             <h2
               className="font-black leading-[1.05] tracking-tight"
               style={{ fontSize: 'clamp(1.1rem,2vw,2.2rem)', letterSpacing: '-0.01em' }}
             >
               {/* LET'S */}
-              {["L","E","T","'","S"].map((char, i) => (
+              {["L", "E", "T", "'", "S"].map((char, i) => (
                 <span key={`lets-${i}`} style={{ color: '#29a8e0' }}>{char}</span>
               ))}
               {/* boşluk */}
               &nbsp;
               {/* COLOR */}
-              {["C","O","L","O","R"].map((char, i) => (
+              {["C", "O", "L", "O", "R"].map((char, i) => (
                 <span key={`color-${i}`} style={{ color: '#29a8e0' }}>{char}</span>
               ))}
               {/* boşluk */}
@@ -282,6 +297,81 @@ export default function HomePage() {
                 WATER
               </span>
             </h2>
+            <p className='text-gray-400'>İlham veren, heyecan yaratan ve unutulmaz deneyimleri hayata geçiren yenilikçi su eğlence sistemleri tasarlıyoruz.</p>
+
+            <div className='grid grid-cols-2 divide-x divide-gray-300'>
+
+              {/* 1. Kısım: Yenilikçi Tasarım & Mühendislik */}
+              <div
+                className='flex items-center justify-center gap-4 px-4'
+                style={{ color: 'var(--th-polgun-antrasit)' }}
+              >
+                {/* Çark / Mühendislik İkonu */}
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1.5}
+                  stroke="currentColor"
+                  className="w-8 h-8 shrink-0"
+                  style={{ color: 'var(--th-polgun-blue)' }}
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M10.343 3.94c.09-.542.56-.94 1.11-.94h1.093c.55 0 1.02.398 1.11.94l.149.894c.07.424.384.764.78.93.398.164.855.142 1.205-.108l.737-.527a1.125 1.125 0 0 1 1.45.12l.773.774c.39.389.44 1.002.12 1.45l-.527.737c-.25.35-.272.806-.107 1.204.165.397.505.71.93.78l.893.15c.543.09.94.559.94 1.109v1.094c0 .55-.397 1.02-.94 1.11l-.894.149c-.424.07-.764.383-.929.78-.165.398-.143.854.107 1.204l.527.738c.32.447.269 1.06-.12 1.45l-.774.773a1.125 1.125 0 0 1-1.449.12l-.738-.527c-.35-.25-.806-.272-1.203-.107-.398.165-.71.505-.781.929l-.149.894c-.09.542-.56.94-1.11.94h-1.094c-.55 0-1.019-.398-1.11-.94l-.148-.894c-.071-.424-.384-.764-.781-.93-.398-.164-.854-.142-1.204.108l-.738.527c-.447.32-1.06.269-1.45-.12l-.773-.774a1.125 1.125 0 0 1-.12-1.45l.527-.737c.25-.35.272-.806.108-1.204-.165-.397-.506-.71-.93-.78l-.894-.15c-.542-.09-.94-.56-.94-1.109v-1.094c0-.55.398-1.02.94-1.11l.894-.149c.424-.07.765-.383.93-.78.165-.398.143-.854-.108-1.204l-.526-.738a1.125 1.125 0 0 1 .12-1.45l.773-.773a1.125 1.125 0 0 1 1.45-.12l.737.527c.35.25.807.272 1.204.107.397-.165.71-.505.78-.929l.15-.894Z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                </svg>
+                <span className="text-sm font-medium leading-relaxed">
+                  Yenilikçi Tasarım <br className="hidden sm:block" /> Güvenilir Mühendislik
+                </span>
+              </div>
+              {/* 2. Kısım: Anahtar Teslim & Dünya Çapında Deneyim */}
+              <div
+                className='flex items-center justify-center gap-4 px-4'
+                style={{ color: 'var(--th-polgun-antrasit)' }}
+              >
+                {/* Yeni, Daha Temiz Küre / Dünya İkonu */}
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="w-8 h-8 shrink-0"
+                  style={{ color: 'var(--th-polgun-blue)' }}
+                >
+                  <circle cx="12" cy="12" r="10" />
+                  <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                  <path d="M2 12h20" />
+                </svg>
+
+                <span className="text-sm font-medium leading-relaxed">
+                  Anahtar Teslim Projeler <br className="hidden sm:block" /> Dünya Çapında Deneyim
+                </span>
+              </div>
+
+            </div>
+            <Link
+              to="/projects"
+              className="group inline-flex items-center justify-center gap-2 px-6 py-2.5 text-sm font-bold tracking-wide rounded-full hover:shadow-lg hover:-translate-y-px transition-all duration-200"
+              style={{
+                backgroundColor: 'var(--th-polgun-blue)',
+                color: 'var(--th-surface)',
+                boxShadow: '0 4px 12px color-mix(in srgb, var(--th-polgun-blue) 30%, transparent)',
+              }}
+            >
+              {/* Play İkonu */}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                className="w-4 h-4 transition-transform duration-300 group-hover:scale-110 group-hover:translate-x-1"
+              >
+                <path fillRule="evenodd" d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.348c1.295.712 1.295 2.573 0 3.285L7.28 20.005c-1.25.687-2.779-.217-2.779-1.643V5.653z" clipRule="evenodd" />
+              </svg>
+
+              Projelerimizi Keşfedin
+            </Link>
           </div>
 
           {/* ── Sağ: Büyük proje görseli ── */}
@@ -337,28 +427,46 @@ export default function HomePage() {
 
                   {/* Sol-alt başlık overlay */}
                   <div
-                    className="absolute left-6 bottom-6 z-20"
+                    className="absolute left-6 bottom-6 z-20 flex items-center gap-3"
                     style={{
-                      padding: '14px 16px',
-                      borderRadius: '24px',
+                      padding: '12px 16px',
+                      borderRadius: '12px',
                       maxWidth: 'min(560px, calc(100% - 2rem))',
                       background:
                         'linear-gradient(180deg, rgba(32, 32, 32, 0.52) 0%, rgba(77, 77, 77, 0.22) 55%, rgba(79, 79, 79, 0.1) 100%)',
-                      backdropFilter: 'blur(10px)',
-                      WebkitBackdropFilter: 'blur(10px)',
+                      backdropFilter: 'blur(4px)',
+                      WebkitBackdropFilter: 'blur(4px)',
                       border: '1px solid rgba(255,255,255,0.18)',
                       boxShadow: '0 18px 50px rgba(0,0,0,0.35)',
                     }}
                   >
-                    <h2
-                      className="text-md font-black text-white mb-1"
-                      style={{ textShadow: '0 10px 26px rgba(0,0,0,0.65)' }}
-                    >
-                      {HERO_IMAGES[heroImageIndex].title}
-                    </h2>
-                    <p className="text-sm text-white/90" style={{ textShadow: '0 8px 18px rgba(0,0,0,0.55)' }}>
-                      {HERO_IMAGES[heroImageIndex].location}
-                    </p>
+                    {/* Lokasyon İkonu */}
+                    <div className="shrink-0 text-white/90">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                        className="w-6 h-6"
+                      >
+                        <path fillRule="evenodd" d="M11.54 22.351l.07.04.028.016a.76.76 0 00.723 0l.028-.015.071-.041a16.975 16.975 0 001.144-.742 19.58 19.58 0 002.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 00-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 002.682 2.282 16.975 16.975 0 001.145.742zM12 13.5a3 3 0 100-6 3 3 0 000 6z" clipRule="evenodd" />
+                      </svg>
+                    </div>
+
+                    {/* Metin İçeriği */}
+                    <div className="flex flex-col">
+                      <h2
+                        className="text-sm font-black text-white mb-0.5"
+                        style={{ textShadow: '0 10px 26px rgba(0,0,0,0.65)' }}
+                      >
+                        {HERO_IMAGES[heroImageIndex].title}
+                      </h2>
+                      <p
+                        className="text-xs text-white/90"
+                        style={{ textShadow: '0 8px 18px rgba(0,0,0,0.55)' }}
+                      >
+                        {HERO_IMAGES[heroImageIndex].location}
+                      </p>
+                    </div>
                   </div>
 
                 </div>
@@ -441,12 +549,12 @@ export default function HomePage() {
           ÖZELLIK — Sol koyu glass panel + Sağ metin (Apple tarzı)
       ══════════════════════════════════════════════════════ */}
       <section className="py-20" style={{ backgroundColor: 'var(--th-surface)' }}>
-        <div className="max-w-[var(--layout-max)] mx-auto px-6 lg:px-14">
+        <div className="max-w-(--layout-max) mx-auto px-6 lg:px-14">
           <div className="grid lg:grid-cols-2 gap-0 rounded-3xl overflow-hidden"
             style={{ boxShadow: '0 24px 80px rgba(0,0,0,0.10)' }}>
 
             {/* Sol — Carousel Panel */}
-            <div className="relative min-h-[380px] flex items-end p-10 group"
+            <div className="relative min-h-95 flex items-end p-10 group"
               style={{ background: 'linear-gradient(to top,rgba(0,0,0,0.4),transparent)' }}>
               {/* Carousel Görselleri */}
               <div className="absolute inset-0 overflow-hidden">
@@ -485,7 +593,7 @@ export default function HomePage() {
                   <button
                     key={idx}
                     onClick={() => setCarouselImageIndex(idx)}
-                    className="transition-all duration-300 rounded-full"
+                    className="transition-all duration-1200 rounded-full"
                     style={{
                       width: idx === carouselImageIndex ? 'clamp(40px, 3vw, 56px)' : 'clamp(12px, 1vw, 16px)',
                       height: 'clamp(12px, 1vw, 16px)',

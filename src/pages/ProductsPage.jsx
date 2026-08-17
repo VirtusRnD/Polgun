@@ -47,21 +47,7 @@ import bodyslideImg from '../assets/products/slides/bodyslide.avif'
 
 // ── Ürün Verisi ────────────────────────────────────────────
 const PRODUCTS = [
-	{
-		category: 'Su Kaydırakları',
-		title: 'AquaRush Pro Series',
-		sub: 'Yüksek Hızlı Kapalı Tüp Kaydırak',
-		desc: 'Polgün üretim kalitesiyle geliştirilmiş, her yaştan ziyaretçiye heyecan dolu bir deneyim sunan açık ve kapalı kaydırak sistemleri.',
-		specs: [
-			{ label: 'Uzunluk', val: '120 m' },
-			{ label: 'Kapasite', val: '360 kişi/saat' },
-			{ label: 'Min. Yaş', val: '10+' },
-			{ label: 'Min. Boy', val: '140 cm' },
-		],
-		img: heroImage,
-		imgAlt: 'AquaRush su kaydırağı',
-		badge: 'Çok Satılan',
-	},
+	
 	{
 		category: 'Splash Tower',
 		title: 'Pirate Theme',
@@ -123,21 +109,6 @@ const PRODUCTS = [
 		img2: savana2,
 		imgAlt: 'Savana su kaydırağı',
 		badge: 'Ar-Ge',
-	},
-	{
-		category: 'Splash Zone',
-		title: 'KidsSplash Universe',
-		sub: 'Tema Entegreli Çocuk Su Oyun Alanı',
-		desc: 'Çocuklar için güvenli, eğlenceli ve interaktif su oyun alanları. Renkli tasarımları ve farklı su aktiviteleriyle ailecek eğlence sunar.',
-		specs: [
-			{ label: 'Alan', val: '650 m²' },
-			{ label: 'Yaş Grubu', val: '2–12' },
-			{ label: 'Aktivite', val: '18 Adet' },
-			{ label: 'Su Tük.', val: 'Düşük' },
-		],
-		img: heroImage,
-		imgAlt: 'KidsSplash çocuk alanı',
-		badge: null,
 	},
 
 {
@@ -587,7 +558,7 @@ export default function ProductsPage() {
                 Ürün Kataloğu
               </p>
               <h1 className="text-5xl lg:text-6xl font-black text-white leading-[1.02]">
-								Çözümlerimiz
+								Ürünlerimiz
 							</h1>
 							</div>
             <p className="text-white/50 text-lg leading-relaxed">
