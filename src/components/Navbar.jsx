@@ -4,6 +4,7 @@
 // ============================================================
 import { useState, useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import polgunLogo from '../assets/logoPolgun.png';
 
 // ── Menü Yapısı (WWW ile birebir karşılıklı) ───────────────
@@ -15,93 +16,94 @@ const LANGUAGES = [
   { code: 'ru', name: 'Русский', flag: '/src/assets/flags/ru.svg' },
 ];
 
-const NAV_ITEMS = [
-  {
-    id: 'services',
-    label: 'Hizmetlerimiz',
-    page: 'services',
-    mega: true,
-    sections: [
-      {
-        title: null,
-        links: [
-          { label: 'Planlama', desc: '', page: 'services', anchor: 'planlama', to: '/services?anchor=planlama' },
-          { label: 'Tasarım',        desc: '',       page: 'services', anchor: 'tasarim', to: '/services?anchor=tasarim' },
-          { label: 'Mühendislik',  desc: '',        page: 'services', anchor: 'muhendislik', to: '/services?anchor=muhendislik' },
-          { label: 'Kurulum & Montaj',         desc: '',    page: 'services', anchor: 'montaj', to: '/services?anchor=montaj' },
-          { label: 'Bakım & Onarım',    desc: '',  page: 'services', anchor: 'bakim-onarim', to: '/services?anchor=bakim-onarim' },
-          { label: 'Yenileme',  desc: '', page: 'services', anchor: 'bakim-onarim', to: '/services?anchor=bakim-onarim' },
-        ],
-      },
-    ],
-  },
-  {
-    id: 'projects',
-    label: 'Projelerimiz',
-    page: 'projects',
-    mega: false,
-    to: '/projects',
-  },
-  {
-    id: 'products',
-    label: 'Ürünlerimiz',
-    page: 'products',
-    mega: true,
-    sections: [
-      {
-        title: 'Ürün Kategorileri',
-        links: [
-          { label: 'Su Kaydırakları',        desc: '', page: 'products', to: '/products' },
-          { label: 'Splash Tower',  desc: '',            page: 'splash-tower', to: '/splash-tower' },
-          { label: 'Splash Zone',               desc: '',        page: 'splash-zone', to: '/splash-zone' },
-                ],
-      },
-    ],
-  },
-  {
-    id: 'about',
-    label: 'Hakkımızda',
-    page: 'about',
-    mega: true,
-    sections: [
-      {
-        title: null,
-        links: [
-          { label: 'Ekibimiz',        desc: '',              page: 'team', to: '/team' },
-          { label: 'Tarihçemiz',      desc: '',           page: 'history', to: '/history' },
-          { label: 'Ödüller & Patent',desc: '',           page: 'awards', to: '/awards' },
-          { label: 'Fabrikalarımız',  desc: '',           page: 'factories', to: '/factories' },
-          { label: 'Haberler & Etkinlikler', desc: '',   page: 'news', to: '/news' },
-        ],
-      },
-    ],
-  },
-  {
-    id: 'arge',
-    label: 'Ar-Ge',
-    page: 'arge',
-    mega: false,
-    to: '/arge',
-  },
-  {
-    id: 'career',
-    label: 'Kariyer',
-    page: 'career',
-    mega: false,
-    to: '/career',
-  },
-]
-
 export default function Navbar({ activePage, setActivePage, colorPalette, location }) {
-  const [scrolled, setScrolled]       = useState(false)
-  const [openMenu, setOpenMenu]       = useState(null)   // mega açık menü id'si
-  const [mobileOpen, setMobileOpen]   = useState(false)
+  const { t, i18n } = useTranslation();
+  const [scrolled, setScrolled] = useState(false)
+  const [openMenu, setOpenMenu] = useState(null)   // mega açık menü id'si
+  const [mobileOpen, setMobileOpen] = useState(false)
   const [mobileExpanded, setMobileExpanded] = useState(null)
-  
+
   // ── Dil Seçimi State'leri ──
-  const [currentLang, setCurrentLang] = useState(LANGUAGES[0])
-  const [langOpen, setLangOpen]       = useState(false)
-  
+  const currentLang = LANGUAGES.find(l => l.code === i18n.language) || LANGUAGES[0]
+  const [langOpen, setLangOpen] = useState(false)
+
+  const NAV_ITEMS = [
+    {
+      id: 'services',
+      label: t('nav.services'),
+      page: 'services',
+      mega: true,
+      sections: [
+        {
+          title: null,
+          links: [
+            { label: t('nav.planning'), desc: '', page: 'services', anchor: 'planlama', to: '/services?anchor=planlama' },
+            { label: t('nav.design'), desc: '', page: 'services', anchor: 'tasarim', to: '/services?anchor=tasarim' },
+            { label: t('nav.engineering'), desc: '', page: 'services', anchor: 'muhendislik', to: '/services?anchor=muhendislik' },
+            { label: t('nav.installation'), desc: '', page: 'services', anchor: 'montaj', to: '/services?anchor=montaj' },
+            { label: t('nav.maintenance'), desc: '', page: 'services', anchor: 'bakim-onarim', to: '/services?anchor=bakim-onarim' },
+            { label: t('nav.renovation'), desc: '', page: 'services', anchor: 'bakim-onarim', to: '/services?anchor=bakim-onarim' },
+          ],
+        },
+      ],
+    },
+    {
+      id: 'projects',
+      label: t('nav.projects'),
+      page: 'projects',
+      mega: false,
+      to: '/projects',
+    },
+    {
+      id: 'products',
+      label: t('nav.products'),
+      page: 'products',
+      mega: true,
+      sections: [
+        {
+          title: t('nav.categories'),
+          links: [
+            { label: t('nav.slides'), desc: '', page: 'products', to: '/products' },
+            { label: t('nav.splash_tower'), desc: '', page: 'splash-tower', to: '/splash-tower' },
+            { label: t('nav.splash_zone'), desc: '', page: 'splash-zone', to: '/splash-zone' },
+          ],
+        },
+      ],
+    },
+    {
+      id: 'about',
+      label: t('nav.about'),
+      page: 'about',
+      mega: true,
+      sections: [
+        {
+          title: null,
+          links: [
+            { label: t('nav.team'), desc: '', page: 'team', to: '/team' },
+            { label: t('nav.history'), desc: '', page: 'history', to: '/history' },
+            { label: t('nav.awards'), desc: '', page: 'awards', to: '/awards' },
+            { label: t('nav.factories'), desc: '', page: 'factories', to: '/factories' },
+            { label: t('nav.news'), desc: '', page: 'news', to: '/news' },
+          ],
+        },
+      ],
+    },
+    {
+      id: 'arge',
+      label: t('nav.arge'),
+      page: 'arge',
+      mega: false,
+      to: '/arge',
+    },
+    {
+      id: 'career',
+      label: t('nav.career'),
+      page: 'career',
+      mega: false,
+      to: '/career',
+    },
+  ]
+
   const closeTimer = useRef(null)
   const langCloseTimer = useRef(null)
 
@@ -160,7 +162,7 @@ export default function Navbar({ activePage, setActivePage, colorPalette, locati
         backgroundColor: `rgba(255, 255, 255, ${glassOpacity})`,
         borderBottom: `1px solid color-mix(in srgb, var(--th-polgun-blue) ${scrolled ? 15 : 20}%, transparent)`,
       }}
-      >
+    >
       <nav className="max-w-[var(--layout-max)] mx-auto px-6 lg:px-14 flex items-center justify-between h-[72px]">
 
         {/* ══ Logo ══ */}
@@ -260,7 +262,7 @@ export default function Navbar({ activePage, setActivePage, colorPalette, locati
                               style={{ '--hover-bg': 'var(--th-bg)' }}
                               onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'var(--th-bg)'}
                               onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}
-                              onClick={() => handleNav(link.page)}
+                              onClick={() => handleNav(link.page, link.anchor)}
                             >
                               {/* Aksent bullet */}
                               <span className="mt-1.5 w-1.5 h-1.5 rounded-full shrink-0 transition-colors"
@@ -323,21 +325,21 @@ export default function Navbar({ activePage, setActivePage, colorPalette, locati
 
         {/* ══ Sağ: CTA ve Dil Seçimi ══ */}
         <div className="hidden lg:flex items-center gap-4 shrink-0">
-          
+
           {/* ══ Dil Seçeneği Dropdown ══ */}
-          <div 
+          <div
             className="relative flex items-center h-full"
             onMouseEnter={onLangEnter}
             onMouseLeave={onLangLeave}
           >
             <button className="flex items-center gap-2 px-2 py-2 rounded-full transition-all duration-200 opacity-90 hover:opacity-100">
-              <img 
-                src={currentLang.flag} 
-                alt={currentLang.name} 
-                className="w-5 h-5 rounded-full object-cover border" 
+              <img
+                src={currentLang.flag}
+                alt={currentLang.name}
+                className="w-5 h-5 rounded-full object-cover border"
                 style={{ borderColor: 'color-mix(in srgb, var(--th-border) 30%, transparent)' }}
               />
-              <span 
+              <span
                 className="text-sm font-semibold uppercase"
                 style={isLightNavbar ? {
                   color: 'var(--th-text)',
@@ -365,13 +367,13 @@ export default function Navbar({ activePage, setActivePage, colorPalette, locati
                   <button
                     key={lang.code}
                     onClick={() => {
-                      setCurrentLang(lang);
+                      i18n.changeLanguage(lang.code);
                       setLangOpen(false);
                     }}
                     className="flex items-center gap-3 px-3 py-2 rounded-lg transition-colors text-sm font-medium w-full text-left"
-                    style={{ 
+                    style={{
                       color: 'var(--th-text)',
-                      backgroundColor: currentLang.code === lang.code ? 'var(--th-bg)' : 'transparent' 
+                      backgroundColor: currentLang.code === lang.code ? 'var(--th-bg)' : 'transparent'
                     }}
                     onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'var(--th-bg)'}
                     onMouseLeave={(e) => e.currentTarget.style.backgroundColor = currentLang.code === lang.code ? 'var(--th-bg)' : 'transparent'}
@@ -396,7 +398,7 @@ export default function Navbar({ activePage, setActivePage, colorPalette, locati
               color: 'var(--th-text)',
             }}
           >
-            İletişim
+            {t('common.contact')}
           </Link>
           <Link
             to="/contact"
@@ -427,7 +429,7 @@ export default function Navbar({ activePage, setActivePage, colorPalette, locati
               }
             }}
           >
-            Teklif Al
+            {t('common.quote')}
           </Link>
         </div>
 
@@ -507,6 +509,7 @@ export default function Navbar({ activePage, setActivePage, colorPalette, locati
                               e.currentTarget.style.color = 'var(--th-text-muted)'
                               e.currentTarget.style.backgroundColor = 'transparent'
                             }}
+                            onClick={() => handleNav(link.page, link.anchor)}
                           >
                             {link.label}
                           </Link>
@@ -536,15 +539,15 @@ export default function Navbar({ activePage, setActivePage, colorPalette, locati
 
           {/* Mobile CTA & Dil Seçimi */}
           <div className="flex flex-col gap-4 pt-5 pb-2">
-            
+
             {/* Mobil Dil Seçimi */}
             <div className="flex gap-2 justify-center mb-2">
               {LANGUAGES.map((lang) => (
                 <button
                   key={lang.code}
-                  onClick={() => setCurrentLang(lang)}
+                  onClick={() => i18n.changeLanguage(lang.code)}
                   className="p-1 rounded-full transition-transform"
-                  style={{ 
+                  style={{
                     transform: currentLang.code === lang.code ? 'scale(1.15)' : 'scale(1)',
                     opacity: currentLang.code === lang.code ? 1 : 0.6
                   }}
@@ -567,7 +570,7 @@ export default function Navbar({ activePage, setActivePage, colorPalette, locati
                 e.currentTarget.style.backgroundColor = 'var(--th-polgun-blue)'
               }}
             >
-              Teklif Al
+              {t('common.quote')}
             </Link>
             <Link
               to="/contact"
@@ -584,7 +587,7 @@ export default function Navbar({ activePage, setActivePage, colorPalette, locati
                 e.currentTarget.style.backgroundColor = 'transparent';
               }}
             >
-              İletişim
+              {t('common.contact')}
             </Link>
           </div>
         </div>

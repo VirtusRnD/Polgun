@@ -1,4 +1,5 @@
 import { useEffect } from 'react'
+import { useTranslation } from 'react-i18next'
 
 import istanbulImg from '../assets/factories/istanbul-factory.avif'
 import bursaImg from '../assets/factories/bursa-factory.avif'
@@ -7,22 +8,21 @@ import muglaImg from '../assets/factories/mugla-factory.avif'
 const FACTORIES = [
   {
     id: 'istanbul',
-    name: 'İstanbul Fabrika',
     image: istanbulImg,
   },
   {
     id: 'bursa',
-    name: 'Bursa Fabrika',
     image: bursaImg,
   },
   {
     id: 'mugla',
-    name: 'Muğla Fabrika',
     image: muglaImg,
   },
 ]
 
 export default function FactoriesPage({ setActivePage }) {
+  const { t } = useTranslation()
+
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
@@ -35,14 +35,13 @@ export default function FactoriesPage({ setActivePage }) {
           className="text-4xl md:text-5xl lg:text-6xl font-black mb-6"
           style={{ color: 'var(--th-primary-darker)' }}
         >
-          Fabrikalarımız
+          {t('factories.title')}
         </h1>
         <p 
           className="text-lg md:text-xl max-w-3xl"
           style={{ color: 'color-mix(in srgb, var(--th-text-muted) 80%, transparent)' }}
         >
-          Üretim gücümüzü yansıtan modern tesislerimizde, en yüksek kalite standartlarında, 
-          doğaya ve insana saygılı bir şekilde üretim yapıyoruz.
+          {t('factories.desc')}
         </p>
       </section>
 
@@ -61,7 +60,7 @@ export default function FactoriesPage({ setActivePage }) {
               <div className="relative aspect-[4/3] overflow-hidden">
                 <img 
                   src={factory.image} 
-                  alt={factory.name}
+                  alt={t('factories.names.' + factory.id)}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
@@ -71,7 +70,7 @@ export default function FactoriesPage({ setActivePage }) {
                   className="text-2xl font-bold"
                   style={{ color: 'var(--th-primary-darker)' }}
                 >
-                  {factory.name}
+                  {t('factories.names.' + factory.id)}
                 </h3>
               </div>
             </div>

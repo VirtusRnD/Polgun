@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { useTranslation } from 'react-i18next'
 // ============================================================
 // ABOUT PAGE — Gerçek metinler + Ödüller & Ziyaretler bölümü
 // ============================================================
@@ -22,109 +23,8 @@ import bursaFactory from '../assets/factories/bursa-factory.avif'
 import istanbulFactory from '../assets/factories/istanbul-factory.avif'
 import muglaFactory from '../assets/factories/mugla-factory.avif'
 
-/* Mock awards retained only as a reference. Awards must be published in CMS.
-const AWARDS = [
-  {
-    tag: 'IAAPA Expo Orlando – Brass Ring',
-    title: 'IAAPA Brass Ring Ödülü',
-    desc: 'Polgün bünyesindeki Navatu markası, IAAPA Expo Orlando\'da Brass Ring ödülüne layık görüldü. IAAPA Brass Ring Ödülleri, küresel eğlence endüstrisinin en prestijli ödülleri arasında yer almaktadır.',
-    img: iaapaBrassRing1,
-    img2: iaapaBrassRing2,
-  },
-  {
-    tag: 'RDCONF Ar-Ge ve İnovasyon Ödülleri 2025',
-    title: 'Eclipse ile En İnovatif Proje Ödülü',
-    desc: 'Polgün, Eclipse su kaydırağı projesiyle RDCONF Ar-Ge ve İnovasyon Ödülleri\'nde En İnovatif Proje kategorisinde üçüncülük elde etti. Eclipse; hidrodinamik akış kontrolü, geometri odaklı tasarım ve kullanıcı deneyimini bir araya getiren yeni nesil bir su kaydırağı yaklaşımını temsil etmektedir.',
-    img: rdconf2025,
-  },
-  {
-    tag: 'RDCONF 2024',
-    title: 'RDCONF Ar-Ge ve İnovasyon Başarısı',
-    desc: 'Polgün, Ar-Ge ve inovasyon odaklı ürün geliştirme çalışmalarıyla RDCONF 2024 kapsamında ödüle layık görüldü. Bu başarı; tasarım, mühendislik ve kullanıcı deneyimini bütüncül biçimde ele alan proje geliştirme yaklaşımımızı yansıtmaktadır.',
-    img: rdconf2024,
-  },
-  {
-    tag: 'Ege\'nin Enleri Ödül Töreni',
-    title: 'En İyi İş İnsanı Ödülü',
-    desc: 'Polgün\'ün üretim, yatırım, istihdam ve yenilik odaklı büyüme yaklaşımı; Ege\'nin Enleri Ödül Töreni\'nde En İyi İş İnsanı Ödülü ile takdir edildi. Ödül, şirketin bölgesel kalkınmaya ve sürdürülebilir değer üretimine sağladığı katkıyı temsil etmektedir.',
-    img: bestBusinessman,
-  },
-  {
-    tag: 'Tasarım ve İnovasyon Zirvesi',
-    title: 'Tasarım ve İnovasyon Alanında Takdir',
-    desc: 'Polgün, yenilikçi ürün geliştirme ve tasarım odaklı yaklaşımıyla Tasarım ve İnovasyon Zirvesi kapsamında ödüle layık görüldü. Bu başarı; Ar-Ge kültürümüzün, ekip çalışmasının ve özgün ürün geliştirme vizyonumuzun bir sonucudur.',
-    img: designInnovation,
-  },
-]
-*/
-
-const VISITS = [
-  {
-    title: 'EGEKAF Kapsamında Polgün Ziyareti',
-    desc: 'EGEKAF kapsamında gerçekleşen ziyarette; Polgün\'ün proje maketleri, ürün geliştirme yaklaşımı ve sektörel deneyimi katılımcılarla paylaşıldı. Ziyaret süresince tasarım ve üretim süreçleri hakkında bilgi verildi.',
-    img: egekafVisit,
-  },
-  {
-    title: 'Muğla Sıtkı Koçman Üniversitesi Ziyareti',
-    desc: 'Muğla Sıtkı Koçman Üniversitesi yönetiminin Polgün ziyareti kapsamında; şirketin proje geliştirme, Ar-Ge, üretim ve tasarım faaliyetleri yerinde incelendi. Ziyaret, üniversite-sanayi iş birliği ve bilgi paylaşımı açısından değerli bir buluşma niteliği taşıdı.',
-    img: mskuRectorVisit,
-  },
-]
-
-const PRODUCTION_SECTIONS = [
-  {
-    title: 'CNC Model ve Kalıp Hazırlama',
-    desc: 'CNC destekli model ve kalıp hazırlama süreçlerimiz, özgün ürün geometrilerinin hassas şekilde oluşturulmasına olanak sağlar. Bu altyapı; kompozit parçaların üretim öncesi hazırlık süreçlerini, yüzey kalitesini ve ürün formunun doğruluğunu destekler.',
-    img: inotekCnc,
-  },
-  {
-    title: 'Çelik İşleme ve Kesim Teknolojileri',
-    desc: 'Çelik konstrüksiyon sistemlerinin üretiminde CNC kesim, boru ve profil işleme teknolojilerinden yararlanıyoruz. Projeye özel hazırlanan parçalar, üretim ve montaj süreçlerine uygun hassasiyetle işlenerek bir sonraki imalat aşamasına aktarılır.',
-    img: cncCutting,
-    img2: pipeCutting,
-  },
-  {
-    title: 'Mekanik İşleme ve Parça Üretimi',
-    desc: 'Bağlantı elemanları, özel mekanik parçalar ve fonksiyonel bileşenler; projelerin teknik ihtiyaçlarına uygun şekilde üretim sürecinde işlenir. Mekanik imalat altyapımız, farklı ürün gruplarına uygun çözümler geliştirmemizi destekler.',
-    img: mechanicalOperator,
-  },
-  {
-    title: 'Kompozit Üretim ve Yüzey Uygulamaları',
-    desc: 'Su kaydırakları, temalı ürünler ve özel tasarım parçalar için yürütülen kompozit üretim süreçleri; yüzey hazırlama, boya uygulamaları ve son kat işlemleriyle tamamlanır. Bu süreçler, ürünlerin estetik bütünlüğünü, dayanımını ve uzun dönem kullanım performansını destekler.',
-    img: paintApplication,
-    img2: compositeControl,
-  },
-  {
-    title: 'Dijital Üretim ve Süreç Kontrolü',
-    desc: 'Bilgisayar destekli üretim sistemleri, imalat süreçlerinin planlı, kontrollü ve tekrarlanabilir şekilde ilerlemesini sağlar. Dijital takip ve operatör kontrolü sayesinde üretimde hassasiyet, süreklilik ve süreç izlenebilirliği desteklenir.',
-    img: cncOperator,
-  },
-]
-
-const FACTORIES = [
-  { city: 'Muğla', label: 'Merkez Üretim Tesisi', desc: 'Ana üretim ve Ar-Ge merkezi. Çelik konstrüksiyon, kompozit üretim ve dijital imalat altyapısının bulunduğu merkez tesis.', img: muglaFactory },
-  { city: 'Bursa', label: 'Bursa Üretim Tesisi', desc: 'Polgün’ün kuzey üretim merkezi. Çelik parça imalatı ve yarı mamul üretiminin yapıldığı tesis.', img: bursaFactory },
-  { city: 'İstanbul', label: 'Marmara Teknopark', desc: 'Ar-Ge ve inovasyon çalışmalarının yürütüldüğü Marmara Teknopark ofisi. Yeni ürün geliştirme ve teknik analiz merkezi.', img: istanbulFactory },
-]
-
-const TESCILLER = [
-  { title: 'Benelux Tescil Kesinlik Kararı', country: 'Benelux', file: '/documents/tesciller/Benelux-Tescil.pdf' },
-  { title: 'Fransa Tescil Kesinlik Kararı', country: 'Fransa', file: '/documents/tesciller/Fransa-Tescil.pdf' },
-  { title: 'İspanya Tescil Kesinlik Kararı', country: 'İspanya', file: '/documents/tesciller/Ispanya-Tescil.pdf' },
-  { title: 'Mısır Tescil Kesinlik Kararı', country: 'Mısır', file: '/documents/tesciller/Misir-Tescil.pdf' },
-  { title: 'Yunanistan Tescil Kesinlik Kararı', country: 'Yunanistan', file: '/documents/tesciller/Yunanistan-Tescil.pdf' },
-  { title: 'Polgün Başvuru Formu', country: 'Türkiye', file: '/documents/tesciller/Polgun-Basvuru-Formu.pdf' },
-  { title: 'Floresans Işıklandırma Patent Belgesi', country: 'Türkiye', file: '/documents/tesciller/Floresans-Patent.pdf' },
-  { title: 'Su Kaydırağı Tasarım Tescil Onaylı', country: 'Türkiye', file: '/documents/tesciller/Su-Kaydiragi-Tasarim-Tescil.pdf' },
-]
-
-const KALITE_BELGELERI = [
-  { title: 'ISO 9001:2015', desc: 'Kalite Yönetim Sistemi', file: '/documents/kalite/ISO-9001.pdf' },
-  { title: 'ISO 14001:2015', desc: 'Çevre Yönetim Sistemi', file: '/documents/kalite/ISO-14001.pdf' },
-  { title: 'ISO 45001:2018', desc: 'İş Sağlığı ve Güvenliği', file: '/documents/kalite/ISO-45001.pdf' },
-]
-
 export default function AboutPage({ setActivePage }) {
+  const { t } = useTranslation()
   const [liveAwards, setLiveAwards] = useState([])
 
   useEffect(() => {
@@ -155,6 +55,50 @@ export default function AboutPage({ setActivePage }) {
     return () => { cancelled = true }
   }, [])
 
+  const visits = [
+    {
+      title: t('awards.visits.egekaf.title'),
+      desc: t('awards.visits.egekaf.desc'),
+      img: egekafVisit,
+    },
+    {
+      title: t('awards.visits.msku.title'),
+      desc: t('awards.visits.msku.desc'),
+      img: mskuRectorVisit,
+    },
+  ]
+
+  const productionSections = [
+    { id: 'cnc_mold', img: inotekCnc },
+    { id: 'steel', img: cncCutting, img2: pipeCutting },
+    { id: 'mechanical', img: mechanicalOperator },
+    { id: 'composite', img: paintApplication, img2: compositeControl },
+    { id: 'digital', img: cncOperator },
+  ]
+
+  const factories = [
+    { city: t('factories.names.mugla'), label: t('about.factories.mugla.label'), desc: t('about.factories.mugla.desc'), img: muglaFactory },
+    { city: t('factories.names.bursa'), label: t('about.factories.bursa.label'), desc: t('about.factories.bursa.desc'), img: bursaFactory },
+    { city: t('factories.names.istanbul'), label: t('about.factories.istanbul.label'), desc: t('about.factories.istanbul.desc'), img: istanbulFactory },
+  ]
+
+  const tesciller = [
+    { title: t('awards.tesciller.benelux'), country: t('factories.names.france', {defaultValue: 'Benelux'}), file: '/documents/tesciller/Benelux-Tescil.pdf' },
+    { title: t('awards.tesciller.france'), country: t('factories.names.france'), file: '/documents/tesciller/Fransa-Tescil.pdf' },
+    { title: t('awards.tesciller.spain'), country: t('factories.names.spain'), file: '/documents/tesciller/Ispanya-Tescil.pdf' },
+    { title: t('awards.tesciller.egypt'), country: t('factories.names.egypt'), file: '/documents/tesciller/Misir-Tescil.pdf' },
+    { title: t('awards.tesciller.greece'), country: t('factories.names.greece'), file: '/documents/tesciller/Yunanistan-Tescil.pdf' },
+    { title: t('awards.tesciller.form'), country: t('factories.names.turkey'), file: '/documents/tesciller/Polgun-Basvuru-Formu.pdf' },
+    { title: t('awards.tesciller.fluorescent'), country: t('factories.names.turkey'), file: '/documents/tesciller/Floresans-Patent.pdf' },
+    { title: t('awards.tesciller.slides'), country: t('factories.names.turkey'), file: '/documents/tesciller/Su-Kaydiragi-Tasarim-Tescil.pdf' },
+  ]
+
+  const kaliteBelgeleri = [
+    { title: 'ISO 9001:2015', desc: t('awards.kalite.iso9001'), file: '/documents/kalite/ISO-9001.pdf' },
+    { title: 'ISO 14001:2015', desc: t('awards.kalite.iso14001'), file: '/documents/kalite/ISO-14001.pdf' },
+    { title: 'ISO 45001:2018', desc: t('awards.kalite.iso45001'), file: '/documents/kalite/ISO-45001.pdf' },
+  ]
+
   return (
     <main className="pt-20" style={{ backgroundColor: 'var(--th-bg)' }}>
 
@@ -164,14 +108,14 @@ export default function AboutPage({ setActivePage }) {
           <div className="grid lg:grid-cols-2 gap-16 items-end">
             <div>
               <p className="text-xs font-bold tracking-[0.3em] uppercase mb-4" style={{ color: 'var(--th-text)' }}>
-                Hakkımızda
+                {t('nav.about')}
               </p>
               <h1 className="text-5xl lg:text-6xl font-black text-white leading-[1.02]">
-                20 Yılı Aşkın<br />Waterpark<br />Deneyimi
+                {t('about.experience')}
               </h1>
             </div>
             <p className="text-white/50 text-lg leading-relaxed">
-              Polgün, su parkı projelerinde tasarım, mühendislik, üretim ve uygulama süreçlerini tek çatı altında yöneten güçlü bir çözüm ortağıdır. Yirmi yılı aşkın sektör tecrübemiz, yüksek üretim kapasitemiz ve uluslararası proje deneyimimizle her ölçekte projeye güvenilir, yenilikçi ve sürdürülebilir çözümler sunuyoruz.
+              {t('about.desc')}
             </p>
           </div>
         </div>
@@ -182,18 +126,18 @@ export default function AboutPage({ setActivePage }) {
         <div className="max-w-7xl mx-auto px-6 max-w-[var(--layout-max)] lg:px-12">
           <div className="grid lg:grid-cols-2 gap-20 items-center">
             <div>
-              <p className="text-xs font-bold tracking-[0.25em] uppercase mb-5" style={{ color: 'var(--th-polgun-blue)' }}>Hakkımızda</p>
+              <p className="text-xs font-bold tracking-[0.25em] uppercase mb-5" style={{ color: 'var(--th-polgun-blue)' }}>{t('nav.about')}</p>
               <h2 className="text-4xl font-black leading-tight mb-8" style={{ color: 'var(--th-text)' }}>
-                Uluslararası Sahnede<br />Büyüyen Güç
+                {t('about.power_title')}
               </h2>
               <p className="leading-relaxed mb-6" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 70%, transparent)' }}>
-                Polgün, 2002 yılında Muğla-Menteşe’de faaliyete başlamıştır. Bugün Muğla’daki 4 ana üretim merkezi ile birlikte İstanbul ve İspanya ofisleri, 2022 yılında kurulan Antalya fabrikası ve yeni Bursa yatırımıyla faaliyetlerini sürdürmektedir.
+                {t('about.power_desc1')}
               </p>
               <p className="leading-relaxed mb-6" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 70%, transparent)' }}>
-                120.000 m²’lik entegre üretim altyapısı, tam otomatik makine parkuru ve uzman kadrosuyla; çelik konstrüksiyon ve polyester imalatını aynı çatı altında gerçekleştirebilen sektörün öncü firmalarından biridir.
+                {t('about.power_desc2')}
               </p>
               <p className="leading-relaxed" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 70%, transparent)' }}>
-                425 çalışanı ve 30 kişilik Ar-Ge ekibiyle Polgün, tasarımdan üretime kadar tüm süreçleri yöneterek anahtar teslim projeler gerçekleştirmektedir.
+                {t('about.power_desc3')}
               </p>
             </div>
             <img src={heroImage} alt="Polgün Waterpark" className="w-full aspect-[4/3] rounded-2xl object-cover" />
@@ -206,40 +150,40 @@ export default function AboutPage({ setActivePage }) {
         <div className="max-w-7xl mx-auto px-6 max-w-[var(--layout-max)] lg:px-12">
           <div className="grid lg:grid-cols-2 gap-20 items-start">
             <div>
-              <p className="text-xs font-bold tracking-[0.25em] uppercase mb-5" style={{ color: 'var(--th-polgun-blue)' }}>Ar-Ge Merkezimiz</p>
+              <p className="text-xs font-bold tracking-[0.25em] uppercase mb-5" style={{ color: 'var(--th-polgun-blue)' }}>{t('nav.arge')}</p>
               <h2 className="text-3xl font-black leading-tight mb-6" style={{ color: 'var(--th-text)' }}>
-                Muğla'nın İlk ve Tek<br />Ar-Ge Merkezi
+                {t('about.arge_title')}
               </h2>
               <p className="leading-relaxed mb-6" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 70%, transparent)' }}>
-                Polgün Waterparks olarak Ar-Ge yaklaşımımızın temelinde; güvenli, yenilikçi, sürdürülebilir ve yüksek katma değerli su eğlence teknolojileri geliştirmek yer almaktadır. 2021 yılında Bakanlık onayıyla Ar-Ge Merkezi statüsü kazanan merkezimiz, Muğla'nın ilk ve tek Ar-Ge Merkezi olma niteliğiyle sektörümüzde özgün ürün geliştirme, yerlileştirme ve teknoloji üretme çalışmalarına öncülük etmektedir.
+                {t('about.arge_desc1')}
               </p>
               <p className="leading-relaxed mb-6" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 70%, transparent)' }}>
-                Ar-Ge Merkezimizde; araştırmacı, teknisyen ve destek personeli statüsünde görev yapan 30 tam zaman eşdeğer nitelikli Ar-Ge personelimiz ile yeni ürün tasarımı, mühendislik analizleri, prototipleme, test, doğrulama, üretim yöntemi geliştirme ve fikri mülkiyet süreçlerini bütüncül bir yaklaşımla yürütüyoruz.
+                {t('about.arge_desc2')}
               </p>
               <p className="leading-relaxed mb-8" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 70%, transparent)' }}>
-                Navatu, Savanna, Monarch Butterfly ve Eclipse gibi yenilikçi ürün projelerimiz; Polgün'ün tasarım, mühendislik ve üretim gücünü uluslararası pazarda temsil eden önemli Ar-Ge çıktıları arasında yer almaktadır.
+                {t('about.arge_desc3')}
               </p>
               <div className="grid sm:grid-cols-2 gap-4">
                 <div className="p-5 rounded-2xl" style={{ backgroundColor: 'color-mix(in srgb, var(--th-polgun-blue) 8%, transparent)', border: '1px solid color-mix(in srgb, var(--th-polgun-blue) 15%, transparent)' }}>
-                  <p className="text-xs font-black tracking-widest uppercase mb-2" style={{ color: 'var(--th-polgun-blue)' }}>Misyonumuz</p>
+                  <p className="text-xs font-black tracking-widest uppercase mb-2" style={{ color: 'var(--th-polgun-blue)' }}>{t('about.misyon')}</p>
                   <p className="text-sm leading-relaxed" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 70%, transparent)' }}>
-                    Yüksek kaliteli, güvenli, uygun maliyetli ve yenilikçi Ar-Ge projeleri geliştirerek su eğlence sektörüne özgün çözümler kazandırmak.
+                    {t('about.misyon_desc')}
                   </p>
                 </div>
                 <div className="p-5 rounded-2xl" style={{ backgroundColor: 'color-mix(in srgb, var(--th-primary) 8%, transparent)', border: '1px solid color-mix(in srgb, var(--th-primary) 15%, transparent)' }}>
-                  <p className="text-xs font-black tracking-widest uppercase mb-2" style={{ color: 'var(--th-primary)' }}>Vizyonumuz</p>
+                  <p className="text-xs font-black tracking-widest uppercase mb-2" style={{ color: 'var(--th-primary)' }}>{t('about.vizyon')}</p>
                   <p className="text-sm leading-relaxed" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 70%, transparent)' }}>
-                    Su eğlence teknolojilerine yön veren, alanında lider ve öncü bir Ar-Ge merkezi olmak; teknoloji üreten, sektöre ilham veren ve sürdürülebilir gelecek için değer yaratan bir marka olmak.
+                    {t('about.vizyon_desc')}
                   </p>
                 </div>
               </div>
             </div>
             <div className="flex flex-col gap-4">
               {[
-                { num: '30+', label: 'Ar-Ge Personeli', desc: 'Tam zaman eşdeğer nitelikli uzman ekip' },
-                { num: '2021', label: 'Ar-Ge Merkezi Statüsü', desc: 'Bakanlık onaylı, Muğla\'nın ilk ve tek merkezi' },
-                { num: '4+', label: 'Özgün Ürün Projesi', desc: 'Navatu, Savanna, Eclipse, Monarch Butterfly' },
-                { num: '70+', label: 'Ülke', desc: 'Global proje ve pazar deneyimi' },
+                { num: '30+', label: t('about.stats.staff'), desc: t('about.stats.staff_desc') },
+                { num: '2021', label: t('about.stats.status'), desc: t('about.stats.status_desc') },
+                { num: '4+', label: t('about.stats.projects'), desc: t('about.stats.projects_desc') },
+                { num: '70+', label: t('about.stats.countries'), desc: t('about.stats.countries_desc') },
               ].map((s) => (
                 <div key={s.num} className="flex gap-5 items-center p-6 rounded-2xl" style={{ backgroundColor: 'var(--th-surface)', border: '1px solid color-mix(in srgb, var(--th-border) 12%, transparent)' }}>
                   <span className="text-4xl font-black shrink-0" style={{ color: 'var(--th-primary)' }}>{s.num}</span>
@@ -258,30 +202,30 @@ export default function AboutPage({ setActivePage }) {
       <section className="py-28" style={{ backgroundColor: 'var(--th-surface)' }}>
         <div className="max-w-7xl mx-auto px-6 max-w-[var(--layout-max)] lg:px-12">
           <div className="text-center mb-20">
-            <p className="text-xs font-bold tracking-[0.25em] uppercase mb-4" style={{ color: 'var(--th-polgun-blue)' }}>Üretim Altyapımız</p>
-            <h2 className="text-4xl font-black mb-6" style={{ color: 'var(--th-text)' }}>Tasarımdan üretime,<br />tüm süreçleri tek çatı altında yönetiyoruz.</h2>
+            <p className="text-xs font-bold tracking-[0.25em] uppercase mb-4" style={{ color: 'var(--th-polgun-blue)' }}>{t('about.production_title')}</p>
+            <h2 className="text-4xl font-black mb-6" style={{ color: 'var(--th-text)' }}>{t('about.production_subtitle')}</h2>
             <p className="max-w-2xl mx-auto leading-relaxed" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 70%, transparent)' }}>
-              Polgün; su parkı ve eğlence sistemleri için geliştirdiği çözümleri, çelik konstrüksiyon, mekanik işleme, kompozit üretim, yüzey uygulamaları ve dijital üretim teknolojilerini bir araya getiren entegre üretim altyapısıyla hayata geçirir.
+              {t('about.production_desc')}
             </p>
           </div>
           <div className="flex flex-col gap-24">
-            {PRODUCTION_SECTIONS.map((sec, i) => (
+            {productionSections.map((sec, i) => (
               <div key={i} className={`grid lg:grid-cols-2 gap-16 items-center ${i % 2 === 1 ? 'lg:[&>*:first-child]:order-2' : ''}`}>
                 <div>
-                  <h3 className="text-2xl font-black mb-5" style={{ color: 'var(--th-text)' }}>{sec.title}</h3>
-                  <p className="leading-relaxed" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 70%, transparent)' }}>{sec.desc}</p>
+                  <h3 className="text-2xl font-black mb-5" style={{ color: 'var(--th-text)' }}>{t('about.production_sections.' + sec.id + '.title')}</h3>
+                  <p className="leading-relaxed" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 70%, transparent)' }}>{t('about.production_sections.' + sec.id + '.desc')}</p>
                 </div>
                 <div className={sec.img2 ? 'grid grid-cols-2 gap-3' : ''}>
-                  <img src={sec.img} alt={sec.title} className="w-full aspect-[4/3] rounded-2xl object-cover" />
-                  {sec.img2 && <img src={sec.img2} alt={sec.title + ' 2'} className="w-full aspect-[4/3] rounded-2xl object-cover" />}
+                  <img src={sec.img} alt={t('about.production_sections.' + sec.id + '.title')} className="w-full aspect-[4/3] rounded-2xl object-cover" />
+                  {sec.img2 && <img src={sec.img2} alt={t('about.production_sections.' + sec.id + '.title') + ' 2'} className="w-full aspect-[4/3] rounded-2xl object-cover" />}
                 </div>
               </div>
             ))}
           </div>
           <div className="mt-20 text-center">
-            <h3 className="text-3xl font-black mb-4" style={{ color: 'var(--th-text)' }}>Üretim Gücümüzü Projelerimize Yansıtıyoruz.</h3>
+            <h3 className="text-3xl font-black mb-4" style={{ color: 'var(--th-text)' }}>{t('about.production_power')}</h3>
             <p className="mb-8 max-w-lg mx-auto" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 70%, transparent)' }}>
-              Mühendislik, üretim ve kalite kontrol süreçlerini aynı çatı altında yöneterek; her projeye özel, güvenilir ve yüksek kaliteli çözümler geliştiriyoruz.
+              {t('about.production_power_desc')}
             </p>
             <button
               onClick={() => setActivePage('projects')}
@@ -290,7 +234,7 @@ export default function AboutPage({ setActivePage }) {
               onMouseEnter={(e) => e.currentTarget.style.opacity = '0.85'}
               onMouseLeave={(e) => e.currentTarget.style.opacity = '1'}
             >
-              Projelerimizi İnceleyin
+              {t('about.btn_projects')}
             </button>
           </div>
         </div>
@@ -300,17 +244,17 @@ export default function AboutPage({ setActivePage }) {
       <section className="py-28" style={{ backgroundColor: 'var(--th-bg)' }}>
         <div className="max-w-7xl mx-auto px-6 max-w-[var(--layout-max)] lg:px-12">
           <div className="text-center mb-20">
-            <p className="text-xs font-bold tracking-[0.25em] uppercase mb-4" style={{ color: 'var(--th-polgun-blue)' }}>Başarılarımız</p>
-            <h2 className="text-4xl font-black" style={{ color: 'var(--th-text)' }}>Ödüller ve Ziyaretler</h2>
+            <p className="text-xs font-bold tracking-[0.25em] uppercase mb-4" style={{ color: 'var(--th-polgun-blue)' }}>{t('awards.title')}</p>
+            <h2 className="text-4xl font-black" style={{ color: 'var(--th-text)' }}>{t('awards.title')}</h2>
           </div>
 
           {/* Ödüller */}
           <div className="mb-20">
-            <h3 className="text-xl font-black mb-10" style={{ color: 'var(--th-text)' }}>🏆 Ödüllerimiz</h3>
+            <h3 className="text-xl font-black mb-10" style={{ color: 'var(--th-text)' }}>🏆 {t('awards.title')}</h3>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {liveAwards.length === 0 && (
                 <p className="sm:col-span-2 lg:col-span-3 text-center text-sm" style={{ color: 'var(--th-text-muted)' }}>
-                  Henüz yayınlanmış ödül bulunmuyor.
+                  {t('common.no_content')}
                 </p>
               )}
               {liveAwards.map((award, i) => (
@@ -333,9 +277,9 @@ export default function AboutPage({ setActivePage }) {
 
           {/* Ziyaretler */}
           <div>
-            <h3 className="text-xl font-black mb-10" style={{ color: 'var(--th-text)' }}>🤝 Kurumsal Ziyaretler</h3>
+            <h3 className="text-xl font-black mb-10" style={{ color: 'var(--th-text)' }}>🤝 {t('awards.visits.title', {defaultValue: 'Kurumsal Ziyaretler'})}</h3>
             <div className="grid sm:grid-cols-2 gap-6">
-              {VISITS.map((visit, i) => (
+              {visits.map((visit, i) => (
                 <div key={i} className="rounded-2xl overflow-hidden group" style={{ backgroundColor: 'var(--th-surface)', border: '1px solid color-mix(in srgb, var(--th-border) 12%, transparent)', boxShadow: '0 4px 24px rgba(0,0,0,0.06)' }}>
                   <div className="overflow-hidden">
                     <img src={visit.img} alt={visit.title} className="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-105" />
@@ -351,14 +295,14 @@ export default function AboutPage({ setActivePage }) {
 
           {/* CTA */}
           <div className="mt-20 text-center p-8 rounded-2xl" style={{ background: 'linear-gradient(135deg, var(--th-polgun-blue), var(--th-primary))' }}>
-            <h3 className="text-2xl font-black text-white mb-3">Yenilikçi Projelerle Geleceği Tasarlıyoruz.</h3>
-            <p className="text-white/70 mb-6 max-w-lg mx-auto">Polgün, tasarım ve mühendislik yetkinliğini Ar-Ge çalışmalarıyla birleştirerek su parkı sektörüne değer katan yenilikçi çözümler geliştirmeye devam etmektedir.</p>
+            <h3 className="text-2xl font-black text-white mb-3">{t('home.cta_title')}</h3>
+            <p className="text-white/70 mb-6 max-w-lg mx-auto">{t('about.production_power_desc')}</p>
             <button
               onClick={() => setActivePage('contact')}
               className="px-8 py-3.5 text-sm font-bold rounded-full transition-all duration-200 hover:-translate-y-0.5"
               style={{ backgroundColor: '#fff', color: 'var(--th-primary-darker)' }}
             >
-              İletişime Geç
+              {t('common.contact')}
             </button>
           </div>
         </div>
@@ -368,22 +312,22 @@ export default function AboutPage({ setActivePage }) {
       <section className="py-28" style={{ backgroundColor: 'var(--th-surface)' }}>
         <div className="max-w-7xl mx-auto px-6 max-w-[var(--layout-max)] lg:px-12">
           <div className="text-center mb-12">
-            <p className="text-xs font-bold tracking-[0.25em] uppercase mb-4" style={{ color: 'var(--th-polgun-blue)' }}>Tarihçe & Tesislerimiz</p>
-            <h2 className="text-4xl font-black mb-6" style={{ color: 'var(--th-text)' }}>Büyüyen Üretim Gücü</h2>
+            <p className="text-xs font-bold tracking-[0.25em] uppercase mb-4" style={{ color: 'var(--th-polgun-blue)' }}>{t('history.facilities')}</p>
+            <h2 className="text-4xl font-black mb-6" style={{ color: 'var(--th-text)' }}>{t('history.growing_power')}</h2>
           </div>
           <div className="max-w-3xl mx-auto mb-16 text-center">
             <p className="leading-relaxed mb-6" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 70%, transparent)' }}>
-              Polgün, artan kapasite ihtiyacını karşılamak ve üretim kabiliyetlerini ileriye taşımak amacıyla altyapı yatırımlarını kesintisiz sürdürmekte; Muğla’daki mevcut tesislerinde polyester, termoplastik kaplama ve boyama süreçlerine yönelik yeni üretim alanları oluştururken, Bursa’daki yeni fabrika yatırımıyla birlikte toplam 120.000 m² üretim alanına ulaşarak uluslararası ölçekte büyüyen operasyonel gücünü pekiştirmektedir.
+              {t('history.desc1')}
             </p>
             <p className="leading-relaxed mb-6" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 70%, transparent)' }}>
-              Ar-Ge ve Tasarım yetkinliğini daha da ileri taşımak amacıyla Marmara Teknokent ofisi için başvuru süreci tamamlanmış ve sözleşme imzalanarak yapılanma resmiyet kazanmıştır. Bu yapılanma ile üniversite iş birliklerinin güçlendirilmesi hedeflenmektedir.
+              {t('history.desc2')}
             </p>
             <p className="leading-relaxed font-bold" style={{ color: 'var(--th-polgun-blue)' }}>
-              Bugün Polgün, Türkiye’deki üretim yapılanması ve İspanya’daki satış ofisiyle, uluslararası pazardaki konumunu güçlendirmektedir.
+              {t('history.bold_summary')}
             </p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {FACTORIES.map((fac, i) => (
+            {factories.map((fac, i) => (
               <div key={i} className="rounded-2xl overflow-hidden group" style={{ backgroundColor: 'var(--th-bg)', border: '1px solid color-mix(in srgb, var(--th-border) 12%, transparent)', boxShadow: '0 4px 24px rgba(0,0,0,0.06)' }}>
                 <div className="overflow-hidden h-52">
                   <img src={fac.img} alt={fac.label} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
@@ -406,10 +350,10 @@ export default function AboutPage({ setActivePage }) {
 
             {/* Tesciller */}
             <div>
-              <p className="text-xs font-bold tracking-[0.25em] uppercase mb-4" style={{ color: 'var(--th-polgun-blue)' }}>Fikri Mülkiyet</p>
-              <h2 className="text-3xl font-black mb-8" style={{ color: 'var(--th-text)' }}>Tasarım Tescilleri &amp; Patentler</h2>
+              <p className="text-xs font-bold tracking-[0.25em] uppercase mb-4" style={{ color: 'var(--th-polgun-blue)' }}>{t('awards.patent_title', {defaultValue: 'Fikri Mülkiyet'})}</p>
+              <h2 className="text-3xl font-black mb-8" style={{ color: 'var(--th-text)' }}>{t('nav.awards')}</h2>
               <div className="flex flex-col gap-3">
-                {TESCILLER.map((t, i) => (
+                {tesciller.map((t, i) => (
                   <a key={i} href={t.file} target="_blank" rel="noopener noreferrer"
                     className="flex items-center justify-between p-4 rounded-xl transition-all duration-200 hover:-translate-y-0.5 group"
                     style={{ backgroundColor: 'var(--th-surface)', border: '1px solid color-mix(in srgb, var(--th-border) 12%, transparent)' }}>
@@ -427,10 +371,10 @@ export default function AboutPage({ setActivePage }) {
 
             {/* Kalite Belgeleri */}
             <div>
-              <p className="text-xs font-bold tracking-[0.25em] uppercase mb-4" style={{ color: 'var(--th-polgun-blue)' }}>Sertifikalar</p>
-              <h2 className="text-3xl font-black mb-8" style={{ color: 'var(--th-text)' }}>Kalite Belgelerimiz</h2>
+              <p className="text-xs font-bold tracking-[0.25em] uppercase mb-4" style={{ color: 'var(--th-polgun-blue)' }}>{t('awards.cert_title', {defaultValue: 'Sertifikalar'})}</p>
+              <h2 className="text-3xl font-black mb-8" style={{ color: 'var(--th-text)' }}>{t('awards.cert_subtitle', {defaultValue: 'Kalite Belgelerimiz'})}</h2>
               <div className="flex flex-col gap-4">
-                {KALITE_BELGELERI.map((kb, i) => (
+                {kaliteBelgeleri.map((kb, i) => (
                   <a key={i} href={kb.file} target="_blank" rel="noopener noreferrer"
                     className="flex items-center gap-5 p-6 rounded-2xl transition-all duration-200 hover:-translate-y-0.5 group"
                     style={{ backgroundColor: 'var(--th-surface)', border: '1px solid color-mix(in srgb, var(--th-border) 12%, transparent)', boxShadow: '0 4px 20px rgba(0,0,0,0.05)' }}>

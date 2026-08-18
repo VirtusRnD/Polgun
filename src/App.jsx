@@ -167,7 +167,7 @@ export default function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/products" element={<ProductsPage />} />
           <Route path="/splash-tower" element={<SplashTowerPage />} />
-          <Route path="/splash-zone" element={<SplashZone/>} />
+          <Route path="/splash-zone" element={<SplashZone />} />
           <Route path="/services" element={<ServicesPage />} />
           <Route path="/projects" element={<ProjectsPage />} />
           <Route path="/about" element={<AboutPage />} />

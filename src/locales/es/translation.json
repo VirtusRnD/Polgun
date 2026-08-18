@@ -1,1 +1,832 @@
-{}
+{
+  "common": {
+    "all": "Todo",
+    "view_all": "Ver Todo",
+    "read_more": "Leer Más",
+    "loading": "Cargando...",
+    "error": "Ocurrió un error.",
+    "no_content": "No se encontró contenido.",
+    "contact": "Contacto",
+    "send": "Enviar",
+    "quote": "Obtener Cotización",
+    "learn_more": "Aprender Más",
+    "home": "Inicio",
+    "back": "Atrás",
+    "explore_projects": "Explorar Proyectos",
+    "all_products": "Todos los Productos",
+    "sending": "Enviando...",
+    "select": "Seleccionar",
+    "other": "Otro",
+    "hq": "Sede",
+    "images": "Imágenes",
+    "view": "Ver",
+    "turkey": "Turquía",
+    "spain": "España"
+  },
+  "nav": {
+    "services": "Servicios",
+    "planning": "Planificación",
+    "design": "Diseño",
+    "engineering": "Ingeniería",
+    "installation": "Instalación y Montaje",
+    "maintenance": "Mantenimiento y Reparación",
+    "renovation": "Renovación",
+    "projects": "Proyectos",
+    "products": "Productos",
+    "categories": "Categorías de Productos",
+    "slides": "Toboganes de Agua",
+    "splash_tower": "Splash Tower",
+    "splash_zone": "Splash Zone",
+    "about": "Nosotros",
+    "team": "Equipo",
+    "history": "Historia",
+    "awards": "Premios y Patentes",
+    "factories": "Fábricas",
+    "news": "Noticias y Eventos",
+    "arge": "I+D",
+    "career": "Empleo"
+  },
+  "footer": {
+    "products": "Productos",
+    "corporate": "Corporativo",
+    "support": "Soporte",
+    "tech_support": "Soporte Técnico",
+    "spare_parts": "Piezas de Repuesto",
+    "maintenance_services": "Mantenimiento",
+    "copyright": "© 2026 Polgün Waterparks. Todos los derechos reservados.",
+    "kvkk": "Protección de Datos",
+    "disclosure": "Texto Aclaratorio",
+    "cookie_policy": "Política de Cookies",
+    "terms": "Términos de Uso"
+  },
+  "home": {
+    "hero_title": "Diseñamos más que un parque acuático.",
+    "lets_color": "COLOREEMOS EL AGUA",
+    "hero_desc": "Diseñamos sistemas innovadores de entretenimiento acuático que inspiran, entusiasman y crean experiencias inolvidables.",
+    "eng_tag": "Diseño Innovador / Ingeniería Confiable",
+    "turnkey_tag": "Proyectos Llave en Mano / Experiencia Mundial",
+    "categories_title": "Categorías de Productos",
+    "categories_subtitle": "Soluciones para cada rincón del parque",
+    "slides_sub": "Tubo, abierto y adrenalina",
+    "tower_sub": "Temas Exclusivos",
+    "arge_sub": "Navatu y Savana",
+    "zone_sub": "Niños y Familia",
+    "why_title": "¿Por qué Polgün?",
+    "why_subtitle": "Creando experiencias icónicas en parques acuáticos con más de 20 años de experiencia",
+    "why_desc": "Polgün es un socio estratégico que gestiona bajo un mismo techo los procesos de diseño, ingeniería, producción e implementación de proyectos de parques acuáticos. Con más de veinte años de trayectoria, alta capacidad de fabricación y experiencia en proyectos internacionales, ofrecemos soluciones confiables, innovadoras y sostenibles para proyectos de cualquier escala. Combinando estética, seguridad, calidad y eficiencia operativa, diseñamos y construimos parques que aportan valor a marcas e inversores a largo plazo.",
+    "why_pillars": {
+      "service": "Servicio Completo",
+      "service_desc": "Diseño, fabricación y montaje",
+      "countries": "70+ Países",
+      "countries_desc": "Experiencia global",
+      "quality": "Calidad ISO",
+      "quality_desc": "Fabricación certificada",
+      "sustainable": "Sostenible",
+      "sustainable_desc": "Diseño ecológico"
+    },
+    "refs_title": "Referencias",
+    "refs_subtitle": "Marcas de renombre mundial confían en nosotros",
+    "cta_tag": "Diseñemos su Proyecto Juntos",
+    "cta_title": "Hacemos realidad el parque acuático de sus sueños",
+    "cta_desc": "Coloreamos vidas en parques acuáticos de todo el mundo. Contáctenos para su próximo proyecto.",
+    "cta_btn_quote": "Obtener una Cotización",
+    "cta_btn_projects": "Ver Nuestros Proyectos",
+    "engineering_tag": "Ingeniería",
+    "design_to_field": "Impecable, desde el Diseño hasta la Obra",
+    "tags": {
+      "iso": "Certificado ISO",
+      "grp": "Producción GRP",
+      "design3d": "Diseño 3D",
+      "turnkey": "Llave en Mano"
+    }
+  },
+  "about": {
+    "title": "Nosotros",
+    "experience": "Más de 20 Años de Experiencia en Parques Acuáticos",
+    "desc": "Polgün es un socio integral que gestiona el diseño, la ingeniería, la fabricación y la instalación de proyectos de parques acuáticos. Ofrecemos soluciones confiables y sostenibles para proyectos de cualquier escala a nivel mundial.",
+    "power_title": "Una Fuerza Creciente en el Escenario Internacional",
+    "power_desc1": "Polgün inició sus actividades en Muğla-Menteşe en 2002. Hoy continúa operando con 4 centros de producción en Muğla, oficinas en Estambul y España, la planta de Antalya abierta en 2022 y la nueva inversión en Bursa.",
+    "power_desc2": "Con 120.000 m² de infraestructura integrada, maquinaria automatizada y personal experto, es una de las empresas líderes capaz de fabricar estructuras metálicas y poliéster bajo el mismo techo.",
+    "power_desc3": "Con 425 empleados y un equipo de I+D de 30 personas, Polgün gestiona todo el ciclo del proyecto y entrega soluciones llave en mano.",
+    "arge_title": "El Primer y Único Centro de I+D de Muğla",
+    "arge_desc1": "La base de nuestro enfoque en I+D es desarrollar tecnologías de entretenimiento acuático seguras, innovadoras y de alto valor agregado. Reconocido oficialmente en 2021, nuestro centro es pionero en el desarrollo de productos originales y la producción de tecnología en la región.",
+    "arge_desc2": "Con 30 profesionales calificados de I+D dedicados a la investigación, ingeniería y pruebas, llevamos a cabo el diseño de nuevos productos, análisis estructurales, prototipado y procesos de propiedad intelectual.",
+    "arge_desc3": "Nuestros proyectos innovadores como Navatu, Savanna, Monarch Butterfly y Eclipse representan la fortaleza en ingeniería de Polgün en los mercados internacionales.",
+    "misyon": "Nuestra Misión",
+    "misyon_desc": "Aportar soluciones únicas al sector del entretenimiento acuático mediante proyectos de I+D de alta calidad, seguros y eficientes.",
+    "vizyon": "Nuestra Visión",
+    "vizyon_desc": "Ser un centro de I+D líder que define las tecnologías del entretenimiento acuático, inspirando a la industria y aportando valor al desarrollo sostenible.",
+    "stats": {
+      "staff": "Personal de I+D",
+      "staff_desc": "Equipo experto a tiempo completo",
+      "status": "Estado del Centro",
+      "status_desc": "Aprobado por el Ministerio, primero en Muğla",
+      "projects": "Proyectos Originales",
+      "projects_desc": "Navatu, Savanna, Eclipse, Monarch Butterfly",
+      "countries": "Países",
+      "countries_desc": "Experiencia global en proyectos y mercados"
+    },
+    "production_title": "Infraestructura de Producción",
+    "production_subtitle": "Gestionamos todo el proceso bajo un mismo techo.",
+    "production_desc": "Polgün realiza las soluciones de entretenimiento acuático integrando la fabricación de acero, el procesamiento mecánico, la producción de composites y las tecnologías digitales.",
+    "production_power": "Reflejamos Nuestra Fuerza de Fabricación en Cada Proyecto.",
+    "production_power_desc": "Al integrar ingeniería, producción y control de calidad, desarrollamos soluciones confiables a la medida de cada cliente.",
+    "btn_projects": "Ver Proyectos",
+    "production_sections": {
+      "cnc_mold": {
+        "title": "Modelado CNC y Preparación de Moldes",
+        "desc": "Nuestros procesos de modelado asistido por CNC permiten crear geometrías complejas con alta precisión, garantizando la calidad superficial del composite."
+      },
+      "steel": {
+        "title": "Procesamiento de Acero y Corte",
+        "desc": "Utilizamos tecnologías de corte CNC y conformado de perfiles de acero para fabricar las estructuras soporte con tolerancias mínimas de montaje."
+      },
+      "mechanical": {
+        "title": "Mecanizado Mecánico y Componentes",
+        "desc": "Los elementos de unión y piezas mecánicas especiales se fabrican con la precisión requerida por las normas técnicas del proyecto."
+      },
+      "composite": {
+        "title": "Producción de Composite y Acabados",
+        "desc": "La laminación de toboganes y el pintado se realizan bajo estrictos controles para garantizar la resistencia a la intemperie y un excelente brillo a largo plazo."
+      },
+      "digital": {
+        "title": "Producción Digital y Trazabilidad",
+        "desc": "Los sistemas automatizados aseguran procesos de producción repetibles, controlados y totalmente trazables."
+      }
+    },
+    "factories": {
+      "mugla": {
+        "label": "Instalación de Producción Principal",
+        "desc": "Centro principal de producción e I+D. La instalación alberga la construcción de acero, la producción de composites y la infraestructura de fabricación digital."
+      },
+      "bursa": {
+        "label": "Instalación de Producción de Bursa",
+        "desc": "Centro de producción del norte de Polgün. La instalación se encarga de la fabricación de piezas de acero y productos semielaborados."
+      },
+      "istanbul": {
+        "label": "Tecnoparque de Mármara",
+        "desc": "Oficina del Tecnoparque de Mármara donde se realizan estudios de I+D e innovación. Centro de desarrollo de nuevos productos y análisis técnico."
+      }
+    },
+    "story_title": "Diseñando el Futuro"
+  },
+  "services": {
+    "title": "Servicios",
+    "subtitle": "Gestión Integral de Proyectos",
+    "desc": "Ofrecemos servicios profesionales en cada etapa del desarrollo del parque, desde la concepción inicial hasta la puesta en marcha.",
+    "sections": {
+      "planlama": {
+        "title": "Planificación",
+        "desc": "El éxito del proyecto comienza con un análisis del terreno, presupuesto del inversor y estudio de mercado para plantear la mejor distribución."
+      },
+      "tasarim": {
+        "title": "Diseño",
+        "desc": "Creamos conceptos creativos y renders 3D detallados para que pueda visualizar el proyecto de manera realista antes de su construcción."
+      },
+      "muhendislik": {
+        "title": "Ingeniería",
+        "desc": "Desarrollamos planos estructurales e hidráulicos que cumplen con las normativas internacionales de seguridad y durabilidad."
+      },
+      "montaj": {
+        "title": "Montaje e Instalación",
+        "desc": "Nuestros experimentados equipos de obra instalan los componentes de forma segura y eficiente respetando los plazos estipulados."
+      },
+      "bakim": {
+        "title": "Mantenimiento y Soporte",
+        "desc": "Ofrecemos planes de inspección regulares, suministro de repuestos y asistencia técnica para garantizar un funcionamiento seguro del parque."
+      },
+      "yenileme": {
+        "title": "Renovación",
+        "desc": "Actualizamos parques existentes añadiendo nuevos juegos, toboganes temáticos y sistemas eficientes para revitalizar el negocio."
+      }
+    },
+    "steps": {
+      "step1": {
+        "title": "Diseño de Producto y Tematización",
+        "desc": "Los toboganes de agua, los grupos de juego para niños y las atracciones de parques acuáticos se diseñan especialmente de acuerdo con el concepto del proyecto y las expectativas del cliente. El color, el patrón, el tema y los detalles visuales se desarrollan en armonía con la geometría del producto para crear diseños únicos que fortalezcan la experiencia del visitante."
+      },
+      "step2": {
+        "title": "Ingeniería y Proyección",
+        "desc": "Los sistemas de toboganes, las estructuras portantes de acero y las infraestructuras mecánicas e hidráulicas son proyectados en detalle por equipos de ingeniería. Los cálculos estructurales, los análisis técnicos, los dibujos de producción y los documentos de montaje se preparan de acuerdo con las condiciones del proyecto."
+      },
+      "step3": {
+        "title": "Producción",
+        "desc": "Las piezas de toboganes de fibra de vidrio, las construcciones de acero, los modelos, los moldes y los componentes específicos del proyecto se preparan en las instalaciones de producción de Polgün. Los procesos de producción se llevan a cabo sobre la base de la precisión dimensional, la calidad de la superficie, la durabilidad y la trazabilidad."
+      },
+      "step4": {
+        "title": "Gestión de Proyectos y Envío",
+        "desc": "El diseño, la producción, el embalaje, la logística y los procesos de campo se coordinan de acuerdo con el calendario del proyecto. Los productos se preparan con un sistema de codificación y etiquetado correcto, se embalan de forma segura y se entregan completos en el lugar del proyecto."
+      },
+      "step5": {
+        "title": "Montaje y Puesta en Servicio",
+        "desc": "Los toboganes, las construcciones de acero y los equipos relacionados son montados por equipos de campo experimentados o bajo la supervisión técnica de Polgün. Después del montaje, las conexiones, las superficies de deslizamiento, el flujo de agua y las funciones del sistema se controlan en detalle."
+      }
+    },
+    "why": {
+      "service": {
+        "title": "Servicio Completo",
+        "desc": "En cada paso, desde el diseño hasta el montaje, desde el mantenimiento hasta el software."
+      },
+      "countries": {
+        "title": "70+ Países",
+        "desc": "Experiencia en proyectos globales y especialización local."
+      },
+      "iso": {
+        "title": "ISO 9001",
+        "desc": "Procesos de producción y calidad certificados."
+      },
+      "lifetime": {
+        "title": "De por Vida",
+        "desc": "Soporte técnico a largo plazo y garantía de repuestos."
+      }
+    },
+    "process_tag": "Nuestro Proceso de Servicio",
+    "process_title": "Estamos con usted en cada paso del camino, de principio a fin",
+    "cta_title": "Construyamos su sueño juntos",
+    "cta_desc": "No importa el tamaño del proyecto, estamos con usted desde el primer día hasta el último."
+  },
+  "projects": {
+    "title": "Nuestros Proyectos",
+    "subtitle": "Nuestras Referencias Globales",
+    "desc": "Examine nuestros proyectos de firma que hemos llevado a cabo en más de 70 países en todo el mundo.",
+    "filter_all": "Todos los Proyectos",
+    "category": "Categoría",
+    "country": "País",
+    "year": "Año",
+    "back_to_projects": "Volver a Proyectos",
+    "portfolio_tag": "Nuestra Cartera de Proyectos",
+    "stats": {
+      "completed": "Proyecto Completado",
+      "countries": "País",
+      "project_count": "proyectos"
+    },
+    "filters": {
+      "region": "Región",
+      "type": "Tipo"
+    },
+    "types": {
+      "outdoor": "Parque Acuático al Aire Libre",
+      "hotel": "Hotel y Parque Acuático",
+      "indoor": "Parque Acuático Cubierto",
+      "resort": "Complejo Turístico"
+    },
+    "cta_tag": "Siguiente Proyecto",
+    "cta_title": "Que su proyecto esté en esta lista.",
+    "cta_desc": "Póngase en contacto con nuestro equipo de ingenieros y arquitectos expertos para diseñar el parque acuático o centro de entretenimiento de sus sueños.",
+    "cta_btn": "Iniciar el Proyecto"
+  },
+  "products": {
+    "title": "Productos",
+    "subtitle": "Sistemas de Juego Acuático Innovadores",
+    "desc": "Descubra nuestra oferta de toboganes e interactivos que combinan emoción y máxima seguridad.",
+    "slides": {
+      "title": "Toboganes de Agua",
+      "desc": "Toboganes abiertos, cerrados y de gran velocidad diseñados para todas las edades."
+    },
+    "tower": {
+      "title": "Splash Tower",
+      "desc": "Estructuras interactivas multinivel con temáticas exclusivas para el disfrute de las familias."
+    },
+    "zone": {
+      "title": "Splash Zone",
+      "desc": "Parques de chorros sin profundidad con cañones de agua y elementos interactivos para los más pequeños."
+    },
+    "categories": {
+      "family_slides": "Toboganes Familiares",
+      "fast_slide": "Toboganes Rápidos",
+      "jumbo_slides": "Toboganes Jumbo",
+      "racer_slides": "Toboganes de Carreras",
+      "classic_slides": "Toboganes Clásicos"
+    },
+    "specs": {
+      "tema": "Tema",
+      "aktivite": "Actividad",
+      "yas_grubu": "Grupo de Edad",
+      "kapasite": "Capacidad",
+      "odul": "Premio",
+      "tur": "Tipo",
+      "gelistirme": "Desarrollo",
+      "kaydirak_yolu": "Vía de Deslizamiento",
+      "tescil": "Registro",
+      "malzeme": "Material"
+    },
+    "values": {
+      "2024": "2024",
+      "korsan": "Pirata",
+      "ozellestirilebilir": "Personalizable",
+      "tum_yaslar": "Todas las Edades",
+      "yuksek": "Alta",
+      "sualti": "Subacuático",
+      "iaapa_brass_ring": "IAAPA Brass Ring",
+      "dalga_sistemi": "Sistema de Olas",
+      "ar_ge_merkezi": "Centro de I+D",
+      "4_adet": "4 Unidades",
+      "8_kisi_seans": "8 Personas/sesión",
+      "kompozit_celik": "Composite+Acero"
+    },
+    "badges": {
+      "imza_tema": "Tema Distintivo",
+      "ar_ge": "I+D"
+    },
+    "items": {
+      "pirate_theme": {
+        "sub": "Toboganes de Agua con Temática de Piratas",
+        "desc": "El Tema Pirata, el tema insignia de Polgün, está diseñado para que los niños naveguen en mar abierto lleno de piratas y se diviertan en este mundo imaginario."
+      },
+      "underwater_theme": {
+        "sub": "Estructuras Temáticas del Mundo Subacuático",
+        "desc": "Un patio de recreo interactivo diseñado a partir de corales coloridos y diferentes especies que esperan ser descubiertas, despertando la curiosidad de los niños sobre el mundo submarino."
+      },
+      "navatu": {
+        "sub": "Sistema de Olas Ganador del Premio IAAPA Brass Ring",
+        "desc": "Navatu es un innovador sistema de parque acuático desarrollado en el Centro de I+D de Polgün y galardonado con el premio Brass Ring en la IAAPA Expo Orlando. Lleva la experiencia de las olas naturales a una nueva dimensión."
+      },
+      "savana": {
+        "sub": "Tobogán Acuático Temático de Varios Carriles",
+        "desc": "Savana es un innovador proyecto de I+D que combina cuatro trayectorias de deslizamiento diferentes en un solo cuerpo, permitiendo que ocho usuarios experimenten diferentes estilos de deslizamiento simultáneamente. El diseño fue registrado en 2024."
+      },
+      "big_hole": {
+        "desc": "Big Hole es un tobogán de agua cerrado a gran escala diseñado para ofrecer una experiencia de uso compartido en balsas familiares. Su estructura de tubo de sección amplia transmite una impresionante sensación de velocidad y movimiento, convirtiendo el concepto clásico de tobogán cerrado en una aventura familiar divertida, social e inolvidable."
+      },
+      "big_raft": {
+        "desc": "Big Raft es un amplio y cómodo tobogán de balsa familiar diseñado para uso compartido. Gracias a su amplia superficie de deslizamiento, las familias y grupos de amigos pueden experimentar juntos el flujo, la velocidad y la emoción. Este tobogán de alto atractivo familiar ofrece una deliciosa experiencia de parque acuático que combina diversión e interacción social."
+      },
+      "family_slide": {
+        "desc": "Family Slide es un tobogán de balsa multipersona diseñado para que las familias y grupos lo disfruten juntos. Con sus amplias curvas, transiciones suaves y balsas con capacidad para hasta cuatro personas, ofrece diversión interactiva, una experiencia de deslizamiento dinámica y entretenimiento de alta capacidad."
+      },
+      "family_tornado": {
+        "desc": "Family Tornado lleva la icónica experiencia del embudo a mayor escala, permitiendo que grupos más grandes vivan la emoción juntos. Su amplia estructura de embudo y el fuerte movimiento de oscilación ofrecen alta aceleración, una sensación momentánea de ingravidez y transiciones dinámicas."
+      },
+      "mid_hole": {
+        "desc": "Mid Hole es un tobogán de agua cerrado de tipo familiar que ofrece una amplia e impresionante experiencia de conducción. El diseño de tubo cerrado aumenta el sentido de misterio y emoción durante todo el viaje, brindando una experiencia de deslizamiento cómoda y compartida para familias y grupos."
+      },
+      "ufo_slide": {
+        "desc": "UFO Slide es un tobogán de balsa familiar inspirado en su única forma elíptica. La estructura de tubo cerrado ofrece un deslizamiento fluido y cómodo para hasta cuatro usuarios, combinando la diversión compartida con un alto valor de entretenimiento para los parques acuáticos."
+      },
+      "freefall": {
+        "desc": "Freefall es un tobogán de agua de alta adrenalina diseñado para transmitir la intensa sensación de caída libre. Con su ángulo de descenso casi vertical y su pista de alta velocidad continua, ofrece una experiencia de deslizamiento corta pero extremadamente impresionante. Es una atracción de parque acuático imprescindible para los buscadores de emociones."
+      },
+      "hydro_river": {
+        "desc": "Hydro River es un tobogán de balsa de nueva generación que funciona con tecnología avanzada de chorros de agua. Proporciona un movimiento continuo mediante chorros de agua, ofreciendo una experiencia de deslizamiento fluida, dinámica e ininterrumpida. Combina tecnología innovadora, comodidad y diversión para crear una atracción única para los parques acuáticos."
+      },
+      "rocket_slide": {
+        "desc": "Rocket Slide es un tobogán de agua de alta adrenalina con un sistema de inicio de trampilla (trapdoor) que libera al usuario repentinamente, descendiendo a alta velocidad bajo el efecto de la gravedad. El suelo que se abre inesperadamente después de la cuenta regresiva, combinado con la sensación de caída libre y las opciones de bucle opcionales, ofrece una de las experiencias más emocionantes de la categoría de toboganes de alta velocidad."
+      },
+      "uphill_slide": {
+        "desc": "Uphill Slide brinda una experiencia de deslizamiento dinámica con descensos y ascensos consecutivos a lo largo de su pista ondulada. El efecto variable de aceleración y desaceleración crea una sensación de movimiento fluido y rítmico, ofreciendo a sus usuarios emoción prolongada y alto valor de entretenimiento."
+      },
+      "kamikaze": {
+        "desc": "Kamikaze es un tobogán de agua clásico que ofrece alta velocidad e intensa adrenalina gracias a su superficie de deslizamiento gradual. Los efectos de aceleración y desaceleración repentinos aumentan aún más la sensación de velocidad, siendo una de las atracciones más populares de los parques acuáticos para los buscadores de emociones."
+      },
+      "slip_fly": {
+        "desc": "Slip & Fly es un tobogán de agua original desarrollado por Polgün, diseñado para crear la sensación de rebotar y volar sobre la superficie del agua. Lleva la emoción a un nivel superior combinando alta velocidad, una impresionante experiencia visual e intensa sensación de adrenalina, siendo una de las atracciones destacadas de los parques acuáticos."
+      },
+      "babochka": {
+        "desc": "Babochka combina su única geometría inspirada en una mariposa con la experiencia de tobogán de balsa familiar. Gracias a sus amplias transiciones inclinadas y su estructura de aceleración controlada, ofrece una experiencia de deslizamiento fluida y dinámica, mientras que su diseño simétrico y llamativo proporciona un fuerte impacto visual a los parques acuáticos."
+      },
+      "boomerango": {
+        "desc": "Boomerango es un tobogán de balsa de alta adrenalina inspirado en el movimiento de retorno del bumerán. Los usuarios descienden a alta velocidad, luego escalan una pared casi vertical, experimentan una momentánea sensación de ingravidez y luego regresan al tobogán para continuar su viaje. Con su estructura de movimiento dinámico y diseño icónico, es una de las atracciones más llamativas de los parques acuáticos enfocados en la adrenalina."
+      },
+      "canyon_slide": {
+        "desc": "Canyon ofrece una emocionante experiencia de tobogán de balsa con su diseño compacto y que ahorra espacio. A lo largo de su dinámica pista, los usuarios experimentan simultáneamente la sensación de elevación, giro y retorno, creando una impresionante atracción que ofrece una memorable experiencia de deslizamiento incluso en áreas de instalación limitadas."
+      },
+      "crazy_cone": {
+        "desc": "Crazy Cone ofrece una experiencia de deslizamiento divertida y enérgica con su exclusivo diseño cónico y su fluido movimiento de oscilación. Después de que los usuarios hacen la transición a la amplia sección cónica, viven un viaje lleno de sorpresas y emocionantes movimientos de dirección cambiantes. Su llamativo aspecto y su estructura que se adapta a diferentes opciones de ubicación lo convierten en una atracción destacada para proyectos de parques acuáticos dirigidos a familias y jóvenes."
+      },
+      "drone": {
+        "desc": "Drone es un módulo de tobogán visualmente llamativo que enriquece la experiencia de deslizamiento con su efecto de expansión repentina y su impresionante sensación espacial. La sección de forma de cúpula amplia ofrece al usuario una sensación de espacio amplio e impresionante antes de que continúe la pista de deslizamiento. Gracias a su impacto visual, su estructura adecuada para aplicaciones de iluminación y su fácil integración con diferentes sistemas de toboganes, es una solución innovadora que agrega emoción y valor estético a los parques acuáticos."
+      },
+      "hill_slide": {
+        "desc": "Hill Slide es un tobogán de balsa que ofrece alta velocidad y adrenalina con una impresionante subida después de un descenso pronunciado. Con su estructura de pista dinámica, su experiencia de conducción que genera el deseo de volver a subir y su diseño personalizable con diferentes opciones de colores y patrones, añade una atracción llamativa y única a cada parque acuático."
+      },
+      "hydra_slide": {
+        "desc": "Hydra es un tobogán de carrera multi-carril que combina alta capacidad con un diseño arquitectónico audaz e icónico. Su exclusiva estructura de múltiples cabezas ofrece descensos simultáneos de alta velocidad, aumentando el espíritu de competencia y la interacción del usuario. Transforma el concepto clásico de tobogán de carrera de esterilla en una impresionante experiencia que convierte a los parques acuáticos en atracciones emblemáticas."
+      },
+      "magic_tray": {
+        "desc": "Magic Tray ofrece una experiencia dinámica de tobogán de balsa gracias a sus fluidos giros inclinados, continuos cambios de dirección y aceleración controlada. Su exclusivo diseño inspirado en un platillo (saucer) crea una sensación de deslizamiento continua y rítmica, mientras que con su diversión familiar amigable, comodidad y fuerte impacto visual, añade una atracción llamativa a los parques acuáticos."
+      },
+      "mini_boomerango": {
+        "desc": "Mini Boomerango ofrece el característico movimiento hacia adelante y hacia atrás y la emoción del tobogán de bumerán con un diseño compacto. Gracias a su menor altura y su estructura que ocupa menos espacio, es una solución ideal para proyectos con espacio limitado, sistemas Splash Tower y parques acuáticos compactos. A pesar de su pequeño tamaño, ofrece una gran experiencia de deslizamiento, creando una alternativa de atracción flexible y eficiente."
+      },
+      "space_rocket": {
+        "desc": "Space Rocket combina su diseño futurista con una experiencia de deslizamiento de alta velocidad para ofrecer una aventura temática llena de emoción. A lo largo de su exclusiva estructura inspirada en un cohete, los usuarios experimentan transiciones rápidas y fluidas, obteniendo una experiencia de deslizamiento memorable con su fuerte impacto visual."
+      },
+      "super_bowl": {
+        "desc": "Super Bowl reinterpreta la experiencia clásica de tobogán de cuenco (bowl) con un movimiento de giro más largo y aceleración dinámica. Los usuarios dan varias vueltas dentro de la amplia sección del cuenco antes de pasar a la pista de salida, viviendo una experiencia de deslizamiento de alta adrenalina y visualmente impresionante. Con sus opciones de diseño flexibles y su alta eficiencia operacional, es una atracción destacada y llamativa para los parques acuáticos."
+      },
+      "space_bowl": {
+        "desc": "Space Bowl es un tobogán de agua compacto pero impresionante que combina velocidad, movimiento giratorio y emoción visual. Los usuarios entran a la sección de cuenco desde la pista de tubo cerrada de alta velocidad, dan varias vueltas aquí y luego completan la experiencia de deslizamiento con una emocionante caída final. Con su icónico diseño, su fuerte impacto visual en los espectadores y su estructura compacta que requiere poco espacio, es una atracción llamativa que añade valor a cualquier parque acuático."
+      },
+      "tornado_slide": {
+        "desc": "Tornado ofrece una experiencia de tobogán de balsa de alta adrenalina con su amplia estructura de embudo (funnel) y su fuerte movimiento de oscilación. Los usuarios ascienden a puntos altos en las paredes del embudo y luego continúan con la pista con transiciones dinámicas, experimentando la sensación de moverse dentro de un torbellino natural. Con su impresionante diseño y su experiencia de conducción que ofrece intensa emoción, se destaca como una de las atracciones emblemáticas de los parques acuáticos."
+      },
+      "planeta": {
+        "desc": "Planeta es un tobogán de agua icónico que combina diversión familiar amigable con movimientos dinámicos a través de su forma redonda que recuerda a un planeta y su impresionante perfil de deslizamiento. Los usuarios experimentan la sensación de avanzar en órbita en el espacio a través de transiciones fluidas, amplias curvas y acelerados movimientos en espiral. Mientras que su diseño escultórico fortalece la identidad visual del parque acuático, ofrece una atracción equilibrada e inolvidable que combina diversión, movimiento y el deseo de volver a subir para visitantes de todas las edades."
+      },
+      "body_racer": {
+        "desc": "Body Racer es un tobogán de cuerpo multi-carril orientado a la competencia donde los usuarios pueden competir codo a codo. Su diseño, que puede producirse con opciones de tubo abierto o cerrado, permite a los usuarios verse entre sí durante la carrera, aumentando la emoción competitiva. Esta atracción que combina alta velocidad, diversión e interacción es uno de los indispensables toboganes de carrera de los parques acuáticos modernos."
+      },
+      "multi_slide": {
+        "desc": "Multi Slide es un tobogán de agua multi-carril que ofrece el placer de competir codo a codo con múltiples opciones de carril y un emocionante inicio de caída libre. Al combinar alta velocidad, diversión competitiva y alta capacidad de usuarios, crea una atracción dinámica, social y llamativa para los parques acuáticos."
+      },
+      "twister_slide": {
+        "desc": "Twister Slide es un tobogán de agua multi-carril orientado a la competencia que consta de 2 o 3 tubos espirales. Mientras los usuarios compiten codo a codo a lo largo de pistas espirales cerradas, las curvas sinuosas y los continuos cambios de dirección aumentan la emoción. El hecho de que el ganador de la carrera no se sepa hasta la línea de llegada ofrece una experiencia memorable que combina sorpresa, competencia y alto valor de entretenimiento."
+      },
+      "racer_slide": {
+        "desc": "Racer Slide es un tobogán de carrera de dos carriles que combina velocidad, competencia e interacción social. Los usuarios compiten codo a codo en pistas simultáneas, viviendo una experiencia divertida que genera el deseo de volver a subir. Su diseño personalizable con diferentes opciones de colores y patrones proporciona un aspecto dinámico y llamativo a cada parque acuático."
+      },
+      "spider_slide": {
+        "desc": "Spider Slide es un tobogán de agua multi-carril que ofrece una experiencia de deslizamiento dinámica y llena de competencia con sus curvas cerradas y afiladas. Gracias a su estructura de túnel entrelazado, permite a hasta cuatro usuarios competir codo a codo simultáneamente, aumentando la emoción y la interacción. Con su impresionante diseño arquitectónico y su fuerte aspecto visual, es una de las atracciones de carrera más llamativas de los parques acuáticos."
+      },
+      "aquatube": {
+        "desc": "Aquatube es un tobogán de cuerpo clásico que combina alta velocidad con una impresionante experiencia de tubo cerrado. Su diseño, que puede enriquecerse con efectos de iluminación y secciones transparentes o semitransparentes, ofrece a sus usuarios una experiencia de deslizamiento visualmente impresionante. Con su diseño atemporal y su estructura que atrae a una amplia audiencia de usuarios, continúa siendo una de las atracciones más populares e imprescindibles de los parques acuáticos."
+      },
+      "black_hole": {
+        "desc": "Black Hole es un tobogán de balsa clásico enriquecido con impresionantes efectos de luz. Los efectos visuales ofrecidos a lo largo de la estructura de tubo cerrado transforman la experiencia de deslizamiento en una aventura envolvente. Con su estructura que combina velocidad, atmósfera y diversión, continúa siendo una de las atracciones más populares y que desafían el tiempo en los parques acuáticos."
+      },
+      "compact_slide": {
+        "desc": "Compact Slide es una solución práctica de tobogán de agua desarrollada para espacios limitados, que ofrece ventajas de fácil montaje y mantenimiento. Este modelo, que puede utilizarse en sistemas Splash Tower, parques acuáticos o aplicaciones independientes, puede personalizarse con diferentes tamaños, colores y opciones de diseño. Gracias a su estructura flexible y uso eficiente del espacio, ofrece una atracción funcional y económica adecuada para proyectos de cualquier escala."
+      },
+      "rafting_slide": {
+        "desc": "Rafting Slide es un tobogán de grupo de alta capacidad diseñado inspirándose en los toboganes de balsa familiar más exitosos del mundo. Ofrece a sus usuarios una experiencia de deslizamiento dinámica gracias a su pista construida sobre velocidad, amplias transiciones de pared y continuos cambios de dirección. Los impresionantes descensos, las curvas de amplio radio y las fluidas transiciones de pista crean una experiencia de parque acuático memorable que equilibra confort y adrenalina para familias y usuarios buscadores de emociones."
+      },
+      "wide_slide": {
+        "desc": "Wide Slide es un tobogán de agua divertido y social que ofrece la posibilidad de que hasta tres usuarios deslicen juntos al mismo tiempo. Gracias a su amplia superficie de deslizamiento, permite a las familias y grupos de amigos vivir juntos una experiencia agradable. Su estructura personalizable con diferentes opciones de colores, patrones y tamaños ofrece una atracción flexible y visualmente llamativa que se adapta a cualquier parque acuático."
+      },
+      "body_slide": {
+        "desc": "Body Slide es uno de los modelos clásicos de tobogán de agua que ofrece a los usuarios una experiencia de deslizamiento fluida, cómoda y agradable con sus colores vivos y tecnología RTM. Gracias a su estructura flexible y adaptable, puede integrarse fácilmente en todo tipo de parques acuáticos como atracción independiente o como parte de diferentes combinaciones de toboganes. Con su diseño atemporal y su amplia área de uso, Body Slide es una de las soluciones de tobogán imprescindibles para los parques acuáticos."
+      }
+    },
+    "catalog_title": "Catálogo de Productos",
+    "request_btn": "Consulta de Producto",
+    "download_btn": "Descargar Catálogo",
+    "custom_project_tag": "Proyecto Personalizado",
+    "not_found_title": "¿No encontró lo que buscaba?",
+    "not_found_desc": "Explore nuestra amplia gama de productos para hacer realidad el parque acuático de sus sueños y diseñemos juntos las mejores soluciones para su proyecto.",
+    "custom_request_btn": "Solicitar Solución Personalizada"
+  },
+  "arge": {
+    "title": "I+D e Innovación",
+    "subtitle": "Tecnología para el Futuro del Ocio",
+    "desc": "Desarrollamos soluciones patentadas e innovaciones que optimizan el rendimiento y la vida útil de los parques acuáticos.",
+    "section1_title": "Ingeniería Avanzada",
+    "section1_desc": "Aplicamos simulación de fluidos y software de análisis estructural para diseñar toboganes más seguros y dinámicos.",
+    "section2_title": "Productos de I+D",
+    "navatu_desc": "Un innovador sistema de piscina de olas que lleva la experiencia de las olas naturales a una nueva dimensión.",
+    "savana_desc": "Un innovador proyecto de I+D que combina cuatro trayectorias de deslizamiento diferentes en una sola estructura.",
+    "monarch_desc": "Un diseño icónico inspirado en las alas de mariposa que ofrece un recorrido de alta velocidad con giros de doble sentido.",
+    "hero_desc": "En Polgün Waterparks, la base de nuestro enfoque de I+D es desarrollar tecnologías de entretenimiento acuático seguras, innovadoras, sostenibles y de alto valor añadido.",
+    "innovative_title": "Productos Innovadores",
+    "continuous_title": "Desarrollo Continuo",
+    "projects_title": "Nuestros proyectos de I+D",
+    "savana_sub": "Tobogán acuático temático de varios carriles",
+    "misyon": "Nuestra Misión",
+    "misyon_desc": "Aportar soluciones únicas a la industria del entretenimiento acuático mediante el desarrollo de proyectos de I+D de alta calidad, seguros, rentables e innovadores; y crear productos pioneros que representen a nuestro país en los mercados nacionales e internacionales. Nuestro objetivo es aportar conocimiento cualificado, tecnología y recursos humanos a nuestro sector adhiriéndose a los calendarios de trabajo, las verificaciones de ingeniería, el cumplimiento de las normas y los principios de producción sostenible en nuestros procesos de I+D.",
+    "vizyon": "Nuestra Visión",
+    "vizyon_desc": "Como Centro de I+D de Polgün Waterparks, nuestra visión es ser un centro de I+D líder y pionero que da forma a las tecnologías de entretenimiento acuático con sus diseños únicos, soluciones de ingeniería innovadoras, sólida capacidad de producción y proyectos que cumplen con los estándares internacionales. Aspiramos a convertirnos en una marca reconocida tanto a nivel de país como internacional con los proyectos que desarrollamos sin comprometer la calidad.",
+    "header_title": "Centro de I+D",
+    "p1": "Nuestro centro, que obtuvo el estatus de Centro de I+D con aprobación ministerial en 2021, es pionero en el desarrollo de productos originales, la localización y la producción de tecnología en nuestro sector como el primer y único Centro de I+D de Muğla.",
+    "p2": "En nuestro Centro de I+D, gestionamos el diseño de nuevos productos, análisis de ingeniería, prototipado, pruebas, validación, desarrollo de métodos de producción y procesos de propiedad intelectual de manera integral con 30 personal de I+D equivalente a tiempo completo que trabaja como investigadores, técnicos y personal de apoyo.",
+    "p3": "Vemos los esfuerzos de nacionalización y localización para nuestro país como una responsabilidad estratégica; desarrollamos soluciones que reducen la dependencia externa, son rápidamente aplicables y responden directamente a las necesidades del cliente. En todos nuestros procesos de I+D, desde el diseño hasta la producción, desde el análisis hasta la aplicación en campo, nos adherimos a los principios de seguridad, calidad, cumplimiento de normas internacionales y sostenibilidad.",
+    "p4": "Los proyectos desarrollados en el Centro de I+D de Polgün añaden valor al sector en áreas como el ahorro de agua, la seguridad del usuario, el aumento de capacidad, la experiencia temática, la producción modular, las tecnologías de materiales compuestos y las geometrías de toboganes de agua de próxima generación. Nuestros proyectos de productos innovadores como Navatu, Savana, Monarch Butterfly y Eclipse se encuentran entre los importantes resultados de I+D que representan la fortaleza de diseño, ingeniería y producción de Polgün en el mercado internacional.",
+    "p5": "Nuestras actividades de I+D no se limitan solo al desarrollo de nuevos productos. También llevamos a cabo trabajos de desarrollo continuo para mejorar el rendimiento de los productos existentes, mejorar los procesos de producción, reducir los impactos ambientales, aumentar la eficiencia de los materiales y aumentar nuestra competitividad en los mercados internacionales. Reforzamos nuestra base de conocimiento corporativo a través de colaboraciones académicas, publicaciones científicas, procesos de registro de patentes y diseños; y transformamos los resultados obtenidos en una cultura de innovación sostenible."
+  },
+  "career": {
+    "title": "Empleo en Polgün",
+    "subtitle": "Únase al Equipo Polgün",
+    "desc": "Desarrolle su carrera profesional en un entorno de proyectos internacionales, dinámico y colaborativo.",
+    "why_join": "¿Por qué trabajar aquí?",
+    "form_title": "Formulario de Solicitud",
+    "name": "Nombre Completo",
+    "email": "Correo Electrónico",
+    "phone": "Teléfono",
+    "position": "Puesto Solicitado",
+    "cv": "Adjuntar CV / Currículum",
+    "message": "Mensaje",
+    "submit": "Enviar Solicitud",
+    "form_success": "Su solicitud ha sido recibida con éxito. Gracias.",
+    "form_error": "Ocurrió un error al enviar el formulario. Inténtelo de nuevo.",
+    "why_pillars": {
+      "projects": "Proyectos Internacionales",
+      "projects_desc": "Oportunidad de trabajar en proyectos emblemáticos en todo el mundo.",
+      "innovation": "Cultura de Innovación",
+      "innovation_desc": "Espacio abierto a nuevas ideas y mejora tecnológica continua.",
+      "team": "Espíritu de Equipo",
+      "team_desc": "Un entorno cooperativo y dinámico donde valoramos el talento de cada profesional.",
+      "growth": "Desarrollo Profesional",
+      "growth_desc": "Ofrecemos planes de capacitación y oportunidades reales de crecimiento.",
+      "environment": "Espacio Moderno",
+      "environment_desc": "Instalaciones de trabajo cómodas, con herramientas de última generación.",
+      "benefits": "Beneficios Sociales",
+      "benefits_desc": "Programas pensados para favorecer el bienestar y la motivación de la plantilla."
+    },
+    "hero_desc": "Únase a nosotros para participar en proyectos que dan forma a la industria del entretenimiento acuático y forme parte de un equipo sólido que abarca desde la producción hasta el diseño, I+D y aplicaciones de campo.",
+    "view_jobs": "Ver puestos abiertos",
+    "general_apply": "Candidatura Espontánea",
+    "why_title": "¿Por qué Polgün?",
+    "open_positions": "Puestos Abiertos",
+    "jobs_subtitle": "Descubra puestos adecuados para usted.",
+    "filters": {
+      "dept": "Departamento",
+      "all_depts": "Todos los departamentos",
+      "location": "Ubicación",
+      "all_locations": "Todas las ubicaciones",
+      "type": "Tipo de empleo",
+      "all_types": "Todos los tipos"
+    },
+    "search_placeholder": "Buscar puestos...",
+    "apply_btn": "Postularse",
+    "no_jobs": "No se encontraron puestos abiertos que coincidan con sus criterios de búsqueda.",
+    "clear_filters": "Limpiar filtros",
+    "all_jobs_btn": "Ver todos los puestos",
+    "apply_desc": "Si no hay un puesto adecuado, puede enviar una solicitud general y nos pondremos en contacto con usted para futuras oportunidades.",
+    "success_title": "¡Solicitud Recibida!",
+    "success_desc": "Su solicitud de empleo ha sido registrada en nuestra base de datos. Nuestro equipo de Recursos Humanos evaluará su perfil y se pondrá en contacto con usted.",
+    "new_apply_btn": "Enviar nueva solicitud",
+    "form": {
+      "city": "Ciudad de residencia",
+      "department": "Departamento de destino",
+      "location_preference": "Preferencia de ubicación de trabajo",
+      "cover_letter": "Carta de presentación corta (Opcional)",
+      "cover_letter_placeholder": "Describa brevemente sus habilidades y metas profesionales...",
+      "upload_cv": "Subir CV",
+      "remove_file": "Eliminar archivo",
+      "drag_file": "Arrastre su archivo aquí o seleccione",
+      "kvkk_link": "Aviso de privacidad del candidato",
+      "read_approved": "leído y aceptado.",
+      "cv_consent_label": "Permito que mi CV sea evaluado para otros puestos adecuados que puedan surgir fuera de la oferta actual.",
+      "submit_btn": "Enviar solicitud",
+      "security_label": "Sus datos personales están protegidos de forma segura bajo las regulaciones de protección de datos."
+    },
+    "internship_programs": "Programas de Prácticas y Graduados",
+    "internships_subtitle": "Formamos a los profesionales del futuro.",
+    "internships": {
+      "apply_btn": "Solicitar prácticas"
+    },
+    "testimonials_title": "Lo que dice nuestro equipo",
+    "testimonials_subtitle": "¿Cómo es trabajar en Polgün? Escuche sus historias.",
+    "process_title": "Nuestro proceso de solicitud",
+    "process_subtitle": "Evaluamos a nuestros candidatos con un proceso transparente y rápido.",
+    "cta_title": "Tu talento, nuestro futuro.",
+    "cta_desc": "Postúlese hoy para unirse a la familia Polgün y participar en los proyectos del futuro.",
+    "depts": {
+      "project_management": "Gestión de Proyectos",
+      "design": "Diseño",
+      "production": "Producción",
+      "procurement": "Adquisiciones",
+      "admin": "Asuntos Administrativos",
+      "intern": "Prácticas / Graduado"
+    },
+    "locations": {
+      "field": "Campo (Sitios de construcción)",
+      "any": "Sin preferencia"
+    },
+    "why": {
+      "intl": {
+        "title": "Proyectos Internacionales",
+        "desc": "La oportunidad de trabajar en proyectos emocionantes en todo el mundo."
+      },
+      "innovation": {
+        "title": "I+D e Innovación",
+        "desc": "Un entorno de trabajo abierto donde se apoyan las ideas innovadoras."
+      },
+      "team": {
+        "title": "Fuerte Espíritu de Equipo",
+        "desc": "Un viaje desde la producción hasta el éxito junto con nuestro equipo experto y dinámico."
+      },
+      "growth": {
+        "title": "Carrera y Desarrollo",
+        "desc": "Hacemos crecer su carrera juntos con oportunidades de capacitación, mentoría y promoción."
+      },
+      "safety": {
+        "title": "Trabajo Seguro y Sostenible",
+        "desc": "La salud y seguridad ocupacional es nuestra prioridad, y nuestro enfoque de producción sensible al medio ambiente."
+      },
+      "diverse": {
+        "title": "Experiencia en Varios Campos",
+        "desc": "Oportunidad de adquirir experiencia en muchos campos desde la ingeniería hasta el diseño, la producción hasta el campo."
+      }
+    },
+    "process": {
+      "step1": {
+        "title": "Solicitud",
+        "desc": "Complete su solicitud en línea."
+      },
+      "step2": {
+        "title": "Pre-Evaluación",
+        "desc": "Su solicitud es revisada por el departamento correspondiente."
+      },
+      "step3": {
+        "title": "Entrevistas",
+        "desc": "Nuestro proceso continúa con entrevistas de RR.HH. y técnicas."
+      },
+      "step4": {
+        "title": "Oferta",
+        "desc": "Se presenta una oferta a los candidatos adecuados."
+      },
+      "step5": {
+        "title": "¡Bienvenido!",
+        "desc": "Nuestro viaje comienza con su incorporación a nuestro equipo."
+      }
+    }
+  },
+  "contact": {
+    "title": "Contacto",
+    "subtitle": "Hable con Nosotros",
+    "desc": "Estamos listos para asesorarle en su próximo proyecto de parque acuático.",
+    "form_title": "Formulario de Contacto",
+    "name": "Nombre",
+    "email": "Correo",
+    "phone": "Teléfono",
+    "subject": "Asunto",
+    "message": "Mensaje",
+    "submit": "Enviar",
+    "form_success": "Mensaje enviado con éxito. Nos pondremos en contacto a la brevedad.",
+    "office": "Oficinas y Plantas",
+    "address": "Dirección",
+    "phone_label": "Teléfono",
+    "email_label": "Correo",
+    "offices": {
+      "hq": "Sede Central",
+      "antalya": "Oficina de Antalya",
+      "spain": "Oficina Comercial España",
+      "bursa": "Planta Bursa",
+      "hq_address_label": "Dirección de la Sede",
+      "europe": "Oficina de Europa"
+    },
+    "hero_title": "Pongámonos en Contacto",
+    "hero_desc": "Puede ponerse en contacto con nuestro equipo de expertos para desarrollar un nuevo proyecto de parque acuático, renovar su instalación existente u obtener información detallada sobre nuestros productos.",
+    "project_request": "Consulta del Proyecto",
+    "form": {
+      "sub_desc": "Puede comunicarse con nosotros completando todos los campos.",
+      "success_title": "Mensaje Recibido",
+      "success_desc": "Su solicitud ha sido recibida, nuestro equipo de expertos se comunicará con usted lo antes posible.",
+      "name": "Nombre Completo",
+      "email": "Correo electrónico",
+      "phone": "Teléfono",
+      "company": "Nombre de la empresa / proyecto",
+      "interest_label": "Producto de Interés",
+      "message": "Su mensaje",
+      "message_placeholder": "Puede proporcionar información detallada sobre su proyecto o solicitud...",
+      "kvkk_desc_prefix": "He leído y acepto el",
+      "kvkk_desc_suffix": " Texto de Aclaración de Cliente - Proveedor.",
+      "submit_btn": "Enviar mensaje",
+      "interest": {
+        "slides": "Toboganes de agua",
+        "wave_pools": "Piscinas de olas",
+        "lazy_river": "Río lento",
+        "kids_parks": "Parques infantiles",
+        "custom_project": "Proyecto personalizado",
+        "maintenance": "Mantenimiento y servicio"
+      }
+    },
+    "info_title": "Información de Contacto",
+    "hours_label": "Horario de Trabajo",
+    "hours_val1": "Lun–Sáb: 08:30–18:00",
+    "hours_val2": "Domingo: Cerrado",
+    "offices_title": "Nuestras Oficinas"
+  },
+  "awards": {
+    "title": "Premios, Patentes y Certificados",
+    "subtitle": "Reconocimientos y Visitas",
+    "desc": "Logros internacionales de Polgün que respaldan nuestra calidad e innovación.",
+    "awards_section": "🏆 Premios",
+    "visits_section": "🤝 Visitas Institucionales",
+    "no_awards": "No hay premios publicados en este momento.",
+    "cta_title": "Diseñamos el Futuro con Ingeniería Avanzada.",
+    "cta_desc": "Unimos creatividad, análisis técnico y pasión para desarrollar las mejores atracciones de agua.",
+    "cta_btn": "Contactar",
+    "intellectual_property": "Propiedad Intelectual",
+    "patents_title": "Patentes y Diseños Registrados",
+    "quality_documents": "Certificados",
+    "quality_title": "Nuestros Certificados de Calidad",
+    "visits": {
+      "egekaf": {
+        "title": "Visita en el Marco de EGEKAF",
+        "desc": "Presentamos nuestros modelos a escala, metodologías de trabajo y planes de expansión a los visitantes del congreso."
+      },
+      "msku": {
+        "title": "Visita de la Universidad Muğla Sıtkı Koçman",
+        "desc": "Inspección de las líneas de producción y el centro de I+D para potenciar la colaboración universidad-empresa."
+      },
+      "title": "Visitas Corporativas"
+    },
+    "tesciller": {
+      "benelux": "Decisión Final de Registro Benelux",
+      "france": "Decisión Final de Registro Francia",
+      "spain": "Decisión Final de Registro España",
+      "egypt": "Decisión Final de Registro Egipto",
+      "greece": "Decisión Final de Registro Grecia",
+      "form": "Formulario de Solicitud Polgün",
+      "fluorescent": "Certificado de Patente de Iluminación Fluorescente",
+      "slides": "Registro de Diseño de Tobogán de Agua Aprobado"
+    },
+    "kalite": {
+      "iso9001": "Sistema de Gestión de Calidad",
+      "iso14001": "Sistema de Gestión Ambiental",
+      "iso45001": "Seguridad y Salud en el Trabajo"
+    },
+    "patent_title": "Propiedad Intelectual",
+    "cert_title": "Certificados",
+    "cert_subtitle": "Nuestros Documentos de Calidad"
+  },
+  "factories": {
+    "title": "Nuestras Fábricas",
+    "desc": "Nuestras modernas plantas están diseñadas para fabricar con altos estándares de calidad y respeto al medio ambiente.",
+    "names": {
+      "istanbul": "Istanbul",
+      "bursa": "Bursa",
+      "mugla": "Mugla",
+      "france": "Francia",
+      "saudi_arabia": "Arabia Saudita",
+      "serbia": "Serbia",
+      "turkey": "Turquía",
+      "spain": "España",
+      "egypt": "Egipto",
+      "hungary": "Hungría",
+      "south_korea": "Corea del Sur",
+      "greece": "Grecia"
+    }
+  },
+  "history": {
+    "title": "Historia",
+    "journey": "La Trayectoria de Polgün desde 2002",
+    "milestones_title": "Hitos",
+    "growth_title": "Nuestra Historia de Crecimiento",
+    "facilities": "Instalaciones",
+    "growing_power": "Capacidad de Producción en Expansión",
+    "desc1": "Para atender la demanda global, realizamos constantes inversiones en nuestras fábricas, alcanzando los 120.000 m² de superficie de producción total incorporando procesos avanzados de pintura y revestimiento termoplástico.",
+    "desc2": "Hemos firmado un acuerdo de colaboración con Marmara Teknokent para establecer oficinas de ingeniería avanzada que refuercen nuestros vínculos científicos.",
+    "bold_summary": "Hoy, Polgün atiende al mercado global con fábricas en Turquía y una oficina de representación y ventas en España.",
+    "milestones": {
+      "2002": "Polgün inició sus operaciones en Muğla-Menteşe.",
+      "2008": "Se realizó la primera entrega de proyecto internacional.",
+      "2015": "Se aumentó la capacidad de producción y se pusieron en servicio nuevas instalaciones.",
+      "2021": "Se obtuvo el estatus de Centro de I+D aprobado por el Ministerio — el primer y único Centro de I+D de Muğla.",
+      "2022": "Se estableció la fábrica de Antalya y se abrió la oficina de España.",
+      "2024": "Se alcanzó un área de producción total de 120.000 m² con la inversión en la fábrica de Bursa.",
+      "2025": "La cooperación universidad-industria se fortaleció con la oficina de Marmara Teknokent."
+    },
+    "milestones_tag": "Hitos"
+  },
+  "news": {
+    "title": "Noticias y Eventos",
+    "subtitle": "Actualidad Polgün",
+    "desc": "Entérese de nuestras últimas novedades, participación en ferias y eventos del sector."
+  },
+  "team": {
+    "title": "Nuestro Equipo",
+    "subtitle": "Familia Polgün",
+    "desc": "El equipo directivo y los ingenieros especializados que hacen posibles nuestros proyectos.",
+    "board": "Junta Directiva",
+    "technical_staff": "Personal Técnico"
+  },
+  "splashtower": {
+    "title": "Splash Tower",
+    "subtitle": "Torres de Aventura de Agua",
+    "desc": "Estructuras multinivel llenas de interactividad, toboganes y toboganes cerrados ideales para niños.",
+    "themes": {
+      "pirate": "Temática Pirata",
+      "jungle": "Temática Selva",
+      "custom": "Diseños Personalizados",
+      "underwater": {
+        "name": "Tema Subacuático",
+        "location": "Antalya, Turquía",
+        "desc": "Los océanos, los mares y el mundo submarino siempre han sido un mundo misterioso, emocionante y mágico para los niños."
+      },
+      "candy": {
+        "name": "Tema de Dulces",
+        "location": "Turquía",
+        "desc": "Inspirado en el mundo de los dulces y las golosinas, Candy Theme aporta alegría a los parques acuáticos con sus colores vibrantes y su diseño alegre."
+      },
+      "carnaval": {
+        "name": "Tema de Carnaval",
+        "location": "Turquía",
+        "desc": "Dé vida al espíritu alegre del carnaval con el Polgün Carnival Splash Tower, un animado parque de juegos acuáticos diseñado para estimular la imaginación de los niños."
+      },
+      "jurassic": {
+        "name": "Tema Jurásico",
+        "location": "Turquía",
+        "desc": "Dé vida al mundo prehistórico con Polgün Jurassic Splash Tower, una zona de juegos acuáticos temática diseñada para despertar la curiosidad, la emoción y la aventura."
+      },
+      "galaxy": {
+        "name": "Tema de Galaxia",
+        "location": "Turquía",
+        "desc": "Prepárese para el despegue con la Polgün Galaxy Splash Tower, una zona de juegos acuáticos temática diseñada para llevar a los niños a un viaje emocionante a través de las maravillas del universo."
+      }
+    },
+    "hero_subtitle": "Toboganes de agua y zonas de entretenimiento diseñadas con varios temas",
+    "theme_categories": "Categorías de temas"
+  },
+  "splashzone": {
+    "title": "Splash Zone",
+    "subtitle": "Áreas de Chorros y Juegos",
+    "desc": "Juegos sin profundidad para niños pequeños, diseñados con materiales de alta seguridad y colores llamativos."
+  },
+  "regions": {
+    "asia": "Asia",
+    "europe": "Europa",
+    "africa": "África",
+    "america": "América"
+  }
+}

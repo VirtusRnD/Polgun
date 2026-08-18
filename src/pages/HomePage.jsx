@@ -4,6 +4,7 @@
 // ============================================================
 import { useState, useEffect } from 'react'
 import { Link, useOutletContext } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 // ── Referans Logo İmportları ───────────────────────────────
 import refAmara from '../assets/references/amara-prestige-elite-logo.avif'
@@ -194,10 +195,28 @@ const CAROUSEL_IMAGES = [
 ]
 
 // ── Sayfa bileşeni ─────────────────────────────────────────
+// ── Sayfa bileşeni ─────────────────────────────────────────
 export default function HomePage() {
+  const { t } = useTranslation()
   const { setActivePage } = useOutletContext();
   const [heroImageIndex, setHeroImageIndex] = useState(0)
   const [carouselImageIndex, setCarouselImageIndex] = useState(0)
+
+  // Location translation mapping helper
+  const translateLocation = (loc) => {
+    const mapping = {
+      'Fransa': t('factories.names.france', {defaultValue: 'France'}),
+      'Suudi Arabistan': t('factories.names.saudi_arabia', {defaultValue: 'Saudi Arabia'}),
+      'Serbia': t('factories.names.serbia', {defaultValue: 'Serbia'}),
+      'Türkiye': t('factories.names.turkey', {defaultValue: 'Turkey'}),
+      'İspanya': t('factories.names.spain', {defaultValue: 'Spain'}),
+      'Mısır': t('factories.names.egypt', {defaultValue: 'Egypt'}),
+      'Macaristan': t('factories.names.hungary', {defaultValue: 'Hungary'}),
+      'Güney Kore': t('factories.names.south_korea', {defaultValue: 'South Korea'}),
+      'Yunanistan': t('factories.names.greece', {defaultValue: 'Greece'}),
+    };
+    return mapping[loc] || loc;
+  }
 
   // ── Otomatik resim değiştirme
   useEffect(() => {
@@ -246,7 +265,7 @@ export default function HomePage() {
               className="font-black leading-[1.05] tracking-tight"
               style={{ color: 'var(--th-polgun-antrasit)', fontSize: 'clamp(2.4rem,2.8vw,3.2rem)' }}
             >
-              Bir su parkından daha fazlasını tasarlıyoruz.
+              {t('home.hero_title')}
 
             </h1>
             <hr
@@ -297,7 +316,7 @@ export default function HomePage() {
                 WATER
               </span>
             </h2>
-            <p className='text-gray-400'>İlham veren, heyecan yaratan ve unutulmaz deneyimleri hayata geçiren yenilikçi su eğlence sistemleri tasarlıyoruz.</p>
+            <p className='text-gray-400'>{t('home.hero_desc')}</p>
 
             <div className='grid grid-cols-2 divide-x divide-gray-300'>
 
@@ -320,7 +339,7 @@ export default function HomePage() {
                   <path strokeLinecap="round" strokeLinejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
                 </svg>
                 <span className="text-sm font-medium leading-relaxed">
-                  Yenilikçi Tasarım <br className="hidden sm:block" /> Güvenilir Mühendislik
+                  {t('home.eng_tag').includes(' / ') ? <>{t('home.eng_tag').split(' / ')[0]} <br className="hidden sm:block" /> {t('home.eng_tag').split(' / ')[1]}</> : t('home.eng_tag')}
                 </span>
               </div>
               {/* 2. Kısım: Anahtar Teslim & Dünya Çapında Deneyim */}
@@ -346,7 +365,7 @@ export default function HomePage() {
                 </svg>
 
                 <span className="text-sm font-medium leading-relaxed">
-                  Anahtar Teslim Projeler <br className="hidden sm:block" /> Dünya Çapında Deneyim
+                  {t('home.turnkey_tag').includes(' / ') ? <>{t('home.turnkey_tag').split(' / ')[0]} <br className="hidden sm:block" /> {t('home.turnkey_tag').split(' / ')[1]}</> : t('home.turnkey_tag')}
                 </span>
               </div>
 
@@ -370,7 +389,7 @@ export default function HomePage() {
                 <path fillRule="evenodd" d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.348c1.295.712 1.295 2.573 0 3.285L7.28 20.005c-1.25.687-2.779-.217-2.779-1.643V5.653z" clipRule="evenodd" />
               </svg>
 
-              Projelerimizi Keşfedin
+              {t('common.explore_projects')}
             </Link>
           </div>
 
@@ -464,7 +483,7 @@ export default function HomePage() {
                         className="text-xs text-white/90"
                         style={{ textShadow: '0 8px 18px rgba(0,0,0,0.55)' }}
                       >
-                        {HERO_IMAGES[heroImageIndex].location}
+                        {translateLocation(HERO_IMAGES[heroImageIndex].location)}
                       </p>
                     </div>
                   </div>
@@ -486,10 +505,10 @@ export default function HomePage() {
               <p className="text-[11px] font-black tracking-[0.3em] uppercase mb-4 flex items-center gap-3"
                 style={{ color: 'var(--th-primary)' }}>
                 <span className="inline-block w-6 h-px" style={{ backgroundColor: 'var(--th-primary)' }} />
-                Ürün Kategorileri
+                {t('home.categories_title')}
               </p>
               <h2 className="font-black leading-tight" style={{ color: 'var(--th-text)', fontSize: 'clamp(2rem,4vw,3.5rem)' }}>
-                Su parkının her<br />köşesi için çözüm
+                {t('home.categories_subtitle').includes(' her ') ? <>{t('home.categories_subtitle').split(' her ')[0]}<br />{t('home.categories_subtitle').split(' her ')[1]}</> : t('home.categories_subtitle')}
               </h2>
             </div>
             <Link
@@ -499,16 +518,16 @@ export default function HomePage() {
               onMouseEnter={(e) => e.currentTarget.style.opacity = '0.85'}
               onMouseLeave={(e) => e.currentTarget.style.opacity = '1'}
             >
-              Tüm Ürünler
+              {t('common.all_products')}
             </Link>
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {[
-              { title: 'Su Kaydırakları', sub: 'Tüp, açık & thrill', img: guralPremier, g: 'linear-gradient(to top,rgba(0,0,0,0.4),transparent)' },
-              { title: 'Splash Tower', sub: 'İmza Temalar', img: pirate1, g: 'linear-gradient(to top,rgba(0,0,0,0.4),transparent)' },
-              { title: 'Ar-Ge Ürünleri', sub: 'Navatu & Savana', img: navatu1, g: 'linear-gradient(to top,rgba(0,0,0,0.4),transparent)' },
-              { title: 'Splash Zone', sub: 'Çocuk & Aile', img: frenzy, g: 'linear-gradient(to top,rgba(0,0,0,0.4),transparent)' },
+              { title: t('products.slides.title'), sub: t('home.slides_sub'), img: guralPremier, g: 'linear-gradient(to top,rgba(0,0,0,0.4),transparent)' },
+              { title: t('products.tower.title'), sub: t('home.tower_sub'), img: pirate1, g: 'linear-gradient(to top,rgba(0,0,0,0.4),transparent)' },
+              { title: t('nav.arge') + ' ' + t('footer.products'), sub: t('home.arge_sub'), img: navatu1, g: 'linear-gradient(to top,rgba(0,0,0,0.4),transparent)' },
+              { title: t('products.zone.title'), sub: t('home.zone_sub'), img: frenzy, g: 'linear-gradient(to top,rgba(0,0,0,0.4),transparent)' },
             ].map((cat, i) => (
               <Link
                 key={i}
@@ -532,7 +551,7 @@ export default function HomePage() {
                     <div className="text-white font-black text-xl leading-tight">{cat.title}</div>
                     <div className="mt-4 flex items-center gap-2 text-white/60 text-xs font-semibold
                       group-hover:text-white group-hover:gap-3 transition-all duration-200">
-                      İncele
+                      {t('common.learn_more')}
                       <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
                       </svg>
@@ -545,9 +564,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ══════════════════════════════════════════════════════
-          ÖZELLIK — Sol koyu glass panel + Sağ metin (Apple tarzı)
-      ══════════════════════════════════════════════════════ */}
+      {/* ── &Ouml;ZELLIK ── */}
       <section className="py-20" style={{ backgroundColor: 'var(--th-surface)' }}>
         <div className="max-w-(--layout-max) mx-auto px-6 lg:px-14">
           <div className="grid lg:grid-cols-2 gap-0 rounded-3xl overflow-hidden"
@@ -556,7 +573,7 @@ export default function HomePage() {
             {/* Sol — Carousel Panel */}
             <div className="relative min-h-95 flex items-end p-10 group"
               style={{ background: 'linear-gradient(to top,rgba(0,0,0,0.4),transparent)' }}>
-              {/* Carousel Görselleri */}
+              {/* Carousel G&ouml;rselleri */}
               <div className="absolute inset-0 overflow-hidden">
                 {CAROUSEL_IMAGES.map((img, idx) => (
                   <img
@@ -572,12 +589,12 @@ export default function HomePage() {
 
               <div className="relative z-10 w-full">
                 <GlassCard className="p-5">
-                  <p className="text-[10px] font-black tracking-[0.25em] uppercase mb-2 text-white">Mühendislik</p>
+                  <p className="text-[10px] font-black tracking-[0.25em] uppercase mb-2 text-white">{t('home.engineering_tag')}</p>
                   <h3 className="text-xl font-black text-white leading-tight mb-3" style={{ textShadow: '0 4px 12px rgba(97, 97, 97, 0.6)' }}>
-                    Tasarımdan<br />Sahaya, Eksiksiz
+                    {t('home.design_to_field').includes(', ') ? <>{t('home.design_to_field').split(', ')[0]}<br />{t('home.design_to_field').split(', ')[1]}</> : t('home.design_to_field')}
                   </h3>
                   <div className="flex flex-wrap gap-2 --th-text-muted">
-                    {['ISO Sertifikalı', 'GRP Üretim', '3D Tasarım', 'Anahtar Teslim'].map((tag) => (
+                    {[t('home.tags.iso'), t('home.tags.grp'), t('home.tags.design3d'), t('home.tags.turnkey')].map((tag) => (
                       <span key={tag} className="text-[11px] font-semibold px-3 py-1 rounded-full"
                         style={{ background: 'rgba(255,255,255,0.12)', color: 'rgba(110, 110, 110, 0.8)', border: '1px solid rgba(255,255,255,0.15)', boxShadow: '0 2px 6px rgba(76, 76, 76, 0.1)' }}>
                         {tag}
@@ -610,19 +627,20 @@ export default function HomePage() {
               <p className="text-[11px] font-black tracking-[0.3em] uppercase mb-4 flex items-center gap-3"
                 style={{ color: 'var(--th-primary)' }}>
                 <span className="inline-block w-6 h-px" style={{ backgroundColor: 'var(--th-primary)' }} />
-                Neden Polgün?
+                {t('home.why_title')}
               </p>
               <h2 className="font-black leading-tight mb-6" style={{ color: 'var(--th-text)', fontSize: 'clamp(1.5rem,2.5vw,2.25rem)' }}>
-                20+ yıllık deneyimle ikonik su parkı deneyimleri yaratıyoruz
+                {t('home.why_subtitle')}
               </h2>
               <p className="leading-relaxed mb-6 text-base" style={{ color: 'color-mix(in srgb,var(--th-text-muted) 70%,transparent)' }}>
-                Polgün, su parkı projelerinde tasarım, mühendislik, üretim ve uygulama süreçlerini tek çatı altında yöneten güçlü bir çözüm ortağıdır. Yirmi yılı aşkın sektör tecrübemiz, yüksek üretim kapasitemiz ve uluslararası proje deneyimimizle, her ölçekte projeye güvenilir, yenilikçi ve sürdürülebilir çözümler sunuyoruz. Estetik, güvenlik, kalite ve operasyonel verimliliği bir araya getirerek, markalara ve yatırımcılara uzun vadeli değer katan özgün su parkı deneyimleri tasarlıyor ve hayata geçiriyoruz.              </p>
+                {t('home.why_desc')}
+              </p>
               <div className="grid grid-cols-2 gap-3 mb-8">
                 {[
-                  { label: 'Tam Hizmet', desc: 'Tasarım & üretim & montaj' },
-                  { label: '70+ Ülke', desc: 'Global deneyim' },
-                  { label: 'ISO Kalitesi', desc: 'Sertifikalı üretim' },
-                  { label: 'Sürdürülebilir', desc: 'Çevre dostu tasarım' },
+                  { label: t('home.why_pillars.service'), desc: t('home.why_pillars.service_desc') },
+                  { label: t('home.why_pillars.countries'), desc: t('home.why_pillars.countries_desc') },
+                  { label: t('home.why_pillars.quality'), desc: t('home.why_pillars.quality_desc') },
+                  { label: t('home.why_pillars.sustainable'), desc: t('home.why_pillars.sustainable_desc') },
                 ].map((f) => (
                   <div key={f.label} className="flex items-start gap-3 p-3 rounded-2xl"
                     style={{ backgroundColor: 'color-mix(in srgb,var(--th-border) 20%,transparent)' }}>
@@ -641,7 +659,7 @@ export default function HomePage() {
                 onMouseEnter={(e) => e.currentTarget.style.opacity = '0.85'}
                 onMouseLeave={(e) => e.currentTarget.style.opacity = '1'}
               >
-                Hakkımızda
+                {t('nav.about')}
               </Link>
             </div>
           </div>
@@ -657,10 +675,10 @@ export default function HomePage() {
         <div className="max-w-[var(--layout-max)] mx-auto px-6 lg:px-14 mb-14 text-center">
           <p className="text-[11px] font-black tracking-[0.35em] uppercase mb-4"
             style={{ color: 'rgba(255,255,255,0.7)' }}>
-            Referanslarımız
+            {t('home.refs_title')}
           </p>
           <h2 className="font-black text-white leading-tight" style={{ fontSize: 'clamp(1.75rem,3vw,2.75rem)' }}>
-            Dünyaca ünlü markalar<br />bize güveniyor
+            {t('home.refs_subtitle').includes(' bize ') ? <>{t('home.refs_subtitle').split(' bize ')[0]}<br />{t('home.refs_subtitle').split(' bize ')[1]}</> : t('home.refs_subtitle')}
           </h2>
         </div>
 
@@ -693,13 +711,13 @@ export default function HomePage() {
             </div>
             <div className="relative z-10 max-w-3xl mx-auto">
               <p className="text-[11px] font-black tracking-[0.35em] uppercase mb-6 text-white/80">
-                Projenizi Birlikte Tasarlayalım
+                {t('home.cta_tag')}
               </p>
               <h2 className="font-black text-white leading-tight mb-8" style={{ fontSize: 'clamp(2rem,4.5vw,3.75rem)' }}>
-                Hayalinizdeki su parkını<br />hayata geçiriyoruz
+                {t('home.cta_title').includes(' hayata ') ? <>{t('home.cta_title').split(' hayata ')[0]}<br />{t('home.cta_title').split(' hayata ')[1]}</> : t('home.cta_title')}
               </h2>
               <p className="text-white/80 mb-12 max-w-lg mx-auto leading-relaxed">
-                Dünyanın dört bir yanındaki su parklarında hayatı renklendiriyoruz. Sıradaki projeniz için bizimle iletişime geçin.
+                {t('home.cta_desc')}
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <Link
@@ -709,7 +727,7 @@ export default function HomePage() {
                   onMouseEnter={(e) => e.currentTarget.style.opacity = '0.9'}
                   onMouseLeave={(e) => e.currentTarget.style.opacity = '1'}
                 >
-                  Hemen Teklif Al
+                  {t('home.cta_btn_quote')}
                 </Link>
                 <Link
                   to="/projects"
@@ -718,7 +736,7 @@ export default function HomePage() {
                   onMouseEnter={(e) => e.currentTarget.style.background = 'rgba(255,255,255,0.3)'}
                   onMouseLeave={(e) => e.currentTarget.style.background = 'rgba(255,255,255,0.2)'}
                 >
-                  Projelerimizi İncele
+                  {t('home.cta_btn_projects')}
                 </Link>
               </div>
             </div>

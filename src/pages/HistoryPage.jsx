@@ -1,30 +1,29 @@
-// ============================================================
-// HISTORY PAGE — Tarihçemiz
-// ============================================================
 import { useEffect } from 'react'
+import { useTranslation } from 'react-i18next'
 
 import bursaFactory from '../assets/factories/bursa-factory.avif'
 import istanbulFactory from '../assets/factories/istanbul-factory.avif'
 import muglaFactory from '../assets/factories/mugla-factory.avif'
 
-const FACTORIES = [
-  { city: 'Muğla', label: 'Merkez Üretim Tesisi', desc: 'Ana üretim ve Ar-Ge merkezi. Çelik konstrüksiyon, kompozit üretim ve dijital imalat altyapısının bulunduğu merkez tesis.', img: muglaFactory },
-  { city: 'Bursa', label: 'Bursa Üretim Tesisi', desc: 'Polgün\'ün kuzey üretim merkezi. Çelik parça imalatı ve yarı mamul üretiminin yapıldığı tesis.', img: bursaFactory },
-  { city: 'İstanbul', label: 'Marmara Teknopark', desc: 'Ar-Ge ve inovasyon çalışmalarının yürütüldüğü Marmara Teknopark ofisi. Yeni ürün geliştirme ve teknik analiz merkezi.', img: istanbulFactory },
-]
-
-const MILESTONES = [
-  { year: '2002', event: 'Polgün, Muğla-Menteşe\'de faaliyete başladı.' },
-  { year: '2008', event: 'İlk uluslararası proje teslimatı gerçekleştirildi.' },
-  { year: '2015', event: 'Üretim kapasitesi artırılarak yeni tesisler devreye alındı.' },
-  { year: '2021', event: 'Bakanlık onaylı Ar-Ge Merkezi statüsü kazanıldı — Muğla\'nın ilk ve tek Ar-Ge Merkezi.' },
-  { year: '2022', event: 'Antalya fabrikası kuruldu, İspanya ofisi açıldı.' },
-  { year: '2024', event: 'Bursa fabrika yatırımıyla toplam 120.000 m² üretim alanına ulaşıldı.' },
-  { year: '2025', event: 'Marmara Teknopark ofisi ile üniversite-sanayi iş birliği güçlendirildi.' },
-]
-
 export default function HistoryPage({ setActivePage }) {
+  const { t } = useTranslation()
   useEffect(() => { window.scrollTo(0, 0) }, [])
+
+  const milestones = [
+    { year: '2002', event: t('history.milestones.2002') },
+    { year: '2008', event: t('history.milestones.2008') },
+    { year: '2015', event: t('history.milestones.2015') },
+    { year: '2021', event: t('history.milestones.2021') },
+    { year: '2022', event: t('history.milestones.2022') },
+    { year: '2024', event: t('history.milestones.2024') },
+    { year: '2025', event: t('history.milestones.2025') },
+  ]
+
+  const factories = [
+    { city: t('factories.names.mugla'), label: t('about.factories.mugla.label'), desc: t('about.factories.mugla.desc'), img: muglaFactory },
+    { city: t('factories.names.bursa'), label: t('about.factories.bursa.label'), desc: t('about.factories.bursa.desc'), img: bursaFactory },
+    { city: t('factories.names.istanbul'), label: t('about.factories.istanbul.label'), desc: t('about.factories.istanbul.desc'), img: istanbulFactory },
+  ]
 
   return (
     <main className="pt-20" style={{ backgroundColor: 'var(--th-bg)' }}>
@@ -32,9 +31,9 @@ export default function HistoryPage({ setActivePage }) {
       {/* ── Hero ── */}
       <section className="py-28" style={{ backgroundColor: 'var(--th-primary)' }}>
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
-          <p className="text-xs font-bold tracking-[0.3em] uppercase mb-4" style={{ color: 'rgba(255,255,255,0.6)' }}>Tarihçemiz</p>
+          <p className="text-xs font-bold tracking-[0.3em] uppercase mb-4" style={{ color: 'rgba(255,255,255,0.6)' }}>{t('nav.history')}</p>
           <h1 className="text-5xl lg:text-6xl font-black text-white leading-[1.02]">
-            2002'den Bugüne<br />Polgün Yolculuğu
+            {t('history.title').includes(' Yolculuğu') ? <>{t('history.title').split(' Yolculuğu')[0]}<br />{t('history.title').split(' Yolculuğu')[1]}</> : t('history.title')}
           </h1>
         </div>
       </section>
@@ -43,8 +42,8 @@ export default function HistoryPage({ setActivePage }) {
       <section className="py-28" style={{ backgroundColor: 'var(--th-surface)' }}>
         <div className="max-w-4xl mx-auto px-6 lg:px-12">
           <div className="text-center mb-16">
-            <p className="text-xs font-bold tracking-[0.25em] uppercase mb-4" style={{ color: 'var(--th-polgun-blue)' }}>Kilometre Taşları</p>
-            <h2 className="text-4xl font-black" style={{ color: 'var(--th-text)' }}>Büyüme Hikayemiz</h2>
+            <p className="text-xs font-bold tracking-[0.25em] uppercase mb-4" style={{ color: 'var(--th-polgun-blue)' }}>{t('history.milestones_tag', {defaultValue: 'Kilometre Taşları'})}</p>
+            <h2 className="text-4xl font-black" style={{ color: 'var(--th-text)' }}>{t('history.growth_title', {defaultValue: 'Büyüme Hikayemiz'})}</h2>
           </div>
 
           <div className="relative">
@@ -52,7 +51,7 @@ export default function HistoryPage({ setActivePage }) {
             <div className="absolute left-8 top-0 bottom-0 w-px" style={{ backgroundColor: 'color-mix(in srgb, var(--th-polgun-blue) 20%, transparent)' }} />
 
             <div className="flex flex-col gap-10">
-              {MILESTONES.map((m, i) => (
+              {milestones.map((m, i) => (
                 <div key={i} className="flex items-start gap-8 relative">
                   {/* Dot */}
                   <div className="w-16 h-16 rounded-2xl flex items-center justify-center shrink-0 text-sm font-black z-10"
@@ -75,22 +74,22 @@ export default function HistoryPage({ setActivePage }) {
       <section className="py-28" style={{ backgroundColor: 'var(--th-bg)' }}>
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <div className="text-center mb-12">
-            <p className="text-xs font-bold tracking-[0.25em] uppercase mb-4" style={{ color: 'var(--th-polgun-blue)' }}>Tesislerimiz</p>
-            <h2 className="text-4xl font-black mb-6" style={{ color: 'var(--th-text)' }}>Büyüyen Üretim Gücü</h2>
+            <p className="text-xs font-bold tracking-[0.25em] uppercase mb-4" style={{ color: 'var(--th-polgun-blue)' }}>{t('history.facilities')}</p>
+            <h2 className="text-4xl font-black mb-6" style={{ color: 'var(--th-text)' }}>{t('history.growing_power')}</h2>
           </div>
           <div className="max-w-3xl mx-auto mb-16 text-center">
             <p className="leading-relaxed mb-6" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 70%, transparent)' }}>
-              Polgün, artan kapasite ihtiyacını karşılamak ve üretim kabiliyetlerini ileriye taşımak amacıyla altyapı yatırımlarını kesintisiz sürdürmekte; Muğla'daki mevcut tesislerinde polyester, termoplastik kaplama ve boyama süreçlerine yönelik yeni üretim alanları oluştururken, Bursa'daki yeni fabrika yatırımıyla birlikte toplam 120.000 m² üretim alanına ulaşarak uluslararası ölçekte büyüyen operasyonel gücünü pekiştirmektedir.
+              {t('history.desc1')}
             </p>
             <p className="leading-relaxed mb-6" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 70%, transparent)' }}>
-              Ar-Ge ve Tasarım yetkinliğini daha da ileri taşımak amacıyla Marmara Teknokent ofisi için başvuru süreci tamamlanmış ve sözleşme imzalanarak yapılanma resmiyet kazanmıştır. Bu yapılanma ile üniversite iş birliklerinin güçlendirilmesi hedeflenmektedir.
+              {t('history.desc2')}
             </p>
             <p className="leading-relaxed font-bold" style={{ color: 'var(--th-polgun-blue)' }}>
-              Bugün Polgün, Türkiye'deki üretim yapılanması ve İspanya'daki satış ofisiyle, uluslararası pazardaki konumunu güçlendirmektedir.
+              {t('history.bold_summary')}
             </p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {FACTORIES.map((fac, i) => (
+            {factories.map((fac, i) => (
               <div key={i} className="rounded-2xl overflow-hidden group" style={{ backgroundColor: 'var(--th-surface)', border: '1px solid color-mix(in srgb, var(--th-border) 12%, transparent)', boxShadow: '0 4px 24px rgba(0,0,0,0.06)' }}>
                 <div className="overflow-hidden h-52">
                   <img src={fac.img} alt={fac.label} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />

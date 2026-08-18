@@ -1,6 +1,7 @@
 // ============================================================
 // CONTACT PAGE — Form + Lokasyon + İletişim Bilgileri
 import { useState } from 'react'
+import { useTranslation } from 'react-i18next'
 
 // CMS API — uses relative paths (frontend and backend are on the same server)
 const API_URL = ''
@@ -56,7 +57,7 @@ function SelectField({ label, name, value, onChange, options }) {
           focus:outline-none focus:border-[var(--th-polgun-blue)] focus:ring-2 focus:ring-[color-mix(in_srgb,var(--th-polgun-blue)_10%,transparent)]"
       >
         {options.map((opt) => (
-          <option key={opt} value={opt}>{opt}</option>
+          <option key={opt.value} value={opt.value}>{opt.label}</option>
         ))}
       </select>
     </div>
@@ -117,6 +118,8 @@ const OFFICES = [
 ]
 
 export default function ContactPage({ setActivePage }) {
+  const { t } = useTranslation()
+
   const [form, setForm] = useState({
     name: '', email: '', phone: '', company: '',
     interest: 'Su Kaydırakları', message: '',
@@ -152,16 +155,45 @@ export default function ContactPage({ setActivePage }) {
 
       if (!response.ok) {
         const data = await response.json().catch(() => ({}))
-        throw new Error(data.error || 'Mesaj gönderilemedi, lütfen tekrar deneyin.')
+        throw new Error(data.error || t('contact.form.submit_error', {defaultValue: 'Mesaj gönderilemedi, lütfen tekrar deneyin.'}))
       }
 
       setSent(true)
     } catch (err) {
-      setSubmitError(err.message || 'Bir hata oluştu.')
+      setSubmitError(err.message || t('career.form.general_error', {defaultValue: 'Bir hata oluştu.'}))
     } finally {
       setSubmitting(false)
     }
   }
+
+  const interestOptions = [
+    { value: 'Su Kaydırakları', label: t('contact.form.interest.slides', {defaultValue: 'Su Kaydırakları'}) },
+    { value: 'Dalga Havuzları', label: t('contact.form.interest.wave_pools', {defaultValue: 'Dalga Havuzları'}) },
+    { value: 'Lazy River', label: t('contact.form.interest.lazy_river', {defaultValue: 'Lazy River'}) },
+    { value: 'Çocuk Parkları', label: t('contact.form.interest.kids_parks', {defaultValue: 'Çocuk Parkları'}) },
+    { value: 'Özel Proje', label: t('contact.form.interest.custom_project', {defaultValue: 'Özel Proje'}) },
+    { value: 'Bakım & Servis', label: t('contact.form.interest.maintenance', {defaultValue: 'Bakım & Servis'}) },
+  ]
+
+  const translatedOffices = OFFICES.map(office => {
+    let name = office.name
+    let country = office.country
+    if (office.id === 'mugla') {
+      name = t('contact.offices.hq', {defaultValue: 'Merkez'})
+      country = t('common.turkey', {defaultValue: 'Türkiye'})
+    } else if (office.id === 'antalya') {
+      name = t('contact.offices.antalya', {defaultValue: 'Antalya Ofis'})
+      country = t('common.turkey', {defaultValue: 'Türkiye'})
+    } else if (office.id === 'valencia') {
+      name = t('contact.offices.europe', {defaultValue: 'Avrupa Ofis'})
+      country = t('common.spain', {defaultValue: 'İspanya'})
+    }
+    return {
+      ...office,
+      name,
+      country
+    }
+  })
 
   return (
     <main className="pt-20" style={{ backgroundColor: 'var(--th-bg)' }}>
@@ -172,14 +204,15 @@ export default function ContactPage({ setActivePage }) {
           <div className="grid lg:grid-cols-2 gap-16 items-end">
             <div>
               <p className="text-xs font-bold tracking-[0.3em] uppercase mb-4" style={{ color: 'var(--th-text)' }}>
-                İletişim
+                {t('contact.title', {defaultValue: 'İletişim'})}
               </p>
               <h1 className="text-5xl lg:text-6xl font-black text-white leading-[1.02]">
-                Sizinle<br />Tanışalım
+                {t('contact.hero_title', {defaultValue: 'Sizinle Tanışalım'}).split(' ')[0]}<br />
+                {t('contact.hero_title', {defaultValue: 'Sizinle Tanışalım'}).split(' ').slice(1).join(' ')}
               </h1>
             </div>
             <p className="text-white/50 text-lg leading-relaxed">
-              Yeni bir su parkı projesi geliştirmek, mevcut tesisinizi yenilemek veya ürünlerimiz hakkında detaylı bilgi almak için uzman ekibimizle iletişime geçebilirsiniz. Projenizin her aşamasında size destek olmaktan memnuniyet duyarız.
+              {t('contact.hero_desc', {defaultValue: 'Yeni bir su parkı projesi geliştirmek, mevcut tesisinizi yenilemek veya ürünlerimiz hakkında detaylı bilgi almak için uzman ekibimizle iletişime geçebilirsiniz. Projenizin her aşamasında size destek olmaktan memnuniyet duyarız.'})}
             </p>
           </div>
         </div>
@@ -192,9 +225,9 @@ export default function ContactPage({ setActivePage }) {
 
             {/* ── Form Bölümü (3/5) ── */}
             <div className="lg:col-span-3">
-              <h2 className="text-2xl font-black mb-2" style={{ color: 'var(--th-text)' }}>Proje Talebi</h2>
+              <h2 className="text-2xl font-black mb-2" style={{ color: 'var(--th-text)' }}>{t('contact.project_request', {defaultValue: 'Proje Talebi'})}</h2>
               <p className="text-sm mb-10" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 60%, transparent)' }}>
-                Tüm alanları eksiksiz doldurarak bize ulaşabilirsiniz.
+                {t('contact.form.sub_desc', {defaultValue: 'Tüm alanları eksiksiz doldurarak bize ulaşabilirsiniz.'})}
               </p>
 
               {sent ? (
@@ -214,42 +247,42 @@ export default function ContactPage({ setActivePage }) {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
-                  <h3 className="text-xl font-black mb-3" style={{ color: 'var(--th-text)' }}>Mesajınız Alındı</h3>
+                  <h3 className="text-xl font-black mb-3" style={{ color: 'var(--th-text)' }}>{t('contact.form.success_title', {defaultValue: 'Mesajınız Alındı'})}</h3>
                   <p className="text-sm leading-relaxed" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 60%, transparent)' }}>
-                    Talebiniz alınmıştır, uzman ekibimiz en kısa sürede size dönüş yapacaktır.
+                    {t('contact.form.success_desc', {defaultValue: 'Talebiniz alınmıştır, uzman ekibimiz en kısa sürede size dönüş yapacaktır.'})}
                   </p>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="flex flex-col gap-6">
                   {/* Ad - Soyad / E-posta */}
                   <div className="grid sm:grid-cols-2 gap-6">
-                    <Field label="Ad Soyad" name="name" placeholder="Örn. Ahmet Yılmaz"
+                    <Field label={t('contact.form.name', {defaultValue: 'Ad Soyad'})} name="name" placeholder="Ahmet Yılmaz"
                       value={form.name} onChange={handleChange} required />
-                    <Field label="E-posta" name="email" type="email" placeholder="ornek@sirketiniz.com"
+                    <Field label={t('contact.form.email', {defaultValue: 'E-posta'})} name="email" type="email" placeholder="ornek@sirketiniz.com"
                       value={form.email} onChange={handleChange} required />
                   </div>
 
                   {/* Telefon / Şirket */}
                   <div className="grid sm:grid-cols-2 gap-6">
-                    <Field label="Telefon" name="phone" type="tel" placeholder="+90 5XX XXX XX XX"
+                    <Field label={t('contact.form.phone', {defaultValue: 'Telefon'})} name="phone" type="tel" placeholder="+90 5XX XXX XX XX"
                       value={form.phone} onChange={handleChange} />
-                    <Field label="Şirket / Proje Adı" name="company" placeholder="Polgün Waterparks"
+                    <Field label={t('contact.form.company', {defaultValue: 'Şirket / Proje Adı'})} name="company" placeholder="Polgün Waterparks"
                       value={form.company} onChange={handleChange} />
                   </div>
 
                   {/* İlgi Alanı */}
                   <SelectField
-                    label="İlgilendiğiniz Ürün"
+                    label={t('contact.form.interest_label', {defaultValue: 'İlgilendiğiniz Ürün'})}
                     name="interest"
                     value={form.interest}
                     onChange={handleChange}
-                    options={['Su Kaydırakları', 'Dalga Havuzları', 'Lazy River', 'Çocuk Parkları', 'Özel Proje', 'Bakım & Servis']}
+                    options={interestOptions}
                   />
 
                   {/* Mesaj */}
                   <div className="flex flex-col gap-2">
                     <label htmlFor="message" className="text-xs font-semibold tracking-wide uppercase" style={{ color: 'color-mix(in srgb, var(--th-text) 60%, transparent)' }}>
-                      Mesajınız <span style={{ color: 'var(--th-polgun-blue)' }}>*</span>
+                      {t('contact.form.message', {defaultValue: 'Mesajınız'})} <span style={{ color: 'var(--th-polgun-blue)' }}>*</span>
                     </label>
                     <textarea
                       id="message"
@@ -257,7 +290,7 @@ export default function ContactPage({ setActivePage }) {
                       rows={6}
                       value={form.message}
                       onChange={handleChange}
-                      placeholder="Projeniz veya talebiniz hakkında detaylı bilgi verebilirsiniz..."
+                      placeholder={t('contact.form.message_placeholder', {defaultValue: 'Projeniz veya talebiniz hakkında detaylı bilgi verebilirsiniz...'})}
                       required
                       className="w-full px-5 py-3.5 bg-white border rounded-xl text-sm transition-all duration-200 resize-none
                         text-[var(--th-text)]
@@ -272,8 +305,8 @@ export default function ContactPage({ setActivePage }) {
                     <input type="checkbox" required
                       className="mt-0.5 w-4 h-4 rounded cursor-pointer shrink-0 border-[color-mix(in_srgb,var(--th-border)_30%,transparent)] accent-[var(--th-polgun-blue)]" />
                     <span className="text-xs leading-relaxed" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 60%, transparent)' }}>
-                      Müşteri - Tedarikçi{' '}
-                      <a href="/documents/kvkk/musteri-tedarikci-aydinlatma.doc" target="_blank" className="hover:underline" style={{ color: 'var(--th-polgun-blue)' }}>Aydınlatma Metni</a>'ni okudum ve onaylıyorum.
+                      {t('contact.form.kvkk_desc_prefix', {defaultValue: 'Müşteri - Tedarikçi'})}{' '}
+                      <a href="/documents/kvkk/musteri-tedarikci-aydinlatma.doc" target="_blank" className="hover:underline" style={{ color: 'var(--th-polgun-blue)' }}>{t('career.form.kvkk_link', {defaultValue: 'Aday Çalışan Aydınlatma Metni'})}</a>'{t('contact.form.kvkk_desc_suffix', {defaultValue: 'ni okudum ve onaylıyorum.'})}
                     </span>
                   </label>
 
@@ -290,7 +323,7 @@ export default function ContactPage({ setActivePage }) {
                     disabled={submitting}
                     className="w-full sm:w-auto self-start px-8 py-3.5 bg-[#22ABE6] hover:bg-[#1a8fc2] disabled:opacity-70 disabled:cursor-not-allowed text-white font-bold text-xs rounded-xl shadow-md shadow-blue-500/10 hover:shadow-lg transition-all duration-200 transform active:scale-[0.98] cursor-pointer"
                   >
-                    {submitting ? 'Gönderiliyor...' : 'Mesajı Gönder'}
+                    {submitting ? t('common.sending', {defaultValue: 'Gönderiliyor...'}) : t('contact.form.submit_btn', {defaultValue: 'Mesajı Gönder'})}
                   </button>
                 </form>
               )}
@@ -300,36 +333,36 @@ export default function ContactPage({ setActivePage }) {
             <div className="lg:col-span-2 max-w-[var(--layout-max)] flex flex-col gap-12">
               {/* İletişim Bilgileri */}
               <div className="bg-white rounded-2xl p-8 flex flex-col gap-8 border border-[color-mix(in_srgb,var(--th-border)_25%,transparent)]">
-                <h3 className="text-lg font-black" style={{ color: 'var(--th-text)' }}>İletişim Bilgileri</h3>
+                <h3 className="text-lg font-black" style={{ color: 'var(--th-text)' }}>{t('contact.info_title', {defaultValue: 'İletişim Bilgileri'})}</h3>
                 <ContactCard
                   icon="📍"
-                  title="Merkez Adres"
+                  title={t('contact.offices.hq_address_label', {defaultValue: 'Merkez Adres'})}
                   lines={['Salihpaşalar Mh. Köyiçi Sokak', '241 A Blok S.Room Menteşe/MUĞLA']}
                 />
                 <ContactCard
                   icon="📞"
-                  title="Telefon"
+                  title={t('contact.form.phone', {defaultValue: 'Telefon'})}
                   lines={['+90 (252) 225 58 88', '+90 (555) 800 34 76']}
                 />
                 <ContactCard
                   icon="✉️"
-                  title="E-posta"
+                  title={t('contact.form.email', {defaultValue: 'E-posta'})}
                   lines={['info@polgun.com']}
                 />
                 <ContactCard
                   icon="🕐"
-                  title="Çalışma Saatleri"
-                  lines={['Pzt–Cmt: 08:30–18:00', 'Pazar: Kapalı']}
+                  title={t('contact.hours_label', {defaultValue: 'Çalışma Saatleri'})}
+                  lines={[t('contact.hours_val1', {defaultValue: 'Pzt–Cmt: 08:30–18:00'}), t('contact.hours_val2', {defaultValue: 'Pazar: Kapalı'})]}
                 />
               </div>
 
               {/* Ofisler */}
               <div>
                 <h3 className="text-xs font-bold tracking-[0.2em] uppercase mb-5" style={{ color: 'color-mix(in srgb, var(--th-text) 40%, transparent)' }}>
-                  Ofislerimiz
+                  {t('contact.offices_title', {defaultValue: 'Ofislerimiz'})}
                 </h3>
                 <div className="flex flex-col gap-3">
-                  {OFFICES.map((office) => (
+                  {translatedOffices.map((office) => (
                     <div key={office.id}
                       className="flex flex-col gap-1 py-3.5 border-b last:border-0"
                       style={{ borderColor: 'color-mix(in srgb, var(--th-border) 35%, transparent)' }}
@@ -355,7 +388,7 @@ export default function ContactPage({ setActivePage }) {
         <div className="max-w-7xl max-w-[var(--layout-max)] mx-auto px-6 lg:px-12">
           {/* Ofis Sekmeleri */}
           <div className="flex flex-wrap gap-2 mb-6">
-            {OFFICES.map((office) => (
+            {translatedOffices.map((office) => (
               <button
                 key={office.id}
                 onClick={() => setActiveMap(office.id)}
@@ -388,7 +421,7 @@ export default function ContactPage({ setActivePage }) {
 
           {/* Harita */}
           <div className="overflow-hidden rounded-3xl" style={{ boxShadow: '0 24px 80px rgba(0,0,0,0.10)' }}>
-            {OFFICES.map((office) => (
+            {translatedOffices.map((office) => (
               <iframe
                 key={office.id}
                 src={office.mapSrc}

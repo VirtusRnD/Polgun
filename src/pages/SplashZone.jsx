@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, useNavigate } from 'react-router-dom' 
+import { Link, useNavigate } from 'react-router-dom'
 const images = [
 
     "Angel Fish.avif",
@@ -68,8 +68,11 @@ const images = [
     "Whale Tail.avif"
 ];
 
+import { useTranslation } from 'react-i18next';
+
 const SplashZone = () => {
     const navigate = useNavigate()
+    const { t } = useTranslation()
     return (
         <main className="pt-20" style={{ backgroundColor: 'var(--th-bg)' }}>
 
@@ -82,40 +85,40 @@ const SplashZone = () => {
                                 Splash<br />Zone
                             </h1>
                             <p className="text-white/50 text-lg leading-relaxed mt-4">
-                                Farklı temalar ile tasarlanmış su kaydırakları ve eğlence alanları
+                                {t('splashzone.desc')}
                             </p>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <section className='mt-20 px-10'>
-            <div className="grid grid-cols-3 gap-10">
-                {images.map((image, index) => (
-                    <div className="gallery-item" key={index}>
-                        <img src={`/src/assets/splashZone/${image}`} alt={image.replace('.avif', '')} />
-                        <div className="glass-effect grid grid-cols-2">
-                            <p>{image.replace('.avif', '')}</p>
-                            	<button
-											onClick={() => navigate('/contact')}
-											className="flex-1 py-3 text-white text-sm font-bold rounded-full transition-all duration-200 hover:-translate-y-0.5"
-											style={{ backgroundColor: 'var(--th-polgun-blue)', boxShadow: `0 0 32px var(--th-polgun-blue)66` }}
-											onMouseEnter={(e) =>
-											(e.currentTarget.style.backgroundColor =
-												'var(--th-primary)')
-											}
-											onMouseLeave={(e) =>
-											(e.currentTarget.style.backgroundColor =
-												'var(--th-polgun-blue)')
-											}
-										>
-											Teklif Al
-										</button>
-									
+            <section className='my-20 px-10'>
+                <div className="grid grid-cols-3 gap-10">
+                    {images.map((image, index) => (
+                        <div className="gallery-item" key={index}>
+                            <img src={`/src/assets/splashZone/${image}`} alt={image.replace('.avif', '')} />
+                            <div className="glass-effect grid grid-cols-2">
+                                <p>{image.replace('.avif', '')}</p>
+                                <button
+                                    onClick={() => navigate('/contact')}
+                                    className="flex-1 py-3 text-white text-sm font-bold rounded-full transition-all duration-200 hover:-translate-y-0.5"
+                                    style={{ backgroundColor: 'var(--th-polgun-blue)', boxShadow: `0 0 32px var(--th-polgun-blue)66` }}
+                                    onMouseEnter={(e) =>
+                                    (e.currentTarget.style.backgroundColor =
+                                        'var(--th-primary)')
+                                    }
+                                    onMouseLeave={(e) =>
+                                    (e.currentTarget.style.backgroundColor =
+                                        'var(--th-polgun-blue)')
+                                    }
+                                >
+                                    {t('common.quote')}
+                                </button>
+
+                            </div>
                         </div>
-                    </div>
-                ))}
-            </div>
+                    ))}
+                </div>
             </section>
         </main>
     );

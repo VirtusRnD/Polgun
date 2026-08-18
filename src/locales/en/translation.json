@@ -1,1 +1,832 @@
-{}
+{
+  "common": {
+    "all": "All",
+    "view_all": "View All",
+    "read_more": "Read More",
+    "loading": "Loading...",
+    "error": "An error occurred.",
+    "no_content": "No content found.",
+    "contact": "Contact",
+    "send": "Send",
+    "quote": "Get a Quote",
+    "learn_more": "Learn More",
+    "home": "Home",
+    "back": "Back",
+    "explore_projects": "Explore Our Projects",
+    "all_products": "All Products",
+    "sending": "Sending...",
+    "select": "Select",
+    "other": "Other",
+    "hq": "HQ",
+    "images": "Images",
+    "view": "View",
+    "turkey": "Turkey",
+    "spain": "Spain"
+  },
+  "nav": {
+    "services": "Our Services",
+    "planning": "Planning",
+    "design": "Design",
+    "engineering": "Engineering",
+    "installation": "Installation & Assembly",
+    "maintenance": "Maintenance & Repair",
+    "renovation": "Renovation",
+    "projects": "Our Projects",
+    "products": "Our Products",
+    "categories": "Product Categories",
+    "slides": "Water Slides",
+    "splash_tower": "Splash Tower",
+    "splash_zone": "Splash Zone",
+    "about": "About Us",
+    "team": "Our Team",
+    "history": "Our History",
+    "awards": "Awards & Patents",
+    "factories": "Our Factories",
+    "news": "News & Events",
+    "arge": "R&D",
+    "career": "Career"
+  },
+  "footer": {
+    "products": "Products",
+    "corporate": "Corporate",
+    "support": "Support",
+    "tech_support": "Technical Support",
+    "spare_parts": "Spare Parts",
+    "maintenance_services": "Maintenance Services",
+    "copyright": "© 2026 Polgün Waterparks. All rights reserved.",
+    "kvkk": "Data Protection",
+    "disclosure": "Clarification Text",
+    "cookie_policy": "Cookie Policy",
+    "terms": "Terms of Use"
+  },
+  "home": {
+    "hero_title": "We design more than just a waterpark.",
+    "lets_color": "LET'S COLOR THE WATER",
+    "hero_desc": "We design innovative water entertainment systems that inspire, excite and create unforgettable experiences.",
+    "eng_tag": "Innovative Design / Reliable Engineering",
+    "turnkey_tag": "Turnkey Projects / Worldwide Experience",
+    "categories_title": "Product Categories",
+    "categories_subtitle": "Solutions for every corner of the waterpark",
+    "slides_sub": "Tube, open & thrill",
+    "tower_sub": "Signature Themes",
+    "arge_sub": "Navatu & Savana",
+    "zone_sub": "Kids & Family",
+    "why_title": "Why Polgün?",
+    "why_subtitle": "Creating iconic waterpark experiences with 20+ years of expertise",
+    "why_desc": "Polgün is a strong solution partner managing design, engineering, production, and implementation processes of waterpark projects under a single roof. With more than twenty years of industry experience, high production capacity, and international project experience, we offer reliable, innovative, and sustainable solutions for projects of all sizes. Combining aesthetics, safety, quality, and operational efficiency, we design and build unique waterpark experiences that deliver long-term value for brands and investors.",
+    "why_pillars": {
+      "service": "Full Service",
+      "service_desc": "Design & production & assembly",
+      "countries": "70+ Countries",
+      "countries_desc": "Global experience",
+      "quality": "ISO Quality",
+      "quality_desc": "Certified manufacturing",
+      "sustainable": "Sustainable",
+      "sustainable_desc": "Eco-friendly design"
+    },
+    "refs_title": "References",
+    "refs_subtitle": "World-famous brands trust us",
+    "cta_tag": "Let's Design Your Project Together",
+    "cta_title": "We bring your dream waterpark to life",
+    "cta_desc": "We color lives in waterparks all around the world. Contact us for your next project.",
+    "cta_btn_quote": "Get a Quote Now",
+    "cta_btn_projects": "Examine Our Projects",
+    "engineering_tag": "Engineering",
+    "design_to_field": "Flawless, from Design to Field",
+    "tags": {
+      "iso": "ISO Certified",
+      "grp": "GRP Production",
+      "design3d": "3D Design",
+      "turnkey": "Turnkey"
+    }
+  },
+  "about": {
+    "title": "About Us",
+    "experience": "Over 20 Years of Waterpark Experience",
+    "desc": "Polgün is a strong solution partner managing design, engineering, production, and implementation processes of waterpark projects under a single roof. With more than twenty years of industry experience, high production capacity, and international project experience, we offer reliable, innovative, and sustainable solutions for projects of all sizes.",
+    "power_title": "A Growing Power on the International Stage",
+    "power_desc1": "Polgün started its operations in Muğla-Menteşe in 2002. Today, it continues its activities with 4 main production centers in Muğla, offices in Istanbul and Spain, the Antalya factory established in 2022, and the new Bursa investment.",
+    "power_desc2": "With its 120,000 m² integrated production infrastructure, fully automated machine park, and expert staff, it is one of the leading companies in the sector that can realize steel construction and polyester manufacturing under the same roof.",
+    "power_desc3": "With 425 employees and a 30-person R&D team, Polgün manages all processes from design to production and delivers turnkey projects.",
+    "arge_title": "Muğla's First and Only R&D Center",
+    "arge_desc1": "As Polgün Waterparks, the foundation of our R&D approach is to develop safe, innovative, sustainable, and high-value-added water entertainment technologies. Awarded the R&D Center status by Ministry approval in 2021, our center is the first and only R&D Center in Muğla, leading the way in original product development, localization, and technology production in our industry.",
+    "arge_desc2": "In our R&D Center, with our 30 full-time equivalent qualified R&D personnel serving as researchers, technicians, and support staff, we carry out new product design, engineering analysis, prototyping, testing, validation, production method development, and intellectual property processes with a holistic approach.",
+    "arge_desc3": "Our innovative product projects such as Navatu, Savanna, Monarch Butterfly, and Eclipse are among the important R&D outputs representing Polgün's design, engineering, and manufacturing power in the international market.",
+    "misyon": "Our Mission",
+    "misyon_desc": "To bring unique solutions to the water entertainment industry by developing high-quality, safe, cost-effective, and innovative R&D projects.",
+    "vizyon": "Our Vision",
+    "vizyon_desc": "To be a leading and pioneering R&D center shaping water entertainment technologies; to be a brand that produces technology, inspires the industry, and creates value for a sustainable future.",
+    "stats": {
+      "staff": "R&D Personnel",
+      "staff_desc": "Expert team of full-time equivalents",
+      "status": "R&D Center Status",
+      "status_desc": "Ministry approved, first and only in Muğla",
+      "projects": "Original Product Projects",
+      "projects_desc": "Navatu, Savanna, Eclipse, Monarch Butterfly",
+      "countries": "Countries",
+      "countries_desc": "Global project and market experience"
+    },
+    "production_title": "Our Production Infrastructure",
+    "production_subtitle": "From design to production, we manage all processes under one roof.",
+    "production_desc": "Polgün realizes the solutions developed for waterparks and entertainment systems with an integrated production infrastructure combining steel construction, mechanical processing, composite production, surface applications, and digital production technologies.",
+    "production_power": "We Reflect Our Production Power onto Our Projects.",
+    "production_power_desc": "By managing engineering, production, and quality control processes under the same roof, we develop reliable, high-quality solutions customized for each project.",
+    "btn_projects": "Examine Our Projects",
+    "production_sections": {
+      "cnc_mold": {
+        "title": "CNC Modeling & Mold Preparation",
+        "desc": "Our CNC-supported modeling and mold preparation processes allow precise creation of unique product geometries. This infrastructure supports the pre-production preparation processes of composite parts, surface quality, and shape accuracy."
+      },
+      "steel": {
+        "title": "Steel Processing & Cutting Technologies",
+        "desc": "We utilize CNC cutting, tube, and profile processing technologies in manufacturing steel construction systems. Parts prepared specifically for projects are processed with precision suitable for production and assembly, then transferred to the next manufacturing stage."
+      },
+      "mechanical": {
+        "title": "Mechanical Processing & Part Production",
+        "desc": "Fasteners, special mechanical parts, and functional components are processed in the production line according to the technical requirements of the projects. Our mechanical manufacturing infrastructure supports us in developing customized solutions for different product groups."
+      },
+      "composite": {
+        "title": "Composite Production & Surface Applications",
+        "desc": "Composite production processes carried out for water slides, themed products, and custom-designed parts are completed with surface preparation, paint applications, and topcoat processes. These processes support the aesthetic integrity, durability, and long-term usage performance of the products."
+      },
+      "digital": {
+        "title": "Digital Production & Process Control",
+        "desc": "Computer-aided production systems ensure that manufacturing processes progress in a planned, controlled, and repeatable manner. Thanks to digital tracking and operator control, precision, continuity, and process traceability in production are supported."
+      }
+    },
+    "factories": {
+      "mugla": {
+        "label": "Headquarters Production Facility",
+        "desc": "Main production and R&D center. The central facility houses steel construction, composite production, and digital manufacturing infrastructure."
+      },
+      "bursa": {
+        "label": "Bursa Production Facility",
+        "desc": "Polgün's northern production center. The facility handles steel parts fabrication and semi-finished product manufacturing."
+      },
+      "istanbul": {
+        "label": "Marmara Technopark",
+        "desc": "Marmara Technopark office where R&D and innovation studies are conducted. New product development and technical analysis center."
+      }
+    },
+    "story_title": "Designing the Future"
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "Holistic Project Management",
+    "desc": "Polgün provides high standards and professional services at every stage of waterpark projects. Managing all processes from planning to design, engineering to installation with its own expert staff, it delivers turnkey projects.",
+    "sections": {
+      "planlama": {
+        "title": "Planning",
+        "desc": "The success of every waterpark project begins with correct planning. Investor budget, land structure, target audience, and market dynamics are analyzed to design the most suitable layout plan and concept."
+      },
+      "tasarim": {
+        "title": "Design",
+        "desc": "We create exciting waterpark concepts with innovative and unique designs. Using 3D modeling technologies, we present the closest representation of what the project will look like when completed."
+      },
+      "muhendislik": {
+        "title": "Engineering",
+        "desc": "We design safe and durable structures in compliance with international standards. Structural analyses of steel construction and GRP (fiberglass) parts are conducted to ensure the highest safety and quality standards."
+      },
+      "montaj": {
+        "title": "Installation & Assembly",
+        "desc": "We complete site installations of projects as quickly as possible and smoothly with our expert assembly teams and site managers. We ensure full compliance with occupational health and safety rules."
+      },
+      "bakim": {
+        "title": "Maintenance & Repair",
+        "desc": "We offer regular maintenance services for waterparks to operate long-lastingly and safely. Pre-season checks, parts replacement, and technical support guarantee uninterrupted fun."
+      },
+      "yenileme": {
+        "title": "Renovation",
+        "desc": "We renovate existing waterparks with modern technologies and trendy designs. By adding new slides, kids play groups, and themed elements, we boost the attraction of the parks."
+      }
+    },
+    "steps": {
+      "step1": {
+        "title": "Product Design & Theming",
+        "desc": "Water slides, children's play groups, and water park attractions are custom designed according to the project concept and customer expectations. Color, pattern, theme, and visual details are developed in harmony with the product geometry to create unique designs that enhance the visitor experience."
+      },
+      "step2": {
+        "title": "Engineering & Projecting",
+        "desc": "Slide systems, steel support structures, mechanical and hydraulic infrastructures are projected in detail by engineering teams. Structural calculations, technical analyses, production drawings, and assembly documents are prepared in accordance with the project conditions."
+      },
+      "step3": {
+        "title": "Production",
+        "desc": "Fiberglass slide parts, steel constructions, models, molds, and project-specific components are prepared in Polgün's production facilities. Production processes are carried out based on dimensional accuracy, surface quality, durability, and traceability."
+      },
+      "step4": {
+        "title": "Project Management & Shipping",
+        "desc": "Design, production, packaging, logistics, and field processes are coordinated according to the project calendar. Products are prepared with correct coding and labeling systems, securely packaged, and delivered to the project site complete."
+      },
+      "step5": {
+        "title": "Montage & Commissioning",
+        "desc": "Slides, steel constructions, and related equipment are assembled by experienced field teams or under Polgün's technical supervision. After assembly, connections, sliding surfaces, water flow, and system functions are checked in detail."
+      }
+    },
+    "why": {
+      "service": {
+        "title": "Full Service",
+        "desc": "From design to assembly, maintenance to software at every step."
+      },
+      "countries": {
+        "title": "70+ Countries",
+        "desc": "Global project experience and local expertise."
+      },
+      "iso": {
+        "title": "ISO 9001",
+        "desc": "Certified production and quality processes."
+      },
+      "lifetime": {
+        "title": "Lifetime",
+        "desc": "Long-term technical support and spare parts warranty."
+      }
+    },
+    "process_tag": "Our Service Process",
+    "process_title": "We are with you every step of the way, from start to finish",
+    "cta_title": "Let's build your dream together",
+    "cta_desc": "No matter the project size, we are with you from day one to the last."
+  },
+  "projects": {
+    "title": "Our Projects",
+    "subtitle": "Our Worldwide References",
+    "desc": "Examine our signature projects that we have brought to life in more than 70 countries around the world.",
+    "filter_all": "All Projects",
+    "category": "Category",
+    "country": "Country",
+    "year": "Year",
+    "back_to_projects": "Back to All Projects",
+    "portfolio_tag": "Our Project Portfolio",
+    "stats": {
+      "completed": "Completed Project",
+      "countries": "Country",
+      "project_count": "projects"
+    },
+    "filters": {
+      "region": "Region",
+      "type": "Type"
+    },
+    "types": {
+      "outdoor": "Outdoor Waterpark",
+      "hotel": "Hotel & Waterpark",
+      "indoor": "Indoor Waterpark",
+      "resort": "Resort Holiday Village"
+    },
+    "cta_tag": "Next Project",
+    "cta_title": "Let your project be on this list.",
+    "cta_desc": "Contact our team of expert engineers and architects to design the waterpark or entertainment center of your dreams.",
+    "cta_btn": "Start the Project"
+  },
+  "products": {
+    "title": "Our Products",
+    "subtitle": "Innovative & Safe Water Play Systems",
+    "desc": "Discover our product range combining aesthetics, excitement, and the highest safety standards.",
+    "slides": {
+      "title": "Water Slides",
+      "desc": "Our open and closed tube water slides offering speed, excitement, and adrenaline together, suitable for all age groups."
+    },
+    "tower": {
+      "title": "Splash Tower",
+      "desc": "Interactive water play towers designed in different themes, where children and families can safely spend time."
+    },
+    "zone": {
+      "title": "Splash Zone",
+      "desc": "Areas where kids meet water safely with sprayers, water guns, and small play elements."
+    },
+    "categories": {
+      "family_slides": "Family Slides",
+      "fast_slide": "Fast Slides",
+      "jumbo_slides": "Jumbo Slides",
+      "racer_slides": "Racer Slides",
+      "classic_slides": "Classic Slides"
+    },
+    "specs": {
+      "tema": "Theme",
+      "aktivite": "Activity",
+      "yas_grubu": "Age Group",
+      "kapasite": "Capacity",
+      "odul": "Award",
+      "tur": "Type",
+      "gelistirme": "Development",
+      "kaydirak_yolu": "Slide Path",
+      "tescil": "Registration",
+      "malzeme": "Material"
+    },
+    "values": {
+      "2024": "2024",
+      "korsan": "Pirate",
+      "ozellestirilebilir": "Customizable",
+      "tum_yaslar": "All Ages",
+      "yuksek": "High",
+      "sualti": "Underwater",
+      "iaapa_brass_ring": "IAAPA Brass Ring",
+      "dalga_sistemi": "Wave System",
+      "ar_ge_merkezi": "R&D Center",
+      "4_adet": "4 Units",
+      "8_kisi_seans": "8 Persons/session",
+      "kompozit_celik": "Composite+Steel"
+    },
+    "badges": {
+      "imza_tema": "Signature Theme",
+      "ar_ge": "R&D"
+    },
+    "items": {
+      "pirate_theme": {
+        "sub": "Pirate Themed Water Slides",
+        "desc": "Polgün's signature theme, the Pirate Theme, is designed for children to sail in open seas full of pirates and have fun in this imaginary world."
+      },
+      "underwater_theme": {
+        "sub": "Underwater World Themed Structures",
+        "desc": "An interactive playground designed based on colorful corals and different species waiting to be discovered, sparking children's curiosity about the underwater world."
+      },
+      "navatu": {
+        "sub": "IAAPA Brass Ring Award-Winning Wave System",
+        "desc": "Navatu is an innovative waterpark system developed at Polgün's R&D Center and awarded the Brass Ring award at IAAPA Expo Orlando. It takes the natural wave experience to a new dimension."
+      },
+      "savana": {
+        "sub": "Multi-Lane Themed Water Slide",
+        "desc": "An innovative R&D project that combines four different slide paths in a single body. Savana offers its users a unique visual feast and sliding experience."
+      },
+      "big_hole": {
+        "desc": "Big Hole is a large-scale enclosed water slide designed to offer a shared family rafting experience. Its wide-section tube structure delivers an impressive sense of speed and movement, turning the classic enclosed slide concept into a fun, social, and unforgettable family adventure."
+      },
+      "big_raft": {
+        "desc": "Big Raft is a wide and comfortable family slide designed for shared use. Thanks to its wide sliding surface, families and groups of friends can experience speed and excitement together, combining social interaction with a delightful waterpark experience."
+      },
+      "family_slide": {
+        "desc": "Family Slide is a multi-person raft slide designed for families and groups to enjoy together. With its wide turns, smooth transitions, and rafts accommodating up to four people, it offers interactive fun and high-capacity entertainment."
+      },
+      "family_tornado": {
+        "desc": "Family Tornado brings the iconic funnel experience on a larger scale, allowing larger groups to experience the thrill together. Its wide funnel structure and strong oscillation movement offer high acceleration and an instantaneous feeling of weightlessness."
+      },
+      "mid_hole": {
+        "desc": "Mid Hole is an enclosed family-type water slide offering a wide and impressive riding experience. The enclosed tube design increases the sense of mystery and excitement throughout the journey, providing a comfortable and shared sliding experience."
+      },
+      "ufo_slide": {
+        "desc": "UFO Slide is a family-friendly raft water slide inspired by its unique elliptical form. The enclosed tube structure offers a smooth and comfortable slide for up to four riders, combining shared fun with high entertainment value."
+      },
+      "freefall": {
+        "desc": "Freefall is a high-adrenaline water slide designed to deliver the intense sensation of free fall. With its nearly vertical drop angle and continuous high-speed track, it offers a short but extremely impressive sliding experience."
+      },
+      "hydro_river": {
+        "desc": "Hydro River is an action-packed water slide that simulates a wild river adventure. Combining high-speed water currents, sharp turns, and sudden drops, it provides an exhilarating rafting experience for thrill-seekers."
+      },
+      "rocket_slide": {
+        "desc": "Rocket Slide is a high-speed capsule slide that launches riders with a trapdoor start. Delivering maximum acceleration and speed, it offers a thrilling gravity-defying ride for adrenaline lovers."
+      },
+      "uphill_slide": {
+        "desc": "Uphill Slide uses advanced water propulsion technology to push riders uphill against gravity. With its dynamic roller-coaster-like ups and downs, it delivers an innovative and exciting slide experience."
+      },
+      "kamikaze": {
+        "desc": "Kamikaze is a classic high-speed speed slide offering multiple drops and intense acceleration. Designed for thrill-seekers, it provides an adrenaline-pumping sliding experience with a clear view of the descent."
+      },
+      "babochka": {
+        "desc": "Babochka is a double-wing butterfly slide offering high-speed drops and bidirectional sliding action. With its unique wing-like geometry, it delivers a thrilling oscillation experience for riders."
+      },
+      "boomerango": {
+        "desc": "Boomerango is a high-thrill slide that drops riders down a steep launch path before sending them high up a vertical wall. After experiencing temporary weightlessness at the peak, riders slide backward into a splash pool."
+      },
+      "drone": {
+        "desc": "Drone Slide features a futuristic, enclosed design that combines light effects and sharp curves. It offers an interactive and mysterious journey, simulating a high-tech drone flight."
+      },
+      "magic_tray": {
+        "desc": "Magic Tray is a wide-section circular bowl slide that spins riders around its perimeter before dropping them through the center hole into a splash pool below."
+      },
+      "mini_boomerango": {
+        "desc": "Mini Boomerango brings the popular vertical wall experience on a smaller scale, making it accessible and fun for younger adventurers and families."
+      },
+      "space_rocket": {
+        "desc": "Space Rocket is a high-speed slide featuring a launch capsule and a loop path, delivering high G-forces and maximum thrill for extreme sports enthusiasts."
+      },
+      "super_bowl": {
+        "desc": "Super Bowl spins riders around a massive circular bowl before dropping them through a central exit, creating a suspenseful and highly entertaining slide experience."
+      },
+      "space_bowl": {
+        "desc": "Space Bowl combines an enclosed tube entry with a giant open bowl spin, offering a thrilling combination of speed and centrifugal force."
+      },
+      "tornado_slide": {
+        "desc": "Tornado Slide features a massive funnel that sucks rafts in, tossing them from side to side in a high-speed spiral before exiting into the splash pool."
+      },
+      "planeta": {
+        "desc": "Planeta is a themed multi-sensory slide combining visual projections, sound effects, and unique slide paths to create an out-of-this-world journey."
+      },
+      "body_racer": {
+        "desc": "Body Racer is a head-first mat racing slide with side-by-side lanes, allowing friends and family to compete in a high-speed dash to the finish line."
+      },
+      "multi_slide": {
+        "desc": "Multi Slide features multiple parallel lanes for side-by-side racing, offering high capacity and competitive fun for waterpark visitors."
+      },
+      "twister_slide": {
+        "desc": "Twister Slide consists of interlocking, twisting tubes that create a dizzying and fast-paced sliding experience."
+      },
+      "racer_slide": {
+        "desc": "Racer Slide is a competitive racing slide featuring enclosed loops and open racing lanes, allowing riders to track their positions throughout the race."
+      },
+      "spider_slide": {
+        "desc": "Spider Slide features a multi-legged design with branching slide paths, offering a mysterious and unique descent."
+      },
+      "aquatube": {
+        "desc": "Aquatube is a classic high-speed enclosed tube slide, offering a fast and smooth ride in total darkness or with translucent color rings."
+      },
+      "black_hole": {
+        "desc": "Black Hole is a popular enclosed slide featuring spectacular light and sound effects inside the dark tube, creating a sensory-rich adventure."
+      },
+      "compact_slide": {
+        "desc": "Compact Slide is a space-saving water slide featuring tight curves and quick drops, perfect for smaller parks or hotel pools."
+      },
+      "rafting_slide": {
+        "desc": "Rafting Slide offers a classic, moderate-speed open slide experience for single or double rafts, simulating a gentle river rafting trip."
+      },
+      "wide_slide": {
+        "desc": "Wide Slide features a broad, open lane that allows multiple riders to slide side-by-side without rafts, offering safe and simple fun for families."
+      },
+      "body_slide": {
+        "desc": "Body Slide is a classic open-air body slide featuring smooth curves and gentle drops, providing a fun and relaxing ride for all ages."
+      },
+      "slip_fly": {
+        "desc": "Slip & Fly features a ramp at the end of the slide that launches riders into the air before landing in a deep pool. It offers a spectacular, high-action attraction that is as fun to watch as it is to ride."
+      },
+      "canyon_slide": {
+        "desc": "Canyon Slide simulates a rafting journey through deep rocky canyons. With its high walls, sudden turns, and varied water flow, it offers an immersive and adventurous sliding experience for all ages."
+      },
+      "crazy_cone": {
+        "desc": "Crazy Cone features one or more conical shapes that create sudden swings and directional changes. As rafts enter the cone, they oscillate high on the walls before exiting back into the slide tube."
+      },
+      "hill_slide": {
+        "desc": "Hill Slide is a multi-bump slide that simulates a series of small hills, creating exciting airtime moments and speed variations throughout the descent."
+      },
+      "hydra_slide": {
+        "desc": "Hydra Slide features a multi-lane design with twisting paths, allowing multiple riders to slide simultaneously and race to the finish line."
+      }
+    },
+    "catalog_title": "Product Catalog",
+    "request_btn": "Product Inquiry",
+    "download_btn": "Download Catalog",
+    "custom_project_tag": "Custom Project",
+    "not_found_title": "Didn't find what you were looking for?",
+    "not_found_desc": "Explore our wide range of products to turn your dream waterpark into reality, and let's design the best solutions for your project together.",
+    "custom_request_btn": "Request Custom Solution"
+  },
+  "arge": {
+    "title": "R&D & Innovation",
+    "subtitle": "Future Water Entertainment Technologies",
+    "desc": "As the first approved R&D center in Muğla, Polgün R&D Center designs innovative technologies and products shaping the industry.",
+    "section1_title": "Our R&D Competence",
+    "section1_desc": "Using engineering software, flow analyses, and next-generation production methods, we optimize the performance and durability of our products.",
+    "section2_title": "Featured R&D Products",
+    "navatu_desc": "An innovative wave pool system that takes the natural wave experience to a new dimension.",
+    "savana_desc": "An innovative R&D project that combines four different slide paths in a single structure.",
+    "monarch_desc": "A custom design bringing the aesthetic form of butterfly wings together with water slide geometry, offering a high-speed and double-sided riding experience.",
+    "hero_desc": "At Polgün Waterparks, the foundation of our R&D approach is to develop safe, innovative, sustainable, and high-value-added water entertainment technologies.",
+    "innovative_title": "Innovative Products",
+    "continuous_title": "Continuous Development",
+    "projects_title": "Our R&D Projects",
+    "savana_sub": "Multi-Lane Themed Water Slide",
+    "misyon": "Our Mission",
+    "misyon_desc": "To bring unique solutions to the water entertainment industry by developing high-quality, safe, cost-effective, and innovative R&D projects; and to create pioneering products that represent our country in national and international markets. We aim to bring qualified knowledge, technology, and human resources to our sector by adhering to work schedules, engineering verifications, standards compliance, and sustainable production principles in our R&D processes.",
+    "vizyon": "Our Vision",
+    "vizyon_desc": "As Polgün Waterparks R&D Center, our vision is to be a leading and pioneering R&D center that shapes water entertainment technologies with its unique designs, innovative engineering solutions, strong production capability, and projects in compliance with international standards. We aim to become a brand recognized both nationally and internationally with projects we develop without compromising quality.",
+    "header_title": "R&D Center",
+    "p1": "Our center, which gained R&D Center status with Ministerial approval in 2021, pioneers original product development, localization, and technology production in our sector as the first and only R&D Center of Muğla.",
+    "p2": "In our R&D Center, we manage new product design, engineering analyses, prototyping, testing, validation, production method development, and intellectual property processes in a holistic approach with 30 full-time equivalent qualified R&D personnel working as researchers, technicians, and support staff.",
+    "p3": "We view nationalization and localization efforts for our country as a strategic responsibility; we develop solutions that reduce external dependency, are rapidly applicable, and directly respond to customer needs. In all our R&D processes from design to production, from analysis to field application, we adhere to the principles of safety, quality, compliance with international standards, and sustainability.",
+    "p4": "Projects developed at Polgün R&D Center add value to the sector in areas such as water savings, user safety, capacity increase, thematic experience, modular production, composite material technologies, and next-generation water slide geometries. Our innovative product projects such as Navatu, Savana, Monarch Butterfly, and Eclipse are among the important R&D outputs that represent Polgün's design, engineering, and production strength in the international market.",
+    "p5": "Our R&D activities are not limited to new product development alone. We also carry out continuous development work to improve the performance of existing products, improve production processes, reduce environmental impacts, increase material efficiency, and increase our competitive power in international markets. We strengthen our corporate knowledge base through academic collaborations, scientific publications, patent and design registration processes; and transform the outputs obtained into a sustainable innovation culture."
+  },
+  "career": {
+    "title": "Career at Polgün",
+    "subtitle": "Join the Polgün Family",
+    "desc": "Let's produce value together in international projects by taking part in our continuously growing, innovative, and dynamic team.",
+    "why_join": "Why Polgün?",
+    "form_title": "Application Form",
+    "name": "Your Name",
+    "email": "Your E-mail Address",
+    "phone": "Your Phone Number",
+    "position": "Position Applied For",
+    "cv": "Upload CV / Resume",
+    "message": "Your Message",
+    "submit": "Submit Application",
+    "form_success": "Your application has been received successfully. Thank you.",
+    "form_error": "An error occurred while sending the form. Please try again.",
+    "why_pillars": {
+      "projects": "International Projects",
+      "projects_desc": "Opportunity to work on exciting projects around the world.",
+      "innovation": "R&D and Innovation",
+      "innovation_desc": "A developmental work environment where innovative ideas are supported.",
+      "team": "Strong Team Spirit",
+      "team_desc": "A journey reaching from production to success together with our expert and dynamic team.",
+      "growth": "Career and Development",
+      "growth_desc": "We grow your career together with training, mentoring, and promotion opportunities.",
+      "environment": "Modern Workspace",
+      "environment_desc": "A comfortable, modern workspace with social amenities.",
+      "benefits": "Social Benefits",
+      "benefits_desc": "Social opportunities supporting the motivation and peace of mind of our employees."
+    },
+    "hero_desc": "Join us to take part in projects shaping the water entertainment industry, and be a part of a strong team spanning from production to design, R&D to field applications.",
+    "view_jobs": "View Open Positions",
+    "general_apply": "Apply Spontaneously",
+    "why_title": "Why Polgün?",
+    "open_positions": "Open Positions",
+    "jobs_subtitle": "Discover suitable positions for you.",
+    "filters": {
+      "dept": "Department",
+      "all_depts": "All Departments",
+      "location": "Location",
+      "all_locations": "All Locations",
+      "type": "Employment Type",
+      "all_types": "All Types"
+    },
+    "search_placeholder": "Search positions...",
+    "apply_btn": "Apply",
+    "no_jobs": "No open positions found matching your search criteria.",
+    "clear_filters": "Clear Filters",
+    "all_jobs_btn": "View All Positions",
+    "apply_desc": "If there is no suitable position, you can submit a general application, and we may contact you for future opportunities.",
+    "success_title": "Application Received!",
+    "success_desc": "Your career application has been recorded in our database. Our Human Resources team will evaluate your profile and contact you.",
+    "new_apply_btn": "Submit New Application",
+    "form": {
+      "city": "City of Residence",
+      "department": "Target Department",
+      "location_preference": "Workplace Location Preference",
+      "cover_letter": "Short Cover Letter (Optional)",
+      "cover_letter_placeholder": "Briefly describe your skills and career goals...",
+      "upload_cv": "Upload CV",
+      "remove_file": "Remove File",
+      "drag_file": "Drag your file here or select",
+      "kvkk_link": "Candidate Privacy Notice",
+      "read_approved": "read and approved.",
+      "cv_consent_label": "I allow my CV to be evaluated for other suitable positions that may arise outside of the current posting.",
+      "submit_btn": "Submit Application",
+      "security_label": "Your personal data is securely protected under data protection regulations."
+    },
+    "internship_programs": "Internship & Graduate Programs",
+    "internships_subtitle": "We train the professionals of the future.",
+    "internships": {
+      "apply_btn": "Apply for Internship"
+    },
+    "testimonials_title": "What Our Team Says",
+    "testimonials_subtitle": "What is it like to work at Polgün? Listen to their stories.",
+    "process_title": "Our Application Process",
+    "process_subtitle": "We evaluate our candidates with a transparent and fast process.",
+    "cta_title": "Your talent, our future.",
+    "cta_desc": "Apply today to join the Polgün family and take part in the projects of the future.",
+    "depts": {
+      "project_management": "Project Management",
+      "design": "Design",
+      "production": "Production",
+      "procurement": "Procurement",
+      "admin": "Administrative Affairs",
+      "intern": "Internship / Graduate"
+    },
+    "locations": {
+      "field": "Field (Construction Sites)",
+      "any": "No preference"
+    },
+    "why": {
+      "intl": {
+        "title": "International Projects",
+        "desc": "The opportunity to work on exciting projects around the world."
+      },
+      "innovation": {
+        "title": "R&D and Innovation",
+        "desc": "An open-minded work environment where innovative ideas are supported."
+      },
+      "team": {
+        "title": "Strong Team Spirit",
+        "desc": "A journey from production to success together with our expert and dynamic team."
+      },
+      "growth": {
+        "title": "Career and Development",
+        "desc": "We grow your career together with training, mentorship, and promotion opportunities."
+      },
+      "safety": {
+        "title": "Safe and Sustainable Work",
+        "desc": "Occupational health and safety is our priority, and our approach to environmentally sensitive production."
+      },
+      "diverse": {
+        "title": "Experience in Various Fields",
+        "desc": "Opportunity to gain experience in many fields from engineering to design, production to the field."
+      }
+    },
+    "process": {
+      "step1": {
+        "title": "Application",
+        "desc": "Complete your application online."
+      },
+      "step2": {
+        "title": "Pre-Evaluation",
+        "desc": "Your application is reviewed by the relevant department."
+      },
+      "step3": {
+        "title": "Interviews",
+        "desc": "Our process continues with HR and technical interviews."
+      },
+      "step4": {
+        "title": "Offer",
+        "desc": "An offer is presented to suitable candidates."
+      },
+      "step5": {
+        "title": "Welcome!",
+        "desc": "Our journey begins with your joining our team."
+      }
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Contact Us",
+    "desc": "You can contact us for your waterpark projects and all your questions.",
+    "form_title": "Contact Form",
+    "name": "Your Name",
+    "email": "Your E-mail Address",
+    "phone": "Your Phone Number",
+    "subject": "Subject",
+    "message": "Your Message",
+    "submit": "Submit",
+    "form_success": "Your message has been sent successfully. We will get back to you as soon as possible.",
+    "office": "Offices & Factories",
+    "address": "Address",
+    "phone_label": "Phone",
+    "email_label": "E-mail",
+    "offices": {
+      "hq": "Headquarters",
+      "antalya": "Antalya Office",
+      "spain": "Spain Sales Office",
+      "bursa": "Bursa Factory",
+      "hq_address_label": "Headquarters Address",
+      "europe": "Europe Office"
+    },
+    "hero_title": "Let's Get in Touch",
+    "hero_desc": "You can contact our expert team to develop a new waterpark project, renovate your existing facility, or get detailed information about our products.",
+    "project_request": "Project Inquiry",
+    "form": {
+      "sub_desc": "You can reach us by filling out all fields completely.",
+      "success_title": "Message Received",
+      "success_desc": "Your request has been received, our expert team will get back to you as soon as possible.",
+      "name": "Full Name",
+      "email": "Email",
+      "phone": "Phone",
+      "company": "Company / Project Name",
+      "interest_label": "Product of Interest",
+      "message": "Your Message",
+      "message_placeholder": "You can provide detailed information about your project or request...",
+      "kvkk_desc_prefix": "I have read and agree to the",
+      "kvkk_desc_suffix": " Customer - Supplier Clarification Text.",
+      "submit_btn": "Send Message",
+      "interest": {
+        "slides": "Water Slides",
+        "wave_pools": "Wave Pools",
+        "lazy_river": "Lazy River",
+        "kids_parks": "Kids Playgrounds",
+        "custom_project": "Custom Project",
+        "maintenance": "Maintenance & Service"
+      }
+    },
+    "info_title": "Contact Information",
+    "hours_label": "Working Hours",
+    "hours_val1": "Mon–Sat: 08:30–18:00",
+    "hours_val2": "Sunday: Closed",
+    "offices_title": "Our Offices"
+  },
+  "awards": {
+    "title": "Awards, Patents & Certificates",
+    "subtitle": "Awards and Corporate Visits",
+    "desc": "Polgün's global achievements in design, quality, and R&D.",
+    "awards_section": "🏆 Our Awards",
+    "visits_section": "🤝 Corporate Visits",
+    "no_awards": "No awards published yet.",
+    "cta_title": "Designing the Future with Innovative Projects.",
+    "cta_desc": "Polgün continues to develop innovative solutions that add value to the waterpark sector by combining design and engineering competence with R&D studies.",
+    "cta_btn": "Get in Touch",
+    "intellectual_property": "Intellectual Property",
+    "patents_title": "Design Registrations & Patents",
+    "quality_documents": "Certificates",
+    "quality_title": "Our Quality Certificates",
+    "visits": {
+      "egekaf": {
+        "title": "Polgün Visit within the Scope of EGEKAF",
+        "desc": "During the visit carried out within EGEKAF, Polgün's project models, product development approach, and sectoral experience were shared with participants."
+      },
+      "msku": {
+        "title": "Muğla Sıtkı Koçman University Visit",
+        "desc": "Within the scope of MSKU management's visit to Polgün, R&D, production, and design activities were examined on-site. University-industry cooperation was strengthened."
+      },
+      "title": "Corporate Visits"
+    },
+    "tesciller": {
+      "benelux": "Benelux Registration Final Decision",
+      "france": "France Registration Final Decision",
+      "spain": "Spain Registration Final Decision",
+      "egypt": "Egypt Registration Final Decision",
+      "greece": "Greece Registration Final Decision",
+      "form": "Polgün Application Form",
+      "fluorescent": "Fluorescent Lighting Patent Certificate",
+      "slides": "Water Slide Design Registration Approved"
+    },
+    "kalite": {
+      "iso9001": "Quality Management System",
+      "iso14001": "Environmental Management System",
+      "iso45001": "Occupational Health and Safety"
+    },
+    "patent_title": "Intellectual Property",
+    "cert_title": "Certificates",
+    "cert_subtitle": "Our Quality Documents"
+  },
+  "factories": {
+    "title": "Our Factories",
+    "desc": "We produce in our modern facilities reflecting our manufacturing power at the highest quality standards, in a manner respectful to nature and human beings.",
+    "names": {
+      "istanbul": "Istanbul",
+      "bursa": "Bursa",
+      "mugla": "Mugla",
+      "france": "France",
+      "saudi_arabia": "Saudi Arabia",
+      "serbia": "Serbia",
+      "turkey": "Turkey",
+      "spain": "Spain",
+      "egypt": "Egypt",
+      "hungary": "Hungary",
+      "south_korea": "South Korea",
+      "greece": "Greece"
+    }
+  },
+  "history": {
+    "title": "Our History",
+    "journey": "Polgün's Journey from 2002 to Present",
+    "milestones_title": "Milestones",
+    "growth_title": "Our Growth Story",
+    "facilities": "Our Facilities",
+    "growing_power": "Growing Manufacturing Power",
+    "desc1": "Polgün continuously carries out infrastructure investments to meet the increasing capacity need and advance its production capabilities; while creating new production areas for polyester, thermoplastic coating, and painting processes in its existing facilities in Muğla, it consolidates its growing operational power on an international scale by reaching a total of 120.000 m² production area with the new factory investment in Bursa.",
+    "desc2": "In order to carry R&D and Design competence even further, the application process for the Marmara Teknokent office has been completed and the contract has been signed, officializing the structure. This setup aims to strengthen university collaborations.",
+    "bold_summary": "Today, Polgün strengthens its position in the international market with its manufacturing setup in Turkey and sales office in Spain.",
+    "milestones": {
+      "2002": "Polgün started its operations in Muğla-Menteşe.",
+      "2008": "First international project delivery was accomplished.",
+      "2015": "Production capacity was increased and new facilities were commissioned.",
+      "2021": "Ministry-approved R&D Center status was obtained — Muğla's first and only R&D Center.",
+      "2022": "Antalya factory was established, Spain office was opened.",
+      "2024": "A total of 120,000 m² production area was reached with the Bursa factory investment.",
+      "2025": "University-industry cooperation was strengthened with the Marmara Teknokent office."
+    },
+    "milestones_tag": "Milestones"
+  },
+  "news": {
+    "title": "News & Events",
+    "subtitle": "News from Polgün",
+    "desc": "Current developments in our company, exhibitions we participate in, and events."
+  },
+  "team": {
+    "title": "Our Team",
+    "subtitle": "Polgün Family",
+    "desc": "Our management and technical staff who are experts in their fields, adding value to our projects.",
+    "board": "Board of Directors",
+    "technical_staff": "Technical Staff"
+  },
+  "splashtower": {
+    "title": "Splash Tower",
+    "subtitle": "Fun Water Play Towers",
+    "desc": "Safe and thematic interactive adventure areas where children meet water.",
+    "themes": {
+      "pirate": "Pirate Theme",
+      "jungle": "Jungle Theme",
+      "custom": "Custom Designs",
+      "underwater": {
+        "name": "Underwater Theme",
+        "location": "Antalya, Turkey",
+        "desc": "Oceans, seas, and the underwater world have always been a mysterious, exciting, and magical world for children."
+      },
+      "candy": {
+        "name": "Candy Theme",
+        "location": "Turkey",
+        "desc": "Inspired by the world of sweets and candies, Candy Theme brings joy to waterparks with its vibrant colors and playful design."
+      },
+      "carnaval": {
+        "name": "Carnaval Theme",
+        "location": "Turkey",
+        "desc": "Bring the joyful spirit of the carnival to life with the Polgün Carnival Splash Tower, a lively water playground designed to stimulate children's imagination."
+      },
+      "jurassic": {
+        "name": "Jurassic Theme",
+        "location": "Turkey",
+        "desc": "Bring the prehistoric world to life with the Polgün Jurassic Splash Tower, a themed water play area designed to spark curiosity, excitement, and adventure."
+      },
+      "galaxy": {
+        "name": "Galaxy Theme",
+        "location": "Turkey",
+        "desc": "Get ready for takeoff with the Polgün Galaxy Splash Tower, a themed water play area designed to take children on an exciting journey through the wonders of the universe."
+      }
+    },
+    "hero_subtitle": "Water slides and entertainment zones designed with various themes",
+    "theme_categories": "Theme Categories"
+  },
+  "splashzone": {
+    "title": "Splash Zone",
+    "subtitle": "Safe Children Water Play Areas",
+    "desc": "Kids' favorite fun spots with spray play elements, water guns, and tipping buckets."
+  },
+  "regions": {
+    "asia": "Asia",
+    "europe": "Europe",
+    "africa": "Africa",
+    "america": "America"
+  }
+}

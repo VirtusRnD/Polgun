@@ -1,32 +1,35 @@
 // ============================================================
 // FOOTER — Kurumsal, minimal, 4 kolonlu yapı
 // ============================================================
+import { useTranslation } from 'react-i18next';
 import polgunLogo from '../assets/logoPolgun.png';
 
-const FOOTER_LINKS = {
-  'Ürünler': [
-    { label: 'Su Kaydırakları', page: 'products' },
-    { label: 'Splash Tower', page: 'splash-tower' },
-    { label: 'Ar-Ge Ürünleri', page: 'products' },
-    { label: 'Splash Zone', page: 'products' },
-  ],
-  'Kurumsal': [
-    { label: 'Hakkımızda', page: 'about' },
-    { label: 'Projeler', page: 'projects' },
-    { label: 'Hizmetler', page: 'services' },
-    { label: 'Kariyer', page: 'career' },
-    { label: 'İletişim', page: 'contact' },
-    { label: 'KVKK', page: null, href: '/documents/kvkk/musteri-tedarikci-aydinlatma.doc' },
-  ],
-  'Destek': [
-    { label: 'İletişim', page: 'contact' },
-    { label: 'Teknik Destek', page: 'contact' },
-    { label: 'Yedek Parça', page: 'contact' },
-    { label: 'Bakım Hizmetleri', page: 'services' },
-  ],
-}
-
 export default function Footer({ setActivePage }) {
+  const { t } = useTranslation();
+
+  const FOOTER_LINKS = {
+    [t('footer.products')]: [
+      { label: t('nav.slides'), page: 'products' },
+      { label: t('nav.splash_tower'), page: 'splash-tower' },
+      { label: t('nav.arge') + ' ' + t('footer.products'), page: 'products' },
+      { label: t('nav.splash_zone'), page: 'products' },
+    ],
+    [t('footer.corporate')]: [
+      { label: t('nav.about'), page: 'about' },
+      { label: t('nav.projects'), page: 'projects' },
+      { label: t('nav.services'), page: 'services' },
+      { label: t('nav.career'), page: 'career' },
+      { label: t('common.contact'), page: 'contact' },
+      { label: t('footer.kvkk'), page: null, href: '/documents/kvkk/musteri-tedarikci-aydinlatma.doc' },
+    ],
+    [t('footer.support')]: [
+      { label: t('common.contact'), page: 'contact' },
+      { label: t('footer.tech_support'), page: 'contact' },
+      { label: t('footer.spare_parts'), page: 'contact' },
+      { label: t('footer.maintenance_services'), page: 'services' },
+    ],
+  };
+
   return (
     <footer className="text-white" style={{ backgroundColor: 'var(--th-polgun-blue)' }}>
 
@@ -129,12 +132,12 @@ export default function Footer({ setActivePage }) {
         {/* ── Alt Bar ── */}
         <div className="mt-16 pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-xs text-white">
-            © 2026 Polgün Waterparks. Tüm hakları saklıdır.
+            {t('footer.copyright')}
           </p>
           <div className="flex gap-6">
-            <a href="/documents/kvkk/calisan-adayi-aydinlatma.doc" target="_blank" className="text-xs text-white hover:text-white/60 transition-colors">Aydınlatma Metni</a>
-            <a href="/documents/kvkk/cerez-aydinlatma.doc" target="_blank" className="text-xs text-white hover:text-white/60 transition-colors">Çerez Politikası</a>
-            <a href="/documents/kvkk/musteri-tedarikci-aydinlatma.doc" target="_blank" className="text-xs text-white hover:text-white/60 transition-colors">Kullanım Koşulları</a>
+            <a href="/documents/kvkk/calisan-adayi-aydinlatma.doc" target="_blank" className="text-xs text-white hover:text-white/60 transition-colors">{t('footer.disclosure')}</a>
+            <a href="/documents/kvkk/cerez-aydinlatma.doc" target="_blank" className="text-xs text-white hover:text-white/60 transition-colors">{t('footer.cookie_policy')}</a>
+            <a href="/documents/kvkk/musteri-tedarikci-aydinlatma.doc" target="_blank" className="text-xs text-white hover:text-white/60 transition-colors">{t('footer.terms')}</a>
           </div>
         </div>
       </div>

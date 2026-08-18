@@ -1,79 +1,12 @@
-// ============================================================
-// AWARDS PAGE — Ödüller & Patent
-// ============================================================
 import { useState, useEffect } from 'react'
+import { useTranslation } from 'react-i18next'
 
 // Ziyaret görselleri
 import egekafVisit from '../assets/awards/egekaf-visit.avif'
 import mskuRectorVisit from '../assets/awards/msku-rector-visit.avif'
 
-/* Mock awards retained only as a reference. Awards must be published in CMS.
-const AWARDS = [
-  {
-    tag: 'IAAPA Expo Orlando – Brass Ring',
-    title: 'IAAPA Brass Ring Ödülü',
-    desc: 'Polgün bünyesindeki Navatu markası, IAAPA Expo Orlando\'da Brass Ring ödülüne layık görüldü. IAAPA Brass Ring Ödülleri, küresel eğlence endüstrisinin en prestijli ödülleri arasında yer almaktadır.',
-    img: iaapaBrassRing1,
-    img2: iaapaBrassRing2,
-  },
-  {
-    tag: 'RDCONF Ar-Ge ve İnovasyon Ödülleri 2025',
-    title: 'Eclipse ile En İnovatif Proje Ödülü',
-    desc: 'Polgün, Eclipse su kaydırağı projesiyle RDCONF Ar-Ge ve İnovasyon Ödülleri\'nde En İnovatif Proje kategorisinde üçüncülük elde etti. Eclipse; hidrodinamik akış kontrolü, geometri odaklı tasarım ve kullanıcı deneyimini bir araya getiren yeni nesil bir su kaydırağı yaklaşımını temsil etmektedir.',
-    img: rdconf2025,
-  },
-  {
-    tag: 'RDCONF 2024',
-    title: 'RDCONF Ar-Ge ve İnovasyon Başarısı',
-    desc: 'Polgün, Ar-Ge ve inovasyon odaklı ürün geliştirme çalışmalarıyla RDCONF 2024 kapsamında ödüle layık görüldü. Bu başarı; tasarım, mühendislik ve kullanıcı deneyimini bütüncül biçimde ele alan proje geliştirme yaklaşımımızı yansıtmaktadır.',
-    img: rdconf2024,
-  },
-  {
-    tag: 'Ege\'nin Enleri Ödül Töreni',
-    title: 'En İyi İş İnsanı Ödülü',
-    desc: 'Polgün\'ün üretim, yatırım, istihdam ve yenilik odaklı büyüme yaklaşımı; Ege\'nin Enleri Ödül Töreni\'nde En İyi İş İnsanı Ödülü ile takdir edildi. Ödül, şirketin bölgesel kalkınmaya ve sürdürülebilir değer üretimine sağladığı katkıyı temsil etmektedir.',
-    img: bestBusinessman,
-  },
-  {
-    tag: 'Tasarım ve İnovasyon Zirvesi',
-    title: 'Tasarım ve İnovasyon Alanında Takdir',
-    desc: 'Polgün, yenilikçi ürün geliştirme ve tasarım odaklı yaklaşımıyla Tasarım ve İnovasyon Zirvesi kapsamında ödüle layık görüldü. Bu başarı; Ar-Ge kültürümüzün, ekip çalışmasının ve özgün ürün geliştirme vizyonumuzun bir sonucudur.',
-    img: designInnovation,
-  },
-]
-*/
-
-const VISITS = [
-  {
-    title: 'EGEKAF Kapsamında Polgün Ziyareti',
-    desc: 'EGEKAF kapsamında gerçekleşen ziyarette; Polgün\'ün proje maketleri, ürün geliştirme yaklaşımı ve sektörel deneyimi katılımcılarla paylaşıldı. Ziyaret süresince tasarım ve üretim süreçleri hakkında bilgi verildi.',
-    img: egekafVisit,
-  },
-  {
-    title: 'Muğla Sıtkı Koçman Üniversitesi Ziyareti',
-    desc: 'Muğla Sıtkı Koçman Üniversitesi yönetiminin Polgün ziyareti kapsamında; şirketin proje geliştirme, Ar-Ge, üretim ve tasarım faaliyetleri yerinde incelendi. Ziyaret, üniversite-sanayi iş birliği ve bilgi paylaşımı açısından değerli bir buluşma niteliği taşıdı.',
-    img: mskuRectorVisit,
-  },
-]
-
-const TESCILLER = [
-  { title: 'Benelux Tescil Kesinlik Kararı', country: 'Benelux', file: '/documents/tesciller/Benelux-Tescil.pdf' },
-  { title: 'Fransa Tescil Kesinlik Kararı', country: 'Fransa', file: '/documents/tesciller/Fransa-Tescil.pdf' },
-  { title: 'İspanya Tescil Kesinlik Kararı', country: 'İspanya', file: '/documents/tesciller/Ispanya-Tescil.pdf' },
-  { title: 'Mısır Tescil Kesinlik Kararı', country: 'Mısır', file: '/documents/tesciller/Misir-Tescil.pdf' },
-  { title: 'Yunanistan Tescil Kesinlik Kararı', country: 'Yunanistan', file: '/documents/tesciller/Yunanistan-Tescil.pdf' },
-  { title: 'Polgün Başvuru Formu', country: 'Türkiye', file: '/documents/tesciller/Polgun-Basvuru-Formu.pdf' },
-  { title: 'Floresans Işıklandırma Patent Belgesi', country: 'Türkiye', file: '/documents/tesciller/Floresans-Patent.pdf' },
-  { title: 'Su Kaydırağı Tasarım Tescil Onaylı', country: 'Türkiye', file: '/documents/tesciller/Su-Kaydiragi-Tasarim-Tescil.pdf' },
-]
-
-const KALITE_BELGELERI = [
-  { title: 'ISO 9001:2015', desc: 'Kalite Yönetim Sistemi', file: '/documents/kalite/ISO-9001.pdf' },
-  { title: 'ISO 14001:2015', desc: 'Çevre Yönetim Sistemi', file: '/documents/kalite/ISO-14001.pdf' },
-  { title: 'ISO 45001:2018', desc: 'İş Sağlığı ve Güvenliği', file: '/documents/kalite/ISO-45001.pdf' },
-]
-
 export default function AwardsPage({ setActivePage }) {
+  const { t } = useTranslation()
   const [liveAwards, setLiveAwards] = useState([])
 
   useEffect(() => {
@@ -105,15 +38,45 @@ export default function AwardsPage({ setActivePage }) {
     return () => { cancelled = true }
   }, [])
 
+  const visits = [
+    {
+      title: t('awards.visits.egekaf.title'),
+      desc: t('awards.visits.egekaf.desc'),
+      img: egekafVisit,
+    },
+    {
+      title: t('awards.visits.msku.title'),
+      desc: t('awards.visits.msku.desc'),
+      img: mskuRectorVisit,
+    },
+  ]
+
+  const tesciller = [
+    { title: t('awards.tesciller.benelux'), country: t('factories.names.france', {defaultValue: 'Benelux'}), file: '/documents/tesciller/Benelux-Tescil.pdf' },
+    { title: t('awards.tesciller.france'), country: t('factories.names.france'), file: '/documents/tesciller/Fransa-Tescil.pdf' },
+    { title: t('awards.tesciller.spain'), country: t('factories.names.spain'), file: '/documents/tesciller/Ispanya-Tescil.pdf' },
+    { title: t('awards.tesciller.egypt'), country: t('factories.names.egypt'), file: '/documents/tesciller/Misir-Tescil.pdf' },
+    { title: t('awards.tesciller.greece'), country: t('factories.names.greece'), file: '/documents/tesciller/Yunanistan-Tescil.pdf' },
+    { title: t('awards.tesciller.form'), country: t('factories.names.turkey'), file: '/documents/tesciller/Polgun-Basvuru-Formu.pdf' },
+    { title: t('awards.tesciller.fluorescent'), country: t('factories.names.turkey'), file: '/documents/tesciller/Floresans-Patent.pdf' },
+    { title: t('awards.tesciller.slides'), country: t('factories.names.turkey'), file: '/documents/tesciller/Su-Kaydiragi-Tasarim-Tescil.pdf' },
+  ]
+
+  const kaliteBelgeleri = [
+    { title: 'ISO 9001:2015', desc: t('awards.kalite.iso9001'), file: '/documents/kalite/ISO-9001.pdf' },
+    { title: 'ISO 14001:2015', desc: t('awards.kalite.iso14001'), file: '/documents/kalite/ISO-14001.pdf' },
+    { title: 'ISO 45001:2018', desc: t('awards.kalite.iso45001'), file: '/documents/kalite/ISO-45001.pdf' },
+  ]
+
   return (
     <main className="pt-20" style={{ backgroundColor: 'var(--th-bg)' }}>
 
       {/* ── Hero ── */}
       <section className="py-28" style={{ backgroundColor: 'var(--th-primary)' }}>
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
-          <p className="text-xs font-bold tracking-[0.3em] uppercase mb-4" style={{ color: 'rgba(255,255,255,0.6)' }}>Başarılarımız</p>
+          <p className="text-xs font-bold tracking-[0.3em] uppercase mb-4" style={{ color: 'rgba(255,255,255,0.6)' }}>{t('awards.title')}</p>
           <h1 className="text-5xl lg:text-6xl font-black text-white leading-[1.02]">
-            Ödüller, Patentler<br />& Sertifikalar
+            {t('nav.awards')}
           </h1>
         </div>
       </section>
@@ -122,17 +85,17 @@ export default function AwardsPage({ setActivePage }) {
       <section className="py-28" style={{ backgroundColor: 'var(--th-surface)' }}>
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <div className="text-center mb-20">
-            <p className="text-xs font-bold tracking-[0.25em] uppercase mb-4" style={{ color: 'var(--th-polgun-blue)' }}>Başarılarımız</p>
-            <h2 className="text-4xl font-black" style={{ color: 'var(--th-text)' }}>Ödüller ve Ziyaretler</h2>
+            <p className="text-xs font-bold tracking-[0.25em] uppercase mb-4" style={{ color: 'var(--th-polgun-blue)' }}>{t('awards.title')}</p>
+            <h2 className="text-4xl font-black" style={{ color: 'var(--th-text)' }}>{t('awards.title')}</h2>
           </div>
 
           {/* Ödüller */}
           <div className="mb-20">
-            <h3 className="text-xl font-black mb-10" style={{ color: 'var(--th-text)' }}>🏆 Ödüllerimiz</h3>
+            <h3 className="text-xl font-black mb-10" style={{ color: 'var(--th-text)' }}>🏆 {t('awards.title')}</h3>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {liveAwards.length === 0 && (
                 <p className="sm:col-span-2 lg:col-span-3 text-center text-sm" style={{ color: 'var(--th-text-muted)' }}>
-                  Henüz yayınlanmış ödül bulunmuyor.
+                  {t('common.no_content')}
                 </p>
               )}
               {liveAwards.map((award, i) => (
@@ -155,9 +118,9 @@ export default function AwardsPage({ setActivePage }) {
 
           {/* Ziyaretler */}
           <div>
-            <h3 className="text-xl font-black mb-10" style={{ color: 'var(--th-text)' }}>🤝 Kurumsal Ziyaretler</h3>
+            <h3 className="text-xl font-black mb-10" style={{ color: 'var(--th-text)' }}>🤝 {t('awards.visits.title', {defaultValue: 'Kurumsal Ziyaretler'})}</h3>
             <div className="grid sm:grid-cols-2 gap-6">
-              {VISITS.map((visit, i) => (
+              {visits.map((visit, i) => (
                 <div key={i} className="rounded-2xl overflow-hidden group" style={{ backgroundColor: 'var(--th-bg)', border: '1px solid color-mix(in srgb, var(--th-border) 12%, transparent)', boxShadow: '0 4px 24px rgba(0,0,0,0.06)' }}>
                   <div className="overflow-hidden">
                     <img src={visit.img} alt={visit.title} className="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-105" />
@@ -173,14 +136,14 @@ export default function AwardsPage({ setActivePage }) {
 
           {/* CTA */}
           <div className="mt-20 text-center p-8 rounded-2xl" style={{ background: 'linear-gradient(135deg, var(--th-polgun-blue), var(--th-primary))' }}>
-            <h3 className="text-2xl font-black text-white mb-3">Yenilikçi Projelerle Geleceği Tasarlıyoruz.</h3>
-            <p className="text-white/70 mb-6 max-w-lg mx-auto">Polgün, tasarım ve mühendislik yetkinliğini Ar-Ge çalışmalarıyla birleştirerek su parkı sektörüne değer katan yenilikçi çözümler geliştirmeye devam etmektedir.</p>
+            <h3 className="text-2xl font-black text-white mb-3">{t('home.cta_title')}</h3>
+            <p className="text-white/70 mb-6 max-w-lg mx-auto">{t('about.production_power_desc')}</p>
             <button
               onClick={() => setActivePage('contact')}
               className="px-8 py-3.5 text-sm font-bold rounded-full transition-all duration-200 hover:-translate-y-0.5"
               style={{ backgroundColor: '#fff', color: 'var(--th-primary-darker)' }}
             >
-              İletişime Geç
+              {t('common.contact')}
             </button>
           </div>
         </div>
@@ -193,10 +156,10 @@ export default function AwardsPage({ setActivePage }) {
 
             {/* Tesciller */}
             <div>
-              <p className="text-xs font-bold tracking-[0.25em] uppercase mb-4" style={{ color: 'var(--th-polgun-blue)' }}>Fikri Mülkiyet</p>
-              <h2 className="text-3xl font-black mb-8" style={{ color: 'var(--th-text)' }}>Tasarım Tescilleri &amp; Patentler</h2>
+              <p className="text-xs font-bold tracking-[0.25em] uppercase mb-4" style={{ color: 'var(--th-polgun-blue)' }}>{t('awards.patent_title', {defaultValue: 'Fikri Mülkiyet'})}</p>
+              <h2 className="text-3xl font-black mb-8" style={{ color: 'var(--th-text)' }}>{t('nav.awards')}</h2>
               <div className="flex flex-col gap-3">
-                {TESCILLER.map((t, i) => (
+                {tesciller.map((t, i) => (
                   <a key={i} href={t.file} target="_blank" rel="noopener noreferrer"
                     className="flex items-center justify-between p-4 rounded-xl transition-all duration-200 hover:-translate-y-0.5 group"
                     style={{ backgroundColor: 'var(--th-surface)', border: '1px solid color-mix(in srgb, var(--th-border) 12%, transparent)' }}>
@@ -214,10 +177,10 @@ export default function AwardsPage({ setActivePage }) {
 
             {/* Kalite Belgeleri */}
             <div>
-              <p className="text-xs font-bold tracking-[0.25em] uppercase mb-4" style={{ color: 'var(--th-polgun-blue)' }}>Sertifikalar</p>
-              <h2 className="text-3xl font-black mb-8" style={{ color: 'var(--th-text)' }}>Kalite Belgelerimiz</h2>
+              <p className="text-xs font-bold tracking-[0.25em] uppercase mb-4" style={{ color: 'var(--th-polgun-blue)' }}>{t('awards.cert_title', {defaultValue: 'Sertifikalar'})}</p>
+              <h2 className="text-3xl font-black mb-8" style={{ color: 'var(--th-text)' }}>{t('awards.cert_subtitle', {defaultValue: 'Kalite Belgelerimiz'})}</h2>
               <div className="flex flex-col gap-4">
-                {KALITE_BELGELERI.map((kb, i) => (
+                {kaliteBelgeleri.map((kb, i) => (
                   <a key={i} href={kb.file} target="_blank" rel="noopener noreferrer"
                     className="flex items-center gap-5 p-6 rounded-2xl transition-all duration-200 hover:-translate-y-0.5 group"
                     style={{ backgroundColor: 'var(--th-surface)', border: '1px solid color-mix(in srgb, var(--th-border) 12%, transparent)', boxShadow: '0 4px 20px rgba(0,0,0,0.05)' }}>

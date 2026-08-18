@@ -3,6 +3,7 @@
 // ============================================================
 import { useState, useEffect, useRef } from 'react'
 import {Link, useNavigate} from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 // ── Proje Görselleri ──────────────────────────────────────────────────────────
 // Dev: Vite serves src/assets at /src/assets. Prod: static files are served from /img (copied from src/assets).
 const ASSETS_URL = import.meta.env.DEV ? '/src/assets' : '/img';
@@ -1844,16 +1845,145 @@ function ProjectSliderModal({ project, isOpen, onClose }) {
 }
 
 export default function ProjectsPage({ setActivePage }) {
+  const { t, i18n } = useTranslation()
   const navigate = useNavigate()
   const [region, setRegion] = useState('Tümü')
   const [type, setType] = useState('Tümü')
   const [selectedProject, setSelectedProject] = useState(null)
   const [sliderOpen, setSliderOpen] = useState(false)
 
+  const regionTranslationMap = {
+    'Tümü': t('common.all'),
+    'Asya': t('regions.asia', {defaultValue: 'Asya'}),
+    'Avrupa': t('regions.europe', {defaultValue: 'Avrupa'}),
+    'Afrika': t('regions.africa', {defaultValue: 'Afrika'}),
+    'Amerika': t('regions.america', {defaultValue: 'Amerika'})
+  }
+
+  const typeTranslationMap = {
+    'Tümü': t('common.all'),
+    'Açık Alan Su Parkı': t('projects.types.outdoor', {defaultValue: 'Açık Alan Su Parkı'}),
+    'Otel & Su Parkı': t('projects.types.hotel', {defaultValue: 'Otel & Su Parkı'}),
+    'Kapalı Alan Su Parkı': t('projects.types.indoor', {defaultValue: 'Kapalı Alan Su Parkı'}),
+    'Resort Tatil Köyü': t('projects.types.resort', {defaultValue: 'Resort Tatil Köyü'})
+  }
+
+  const locationTranslations = {
+    // Cities
+    'girit': { tr: 'Girit', en: 'Crete', es: 'Creta', ru: 'Крит', ar: 'كريت' },
+    'hanya': { tr: 'Hanya', en: 'Chania', es: 'La Canea', ru: 'Ханья', ar: 'خانية' },
+    'kefalonya': { tr: 'Kefalonya', en: 'Kefalonia', es: 'Cefalonia', ru: 'Кефалония', ar: 'كفالونيا' },
+    'moravya': { tr: 'Moravya', en: 'Moravia', es: 'Moravia', ru: 'Моравия', ar: 'مورافيا' },
+    'rethymno': { tr: 'Rethymno', en: 'Rethymno', es: 'Rétino', ru: 'Ретимно', ar: 'ريثيمنو' },
+    'selangor': { tr: 'Selangor', en: 'Selangor', es: 'Selangor', ru: 'Селангор', ar: 'سيلانجور' },
+    'timisoara': { tr: 'Timișoara', en: 'Timișoara', es: 'Timișoara', ru: 'Тимишоара', ar: 'تيميشوارا' },
+    'benidorm': { tr: 'Benidorm', en: 'Benidorm', es: 'Benidorm', ru: 'Бенидорм', ar: 'بينيدورم' },
+    'tenerife': { tr: 'Tenerife', en: 'Tenerife', es: 'Tenerife', ru: 'Тенерифе', ar: 'تينيريفي' },
+    'gran canaria': { tr: 'Gran Canaria', en: 'Gran Canaria', es: 'Gran Canaria', ru: 'Гран-Канария', ar: 'جران كناريا' },
+    'mallorca': { tr: 'Mallorca', en: 'Mallorca', es: 'Mallorca', ru: 'Мальорка', ar: 'مايوركا' },
+    'torremolinos': { tr: 'Torremolinos', en: 'Torremolinos', es: 'Torremolinos', ru: 'Торремолинос', ar: 'توريمولينوس' },
+    'saint-cyprien': { tr: 'Saint-Cyprien', en: 'Saint-Cyprien', es: 'Saint-Cyprien', ru: 'Сен-Сиприен', ar: 'سان سيبريان' },
+    'torreilles': { tr: 'Torreilles', en: 'Torreilles', es: 'Torreilles', ru: 'Торрей', ar: 'توريي' },
+    'saint-jean-de-monts': { tr: 'Saint-Jean-de-Monts', en: 'Saint-Jean-de-Monts', es: 'Saint-Jean-de-Monts', ru: 'Сен-Жан-де-Мон', ar: 'سان جان دي مونتس' },
+    'marsa alam': { tr: 'Marsa Alam', en: 'Marsa Alam', es: 'Marsa Alam', ru: 'Марса-Алам', ar: 'مرسى علم' },
+    'hurghada': { tr: 'Hurghada', en: 'Hurghada', es: 'Hurghada', ru: 'Хургада', ar: 'الغردقة' },
+    'sharm el sheikh': { tr: 'Sharm El Sheikh', en: 'Sharm El Sheikh', es: 'Sharm El Sheikh', ru: 'Шарм-эль-Шейх', ar: 'شرم الشيخ' },
+    'bigacs': { tr: 'Bogács', en: 'Bogács', es: 'Bogács', ru: 'Богач', ar: 'بوغاتش' },
+    'gyula': { tr: 'Gyula', en: 'Gyula', es: 'Gyula', ru: 'Дьюла', ar: 'جيولا' },
+    'nyiregyhaza': { tr: 'Nyíregyháza', en: 'Nyíregyháza', es: 'Nyíregyháza', ru: 'Ньиредьхаза', ar: 'نيريغيهازا' },
+    'sarvar': { tr: 'Sárvár', en: 'Sárvár', es: 'Sárvár', ru: 'Шарвар', ar: 'شارفار' },
+    'zalakaros': { tr: 'Zalakaros', en: 'Zalakaros', es: 'Zalakaros', ru: 'Залакарош', ar: 'زالاكاروس' },
+    'jakovo': { tr: 'Jakovo', en: 'Jakovo', es: 'Jakovo', ru: 'Яково', ar: 'ياكوفو' },
+    'novi sad': { tr: 'Novi Sad', en: 'Novi Sad', es: 'Novi Sad', ru: 'Нови-Сад', ar: 'نوفي ساد' },
+    'vrnjacka banja': { tr: 'Vrnjačka Banja', en: 'Vrnjačka Banja', es: 'Vrnjačka Banja', ru: 'Врнячка-Баня', ar: 'فرنياتشكا بانيا' },
+    'jeddah': { tr: 'Cidde', en: 'Jeddah', es: 'Yeda', ru: 'Джидда', ar: 'جدة' },
+    'riyadh': { tr: 'Riyad', en: 'Riyadh', es: 'Riad', ru: 'Эр-Рияд', ar: 'الرياض' },
+    'doha': { tr: 'Doha', en: 'Doha', es: 'Doha', ru: 'Доха', ar: 'الدوحة' },
+    'seoul': { tr: 'Seul', en: 'Seoul', es: 'Seúl', ru: 'Сеул', ar: 'سيول' },
+    'almaty': { tr: 'Almatı', en: 'Almaty', es: 'Almatí', ru: 'Алматы', ar: 'ألماتي' },
+    'tashkent': { tr: 'Taşkent', en: 'Tashkent', es: 'Taskent', ru: 'Ташкент', ar: 'طشقند' },
+    'baku': { tr: 'Bakü', en: 'Baku', es: 'Bakú', ru: 'Баку', ar: 'باكو' },
+    'budva': { tr: 'Budva', en: 'Budva', es: 'Budva', ru: 'Будва', ar: 'بودفا' },
+    'zakopane': { tr: 'Zakopane', en: 'Zakopane', es: 'Zakopane', ru: 'Закопане', ar: 'زاكوباني' },
+    'senec': { tr: 'Senec', en: 'Senec', es: 'Senec', ru: 'Сенец', ar: 'سينيتس' },
+    'chisinau': { tr: 'Kişinev', en: 'Chisinau', es: 'Chisinau', ru: 'Кишинёв', ar: 'كيشيناو' },
+    'tbilisi': { tr: 'Tiflis', en: 'Tbilisi', es: 'Tiflis', ru: 'Тбилиси', ar: 'تبليسي' },
+    'kyrenia': { tr: 'Girne', en: 'Kyrenia', es: 'Kyrenia', ru: 'Кирения', ar: 'كيرينيا' },
+    'oran': { tr: 'Vahran', en: 'Oran', es: 'Orán', ru: 'Оран', ar: 'وهران' },
+    'marrakech': { tr: 'Marakeş', en: 'Marrakech', es: 'Marrakech', ru: 'Марракеш', ar: 'مراكش' },
+    'sousse': { tr: 'Susa', en: 'Sousse', es: 'Susa', ru: 'Сус', ar: 'سوسة' },
+    'antalya': { tr: 'Antalya', en: 'Antalya', es: 'Antalya', ru: 'Анталья', ar: 'أنطاليا' },
+    'mugla': { tr: 'Muğla', en: 'Muğla', es: 'Muğla', ru: 'Мугла', ar: 'موغla' },
+    'izmir': { tr: 'İzmir', en: 'Izmir', es: 'Esmirna', ru: 'Измир', ar: 'إزمير' },
+    'bodrum': { tr: 'Bodrum', en: 'Bodrum', es: 'Bodrum', ru: 'Бодрум', ar: 'بودروم' },
+    'fethiye': { tr: 'Fethiye', en: 'Fethiye', es: 'Fethiye', ru: 'Фетхие', ar: 'فتحية' },
+    // Countries
+    'türkiye': { tr: 'Türkiye', en: 'Turkey', es: 'Turquía', ru: 'Турция', ar: 'تركيا' },
+    'romanya': { tr: 'Romanya', en: 'Romania', es: 'Rumania', ru: 'Румыния', ar: 'رومانيا' },
+    'yunanistan': { tr: 'Yunanistan', en: 'Greece', es: 'Grecia', ru: 'Греция', ar: 'اليونان' },
+    'fransa': { tr: 'Fransa', en: 'France', es: 'Francia', ru: 'Франция', ar: 'فرنسا' },
+    'malezya': { tr: 'Malezya', en: 'Malaysia', es: 'Malasia', ru: 'Малайзия', ar: 'ماليزيا' },
+    'mısır': { tr: 'Mısır', en: 'Egypt', es: 'Egipto', ru: 'Египет', ar: 'مصر' },
+    'macaristan': { tr: 'Macaristan', en: 'Hungary', es: 'Hungría', ru: 'Венгрия', ar: 'المجر' },
+    'bulgaristan': { tr: 'Bulgaristan', en: 'Bulgaria', es: 'Bulgaria', ru: 'Богария', ar: 'بلغاريا' },
+    'sırbistan': { tr: 'Sırbistan', en: 'Serbia', es: 'Serbia', ru: 'Сербия', ar: 'صربيا' },
+    'katar': { tr: 'Katar', en: 'Qatar', es: 'Qatar', ru: 'Катар', ar: 'قطر' },
+    'vietnam': { tr: 'Vietnam', en: 'Vietnam', es: 'Vietnam', ru: 'Вьетнам', ar: 'فيتنام' },
+    'özbekistan': { tr: 'Özbekistan', en: 'Uzbekistan', es: 'Uzbekistán', ru: 'Узбекистан', ar: 'أوزبكستان' },
+    'güney kore': { tr: 'Güney Kore', en: 'South Korea', es: 'Corea del Sur', ru: 'Южная Корея', ar: 'كوريا الجنوبية' },
+    'kuzey kıbrıs': { tr: 'Kuzey Kıbrıs', en: 'Northern Cyprus', es: 'Chipre del Norte', ru: 'Северный Кипр', ar: 'قبرص الشمالية' },
+    'kazakistan': { tr: 'Kazakistan', en: 'Kazakhstan', es: 'Kazajistán', ru: 'Казахстан', ar: 'كازاخستان' },
+    'karadağ': { tr: 'Karadağ', en: 'Montenegro', es: 'Montenegro', ru: 'Черногория', ar: 'الجبل الأسود' },
+    'curaçao': { tr: 'Curaçao', en: 'Curaçao', es: 'Curaçao', ru: 'Кюрасао', ar: 'كوراساو' },
+    'irak': { tr: 'Irak', en: 'Iraq', es: 'Irak', ru: 'Ирак', ar: 'العراق' },
+    'azerbaycan': { tr: 'Azerbaycan', en: 'Azerbaijan', es: 'Azerbaiyán', ru: 'Азербайджан', ar: 'أذربيجان' },
+    'polonya': { tr: 'Polonya', en: 'Poland', es: 'Polonia', ru: 'Польша', ar: 'بولندا' },
+    'slovakya': { tr: 'Slovakya', en: 'Slovakia', es: 'Eslovaquia', ru: 'Словакия', ar: 'سلوفاкия' },
+    'moldova': { tr: 'Moldova', en: 'Moldova', es: 'Moldova', ru: 'Молдова', ar: 'مولدوفا' },
+    'gürcistan': { tr: 'Gürcistan', en: 'Georgia', es: 'Georgia', ru: 'Грузия', ar: 'جورجيا' },
+    'cezayir': { tr: 'Cezayir', en: 'Algeria', es: 'Argelia', ru: 'Алжир', ar: 'الجزائر' },
+    'fas': { tr: 'Fas', en: 'Morocco', es: 'Marruecos', ru: 'Марокко', ar: 'المغرب' },
+    'tunus': { tr: 'Tunus', en: 'Tunisia', es: 'Túnez', ru: 'Тунис', ar: 'تونس' },
+    'ispanya': { tr: 'İspanya', en: 'Spain', es: 'España', ru: 'Испания', ar: 'إسبانيا' }
+  }
+
+  const translateLocation = (locStr) => {
+    if (!locStr) return '';
+    const currentLangCode = i18n.language || 'tr';
+    const cleanStr = locStr.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().trim();
+    
+    // Split by comma
+    const parts = locStr.split(', ');
+    const translatedParts = parts.map(part => {
+      // Normalize part to matching key (removing accents/diacritics to map correctly)
+      const key = part.trim().toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+      if (locationTranslations[key] && locationTranslations[key][currentLangCode]) {
+        return locationTranslations[key][currentLangCode];
+      }
+      return part;
+    });
+    
+    let result = translatedParts.join(', ');
+    if (currentLangCode !== 'tr' && parts.length === 1 && (cleanStr === 'antalya' || cleanStr === 'mugla' || cleanStr === 'izmir' || cleanStr === 'bodrum' || cleanStr === 'fethiye')) {
+      // If it is just a Turkish city, add Turkey suffix in non-Turkish languages
+      result += `, ${locationTranslations['türkiye'][currentLangCode]}`;
+    }
+    return result;
+  }
+
+  const getProjectTranslated = (p) => {
+    return {
+      ...p,
+      region: regionTranslationMap[p.region] || p.region,
+      type: typeTranslationMap[p.type] || p.type,
+      location: translateLocation(p.location)
+    }
+  }
+
   const filtered = PROJECTS.filter((p) =>
     (region === 'Tümü' || p.region === region) &&
     (type === 'Tümü' || p.type === type)
-  )
+  ).map(getProjectTranslated)
 
   return (
     <main className="pt-20" style={{ backgroundColor: 'var(--th-bg)' }}>
@@ -1864,25 +1994,24 @@ export default function ProjectsPage({ setActivePage }) {
           <div className="grid lg:grid-cols-2 gap-16 items-end">
             <div>
               <p className="text-xs font-bold tracking-[0.3em] uppercase mb-4" style={{ color: 'var(--th-text)' }}>
-                Proje Portföyümüz
+                {t('projects.portfolio_tag', {defaultValue: 'Proje Portföyümüz'})}
               </p>
               <h1 className="text-5xl lg:text-6xl font-black text-white leading-[1.02]">
-                Dünyaya<br />İz Bırakan<br />Projeler
+                {t('projects.title')}
               </h1>
             </div>
             <div>
               <p className="text-white/50 text-lg leading-relaxed mb-6">
-                Konsept aşamasından anahtar teslimine kadar tamamladığımız global projeler.
-                Dünya çapında imza attığımız su parkı ve eğlence merkezleri.
+                {t('projects.desc')}
               </p>
               <div className="flex gap-8 flex-wrap">
                 <div>
                   <p className="text-4xl font-black text-white">3000+</p>
-                  <p className="text-[11px] text-white/40 tracking-wider uppercase mt-1">Tamamlanan Proje</p>
+                  <p className="text-[11px] text-white/40 tracking-wider uppercase mt-1">{t('projects.stats.completed', {defaultValue: 'Tamamlanan Proje'})}</p>
                 </div>
                 <div>
                   <p className="text-4xl font-black text-white">70+</p>
-                  <p className="text-[11px] text-white/40 tracking-wider uppercase mt-1">Ülke</p>
+                  <p className="text-[11px] text-white/40 tracking-wider uppercase mt-1">{t('projects.stats.countries', {defaultValue: 'Ülke'})}</p>
                 </div>
                 
               </div>
@@ -1897,31 +2026,31 @@ export default function ProjectsPage({ setActivePage }) {
         <div className="max-w-[var(--layout-max)] mx-auto px-6 lg:px-14 py-3.5 flex flex-wrap gap-4 items-center">
           <div className="flex items-center gap-2 flex-wrap">
             <span className="text-[10px] font-black tracking-widest uppercase shrink-0"
-              style={{ color: 'color-mix(in srgb,var(--th-text-muted) 50%,transparent)' }}>Bölge</span>
+              style={{ color: 'color-mix(in srgb,var(--th-text-muted) 50%,transparent)' }}>{t('projects.filters.region', {defaultValue: 'Bölge'})}</span>
             {REGIONS.map((r) => (
               <button key={r} onClick={() => setRegion(r)}
                 className="px-3.5 py-1.5 rounded-full text-xs font-semibold transition-all duration-200"
                 style={region === r ? { backgroundColor: 'var(--th-primary)', color: '#fff' } : { color: 'var(--th-text-muted)' }}
                 onMouseEnter={(e) => { if (region !== r) e.currentTarget.style.backgroundColor = 'color-mix(in srgb,var(--th-primary) 10%,transparent)' }}
                 onMouseLeave={(e) => { if (region !== r) e.currentTarget.style.backgroundColor = 'transparent' }}
-              >{r}</button>
+              >{regionTranslationMap[r] || r}</button>
             ))}
           </div>
           <div className="w-px h-5 hidden sm:block" style={{ backgroundColor: 'color-mix(in srgb,var(--th-border) 20%,transparent)' }} />
           <div className="flex items-center gap-2 flex-wrap">
             <span className="text-[10px] font-black tracking-widest uppercase shrink-0"
-              style={{ color: 'color-mix(in srgb,var(--th-text-muted) 50%,transparent)' }}>Tür</span>
+              style={{ color: 'color-mix(in srgb,var(--th-text-muted) 50%,transparent)' }}>{t('projects.filters.type', {defaultValue: 'Tür'})}</span>
             {TYPES.map((t) => (
               <button key={t} onClick={() => setType(t)}
                 className="px-3.5 py-1.5 rounded-full text-xs font-semibold transition-all duration-200"
                 style={type === t ? { backgroundColor: 'var(--th-polgun-blue)', color: '#fff' } : { color: 'var(--th-text-muted)' }}
                 onMouseEnter={(e) => { if (type !== t) e.currentTarget.style.backgroundColor = 'color-mix(in srgb,var(--th-polgun-blue) 10%,transparent)' }}
                 onMouseLeave={(e) => { if (type !== t) e.currentTarget.style.backgroundColor = 'transparent' }}
-              >{t}</button>
+              >{typeTranslationMap[t] || t}</button>
             ))}
           </div>
           <div className="ml-auto text-xs font-bold shrink-0" style={{ color: 'var(--th-text-muted)' }}>
-            {filtered.length} proje
+            {filtered.length} {t('projects.stats.project_count', {defaultValue: 'proje'})}
           </div>
         </div>
       </div>
@@ -1966,7 +2095,7 @@ export default function ProjectsPage({ setActivePage }) {
           </div>
           {filtered.length === 0 && (
             <div className="text-center py-24" style={{ color: 'var(--th-text-muted)' }}>
-              <p className="text-lg font-semibold">Bu filtrede proje bulunamadı.</p>
+              <p className="text-lg font-semibold">{t('common.no_content')}</p>
             </div>
           )}
         </div>
@@ -1990,9 +2119,9 @@ export default function ProjectsPage({ setActivePage }) {
             </div>
             <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-10">
               <div>
-                <p className="text-[11px] font-black tracking-[0.3em] uppercase mb-3 text-white/50">Sonraki Proje</p>
-                <h2 className="text-3xl font-black text-white">Projeniz bu listede olsun.</h2>
-                <p className="text-white/40 mt-2 max-w-md">Hayalinizdeki su parkını veya eğlence merkezini tasarlamak için uzman mühendis ve mimar kadromuzla iletişime geçin.</p>
+                <p className="text-[11px] font-black tracking-[0.3em] uppercase mb-3 text-white/50">{t('projects.cta_tag', {defaultValue: 'Sonraki Proje'})}</p>
+                <h2 className="text-3xl font-black text-white">{t('projects.cta_title', {defaultValue: 'Projeniz bu listede olsun.'})}</h2>
+                <p className="text-white/40 mt-2 max-w-md">{t('projects.cta_desc', {defaultValue: 'Hayalinizdeki su parkını veya eğlence merkezini tasarlamak için uzman mühendis ve mimar kadromuzla iletişime geçin.'})}</p>
               </div>
               <button onClick={() => navigate('/contact')}
                 className="shrink-0 px-10 py-4 font-bold text-sm rounded-full transition-all duration-300 hover:-translate-y-1"
@@ -2000,7 +2129,7 @@ export default function ProjectsPage({ setActivePage }) {
                 onMouseEnter={(e) => e.currentTarget.style.opacity = '0.9'}
                 onMouseLeave={(e) => e.currentTarget.style.opacity = '1'}
               >
-                Projeyi Başlat
+                {t('projects.cta_btn', {defaultValue: 'Projeyi Başlat'})}
               </button>
             </div>
           </div>

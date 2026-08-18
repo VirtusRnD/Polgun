@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
-import { Link, useNavigate } from 'react-router-dom' // useNavigate eklendi
+import { Link, useNavigate } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 import heroImage from '../assets/polgun-featured-projects-4.avif'
 import underwater1 from '../assets/hero/13.MaxeriaBlue.avif'
 import pirate1 from '../assets/splashTower/pirateTheme/1001.avif'
@@ -514,6 +515,7 @@ function GlassTag({ children }) {
 }
 
 export default function ProductsPage() {
+	const { t } = useTranslation()
 	const navigate = useNavigate();
 	const [activeFilter, setActiveFilter] = useState('Tümü')
 	const [catalogs, setCatalogs] = useState([])
@@ -533,6 +535,52 @@ export default function ProductsPage() {
 		fetchCatalogs();
 	}, []);
 
+	// Category translation map
+	const categoryTranslationMap = {
+		'Tümü': t('common.all'),
+		'Su Kaydırakları': t('products.slides.title'),
+		'Splash Tower': t('products.tower.title'),
+		'Ar-Ge Ürünleri': t('nav.arge') + ' ' + t('footer.products'),
+		'Splash Zone': t('products.zone.title'),
+		'Family Slides': t('products.categories.family_slides', {defaultValue: 'Family Slides'}),
+		'Fast Slide': t('products.categories.fast_slide', {defaultValue: 'Fast Slide'}),
+		'Jumbo Slides': t('products.categories.jumbo_slides', {defaultValue: 'Jumbo Slides'}),
+		'Racer Slides': t('products.categories.racer_slides', {defaultValue: 'Racer Slides'}),
+		'Classic Slides': t('products.categories.classic_slides', {defaultValue: 'Classic Slides'}),
+	}
+
+	const normalizeKey = (str) => {
+		if (!str) return '';
+		return str.toLowerCase()
+			.replace(/ğ/g, 'g')
+			.replace(/ü/g, 'u')
+			.replace(/ş/g, 's')
+			.replace(/ı/g, 'i')
+			.replace(/ö/g, 'o')
+			.replace(/ç/g, 'c')
+			.replace(/[^a-z0-9]/g, '_')
+			.replace(/_+/g, '_');
+	}
+
+	// Translation helper for product
+	const getProductTranslated = (p) => {
+		const key = normalizeKey(p.title);
+		return {
+			category: categoryTranslationMap[p.category] || p.category,
+			title: p.title,
+			sub: p.sub ? (t(`products.items.${key}.sub`) || p.sub) : '',
+			desc: t(`products.items.${key}.desc`) || p.desc,
+			specs: p.specs.map(spec => ({
+				label: t(`products.specs.${normalizeKey(spec.label)}`, { defaultValue: spec.label }),
+				val: t(`products.values.${normalizeKey(spec.val)}`, { defaultValue: spec.val })
+			})),
+			img: p.img,
+			img2: p.img2,
+			imgAlt: p.imgAlt,
+			badge: p.badge ? t(`products.badges.${normalizeKey(p.badge)}`, { defaultValue: p.badge }) : null
+		}
+	}
+
 	// Badge stilleri
 	const BADGE_STYLE = {
 		'Çok Satılan': { backgroundColor: 'var(--th-primary)', color: '#fff' },
@@ -540,10 +588,21 @@ export default function ProductsPage() {
 		'Premium': { backgroundColor: 'var(--th-polgun-antrasit)', color: '#fff' },
 	}
 
+	const translatedBadgeStyle = (badge) => {
+		if (!badge) return {};
+		if (badge.includes('Satılan') || badge.toLowerCase().includes('sell')) {
+			return BADGE_STYLE['Çok Satılan'];
+		}
+		if (badge.toLowerCase().includes('new') || badge.includes('Yeni')) {
+			return BADGE_STYLE['Yeni'];
+		}
+		return BADGE_STYLE['Premium'];
+	}
+
 	const filtered =
 		activeFilter === 'Tümü'
-			? PRODUCTS
-			: PRODUCTS.filter((p) => p.category === activeFilter)
+			? PRODUCTS.map(getProductTranslated)
+			: PRODUCTS.filter((p) => p.category === activeFilter).map(getProductTranslated)
 
 	return (
 		<main className="pt-20" style={{ backgroundColor: 'var(--th-bg)' }}>
@@ -555,14 +614,14 @@ export default function ProductsPage() {
 
 						<div>
 							<p className="text-xs font-bold tracking-[0.3em] uppercase mb-4" style={{ color: 'var(--th-text)' }}>
-								Ürün Kataloğu
+								{t('products.catalog_title', {defaultValue: 'Ürün Kataloğu'})}
 							</p>
 							<h1 className="text-5xl lg:text-6xl font-black text-white leading-[1.02]">
-								Ürünlerimiz
+								{t('products.title')}
 							</h1>
 						</div>
 						<p className="text-white/50 text-lg leading-relaxed">
-							Yenilikçi teknolojiler, estetik tasarımlar ve uluslararası standartlarda üretim ile geliştirdiğimiz su parkı sistemlerimiz. Her projeye değer katan, güvenli ve sürdürülebilir ürünlerimizle tanışın.
+							{t('products.desc')}
 						</p>
 						<div className="flex gap-4 flex-wrap">
 							<button
@@ -573,7 +632,7 @@ export default function ProductsPage() {
 								onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'var(--th-text-muted)'}
 								onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'var(--th-polgun-antrasit)'}
 							>
-								Ürün Talebi
+								{t('products.request_btn', {defaultValue: 'Ürün Talebi'})}
 							</button>
 							<button
 								onClick={() => {
@@ -581,7 +640,7 @@ export default function ProductsPage() {
 										const path = catalogs[0].file_path.startsWith('/') ? catalogs[0].file_path : '/' + catalogs[0].file_path;
 										window.open(path, '_blank');
 									} else {
-										alert('Şu anda indirilebilir katalog bulunmamaktadır.');
+										alert(t('common.no_content'));
 									}
 								}}
 								className="px-8 py-4 font-bold rounded-full transition-all duration-300 border-2"
@@ -595,7 +654,7 @@ export default function ProductsPage() {
 									e.currentTarget.style.transform = 'translateY(0)';
 								}}
 							>
-								Katalog İndir
+								{t('products.download_btn', {defaultValue: 'Katalog İndir'})}
 							</button>
 						</div>
 					</div>
@@ -641,7 +700,7 @@ export default function ProductsPage() {
 										e.currentTarget.style.backgroundColor = 'transparent'
 								}}
 							>
-								{cat}
+								{categoryTranslationMap[cat] || cat}
 							</button>
 						))}
 					</div>
@@ -691,7 +750,7 @@ export default function ProductsPage() {
 										{product.badge && (
 											<span
 												className="text-[10px] font-black tracking-widest uppercase px-3 py-1.5 rounded-full"
-												style={BADGE_STYLE[product.badge]}
+												style={translatedBadgeStyle(product.badge)}
 											>
 												{product.badge}
 											</span>
@@ -702,12 +761,14 @@ export default function ProductsPage() {
 
 								{/* İçerik */}
 								<div className="p-8 flex flex-col grow">
-									<p
-										className="text-[10px] font-black tracking-[0.2em] uppercase mb-2"
-										style={{ color: 'var(--th-polgun-blue)' }}
-									>
-										{product.sub}
-									</p>
+									{product.sub && (
+										<p
+											className="text-[10px] font-black tracking-[0.2em] uppercase mb-2"
+											style={{ color: 'var(--th-polgun-blue)' }}
+										>
+											{product.sub}
+										</p>
+									)}
 									<h2
 										className="text-xl font-black mb-3 transition-colors"
 										style={{ color: 'var(--th-text)' }}
@@ -731,37 +792,39 @@ export default function ProductsPage() {
 									</p>
 
 									{/* Teknik Özellikler */}
-									<div
-										className="grid grid-cols-2 gap-px rounded-xl overflow-hidden mb-6"
-										style={{
-											backgroundColor:
-												'color-mix(in srgb,var(--th-border) 8%,transparent)',
-										}}
-									>
-										{product.specs.map((spec) => (
-											<div
-												key={spec.label}
-												className="px-3 py-3"
-												style={{ backgroundColor: 'var(--th-bg)' }}
-											>
-												<div // İçeriğin sığmaması durumunda kelimelerin kırılmasını sağlar
-													className="text-[10px] font-semibold uppercase tracking-wider mb-1"
-													style={{
-														color:
-															'color-mix(in srgb,var(--th-text-muted) 60%,transparent)',
-													}}
+									{product.specs && product.specs.length > 0 && (
+										<div
+											className="grid grid-cols-2 gap-px rounded-xl overflow-hidden mb-6"
+											style={{
+												backgroundColor:
+													'color-mix(in srgb,var(--th-border) 8%,transparent)',
+											}}
+										>
+											{product.specs.map((spec) => (
+												<div
+													key={spec.label}
+													className="px-3 py-3"
+													style={{ backgroundColor: 'var(--th-bg)' }}
 												>
-													{spec.label}
+													<div // İçeriğin sığmaması durumunda kelimelerin kırılmasını sağlar
+														className="text-[10px] font-semibold uppercase tracking-wider mb-1"
+														style={{
+															color:
+																'color-mix(in srgb,var(--th-text-muted) 60%,transparent)',
+														}}
+													>
+														{spec.label}
+													</div>
+													<div // İçeriğin sığmaması durumunda kelimelerin kırılmasını sağlar
+														className="text-xs font-black"
+														style={{ color: 'var(--th-text)' }}
+													>
+														{spec.val}
+													</div>
 												</div>
-												<div // İçeriğin sığmaması durumunda kelimelerin kırılmasını sağlar
-													className="text-xs font-black"
-													style={{ color: 'var(--th-text)' }}
-												>
-													{spec.val}
-												</div>
-											</div>
-										))}
-									</div>
+											))}
+										</div>
+									)}
 
 									{/* CTA */}
 									<div className="flex gap-3 mt-auto">
@@ -778,7 +841,7 @@ export default function ProductsPage() {
 												'var(--th-polgun-blue)')
 											}
 										>
-											Teklif Al
+											{t('common.quote')}
 										</button>
 									
 									</div>
@@ -808,17 +871,17 @@ export default function ProductsPage() {
 								<p
 									className="text-[11px] font-black tracking-[0.3em] uppercase mb-3 text-white/50"
 								>
-									Özel Proje
+									{t('products.custom_project_tag', {defaultValue: 'Özel Proje'})}
 								</p>
 								<h2 className="text-3xl font-black text-white">
-									Aradığınızı bulamadınız mı?
+									{t('products.not_found_title', {defaultValue: 'Aradığınızı bulamadınız mı?'})}
 								</h2>
 								<p className="text-white/40 mt-3 max-w-lg">
-									Hayalinizdeki su parkını gerçeğe dönüştürmek için geniş ürün yelpazemizi inceleyin ve projenize en uygun çözümleri birlikte tasarlayalım.
+									{t('products.not_found_desc', {defaultValue: 'Hayalinizdeki su parkını gerçeğe dönüştürmek için geniş ürün yelpazemizi inceleyin ve projenize en uygun çözümleri birlikte tasarlayalım.'})}
 								</p>
 							</div>
 							<button
-								onClick={() => setActivePage('contact')}
+								onClick={() => navigate('/contact')}
 								className="shrink-0 px-10 py-4 text-sm font-bold rounded-full transition-all duration-300 hover:-translate-y-1"
 								style={{
 									backgroundColor: '#FFFFFF',
@@ -828,7 +891,7 @@ export default function ProductsPage() {
 								onMouseEnter={(e) => e.currentTarget.style.opacity = '0.9'}
 								onMouseLeave={(e) => e.currentTarget.style.opacity = '1'}
 							>
-								Özel Çözüm Talep Et
+								{t('products.custom_request_btn', {defaultValue: 'Özel Çözüm Talep Et'})}
 							</button>
 						</div>
 					</div>

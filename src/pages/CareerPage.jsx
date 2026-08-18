@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from 'react'
+import { useTranslation } from 'react-i18next'
 import careerCover from '../assets/career/career-cover.avif'
 import careerSample from '../assets/career/career-sample.avif'
 
@@ -236,6 +237,8 @@ const PROCESS_STEPS = [
 ]
 
 export default function CareerPage() {
+  const { t, i18n } = useTranslation()
+
   // Testimonial Carousel State
   const [currentSlide, setCurrentSlide] = useState(0)
 
@@ -276,7 +279,7 @@ export default function CareerPage() {
     let cancelled = false
     async function loadJobs() {
       try {
-        const res = await fetch(`${API_URL}/api/career/jobs`)
+        const res = await fetch(`${API_URL}/api/career/jobs?lang=${i18n.language}`)
         if (!res.ok) throw new Error('API error')
         const data = await res.json()
         if (!cancelled && Array.isArray(data)) {
@@ -289,7 +292,7 @@ export default function CareerPage() {
             location: job.location || 'Muğla',
             type: job.type || 'Tam Zamanlı',
             date: job.created_at
-              ? new Date(job.created_at).toLocaleDateString('tr-TR', { day: 'numeric', month: 'long', year: 'numeric' })
+              ? new Date(job.created_at).toLocaleDateString(i18n.language === 'tr' ? 'tr-TR' : 'en-US', { day: 'numeric', month: 'long', year: 'numeric' })
               : '',
             desc: job.description || '',
             icon: 'default',
@@ -301,7 +304,118 @@ export default function CareerPage() {
     }
     loadJobs()
     return () => { cancelled = true }
-  }, [])
+  }, [i18n.language])
+
+  // Dynamic mapped options
+  const whyPolgun = [
+    {
+      title: t('career.why.intl.title', {defaultValue: 'Uluslararası Projeler'}),
+      desc: t('career.why.intl.desc', {defaultValue: 'Dünyanın dört bir yanında heyecan verici projelerde çalışma fırsatı.'}),
+      icon: WHY_POLGUN[0].icon,
+    },
+    {
+      title: t('career.why.innovation.title', {defaultValue: 'Ar-Ge ve İnovasyon'}),
+      desc: t('career.why.innovation.desc', {defaultValue: 'Yenilikçi fikirlerin desteklendiği, gelişime açık bir çalışma ortamı.'}),
+      icon: WHY_POLGUN[1].icon,
+    },
+    {
+      title: t('career.why.team.title', {defaultValue: 'Güçlü Ekip Ruhu'}),
+      desc: t('career.why.team.desc', {defaultValue: 'Uzman ve dinamik ekibimizle birlikte üretimden başarıya uzanan yolculuk.'}),
+      icon: WHY_POLGUN[2].icon,
+    },
+    {
+      title: t('career.why.growth.title', {defaultValue: 'Kariyer ve Gelişim'}),
+      desc: t('career.why.growth.desc', {defaultValue: 'Eğitimler, mentorluk ve terfi imkânlarıyla kariyerinizi birlikte büyütüyoruz.'}),
+      icon: WHY_POLGUN[3].icon,
+    },
+    {
+      title: t('career.why.safety.title', {defaultValue: 'Güvenli ve Sürdürülebilir Çalışma'}),
+      desc: t('career.why.safety.desc', {defaultValue: 'İş sağlığı ve güvenliği önceliğimiz, çevreye duyarlı üretim anlayışımız.'}),
+      icon: WHY_POLGUN[4].icon,
+    },
+    {
+      title: t('career.why.diverse.title', {defaultValue: 'Çeşitli Alanlarda Deneyim'}),
+      desc: t('career.why.diverse.desc', {defaultValue: 'Mühendislikten tasarıma, üretimden sahaya birçok alanda deneyim kazanma fırsatı.'}),
+      icon: WHY_POLGUN[5].icon,
+    },
+  ]
+
+  const testimonials = [
+    {
+      quote: t('career.testimonials.selin.quote', {defaultValue: "Polgün'de her gün yeni şeyler öğreniyor ve kendimi geliştiriyorum. Ekip ruhu ve destekleyici ortam beni motive ediyor."}),
+      name: 'Selin K.',
+      role: t('career.testimonials.selin.role', {defaultValue: 'Ar-Ge Mühendisi'}),
+      img: TESTIMONIALS[0].img,
+    },
+    {
+      quote: t('career.testimonials.mehmet.quote', {defaultValue: "Üretimden sahaya uzanan projelerde yer almak, kariyerimde büyük bir deneyim kazanmamı sağladı."}),
+      name: 'Mehmet A.',
+      role: t('career.testimonials.mehmet.role', {defaultValue: 'Proje Mühendisi'}),
+      img: TESTIMONIALS[1].img,
+    },
+    {
+      quote: t('career.testimonials.emre.quote', {defaultValue: "Uluslararası projelerde görev almak ve farklı kültürlerle çalışmak, en keyif aldığım yanlardan biri."}),
+      name: 'Emre T.',
+      role: t('career.testimonials.emre.role', {defaultValue: 'Saha Şefi'}),
+      img: TESTIMONIALS[2].img,
+    },
+  ]
+
+  const internships = [
+    {
+      title: t('career.internships.summer.title', {defaultValue: 'Yaz Stajı Programı'}),
+      desc: t('career.internships.summer.desc', {defaultValue: 'Üniversite öğrencileri için yaz dönemi staj fırsatları.'}),
+      icon: INTERNSHIPS[0].icon,
+    },
+    {
+      title: t('career.internships.long.title', {defaultValue: 'Uzun Dönem Staj'}),
+      desc: t('career.internships.long.desc', {defaultValue: 'Akademik yıl boyunca uzun dönem staj imkânı.'}),
+      icon: INTERNSHIPS[1].icon,
+    },
+    {
+      title: t('career.internships.graduate.title', {defaultValue: 'Yeni Mezun Programı'}),
+      desc: t('career.internships.graduate.desc', {defaultValue: 'Yeni mezunlar için gelişim ve kariyer programı.'}),
+      icon: INTERNSHIPS[2].icon,
+    },
+    {
+      title: t('career.internships.technical.title', {defaultValue: 'Teknik Okul Stajı'}),
+      desc: t('career.internships.technical.desc', {defaultValue: 'Meslek lisesi ve teknik okul öğrencileri için staj imkânı.'}),
+      icon: INTERNSHIPS[3].icon,
+    },
+  ]
+
+  const processSteps = [
+    {
+      step: '01',
+      title: t('career.process.step1.title', {defaultValue: 'Başvuru'}),
+      desc: t('career.process.step1.desc', {defaultValue: 'Başvurunuzu online olarak tamamlayın.'}),
+      icon: PROCESS_STEPS[0].icon,
+    },
+    {
+      step: '02',
+      title: t('career.process.step2.title', {defaultValue: 'Ön Değerlendirme'}),
+      desc: t('career.process.step2.desc', {defaultValue: 'Başvurunuz ilgili departman tarafından incelenir.'}),
+      icon: PROCESS_STEPS[1].icon,
+    },
+    {
+      step: '03',
+      title: t('career.process.step3.title', {defaultValue: 'Görüşmeler'}),
+      desc: t('career.process.step3.desc', {defaultValue: 'İK ve teknik görüşmelerle sürecimiz devam eder.'}),
+      icon: PROCESS_STEPS[2].icon,
+    },
+    {
+      step: '04',
+      title: t('career.process.step4.title', {defaultValue: 'Teklif'}),
+      desc: t('career.process.step4.desc', {defaultValue: 'Uygun görülen adaylara teklif sunulur.'}),
+      icon: PROCESS_STEPS[3].icon,
+    },
+    {
+      step: '05',
+      title: t('career.process.step5.title', {defaultValue: 'Hoş Geldiniz!'}),
+      desc: t('career.process.step5.desc', {defaultValue: 'Ekibimize katılımınızla birlikte yolculuğumuz başlar.'}),
+      icon: PROCESS_STEPS[4].icon,
+    },
+  ]
 
   // Handler for regular inputs
   const handleChange = (e) => {
@@ -334,7 +448,7 @@ export default function CareerPage() {
       if (['pdf', 'docx'].includes(fileExtension) && file.size <= 10 * 1024 * 1024) {
         setCvFile(file)
       } else {
-        alert('Lütfen geçerli formatta (PDF, DOCX) ve 10 MB\'tan küçük bir dosya yükleyin.')
+        alert(t('career.form.cv_invalid', {defaultValue: 'Lütfen geçerli formatta (PDF, DOCX) ve 10 MB\'tan küçük bir dosya yükleyin.'}))
       }
     }
   }
@@ -348,11 +462,11 @@ export default function CareerPage() {
   const handleSubmit = async (e) => {
     e.preventDefault()
     if (!form.kvkk) {
-      alert('Lütfen Aday Çalışan Aydınlatma Metni\'ni onaylayın.')
+      alert(t('career.form.kvkk_required', {defaultValue: 'Lütfen Aday Çalışan Aydınlatma Metni\'ni onaylayın.'}))
       return
     }
     if (!cvFile) {
-      alert('Lütfen CV belgenizi yükleyin.')
+      alert(t('career.form.cv_required', {defaultValue: 'Lütfen CV belgenizi yükleyin.'}))
       return
     }
 
@@ -382,12 +496,12 @@ export default function CareerPage() {
 
       if (!res.ok) {
         const err = await res.json().catch(() => ({}))
-        throw new Error(err.error || 'Başvuru gönderilemedi.')
+        throw new Error(err.error || t('career.form.apply_error', {defaultValue: 'Başvuru gönderilemedi.'}))
       }
 
       setSubmitted(true)
     } catch (err) {
-      setSubmitError(err.message || 'Bir hata oluştu. Lütfen tekrar deneyin.')
+      setSubmitError(err.message || t('career.form.general_error', {defaultValue: 'Bir hata oluştu. Lütfen tekrar deneyin.'}))
     } finally {
       setSubmitting(false)
     }
@@ -410,7 +524,7 @@ export default function CareerPage() {
     setForm((prev) => ({
       ...prev,
       department: position.department,
-      note: `Sayın Yetkili,\n\n${position.title} pozisyonu için başvuruda bulunmak istiyorum.`,
+      note: t('career.form.apply_note_prefix', {defaultValue: `Sayın Yetkili,\n\n${position.title} pozisyonu için başvuruda bulunmak istiyorum.`, title: position.title}),
     }))
     // Smooth scroll to the general application form
     applyFormRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' })
@@ -418,11 +532,11 @@ export default function CareerPage() {
 
   // Carousel control triggers
   const nextSlide = () => {
-    setCurrentSlide((prev) => (prev === TESTIMONIALS.length - 1 ? 0 : prev + 1))
+    setCurrentSlide((prev) => (prev === testimonials.length - 1 ? 0 : prev + 1))
   }
 
   const prevSlide = () => {
-    setCurrentSlide((prev) => (prev === 0 ? TESTIMONIALS.length - 1 : prev - 1))
+    setCurrentSlide((prev) => (prev === 0 ? testimonials.length - 1 : prev - 1))
   }
 
   // Unique lists from live positions for filters
@@ -489,24 +603,24 @@ export default function CareerPage() {
         <div className="max-w-[var(--layout-max)] mx-auto px-6 lg:px-12 w-full z-10">
           <div className="max-w-2xl text-left">
             <h1 className="text-5xl lg:text-7xl font-black text-white leading-tight tracking-tight">
-              Polgün'de <br />
-              <span className="text-[#22ABE6]">Kariyer</span>
+              {t('career.title', {defaultValue: 'Polgün\'de Kariyer'}).split(' ')[0]} <br />
+              <span className="text-[#22ABE6]">{t('career.title', {defaultValue: 'Polgün\'de Kariyer'}).split(' ').slice(1).join(' ') || 'Kariyer'}</span>
             </h1>
             <p className="text-white/80 text-base lg:text-lg mt-6 leading-relaxed max-w-xl font-light">
-              Su eğlence sektörüne yön veren projelerde yer almak, üretimden tasarıma, Ar-Ge'den saha uygulamalarına uzanan güçlü bir ekibin parçası olmak için bize katılın.
+              {t('career.hero_desc', {defaultValue: 'Su eğlence sektörüne yön veren projelerde yer almak, üretimden tasarıma, Ar-Ge\'den saha uygulamalarına uzanan güçlü bir ekibin parçası olmak için bize katılın.'})}
             </p>
             <div className="flex flex-wrap gap-4 mt-10">
               <a 
                 href="#positions" 
                 className="px-8 py-4 bg-[#22ABE6] hover:bg-[#1a8fc2] text-white font-semibold rounded-full shadow-lg shadow-blue-500/20 transition-all duration-300 transform hover:-translate-y-1"
               >
-                Açık Pozisyonları Gör
+                {t('career.view_jobs', {defaultValue: 'Açık Pozisyonları Gör'})}
               </a>
               <a 
                 href="#apply" 
                 className="px-8 py-4 border-2 border-white/50 text-white font-semibold rounded-full hover:bg-white hover:text-[#0F2B5B] transition-all duration-300 transform hover:-translate-y-1"
               >
-                Genel Başvuru Yap
+                {t('career.general_apply', {defaultValue: 'Genel Başvuru Yap'})}
               </a>
             </div>
           </div>
@@ -517,12 +631,12 @@ export default function CareerPage() {
       <section className="py-24 bg-white border-b border-gray-100">
         <div className="max-w-[var(--layout-max)] mx-auto px-6 lg:px-12">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-extrabold text-gray-900 tracking-tight">Neden Polgün?</h2>
+            <h2 className="text-3xl lg:text-4xl font-extrabold text-gray-900 tracking-tight">{t('career.why_title', {defaultValue: 'Neden Polgün?'})}</h2>
             <div className="w-16 h-1 bg-[#22ABE6] mx-auto mt-4 rounded-full" />
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-            {WHY_POLGUN.map((item, index) => (
+            {whyPolgun.map((item, index) => (
               <div 
                 key={index} 
                 className="flex items-start gap-5 p-2 transition-transform duration-300 hover:translate-y-[-4px]"
@@ -548,8 +662,8 @@ export default function CareerPage() {
             {/* LEFT COLUMN: Açık Pozisyonlar (List) */}
             <div className="col-span-1 lg:col-span-7">
               <div className="mb-8">
-                <h2 className="text-3xl font-extrabold text-gray-900 tracking-tight">Açık Pozisyonlar</h2>
-                <p className="text-sm text-gray-500 mt-2">Sizin için uygun pozisyonları keşfedin.</p>
+                <h2 className="text-3xl font-extrabold text-gray-900 tracking-tight">{t('career.open_positions', {defaultValue: 'Açık Pozisyonlar'})}</h2>
+                <p className="text-sm text-gray-500 mt-2">{t('career.jobs_subtitle', {defaultValue: 'Sizin için uygun pozisyonları keşfedin.'})}</p>
               </div>
 
               {/* Dynamic Filter Controls */}
@@ -557,7 +671,7 @@ export default function CareerPage() {
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                   {/* Departman Filter */}
                   <div>
-                    <label className="block text-[11px] font-bold text-gray-400 uppercase tracking-wider mb-1">Departman</label>
+                    <label className="block text-[11px] font-bold text-gray-400 uppercase tracking-wider mb-1">{t('career.filters.dept', {defaultValue: 'Departman'})}</label>
                     <select 
                       value={selectedDept}
                       onChange={(e) => setSelectedDept(e.target.value)}
@@ -565,7 +679,7 @@ export default function CareerPage() {
                     >
                       {uniqueDepartments.map((dept) => (
                         <option key={dept} value={dept}>
-                          {dept === 'All' ? 'Tüm Departmanlar' : dept}
+                          {dept === 'All' ? t('career.filters.all_depts', {defaultValue: 'Tüm Departmanlar'}) : dept}
                         </option>
                       ))}
                     </select>
@@ -573,7 +687,7 @@ export default function CareerPage() {
 
                   {/* Lokasyon Filter */}
                   <div>
-                    <label className="block text-[11px] font-bold text-gray-400 uppercase tracking-wider mb-1">Lokasyon</label>
+                    <label className="block text-[11px] font-bold text-gray-400 uppercase tracking-wider mb-1">{t('career.filters.location', {defaultValue: 'Lokasyon'})}</label>
                     <select 
                       value={selectedLoc}
                       onChange={(e) => setSelectedLoc(e.target.value)}
@@ -581,7 +695,7 @@ export default function CareerPage() {
                     >
                       {uniqueLocations.map((loc) => (
                         <option key={loc} value={loc}>
-                          {loc === 'All' ? 'Tüm Lokasyonlar' : loc}
+                          {loc === 'All' ? t('career.filters.all_locations', {defaultValue: 'Tüm Lokasyonlar'}) : loc}
                         </option>
                       ))}
                     </select>
@@ -589,7 +703,7 @@ export default function CareerPage() {
 
                   {/* Çalışma Tipi Filter */}
                   <div>
-                    <label className="block text-[11px] font-bold text-gray-400 uppercase tracking-wider mb-1">Çalışma Tipi</label>
+                    <label className="block text-[11px] font-bold text-gray-400 uppercase tracking-wider mb-1">{t('career.filters.type', {defaultValue: 'Çalışma Tipi'})}</label>
                     <select 
                       value={selectedType}
                       onChange={(e) => setSelectedType(e.target.value)}
@@ -597,7 +711,7 @@ export default function CareerPage() {
                     >
                       {uniqueTypes.map((type) => (
                         <option key={type} value={type}>
-                          {type === 'All' ? 'Tüm Çalışma Tipleri' : type}
+                          {type === 'All' ? t('career.filters.all_types', {defaultValue: 'Tüm Çalışma Tipleri'}) : type}
                         </option>
                       ))}
                     </select>
@@ -615,7 +729,7 @@ export default function CareerPage() {
                     type="text"
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
-                    placeholder="Pozisyon ara..."
+                    placeholder={t('career.search_placeholder', {defaultValue: 'Pozisyon ara...'})}
                     className="w-full text-xs bg-gray-50 text-gray-800 pl-10 pr-4 py-3 rounded-lg border border-gray-200 outline-none focus:border-blue-500 transition-colors"
                   />
                 </div>
@@ -661,7 +775,7 @@ export default function CareerPage() {
                           onClick={() => handleApplyToPosition(pos)}
                           className="px-6 py-2 border-2 border-[#22ABE6] text-[#22ABE6] font-semibold text-xs rounded-full hover:bg-[#22ABE6] hover:text-white transition-all duration-200 shadow-sm cursor-pointer"
                         >
-                          Başvur
+                          {t('career.apply_btn', {defaultValue: 'Başvur'})}
                         </button>
                         <span className="text-[10px] text-gray-400 font-light">
                           {pos.date}
@@ -671,12 +785,12 @@ export default function CareerPage() {
                   ))
                 ) : (
                   <div className="bg-white py-16 text-center rounded-2xl border border-dashed border-gray-300">
-                    <p className="text-gray-400 text-sm">Arama kriterlerinize uygun açık pozisyon bulunamadı.</p>
+                    <p className="text-gray-400 text-sm">{t('career.no_jobs', {defaultValue: 'Arama kriterlerinize uygun açık pozisyon bulunamadı.'})}</p>
                     <button 
                       onClick={() => { setSelectedDept('All'); setSelectedLoc('All'); setSelectedType('All'); setSearchQuery(''); }}
                       className="text-[#22ABE6] text-xs font-semibold underline mt-2 hover:text-[#1a8fc2] cursor-pointer"
                     >
-                      Filtreleri Temizle
+                      {t('career.clear_filters', {defaultValue: 'Filtreleri Temizle'})}
                     </button>
                   </div>
                 )}
@@ -686,7 +800,7 @@ export default function CareerPage() {
                     onClick={() => { setSelectedDept('All'); setSelectedLoc('All'); setSelectedType('All'); setSearchQuery(''); }}
                     className="w-full py-3 border border-gray-300 text-gray-600 font-semibold text-xs rounded-full hover:bg-gray-50 transition-colors mt-2 text-center cursor-pointer"
                   >
-                    Tüm Pozisyonları Gör
+                    {t('career.all_jobs_btn', {defaultValue: 'Tüm Pozisyonları Gör'})}
                   </button>
                 )}
               </div>
@@ -696,9 +810,9 @@ export default function CareerPage() {
             <div ref={applyFormRef} className="col-span-1 lg:col-span-5" id="apply">
               <div className="bg-white p-6 lg:p-8 rounded-3xl border border-gray-200 shadow-lg">
                 <div className="mb-6">
-                  <h2 className="text-2xl font-extrabold text-gray-900 tracking-tight">Genel Başvuru</h2>
+                  <h2 className="text-2xl font-extrabold text-gray-900 tracking-tight">{t('career.general_apply', {defaultValue: 'Genel Başvuru'})}</h2>
                   <p className="text-xs text-gray-500 mt-2 font-light leading-relaxed">
-                    Size uygun bir pozisyon yoksa genel başvurunuzu bırakabilir, uygun fırsatlarda sizinle iletişime geçebiliriz.
+                    {t('career.apply_desc', {defaultValue: 'Size uygun bir pozisyon yoksa genel başvurunuzu bırakabilir, uygun fırsatlarda sizinle iletişime geçebiliriz.'})}
                   </p>
                 </div>
 
@@ -709,9 +823,9 @@ export default function CareerPage() {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M5 13l4 4L19 7" />
                       </svg>
                     </div>
-                    <h3 className="text-xl font-bold text-gray-800 mb-2">Başvurunuz Alındı!</h3>
+                    <h3 className="text-xl font-bold text-gray-800 mb-2">{t('career.success_title', {defaultValue: 'Başvurunuz Alındı!'})}</h3>
                     <p className="text-xs text-gray-600 leading-relaxed font-light max-w-sm mx-auto">
-                      Kariyer başvurunuz veritabanımıza kaydedilmiştir. İnsan Kaynakları ekibimiz profilinizi değerlendirerek sizinle iletişime geçecektir.
+                      {t('career.success_desc', {defaultValue: 'Kariyer başvurunuz veritabanımıza kaydedilmiştir. İnsan Kaynakları ekibimiz profilinizi değerlendirerek sizinle iletişime geçecektir.'})}
                     </p>
                     <button 
                       onClick={() => {
@@ -725,14 +839,14 @@ export default function CareerPage() {
                       }}
                       className="mt-6 px-6 py-2 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-semibold rounded-full shadow transition-all duration-200 cursor-pointer"
                     >
-                      Yeni Başvuru Yap
+                      {t('career.new_apply_btn', {defaultValue: 'Yeni Başvuru Yap'})}
                     </button>
                   </div>
                 ) : (
                   <form onSubmit={handleSubmit} className="space-y-4">
                     {/* Name Input */}
                     <div>
-                      <label className="block text-[11px] font-bold text-gray-700 mb-1.5">Ad Soyad *</label>
+                      <label className="block text-[11px] font-bold text-gray-700 mb-1.5">{t('contact.form.name', {defaultValue: 'Ad Soyad'})} *</label>
                       <input 
                         type="text" 
                         name="name" 
@@ -745,7 +859,7 @@ export default function CareerPage() {
 
                     {/* Email Input */}
                     <div>
-                      <label className="block text-[11px] font-bold text-gray-700 mb-1.5">E-posta *</label>
+                      <label className="block text-[11px] font-bold text-gray-700 mb-1.5">{t('contact.form.email', {defaultValue: 'E-posta'})} *</label>
                       <input 
                         type="email" 
                         name="email" 
@@ -758,7 +872,7 @@ export default function CareerPage() {
 
                     {/* Phone Input */}
                     <div>
-                      <label className="block text-[11px] font-bold text-gray-700 mb-1.5">Telefon *</label>
+                      <label className="block text-[11px] font-bold text-gray-700 mb-1.5">{t('contact.form.phone', {defaultValue: 'Telefon'})} *</label>
                       <input 
                         type="tel" 
                         name="phone" 
@@ -772,7 +886,7 @@ export default function CareerPage() {
 
                     {/* City Dropdown Selection */}
                     <div>
-                      <label className="block text-[11px] font-bold text-gray-700 mb-1.5">Yaşadığınız Şehir *</label>
+                      <label className="block text-[11px] font-bold text-gray-700 mb-1.5">{t('career.form.city', {defaultValue: 'Yaşadığınız Şehir'})} *</label>
                       <select 
                         name="city" 
                         value={form.city}
@@ -780,20 +894,20 @@ export default function CareerPage() {
                         required
                         className="w-full text-xs bg-gray-50 text-gray-800 px-4 py-3 rounded-xl border border-gray-200 outline-none focus:border-blue-500 focus:bg-white transition-all duration-200 cursor-pointer"
                       >
-                        <option value="">Seçiniz</option>
-                        <option value="Muğla">Muğla</option>
-                        <option value="İstanbul">İstanbul</option>
+                        <option value="">{t('common.select', {defaultValue: 'Seçiniz'})}</option>
+                        <option value="Muğla">{t('factories.names.mugla')}</option>
+                        <option value="İstanbul">{t('factories.names.istanbul')}</option>
                         <option value="Ankara">Ankara</option>
                         <option value="İzmir">İzmir</option>
                         <option value="Antalya">Antalya</option>
-                        <option value="Bursa">Bursa</option>
-                        <option value="Diğer">Diğer</option>
+                        <option value="Bursa">{t('factories.names.bursa')}</option>
+                        <option value="Diğer">{t('common.other', {defaultValue: 'Diğer'})}</option>
                       </select>
                     </div>
 
                     {/* Target Department Selection */}
                     <div>
-                      <label className="block text-[11px] font-bold text-gray-700 mb-1.5">Başvurmak İstediğiniz Departman *</label>
+                      <label className="block text-[11px] font-bold text-gray-700 mb-1.5">{t('career.form.department', {defaultValue: 'Başvurmak İstediğiniz Departman'})} *</label>
                       <select 
                         name="department" 
                         value={form.department}
@@ -801,50 +915,50 @@ export default function CareerPage() {
                         required
                         className="w-full text-xs bg-gray-50 text-gray-800 px-4 py-3 rounded-xl border border-gray-200 outline-none focus:border-blue-500 focus:bg-white transition-all duration-200 cursor-pointer"
                       >
-                        <option value="">Seçiniz</option>
-                        <option value="Ar-Ge">Ar-Ge</option>
-                        <option value="Proje Yönetimi">Proje Yönetimi</option>
-                        <option value="Tasarım">Tasarım</option>
-                        <option value="Üretim">Üretim</option>
-                        <option value="Satın Alma">Satın Alma</option>
-                        <option value="İdari İşler">İdari İşler</option>
-                        <option value="Staj / Yeni Mezun">Staj / Yeni Mezun</option>
+                        <option value="">{t('common.select', {defaultValue: 'Seçiniz'})}</option>
+                        <option value="Ar-Ge">{t('nav.arge')}</option>
+                        <option value="Proje Yönetimi">{t('career.depts.project_management', {defaultValue: 'Proje Yönetimi'})}</option>
+                        <option value="Tasarım">{t('career.depts.design', {defaultValue: 'Tasarım'})}</option>
+                        <option value="Üretim">{t('career.depts.production', {defaultValue: 'Üretim'})}</option>
+                        <option value="Satın Alma">{t('career.depts.procurement', {defaultValue: 'Satın Alma'})}</option>
+                        <option value="İdari İşler">{t('career.depts.admin', {defaultValue: 'İdari İşler'})}</option>
+                        <option value="Staj / Yeni Mezun">{t('career.depts.intern', {defaultValue: 'Staj / Yeni Mezun'})}</option>
                       </select>
                     </div>
 
                     {/* Workplace Choice Dropdown */}
                     <div>
-                      <label className="block text-[11px] font-bold text-gray-700 mb-1.5">Çalışma Lokasyonu Tercihiniz</label>
+                      <label className="block text-[11px] font-bold text-gray-700 mb-1.5">{t('career.form.location_preference', {defaultValue: 'Çalışma Lokasyonu Tercihiniz'})}</label>
                       <select 
                         name="locationPreference" 
                         value={form.locationPreference}
                         onChange={handleChange}
                         className="w-full text-xs bg-gray-50 text-gray-800 px-4 py-3 rounded-xl border border-gray-200 outline-none focus:border-blue-500 focus:bg-white transition-all duration-200 cursor-pointer"
                       >
-                        <option value="">Seçiniz</option>
-                        <option value="Muğla Merkez">Muğla Merkez</option>
-                        <option value="Marmara Teknopark">Marmara Teknopark</option>
-                        <option value="Saha (Şantiyeler)">Saha (Şantiyeler)</option>
-                        <option value="Fark etmez">Fark etmez</option>
+                        <option value="">{t('common.select', {defaultValue: 'Seçiniz'})}</option>
+                        <option value="Muğla Merkez">{t('factories.names.mugla')} {t('common.hq', {defaultValue: 'Merkez'})}</option>
+                        <option value="Marmara Teknopark">{t('factories.names.istanbul')} Technopark</option>
+                        <option value="Saha (Şantiyeler)">{t('career.locations.field', {defaultValue: 'Saha (Şantiyeler)'})}</option>
+                        <option value="Fark etmez">{t('career.locations.any', {defaultValue: 'Fark etmez'})}</option>
                       </select>
                     </div>
 
                     {/* Motivation Note Area */}
                     <div>
-                      <label className="block text-[11px] font-bold text-gray-700 mb-1.5">Kısa Ön Yazı (Opsiyonel)</label>
+                      <label className="block text-[11px] font-bold text-gray-700 mb-1.5">{t('career.form.cover_letter', {defaultValue: 'Kısa Ön Yazı (Opsiyonel)'})}</label>
                       <textarea 
                         name="note" 
                         rows="3" 
                         value={form.note}
                         onChange={handleChange}
-                        placeholder="Yeteneklerinizden ve hedeflerinizden kısaca bahsedin..."
+                        placeholder={t('career.form.cover_letter_placeholder', {defaultValue: 'Yeteneklerinizden ve hedeflerinizden kısaca bahsedin...'})}
                         className="w-full text-xs bg-gray-50 text-gray-800 px-4 py-3 rounded-xl border border-gray-200 outline-none resize-none focus:border-blue-500 focus:bg-white transition-all duration-200"
                       />
                     </div>
 
                     {/* Drag and Drop CV File Upload Area */}
                     <div>
-                      <label className="block text-[11px] font-bold text-gray-700 mb-1.5">CV Yükleyin *</label>
+                      <label className="block text-[11px] font-bold text-gray-700 mb-1.5">{t('career.form.upload_cv', {defaultValue: 'CV Yükleyin'})} *</label>
                       <div 
                         onDragOver={handleDragOver}
                         onDragLeave={handleDragLeave}
@@ -878,7 +992,7 @@ export default function CareerPage() {
                               onClick={(e) => { e.stopPropagation(); removeCvFile(); }}
                               className="text-red-500 hover:text-red-700 text-[10px] font-bold mt-2 hover:underline focus:outline-none cursor-pointer"
                             >
-                              Dosyayı Kaldır
+                              {t('career.form.remove_file', {defaultValue: 'Dosyayı Kaldır'})}
                             </button>
                           </div>
                         ) : (
@@ -886,7 +1000,7 @@ export default function CareerPage() {
                             <svg className="w-8 h-8 text-gray-400 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
                             </svg>
-                            <p className="text-xs text-gray-700 font-semibold">Dosyanızı sürükleyin veya <span className="text-[#22ABE6] underline">seçin</span></p>
+                            <p className="text-xs text-gray-700 font-semibold">{t('career.form.drag_file', {defaultValue: 'Dosyanızı sürükleyin veya seçin'})}</p>
                             <p className="text-[10px] text-gray-400 mt-1">PDF, DOCX (Maks. 10 MB)</p>
                           </>
                         )}
@@ -905,7 +1019,7 @@ export default function CareerPage() {
                           className="mt-0.5 rounded text-blue-500 focus:ring-blue-400 w-3.5 h-3.5 border-gray-300 cursor-pointer"
                         />
                         <span className="text-[10px] text-gray-500 leading-normal">
-                          <a href="#" className="text-blue-500 hover:underline font-semibold">Aday Çalışan Aydınlatma Metni</a>'ni okudum.
+                          <a href="#" className="text-blue-500 hover:underline font-semibold">{t('career.form.kvkk_link', {defaultValue: 'Aday Çalışan Aydınlatma Metni'})}</a>'ni {t('career.form.read_approved', {defaultValue: 'okudum.'})}
                         </span>
                       </label>
 
@@ -918,7 +1032,7 @@ export default function CareerPage() {
                           className="mt-0.5 rounded text-blue-500 focus:ring-blue-400 w-3.5 h-3.5 border-gray-300 cursor-pointer"
                         />
                         <span className="text-[10px] text-gray-500 leading-normal">
-                          Mevcut ilan dışında doğabilecek uygun pozisyonlar için CV bilgilerimin değerlendirilmesine izin veriyorum.
+                          {t('career.form.cv_consent_label', {defaultValue: 'Mevcut ilan dışında doğabilecek uygun pozisyonlar için CV bilgilerimin değerlendirilmesine izin veriyorum.'})}
                         </span>
                       </label>
                     </div>
@@ -936,14 +1050,14 @@ export default function CareerPage() {
                       disabled={submitting}
                       className="w-full py-3.5 bg-[#22ABE6] hover:bg-[#1a8fc2] disabled:opacity-70 disabled:cursor-not-allowed text-white font-bold text-xs rounded-xl shadow-md shadow-blue-500/10 hover:shadow-lg transition-all duration-200 transform active:scale-[0.98] cursor-pointer"
                     >
-                      {submitting ? 'Gönderiliyor...' : 'Başvuruyu Gönder'}
+                      {submitting ? t('common.sending', {defaultValue: 'Gönderiliyor...'}) : t('career.form.submit_btn', {defaultValue: 'Başvuruyu Gönder'})}
                     </button>
 
                     <div className="flex items-center justify-center gap-1.5 text-[10px] text-gray-400 text-center pt-2">
                       <svg className="w-3.5 h-3.5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
                       </svg>
-                      <span>Kişisel verileriniz KVKK kapsamında güvenli bir şekilde korunmaktadır.</span>
+                      <span>{t('career.form.security_label', {defaultValue: 'Kişisel verileriniz KVKK kapsamında güvenli bir şekilde korunmaktadır.'})}</span>
                     </div>
                   </form>
                 )}
@@ -962,20 +1076,20 @@ export default function CareerPage() {
             {/* LEFT COLUMN: Staj Programları */}
             <div>
               <div className="mb-8">
-                <h2 className="text-3xl font-extrabold text-gray-900 tracking-tight">Staj ve Yeni Mezun Programları</h2>
-                <p className="text-xs text-gray-500 mt-2 font-light">Geleceğin profesyonellerini yetiştiriyoruz.</p>
+                <h2 className="text-3xl font-extrabold text-gray-900 tracking-tight">{t('career.internship_programs', {defaultValue: 'Staj ve Yeni Mezun Programları'})}</h2>
+                <p className="text-xs text-gray-500 mt-2 font-light">{t('career.internships_subtitle', {defaultValue: 'Geleceğin profesyonellerini yetiştiriyoruz.'})}</p>
               </div>
 
               {/* Programs List */}
               <div className="space-y-4">
-                {INTERNSHIPS.map((prog, index) => (
+                {internships.map((prog, index) => (
                   <div 
                     key={index}
                     onClick={() => {
                       setForm((prev) => ({
                         ...prev,
                         department: 'Staj / Yeni Mezun',
-                        note: `Sayın Yetkili,\n\n${prog.title} programı hakkında başvuruda bulunmak istiyorum.`,
+                        note: t('career.internships.apply_note_prefix', {defaultValue: `Sayın Yetkili,\n\n${prog.title} programı hakkında başvuruda bulunmak istiyorum.`, title: prog.title}),
                       }))
                       applyFormRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' })
                     }}
@@ -1002,21 +1116,21 @@ export default function CareerPage() {
                   setForm((prev) => ({
                     ...prev,
                     department: 'Staj / Yeni Mezun',
-                    note: 'Sayın Yetkili,\n\nStaj programı / Yeni mezun gelişim programı hakkında başvuruda bulunmak istiyorum.',
+                    note: t('career.internships.general_note', {defaultValue: 'Sayın Yetkili,\n\nStaj programı / Yeni mezun gelişim programı hakkında başvuruda bulunmak istiyorum.'}),
                   }))
                   applyFormRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' })
                 }}
                 className="mt-6 px-6 py-2.5 border border-[#22ABE6] text-[#22ABE6] font-semibold text-xs rounded-full hover:bg-[#22ABE6] hover:text-white transition-all duration-200 cursor-pointer"
               >
-                Staj Başvurusu Yap
+                {t('career.internships.apply_btn', {defaultValue: 'Staj Başvurusu Yap'})}
               </button>
             </div>
 
             {/* RIGHT COLUMN: Çalışanlarımız Anlatıyor (Interactive Slider) */}
             <div>
               <div className="mb-8">
-                <h2 className="text-3xl font-extrabold text-gray-900 tracking-tight">Çalışanlarımız Anlatıyor</h2>
-                <p className="text-xs text-gray-500 mt-2 font-light">Polgün'de çalışmak nasıl bir deneyim? Onlardan dinleyin.</p>
+                <h2 className="text-3xl font-extrabold text-gray-900 tracking-tight">{t('career.testimonials_title', {defaultValue: 'Çalışanlarımız Anlatıyor'})}</h2>
+                <p className="text-xs text-gray-500 mt-2 font-light">{t('career.testimonials_subtitle', {defaultValue: 'Polgün\'de çalışmak nasıl bir deneyim? Onlardan dinleyin.'})}</p>
               </div>
 
               {/* Slider Area */}
@@ -1048,8 +1162,8 @@ export default function CareerPage() {
                     {/* Circle Avatar Image */}
                     <div className="w-20 h-20 rounded-full overflow-hidden border-2 border-white shadow-md mb-4 bg-gray-200 relative">
                       <img 
-                        src={TESTIMONIALS[currentSlide].img} 
-                        alt={TESTIMONIALS[currentSlide].name}
+                        src={testimonials[currentSlide].img} 
+                        alt={testimonials[currentSlide].name}
                         className="w-full h-full object-cover" 
                       />
                     </div>
@@ -1058,7 +1172,7 @@ export default function CareerPage() {
                     <div className="relative px-4 animate-fade-in">
                       <span className="absolute top-[-10px] left-0 text-3xl text-blue-200 font-serif">“</span>
                       <p className="text-xs lg:text-sm text-gray-700 italic leading-relaxed font-light py-2">
-                        {TESTIMONIALS[currentSlide].quote}
+                        {testimonials[currentSlide].quote}
                       </p>
                       <span className="absolute bottom-[-20px] right-0 text-3xl text-blue-200 font-serif">”</span>
                     </div>
@@ -1066,16 +1180,16 @@ export default function CareerPage() {
 
                   {/* Profile Signature Details */}
                   <div className="text-center mt-6 pt-4 border-t border-gray-100">
-                    <h5 className="text-xs font-bold text-gray-900">{TESTIMONIALS[currentSlide].name}</h5>
+                    <h5 className="text-xs font-bold text-gray-900">{testimonials[currentSlide].name}</h5>
                     <p className="text-[10px] text-gray-400 font-semibold uppercase mt-0.5 tracking-wider">
-                      {TESTIMONIALS[currentSlide].role}
+                      {testimonials[currentSlide].role}
                     </p>
                   </div>
                 </div>
 
                 {/* Dots indicators */}
                 <div className="flex items-center justify-center gap-1.5 mt-5">
-                  {TESTIMONIALS.map((_, index) => (
+                  {testimonials.map((_, index) => (
                     <button 
                       key={index}
                       onClick={() => setCurrentSlide(index)}
@@ -1099,8 +1213,8 @@ export default function CareerPage() {
       <section className="py-24 bg-gray-50/50">
         <div className="max-w-[var(--layout-max)] mx-auto px-6 lg:px-12">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-extrabold text-gray-900 tracking-tight">Başvuru Sürecimiz</h2>
-            <p className="text-xs text-gray-500 mt-2 font-light">Şeffaf ve hızlı bir süreç ile adaylarimizi değerlendiriyoruz.</p>
+            <h2 className="text-3xl lg:text-4xl font-extrabold text-gray-900 tracking-tight">{t('career.process_title', {defaultValue: 'Başvuru Sürecimiz'})}</h2>
+            <p className="text-xs text-gray-500 mt-2 font-light">{t('career.process_subtitle', {defaultValue: 'Şeffaf ve hızlı bir süreç ile adaylarımızı değerlendiriyoruz.'})}</p>
             <div className="w-16 h-1 bg-[#22ABE6] mx-auto mt-4 rounded-full" />
           </div>
 
@@ -1110,7 +1224,7 @@ export default function CareerPage() {
             <div className="absolute top-10 left-8 right-8 h-0.5 border-t border-dashed border-gray-300 hidden lg:block -z-0" />
 
             <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8 lg:gap-4 relative z-10">
-              {PROCESS_STEPS.map((step, index) => (
+              {processSteps.map((step, index) => (
                 <div key={index} className="flex flex-col items-center text-center px-4 group">
                   {/* Step Ring */}
                   <div className="w-16 h-16 rounded-full bg-white border-2 border-gray-200 group-hover:border-[#22ABE6] transition-colors flex items-center justify-center shadow-sm relative mb-4">
@@ -1142,17 +1256,17 @@ export default function CareerPage() {
           >
             <div className="max-w-2xl text-white">
               <h2 className="text-2xl lg:text-3xl font-extrabold tracking-tight">
-                Sizin yeteneğiniz, bizim geleceğimiz.
+                {t('career.cta_title', {defaultValue: 'Sizin yeteneğiniz, bizim geleceğimiz.'})}
               </h2>
               <p className="text-sm text-white/80 font-light mt-3 leading-relaxed">
-                Polgün ailesine katılmak ve geleceğin projelerinde yer almak için bugün başvurunuzu yapın.
+                {t('career.cta_desc', {defaultValue: 'Polgün ailesine katılmak ve geleceğin projelerinde yer almak için bugün başvurunuzu yapın.'})}
               </p>
             </div>
             <a 
               href="#apply"
               className="px-8 py-3.5 bg-white text-[#2874B2] hover:text-[#22ABE6] hover:bg-gray-50 font-bold text-xs rounded-full transition-all duration-300 shrink-0 shadow-lg shadow-black/10 transform active:scale-95 cursor-pointer text-center"
             >
-              Genel Başvuru Yap
+              {t('career.general_apply', {defaultValue: 'Genel Başvuru Yap'})}
             </a>
           </div>
         </div>

@@ -3,6 +3,7 @@
 // Yeni gerçek görseller ile güncellenmiştir
 // ============================================================
 import { useState, useEffect, useRef } from 'react'
+import { useTranslation } from 'react-i18next'
 
 // Pirate Theme — yeni görseller
 import pirate1 from '../assets/splashTower/pirateThemeNew/pirate1.avif'
@@ -280,8 +281,29 @@ function SliderModal({ theme, isOpen, onClose }) {
 }
 
 export default function SplashTowerPage({ setActivePage }) {
+  const { t } = useTranslation()
   const [selectedTheme, setSelectedTheme] = useState(null)
   const [sliderOpen, setSliderOpen] = useState(false)
+
+  // Map theme descriptions and names dynamically
+  const translatedThemes = THEMES.map((theme) => {
+    let desc = theme.desc
+    if (theme.id === 'pirate') desc = t('splashtower.themes.pirate.desc', {defaultValue: theme.desc})
+    else if (theme.id === 'underwater') desc = t('splashtower.themes.underwater.desc', {defaultValue: theme.desc})
+    else if (theme.id === 'candy') desc = t('splashtower.themes.candy.desc', {defaultValue: theme.desc})
+    else if (theme.id === 'carnaval') desc = t('splashtower.themes.carnaval.desc', {defaultValue: theme.desc})
+    else if (theme.id === 'jurassic') desc = t('splashtower.themes.jurassic.desc', {defaultValue: theme.desc})
+    else if (theme.id === 'jungle') desc = t('splashtower.themes.jungle.desc', {defaultValue: theme.desc})
+    else if (theme.id === 'galaxy') desc = t('splashtower.themes.galaxy.desc', {defaultValue: theme.desc})
+    else if (theme.id === 'custom') desc = t('splashtower.themes.custom.desc', {defaultValue: theme.desc})
+
+    return {
+      ...theme,
+      name: t(`splashtower.themes.${theme.id}.name`, {defaultValue: theme.name}),
+      location: t(`splashtower.themes.${theme.id}.location`, {defaultValue: theme.location}),
+      desc
+    }
+  })
 
   return (
     <main className="pt-20" style={{ backgroundColor: 'var(--th-bg)' }}>
@@ -295,7 +317,7 @@ export default function SplashTowerPage({ setActivePage }) {
                 Splash<br />Tower
               </h1>
               <p className="text-white/50 text-lg leading-relaxed mt-4">
-                Farklı temalar ile tasarlanmış su kaydırakları ve eğlence alanları
+                {t('splashtower.hero_subtitle', {defaultValue: 'Farklı temalar ile tasarlanmış su kaydırakları ve eğlence alanları'})}
               </p>
             </div>
           </div>
@@ -306,11 +328,11 @@ export default function SplashTowerPage({ setActivePage }) {
       <section className="py-28" style={{ backgroundColor: 'var(--th-surface)' }}>
         <div className="max-w-7xl mx-auto px-6 max-w-[var(--layout-max)] lg:px-12 space-y-28">
 
-          {THEMES.map((theme, i) => (
+          {translatedThemes.map((theme, i) => (
             <div key={theme.id} className={`grid lg:grid-cols-2 gap-20 items-center ${i % 2 === 1 ? 'lg:[&>*:first-child]:order-2' : ''}`}>
               {/* Metin */}
               <div>
-                <p className="text-xs font-bold tracking-[0.25em] uppercase mb-5" style={{ color: 'var(--th-polgun-blue)' }}>Tema Kategorileri</p>
+                <p className="text-xs font-bold tracking-[0.25em] uppercase mb-5" style={{ color: 'var(--th-polgun-blue)' }}>{t('splashtower.theme_categories', {defaultValue: 'Tema Kategorileri'})}</p>
                 <h2 className="text-4xl font-black leading-tight mb-8" style={{ color: 'var(--th-text)' }}>
                   {theme.name}
                 </h2>
@@ -343,13 +365,13 @@ export default function SplashTowerPage({ setActivePage }) {
                 }} />
                 <div className="absolute bottom-0 left-0 right-0 p-8">
                   <div className="flex flex-wrap gap-2 mb-3">
-                    <GlassTag>{theme.slides.length} Görsel</GlassTag>
+                    <GlassTag>{theme.slides.length} {t('common.images', {defaultValue: 'Görsel'})}</GlassTag>
                     <GlassTag>{theme.year}</GlassTag>
                   </div>
                   <h2 className="text-2xl font-black text-white mb-1">{theme.name}</h2>
                   <p className="text-sm text-white/50 mb-4">{theme.location}</p>
                   <div className="flex items-center gap-2 text-white/60 text-xs font-semibold group-hover:text-white group-hover:gap-3 transition-all duration-200">
-                    İncele
+                    {t('common.view', {defaultValue: 'İncele'})}
                     <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7"/>
                     </svg>
