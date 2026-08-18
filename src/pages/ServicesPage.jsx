@@ -101,8 +101,9 @@ export default function ServicesPage({ setActivePage }) {
 								{t('services.subtitle').includes(' Tam ') ? <>{t('services.subtitle').split(' Tam ')[0]}<br />{t('services.subtitle').split(' Tam ')[1]}</> : t('services.subtitle')}
 							</h1>
 						</div>
-						<p className="text-white/50 text-lg leading-relaxed">
+						<p className="text-white/50 text-lg leading-relaxed text-justify">
 							{t('services.desc')}
+
 						</p>
 						<div className="flex gap-4 flex-wrap">
 							<button
@@ -157,11 +158,11 @@ export default function ServicesPage({ setActivePage }) {
 					<div className="text-center mb-20">
 						<p className="text-[11px] font-black tracking-[0.3em] uppercase mb-5 flex items-center justify-center gap-3" style={{ color: 'var(--th-polgun-blue)' }}>
 							<span className="inline-block w-6 h-px" style={{ backgroundColor: 'var(--th-polgun-blue)' }} />
-							{t('services.process_tag', {defaultValue: 'Hizmet Sürecimiz'})}
+							{t('services.process_tag', { defaultValue: 'Hizmet Sürecimiz' })}
 							<span className="inline-block w-6 h-px" style={{ backgroundColor: 'var(--th-polgun-blue)' }} />
 						</p>
 						<h2 className="font-black leading-tight" style={{ color: 'var(--th-text)', fontSize: 'clamp(2rem,4vw,3.5rem)' }}>
-							{t('services.process_title', {defaultValue: 'Başından sonuna her adımda yanınızdayız'})}
+							{t('services.process_title', { defaultValue: 'Başından sonuna her adımda yanınızdayız' })}
 						</h2>
 					</div>
 
@@ -184,7 +185,7 @@ export default function ServicesPage({ setActivePage }) {
 											<h2 className="font-black leading-tight" style={{ color: 'var(--th-text)', fontSize: 'clamp(1.5rem,2.5vw,2rem)' }}>{step.title}</h2>
 										</div>
 									</div>
-									<p className="leading-relaxed mb-8" style={{ color: 'color-mix(in srgb,var(--th-text-muted) 70%,transparent)' }}>{step.desc}</p>
+									<p className="leading-relaxed mb-8 text-justify" style={{ color: 'color-mix(in srgb,var(--th-text-muted) 70%,transparent)' }}>{step.desc}</p>
 
 								</div>
 
@@ -224,10 +225,10 @@ export default function ServicesPage({ setActivePage }) {
 						<div className="relative z-10 max-w-3xl mx-auto">
 							<p className="text-[11px] font-black tracking-[0.35em] uppercase mb-6 text-white/50"></p>
 							<h2 className="font-black text-white mb-8 leading-tight" style={{ fontSize: 'clamp(2rem,4vw,3.5rem)' }}>
-								{t('services.cta_title', {defaultValue: 'Hayalinizi birlikte inşa edelim'})}
+								{t('services.cta_title', { defaultValue: 'Hayalinizi birlikte inşa edelim' })}
 							</h2>
 							<p className="text-white/50 mb-12 max-w-lg mx-auto leading-relaxed">
-								{t('services.cta_desc', {defaultValue: 'Proje büyüklüğü ne olursa olsun, ilk günden son güne kadar yanınızdayız.'})}
+								{t('services.cta_desc', { defaultValue: 'Proje büyüklüğü ne olursa olsun, ilk günden son güne kadar yanınızdayız.' })}
 							</p>
 							<button
 								onClick={() => setActivePage('contact')}

@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
+import { useNavigate } from 'react-router-dom'
 // ============================================================
 // ABOUT PAGE — Gerçek metinler + Ödüller & Ziyaretler bölümü
 // ============================================================
@@ -23,8 +24,9 @@ import bursaFactory from '../assets/factories/bursa-factory.avif'
 import istanbulFactory from '../assets/factories/istanbul-factory.avif'
 import muglaFactory from '../assets/factories/mugla-factory.avif'
 
-export default function AboutPage({ setActivePage }) {
+export default function AboutPage() {
   const { t } = useTranslation()
+  const navigate = useNavigate()
   const [liveAwards, setLiveAwards] = useState([])
 
   useEffect(() => {
@@ -83,7 +85,7 @@ export default function AboutPage({ setActivePage }) {
   ]
 
   const tesciller = [
-    { title: t('awards.tesciller.benelux'), country: t('factories.names.france', {defaultValue: 'Benelux'}), file: '/documents/tesciller/Benelux-Tescil.pdf' },
+    { title: t('awards.tesciller.benelux'), country: t('factories.names.france', { defaultValue: 'Benelux' }), file: '/documents/tesciller/Benelux-Tescil.pdf' },
     { title: t('awards.tesciller.france'), country: t('factories.names.france'), file: '/documents/tesciller/Fransa-Tescil.pdf' },
     { title: t('awards.tesciller.spain'), country: t('factories.names.spain'), file: '/documents/tesciller/Ispanya-Tescil.pdf' },
     { title: t('awards.tesciller.egypt'), country: t('factories.names.egypt'), file: '/documents/tesciller/Misir-Tescil.pdf' },
@@ -114,7 +116,7 @@ export default function AboutPage({ setActivePage }) {
                 {t('about.experience')}
               </h1>
             </div>
-            <p className="text-white/50 text-lg leading-relaxed">
+            <p className="text-white/50 text-lg leading-relaxed text-justify ">
               {t('about.desc')}
             </p>
           </div>
@@ -126,17 +128,17 @@ export default function AboutPage({ setActivePage }) {
         <div className="max-w-7xl mx-auto px-6 max-w-[var(--layout-max)] lg:px-12">
           <div className="grid lg:grid-cols-2 gap-20 items-center">
             <div>
-              <p className="text-xs font-bold tracking-[0.25em] uppercase mb-5" style={{ color: 'var(--th-polgun-blue)' }}>{t('nav.about')}</p>
+              <p className="text-xs  font-bold tracking-[0.25em] uppercase mb-5" style={{ color: 'var(--th-polgun-blue)' }}>{t('nav.about')}</p>
               <h2 className="text-4xl font-black leading-tight mb-8" style={{ color: 'var(--th-text)' }}>
                 {t('about.power_title')}
               </h2>
-              <p className="leading-relaxed mb-6" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 70%, transparent)' }}>
+              <p className="text-justify leading-relaxed mb-6" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 70%, transparent)' }}>
                 {t('about.power_desc1')}
               </p>
-              <p className="leading-relaxed mb-6" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 70%, transparent)' }}>
+              <p className="text-justify leading-relaxed mb-6" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 70%, transparent)' }}>
                 {t('about.power_desc2')}
               </p>
-              <p className="leading-relaxed" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 70%, transparent)' }}>
+              <p className="text-justify leading-relaxed" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 70%, transparent)' }}>
                 {t('about.power_desc3')}
               </p>
             </div>
@@ -154,25 +156,25 @@ export default function AboutPage({ setActivePage }) {
               <h2 className="text-3xl font-black leading-tight mb-6" style={{ color: 'var(--th-text)' }}>
                 {t('about.arge_title')}
               </h2>
-              <p className="leading-relaxed mb-6" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 70%, transparent)' }}>
+              <p className="text-justify leading-relaxed mb-6" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 70%, transparent)' }}>
                 {t('about.arge_desc1')}
               </p>
-              <p className="leading-relaxed mb-6" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 70%, transparent)' }}>
+              <p className="text-justify leading-relaxed mb-6" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 70%, transparent)' }}>
                 {t('about.arge_desc2')}
               </p>
-              <p className="leading-relaxed mb-8" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 70%, transparent)' }}>
+              <p className="text-justify leading-relaxed mb-8" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 70%, transparent)' }}>
                 {t('about.arge_desc3')}
               </p>
               <div className="grid sm:grid-cols-2 gap-4">
                 <div className="p-5 rounded-2xl" style={{ backgroundColor: 'color-mix(in srgb, var(--th-polgun-blue) 8%, transparent)', border: '1px solid color-mix(in srgb, var(--th-polgun-blue) 15%, transparent)' }}>
                   <p className="text-xs font-black tracking-widest uppercase mb-2" style={{ color: 'var(--th-polgun-blue)' }}>{t('about.misyon')}</p>
-                  <p className="text-sm leading-relaxed" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 70%, transparent)' }}>
+                  <p className="text-sm text-justify leading-relaxed" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 70%, transparent)' }}>
                     {t('about.misyon_desc')}
                   </p>
                 </div>
                 <div className="p-5 rounded-2xl" style={{ backgroundColor: 'color-mix(in srgb, var(--th-primary) 8%, transparent)', border: '1px solid color-mix(in srgb, var(--th-primary) 15%, transparent)' }}>
                   <p className="text-xs font-black tracking-widest uppercase mb-2" style={{ color: 'var(--th-primary)' }}>{t('about.vizyon')}</p>
-                  <p className="text-sm leading-relaxed" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 70%, transparent)' }}>
+                  <p className="text-sm text-justify leading-relaxed" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 70%, transparent)' }}>
                     {t('about.vizyon_desc')}
                   </p>
                 </div>
@@ -204,7 +206,7 @@ export default function AboutPage({ setActivePage }) {
           <div className="text-center mb-20">
             <p className="text-xs font-bold tracking-[0.25em] uppercase mb-4" style={{ color: 'var(--th-polgun-blue)' }}>{t('about.production_title')}</p>
             <h2 className="text-4xl font-black mb-6" style={{ color: 'var(--th-text)' }}>{t('about.production_subtitle')}</h2>
-            <p className="max-w-2xl mx-auto leading-relaxed" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 70%, transparent)' }}>
+            <p className="max-w-2xl mx-auto text-justify leading-relaxed" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 70%, transparent)' }}>
               {t('about.production_desc')}
             </p>
           </div>
@@ -213,7 +215,7 @@ export default function AboutPage({ setActivePage }) {
               <div key={i} className={`grid lg:grid-cols-2 gap-16 items-center ${i % 2 === 1 ? 'lg:[&>*:first-child]:order-2' : ''}`}>
                 <div>
                   <h3 className="text-2xl font-black mb-5" style={{ color: 'var(--th-text)' }}>{t('about.production_sections.' + sec.id + '.title')}</h3>
-                  <p className="leading-relaxed" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 70%, transparent)' }}>{t('about.production_sections.' + sec.id + '.desc')}</p>
+                  <p className="text-justify leading-relaxed" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 70%, transparent)' }}>{t('about.production_sections.' + sec.id + '.desc')}</p>
                 </div>
                 <div className={sec.img2 ? 'grid grid-cols-2 gap-3' : ''}>
                   <img src={sec.img} alt={t('about.production_sections.' + sec.id + '.title')} className="w-full aspect-[4/3] rounded-2xl object-cover" />
@@ -224,11 +226,11 @@ export default function AboutPage({ setActivePage }) {
           </div>
           <div className="mt-20 text-center">
             <h3 className="text-3xl font-black mb-4" style={{ color: 'var(--th-text)' }}>{t('about.production_power')}</h3>
-            <p className="mb-8 max-w-lg mx-auto" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 70%, transparent)' }}>
+            <p className="mb-8 max-w-lg mx-auto text-center" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 70%, transparent)' }}>
               {t('about.production_power_desc')}
             </p>
             <button
-              onClick={() => setActivePage('projects')}
+              onClick={() => navigate('/projects')}
               className="px-8 py-3.5 text-sm font-bold rounded-full transition-all duration-200 hover:-translate-y-0.5"
               style={{ backgroundColor: 'var(--th-primary)', color: '#fff' }}
               onMouseEnter={(e) => e.currentTarget.style.opacity = '0.85'}
@@ -277,7 +279,7 @@ export default function AboutPage({ setActivePage }) {
 
           {/* Ziyaretler */}
           <div>
-            <h3 className="text-xl font-black mb-10" style={{ color: 'var(--th-text)' }}>🤝 {t('awards.visits.title', {defaultValue: 'Kurumsal Ziyaretler'})}</h3>
+            <h3 className="text-xl font-black mb-10" style={{ color: 'var(--th-text)' }}>🤝 {t('awards.visits.title', { defaultValue: 'Kurumsal Ziyaretler' })}</h3>
             <div className="grid sm:grid-cols-2 gap-6">
               {visits.map((visit, i) => (
                 <div key={i} className="rounded-2xl overflow-hidden group" style={{ backgroundColor: 'var(--th-surface)', border: '1px solid color-mix(in srgb, var(--th-border) 12%, transparent)', boxShadow: '0 4px 24px rgba(0,0,0,0.06)' }}>
@@ -298,7 +300,7 @@ export default function AboutPage({ setActivePage }) {
             <h3 className="text-2xl font-black text-white mb-3">{t('home.cta_title')}</h3>
             <p className="text-white/70 mb-6 max-w-lg mx-auto">{t('about.production_power_desc')}</p>
             <button
-              onClick={() => setActivePage('contact')}
+              onClick={() => navigate('/contact')}
               className="px-8 py-3.5 text-sm font-bold rounded-full transition-all duration-200 hover:-translate-y-0.5"
               style={{ backgroundColor: '#fff', color: 'var(--th-primary-darker)' }}
             >
@@ -316,13 +318,13 @@ export default function AboutPage({ setActivePage }) {
             <h2 className="text-4xl font-black mb-6" style={{ color: 'var(--th-text)' }}>{t('history.growing_power')}</h2>
           </div>
           <div className="max-w-3xl mx-auto mb-16 text-center">
-            <p className="leading-relaxed mb-6" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 70%, transparent)' }}>
+            <p className="leading-relaxed text-justify mb-6" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 70%, transparent)' }}>
               {t('history.desc1')}
             </p>
-            <p className="leading-relaxed mb-6" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 70%, transparent)' }}>
+            <p className="leading-relaxed text-justify mb-6" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 70%, transparent)' }}>
               {t('history.desc2')}
             </p>
-            <p className="leading-relaxed font-bold" style={{ color: 'var(--th-polgun-blue)' }}>
+            <p className="leading-relaxed text-justify font-bold" style={{ color: 'var(--th-polgun-blue)' }}>
               {t('history.bold_summary')}
             </p>
           </div>
@@ -335,7 +337,7 @@ export default function AboutPage({ setActivePage }) {
                 <div className="p-6">
                   <span className="text-xs font-black tracking-widest uppercase px-2.5 py-1 rounded-full mb-3 inline-block" style={{ backgroundColor: 'color-mix(in srgb, var(--th-primary) 10%, transparent)', color: 'var(--th-primary)' }}>{fac.city}</span>
                   <h4 className="font-black text-base mb-2" style={{ color: 'var(--th-text)' }}>{fac.label}</h4>
-                  <p className="text-sm leading-relaxed" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 70%, transparent)' }}>{fac.desc}</p>
+                  <p className="text-sm text-justify  leading-relaxed" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 70%, transparent)' }}>{fac.desc}</p>
                 </div>
               </div>
             ))}
@@ -350,7 +352,7 @@ export default function AboutPage({ setActivePage }) {
 
             {/* Tesciller */}
             <div>
-              <p className="text-xs font-bold tracking-[0.25em] uppercase mb-4" style={{ color: 'var(--th-polgun-blue)' }}>{t('awards.patent_title', {defaultValue: 'Fikri Mülkiyet'})}</p>
+              <p className="text-xs font-bold tracking-[0.25em] uppercase mb-4" style={{ color: 'var(--th-polgun-blue)' }}>{t('awards.patent_title', { defaultValue: 'Fikri Mülkiyet' })}</p>
               <h2 className="text-3xl font-black mb-8" style={{ color: 'var(--th-text)' }}>{t('nav.awards')}</h2>
               <div className="flex flex-col gap-3">
                 {tesciller.map((t, i) => (
@@ -362,7 +364,7 @@ export default function AboutPage({ setActivePage }) {
                       <span className="text-sm font-semibold" style={{ color: 'var(--th-text)' }}>{t.title}</span>
                     </div>
                     <svg className="w-4 h-4 shrink-0 ml-3 group-hover:translate-x-0.5 transition-transform" style={{ color: 'var(--th-primary)' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                     </svg>
                   </a>
                 ))}
@@ -371,8 +373,8 @@ export default function AboutPage({ setActivePage }) {
 
             {/* Kalite Belgeleri */}
             <div>
-              <p className="text-xs font-bold tracking-[0.25em] uppercase mb-4" style={{ color: 'var(--th-polgun-blue)' }}>{t('awards.cert_title', {defaultValue: 'Sertifikalar'})}</p>
-              <h2 className="text-3xl font-black mb-8" style={{ color: 'var(--th-text)' }}>{t('awards.cert_subtitle', {defaultValue: 'Kalite Belgelerimiz'})}</h2>
+              <p className="text-xs font-bold tracking-[0.25em] uppercase mb-4" style={{ color: 'var(--th-polgun-blue)' }}>{t('awards.cert_title', { defaultValue: 'Sertifikalar' })}</p>
+              <h2 className="text-3xl font-black mb-8" style={{ color: 'var(--th-text)' }}>{t('awards.cert_subtitle', { defaultValue: 'Kalite Belgelerimiz' })}</h2>
               <div className="flex flex-col gap-4">
                 {kaliteBelgeleri.map((kb, i) => (
                   <a key={i} href={kb.file} target="_blank" rel="noopener noreferrer"
@@ -386,7 +388,7 @@ export default function AboutPage({ setActivePage }) {
                       <div className="text-sm mt-0.5" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 60%, transparent)' }}>{kb.desc}</div>
                     </div>
                     <svg className="w-4 h-4 ml-auto shrink-0 group-hover:translate-x-0.5 transition-transform" style={{ color: 'var(--th-primary)' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                     </svg>
                   </a>
                 ))}

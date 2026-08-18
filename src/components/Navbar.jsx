@@ -37,12 +37,12 @@ export default function Navbar({ activePage, setActivePage, colorPalette, locati
         {
           title: null,
           links: [
-            { label: t('nav.planning'), desc: '', page: 'services', anchor: 'planlama', to: '/services?anchor=planlama' },
-            { label: t('nav.design'), desc: '', page: 'services', anchor: 'tasarim', to: '/services?anchor=tasarim' },
-            { label: t('nav.engineering'), desc: '', page: 'services', anchor: 'muhendislik', to: '/services?anchor=muhendislik' },
-            { label: t('nav.installation'), desc: '', page: 'services', anchor: 'montaj', to: '/services?anchor=montaj' },
-            { label: t('nav.maintenance'), desc: '', page: 'services', anchor: 'bakim-onarim', to: '/services?anchor=bakim-onarim' },
-            { label: t('nav.renovation'), desc: '', page: 'services', anchor: 'bakim-onarim', to: '/services?anchor=bakim-onarim' },
+            { label: t('nav.planning'), desc: '', page: 'services', anchor: 'urun-tasarimi-ve-temalandirma', to: '/services?anchor=urun-tasarimi-ve-temalandirma  ' },
+            { label: t('nav.design'), desc: '', page: 'services', anchor: 'muhendislik-ve-projelendirme', to: '/services?anchor=muhendislik-ve-projelendirme' },
+            { label: t('nav.engineering'), desc: '', page: 'services', anchor: 'uretim', to: '/services?anchor=uretim' },
+            { label: t('nav.installation'), desc: '', page: 'services', anchor: 'proje-yonetimi-ve-sevkiyat', to: '/services?anchor=proje-yonetimi-ve-sevkiyat' },
+            { label: t('nav.maintenance'), desc: '', page: 'services', anchor: 'montaj-ve-devreye-alma', to: '/services?anchor=montaj-ve-devreye-alma' },
+
           ],
         },
       ],

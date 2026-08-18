@@ -25,12 +25,11 @@
   },
   "nav": {
     "services": "Hizmetlerimiz",
-    "planning": "Planlama",
-    "design": "Tasarım",
-    "engineering": "Mühendislik",
-    "installation": "Kurulum & Montaj",
-    "maintenance": "Bakım & Onarım",
-    "renovation": "Yenileme",
+    "planning": "Ürün Tasarımı ve Temalandırma",
+    "design": "Mühendislik ve Projelendirme",
+    "engineering": "Üretim",
+    "installation": "Proje Yönetimi ve Sevkiyat",
+    "maintenance": "Montaj ve Devreye Alma",
     "projects": "Projelerimiz",
     "products": "Ürünlerimiz",
     "categories": "Ürün Kategorileri",
@@ -765,7 +764,7 @@
       "2021": "Bakanlık onaylı Ar-Ge Merkezi statüsü kazanıldı — Muğla'nın ilk ve tek Ar-Ge Merkezi.",
       "2022": "Antalya fabrikası kuruldu, İspanya ofisi açıldı.",
       "2024": "Bursa fabrika yatırımıyla toplam 120.000 m² üretim alanına ulaşıldı.",
-      "2025": "Marmara Teknokark ofisi ile üniversite-sanayi iş birliği güçlendirildi."
+      "2025": "Marmara Teknopark ofisi ile üniversite-sanayi iş birliği güçlendirildi."
     },
     "milestones_tag": "Kilometre Taşları"
   },

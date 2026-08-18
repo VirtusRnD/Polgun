@@ -42,8 +42,8 @@ export default function HistoryPage({ setActivePage }) {
       <section className="py-28" style={{ backgroundColor: 'var(--th-surface)' }}>
         <div className="max-w-4xl mx-auto px-6 lg:px-12">
           <div className="text-center mb-16">
-            <p className="text-xs font-bold tracking-[0.25em] uppercase mb-4" style={{ color: 'var(--th-polgun-blue)' }}>{t('history.milestones_tag', {defaultValue: 'Kilometre Taşları'})}</p>
-            <h2 className="text-4xl font-black" style={{ color: 'var(--th-text)' }}>{t('history.growth_title', {defaultValue: 'Büyüme Hikayemiz'})}</h2>
+            <p className="text-xs font-bold tracking-[0.25em] uppercase mb-4" style={{ color: 'var(--th-polgun-blue)' }}>{t('history.milestones_tag', { defaultValue: 'Kilometre Taşları' })}</p>
+            <h2 className="text-4xl font-black" style={{ color: 'var(--th-text)' }}>{t('history.growth_title', { defaultValue: 'Büyüme Hikayemiz' })}</h2>
           </div>
 
           <div className="relative">
