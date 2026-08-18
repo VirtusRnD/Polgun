@@ -32,7 +32,7 @@ import kaec from '../assets/products/KAEC-RixosJeddah-SaudiArabia.avif'
 import navatu from '../assets/products/navatu.avif'
 import nickelodeon from '../assets/products/NickelodeonHotel-Antalya.avif'
 import navatu1 from '../assets/navatu/navatu1.avif'
-import pirate1 from '../assets/splash/pirateTheme/1001.avif'
+import pirate1 from '../assets/splashTower/pirateTheme/1001.avif'
 
 import rixosKaec from '../assets/hero/3.RixosKAEC.avif'
 import pantheon from '../assets/hero/4.PantheonWaterpark.avif'

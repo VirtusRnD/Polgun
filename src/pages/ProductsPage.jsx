@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import { Link, useNavigate } from 'react-router-dom' // useNavigate eklendi
 import heroImage from '../assets/polgun-featured-projects-4.avif'
 import underwater1 from '../assets/hero/13.MaxeriaBlue.avif'
-import pirate1 from '../assets/splash/pirateTheme/1001.avif'
+import pirate1 from '../assets/splashTower/pirateTheme/1001.avif'
 import navatu1 from '../assets/navatu/navatu1.avif'
 import navatu2 from '../assets/navatu/navatu2.avif'
 import savana1 from '../assets/savana/savana1.avif'
@@ -475,7 +475,7 @@ const PRODUCTS = [
 		category: 'Classic Slides',
 		title: 'Body Slide',
 		sub: '',
-		desc: `Body Slide, akıcı ve keyifli bir kayma deneyimi sunan klasik bir vücut kaydırağıdır. Çok yönlü tasarımı sayesinde bağımsız bir atraksiyon olarak kullanılabileceği gibi daha büyük kaydırak komplekslerine de kolayca entegre edilebilir. Zamansız tasarımı, geniş kullanıcı kitlesine hitap eden yapısı ve yüksek uyarlanabilirliğiyle su parklar`,
+		desc: `Body Slide, canlı renkleri ve RTM teknolojisiyle kullanıcılara akıcı, konforlu ve keyifli bir kayma deneyimi sunan klasik su kaydırağı modellerinden biridir. Esnek ve uyarlanabilir yapısı sayesinde, tek başına bir atraksiyon olarak veya farklı kaydırak kombinasyonlarının bir parçası şeklinde her türlü su parkına kolaylıkla entegre edilebilir. Zamansız tasarımı ve geniş kullanım alanıyla Body Slide, su parkları için vazgeçilmez kaydırak çözümlerinden biridir.`,
 		specs: [],
 		img: bodyslideImg,
 		imgAlt: 'Body Slide',
@@ -780,25 +780,7 @@ export default function ProductsPage() {
 										>
 											Teklif Al
 										</button>
-										<button
-											className="px-5 py-3 text-sm font-bold rounded-full transition-all duration-200 hover:-translate-y-0.5"
-											style={{
-												border:
-													`1px solid var(--th-polgun-blue)`,
-												color: 'var(--th-polgun-blue)',
-											}}
-											onMouseEnter={(e) => {
-												e.currentTarget.style.borderColor = 'var(--th-primary)';
-												e.currentTarget.style.color = 'var(--th-primary)'
-											}}
-											onMouseLeave={(e) => {
-												e.currentTarget.style.borderColor =
-													`var(--th-polgun-blue)`
-												e.currentTarget.style.color = 'var(--th-polgun-blue)'
-											}}
-										>
-											Detaylar
-										</button>
+									
 									</div>
 								</div>
 							</article>

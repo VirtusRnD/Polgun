@@ -30,6 +30,7 @@ import HistoryPage from './pages/HistoryPage'
 import AwardsPage from './pages/AwardsPage'
 import NewsPage from './pages/NewsPage'
 import { COLOR_PALETTES } from './constants/colorPalettes'
+import SplashZone from './pages/SplashZone';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -105,6 +106,7 @@ const pageToPathMapping = {
   home: '/',
   products: '/products',
   'splash-tower': '/splash-tower',
+  'splash-zone': '/splash-zone',
   services: '/services',
   projects: '/projects',
   about: '/about',
@@ -165,6 +167,7 @@ export default function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/products" element={<ProductsPage />} />
           <Route path="/splash-tower" element={<SplashTowerPage />} />
+          <Route path="/splash-zone" element={<SplashZone/>} />
           <Route path="/services" element={<ServicesPage />} />
           <Route path="/projects" element={<ProjectsPage />} />
           <Route path="/about" element={<AboutPage />} />

@@ -7,6 +7,14 @@ import { Link } from 'react-router-dom';
 import polgunLogo from '../assets/logoPolgun.png';
 
 // ── Menü Yapısı (WWW ile birebir karşılıklı) ───────────────
+const LANGUAGES = [
+  { code: 'tr', name: 'Türkçe', flag: '/src/assets/flags/tr.svg' },
+  { code: 'en', name: 'English', flag: '/src/assets/flags/en.svg' },
+  { code: 'es', name: 'Español', flag: '/src/assets/flags/es.svg' },
+  { code: 'ar', name: 'العربية', flag: '/src/assets/flags/ar.svg' },
+  { code: 'ru', name: 'Русский', flag: '/src/assets/flags/ru.svg' },
+];
+
 const NAV_ITEMS = [
   {
     id: 'services',
@@ -44,24 +52,10 @@ const NAV_ITEMS = [
         title: 'Ürün Kategorileri',
         links: [
           { label: 'Su Kaydırakları',        desc: '', page: 'products', to: '/products' },
-          { label: 'Splash Tower',  desc: '',           page: 'splash-tower', to: '/splash-tower' },
-          { label: 'Splash Zone',               desc: '',        page: 'products', to: '/products' },
+          { label: 'Splash Tower',  desc: '',            page: 'splash-tower', to: '/splash-tower' },
+          { label: 'Splash Zone',               desc: '',        page: 'splash-zone', to: '/splash-zone' },
                 ],
       },
-      /*{
-        title: 'Mekan Tipleri',
-        links: [
-          { label: 'Açık Hava Su Parkları',  desc: null, page: 'products' },
-          { label: 'Kapalı Su Parkları',     desc: null, page: 'products' },
-          { label: 'Eğlence & Tema Parkları',desc: null, page: 'products' },
-          { label: 'Oteller & Tatil Köyleri',desc: null, page: 'products' },
-          { label: 'Cruise Gemileri & Adalar',desc: null, page: 'products' },
-          { label: 'Belediye & Kamu',        desc: null, page: 'products' },
-          { label: 'Sörf & Spor Alanları',   desc: null, page: 'products' },
-          { label: 'Zoo & Akvaryumlar',      desc: null, page: 'products' },
-          { label: 'Özel & Rezidans',        desc: null, page: 'products' },
-        ],
-      },*/
     ],
   },
   {
@@ -103,7 +97,13 @@ export default function Navbar({ activePage, setActivePage, colorPalette, locati
   const [openMenu, setOpenMenu]       = useState(null)   // mega açık menü id'si
   const [mobileOpen, setMobileOpen]   = useState(false)
   const [mobileExpanded, setMobileExpanded] = useState(null)
+  
+  // ── Dil Seçimi State'leri ──
+  const [currentLang, setCurrentLang] = useState(LANGUAGES[0])
+  const [langOpen, setLangOpen]       = useState(false)
+  
   const closeTimer = useRef(null)
+  const langCloseTimer = useRef(null)
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40)
@@ -128,12 +128,21 @@ export default function Navbar({ activePage, setActivePage, colorPalette, locati
   }, [location.search])
 
   // hover ile açma — kısa gecikme ile kapanma (UX)
-    const onEnter = (id) => {
+  const onEnter = (id) => {
     clearTimeout(closeTimer.current)
     setOpenMenu(id)
   }
   const onLeave = () => {
     closeTimer.current = setTimeout(() => setOpenMenu(null), 120)
+  }
+
+  // Dil menüsü için hover metodları
+  const onLangEnter = () => {
+    clearTimeout(langCloseTimer.current)
+    setLangOpen(true)
+  }
+  const onLangLeave = () => {
+    langCloseTimer.current = setTimeout(() => setLangOpen(false), 120)
   }
 
   // Navbar stil durumu
@@ -251,6 +260,7 @@ export default function Navbar({ activePage, setActivePage, colorPalette, locati
                               style={{ '--hover-bg': 'var(--th-bg)' }}
                               onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'var(--th-bg)'}
                               onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}
+                              onClick={() => handleNav(link.page)}
                             >
                               {/* Aksent bullet */}
                               <span className="mt-1.5 w-1.5 h-1.5 rounded-full shrink-0 transition-colors"
@@ -311,19 +321,80 @@ export default function Navbar({ activePage, setActivePage, colorPalette, locati
           ))}
         </ul>
 
-        {/* ══ Sağ: CTA ══ */}
+        {/* ══ Sağ: CTA ve Dil Seçimi ══ */}
         <div className="hidden lg:flex items-center gap-4 shrink-0">
+          
+          {/* ══ Dil Seçeneği Dropdown ══ */}
+          <div 
+            className="relative flex items-center h-full"
+            onMouseEnter={onLangEnter}
+            onMouseLeave={onLangLeave}
+          >
+            <button className="flex items-center gap-2 px-2 py-2 rounded-full transition-all duration-200 opacity-90 hover:opacity-100">
+              <img 
+                src={currentLang.flag} 
+                alt={currentLang.name} 
+                className="w-5 h-5 rounded-full object-cover border" 
+                style={{ borderColor: 'color-mix(in srgb, var(--th-border) 30%, transparent)' }}
+              />
+              <span 
+                className="text-sm font-semibold uppercase"
+                style={isLightNavbar ? {
+                  color: 'var(--th-text)',
+                  textShadow: '0 1px 2px rgba(255,255,255,0.5)',
+                } : {
+                  color: 'var(--th-text)',
+                }}
+              >
+                {currentLang.code}
+              </span>
+            </button>
+
+            {/* Dil Menü Paneli */}
+            <div
+              className={`absolute top-[45px] right-0 shadow-lg rounded-xl overflow-hidden transition-all duration-200 origin-top
+                ${langOpen ? 'opacity-100 translate-y-0 pointer-events-auto' : 'opacity-0 -translate-y-2 pointer-events-none'}`}
+              style={{
+                backgroundColor: 'var(--th-surface)',
+                border: '1px solid color-mix(in srgb, var(--th-border) 8%, transparent)',
+                minWidth: '130px'
+              }}
+            >
+              <div className="p-1.5 flex flex-col gap-0.5">
+                {LANGUAGES.map((lang) => (
+                  <button
+                    key={lang.code}
+                    onClick={() => {
+                      setCurrentLang(lang);
+                      setLangOpen(false);
+                    }}
+                    className="flex items-center gap-3 px-3 py-2 rounded-lg transition-colors text-sm font-medium w-full text-left"
+                    style={{ 
+                      color: 'var(--th-text)',
+                      backgroundColor: currentLang.code === lang.code ? 'var(--th-bg)' : 'transparent' 
+                    }}
+                    onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'var(--th-bg)'}
+                    onMouseLeave={(e) => e.currentTarget.style.backgroundColor = currentLang.code === lang.code ? 'var(--th-bg)' : 'transparent'}
+                  >
+                    <img src={lang.flag} alt={lang.name} className="w-4 h-4 rounded-full object-cover border" style={{ borderColor: 'color-mix(in srgb, var(--th-border) 30%, transparent)' }} />
+                    {lang.name}
+                  </button>
+                ))}
+              </div>
+            </div>
+          </div>
+          {/* ═════════════════════════════ */}
+
           {/* İletişim & Teklif Al */}
           <Link
             to="/contact"
-            className={`text-sm font-semibold px-5 py-2 rounded-full transition-all duration-200`}
+            className={`text-sm font-semibold px-2 py-2 rounded-full transition-all duration-200`}
             style={isLightNavbar ? {
               color: 'var(--th-text)',
               textShadow: '0 1px 2px rgba(255,255,255,0.5)',
             } : {
               color: 'var(--th-text)',
             }}
-
           >
             İletişim
           </Link>
@@ -463,11 +534,29 @@ export default function Navbar({ activePage, setActivePage, colorPalette, locati
             </div>
           ))}
 
-          {/* Mobile CTA */}
-          <div className="flex flex-col gap-3 pt-5 pb-2">
+          {/* Mobile CTA & Dil Seçimi */}
+          <div className="flex flex-col gap-4 pt-5 pb-2">
+            
+            {/* Mobil Dil Seçimi */}
+            <div className="flex gap-2 justify-center mb-2">
+              {LANGUAGES.map((lang) => (
+                <button
+                  key={lang.code}
+                  onClick={() => setCurrentLang(lang)}
+                  className="p-1 rounded-full transition-transform"
+                  style={{ 
+                    transform: currentLang.code === lang.code ? 'scale(1.15)' : 'scale(1)',
+                    opacity: currentLang.code === lang.code ? 1 : 0.6
+                  }}
+                >
+                  <img src={lang.flag} alt={lang.name} className="w-6 h-6 rounded-full object-cover shadow-sm" />
+                </button>
+              ))}
+            </div>
+
             <Link
               to="/contact"
-              className="w-full py-3.5 ps-6 text-white text-sm font-bold rounded-full transition-all duration-300"
+              className="w-full py-3.5 ps-6 text-white text-sm font-bold rounded-full transition-all duration-300 text-center"
               style={{
                 backgroundColor: 'var(--th-polgun-blue)',
               }}
@@ -482,7 +571,7 @@ export default function Navbar({ activePage, setActivePage, colorPalette, locati
             </Link>
             <Link
               to="/contact"
-              className="w-full py-3.5 ps-6 text-sm font-semibold rounded-full transition-all duration-300 border-2"
+              className="w-full py-3.5 ps-6 text-sm font-semibold rounded-full transition-all duration-300 border-2 text-center"
               style={{
                 borderColor: 'var(--th-polgun-blue)',
                 color: 'var(--th-polgun-blue)',
@@ -500,4 +589,5 @@ export default function Navbar({ activePage, setActivePage, colorPalette, locati
           </div>
         </div>
       </div>
-      </header>)}
+    </header>)
+}
