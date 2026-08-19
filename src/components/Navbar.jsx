@@ -6,14 +6,19 @@ import { useState, useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import polgunLogo from '../assets/logoPolgun.png';
+import TrFlag from '../assets/flags/tr.svg';
+import EnFlag from '../assets/flags/en.svg';
+import EsFlag from '../assets/flags/es.svg';
+import ArFlag from '../assets/flags/ar.svg';
+import RuFlag from '../assets/flags/ru.svg';
 
 // ── Menü Yapısı (WWW ile birebir karşılıklı) ───────────────
 const LANGUAGES = [
-  { code: 'tr', name: 'Türkçe', flag: '/src/assets/flags/tr.svg' },
-  { code: 'en', name: 'English', flag: '/src/assets/flags/en.svg' },
-  { code: 'es', name: 'Español', flag: '/src/assets/flags/es.svg' },
-  { code: 'ar', name: 'العربية', flag: '/src/assets/flags/ar.svg' },
-  { code: 'ru', name: 'Русский', flag: '/src/assets/flags/ru.svg' },
+  { code: 'tr', name: 'Türkçe', flag: TrFlag },
+  { code: 'en', name: 'English', flag: EnFlag },
+  { code: 'es', name: 'Español', flag: EsFlag },
+  { code: 'ar', name: 'العربية', flag: ArFlag },
+  { code: 'ru', name: 'Русский', flag: RuFlag },
 ];
 
 export default function Navbar({ activePage, setActivePage, colorPalette, location }) {
