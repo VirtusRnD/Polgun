@@ -42,7 +42,14 @@
     "awards": "Ödüller & Patent",
     "factories": "Fabrikalarımız",
     "news": "Haberler & Etkinlikler",
+    "knowledge_center": "Bilgi Merkezi",
     "arge": "Ar-Ge",
+    "arge_center": "Ar-Ge Merkezi",
+    "fikri_sinai_haklar": "Fikrî & Sınai Haklar",
+    "utility_models": "Faydalı Modeller",
+    "designs": "Endüstriyel Tasarımlar",
+    "publications": "Akademik Yayınlar",
+    "patents": "Patentler",
     "career": "Kariyer"
   },
   "footer": {
@@ -488,7 +495,19 @@
     "p2": "Ar-Ge Merkezimizde; araştırmacı, teknisyen ve destek personeli statüsünde görev yapan 30 tam zaman eşdeğer nitelikli Ar-Ge personelimiz ile yeni ürün tasarımı, mühendislik analizleri, prototipleme, test, doğrulama, üretim yöntemi geliştirme ve fikri mülkiyet süreçlerini bütüncül bir yaklaşımla yürütüyoruz.",
     "p3": "Ülkemiz için millileştirme ve yerlileştirme çalışmalarını stratejik bir sorumluluk olarak görüyor; dışa bağımlılığı azaltan, hızlı uygulanabilir ve müşteri ihtiyaçlarına doğrudan yanıt veren çözümler geliştiriyoruz. Tasarımdan üretime, analizden saha uygulamasına kadar tüm Ar-Ge süreçlerimizde güvenlik, kalite, uluslararası standartlara uygunluk ve sürdürülebilirlik ilkelerini esas alıyoruz.",
     "p4": "Polgün Ar-Ge Merkezi'nde geliştirilen projeler; su tasarrufu, kullanıcı güvenliği, kapasite artışı, tematik deneyim, modüler üretim, kompozit malzeme teknolojileri ve yeni nesil su kaydırağı geometrileri gibi alanlarda sektöre değer katmaktadır. Navatu, Savana, Monarch Butterfly ve Eclipse gibi yenilikçi ürün projelerimiz; Polgün'ün tasarım, mühendislik ve üretim gücünü uluslararası pazarda temsil eden önemli Ar-Ge çıktıları arasında yer almaktadır.",
-    "p5": "Ar-Ge faaliyetlerimiz yalnızca yeni ürün geliştirme ile sınırlı değildir. Aynı zamanda mevcut ürünlerin performansını artırmak, üretim süreçlerini iyileştirmek, çevresel etkileri azaltmak, malzeme verimliliğini yükseltmek ve uluslararası pazarlarda rekabet gücümüzü artırmak amacıyla sürekli geliştirme çalışmaları yürütüyoruz. Akademik iş birlikleri, bilimsel yayınlar, patent ve tasarım tescili süreçleri ile kurumsal bilgi birikimimizi güçlendiriyor; elde edilen çıktıları sürdürülebilir bir inovasyon kültürüne dönüştürüyoruz."
+    "p5": "Ar-Ge faaliyetlerimiz yalnızca yeni ürün geliştirme ile sınırlı değildir. Aynı zamanda mevcut ürünlerin performansını artırmak, üretim süreçlerini iyileştirmek, çevresel etkileri azaltmak, malzeme verimliliğini yükseltmek ve uluslararası pazarlarda rekabet gücümüzü artırmak amacıyla sürekli geliştirme çalışmaları yürütüyoruz. Akademik iş birlikleri, bilimsel yayınlar, patent ve tasarım tescili süreçleri ile kurumsal bilgi birikimimizi güçlendiriyor; elde edilen çıktıları sürdürülebilir bir inovasyon kültürüne dönüştürüyoruz.",
+    "fikri_sinai_title": "Fikrî ve Sınai Mülkiyet Haklarımız",
+    "fikri_sinai_desc": "Polgün, Ar-Ge çalışmaları sonucunda geliştirilen yenilikçi ürün, tasarım ve teknolojileri fikrî ve sınai mülkiyet haklarıyla koruma altına almaktadır. Patent, faydalı model, endüstriyel tasarım, marka ve akademik yayın çalışmalarıyla şirketin bilgi birikimi sürdürülebilir ve ticarileştirilebilir bir yapıya dönüştürülmektedir.",
+    "utility_models_title": "Faydalı Modeller",
+    "dag_kizagi": "Dağ Kızağı",
+    "project_code": "Proje Kodu",
+    "work_name": "Hak / Çalışma Adı",
+    "scope": "Kapsam",
+    "status": "Durum",
+    "app_date": "Başvuru Tarihi",
+    "reg_date": "Tescil Tarihi",
+    "registered": "Tescilli",
+    "national": "Ulusal"
   },
   "career": {
     "title": "Polgün'de Kariyer",
@@ -839,5 +858,85 @@
     "europe": "Avrupa",
     "africa": "Afrika",
     "america": "Amerika"
+  },
+  "designsPage": {
+    "title": "Endüstriyel Tasarımlarımız",
+    "desc": "Polgün, Ar-Ge ve tasarım süreçleri doğrultusunda tescillenmiş özgün endüstriyel tasarımlarıyla su parkı sektörüne yön vermektedir.",
+    "filters": {
+      "all": "Tümü",
+      "project_bound": "Projeye Bağlı Tasarımlar",
+      "independent": "Bağımsız Tasarımlar",
+      "by_year": "Yıla Göre"
+    },
+    "card": {
+      "registered": "Tescilli",
+      "project": "Proje Adı",
+      "independent_label": "Bağımsız Tasarım",
+      "design_name": "Hak / Çalışma Adı",
+      "registration_no": "Tescil No",
+      "application_no": "Başvuru No",
+      "scope": "Kapsam",
+      "app_date": "Başvuru Tarihi",
+      "reg_date": "Tescil Tarihi",
+      "inspect": "Detayları İncele",
+      "national": "Ulusal"
+    }
+  },
+  "publicationsPage": {
+    "title": "Akademik Yayınlarımız",
+    "desc": "Polgün'ün akademik, teknik ve sektörel yayın çalışmaları; yeni nesil mühendislik çözümleri ve sektörel literatüre katkı sağlamaktadır.",
+    "search_placeholder": "Yayın adı, proje adı veya proje kodu ile ara...",
+    "filters": {
+      "all": "Tümü",
+      "national": "Ulusal",
+      "international": "Uluslararası",
+      "article": "Makale",
+      "proceedings": "Bildiri",
+      "book_chapter": "Kitap Bölümü",
+      "by_year": "Yıla Göre"
+    },
+    "card": {
+      "published": "Yayımlandı",
+      "preparing": "Hazırlanıyor",
+      "submitted": "Gönderildi",
+      "accepted": "Kabul Edildi",
+      "project_code": "Proje Kodu",
+      "project_name": "Proje Adı",
+      "type": "Yayın Türü",
+      "scope": "Kapsam",
+      "isbn": "ISBN",
+      "issn": "ISSN",
+      "e_isbn": "E-ISBN",
+      "e_issn": "E-ISSN",
+      "online_issn": "Online ISSN",
+      "pub_date": "Yayın Tarihi",
+      "inspect": "Yayını İncele",
+      "view_proceedings": "Bildiriyi Görüntüle",
+      "open_doc": "Dokümanı Aç",
+      "details": "Detaylı Bilgi"
+    }
+  },
+  "patentsPage": {
+    "title": "Patentlerimiz",
+    "desc": "Polgün'ün sektöre öncülük eden ve teknolojik inovasyonu koruma altına alan resmi patent ve buluş kayıtları.",
+    "filters": {
+      "all": "Tümü",
+      "registered": "Tescilli",
+      "pending": "Başvuru Aşamasında",
+      "national": "Ulusal",
+      "international": "Uluslararası"
+    },
+    "card": {
+      "project": "Proje Adı",
+      "patent_name": "Patent / Buluş Adı",
+      "scope": "Kapsam",
+      "app_no": "Başvuru No",
+      "pct_no": "PCT No",
+      "app_date": "Başvuru Tarihi",
+      "reg_date": "Tescil Tarihi",
+      "status": "Güncel Durum",
+      "registered_badge": "Tescilli",
+      "pending_badge": "Başvuru Aşamasında"
+    }
   }
 }

@@ -1,0 +1,20 @@
+bro bunu da ayrı bir sayfa olarak yap şimdi ben bununla ilgili metin ve görselleri src/SEO klasörü içerisinde veriyorum 
+
+
+Web sitesinde Hakkımızda menüsü altında Bilgi Merkezi isimli yeni bir alan oluşturulmasını rica ediyoruz.
+Hazırlanan Word dokümanlarındaki blog içerikleri, her biri ayrı bir sayfa olacak şekilde siteye aktarılacaktır.
+Bilgi Merkezi ana sayfasında içerikler;
+•	Kapak görseli 
+•	Blog başlığı 
+•	Kısa açıklama 
+•	“Devamını Oku” butonu 
+bulunan kartlar halinde listelenmelidir.
+Blog detay sayfalarında Word dokümanındaki başlık, metin, alt başlıklar ve Sık Sorulan Sorular bölümü korunmalıdır.
+Her içerik için;
+•	SEO başlığı ve meta açıklaması 
+•	SEO uyumlu URL 
+•	H1, H2 ve H3 başlık yapısı 
+•	Görsel ALT metni 
+•	İlgili yazılara yönlendirme 
+alanları uygulanmalıdır.
+

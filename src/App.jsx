@@ -31,6 +31,11 @@ import AwardsPage from './pages/AwardsPage'
 import NewsPage from './pages/NewsPage'
 import { COLOR_PALETTES } from './constants/colorPalettes'
 import SplashZone from './pages/SplashZone';
+import DesignsPage from './pages/DesignsPage';
+import PublicationsPage from './pages/PublicationsPage';
+import PatentsPage from './pages/PatentsPage';
+import KnowledgeCenterPage from './pages/KnowledgeCenterPage';
+import KnowledgeCenterDetailPage from './pages/KnowledgeCenterDetailPage';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -100,6 +105,11 @@ const PAGE_COLOR_PALETTES = {
   history: 1,      // Default
   awards: 1,       // Default
   news: 1,         // Default
+  designs: 1,
+  publications: 1,
+  patents: 1,
+  'knowledge-center': 1,
+  'knowledge-center-detail': 1,
 }
 
 const pageToPathMapping = {
@@ -113,6 +123,10 @@ const pageToPathMapping = {
   contact: '/contact',
   career: '/career',
   arge: '/arge',
+  designs: '/designs',
+  publications: '/publications',
+  patents: '/patents',
+  'knowledge-center': '/bilgi-merkezi',
   factories: '/factories',
   team: '/team',
   history: '/history',
@@ -174,11 +188,16 @@ export default function App() {
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/career" element={<CareerPage />} />
           <Route path="/arge" element={<ArGePage />} />
+          <Route path="/designs" element={<DesignsPage />} />
+          <Route path="/publications" element={<PublicationsPage />} />
+          <Route path="/patents" element={<PatentsPage />} />
           <Route path="/factories" element={<FactoriesPage />} />
           <Route path="/team" element={<TeamPage />} />
           <Route path="/history" element={<HistoryPage />} />
           <Route path="/awards" element={<AwardsPage />} />
           <Route path="/news" element={<NewsPage />} />
+          <Route path="/bilgi-merkezi" element={<KnowledgeCenterPage />} />
+          <Route path="/bilgi-merkezi/:slug" element={<KnowledgeCenterDetailPage />} />
         </Route>
       </Routes>
     </div>

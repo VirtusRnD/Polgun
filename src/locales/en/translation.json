@@ -43,7 +43,14 @@
     "awards": "Awards & Patents",
     "factories": "Our Factories",
     "news": "News & Events",
+    "knowledge_center": "Knowledge Center",
     "arge": "R&D",
+    "arge_center": "R&D Center",
+    "fikri_sinai_haklar": "Intellectual Property",
+    "utility_models": "Utility Models",
+    "designs": "Industrial Designs",
+    "publications": "Academic Publications",
+    "patents": "Patents",
     "career": "Career"
   },
   "footer": {
@@ -489,7 +496,19 @@
     "p2": "In our R&D Center, we manage new product design, engineering analyses, prototyping, testing, validation, production method development, and intellectual property processes in a holistic approach with 30 full-time equivalent qualified R&D personnel working as researchers, technicians, and support staff.",
     "p3": "We view nationalization and localization efforts for our country as a strategic responsibility; we develop solutions that reduce external dependency, are rapidly applicable, and directly respond to customer needs. In all our R&D processes from design to production, from analysis to field application, we adhere to the principles of safety, quality, compliance with international standards, and sustainability.",
     "p4": "Projects developed at Polgün R&D Center add value to the sector in areas such as water savings, user safety, capacity increase, thematic experience, modular production, composite material technologies, and next-generation water slide geometries. Our innovative product projects such as Navatu, Savana, Monarch Butterfly, and Eclipse are among the important R&D outputs that represent Polgün's design, engineering, and production strength in the international market.",
-    "p5": "Our R&D activities are not limited to new product development alone. We also carry out continuous development work to improve the performance of existing products, improve production processes, reduce environmental impacts, increase material efficiency, and increase our competitive power in international markets. We strengthen our corporate knowledge base through academic collaborations, scientific publications, patent and design registration processes; and transform the outputs obtained into a sustainable innovation culture."
+    "p5": "Our R&D activities are not limited to new product development alone. We also carry out continuous development work to improve the performance of existing products, improve production processes, reduce environmental impacts, increase material efficiency, and increase our competitive power in international markets. We strengthen our corporate knowledge base through academic collaborations, scientific publications, patent and design registration processes; and transform the outputs obtained into a sustainable innovation culture.",
+    "fikri_sinai_title": "Intellectual and Industrial Property Rights",
+    "fikri_sinai_desc": "Polgün protects the innovative products, designs, and technologies developed as a result of its R&D studies through intellectual and industrial property rights. Through patents, utility models, industrial designs, trademarks, and academic publications, the company's knowledge base is transformed into a sustainable and commercializable structure.",
+    "utility_models_title": "Utility Models",
+    "dag_kizagi": "Mountain Coaster",
+    "project_code": "Project Code",
+    "work_name": "Rights / Work Name",
+    "scope": "Scope",
+    "status": "Status",
+    "app_date": "Application Date",
+    "reg_date": "Registration Date",
+    "registered": "Registered",
+    "national": "National"
   },
   "career": {
     "title": "Career at Polgün",
@@ -840,5 +859,85 @@
     "europe": "Europe",
     "africa": "Africa",
     "america": "America"
+  },
+  "designsPage": {
+    "title": "Our Industrial Designs",
+    "desc": "Polgün shapes the waterpark sector with its unique industrial designs registered in line with R&D and design processes.",
+    "filters": {
+      "all": "All",
+      "project_bound": "Project-Bound Designs",
+      "independent": "Independent Designs",
+      "by_year": "By Year"
+    },
+    "card": {
+      "registered": "Registered",
+      "project": "Project Name",
+      "independent_label": "Independent Design",
+      "design_name": "Rights / Work Name",
+      "registration_no": "Registration No",
+      "application_no": "Application No",
+      "scope": "Scope",
+      "app_date": "Application Date",
+      "reg_date": "Registration Date",
+      "inspect": "Inspect Details",
+      "national": "National"
+    }
+  },
+  "publicationsPage": {
+    "title": "Academic Publications",
+    "desc": "Polgün's academic, technical, and sectoral publications introduce new-generation engineering solutions and contribute to the sectoral literature.",
+    "search_placeholder": "Search by publication title, project title, or project code...",
+    "filters": {
+      "all": "All",
+      "national": "National",
+      "international": "International",
+      "article": "Article",
+      "proceedings": "Proceedings",
+      "book_chapter": "Book Chapter",
+      "by_year": "By Year"
+    },
+    "card": {
+      "published": "Published",
+      "preparing": "In Preparation",
+      "submitted": "Submitted",
+      "accepted": "Accepted",
+      "project_code": "Project Code",
+      "project_name": "Project Name",
+      "type": "Publication Type",
+      "scope": "Scope",
+      "isbn": "ISBN",
+      "issn": "ISSN",
+      "e_isbn": "E-ISBN",
+      "e_issn": "E-ISSN",
+      "online_issn": "Online ISSN",
+      "pub_date": "Publication Date",
+      "inspect": "Review Publication",
+      "view_proceedings": "View Proceedings",
+      "open_doc": "Open Document",
+      "details": "Detailed Info"
+    }
+  },
+  "patentsPage": {
+    "title": "Our Patents",
+    "desc": "Polgün's official patent and invention registrations that lead the industry and protect technological innovation.",
+    "filters": {
+      "all": "All",
+      "registered": "Registered",
+      "pending": "In Application",
+      "national": "National",
+      "international": "International"
+    },
+    "card": {
+      "project": "Project Name",
+      "patent_name": "Patent / Invention Name",
+      "scope": "Scope",
+      "app_no": "Application No",
+      "pct_no": "PCT No",
+      "app_date": "Application Date",
+      "reg_date": "Registration Date",
+      "status": "Current Status",
+      "registered_badge": "Registered",
+      "pending_badge": "In Application"
+    }
   }
 }

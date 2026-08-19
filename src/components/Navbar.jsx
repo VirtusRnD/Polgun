@@ -84,6 +84,7 @@ export default function Navbar({ activePage, setActivePage, colorPalette, locati
             { label: t('nav.awards'), desc: '', page: 'awards', to: '/awards' },
             { label: t('nav.factories'), desc: '', page: 'factories', to: '/factories' },
             { label: t('nav.news'), desc: '', page: 'news', to: '/news' },
+            { label: t('nav.knowledge_center', { defaultValue: 'Bilgi Merkezi' }), desc: '', page: 'knowledge-center', to: '/bilgi-merkezi' },
           ],
         },
       ],
@@ -92,8 +93,20 @@ export default function Navbar({ activePage, setActivePage, colorPalette, locati
       id: 'arge',
       label: t('nav.arge'),
       page: 'arge',
-      mega: false,
-      to: '/arge',
+      mega: true,
+      sections: [
+        {
+          title: null,
+          links: [
+            { label: t('nav.arge_center', { defaultValue: 'Ar-Ge Merkezi' }), desc: '', page: 'arge', to: '/arge' },
+            { label: t('nav.fikri_sinai_haklar', { defaultValue: 'Fikrî & Sınai Haklar' }), desc: '', page: 'arge', anchor: 'fikri-ve-sinai-mulkiyet-haklari', to: '/arge?anchor=fikri-ve-sinai-mulkiyet-haklari' },
+            { label: t('nav.utility_models', { defaultValue: 'Faydalı Modeller' }), desc: '', page: 'arge', anchor: 'faydali-modeller', to: '/arge?anchor=faydali-modeller' },
+            { label: t('nav.patents', { defaultValue: 'Patentler' }), desc: '', page: 'patents', to: '/patents' },
+            { label: t('nav.designs', { defaultValue: 'Endüstriyel Tasarımlar' }), desc: '', page: 'designs', to: '/designs' },
+            { label: t('nav.publications', { defaultValue: 'Akademik Yayınlar' }), desc: '', page: 'publications', to: '/publications' },
+          ],
+        },
+      ],
     },
     {
       id: 'career',
@@ -297,6 +310,7 @@ export default function Navbar({ activePage, setActivePage, colorPalette, locati
                       {item.id === 'products' && 'Tüm ürün ve mekan tiplerini keşfedin'}
                       {item.id === 'services' && 'Anahtar teslim proje süreçlerimizi inceleyin'}
                       {item.id === 'about' && "Polgün'ün 40 yıllık hikayesini keşfedin"}
+                      {item.id === 'arge' && "Yenilikçi su parkı teknolojileri ve tescillerimiz"}
                     </span>
                     <Link
                       to={item.to || `/${item.page}`}
@@ -336,7 +350,7 @@ export default function Navbar({ activePage, setActivePage, colorPalette, locati
               <img
                 src={currentLang.flag}
                 alt={currentLang.name}
-                className="w-5 h-5 rounded-full object-cover border"
+                className="w-6 h-4 rounded-sm object-cover border"
                 style={{ borderColor: 'color-mix(in srgb, var(--th-border) 30%, transparent)' }}
               />
               <span
@@ -378,7 +392,7 @@ export default function Navbar({ activePage, setActivePage, colorPalette, locati
                     onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'var(--th-bg)'}
                     onMouseLeave={(e) => e.currentTarget.style.backgroundColor = currentLang.code === lang.code ? 'var(--th-bg)' : 'transparent'}
                   >
-                    <img src={lang.flag} alt={lang.name} className="w-4 h-4 rounded-full object-cover border" style={{ borderColor: 'color-mix(in srgb, var(--th-border) 30%, transparent)' }} />
+                    <img src={lang.flag} alt={lang.name} className="w-5 h-3.5 rounded-sm object-cover border" style={{ borderColor: 'color-mix(in srgb, var(--th-border) 30%, transparent)' }} />
                     {lang.name}
                   </button>
                 ))}
@@ -552,7 +566,7 @@ export default function Navbar({ activePage, setActivePage, colorPalette, locati
                     opacity: currentLang.code === lang.code ? 1 : 0.6
                   }}
                 >
-                  <img src={lang.flag} alt={lang.name} className="w-6 h-6 rounded-full object-cover shadow-sm" />
+                  <img src={lang.flag} alt={lang.name} className="w-7 h-5 rounded-sm object-cover shadow-sm" />
                 </button>
               ))}
             </div>

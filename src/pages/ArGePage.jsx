@@ -3,6 +3,7 @@
 // ============================================================
 import React, { useState, useEffect, useRef } from 'react'
 import { useTranslation } from 'react-i18next'
+import { useNavigate } from 'react-router-dom'
 import heroImage from '../assets/polgun-featured-projects-4.avif'
 import navatu1 from '../assets/navatu/navatu1.avif'
 import savana1 from '../assets/savana/savana5.avif'
@@ -163,8 +164,28 @@ function ProjectSliderModal({ project, isOpen, onClose }) {
 
 export default function ArGePage({ setActivePage }) {
   const { t } = useTranslation()
+  const navigate = useNavigate()
   const [isNavatuModalOpen, setIsNavatuModalOpen] = useState(false);
   const [isSavanaModalOpen, setIsSavanaModalOpen] = useState(false);
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const anchor = params.get('anchor');
+    if (anchor) {
+      setTimeout(() => {
+        const el = document.getElementById(anchor);
+        if (el) {
+          const yOffset = -100;
+          window.scrollTo({
+            top: el.getBoundingClientRect().top + window.pageYOffset + yOffset,
+            behavior: 'smooth'
+          });
+        }
+      }, 100);
+    } else {
+      window.scrollTo(0, 0);
+    }
+  }, []);
 
   return (
     <main className="pt-20" style={{ backgroundColor: 'var(--th-bg)' }}>
@@ -266,6 +287,196 @@ export default function ArGePage({ setActivePage }) {
                 <h3 className="text-2xl font-black mb-2" style={{ color: 'var(--th-text)' }}>Savana</h3>
                 <p className="text-sm mb-4" style={{ color: 'var(--th-polgun-blue)' }}>{t('arge.savana_sub', {defaultValue: 'Çoklu Kayma Yollu Temalı Su Kaydırağı'})}</p>
                 <p className="text-sm leading-relaxed" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 80%, transparent)' }}>{t('arge.savana_desc', {defaultValue: 'Aynı gövdede dört farklı kayma yolunu bir araya getiren yenilikçi Ar-Ge projesi.'})}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Fikrî ve Sınai Mülkiyet Haklarımız ── */}
+      <section id="fikri-ve-sinai-mulkiyet-haklari" className="py-28" style={{ backgroundColor: 'var(--th-surface)' }}>
+        <div className="max-w-7xl mx-auto px-6 max-w-[var(--layout-max)] lg:px-12">
+          <div className="max-w-3xl mx-auto text-center mb-16">
+            <p className="text-xs font-bold tracking-[0.25em] uppercase mb-4" style={{ color: 'var(--th-polgun-blue)' }}>
+              {t('arge.fikri_sinai_tag', {defaultValue: 'FİKRİ MÜLKİYET'})}
+            </p>
+            <h2 className="text-4xl font-black mb-6" style={{ color: 'var(--th-text)' }}>
+              {t('arge.fikri_sinai_title')}
+            </h2>
+            <p className="leading-relaxed text-sm md:text-base" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 80%, transparent)' }}>
+              {t('arge.fikri_sinai_desc')}
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+            {[
+              { key: 'patent', count: 4, onClick: () => navigate('/patents'), icon: (
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+                </svg>
+              ), color: 'var(--th-primary)' },
+              { key: 'utility_model', count: 1, onClick: () => {
+                const el = document.getElementById('faydali-modeller');
+                if (el) {
+                  const yOffset = -100;
+                  window.scrollTo({
+                    top: el.getBoundingClientRect().top + window.pageYOffset + yOffset,
+                    behavior: 'smooth'
+                  });
+                }
+              }, icon: (
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                </svg>
+              ), color: 'var(--th-polgun-blue)' },
+              { key: 'design', count: 12, onClick: () => navigate('/designs'), icon: (
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                </svg>
+              ), color: 'var(--th-primary)' },
+              { key: 'brand', count: 12, icon: (
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+              ), color: 'var(--th-polgun-blue)' },
+              { key: 'publication', count: 13, onClick: () => navigate('/publications'), icon: (
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                </svg>
+              ), color: 'var(--th-primary)' },
+              { key: 'total', count: 42, icon: (
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                </svg>
+              ), color: 'var(--th-polgun-blue)', isTotal: true },
+            ].map((item) => (
+              <div
+                key={item.key}
+                onClick={item.onClick}
+                className={`p-6 rounded-2xl flex flex-col items-center text-center transition-all duration-300 ${item.onClick ? 'cursor-pointer hover:-translate-y-1.5 hover:shadow-xl' : 'hover:-translate-y-1'}`}
+                style={{
+                  backgroundColor: item.isTotal ? 'color-mix(in srgb, var(--th-primary) 6%, var(--th-surface))' : 'var(--th-bg)',
+                  border: item.isTotal
+                    ? '2px dashed var(--th-primary)'
+                    : '1.5px solid color-mix(in srgb, var(--th-border) 10%, transparent)',
+                  boxShadow: '0 4px 20px rgba(0,0,0,0.03)'
+                }}
+              >
+                <div
+                  className="w-12 h-12 rounded-xl flex items-center justify-center mb-4 transition-transform duration-300"
+                  style={{
+                    backgroundColor: 'color-mix(in srgb, ' + item.color + ' 10%, transparent)',
+                    color: item.color
+                  }}
+                >
+                  {item.icon}
+                </div>
+                <span className="text-4xl lg:text-5xl font-black mb-2" style={{ color: 'var(--th-text)' }}>
+                  {item.count}
+                </span>
+                <span className="text-xs font-bold tracking-wider uppercase text-white/50" style={{ color: 'var(--th-text-muted)' }}>
+                  {t(`arge.stats.${item.key}`, { defaultValue: item.key === 'patent' ? 'Patent' : item.key === 'utility_model' ? 'Faydalı Model' : item.key === 'design' ? 'Tasarım' : item.key === 'brand' ? 'Marka' : item.key === 'publication' ? 'Yayın / Makale' : 'Toplam' })}
+                </span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Faydalı Modeller ── */}
+      <section id="faydali-modeller" className="py-28" style={{ backgroundColor: 'var(--th-bg)' }}>
+        <div className="max-w-7xl mx-auto px-6 max-w-[var(--layout-max)] lg:px-12">
+          <div className="text-center mb-16">
+            <p className="text-xs font-bold tracking-[0.25em] uppercase mb-4" style={{ color: 'var(--th-polgun-blue)' }}>
+              {t('arge.utility_models_tag', {defaultValue: 'RESMİ KAYITLAR'})}
+            </p>
+            <h2 className="text-4xl font-black mb-6" style={{ color: 'var(--th-text)' }}>
+              {t('arge.utility_models_title')}
+            </h2>
+          </div>
+
+          <div className="max-w-3xl mx-auto">
+            {/* Kurumsal Bilgi Kartı */}
+            <div
+              className="relative rounded-3xl p-8 lg:p-10 transition-all duration-300 hover:shadow-2xl hover:shadow-black/5"
+              style={{
+                backgroundColor: 'var(--th-surface)',
+                border: '1px solid color-mix(in srgb, var(--th-border) 12%, transparent)',
+              }}
+            >
+              {/* Sol dikey aksent şeridi */}
+              <div className="absolute left-0 top-8 bottom-8 w-1.5 rounded-r-lg" style={{ backgroundColor: 'var(--th-primary)' }} />
+
+              {/* Üst Kısım: Başlık ve Tescilli Etiketi */}
+              <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-4 mb-8">
+                <div>
+                  <h3 className="text-2xl lg:text-3xl font-black mb-1.5" style={{ color: 'var(--th-text)' }}>
+                    {t('arge.dag_kizagi')}
+                  </h3>
+                  <p className="text-xs font-bold uppercase tracking-wider" style={{ color: 'var(--th-polgun-blue)' }}>
+                    {t('nav.arge')} · {t('arge.scope')}: {t('arge.national')}
+                  </p>
+                </div>
+                {/* Tescilli Etiketi */}
+                <div className="self-start flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-bold bg-emerald-500/10 text-emerald-600 border border-emerald-500/20">
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+                  {t('arge.registered')}
+                </div>
+              </div>
+
+              {/* Orta Kısım: Detaylar */}
+              <div className="grid sm:grid-cols-2 gap-8 py-6 my-6 border-y border-dashed" style={{ borderColor: 'color-mix(in srgb, var(--th-border) 15%, transparent)' }}>
+                {/* Kodlar */}
+                <div className="space-y-4">
+                  <div>
+                    <span className="block text-xs font-semibold tracking-wider uppercase mb-1" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 50%, transparent)' }}>
+                      {t('arge.project_code')}
+                    </span>
+                    <span className="text-base font-black px-2.5 py-1 rounded-md" style={{ backgroundColor: 'var(--th-bg)', color: 'var(--th-text)' }}>
+                      ADV-001
+                    </span>
+                  </div>
+                  <div>
+                    <span className="block text-xs font-semibold tracking-wider uppercase mb-1" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 50%, transparent)' }}>
+                      {t('arge.work_name')}
+                    </span>
+                    <span className="text-base font-black px-2.5 py-1 rounded-md" style={{ backgroundColor: 'var(--th-bg)', color: 'var(--th-text)' }}>
+                      FLG-MR1
+                    </span>
+                  </div>
+                </div>
+
+                {/* Tarih Blokları */}
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="p-4 rounded-2xl" style={{ backgroundColor: 'var(--th-bg)' }}>
+                    <span className="block text-[10px] font-bold tracking-wider uppercase mb-2" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 60%, transparent)' }}>
+                      {t('arge.app_date')}
+                    </span>
+                    <div className="flex items-center gap-2 text-sm font-black" style={{ color: 'var(--th-text)' }}>
+                      <svg className="w-4 h-4" style={{ color: 'var(--th-primary)' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                      </svg>
+                      01.04.2020
+                    </div>
+                  </div>
+                  <div className="p-4 rounded-2xl" style={{ backgroundColor: 'var(--th-bg)' }}>
+                    <span className="block text-[10px] font-bold tracking-wider uppercase mb-2" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 60%, transparent)' }}>
+                      {t('arge.reg_date')}
+                    </span>
+                    <div className="flex items-center gap-2 text-sm font-black" style={{ color: 'var(--th-text)' }}>
+                      <svg className="w-4 h-4" style={{ color: 'var(--th-polgun-blue)' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                      </svg>
+                      10.07.2020
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Alt Bilgi */}
+              <div className="flex items-center justify-between text-xs mt-4" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 60%, transparent)' }}>
+                <span>© Polgün Waterparks Patent Management</span>
+                <span className="font-bold uppercase tracking-wider" style={{ color: 'var(--th-primary)' }}>Official Record</span>
               </div>
             </div>
           </div>
