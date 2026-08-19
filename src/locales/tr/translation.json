@@ -785,9 +785,21 @@
     "subtitle": "Eğlenceli Su Oyun Kuleleri",
     "desc": "Çocukların suyla buluştuğu, güvenli ve tematik interaktif macera alanları.",
     "themes": {
-      "pirate": "Korsan Teması",
-      "jungle": "Orman Teması",
-      "custom": "Özel Tasarımlar",
+      "pirate": {
+        "name": "Korsan Teması",
+        "location": "Antalya, Türkiye",
+        "desc": "Polgün'ün imza teması olan ve pek çok su parkı tarafından tercih edilen Korsan Tema çocukların korsanlarla dolu açık denizlerde yelken açmaları ve bu hayal dünyasında eğlenmeleri için tasarlanmıştır. Her boyutta ve istenen her renk seçeneğinde tamamen özelleştirilebilen Korsan Tema'da dev papağanlar, ikonik köpekbalığı, interaktif su oyunları, palmiye ağaçları ve korsan kafalı dev bir su kovası bulunuyor. Minik misafirlerin eğlendiği kadar yetişkinlerin de eğlendiğini gördüğünüzde su parkınız için Polgün Korsan Tema'sını tercih etmeniz kaçınılmaz olacaktır."
+      },
+      "jungle": {
+        "name": "Orman Teması",
+        "location": "Türkiye",
+        "desc": "Tropikal yağmur ormanlarının güzelliğinden, enerjisinden ve gizeminden ilham alan temalı bir su oyun alanı olan Polgün Jungle Splash Tower ile vahşi doğaya adım atın. Fil, papağan, baykuş, sincap ve dev ağaçlar gibi hayal gücünü harekete geçiren orman karakterleriyle hayat bulan bu tema; çocukların keşfedebileceği, oyun oynayabileceği ve hayal güçlerini özgürce kullanabileceği heyecan verici bir ortam yaratıyor. Doğadan ilham alan detaylar, interaktif su özellikleri ve macera dolu dekoratif unsurlar, oyun alanını canlı bir orman yolculuğuna dönüştürüyor. Toprak tonları, ahşap görünümlü yüzeyler ve zengin doğa temalı grafiklerle tasarlanan Jungle Splash Tower; su parkları, tatil köyleri ve aile eğlence merkezleri için özgün bir görsel kimlik sunuyor. Boyut, yerleşim düzeni, renk paleti ve tematik detaylar açısından tamamen özelleştirilebilir yapısıyla, her projenin konseptine ve kapasite ihtiyaçlarına göre uyarlanabiliyor."
+      },
+      "custom": {
+        "name": "Özel Tasarımlar",
+        "location": "Türkiye",
+        "desc": "Polgün'de her proje, eşsiz bir hikayeye dönüştürülebilir. Özel Tema hizmetimiz; yaratıcı tasarımı, kavramsal geliştirmeyi ve özenle seçilmiş renk paletlerini bir araya getirerek, her bir mekanın kimliğini ve vizyonunu yansıtan su oyun alanları yaratır. Onlarca yıllık sektör deneyimi, şirket içi Ar-Ge ekibi ve gelişmiş CAD tasarım yetkinlikleriyle desteklenen tasarımcılarımız, her projenin gereksinimlerine özel özgün konseptler geliştirir. İlk fikirden nihai temalı eğlence alanına kadar her ayrıntı, ziyaretçiler için ilgi çekici, görsel açıdan etkileyici ve unutulmaz bir deneyim sunmak üzere titizlikle ele alınır. İster doğadan, fantastik dünyalardan veya maceradan ilham alsın, isterse tamamen özgün bir konseptten yola çıksın; Polgün; su parkları, tatil köyleri, oteller ve aile eğlence merkezleri için tamamen kişiselleştirilmiş tematik çözümler üretir."
+      },
       "underwater": {
         "name": "Underwater Theme",
         "location": "Antalya, Türkiye",

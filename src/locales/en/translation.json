@@ -786,9 +786,21 @@
     "subtitle": "Fun Water Play Towers",
     "desc": "Safe and thematic interactive adventure areas where children meet water.",
     "themes": {
-      "pirate": "Pirate Theme",
-      "jungle": "Jungle Theme",
-      "custom": "Custom Designs",
+      "pirate": {
+        "name": "Pirate Theme",
+        "location": "Antalya, Turkey",
+        "desc": "Designed as Polgün's signature theme and favored by many water parks, the Pirate Theme allows children to sail into open seas full of pirates and have fun in this imaginary world. Fully customizable in any size and desired color option, the Pirate Theme features giant parrots, an iconic shark, interactive water plays, palm trees, and a giant water bucket with a pirate head. When you see adults having as much fun as the little guests, choosing Polgün's Pirate Theme for your water park will be inevitable."
+      },
+      "jungle": {
+        "name": "Jungle Theme",
+        "location": "Turkey",
+        "desc": "Step into the wild with the Polgün Jungle Splash Tower, a themed water playground inspired by the beauty, energy, and mystery of tropical rainforests. Brought to life with forest characters that spark the imagination such as elephants, parrots, owls, squirrels, and giant trees, this theme creates an exciting environment where children can explore, play, and unleash their creativity. Nature-inspired details, interactive water features, and adventurous decorative elements turn the playground into a vivid jungle journey. Designed with earth tones, wood-look surfaces, and rich nature-themed graphics, the Jungle Splash Tower offers a unique visual identity for water parks, resorts, and family entertainment centers. With its fully customizable structure in terms of size, layout, color palette, and thematic details, it can be tailored to the concept and capacity needs of every project."
+      },
+      "custom": {
+        "name": "Custom Theme",
+        "location": "Turkey",
+        "desc": "At Polgün, every project can be turned into a unique story. Our Custom Theme service combines creative design, conceptual development, and carefully selected color palettes to create water playgrounds that reflect the identity and vision of each venue. Supported by decades of industry experience, an in-house R&D team, and advanced CAD design capabilities, our designers develop original concepts tailored to the requirements of each project. From the initial idea to the final themed entertainment area, every detail is meticulously crafted to offer an engaging, visually stunning, and unforgettable experience for visitors. Whether inspired by nature, fantasy worlds, adventure, or starting from a completely original concept, Polgün produces fully personalized thematic solutions for water parks, resorts, hotels, and family entertainment centers."
+      },
       "underwater": {
         "name": "Underwater Theme",
         "location": "Antalya, Turkey",

@@ -786,9 +786,21 @@
     "subtitle": "Torres de Aventura de Agua",
     "desc": "Estructuras multinivel llenas de interactividad, toboganes y toboganes cerrados ideales para niños.",
     "themes": {
-      "pirate": "Temática Pirata",
-      "jungle": "Temática Selva",
-      "custom": "Diseños Personalizados",
+      "pirate": {
+        "name": "Tema Pirata",
+        "location": "Antalya, Turquía",
+        "desc": "Diseñado como el tema insignia de Polgün y el preferido por muchos parques acuáticos, el Tema Pirata permite a los niños navegar en mar abierto lleno de piratas y divertirse en este mundo imaginario. Totalmente ajustable en cualquier tamaño y opción de color deseada, el Tema Pirata cuenta con loros gigantes, un tiburón icónico, juegos de agua interactivos, palmeras y un cubo de agua gigante con cabeza de pirata. Cuando vea a los adultos divertirse tanto como los pequeños invitados, elegir el Tema Pirata de Polgün para su parque acuático será inevitable."
+      },
+      "jungle": {
+        "name": "Tema de la Selva",
+        "location": "Turquía",
+        "desc": "Adéntrate en la naturaleza con Polgün Jungle Splash Tower, una zona de juegos acuáticos temáticos inspirada en la belleza, energía y misterio de las selvas tropicales. Con cobijo de personajes de la selva que estimulan la imaginación, como elefantes, loros, búhos, ardillas y árboles gigantes, este tema crea un entorno emocionante donde los niños pueden explorar, jugar y liberar su creatividad. Detalles inspirados en la naturaleza, características acuáticas interactivas y elementos decorativos llenos de aventura transforman el área de juegos en un vívido viaje por la selva. Diseñada con tonos tierra, superficies con aspecto de madera y ricos gráficos temáticos de la naturaleza, la Jungle Splash Tower ofrece una identidad visual única para parques acuáticos, complejos hoteleros y centros de entretenimiento familiar. Con su estructura totalmente personalizable en términos de tamaño, distribución, paleta de colores y detalles temáticos, se puede adaptar a las necesidades de concepto y capacidad de cada proyecto."
+      },
+      "custom": {
+        "name": "Tema Personalizado",
+        "location": "Turquía",
+        "desc": "En Polgün, cada proyecto puede convertirse en una historia única. Nuestro servicio de Tema Personalizado combina diseño creativo, desarrollo conceptual y paletas de colores cuidadosamente seleccionadas para crear áreas de juegos acuáticos que reflejen la identidad y visión de cada lugar. Respaldados por décadas de experiencia en el sector, un equipo interno de I+D y avanzadas capacidades de diseño CAD, nuestros diseñadores desarrollan conceptos originales adaptados a los requisitos de cada proyecto. Desde la idea inicial hasta el área de entretenimiento temática final, cada detalle se cuida meticulosamente para ofrecer una experiencia atractiva, visualmente impresionante e inolvidable para los visitantes. Ya sea inspirado en la naturaleza, mundos fantásticos, aventuras, o partiendo de un concepto completamente original, Polgün produce soluciones temáticas totalmente personalizadas para parques acuáticos, complejos hoteleros, hoteles y centros de entretenimiento familiar."
+      },
       "underwater": {
         "name": "Tema Subacuático",
         "location": "Antalya, Turquía",
