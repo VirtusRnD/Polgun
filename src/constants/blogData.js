@@ -4,7 +4,7 @@ import img_1 from '../SEO/information_center/Su_Kaydiragi_Ureticisi_Nasil_Secili
 import img_2 from '../SEO/information_center/Fiberglas_Su_Kaydiraklari/Fiberglas_Su_Kaydiraklari.png';
 import img_3 from '../SEO/information_center/EN_1069_Standardi_Nedir/EN_1069_Standardi_Nedir.png';
 import img_4 from '../SEO/information_center/Cocuk_Su_Oyun_Gruplari/1002.jpg';
-import img_5 from '../SEO/information_center/Oteller_Icin_Su_Parki_Cozumleri/oteller_icin_su_parkı_cözümleri.png';
+import img_5 from '../SEO/information_center/Oteller_Icin_Su_Parki_Cozumleri/oteller_icin_su_parki_cozumleri.png';
 import img_6 from '../SEO/information_center/Su_Kaydiragi_Bakimi/Su_Kaydiragi_Bakimi.png';
 import img_7 from '../SEO/information_center/Su_Parki_Yatirim_Maliyeti_Nasil_Hesaplanir/Su_Parki_Yatirim_Maliyeti_Nasil_Hesaplanir.png';
 import img_8 from '../SEO/information_center/Su_Parki_Projelendirme_Sureci/Su_Parki_Projelendirme_Sureci.png';
