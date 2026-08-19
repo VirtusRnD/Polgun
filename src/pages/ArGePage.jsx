@@ -198,11 +198,11 @@ export default function ArGePage({ setActivePage }) {
                 {t('nav.arge')}
               </p>
               <h1 className="text-5xl lg:text-6xl font-black text-white leading-[1.02]">
-                {t('arge.header_title', {defaultValue: 'Ar-Ge Merkezi'})}
+                {t('arge.header_title', { defaultValue: 'Ar-Ge Merkezi' })}
               </h1>
             </div>
             <p className="text-white/70 text-lg leading-relaxed">
-              {t('arge.hero_desc', {defaultValue: 'Polgün Waterparks olarak Ar-Ge yaklaşımımızın temelinde; güvenli, yenilikçi, sürdürülebilir ve yüksek katma değerli su eğlence teknolojileri geliştirmek yer almaktadır.'})}
+              {t('arge.hero_desc', { defaultValue: 'Polgün Waterparks olarak Ar-Ge yaklaşımımızın temelinde; güvenli, yenilikçi, sürdürülebilir ve yüksek katma değerli su eğlence teknolojileri geliştirmek yer almaktadır.' })}
             </p>
           </div>
         </div>
@@ -212,37 +212,37 @@ export default function ArGePage({ setActivePage }) {
       <section className="py-28" style={{ backgroundColor: 'var(--th-surface)' }}>
         <div className="max-w-4xl mx-auto px-6 max-w-[var(--layout-max)] lg:px-12">
           <div className="prose prose-lg">
-            <h2 className="text-3xl font-black mb-6" style={{ color: 'var(--th-text)' }}>{t('about.story_title', {defaultValue: 'Geleceği Tasarlıyoruz'})}</h2>
-            <p className="mb-6 leading-relaxed" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 80%, transparent)' }}>
-              {t('arge.p1', {defaultValue: '2021 yılında Bakanlık onayıyla Ar-Ge Merkezi statüsü kazanan merkezimiz, Muğla’nın ilk ve tek Ar-Ge Merkezi olma niteliğiyle sektörümüzde özgün ürün geliştirme, yerlileştirme ve teknoloji üretme çalışmalarına öncülük etmektedir.'})}
+            <h2 className="text-3xl font-black mb-6" style={{ color: 'var(--th-text)' }}>{t('about.story_title', { defaultValue: 'Geleceği Tasarlıyoruz' })}</h2>
+            <p className="mb-6 leading-relaxed text-justify" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 80%, transparent)' }}>
+              {t('arge.p1', { defaultValue: '2021 yılında Bakanlık onayıyla Ar-Ge Merkezi statüsü kazanan merkezimiz, Muğla’nın ilk ve tek Ar-Ge Merkezi olma niteliğiyle sektörümüzde özgün ürün geliştirme, yerlileştirme ve teknoloji üretme çalışmalarına öncülük etmektedir.' })}
             </p>
-            <p className="mb-6 leading-relaxed" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 80%, transparent)' }}>
-              {t('arge.p2', {defaultValue: 'Ar-Ge Merkezimizde; araştırmacı, teknisyen ve destek personeli statüsünde görev yapan 30 tam zaman eşdeğer nitelikli Ar-Ge personelimiz ile yeni ürün tasarımı, mühendislik analizleri, prototipleme, test, doğrulama, üretim yöntemi geliştirme ve fikri mülkiyet süreçlerini bütüncül bir yaklaşımla yürütüyoruz.'})}
+            <p className="mb-6 leading-relaxed text-justify" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 80%, transparent)' }}>
+              {t('arge.p2', { defaultValue: 'Ar-Ge Merkezimizde; araştırmacı, teknisyen ve destek personeli statüsünde görev yapan 30 tam zaman eşdeğer nitelikli Ar-Ge personelimiz ile yeni ürün tasarımı, mühendislik analizleri, prototipleme, test, doğrulama, üretim yöntemi geliştirme ve fikri mülkiyet süreçlerini bütüncül bir yaklaşımla yürütüyoruz.' })}
             </p>
-            <p className="mb-6 leading-relaxed" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 80%, transparent)' }}>
-              {t('arge.p3', {defaultValue: 'Ülkemiz için millileştirme ve yerlileştirme çalışmalarını stratejik bir sorumluluk olarak görüyor; dışa bağımlılığı azaltan, hızlı uygulanabilir ve müşteri ihtiyaçlarına doğrudan yanıt veren çözümler geliştiriyoruz. Tasarımdan üretime, analizden saha uygulamasına kadar tüm Ar-Ge süreçlerimizde güvenlik, kalite, uluslararası standartlara uygunluk ve sürdürülebilirlik ilkelerini esas alıyoruz.'})}
-            </p>
-
-            <h3 className="text-2xl font-black mt-12 mb-4" style={{ color: 'var(--th-text)' }}>{t('arge.innovative_title', {defaultValue: 'Yenilikçi Ürünler'})}</h3>
-            <p className="mb-6 leading-relaxed" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 80%, transparent)' }}>
-              {t('arge.p4', {defaultValue: 'Polgün Ar-Ge Merkezi’nde geliştirilen projeler; su tasarrufu, kullanıcı güvenliği, kapasite artışı, tematik deneyim, modüler üretim, kompozit malzeme teknolojileri ve yeni nesil su kaydırağı geometrileri gibi alanlarda sektöre değer katmaktadır. Navatu, Savanna, Monarch Butterfly ve Eclipse gibi yenilikçi ürün projelerimiz; Polgün’ün tasarım, mühendislik og üretim gücünü uluslararası pazarda temsil eden önemli Ar-Ge çıktıları arasında yer almaktadır.'})}
+            <p className="mb-6 leading-relaxed text-justify" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 80%, transparent)' }}>
+              {t('arge.p3', { defaultValue: 'Ülkemiz için millileştirme ve yerlileştirme çalışmalarını stratejik bir sorumluluk olarak görüyor; dışa bağımlılığı azaltan, hızlı uygulanabilir ve müşteri ihtiyaçlarına doğrudan yanıt veren çözümler geliştiriyoruz. Tasarımdan üretime, analizden saha uygulamasına kadar tüm Ar-Ge süreçlerimizde güvenlik, kalite, uluslararası standartlara uygunluk ve sürdürülebilirlik ilkelerini esas alıyoruz.' })}
             </p>
 
-            <h3 className="text-2xl font-black mt-12 mb-4" style={{ color: 'var(--th-text)' }}>{t('arge.continuous_title', {defaultValue: 'Sürekli Gelişim'})}</h3>
-            <p className="mb-6 leading-relaxed" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 80%, transparent)' }}>
-              {t('arge.p5', {defaultValue: 'Ar-Ge faaliyetlerimiz yalnızca yeni ürün geliştirme ile sınırlı değildir. Aynı zamanda mevcut ürünlerin performansını artırmak, üretim süreçlerini iyileştirmek, çevresel etkileri azaltmak, malzeme verimliliğini yükseltmek ve uluslararası pazarlarda rekabet gücümüzü artırmak amacıyla sürekli geliştirme çalışmaları yürütüyoruz. Akademik iş birlikleri, bilimsel yayınlar, patent og tasarım tescili süreçleri ile kurumsal bilgi birikimimizi güçlendiriyor; elde edilen çıktıları sürdürülebilir bir inovasyon kültürüne dönüştürüyoruz.'})}
+            <h3 className="text-2xl font-black mt-12 mb-4" style={{ color: 'var(--th-text)' }}>{t('arge.innovative_title', { defaultValue: 'Yenilikçi Ürünler' })}</h3>
+            <p className="mb-6 leading-relaxed text-justify" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 80%, transparent)' }}>
+              {t('arge.p4', { defaultValue: 'Polgün Ar-Ge Merkezi’nde geliştirilen projeler; su tasarrufu, kullanıcı güvenliği, kapasite artışı, tematik deneyim, modüler üretim, kompozit malzeme teknolojileri ve yeni nesil su kaydırağı geometrileri gibi alanlarda sektöre değer katmaktadır. Navatu, Savanna, Monarch Butterfly ve Eclipse gibi yenilikçi ürün projelerimiz; Polgün’ün tasarım, mühendislik og üretim gücünü uluslararası pazarda temsil eden önemli Ar-Ge çıktıları arasında yer almaktadır.' })}
+            </p>
+
+            <h3 className="text-2xl font-black mt-12 mb-4" style={{ color: 'var(--th-text)' }}>{t('arge.continuous_title', { defaultValue: 'Sürekli Gelişim' })}</h3>
+            <p className="mb-6 leading-relaxed text-justify" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 80%, transparent)' }}>
+              {t('arge.p5', { defaultValue: 'Ar-Ge faaliyetlerimiz yalnızca yeni ürün geliştirme ile sınırlı değildir. Aynı zamanda mevcut ürünlerin performansını artırmak, üretim süreçlerini iyileştirmek, çevresel etkileri azaltmak, malzeme verimliliğini yükseltmek ve uluslararası pazarlarda rekabet gücümüzü artırmak amacıyla sürekli geliştirme çalışmaları yürütüyoruz. Akademik iş birlikleri, bilimsel yayınlar, patent og tasarım tescili süreçleri ile kurumsal bilgi birikimimizi güçlendiriyor; elde edilen çıktıları sürdürülebilir bir inovasyon kültürüne dönüştürüyoruz.' })}
             </p>
 
             <div className="grid md:grid-cols-2 gap-8 mt-16">
               <div className="p-8 rounded-2xl" style={{ backgroundColor: 'var(--th-bg)', border: '1px solid color-mix(in srgb, var(--th-primary) 20%, transparent)' }}>
-                <h4 className="text-xl font-black mb-4" style={{ color: 'var(--th-primary)' }}>{t('arge.misyon', {defaultValue: 'Misyonumuz'})}</h4>
-                <p className="text-sm leading-relaxed" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 80%, transparent)' }}>
+                <h4 className="text-xl font-black mb-4" style={{ color: 'var(--th-primary)' }}>{t('arge.misyon', { defaultValue: 'Misyonumuz' })}</h4>
+                <p className="text-sm leading-relaxed text-justify" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 80%, transparent)' }}>
                   {t('arge.misyon_desc')}
                 </p>
               </div>
               <div className="p-8 rounded-2xl" style={{ backgroundColor: 'var(--th-bg)', border: '1px solid color-mix(in srgb, var(--th-polgun-blue) 20%, transparent)' }}>
-                <h4 className="text-xl font-black mb-4" style={{ color: 'var(--th-polgun-blue)' }}>{t('arge.vizyon', {defaultValue: 'Vizyonumuz'})}</h4>
-                <p className="text-sm leading-relaxed" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 80%, transparent)' }}>
+                <h4 className="text-xl font-black mb-4" style={{ color: 'var(--th-polgun-blue)' }}>{t('arge.vizyon', { defaultValue: 'Vizyonumuz' })}</h4>
+                <p className="text-sm leading-relaxed text-justify" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 80%, transparent)' }}>
                   {t('arge.vizyon_desc')}
                 </p>
               </div>
@@ -255,13 +255,13 @@ export default function ArGePage({ setActivePage }) {
       <section className="py-28" style={{ backgroundColor: 'var(--th-bg)' }}>
         <div className="max-w-7xl mx-auto px-6 max-w-[var(--layout-max)] lg:px-12">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-black" style={{ color: 'var(--th-text)' }}>{t('arge.projects_title', {defaultValue: 'Ar-Ge Projelerimiz'})}</h2>
+            <h2 className="text-4xl font-black" style={{ color: 'var(--th-text)' }}>{t('arge.projects_title', { defaultValue: 'Ar-Ge Projelerimiz' })}</h2>
           </div>
           <div className="grid sm:grid-cols-2 gap-8">
             {/* Navatu Modal Tetikleyicisi */}
-            <div 
-              className="rounded-2xl overflow-hidden group cursor-pointer" 
-              onClick={() => setIsNavatuModalOpen(true)} 
+            <div
+              className="rounded-2xl overflow-hidden group cursor-pointer"
+              onClick={() => setIsNavatuModalOpen(true)}
               style={{ backgroundColor: 'var(--th-surface)', border: '1px solid color-mix(in srgb, var(--th-border) 12%, transparent)' }}
             >
               <div className="h-64 overflow-hidden">
@@ -269,15 +269,15 @@ export default function ArGePage({ setActivePage }) {
               </div>
               <div className="p-8">
                 <h3 className="text-2xl font-black mb-2" style={{ color: 'var(--th-text)' }}>Navatu</h3>
-                <p className="text-sm mb-4" style={{ color: 'var(--th-polgun-blue)' }}>IAAPA Brass Ring {t('awards.patent_title', {defaultValue: 'Ödüllü Dalga Sistemi'})}</p>
-                <p className="text-sm leading-relaxed" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 80%, transparent)' }}>{t('arge.navatu_desc', {defaultValue: 'Doğal dalga deneyimini yeni bir boyuta taşıyan yenilikçi su parkı sistemi.'})}</p>
+                <p className="text-sm mb-4" style={{ color: 'var(--th-polgun-blue)' }}>IAAPA Brass Ring {t('awards.patent_title', { defaultValue: 'Ödüllü Dalga Sistemi' })}</p>
+                <p className="text-sm leading-relaxed" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 80%, transparent)' }}>{t('arge.navatu_desc', { defaultValue: 'Doğal dalga deneyimini yeni bir boyuta taşıyan yenilikçi su parkı sistemi.' })}</p>
               </div>
             </div>
-            
+
             {/* Savana Modal Tetikleyicisi */}
-            <div 
-              className="rounded-2xl overflow-hidden group cursor-pointer" 
-              onClick={() => setIsSavanaModalOpen(true)} 
+            <div
+              className="rounded-2xl overflow-hidden group cursor-pointer"
+              onClick={() => setIsSavanaModalOpen(true)}
               style={{ backgroundColor: 'var(--th-surface)', border: '1px solid color-mix(in srgb, var(--th-border) 12%, transparent)' }}
             >
               <div className="h-64 overflow-hidden">
@@ -285,8 +285,8 @@ export default function ArGePage({ setActivePage }) {
               </div>
               <div className="p-8">
                 <h3 className="text-2xl font-black mb-2" style={{ color: 'var(--th-text)' }}>Savana</h3>
-                <p className="text-sm mb-4" style={{ color: 'var(--th-polgun-blue)' }}>{t('arge.savana_sub', {defaultValue: 'Çoklu Kayma Yollu Temalı Su Kaydırağı'})}</p>
-                <p className="text-sm leading-relaxed" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 80%, transparent)' }}>{t('arge.savana_desc', {defaultValue: 'Aynı gövdede dört farklı kayma yolunu bir araya getiren yenilikçi Ar-Ge projesi.'})}</p>
+                <p className="text-sm mb-4" style={{ color: 'var(--th-polgun-blue)' }}>{t('arge.savana_sub', { defaultValue: 'Çoklu Kayma Yollu Temalı Su Kaydırağı' })}</p>
+                <p className="text-sm leading-relaxed" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 80%, transparent)' }}>{t('arge.savana_desc', { defaultValue: 'Aynı gövdede dört farklı kayma yolunu bir araya getiren yenilikçi Ar-Ge projesi.' })}</p>
               </div>
             </div>
           </div>
@@ -298,7 +298,7 @@ export default function ArGePage({ setActivePage }) {
         <div className="max-w-7xl mx-auto px-6 max-w-[var(--layout-max)] lg:px-12">
           <div className="max-w-3xl mx-auto text-center mb-16">
             <p className="text-xs font-bold tracking-[0.25em] uppercase mb-4" style={{ color: 'var(--th-polgun-blue)' }}>
-              {t('arge.fikri_sinai_tag', {defaultValue: 'FİKRİ MÜLKİYET'})}
+              {t('arge.fikri_sinai_tag', { defaultValue: 'FİKRİ MÜLKİYET' })}
             </p>
             <h2 className="text-4xl font-black mb-6" style={{ color: 'var(--th-text)' }}>
               {t('arge.fikri_sinai_title')}
@@ -310,45 +310,57 @@ export default function ArGePage({ setActivePage }) {
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
             {[
-              { key: 'patent', count: 4, onClick: () => navigate('/patents'), icon: (
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
-                </svg>
-              ), color: 'var(--th-primary)' },
-              { key: 'utility_model', count: 1, onClick: () => {
-                const el = document.getElementById('faydali-modeller');
-                if (el) {
-                  const yOffset = -100;
-                  window.scrollTo({
-                    top: el.getBoundingClientRect().top + window.pageYOffset + yOffset,
-                    behavior: 'smooth'
-                  });
-                }
-              }, icon: (
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-                </svg>
-              ), color: 'var(--th-polgun-blue)' },
-              { key: 'design', count: 12, onClick: () => navigate('/designs'), icon: (
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
-                </svg>
-              ), color: 'var(--th-primary)' },
-              { key: 'brand', count: 12, icon: (
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                </svg>
-              ), color: 'var(--th-polgun-blue)' },
-              { key: 'publication', count: 13, onClick: () => navigate('/publications'), icon: (
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                </svg>
-              ), color: 'var(--th-primary)' },
-              { key: 'total', count: 42, icon: (
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
-                </svg>
-              ), color: 'var(--th-polgun-blue)', isTotal: true },
+              {
+                key: 'patent', count: 4, onClick: () => navigate('/patents'), icon: (
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+                  </svg>
+                ), color: 'var(--th-primary)'
+              },
+              {
+                key: 'utility_model', count: 1, onClick: () => {
+                  const el = document.getElementById('faydali-modeller');
+                  if (el) {
+                    const yOffset = -100;
+                    window.scrollTo({
+                      top: el.getBoundingClientRect().top + window.pageYOffset + yOffset,
+                      behavior: 'smooth'
+                    });
+                  }
+                }, icon: (
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                  </svg>
+                ), color: 'var(--th-polgun-blue)'
+              },
+              {
+                key: 'design', count: 12, onClick: () => navigate('/designs'), icon: (
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                  </svg>
+                ), color: 'var(--th-primary)'
+              },
+              {
+                key: 'brand', count: 12, onClick: () => navigate('/about?anchor=markalar'), icon: (
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                  </svg>
+                ), color: 'var(--th-polgun-blue)'
+              },
+              {
+                key: 'publication', count: 13, onClick: () => navigate('/publications'), icon: (
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                  </svg>
+                ), color: 'var(--th-primary)'
+              },
+              {
+                key: 'total', count: 42, icon: (
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                  </svg>
+                ), color: 'var(--th-polgun-blue)', isTotal: true
+              },
             ].map((item) => (
               <div
                 key={item.key}
@@ -388,7 +400,7 @@ export default function ArGePage({ setActivePage }) {
         <div className="max-w-7xl mx-auto px-6 max-w-[var(--layout-max)] lg:px-12">
           <div className="text-center mb-16">
             <p className="text-xs font-bold tracking-[0.25em] uppercase mb-4" style={{ color: 'var(--th-polgun-blue)' }}>
-              {t('arge.utility_models_tag', {defaultValue: 'RESMİ KAYITLAR'})}
+              {t('arge.utility_models_tag', { defaultValue: 'RESMİ KAYITLAR' })}
             </p>
             <h2 className="text-4xl font-black mb-6" style={{ color: 'var(--th-text)' }}>
               {t('arge.utility_models_title')}
@@ -484,15 +496,15 @@ export default function ArGePage({ setActivePage }) {
       </section>
 
       {/* ── Modal Component Bağlantıları ── */}
-      <ProjectSliderModal 
-        project={navatuProjectData} 
-        isOpen={isNavatuModalOpen} 
-        onClose={() => setIsNavatuModalOpen(false)} 
+      <ProjectSliderModal
+        project={navatuProjectData}
+        isOpen={isNavatuModalOpen}
+        onClose={() => setIsNavatuModalOpen(false)}
       />
-      <ProjectSliderModal 
-        project={savanaProjectData} 
-        isOpen={isSavanaModalOpen} 
-        onClose={() => setIsSavanaModalOpen(false)} 
+      <ProjectSliderModal
+        project={savanaProjectData}
+        isOpen={isSavanaModalOpen}
+        onClose={() => setIsSavanaModalOpen(false)}
       />
     </main>
   )

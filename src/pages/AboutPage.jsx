@@ -24,10 +24,152 @@ import bursaFactory from '../assets/factories/bursa-factory.avif'
 import istanbulFactory from '../assets/factories/istanbul-factory.avif'
 import muglaFactory from '../assets/factories/mugla-factory.avif'
 
+import logoPolgunDefault from '../assets/brands/Polgün.avif'
+import logoEuropeWaterparks from '../assets/brands/Polgün Europe Waterparks&Attractions.avif'
+import logoEurope from '../assets/brands/Polgün Europe.avif'
+import logoKids from '../assets/brands/Polgün Kids.avif'
+import logoWaterparks from '../assets/brands/Polgün Waterparks&Attractions.avif'
+
+const BRANDS_DATA = [
+  {
+    id: 1,
+    name: 'Polgün Su Kaydırakları İmalatı',
+    appNo: '2013/29561',
+    scope: 'national',
+    country: '',
+    status: 'registered',
+    appDate: '22.11.2013',
+    regDate: '24.09.2014',
+    logo: logoPolgunDefault
+  },
+  {
+    id: 2,
+    name: 'Polgün',
+    appNo: '2019/29569',
+    scope: 'national',
+    country: '',
+    status: 'registered',
+    appDate: '22.03.2019',
+    regDate: '02.09.2019',
+    logo: logoPolgunDefault
+  },
+  {
+    id: 3,
+    name: 'Polgün Waterparks & Attractions',
+    appNo: '2019/29565',
+    scope: 'national',
+    country: '',
+    status: 'registered',
+    appDate: '22.03.2019',
+    regDate: '03.09.2019',
+    logo: logoWaterparks
+  },
+  {
+    id: 4,
+    name: 'Polgün EUROPE',
+    appNo: '2019/29561',
+    scope: 'national',
+    country: '',
+    status: 'registered',
+    appDate: '22.03.2019',
+    regDate: '10.09.2019',
+    logo: logoEurope
+  },
+  {
+    id: 5,
+    name: 'Polgün EUROPE Waterparks & Attractions',
+    appNo: '2019/29566',
+    scope: 'national',
+    country: '',
+    status: 'registered',
+    appDate: '22.03.2019',
+    regDate: '06.11.2019',
+    logo: logoEuropeWaterparks
+  },
+  {
+    id: 6,
+    name: 'WIPO Madrid – Yunanistan',
+    appNo: '2023-GE-613330',
+    scope: 'international',
+    country: 'Yunanistan',
+    status: 'registered',
+    appDate: '19.09.2023',
+    regDate: '19.09.2023',
+    logo: logoPolgunDefault
+  },
+  {
+    id: 7,
+    name: 'WIPO Madrid – Mısır',
+    appNo: '2023-GE-613330',
+    scope: 'international',
+    country: 'Mısır',
+    status: 'registered',
+    appDate: '19.09.2023',
+    regDate: '19.09.2023',
+    logo: logoPolgunDefault
+  },
+  {
+    id: 8,
+    name: 'WIPO Madrid – İspanya',
+    appNo: '2023-GE-613330',
+    scope: 'international',
+    country: 'İspanya',
+    status: 'registered',
+    appDate: '19.09.2023',
+    regDate: '19.09.2023',
+    logo: logoPolgunDefault
+  },
+  {
+    id: 9,
+    name: 'WIPO Madrid – Fransa',
+    appNo: '2023-GE-613330',
+    scope: 'international',
+    country: 'Fransa',
+    status: 'registered',
+    appDate: '19.09.2023',
+    regDate: '19.09.2023',
+    logo: logoPolgunDefault
+  },
+  {
+    id: 10,
+    name: 'WIPO Madrid – Benelüks',
+    appNo: '2023-GE-613330',
+    scope: 'international',
+    country: 'Benelüks',
+    status: 'registered',
+    appDate: '19.09.2023',
+    regDate: '19.09.2023',
+    logo: logoPolgunDefault
+  },
+  {
+    id: 11,
+    name: 'Polgün Kids',
+    appNo: '2023/124959',
+    scope: 'national',
+    country: '',
+    status: 'registered',
+    appDate: '22.09.2023',
+    regDate: '19.01.2024',
+    logo: logoKids
+  },
+  {
+    id: 12,
+    name: 'ABD',
+    appNo: '2024/21388717',
+    scope: 'international',
+    country: 'ABD',
+    status: 'pending',
+    appDate: '18.11.2024',
+    regDate: '—',
+    logo: logoPolgunDefault
+  }
+]
+
 export default function AboutPage() {
   const { t } = useTranslation()
   const navigate = useNavigate()
   const [liveAwards, setLiveAwards] = useState([])
+  const [brandFilter, setBrandFilter] = useState('all')
 
   useEffect(() => {
     let cancelled = false
@@ -56,6 +198,25 @@ export default function AboutPage() {
     fetchAwards()
     return () => { cancelled = true }
   }, [])
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const anchor = params.get('anchor');
+    if (anchor) {
+      setTimeout(() => {
+        const el = document.getElementById(anchor);
+        if (el) {
+          const yOffset = -100;
+          window.scrollTo({
+            top: el.getBoundingClientRect().top + window.pageYOffset + yOffset,
+            behavior: 'smooth'
+          });
+        }
+      }, 100);
+    } else {
+      window.scrollTo(0, 0);
+    }
+  }, []);
 
   const visits = [
     {
@@ -197,6 +358,146 @@ export default function AboutPage() {
               ))}
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* ── Markalarımız Bölümü ── */}
+      <section id="markalar" className="py-28" style={{ backgroundColor: 'var(--th-surface)', borderTop: '1px solid color-mix(in srgb, var(--th-border) 8%, transparent)', borderBottom: '1px solid color-mix(in srgb, var(--th-border) 8%, transparent)' }}>
+        <div className="max-w-7xl mx-auto px-6 max-w-[var(--layout-max)] lg:px-12">
+          
+          <div className="text-center mb-16">
+            <p className="text-xs font-bold tracking-[0.25em] uppercase mb-4" style={{ color: 'var(--th-polgun-blue)' }}>
+              {t('arge.brands_tag', { defaultValue: 'FİKRİ MÜLKİYET' })}
+            </p>
+            <h2 className="text-4xl font-black mb-6" style={{ color: 'var(--th-text)' }}>
+              {t('arge.brands_title', { defaultValue: 'Markalarımız' })}
+            </h2>
+            <p className="max-w-2xl mx-auto text-sm leading-relaxed" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 80%, transparent)' }}>
+              {t('arge.brands_desc', { defaultValue: 'Polgün’ün ulusal ve uluslararası tescilli marka kayıtları, küresel pazardaki özgün kimliğimizi ve güvenirliğimizi temsil etmektedir.' })}
+            </p>
+          </div>
+
+          {/* Filtre Yapısı */}
+          <div className="flex flex-wrap items-center justify-center gap-2 mb-12">
+            {[
+              { key: 'all', label: t('patentsPage.filter.all', { defaultValue: 'Tümü' }) },
+              { key: 'national', label: t('arge.national', { defaultValue: 'Ulusal' }) },
+              { key: 'international', label: t('arge.international', { defaultValue: 'Uluslararası' }) },
+              { key: 'registered', label: t('arge.registered', { defaultValue: 'Tescilli' }) },
+              { key: 'pending', label: t('arge.pending', { defaultValue: 'Başvuru Aşamasında' }) }
+            ].map((f) => (
+              <button
+                key={f.key}
+                onClick={() => setBrandFilter(f.key)}
+                className="px-5 py-2.5 rounded-full text-xs font-bold transition-all duration-300 border"
+                style={{
+                  backgroundColor: brandFilter === f.key ? 'var(--th-primary)' : 'var(--th-bg)',
+                  color: brandFilter === f.key ? '#fff' : 'var(--th-text)',
+                  borderColor: brandFilter === f.key ? 'var(--th-primary)' : 'color-mix(in srgb, var(--th-border) 10%, transparent)',
+                  boxShadow: brandFilter === f.key ? '0 4px 14px rgba(0,0,0,0.1)' : 'none'
+                }}
+              >
+                {f.label}
+              </button>
+            ))}
+          </div>
+
+          {/* Marka Kartları Grid */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+            {BRANDS_DATA.filter((b) => {
+              if (brandFilter === 'all') return true;
+              if (brandFilter === 'national') return b.scope === 'national';
+              if (brandFilter === 'international') return b.scope === 'international';
+              if (brandFilter === 'registered') return b.status === 'registered';
+              if (brandFilter === 'pending') return b.status === 'pending';
+              return true;
+            }).map((brand) => (
+              <div
+                key={brand.id}
+                className="group rounded-3xl overflow-hidden flex flex-row transition-all duration-300 hover:shadow-2xl hover:shadow-black/5"
+                style={{
+                  backgroundColor: 'var(--th-bg)',
+                  border: '1px solid color-mix(in srgb, var(--th-border) 10%, transparent)'
+                }}
+              >
+                {/* Sol Kısım: Logo */}
+                <div className="w-[110px] sm:w-[140px] shrink-0 p-4 flex items-center justify-center bg-white border-r" style={{ borderColor: 'color-mix(in srgb, var(--th-border) 8%, transparent)' }}>
+                  <img
+                    src={brand.logo}
+                    alt={brand.name}
+                    className="max-h-[50px] max-w-full object-contain transition-transform duration-500 group-hover:scale-105"
+                  />
+                </div>
+
+                {/* Sağ Kısım: Detaylar */}
+                <div className="p-5 flex-1 flex flex-col justify-between space-y-4">
+                  <div className="space-y-3">
+                    {/* Kapsam & Durum */}
+                    <div className="flex flex-wrap items-center justify-between gap-2">
+                      <span className="text-[8px] font-black uppercase tracking-widest px-2 py-0.5 rounded bg-neutral-100 dark:bg-neutral-800 text-neutral-600 dark:text-neutral-300">
+                        {brand.scope === 'national' ? t('arge.national', { defaultValue: 'Ulusal' }) : t('arge.international', { defaultValue: 'Uluslararası' })}
+                      </span>
+                      
+                      <span
+                        className={`text-[8px] font-black uppercase tracking-widest px-2 py-0.5 rounded ${
+                          brand.status === 'registered'
+                            ? 'bg-emerald-500/10 text-emerald-600'
+                            : 'bg-amber-500/10 text-amber-600'
+                        }`}
+                      >
+                        {brand.status === 'registered' ? t('arge.registered', { defaultValue: 'Tescilli' }) : t('arge.pending', { defaultValue: 'Başvuru Aşamasında' })}
+                      </span>
+                    </div>
+
+                    {/* Marka Adı */}
+                    <h3 className="text-sm font-black leading-snug" style={{ color: 'var(--th-text)' }}>
+                      {brand.name}
+                    </h3>
+
+                    {/* Uluslararası Kapsanan Ülke */}
+                    {brand.scope === 'international' && brand.country && (
+                      <div className="flex items-center gap-1.5 text-[10px] font-bold" style={{ color: 'var(--th-polgun-blue)' }}>
+                        <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 002 2h2m-4-3.5a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z" />
+                        </svg>
+                        <span>{brand.country}</span>
+                      </div>
+                    )}
+                  </div>
+
+                  {/* Properties Table */}
+                  <div className="grid grid-cols-2 gap-x-4 gap-y-2 pt-3 border-t text-[10px]" style={{ borderColor: 'color-mix(in srgb, var(--th-border) 8%, transparent)' }}>
+                    <div>
+                      <span className="block text-[8px] font-bold uppercase tracking-wider mb-0.5" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 50%, transparent)' }}>
+                        {t('patentsPage.card.app_no', { defaultValue: 'Başvuru No' })}
+                      </span>
+                      <span className="font-extrabold" style={{ color: 'var(--th-text)' }}>
+                        {brand.appNo}
+                      </span>
+                    </div>
+                    <div>
+                      <span className="block text-[8px] font-bold uppercase tracking-wider mb-0.5" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 50%, transparent)' }}>
+                        {t('arge.app_date', { defaultValue: 'Başvuru Tarihi' })}
+                      </span>
+                      <span className="font-extrabold" style={{ color: 'var(--th-text)' }}>
+                        {brand.appDate}
+                      </span>
+                    </div>
+                    <div className="col-span-2">
+                      <span className="block text-[8px] font-bold uppercase tracking-wider mb-0.5" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 50%, transparent)' }}>
+                        {t('arge.reg_date', { defaultValue: 'Tescil Tarihi' })}
+                      </span>
+                      <span className="font-extrabold" style={{ color: 'var(--th-text)' }}>
+                        {brand.regDate}
+                      </span>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            ))}
+          </div>
+
         </div>
       </section>
 

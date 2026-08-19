@@ -82,6 +82,7 @@ export default function Navbar({ activePage, setActivePage, colorPalette, locati
             { label: t('nav.team'), desc: '', page: 'team', to: '/team' },
             { label: t('nav.history'), desc: '', page: 'history', to: '/history' },
             { label: t('nav.awards'), desc: '', page: 'awards', to: '/awards' },
+            { label: t('nav.brands', { defaultValue: 'Markalarımız' }), desc: '', page: 'about', anchor: 'markalar', to: '/about?anchor=markalar' },
             { label: t('nav.factories'), desc: '', page: 'factories', to: '/factories' },
             { label: t('nav.news'), desc: '', page: 'news', to: '/news' },
             { label: t('nav.knowledge_center', { defaultValue: 'Bilgi Merkezi' }), desc: '', page: 'knowledge-center', to: '/bilgi-merkezi' },
