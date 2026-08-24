@@ -4,9 +4,21 @@ import { useTranslation } from 'react-i18next'
 import eclipseImg from '../assets/patents/eclipse/Eclipse.avif'
 import floresanImg from '../assets/patents/floresan_aydınlatma/Floresan Aydınlatma.avif'
 import navatuImg from '../assets/patents/navatu/Navatu.3.avif'
-import slipandflyImg from '../assets/patents/slipandfly/Slip&Fly.avif'
-
+import slipandflyImg from '../assets/brands/Polgün Waterparks&Attractions.avif'
 const PATENTS_DATA = [
+
+  {
+    id: 1,
+    projectName: 'Floresan Aydınlatma',
+    patentName: 'Floresan Işıklandırmaya Sahip Su Kaydırağı',
+    appNo: '2022/001778',
+    isPct: false,
+    scope: 'Ulusal',
+    status: 'Tescilli', // registered
+    appDate: '11.02.2022',
+    regDate: '11.02.2022',
+    image: floresanImg
+  },
   {
     id: 4,
     projectName: 'Eclipse',
@@ -33,27 +45,15 @@ const PATENTS_DATA = [
   },
   {
     id: 2,
-    projectName: 'Slip and Fly',
-    patentName: 'Çıkış Bölümüne Geliş Hızını Artırırken Serbest Düşmeyi Sağlayan Su Kaydırağı',
-    appNo: '2022/000727',
+    projectName: '',
+    patentName: 'Açık ve Kapalı Kesitli Formlar Arasında Çift Yönlü Dönüştürülebilen Modüler Vücut Kaydırağı ',
+    appNo: '2026/010391',
     isPct: false,
     scope: 'Ulusal',
     status: 'Başvuru Aşamasında',
-    appDate: '20.01.2022',
+    appDate: '14.07.2026',
     regDate: '—',
     image: slipandflyImg
-  },
-  {
-    id: 1,
-    projectName: 'Floresan Aydınlatma',
-    patentName: 'Floresana Işıklandırmaya Sahip Su Kaydırağı',
-    appNo: '2022/001778',
-    isPct: false,
-    scope: 'Ulusal',
-    status: 'Tescilli', // registered
-    appDate: '11.02.2022',
-    regDate: '11.02.2022',
-    image: floresanImg
   }
 ]
 
@@ -223,9 +223,8 @@ export default function PatentsPage() {
               {filteredData.map((item, index) => (
                 <div
                   key={item.id}
-                  className={`group rounded-3xl overflow-hidden flex flex-col transition-all duration-500 hover:shadow-2xl hover:shadow-black/5 ${
-                    index % 2 === 1 ? 'lg:flex-row-reverse' : 'lg:flex-row'
-                  }`}
+                  className={`group rounded-3xl overflow-hidden flex flex-col transition-all duration-500 hover:shadow-2xl hover:shadow-black/5 ${index % 2 === 1 ? 'lg:flex-row-reverse' : 'lg:flex-row'
+                    }`}
                   style={{
                     backgroundColor: 'var(--th-bg)',
                     border: '1px solid color-mix(in srgb, var(--th-border) 8%, transparent)'

@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next'
 // Ziyaret görselleri
 import egekafVisit from '../assets/awards/egekaf-visit.avif'
 import mskuRectorVisit from '../assets/awards/msku-rector-visit.avif'
+import techVisit from '../assets/awards/tech-visit.png'
 
 export default function AwardsPage({ setActivePage }) {
   const { t } = useTranslation()
@@ -39,6 +40,11 @@ export default function AwardsPage({ setActivePage }) {
   }, [])
 
   const visits = [
+    {
+      title: t('awards.visits.minister.title'),
+      desc: t('awards.visits.minister.desc'),
+      img: techVisit,
+    },
     {
       title: t('awards.visits.egekaf.title'),
       desc: t('awards.visits.egekaf.desc'),

@@ -9,6 +9,7 @@ import heroImage from '../assets/polgun-featured-projects-4.avif'
 // Ziyaret görselleri
 import egekafVisit from '../assets/awards/egekaf-visit.avif'
 import mskuRectorVisit from '../assets/awards/msku-rector-visit.avif'
+import techVisit from '../assets/awards/tech-visit.png'
 
 // Üretim görselleri
 import cncOperator from '../assets/production/cnc-operator.avif'
@@ -21,7 +22,7 @@ import cncCutting from '../assets/production/cnc-cutting.avif'
 
 // Fabrika görselleri
 import bursaFactory from '../assets/factories/bursa-factory.avif'
-import istanbulFactory from '../assets/factories/istanbul-factory.avif'
+import istanbulFactory from '../assets/factories/istanbul-factory.png'
 import muglaFactory from '../assets/factories/mugla-factory.avif'
 
 import logoPolgunDefault from '../assets/brands/Polgün.avif'
@@ -220,6 +221,11 @@ export default function AboutPage() {
 
   const visits = [
     {
+      title: t('awards.visits.minister.title'),
+      desc: t('awards.visits.minister.desc'),
+      img: techVisit,
+    },
+    {
       title: t('awards.visits.egekaf.title'),
       desc: t('awards.visits.egekaf.desc'),
       img: egekafVisit,
@@ -364,7 +370,7 @@ export default function AboutPage() {
       {/* ── Markalarımız Bölümü ── */}
       <section id="markalar" className="py-28" style={{ backgroundColor: 'var(--th-surface)', borderTop: '1px solid color-mix(in srgb, var(--th-border) 8%, transparent)', borderBottom: '1px solid color-mix(in srgb, var(--th-border) 8%, transparent)' }}>
         <div className="max-w-7xl mx-auto px-6 max-w-[var(--layout-max)] lg:px-12">
-          
+
           <div className="text-center mb-16">
             <p className="text-xs font-bold tracking-[0.25em] uppercase mb-4" style={{ color: 'var(--th-polgun-blue)' }}>
               {t('arge.brands_tag', { defaultValue: 'FİKRİ MÜLKİYET' })}
@@ -437,13 +443,12 @@ export default function AboutPage() {
                       <span className="text-[8px] font-black uppercase tracking-widest px-2 py-0.5 rounded bg-neutral-100 dark:bg-neutral-800 text-neutral-600 dark:text-neutral-300">
                         {brand.scope === 'national' ? t('arge.national', { defaultValue: 'Ulusal' }) : t('arge.international', { defaultValue: 'Uluslararası' })}
                       </span>
-                      
+
                       <span
-                        className={`text-[8px] font-black uppercase tracking-widest px-2 py-0.5 rounded ${
-                          brand.status === 'registered'
-                            ? 'bg-emerald-500/10 text-emerald-600'
-                            : 'bg-amber-500/10 text-amber-600'
-                        }`}
+                        className={`text-[8px] font-black uppercase tracking-widest px-2 py-0.5 rounded ${brand.status === 'registered'
+                          ? 'bg-emerald-500/10 text-emerald-600'
+                          : 'bg-amber-500/10 text-amber-600'
+                          }`}
                       >
                         {brand.status === 'registered' ? t('arge.registered', { defaultValue: 'Tescilli' }) : t('arge.pending', { defaultValue: 'Başvuru Aşamasında' })}
                       </span>

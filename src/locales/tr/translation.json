@@ -42,6 +42,7 @@
     "awards": "Ödüller & Patent",
     "factories": "Fabrikalarımız",
     "news": "Haberler & Etkinlikler",
+    "newsletter": "E-Bültenlerimiz",
     "knowledge_center": "Bilgi Merkezi",
     "arge": "Ar-Ge",
     "arge_center": "Ar-Ge Merkezi",
@@ -719,6 +720,10 @@
     "quality_documents": "Sertifikalar",
     "quality_title": "Kalite Belgelerimiz",
     "visits": {
+      "minister": {
+        "title": "Sanayi ve Teknoloji Bakanımız Sayın Mehmet Fatih Kacır’ı Polgun Waterparks’ta ağırlamanın onurunu yaşadık.",
+        "desc": "Muğla Valimiz Sayın İdris Akbıyık, Muğla Milletvekillerimiz Sayın Kadem Mete ve Sayın Yakup Otgöz, Menteşe Kaymakamı Sayın Mehmet Eriş, AK Parti İl Başkanı Sayın Haluk Laçin, MHP İl Başkanı Sayın Burak Demirel ve Kavaklıdere Belediye Başkanı Sayın Mehmet Demir’in eşlik ettiği heyeti fabrikamızda ağırlamaktan gurur duyduk. Heyet, Muğla’daki üretim tesisimizi ziyaret ederek Ar-Ge merkezimizi inceledi.\n\nSektörün küresel liderlerinden biri olarak, inovasyon, kalite ve mükemmeliyete olan bağlılığımızdan büyük gurur duyuyoruz. Ziyaretleri, ileri üretim teknolojileri ve Ar-Ge’nin geleceği şekillendirmedeki önemini bir kez daha göstermiştir. Nazik ziyaretleri, ilgileri ve destekleri için kendilerine içten teşekkürlerimizi sunarız."
+      },
       "egekaf": {
         "title": "EGEKAF Kapsamında Polgün Ziyareti",
         "desc": "EGEKAF kapsamında gerçekleşen ziyarette; Polgün'ün proje maketleri, ürün geliştirme yaklaşımı ve sektörel deneyimi katılımcılarla paylaşıldı."
@@ -780,17 +785,69 @@
       "2002": "Polgün, Muğla-Menteşe'de faaliyete başladı.",
       "2008": "İlk uluslararası proje teslimatı gerçekleştirildi.",
       "2015": "Üretim kapasitesi artırılarak yeni tesisler devreye alındı.",
+      "2019": "İspanya ofisi açıldı.",
       "2021": "Bakanlık onaylı Ar-Ge Merkezi statüsü kazanıldı — Muğla'nın ilk ve tek Ar-Ge Merkezi.",
-      "2022": "Antalya fabrikası kuruldu, İspanya ofisi açıldı.",
-      "2024": "Bursa fabrika yatırımıyla toplam 120.000 m² üretim alanına ulaşıldı.",
-      "2025": "Marmara Teknopark ofisi ile üniversite-sanayi iş birliği güçlendirildi."
+      "2025": "Bursa fabrika yatırımıyla toplam 120.000 m² üretim alanına ulaşıldı.",
+      "2026": "Marmara Teknopark ofisi ile üniversite-sanayi iş birliği güçlendirildi."
     },
     "milestones_tag": "Kilometre Taşları"
   },
   "news": {
     "title": "Haberler & Etkinlikler",
     "subtitle": "Polgün'den Haberler",
-    "desc": "Şirketimizdeki güncel gelişmeler, katıldığımız fuarlar ve etkinlikler."
+    "desc": "Şirketimizdeki güncel gelişmeler, katıldığımız fuarlar ve etkinlikler.",
+    "tabs": {
+      "articles": "Haberler & Etkinlikler",
+      "fairs": "Fuar Katılımları",
+      "bulletins": "E-Bültenlerimiz"
+    },
+    "bulletins_title": "Kurumsal E-Bültenler",
+    "bulletins_subtitle": "Aylık Kurumsal Bülten Arşivimiz",
+    "bulletins_desc": "Geçmişten günümüze şirket içi gelişmeleri ve yayınlarımızı derlediğimiz aylık e-bültenlerimiz.",
+    "fairs_title": "Katıldığımız Fuarlar",
+    "fairs_desc": "Sektörümüzün küresel ölçekteki en önemli buluşma noktalarında Polgün olarak yerimizi alıyoruz.",
+    "fairs": {
+      "iaapa_barcelona_2025": "IAAPA Expo Barcelona 2025",
+      "iaapa_orlando_2025": "IAAPA Expo Orlando 2025",
+      "iaapa_orlando_2024": "IAAPA Expo Orlando 2024",
+      "deal_dubai_2026": "Deal Dubai 2026",
+      "tashkent_2026": "Tashkent Özbekistan 2026",
+      "piscina_barcelona_2025": "Piscina & Wellness Barcelona 2025"
+    },
+    "open_flipbook": "Bülteni Oku",
+    "flipbook_loading": "Bülten Yükleniyor...",
+    "flipbook_error": "Bülten yüklenemedi. Lütfen tekrar deneyin.",
+    "flipbook_close": "Kapat",
+    "flipbook_next": "Sonraki Sayfa",
+    "flipbook_prev": "Önceki Sayfa",
+    "flipbook_pages": "Sayfa",
+    "issue_format": "Sayı {{number}}",
+    "months": {
+      "february": "Şubat",
+      "march": "Mart",
+      "april": "Nisan",
+      "may": "Mayıs",
+      "june": "Haziran",
+      "july": "Temmuz"
+    },
+    "articles": {
+      "gunes_bakim_evi": {
+        "title": "Özel Güneş Gündüz Bakımevi Açılışı",
+        "desc": "Sosyal sorumluluk projelerine yönelik desteklerimiz aralıksız sürmektedir. Menteşe Belediyesi tarafından hayata geçirilen Özel Güneş Gündüz Bakımevi’nin açılışı, Genel Müdürümüz Sayın İbrahim Güngör’ün katılımıyla gerçekleştirildi. Polgün Ailesi olarak bugün de minik kalplere dokunmanın mutluluğunu yaşıyoruz."
+      },
+      "aile_sosyal_hizmetler": {
+        "title": "Aile ve Sosyal Hizmetler İl Müdürlüğü İş Birliği",
+        "desc": "Muğla Aile ve Sosyal Hizmetler İl Müdürlüğü’nün yürüttüğü anlamlı bir çalışmaya Polgün ailesi olarak destek vermekten mutluluk duyuyoruz. Sayın Valimiz İdris Akbıyık’ın vesilesiyle hayata geçen bu iş birliği sayesinde, çocuklar için daha sıcak ve güvenli yaşam alanları oluşturuluyor. Toplumsal dayanışmanın gücüne inanıyor, geleceğe umutla bakan her adımda bu tür katkıların önemini benimsiyoruz."
+      },
+      "iftar_programi": {
+        "title": "Geleneksel İftar Davetimiz",
+        "desc": "Muğla Valimiz Sayın İdris Akbıyık, Menteşe Kaymakamı Sayın Mehmet Eriş, MSKÜ Rektörü Sayın Prof. Dr. Turhan Kaçar, Yatağan Belediye Başkanı Sayın Mesut Günay, 27. Dönem Muğla Milletvekili Sayın Yelda Erol, TÜBİTAK MARTEK Başkanı ve 24. Dönem Milletvekili Sayın Mehmet Ali Okur, Muğla’nın değerli iş insanları, siyasi parti temsilcileri ve büyük Polgün ailemizin onurlandırdığı geleneksel iftar davetimiz, 14 Mart 2026 tarihinde Türkan Saylan Eğitim ve Kültür Merkezi’nde 600’den fazla davetlinin katılımıyla gerçekleşti. Polgün Waterparks & Attractions Yönetim Kurulu Başkanı İbrahim Güngör ve kıymetli ailesi tarafından düzenlenen iftar programında, Türk Tasavvuf Müziği sanatçısı Abdurrahman Önül’ün seslendirdiği ilahiler eşliğinde, Enes Çiftçi’nin sunumuyla gerçekleştirilen programda semazen gösterisi büyük ilgi gördü. Katılım sağlayan ve davetimizi onurlandıran tüm ailemize teşekkürlerimizi sunuyoruz."
+      },
+      "msku_kariyer_fuari": {
+        "title": "MSKÜ Kariyer Fuarı",
+        "desc": "Polgün Waterparks & Attractions Yönetim Kurulu Başkanı Sayın İbrahim Güngör, Muğla Sıtkı Koçman Üniversitesi’nde düzenlenen Kariyer Fuarı’nda geleceğin profesyonannyaşarıyla bir araya geldi. Genç yeteneklerle sektördeki bilgi birikimini ve tecrübelerini paylaşan İbrahim Güngör, su parkı ve eğlence sektörünün dinamikleri, yenilikçi projelerimiz ve kariyer planlaması üzerine öğrencilerle ilham verici bir sohbet gerçekleştirdi. Sektörümüzün geleceğini şekillendirecek olan gençlerin heyecanı ve vizyonu bizlere bir kez daha büyük bir motivasyon kaynağı oldu. Polgün ailesi olarak, genç yeteneklerin yanında olmaktan ve kariyer yolculuklarında onlara destek vermekten büyük gurur duyuyoruz!"
+      }
+    }
   },
   "team": {
     "title": "Ekibimiz",

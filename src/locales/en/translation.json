@@ -43,6 +43,7 @@
     "awards": "Awards & Patents",
     "factories": "Our Factories",
     "news": "News & Events",
+    "newsletter": "E-Newsletters",
     "knowledge_center": "Knowledge Center",
     "arge": "R&D",
     "arge_center": "R&D Center",
@@ -720,6 +721,10 @@
     "quality_documents": "Certificates",
     "quality_title": "Our Quality Certificates",
     "visits": {
+      "minister": {
+        "title": "We had the honor of hosting our Minister of Industry and Technology, Mr. Mehmet Fatih Kacır, at Polgun Waterparks.",
+        "desc": "We were proud to host the delegation accompanied by our Governor of Muğla Mr. İdris Akbıyık, our Muğla Deputies Mr. Kadem Mete and Mr. Yakup Otgöz, District Governor of Menteşe Mr. Mehmet Eriş, AK Party Provincial Chairman Mr. Haluk Laçin, MHP Provincial Chairman Mr. Burak Demirel, and Mayor of Kavaklıdere Mr. Mehmet Demir at our factory. The delegation visited our production facility in Muğla and examined our R&D center.\n\nAs one of the global leaders in the industry, we take great pride in our commitment to innovation, quality, and excellence. Their visit has once again demonstrated the importance of advanced production technologies and R&D in shaping the future. We express our sincere gratitude to them for their kind visit, interest, and support."
+      },
       "egekaf": {
         "title": "Polgün Visit within the Scope of EGEKAF",
         "desc": "During the visit carried out within EGEKAF, Polgün's project models, product development approach, and sectoral experience were shared with participants."
@@ -781,17 +786,69 @@
       "2002": "Polgün started its operations in Muğla-Menteşe.",
       "2008": "First international project delivery was accomplished.",
       "2015": "Production capacity was increased and new facilities were commissioned.",
+      "2019": "Spain office was opened.",
       "2021": "Ministry-approved R&D Center status was obtained — Muğla's first and only R&D Center.",
-      "2022": "Antalya factory was established, Spain office was opened.",
-      "2024": "A total of 120,000 m² production area was reached with the Bursa factory investment.",
-      "2025": "University-industry cooperation was strengthened with the Marmara Teknokent office."
+      "2025": "A total of 120,000 m² production area was reached with the Bursa factory investment.",
+      "2026": "University-industry cooperation was strengthened with the Marmara Teknokent office."
     },
     "milestones_tag": "Milestones"
   },
   "news": {
     "title": "News & Events",
     "subtitle": "News from Polgün",
-    "desc": "Current developments in our company, exhibitions we participate in, and events."
+    "desc": "Current developments in our company, exhibitions we participate in, and events.",
+    "tabs": {
+      "articles": "News & Events",
+      "fairs": "Fairs & Expositions",
+      "bulletins": "E-Newsletters"
+    },
+    "bulletins_title": "Corporate E-Newsletters",
+    "bulletins_subtitle": "Our Monthly E-Newsletter Archive",
+    "bulletins_desc": "Our monthly e-newsletters detailing corporate updates, achievements, and events.",
+    "fairs_title": "Fairs We Attend",
+    "fairs_desc": "As Polgün, we take our place in the most important global gathering points of our industry.",
+    "fairs": {
+      "iaapa_barcelona_2025": "IAAPA Expo Barcelona 2025",
+      "iaapa_orlando_2025": "IAAPA Expo Orlando 2025",
+      "iaapa_orlando_2024": "IAAPA Expo Orlando 2024",
+      "deal_dubai_2026": "Deal Dubai 2026",
+      "tashkent_2026": "Tashkent Uzbekistan 2026",
+      "piscina_barcelona_2025": "Piscina & Wellness Barcelona 2025"
+    },
+    "open_flipbook": "Read Newsletter",
+    "flipbook_loading": "Loading Newsletter...",
+    "flipbook_error": "Failed to load newsletter. Please try again.",
+    "flipbook_close": "Close",
+    "flipbook_next": "Next Page",
+    "flipbook_prev": "Previous Page",
+    "flipbook_pages": "Page",
+    "issue_format": "Issue {{number}}",
+    "months": {
+      "february": "February",
+      "march": "March",
+      "april": "April",
+      "may": "May",
+      "june": "June",
+      "july": "July"
+    },
+    "articles": {
+      "gunes_bakim_evi": {
+        "title": "Special Güneş Day Care Center Opening",
+        "desc": "Our support for social responsibility projects continues uninterrupted. The opening of the Special Güneş Day Care Center, implemented by Menteşe Municipality, was held with the participation of our General Manager, Mr. İbrahim Güngör. As the Polgün Family, we are happy to touch little hearts today as well."
+      },
+      "aile_sosyal_hizmetler": {
+        "title": "Collaboration with Family and Social Services Directorate",
+        "desc": "As the Polgün family, we are happy to support a meaningful work carried out by the Muğla Provincial Directorate of Family and Social Services. Thanks to this cooperation, which was initiated through our Governor İdris Akbıyık, warmer and safer living spaces are created for children. We believe in the power of social solidarity and adopt the importance of such contributions in every step looking to the future with hope."
+      },
+      "iftar_programi": {
+        "title": "Our Traditional Iftar Invitation",
+        "desc": "Our traditional iftar invitation, honored by our Muğla Governor Mr. İdris Akbıyık, Menteşe District Governor Mr. Mehmet Eriş, MSKÜ Rector Prof. Dr. Turhan Kaçar, Yatağan Mayor Mr. Mesut Günay, 27th Term Muğla Deputy Mrs. Yelda Erol, TÜBİTAK MARTEK President and 24th Term Deputy Mr. Mehmet Ali Okur, valuable businesspeople of Muğla, political party representatives and our big Polgün family, took place on March 14, 2026, at Türkan Saylan Education and Culture Center with the participation of more than 600 guests. In the iftar program organized by Polgün Waterparks & Attractions Chairman of the Board İbrahim Güngör and his precious family, accompanied by hymns sung by Turkish Sufi Music artist Abdurrahman Önül, Enes Çiftçi's presentation and semazen show attracted great attention. We extend our thanks to all our family members who attended and honored our invitation."
+      },
+      "msku_kariyer_fuari": {
+        "title": "MSKÜ Career Fair",
+        "desc": "Polgün Waterparks & Attractions Chairman of the Board Mr. İbrahim Güngör met with the professionals of the future at the Career Fair organized at Muğla Sıtkı Koçman University. Sharing his knowledge and experience in the sector with young talents, İbrahim Güngör held an inspiring conversation with students on the dynamics of the water park and entertainment sector, our innovative projects, and career planning. The excitement and vision of the youth who will shape the future of our industry once again became a great source of motivation for us. As the Polgün family, we are proud to stand by young talents and support them in their career journeys!"
+      }
+    }
   },
   "team": {
     "title": "Our Team",

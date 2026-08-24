@@ -90,6 +90,7 @@ export default function Navbar({ activePage, setActivePage, colorPalette, locati
             { label: t('nav.brands', { defaultValue: 'Markalarımız' }), desc: '', page: 'about', anchor: 'markalar', to: '/about?anchor=markalar' },
             { label: t('nav.factories'), desc: '', page: 'factories', to: '/factories' },
             { label: t('nav.news'), desc: '', page: 'news', to: '/news' },
+            { label: t('nav.newsletter', { defaultValue: 'E-Bültenlerimiz' }), desc: '', page: 'news', to: '/news?tab=bulletin' },
             { label: t('nav.knowledge_center', { defaultValue: 'Bilgi Merkezi' }), desc: '', page: 'knowledge-center', to: '/bilgi-merkezi' },
           ],
         },
