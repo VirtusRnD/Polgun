@@ -12,13 +12,18 @@ import mskuRectorVisit from '../assets/awards/msku-rector-visit.avif'
 import techVisit from '../assets/awards/tech-visit.png'
 
 // Üretim görselleri
-import cncOperator from '../assets/production/cnc-operator.avif'
-import pipeCutting from '../assets/production/pipe-cutting.avif'
-import paintApplication from '../assets/production/paint-application.avif'
-import inotekCnc from '../assets/production/inotek-cnc.avif'
-import compositeControl from '../assets/production/composite-control.avif'
-import mechanicalOperator from '../assets/production/mechanical-operator.avif'
-import cncCutting from '../assets/production/cnc-cutting.avif'
+import entegre_depo from '../assets/production/1.jpg'
+import model_kalıp from '../assets/production/2.png'
+import elyaf from '../assets/production/3.jpg'
+import kompozit from '../assets/production/4.jpg'
+import çelik_işleme from '../assets/production/5.png'
+import çelik_konstrüksiyon from '../assets/production/6.png'
+import mekanik from '../assets/production/7.png'
+import boya from '../assets/production/8.png'
+import kalite from '../assets/production/9.jpg'
+import paketleme from '../assets/production/10.jpeg'
+
+
 
 // Fabrika görselleri
 import bursaFactory from '../assets/factories/bursa-factory.avif'
@@ -237,12 +242,18 @@ export default function AboutPage() {
     },
   ]
 
+
   const productionSections = [
-    { id: 'cnc_mold', img: inotekCnc },
-    { id: 'steel', img: cncCutting, img2: pipeCutting },
-    { id: 'mechanical', img: mechanicalOperator },
-    { id: 'composite', img: paintApplication, img2: compositeControl },
-    { id: 'digital', img: cncOperator },
+    { id: 'entegre_depo', img: entegre_depo },
+    { id: 'model_kalıp', img: model_kalıp },
+    { id: 'elyaf', img: elyaf },
+    { id: 'kompozit', img: kompozit },
+    { id: 'çelik_işleme', img: çelik_işleme },
+    { id: 'çelik_konstrüksiyon', img: çelik_konstrüksiyon },
+    { id: 'mekanik', img: mekanik },
+    { id: 'boya', img: boya },
+    { id: 'kalite', img: kalite },
+    { id: 'paketleme', img: paketleme },
   ]
 
   const factories = [
@@ -263,18 +274,25 @@ export default function AboutPage() {
   ]
 
   const kaliteBelgeleri = [
-    { title: 'ISO 9001:2015', desc: t('awards.kalite.iso9001'), file: '/documents/kalite/ISO-9001.pdf' },
-    { title: 'ISO 14001:2015', desc: t('awards.kalite.iso14001'), file: '/documents/kalite/ISO-14001.pdf' },
-    { title: 'ISO 45001:2018', desc: t('awards.kalite.iso45001'), file: '/documents/kalite/ISO-45001.pdf' },
+    { title: 'ISO 9001:2015', desc: t('awards.kalite.iso9001'), file: '/documents/kalite/ISO-9001.pdf', icon: 'ISO' },
+    { title: 'ISO 14001:2015', desc: t('awards.kalite.iso14001'), file: '/documents/kalite/ISO-14001.pdf', icon: 'ISO' },
+    { title: 'ISO 45001:2018', desc: t('awards.kalite.iso45001'), file: '/documents/kalite/ISO-45001.pdf', icon: 'ISO' },
+    { title: 'ISO 3834-2', desc: 'Çelik Konstrüksiyon İmalatı', file: '/documents/kalite/ISO-3834-2.pdf', icon: 'ISO' },
+    { title: 'ASTM F2376-22', desc: 'Ürün Standart Belgesi', file: '/documents/kalite/ASTM-F2376-22.pdf', icon: 'ASTM' },
+    { title: 'CPR 15473-1090', desc: 'Kaynak Sertifikası', file: '/documents/kalite/CPR-15473-1090.pdf', icon: 'CPR' },
+    { title: 'TS-EN 1069', desc: 'Ürün Standart Belgesi', file: '/documents/kalite/TS-EN-1069.pdf', icon: 'TS-EN' },
+    { title: 'TS-EN 1176-1', desc: 'Ürün Standart Belgesi', file: '/documents/kalite/TS-EN-1176-1.pdf', icon: 'TS-EN' },
+    { title: 'TS-EN 17232', desc: 'Ürün Standart Belgesi', file: '/documents/kalite/TS-EN-17232.pdf', icon: 'TS-EN' },
+
   ]
 
   return (
     <main className="pt-20" style={{ backgroundColor: 'var(--th-bg)' }}>
 
       {/* ── Page Hero ── */}
-      <section className="py-28" style={{ backgroundColor: 'var(--th-primary)' }}>
-        <div className="max-w-7xl mx-auto px-6 max-w-[var(--layout-max)] lg:px-12">
-          <div className="grid lg:grid-cols-2 gap-16 items-end">
+      <section className="relative py-20 lg:py-24 min-h-[320px] lg:min-h-[360px] flex items-center" style={{ backgroundColor: 'var(--th-primary)' }}>
+        <div className="w-full max-w-7xl mx-auto px-6 max-w-[var(--layout-max)] lg:px-12">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-end">
             <div>
               <p className="text-xs font-bold tracking-[0.3em] uppercase mb-4" style={{ color: 'var(--th-text)' }}>
                 {t('nav.about')}
@@ -283,7 +301,7 @@ export default function AboutPage() {
                 {t('about.experience')}
               </h1>
             </div>
-            <p className="text-white/50 text-lg leading-relaxed text-justify ">
+            <p className="text-white/70 text-lg leading-relaxed text-justify">
               {t('about.desc')}
             </p>
           </div>
@@ -310,6 +328,48 @@ export default function AboutPage() {
               </p>
             </div>
             <img src={heroImage} alt="Polgün Waterpark" className="w-full aspect-[4/3] rounded-2xl object-cover" />
+          </div>
+        </div>
+      </section>
+
+      {/* ── Üretim Altyapımız ── */}
+      <section className="py-28" style={{ backgroundColor: 'var(--th-surface)' }}>
+        <div className="max-w-7xl mx-auto px-6 max-w-[var(--layout-max)] lg:px-12">
+          <div className="text-center mb-20">
+            <p className="text-xs font-bold tracking-[0.25em] uppercase mb-4" style={{ color: 'var(--th-polgun-blue)' }}>{t('about.production_title')}</p>
+            <h2 className="text-4xl font-black mb-6" style={{ color: 'var(--th-text)' }}>{t('about.production_subtitle')}</h2>
+            <p className="max-w-2xl mx-auto text-justify leading-relaxed" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 70%, transparent)' }}>
+              {t('about.production_desc')}
+            </p>
+          </div>
+          <div className="flex flex-col gap-24">
+            {productionSections.map((sec, i) => (
+              <div key={i} className={`grid lg:grid-cols-2 gap-16 items-center ${i % 2 === 1 ? 'lg:[&>*:first-child]:order-2' : ''}`}>
+                <div>
+                  <h3 className="text-2xl font-black mb-5" style={{ color: 'var(--th-text)' }}>{t('about.production_sections.' + sec.id + '.title')}</h3>
+                  <p className="text-justify leading-relaxed" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 70%, transparent)' }}>{t('about.production_sections.' + sec.id + '.desc')}</p>
+                </div>
+                <div className={sec.img2 ? 'grid grid-cols-2 gap-3' : ''}>
+                  <img src={sec.img} alt={t('about.production_sections.' + sec.id + '.title')} className="w-full aspect-[4/3] rounded-2xl object-cover" />
+                  {sec.img2 && <img src={sec.img2} alt={t('about.production_sections.' + sec.id + '.title') + ' 2'} className="w-full aspect-[4/3] rounded-2xl object-cover" />}
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="mt-20 text-center">
+            <h3 className="text-3xl font-black mb-4" style={{ color: 'var(--th-text)' }}>{t('about.production_power')}</h3>
+            <p className="mb-8 max-w-lg mx-auto text-center" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 70%, transparent)' }}>
+              {t('about.production_power_desc')}
+            </p>
+            <button
+              onClick={() => navigate('/projects')}
+              className="px-8 py-3.5 text-sm font-bold rounded-full transition-all duration-200 hover:-translate-y-0.5"
+              style={{ backgroundColor: 'var(--th-primary)', color: '#fff' }}
+              onMouseEnter={(e) => e.currentTarget.style.opacity = '0.85'}
+              onMouseLeave={(e) => e.currentTarget.style.opacity = '1'}
+            >
+              {t('about.btn_projects')}
+            </button>
           </div>
         </div>
       </section>
@@ -366,6 +426,7 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+
 
       {/* ── Markalarımız Bölümü ── */}
       <section id="markalar" className="py-28" style={{ backgroundColor: 'var(--th-surface)', borderTop: '1px solid color-mix(in srgb, var(--th-border) 8%, transparent)', borderBottom: '1px solid color-mix(in srgb, var(--th-border) 8%, transparent)' }}>
@@ -506,48 +567,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ── Üretim Altyapımız ── */}
-      <section className="py-28" style={{ backgroundColor: 'var(--th-surface)' }}>
-        <div className="max-w-7xl mx-auto px-6 max-w-[var(--layout-max)] lg:px-12">
-          <div className="text-center mb-20">
-            <p className="text-xs font-bold tracking-[0.25em] uppercase mb-4" style={{ color: 'var(--th-polgun-blue)' }}>{t('about.production_title')}</p>
-            <h2 className="text-4xl font-black mb-6" style={{ color: 'var(--th-text)' }}>{t('about.production_subtitle')}</h2>
-            <p className="max-w-2xl mx-auto text-justify leading-relaxed" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 70%, transparent)' }}>
-              {t('about.production_desc')}
-            </p>
-          </div>
-          <div className="flex flex-col gap-24">
-            {productionSections.map((sec, i) => (
-              <div key={i} className={`grid lg:grid-cols-2 gap-16 items-center ${i % 2 === 1 ? 'lg:[&>*:first-child]:order-2' : ''}`}>
-                <div>
-                  <h3 className="text-2xl font-black mb-5" style={{ color: 'var(--th-text)' }}>{t('about.production_sections.' + sec.id + '.title')}</h3>
-                  <p className="text-justify leading-relaxed" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 70%, transparent)' }}>{t('about.production_sections.' + sec.id + '.desc')}</p>
-                </div>
-                <div className={sec.img2 ? 'grid grid-cols-2 gap-3' : ''}>
-                  <img src={sec.img} alt={t('about.production_sections.' + sec.id + '.title')} className="w-full aspect-[4/3] rounded-2xl object-cover" />
-                  {sec.img2 && <img src={sec.img2} alt={t('about.production_sections.' + sec.id + '.title') + ' 2'} className="w-full aspect-[4/3] rounded-2xl object-cover" />}
-                </div>
-              </div>
-            ))}
-          </div>
-          <div className="mt-20 text-center">
-            <h3 className="text-3xl font-black mb-4" style={{ color: 'var(--th-text)' }}>{t('about.production_power')}</h3>
-            <p className="mb-8 max-w-lg mx-auto text-center" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 70%, transparent)' }}>
-              {t('about.production_power_desc')}
-            </p>
-            <button
-              onClick={() => navigate('/projects')}
-              className="px-8 py-3.5 text-sm font-bold rounded-full transition-all duration-200 hover:-translate-y-0.5"
-              style={{ backgroundColor: 'var(--th-primary)', color: '#fff' }}
-              onMouseEnter={(e) => e.currentTarget.style.opacity = '0.85'}
-              onMouseLeave={(e) => e.currentTarget.style.opacity = '1'}
-            >
-              {t('about.btn_projects')}
-            </button>
-          </div>
-        </div>
-      </section>
-
       {/* ── Ödüller & Ziyaretler ── */}
       <section className="py-28" style={{ backgroundColor: 'var(--th-bg)' }}>
         <div className="max-w-7xl mx-auto px-6 max-w-[var(--layout-max)] lg:px-12">
@@ -681,17 +700,17 @@ export default function AboutPage() {
             <div>
               <p className="text-xs font-bold tracking-[0.25em] uppercase mb-4" style={{ color: 'var(--th-polgun-blue)' }}>{t('awards.cert_title', { defaultValue: 'Sertifikalar' })}</p>
               <h2 className="text-3xl font-black mb-8" style={{ color: 'var(--th-text)' }}>{t('awards.cert_subtitle', { defaultValue: 'Kalite Belgelerimiz' })}</h2>
-              <div className="flex flex-col gap-4">
+              <div className="flex flex-col gap-3">
                 {kaliteBelgeleri.map((kb, i) => (
                   <a key={i} href={kb.file} target="_blank" rel="noopener noreferrer"
-                    className="flex items-center gap-5 p-6 rounded-2xl transition-all duration-200 hover:-translate-y-0.5 group"
-                    style={{ backgroundColor: 'var(--th-surface)', border: '1px solid color-mix(in srgb, var(--th-border) 12%, transparent)', boxShadow: '0 4px 20px rgba(0,0,0,0.05)' }}>
-                    <div className="w-14 h-14 rounded-2xl flex items-center justify-center shrink-0 text-xl font-black" style={{ backgroundColor: 'color-mix(in srgb, var(--th-primary) 10%, transparent)', color: 'var(--th-primary)' }}>
-                      ISO
+                    className="flex items-center gap-3.5 p-3.5 sm:p-4 rounded-xl transition-all duration-200 hover:-translate-y-0.5 group"
+                    style={{ backgroundColor: 'var(--th-surface)', border: '1px solid color-mix(in srgb, var(--th-border) 12%, transparent)', boxShadow: '0 2px 12px rgba(0,0,0,0.03)' }}>
+                    <div className="w-11 h-11 rounded-xl flex items-center justify-center shrink-0 text-xs font-black tracking-wider" style={{ backgroundColor: 'color-mix(in srgb, var(--th-primary) 10%, transparent)', color: 'var(--th-primary)' }}>
+                      {kb.icon}
                     </div>
-                    <div>
-                      <div className="font-black" style={{ color: 'var(--th-text)' }}>{kb.title}</div>
-                      <div className="text-sm mt-0.5" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 60%, transparent)' }}>{kb.desc}</div>
+                    <div className="min-w-0">
+                      <div className="font-black text-sm truncate" style={{ color: 'var(--th-text)' }}>{kb.title}</div>
+                      <div className="text-xs mt-0.5 truncate" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 60%, transparent)' }}>{kb.desc}</div>
                     </div>
                     <svg className="w-4 h-4 ml-auto shrink-0 group-hover:translate-x-0.5 transition-transform" style={{ color: 'var(--th-primary)' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />

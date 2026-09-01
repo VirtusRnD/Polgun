@@ -309,17 +309,20 @@ export default function SplashTowerPage({ setActivePage }) {
     <main className="pt-20" style={{ backgroundColor: 'var(--th-bg)' }}>
 
       {/* ── Page Hero ── */}
-      <section className="py-28" style={{ backgroundColor: 'var(--th-primary)' }}>
-        <div className="max-w-7xl mx-auto px-6 max-w-[var(--layout-max)] lg:px-12">
-          <div className="grid lg:grid-cols-2 gap-16 items-end">
+      <section className="relative py-20 lg:py-24 min-h-[320px] lg:min-h-[360px] flex items-center" style={{ backgroundColor: 'var(--th-primary)' }}>
+        <div className="w-full max-w-7xl mx-auto px-6 max-w-[var(--layout-max)] lg:px-12">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-end">
             <div>
+              <p className="text-xs font-bold tracking-[0.3em] uppercase mb-4" style={{ color: 'var(--th-text)' }}>
+                {t('products.tower.title', { defaultValue: 'Splash Tower' })}
+              </p>
               <h1 className="text-5xl lg:text-6xl font-black text-white leading-[1.02]">
                 Splash<br />Tower
               </h1>
-              <p className="text-white/50 text-lg leading-relaxed mt-4">
-                {t('splashtower.hero_subtitle', {defaultValue: 'Farklı temalar ile tasarlanmış su kaydırakları ve eğlence alanları'})}
-              </p>
             </div>
+            <p className="text-white/70 text-lg leading-relaxed">
+              {t('splashtower.hero_subtitle', {defaultValue: 'Farklı temalar ile tasarlanmış su kaydırakları ve eğlence alanları'})}
+            </p>
           </div>
         </div>
       </section>

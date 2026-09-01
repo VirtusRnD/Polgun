@@ -2,7 +2,7 @@
 // PROJECTS PAGE — Virtus ArGe Gerçek Proje Verileri (88 proje)
 // ============================================================
 import { useState, useEffect, useRef } from 'react'
-import {Link, useNavigate} from 'react-router-dom'
+import { Link, useNavigate, useSearchParams, useLocation } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 // ── Proje Görselleri ──────────────────────────────────────────────────────────
 // Dev: Vite serves src/assets at /src/assets. Prod: static files are served from /img (copied from src/assets).
@@ -46,7 +46,7 @@ const p9i3 = `${ASSETS_URL}/projects/aqualand-mallorca-i-spanya-ac-ik-alan-su-pa
 const p9i4 = `${ASSETS_URL}/projects/aqualand-mallorca-i-spanya-ac-ik-alan-su-parki-avrupa/1005.avif`;
 const p9i5 = `${ASSETS_URL}/projects/aqualand-mallorca-i-spanya-ac-ik-alan-su-parki-avrupa/1006.avif`;
 const p9i6 = `${ASSETS_URL}/projects/aqualand-mallorca-i-spanya-ac-ik-alan-su-parki-avrupa/1007.avif`;
-const p9i7 = `${ASSETS_URL}/projects/aqualand-mallorca-i-spanya-ac-ik-alan-su-parki-avrupa/Aqualand Mallorca - Spaın.avif`;
+const p9i7 = `${ASSETS_URL}/projects/aqualand-mallorca-i-spanya-ac-ik-alan-su-parki-avrupa/1008.avif`;
 const p10i0 = `${ASSETS_URL}/projects/aqualand-torremolinos-i-spanya-ac-ik-alan-su-parki-avrupa/Torremolinos001.avif`;
 const p10i1 = `${ASSETS_URL}/projects/aqualand-torremolinos-i-spanya-ac-ik-alan-su-parki-avrupa/Torremolinos002.avif`;
 const p11i0 = `${ASSETS_URL}/projects/aquila-rithymna-beach-rethymno-yunanistan-otel-ac-ik-alan-su/1002.avif`;
@@ -157,10 +157,10 @@ const p33i3 = `${ASSETS_URL}/projects/frenzy-waterpark-torreilles-fransa-ac-ik-a
 const p33i4 = `${ASSETS_URL}/projects/frenzy-waterpark-torreilles-fransa-ac-ik-alan-su-parki-avrup/frenzy005.avif`;
 const p34i0 = `${ASSETS_URL}/projects/golden-beach-nana-girit-yunanistan-ac-ik-alan-su-parki-avrup/Golden Beach Nana001.avif`;
 const p34i1 = `${ASSETS_URL}/projects/golden-beach-nana-girit-yunanistan-ac-ik-alan-su-parki-avrup/Golden Beach Nana002.avif`;
-const p35i0 = `${ASSETS_URL}/projects/gu-ral-premier-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-asy/Güral Premier001.avif`;
-const p35i1 = `${ASSETS_URL}/projects/gu-ral-premier-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-asy/Güral Premier002.avif`;
-const p35i2 = `${ASSETS_URL}/projects/gu-ral-premier-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-asy/Güral Premier003.avif`;
-const p35i3 = `${ASSETS_URL}/projects/gu-ral-premier-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-asy/Güral Premier004.avif`;
+const p35i0 = `${ASSETS_URL}/projects/gu-ral-premier-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-asy/1001.avif`;
+const p35i1 = `${ASSETS_URL}/projects/gu-ral-premier-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-asy/1002.avif`;
+const p35i2 = `${ASSETS_URL}/projects/gu-ral-premier-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-asy/1003.avif`;
+const p35i3 = `${ASSETS_URL}/projects/gu-ral-premier-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-asy/1004.avif`;
 const p36i0 = `${ASSETS_URL}/projects/iberostar-waves-creta-panorama-and-mare-rethymno-yunanistan-/1002.avif`;
 const p36i1 = `${ASSETS_URL}/projects/iberostar-waves-creta-panorama-and-mare-rethymno-yunanistan-/1003.avif`;
 const p36i2 = `${ASSETS_URL}/projects/iberostar-waves-creta-panorama-and-mare-rethymno-yunanistan-/1007.avif`;
@@ -232,10 +232,10 @@ const p48i1 = `${ASSETS_URL}/projects/melas-antalya-tu-rkiye-otel-ac-ik-alan-su-
 const p48i2 = `${ASSETS_URL}/projects/melas-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-asya/IMG_1547.avif`;
 const p48i3 = `${ASSETS_URL}/projects/melas-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-asya/IMG_1560.avif`;
 const p48i4 = `${ASSETS_URL}/projects/melas-antalya-tu-rkiye-otel-ac-ik-alan-su-parki-asya/WhatsApp Görsel 2025-11-28 saat 14.18.58_8f6abc13.avif`;
-const p49i0 = `${ASSETS_URL}/projects/mo-venpick-resort-antalya-tu-rkiye-ac-ik-alan-su-parki-asya/Mövenpick Resort001.avif`;
-const p49i1 = `${ASSETS_URL}/projects/mo-venpick-resort-antalya-tu-rkiye-ac-ik-alan-su-parki-asya/Mövenpick Resort002.avif`;
-const p49i2 = `${ASSETS_URL}/projects/mo-venpick-resort-antalya-tu-rkiye-ac-ik-alan-su-parki-asya/Mövenpick Resort003.avif`;
-const p49i3 = `${ASSETS_URL}/projects/mo-venpick-resort-antalya-tu-rkiye-ac-ik-alan-su-parki-asya/Mövenpick Resort004.avif`;
+const p49i0 = `${ASSETS_URL}/projects/mo-venpick-resort-antalya-tu-rkiye-ac-ik-alan-su-parki-asya/1001.avif`;
+const p49i1 = `${ASSETS_URL}/projects/mo-venpick-resort-antalya-tu-rkiye-ac-ik-alan-su-parki-asya/1002.avif`;
+const p49i2 = `${ASSETS_URL}/projects/mo-venpick-resort-antalya-tu-rkiye-ac-ik-alan-su-parki-asya/1003.avif`;
+const p49i3 = `${ASSETS_URL}/projects/mo-venpick-resort-antalya-tu-rkiye-ac-ik-alan-su-parki-asya/1004.avif`;
 const p50i0 = `${ASSETS_URL}/projects/mo-venpick-waterpark-resort-and-spa-soma-bay-soma-bay-misir-/1001.avif`;
 const p50i1 = `${ASSETS_URL}/projects/mo-venpick-waterpark-resort-and-spa-soma-bay-soma-bay-misir-/1002.avif`;
 const p50i2 = `${ASSETS_URL}/projects/mo-venpick-waterpark-resort-and-spa-soma-bay-soma-bay-misir-/1003.avif`;
@@ -320,7 +320,7 @@ const p69i0 = `${ASSETS_URL}/projects/s-club-jakovo-sirbistan-otel-ac-ik-alan-su
 const p69i1 = `${ASSETS_URL}/projects/s-club-jakovo-sirbistan-otel-ac-ik-alan-su-parki-avrupa/1003.avif`;
 const p69i2 = `${ASSETS_URL}/projects/s-club-jakovo-sirbistan-otel-ac-ik-alan-su-parki-avrupa/1005.avif`;
 const p69i3 = `${ASSETS_URL}/projects/s-club-jakovo-sirbistan-otel-ac-ik-alan-su-parki-avrupa/1006.avif`;
-const p69i4 = `${ASSETS_URL}/projects/s-club-jakovo-sirbistan-otel-ac-ik-alan-su-parki-avrupa/S Club Jakovo giriş görseli.avif`;
+const p69i4 = `${ASSETS_URL}/projects/s-club-jakovo-sirbistan-otel-ac-ik-alan-su-parki-avrupa/1001.avif`;
 const p70i0 = `${ASSETS_URL}/projects/sy-antalya-tu-rkiye-otelac-ik-alan-su-parki-asya/1001.avif`;
 const p70i1 = `${ASSETS_URL}/projects/sy-antalya-tu-rkiye-otelac-ik-alan-su-parki-asya/1002.avif`;
 const p70i2 = `${ASSETS_URL}/projects/sy-antalya-tu-rkiye-otelac-ik-alan-su-parki-asya/1003.avif`;
@@ -381,15 +381,93 @@ const p85i4 = `${ASSETS_URL}/projects/volgograd-volgograd-rusya-ac-ik-alan-su-pa
 const p86i0 = `${ASSETS_URL}/projects/voyage-torba-mug-la-tu-rkiye-otel-ac-ik-alan-su-parki-asya/1001.avif`;
 const p86i1 = `${ASSETS_URL}/projects/voyage-torba-mug-la-tu-rkiye-otel-ac-ik-alan-su-parki-asya/1002.avif`;
 const p87i0 = `${ASSETS_URL}/projects/wonderla-holidays-bangalore-hindistan-ac-ik-alan-su-parki-as/1001.avif`;
-const p88i0 = `${ASSETS_URL}/projects/xo-cape-arnna-mug-la-tu-rkiye-otel-ac-ik-alan-su-parki-asya/1001.avif`;
-const p88i1 = `${ASSETS_URL}/projects/xo-cape-arnna-mug-la-tu-rkiye-otel-ac-ik-alan-su-parki-asya/1002.avif`;
-const p88i2 = `${ASSETS_URL}/projects/xo-cape-arnna-mug-la-tu-rkiye-otel-ac-ik-alan-su-parki-asya/1003.avif`;
-const p88i3 = `${ASSETS_URL}/projects/xo-cape-arnna-mug-la-tu-rkiye-otel-ac-ik-alan-su-parki-asya/1004.avif`;
-const p88i4 = `${ASSETS_URL}/projects/xo-cape-arnna-mug-la-tu-rkiye-otel-ac-ik-alan-su-parki-asya/1005.avif`;
-const p88i5 = `${ASSETS_URL}/projects/xo-cape-arnna-mug-la-tu-rkiye-otel-ac-ik-alan-su-parki-asya/1006.avif`;
+const p88i0 = `${ASSETS_URL}/projects/xo-cape-arnna-mug-la-tu-rkiye-otel-ac-ik-alan-su-parki-asya/1001.jpg`;
 
 // ── Proje Verisi ───────────────────────────────────────────
 const PROJECTS = [
+  {
+    id: 65,
+    name: 'Rixos Murjana',
+    location: 'Cidde, Suudi Arabistan',
+    type: 'Otel & Su Parkı',
+    region: 'Asya',
+    img: p65i0,
+    imgAlt: 'Rixos Murjana - Cidde, Suudi Arabistan',
+    slides: [
+      { id: 1, title: 'Rixos Murjana', location: 'Cidde, Suudi Arabistan', img: p65i0 }
+    ],
+  },
+  {
+    id: 33,
+    name: 'Frenzy Waterpark',
+    location: 'Torreilles, Fransa',
+    type: 'Açık Alan Su Parkı',
+    region: 'Avrupa',
+    img: p33i0,
+    imgAlt: 'Frenzy Waterpark - Torreilles, Fransa',
+    slides: [
+      { id: 1, title: 'Frenzy Waterpark', location: 'Torreilles, Fransa', img: p33i0 },
+      { id: 2, title: 'Frenzy Waterpark', location: 'Torreilles, Fransa', img: p33i1 },
+      { id: 3, title: 'Frenzy Waterpark', location: 'Torreilles, Fransa', img: p33i2 },
+      { id: 4, title: 'Frenzy Waterpark', location: 'Torreilles, Fransa', img: p33i3 },
+      { id: 5, title: 'Frenzy Waterpark', location: 'Torreilles, Fransa', img: p33i4 }
+    ],
+  },
+  {
+    id: 73,
+    name: 'Seignosse Atlantic',
+    location: 'Seignosse, Fransa',
+    type: 'Açık Alan Su Parkı',
+    region: 'Avrupa',
+    img: p73i0,
+    imgAlt: 'Seignosse Atlantic - Seignosse, Fransa',
+    slides: [
+      { id: 1, title: 'Seignosse Atlantic', location: 'Seignosse, Fransa', img: p73i0 }
+    ],
+  },
+  {
+    id: 64,
+    name: 'Pine Beach',
+    location: 'Antalya',
+    type: 'Otel & Su Parkı',
+    region: 'Asya',
+    img: p64i0,
+    imgAlt: 'Pine Beach - Antalya',
+    slides: [
+      { id: 1, title: 'Pine Beach', location: 'Antalya', img: p64i0 },
+      { id: 2, title: 'Pine Beach', location: 'Antalya', img: p64i1 },
+      { id: 3, title: 'Pine Beach', location: 'Antalya', img: p64i2 },
+      { id: 4, title: 'Pine Beach', location: 'Antalya', img: p64i3 },
+      { id: 5, title: 'Pine Beach', location: 'Antalya', img: p64i4 },
+      { id: 6, title: 'Pine Beach', location: 'Antalya', img: p64i5 }
+    ],
+  },
+  {
+    id: 53,
+    name: 'Nirvana Dolce Vita',
+    location: 'Antalya',
+    type: 'Otel & Su Parkı',
+    region: 'Asya',
+    img: p53i0,
+    imgAlt: 'Nirvana Dolce Vita - Antalya',
+    slides: [
+      { id: 1, title: 'Nirvana Dolce Vita', location: 'Antalya', img: p53i0 },
+      { id: 2, title: 'Nirvana Dolce Vita', location: 'Antalya', img: p53i1 }
+    ],
+  },
+  {
+    id: 80,
+    name: 'The Land of Legends',
+    location: 'Antalya',
+    type: 'Açık Alan Su Parkı',
+    region: 'Asya',
+    img: p80i0,
+    imgAlt: 'The Land of Legends - Antalya',
+    slides: [
+      { id: 1, title: 'The Land of Legends', location: 'Antalya', img: p80i0 },
+      { id: 2, title: 'The Land of Legends', location: 'Antalya', img: p80i1 }
+    ],
+  },
   {
     id: 1,
     name: 'Adenya',
@@ -515,17 +593,17 @@ const PROJECTS = [
     location: 'Mallorca',
     type: 'Açık Alan Su Parkı',
     region: 'Avrupa',
-    img: p9i0,
+    img: p9i7,
     imgAlt: 'Aqualand - Mallorca',
     slides: [
-      { id: 1, title: 'Aqualand', location: 'Mallorca', img: p9i0 },
+      { id: 1, title: 'Aqualand', location: 'Mallorca', img: p9i7 },
       { id: 2, title: 'Aqualand', location: 'Mallorca', img: p9i1 },
       { id: 3, title: 'Aqualand', location: 'Mallorca', img: p9i2 },
       { id: 4, title: 'Aqualand', location: 'Mallorca', img: p9i3 },
       { id: 5, title: 'Aqualand', location: 'Mallorca', img: p9i4 },
       { id: 6, title: 'Aqualand', location: 'Mallorca', img: p9i5 },
       { id: 7, title: 'Aqualand', location: 'Mallorca', img: p9i6 },
-      { id: 8, title: 'Aqualand', location: 'Mallorca', img: p9i7 }
+      { id: 8, title: 'Aqualand', location: 'Mallorca', img: p9i0 }
     ],
   },
   {
@@ -637,9 +715,10 @@ const PROJECTS = [
     location: 'Antalya',
     type: 'Otel & Su Parkı',
     region: 'Asya',
-    img: p17i0,
+    img: p17i9,
     imgAlt: 'Calimera Serra - Antalya',
     slides: [
+      { id: 10, title: 'Calimera Serra', location: 'Antalya', img: p17i9 },
       { id: 1, title: 'Calimera Serra', location: 'Antalya', img: p17i0 },
       { id: 2, title: 'Calimera Serra', location: 'Antalya', img: p17i1 },
       { id: 3, title: 'Calimera Serra', location: 'Antalya', img: p17i2 },
@@ -648,9 +727,7 @@ const PROJECTS = [
       { id: 6, title: 'Calimera Serra', location: 'Antalya', img: p17i5 },
       { id: 7, title: 'Calimera Serra', location: 'Antalya', img: p17i6 },
       { id: 8, title: 'Calimera Serra', location: 'Antalya', img: p17i7 },
-      { id: 9, title: 'Calimera Serra', location: 'Antalya', img: p17i8 },
-      { id: 10, title: 'Calimera Serra', location: 'Antalya', img: p17i9 },
-      { id: 11, title: 'Calimera Serra', location: 'Antalya', img: p17i10 },
+
       { id: 12, title: 'Calimera Serra', location: 'Antalya', img: p17i11 },
       { id: 13, title: 'Calimera Serra', location: 'Antalya', img: p17i12 },
       { id: 14, title: 'Calimera Serra', location: 'Antalya', img: p17i13 }
@@ -754,15 +831,16 @@ const PROJECTS = [
     location: 'Antalya',
     type: 'Otel & Su Parkı',
     region: 'Asya',
-    img: p24i0,
+    img: p24i5,
     imgAlt: 'Delphin Palace - Antalya',
     slides: [
+      { id: 6, title: 'Delphin Palace', location: 'Antalya', img: p24i5 },
       { id: 1, title: 'Delphin Palace', location: 'Antalya', img: p24i0 },
       { id: 2, title: 'Delphin Palace', location: 'Antalya', img: p24i1 },
       { id: 3, title: 'Delphin Palace', location: 'Antalya', img: p24i2 },
       { id: 4, title: 'Delphin Palace', location: 'Antalya', img: p24i3 },
       { id: 5, title: 'Delphin Palace', location: 'Antalya', img: p24i4 },
-      { id: 6, title: 'Delphin Palace', location: 'Antalya', img: p24i5 },
+
       { id: 7, title: 'Delphin Palace', location: 'Antalya', img: p24i6 },
       { id: 8, title: 'Delphin Palace', location: 'Antalya', img: p24i7 },
       { id: 9, title: 'Delphin Palace', location: 'Antalya', img: p24i8 }
@@ -884,22 +962,7 @@ const PROJECTS = [
       { id: 2, title: 'Fantazia Marsa Alam', location: 'Marsa Alam, Mısır', img: p32i1 }
     ],
   },
-  {
-    id: 33,
-    name: 'Frenzy Waterpark',
-    location: 'Torreilles, Fransa',
-    type: 'Açık Alan Su Parkı',
-    region: 'Avrupa',
-    img: p33i0,
-    imgAlt: 'Frenzy Waterpark - Torreilles, Fransa',
-    slides: [
-      { id: 1, title: 'Frenzy Waterpark', location: 'Torreilles, Fransa', img: p33i0 },
-      { id: 2, title: 'Frenzy Waterpark', location: 'Torreilles, Fransa', img: p33i1 },
-      { id: 3, title: 'Frenzy Waterpark', location: 'Torreilles, Fransa', img: p33i2 },
-      { id: 4, title: 'Frenzy Waterpark', location: 'Torreilles, Fransa', img: p33i3 },
-      { id: 5, title: 'Frenzy Waterpark', location: 'Torreilles, Fransa', img: p33i4 }
-    ],
-  },
+
   {
     id: 34,
     name: 'Golden Beach Nana',
@@ -1075,12 +1138,12 @@ const PROJECTS = [
     location: 'Antalya',
     type: 'Otel & Su Parkı',
     region: 'Asya',
-    img: p45i0,
+    img: p45i2,
     imgAlt: 'Lonicera Premium - Antalya',
     slides: [
-      { id: 1, title: 'Lonicera Premium', location: 'Antalya', img: p45i0 },
+      { id: 1, title: 'Lonicera Premium', location: 'Antalya', img: p45i2 },
       { id: 2, title: 'Lonicera Premium', location: 'Antalya', img: p45i1 },
-      { id: 3, title: 'Lonicera Premium', location: 'Antalya', img: p45i2 },
+      { id: 3, title: 'Lonicera Premium', location: 'Antalya', img: p45i0 },
       { id: 4, title: 'Lonicera Premium', location: 'Antalya', img: p45i3 },
       { id: 5, title: 'Lonicera Premium', location: 'Antalya', img: p45i4 },
       { id: 6, title: 'Lonicera Premium', location: 'Antalya', img: p45i5 },
@@ -1199,19 +1262,7 @@ const PROJECTS = [
       { id: 4, title: 'Nirvana Cosmopolitan', location: 'Antalya', img: p52i3 }
     ],
   },
-  {
-    id: 53,
-    name: 'Nirvana Dolce Vita',
-    location: 'Antalya',
-    type: 'Otel & Su Parkı',
-    region: 'Asya',
-    img: p53i0,
-    imgAlt: 'Nirvana Dolce Vita - Antalya',
-    slides: [
-      { id: 1, title: 'Nirvana Dolce Vita', location: 'Antalya', img: p53i0 },
-      { id: 2, title: 'Nirvana Dolce Vita', location: 'Antalya', img: p53i1 }
-    ],
-  },
+
   {
     id: 54,
     name: 'Numa Bay Exclusive',
@@ -1353,45 +1404,18 @@ const PROJECTS = [
     location: 'Hurgada, Mısır',
     type: 'Açık Alan Su Parkı',
     region: 'Afrika',
-    img: p63i0,
+    img: p63i1,
     imgAlt: 'Pickalbatros Sungo - Hurgada, Mısır',
     slides: [
-      { id: 1, title: 'Pickalbatros Sungo', location: 'Hurgada, Mısır', img: p63i0 },
-      { id: 2, title: 'Pickalbatros Sungo', location: 'Hurgada, Mısır', img: p63i1 },
+      { id: 1, title: 'Pickalbatros Sungo', location: 'Hurgada, Mısır', img: p63i1 },
+      { id: 2, title: 'Pickalbatros Sungo', location: 'Hurgada, Mısır', img: p63i0 },
       { id: 3, title: 'Pickalbatros Sungo', location: 'Hurgada, Mısır', img: p63i2 },
       { id: 4, title: 'Pickalbatros Sungo', location: 'Hurgada, Mısır', img: p63i3 },
       { id: 5, title: 'Pickalbatros Sungo', location: 'Hurgada, Mısır', img: p63i4 }
     ],
   },
-  {
-    id: 64,
-    name: 'Pine Beach',
-    location: 'Antalya',
-    type: 'Otel & Su Parkı',
-    region: 'Asya',
-    img: p64i0,
-    imgAlt: 'Pine Beach - Antalya',
-    slides: [
-      { id: 1, title: 'Pine Beach', location: 'Antalya', img: p64i0 },
-      { id: 2, title: 'Pine Beach', location: 'Antalya', img: p64i1 },
-      { id: 3, title: 'Pine Beach', location: 'Antalya', img: p64i2 },
-      { id: 4, title: 'Pine Beach', location: 'Antalya', img: p64i3 },
-      { id: 5, title: 'Pine Beach', location: 'Antalya', img: p64i4 },
-      { id: 6, title: 'Pine Beach', location: 'Antalya', img: p64i5 }
-    ],
-  },
-  {
-    id: 65,
-    name: 'Rixos Murjana',
-    location: 'Cidde, Suudi Arabistan',
-    type: 'Otel & Su Parkı',
-    region: 'Asya',
-    img: p65i0,
-    imgAlt: 'Rixos Murjana - Cidde, Suudi Arabistan',
-    slides: [
-      { id: 1, title: 'Rixos Murjana', location: 'Cidde, Suudi Arabistan', img: p65i0 }
-    ],
-  },
+
+
   {
     id: 66,
     name: 'Roj Park',
@@ -1452,14 +1476,15 @@ const PROJECTS = [
     location: 'Jakovo, Sırbistan',
     type: 'Otel & Su Parkı',
     region: 'Avrupa',
-    img: p69i0,
+    img: p69i4,
     imgAlt: 'S Club - Jakovo, Sırbistan',
     slides: [
+      { id: 5, title: 'S Club', location: 'Jakovo, Sırbistan', img: p69i4 },
       { id: 1, title: 'S Club', location: 'Jakovo, Sırbistan', img: p69i0 },
       { id: 2, title: 'S Club', location: 'Jakovo, Sırbistan', img: p69i1 },
       { id: 3, title: 'S Club', location: 'Jakovo, Sırbistan', img: p69i2 },
       { id: 4, title: 'S Club', location: 'Jakovo, Sırbistan', img: p69i3 },
-      { id: 5, title: 'S Club', location: 'Jakovo, Sırbistan', img: p69i4 }
+
     ],
   },
   {
@@ -1513,18 +1538,7 @@ const PROJECTS = [
       { id: 4, title: 'Sataya Resort', location: 'Marsa Alam, Mısır', img: p72i3 }
     ],
   },
-  {
-    id: 73,
-    name: 'Seignosse Atlantic',
-    location: 'Seignosse, Fransa',
-    type: 'Açık Alan Su Parkı',
-    region: 'Avrupa',
-    img: p73i0,
-    imgAlt: 'Seignosse Atlantic - Seignosse, Fransa',
-    slides: [
-      { id: 1, title: 'Seignosse Atlantic', location: 'Seignosse, Fransa', img: p73i0 }
-    ],
-  },
+
   {
     id: 74,
     name: 'Seven Seas Bay',
@@ -1561,19 +1575,7 @@ const PROJECTS = [
       { id: 3, title: 'Sofia Waterpark', location: 'Sofya, Bulgaristan', img: p75i2 }
     ],
   },
-  {
-    id: 76,
-    name: 'Stella Beach Resort',
-    location: 'Hurgada, Mısır',
-    type: 'Otel & Su Parkı',
-    region: 'Afrika',
-    img: p76i0,
-    imgAlt: 'Stella Beach Resort - Hurgada, Mısır',
-    slides: [
-      { id: 1, title: 'Stella Beach Resort', location: 'Hurgada, Mısır', img: p76i0 },
-      { id: 2, title: 'Stella Beach Resort', location: 'Hurgada, Mısır', img: p76i1 }
-    ],
-  },
+
   {
     id: 77,
     name: 'Stella Makadi Beach',
@@ -1616,19 +1618,7 @@ const PROJECTS = [
       { id: 4, title: 'Terra Mítica', location: 'Benidorm', img: p79i3 }
     ],
   },
-  {
-    id: 80,
-    name: 'The Land of Legends',
-    location: 'Antalya',
-    type: 'Açık Alan Su Parkı',
-    region: 'Asya',
-    img: p80i0,
-    imgAlt: 'The Land of Legends - Antalya',
-    slides: [
-      { id: 1, title: 'The Land of Legends', location: 'Antalya', img: p80i0 },
-      { id: 2, title: 'The Land of Legends', location: 'Antalya', img: p80i1 }
-    ],
-  },
+
   {
     id: 81,
     name: 'Trendy Perge',
@@ -1729,12 +1719,7 @@ const PROJECTS = [
     img: p88i0,
     imgAlt: 'XO Cape Arnna - Muğla',
     slides: [
-      { id: 1, title: 'XO Cape Arnna', location: 'Muğla', img: p88i0 },
-      { id: 2, title: 'XO Cape Arnna', location: 'Muğla', img: p88i1 },
-      { id: 3, title: 'XO Cape Arnna', location: 'Muğla', img: p88i2 },
-      { id: 4, title: 'XO Cape Arnna', location: 'Muğla', img: p88i3 },
-      { id: 5, title: 'XO Cape Arnna', location: 'Muğla', img: p88i4 },
-      { id: 6, title: 'XO Cape Arnna', location: 'Muğla', img: p88i5 }
+      { id: 1, title: 'XO Cape Arnna', location: 'Muğla', img: p88i0 }
     ],
   }
 ]
@@ -1745,23 +1730,35 @@ const TYPES = ['Tümü', 'Açık Alan Su Parkı', 'Otel & Su Parkı', 'Kapalı A
 // ── Slider Modal Bileşeni ──────────────────────────────────
 function ProjectSliderModal({ project, isOpen, onClose }) {
   const [currentIndex, setCurrentIndex] = useState(0)
+  const [isPlaying, setIsPlaying] = useState(true)
   const autoplayRef = useRef(null)
 
   useEffect(() => {
     if (!isOpen) return
     setCurrentIndex(0)
+    setIsPlaying(true)
+  }, [isOpen, project?.id])
+
+  useEffect(() => {
+    if (!isOpen || !isPlaying || !project?.slides?.length || project.slides.length <= 1) {
+      clearInterval(autoplayRef.current)
+      return
+    }
     autoplayRef.current = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % project.slides.length)
-    }, 2500)
+    }, 4500)
     return () => clearInterval(autoplayRef.current)
-  }, [isOpen, project.id])
+  }, [isOpen, isPlaying, project?.id, project?.slides?.length])
 
   const go = (dir) => {
-    clearInterval(autoplayRef.current)
     setCurrentIndex((prev) => {
       if (dir === 'prev') return prev === 0 ? project.slides.length - 1 : prev - 1
       return (prev + 1) % project.slides.length
     })
+  }
+
+  const togglePlay = () => {
+    setIsPlaying((prev) => !prev)
   }
 
   if (!isOpen) return null
@@ -1812,7 +1809,7 @@ function ProjectSliderModal({ project, isOpen, onClose }) {
             {/* Dots */}
             <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5 z-10 flex-wrap justify-center px-4 max-w-full">
               {project.slides.map((_, idx) => (
-                <button key={idx} onClick={() => { clearInterval(autoplayRef.current); setCurrentIndex(idx) }}
+                <button key={idx} onClick={() => setCurrentIndex(idx)}
                   className="h-1.5 rounded-full transition-all duration-300"
                   style={{ backgroundColor: idx === currentIndex ? '#fff' : 'rgba(255,255,255,0.35)', width: idx === currentIndex ? '20px' : '6px' }}
                 />
@@ -1832,13 +1829,37 @@ function ProjectSliderModal({ project, isOpen, onClose }) {
           )}
         </div>
 
-        {/* Kapat */}
-        <button onClick={onClose}
-          className="absolute top-3 right-3 z-20 w-9 h-9 rounded-full bg-black/50 hover:bg-black/70 backdrop-blur-sm flex items-center justify-center text-white transition-all">
-          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M6 18L18 6M6 6l12 12" />
-          </svg>
-        </button>
+        {/* Üst Sağ Kontroller (Durdur/Oynat + Kapat) */}
+        <div className="absolute top-3 right-3 z-20 flex items-center gap-2">
+          {project.slides.length > 1 && (
+            <button
+              onClick={togglePlay}
+              className="w-9 h-9 rounded-full bg-black/50 hover:bg-black/70 backdrop-blur-sm flex items-center justify-center text-white transition-all shadow-md"
+              title={isPlaying ? 'Durdur' : 'Oynat'}
+              aria-label={isPlaying ? 'Durdur' : 'Oynat'}
+            >
+              {isPlaying ? (
+                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z" />
+                </svg>
+              ) : (
+                <svg className="w-4 h-4 translate-x-0.5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+              )}
+            </button>
+          )}
+          <button
+            onClick={onClose}
+            className="w-9 h-9 rounded-full bg-black/50 hover:bg-black/70 backdrop-blur-sm flex items-center justify-center text-white transition-all shadow-md"
+            title="Kapat"
+            aria-label="Kapat"
+          >
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
       </div>
     </div>
   )
@@ -1847,25 +1868,75 @@ function ProjectSliderModal({ project, isOpen, onClose }) {
 export default function ProjectsPage({ setActivePage }) {
   const { t, i18n } = useTranslation()
   const navigate = useNavigate()
-  const [region, setRegion] = useState('Tümü')
-  const [type, setType] = useState('Tümü')
+  const [searchParams, setSearchParams] = useSearchParams()
+  const location = useLocation()
+
+  const getMatchedRegion = () => {
+    const param = searchParams.get('region') || searchParams.get('bolge') || location.state?.region;
+    if (param) {
+      const normalizedParam = param.toLowerCase().replace(/[-_]/g, '');
+      const matched = REGIONS.find((r) => r.toLowerCase().replace(/[-_]/g, '') === normalizedParam);
+      if (matched) return matched;
+    }
+    return 'Tümü';
+  };
+
+  const getMatchedType = () => {
+    const param = searchParams.get('type') || searchParams.get('tur') || searchParams.get('category') || location.state?.type;
+    if (param) {
+      const normalizedParam = param.toLowerCase().replace(/[-_&]/g, '');
+      const matched = TYPES.find((typ) => typ.toLowerCase().replace(/[-_&]/g, '') === normalizedParam);
+      if (matched) return matched;
+    }
+    return 'Tümü';
+  };
+
+  const [region, setRegion] = useState(getMatchedRegion)
+  const [type, setType] = useState(getMatchedType)
   const [selectedProject, setSelectedProject] = useState(null)
   const [sliderOpen, setSliderOpen] = useState(false)
 
+  const handleRegionChange = (newRegion) => {
+    setRegion(newRegion);
+    const newParams = {};
+    if (newRegion !== 'Tümü') newParams.region = newRegion;
+    if (type !== 'Tümü') newParams.type = type;
+    setSearchParams(newParams);
+  };
+
+  const handleTypeChange = (newType) => {
+    setType(newType);
+    const newParams = {};
+    if (region !== 'Tümü') newParams.region = region;
+    if (newType !== 'Tümü') newParams.type = newType;
+    setSearchParams(newParams);
+  };
+
+  useEffect(() => {
+    const targetRegion = getMatchedRegion();
+    if (targetRegion !== region) {
+      setRegion(targetRegion);
+    }
+    const targetType = getMatchedType();
+    if (targetType !== type) {
+      setType(targetType);
+    }
+  }, [searchParams, location.state]);
+
   const regionTranslationMap = {
     'Tümü': t('common.all'),
-    'Asya': t('regions.asia', {defaultValue: 'Asya'}),
-    'Avrupa': t('regions.europe', {defaultValue: 'Avrupa'}),
-    'Afrika': t('regions.africa', {defaultValue: 'Afrika'}),
-    'Amerika': t('regions.america', {defaultValue: 'Amerika'})
+    'Asya': t('regions.asia', { defaultValue: 'Asya' }),
+    'Avrupa': t('regions.europe', { defaultValue: 'Avrupa' }),
+    'Afrika': t('regions.africa', { defaultValue: 'Afrika' }),
+    'Amerika': t('regions.america', { defaultValue: 'Amerika' })
   }
 
   const typeTranslationMap = {
     'Tümü': t('common.all'),
-    'Açık Alan Su Parkı': t('projects.types.outdoor', {defaultValue: 'Açık Alan Su Parkı'}),
-    'Otel & Su Parkı': t('projects.types.hotel', {defaultValue: 'Otel & Su Parkı'}),
-    'Kapalı Alan Su Parkı': t('projects.types.indoor', {defaultValue: 'Kapalı Alan Su Parkı'}),
-    'Resort Tatil Köyü': t('projects.types.resort', {defaultValue: 'Resort Tatil Köyü'})
+    'Açık Alan Su Parkı': t('projects.types.outdoor', { defaultValue: 'Açık Alan Su Parkı' }),
+    'Otel & Su Parkı': t('projects.types.hotel', { defaultValue: 'Otel & Su Parkı' }),
+    'Kapalı Alan Su Parkı': t('projects.types.indoor', { defaultValue: 'Kapalı Alan Su Parkı' }),
+    'Resort Tatil Köyü': t('projects.types.resort', { defaultValue: 'Resort Tatil Köyü' })
   }
 
   const locationTranslations = {
@@ -1951,7 +2022,7 @@ export default function ProjectsPage({ setActivePage }) {
     if (!locStr) return '';
     const currentLangCode = i18n.language || 'tr';
     const cleanStr = locStr.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().trim();
-    
+
     // Split by comma
     const parts = locStr.split(', ');
     const translatedParts = parts.map(part => {
@@ -1962,7 +2033,7 @@ export default function ProjectsPage({ setActivePage }) {
       }
       return part;
     });
-    
+
     let result = translatedParts.join(', ');
     if (currentLangCode !== 'tr' && parts.length === 1 && (cleanStr === 'antalya' || cleanStr === 'mugla' || cleanStr === 'izmir' || cleanStr === 'bodrum' || cleanStr === 'fethiye')) {
       // If it is just a Turkish city, add Turkey suffix in non-Turkish languages
@@ -1989,31 +2060,30 @@ export default function ProjectsPage({ setActivePage }) {
     <main className="pt-20" style={{ backgroundColor: 'var(--th-bg)' }}>
 
       {/* Hero */}
-      <section className="py-28" style={{ backgroundColor: 'var(--th-primary)' }}>
-        <div className="max-w-[var(--layout-max)] mx-auto px-6 lg:px-12">
-          <div className="grid lg:grid-cols-2 gap-16 items-end">
+      <section className="relative py-20 lg:py-24 min-h-[320px] lg:min-h-[360px] flex items-center" style={{ backgroundColor: 'var(--th-primary)' }}>
+        <div className="w-full max-w-[var(--layout-max)] mx-auto px-6 lg:px-12">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-end">
             <div>
               <p className="text-xs font-bold tracking-[0.3em] uppercase mb-4" style={{ color: 'var(--th-text)' }}>
-                {t('projects.portfolio_tag', {defaultValue: 'Proje Portföyümüz'})}
+                {t('projects.portfolio_tag', { defaultValue: 'Proje Portföyümüz' })}
               </p>
               <h1 className="text-5xl lg:text-6xl font-black text-white leading-[1.02]">
                 {t('projects.title')}
               </h1>
             </div>
             <div>
-              <p className="text-white/50 text-lg leading-relaxed mb-6">
+              <p className="text-white/70 text-lg leading-relaxed mb-4">
                 {t('projects.desc')}
               </p>
               <div className="flex gap-8 flex-wrap">
                 <div>
-                  <p className="text-4xl font-black text-white">3000+</p>
-                  <p className="text-[11px] text-white/40 tracking-wider uppercase mt-1">{t('projects.stats.completed', {defaultValue: 'Tamamlanan Proje'})}</p>
+                  <p className="text-3xl font-black text-white">3000+</p>
+                  <p className="text-[11px] text-white/50 tracking-wider uppercase mt-1">{t('projects.stats.completed', { defaultValue: 'Tamamlanan Proje' })}</p>
                 </div>
                 <div>
-                  <p className="text-4xl font-black text-white">70+</p>
-                  <p className="text-[11px] text-white/40 tracking-wider uppercase mt-1">{t('projects.stats.countries', {defaultValue: 'Ülke'})}</p>
+                  <p className="text-3xl font-black text-white">70+</p>
+                  <p className="text-[11px] text-white/50 tracking-wider uppercase mt-1">{t('projects.stats.countries', { defaultValue: 'Ülke' })}</p>
                 </div>
-                
               </div>
             </div>
           </div>
@@ -2026,9 +2096,9 @@ export default function ProjectsPage({ setActivePage }) {
         <div className="max-w-[var(--layout-max)] mx-auto px-6 lg:px-14 py-3.5 flex flex-wrap gap-4 items-center">
           <div className="flex items-center gap-2 flex-wrap">
             <span className="text-[10px] font-black tracking-widest uppercase shrink-0"
-              style={{ color: 'color-mix(in srgb,var(--th-text-muted) 50%,transparent)' }}>{t('projects.filters.region', {defaultValue: 'Bölge'})}</span>
+              style={{ color: 'color-mix(in srgb,var(--th-text-muted) 50%,transparent)' }}>{t('projects.filters.region', { defaultValue: 'Bölge' })}</span>
             {REGIONS.map((r) => (
-              <button key={r} onClick={() => setRegion(r)}
+              <button key={r} onClick={() => handleRegionChange(r)}
                 className="px-3.5 py-1.5 rounded-full text-xs font-semibold transition-all duration-200"
                 style={region === r ? { backgroundColor: 'var(--th-primary)', color: '#fff' } : { color: 'var(--th-text-muted)' }}
                 onMouseEnter={(e) => { if (region !== r) e.currentTarget.style.backgroundColor = 'color-mix(in srgb,var(--th-primary) 10%,transparent)' }}
@@ -2039,9 +2109,9 @@ export default function ProjectsPage({ setActivePage }) {
           <div className="w-px h-5 hidden sm:block" style={{ backgroundColor: 'color-mix(in srgb,var(--th-border) 20%,transparent)' }} />
           <div className="flex items-center gap-2 flex-wrap">
             <span className="text-[10px] font-black tracking-widest uppercase shrink-0"
-              style={{ color: 'color-mix(in srgb,var(--th-text-muted) 50%,transparent)' }}>{t('projects.filters.type', {defaultValue: 'Tür'})}</span>
+              style={{ color: 'color-mix(in srgb,var(--th-text-muted) 50%,transparent)' }}>{t('projects.filters.type', { defaultValue: 'Tür' })}</span>
             {TYPES.map((t) => (
-              <button key={t} onClick={() => setType(t)}
+              <button key={t} onClick={() => handleTypeChange(t)}
                 className="px-3.5 py-1.5 rounded-full text-xs font-semibold transition-all duration-200"
                 style={type === t ? { backgroundColor: 'var(--th-polgun-blue)', color: '#fff' } : { color: 'var(--th-text-muted)' }}
                 onMouseEnter={(e) => { if (type !== t) e.currentTarget.style.backgroundColor = 'color-mix(in srgb,var(--th-polgun-blue) 10%,transparent)' }}
@@ -2050,7 +2120,7 @@ export default function ProjectsPage({ setActivePage }) {
             ))}
           </div>
           <div className="ml-auto text-xs font-bold shrink-0" style={{ color: 'var(--th-text-muted)' }}>
-            {filtered.length} {t('projects.stats.project_count', {defaultValue: 'proje'})}
+            {filtered.length} {t('projects.stats.project_count', { defaultValue: 'proje' })}
           </div>
         </div>
       </div>
@@ -2113,15 +2183,15 @@ export default function ProjectsPage({ setActivePage }) {
             style={{ background: 'linear-gradient(135deg,var(--th-primary) 0%,var(--th-polgun-blue) 100%)' }}>
             <div className="absolute inset-0 opacity-10">
               <svg viewBox="0 0 1400 300" className="w-full h-full" preserveAspectRatio="xMidYMid slice">
-                <circle cx="200" cy="150" r="250" fill="white" />
+                <circle cx="200" cy="150" r="300" fill="white" />
                 <circle cx="1200" cy="150" r="200" fill="white" />
               </svg>
             </div>
             <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-10">
               <div>
-                <p className="text-[11px] font-black tracking-[0.3em] uppercase mb-3 text-white/50">{t('projects.cta_tag', {defaultValue: 'Sonraki Proje'})}</p>
-                <h2 className="text-3xl font-black text-white">{t('projects.cta_title', {defaultValue: 'Projeniz bu listede olsun.'})}</h2>
-                <p className="text-white/40 mt-2 max-w-md">{t('projects.cta_desc', {defaultValue: 'Hayalinizdeki su parkını veya eğlence merkezini tasarlamak için uzman mühendis ve mimar kadromuzla iletişime geçin.'})}</p>
+                <p className="text-[11px] font-black tracking-[0.3em] uppercase mb-3 text-white/50">{t('projects.cta_tag', { defaultValue: 'Sonraki Proje' })}</p>
+                <h2 className="text-3xl font-black text-white">{t('projects.cta_title', { defaultValue: 'Projeniz bu listede olsun.' })}</h2>
+                <p className="text-white/40 text-sm mt-2 max-w-md">{t('projects.cta_desc', { defaultValue: 'Hayalinizdeki su parkını veya eğlence merkezini tasarlamak için uzman mühendis ve mimar kadromuzla iletişime geçin.' })}</p>
               </div>
               <button onClick={() => navigate('/contact')}
                 className="shrink-0 px-10 py-4 font-bold text-sm rounded-full transition-all duration-300 hover:-translate-y-1"
@@ -2129,7 +2199,7 @@ export default function ProjectsPage({ setActivePage }) {
                 onMouseEnter={(e) => e.currentTarget.style.opacity = '0.9'}
                 onMouseLeave={(e) => e.currentTarget.style.opacity = '1'}
               >
-                {t('projects.cta_btn', {defaultValue: 'Projeyi Başlat'})}
+                {t('projects.cta_btn', { defaultValue: 'Projeyi Başlat' })}
               </button>
             </div>
           </div>

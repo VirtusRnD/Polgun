@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link, useNavigate, useSearchParams, useLocation } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import heroImage from '../assets/polgun-featured-projects-4.avif'
 import underwater1 from '../assets/hero/13.MaxeriaBlue.avif'
@@ -486,10 +486,8 @@ const PRODUCTS = [
 
 const CATEGORIES = [
 	'Tümü',
-	'Su Kaydırakları',
 	'Splash Tower',
 	'Ar-Ge Ürünleri',
-	'Splash Zone',
 	'Family Slides',
 	'Fast Slide',
 	'Jumbo Slides',
@@ -517,8 +515,44 @@ function GlassTag({ children }) {
 export default function ProductsPage() {
 	const { t } = useTranslation()
 	const navigate = useNavigate();
-	const [activeFilter, setActiveFilter] = useState('Tümü')
+	const [searchParams, setSearchParams] = useSearchParams();
+	const location = useLocation();
+
+	const getMatchedCategory = () => {
+		const param = searchParams.get('category') || searchParams.get('filter') || location.state?.category;
+		if (param) {
+			const normalizedParam = param.toLowerCase().replace(/[-_]/g, '');
+			const matched = CATEGORIES.find((c) => {
+				const normC = c.toLowerCase().replace(/[-_]/g, '');
+				return (
+					normC === normalizedParam ||
+					(normalizedParam === 'arge' && c === 'Ar-Ge Ürünleri') ||
+					(normalizedParam === 'argeurunleri' && c === 'Ar-Ge Ürünleri')
+				);
+			});
+			if (matched) return matched;
+		}
+		return 'Tümü';
+	};
+
+	const [activeFilter, setActiveFilter] = useState(getMatchedCategory);
 	const [catalogs, setCatalogs] = useState([])
+
+	const handleCategoryChange = (cat) => {
+		setActiveFilter(cat);
+		if (cat === 'Tümü') {
+			setSearchParams({});
+		} else {
+			setSearchParams({ category: cat });
+		}
+	};
+
+	useEffect(() => {
+		const targetCat = getMatchedCategory();
+		if (targetCat && targetCat !== activeFilter) {
+			setActiveFilter(targetCat);
+		}
+	}, [searchParams, location.state]);
 
 	useEffect(() => {
 		async function fetchCatalogs() {
@@ -542,11 +576,11 @@ export default function ProductsPage() {
 		'Splash Tower': t('products.tower.title'),
 		'Ar-Ge Ürünleri': t('nav.arge') + ' ' + t('footer.products'),
 		'Splash Zone': t('products.zone.title'),
-		'Family Slides': t('products.categories.family_slides', {defaultValue: 'Family Slides'}),
-		'Fast Slide': t('products.categories.fast_slide', {defaultValue: 'Fast Slide'}),
-		'Jumbo Slides': t('products.categories.jumbo_slides', {defaultValue: 'Jumbo Slides'}),
-		'Racer Slides': t('products.categories.racer_slides', {defaultValue: 'Racer Slides'}),
-		'Classic Slides': t('products.categories.classic_slides', {defaultValue: 'Classic Slides'}),
+		'Family Slides': t('products.categories.family_slides', { defaultValue: 'Family Slides' }),
+		'Fast Slide': t('products.categories.fast_slide', { defaultValue: 'Fast Slide' }),
+		'Jumbo Slides': t('products.categories.jumbo_slides', { defaultValue: 'Jumbo Slides' }),
+		'Racer Slides': t('products.categories.racer_slides', { defaultValue: 'Racer Slides' }),
+		'Classic Slides': t('products.categories.classic_slides', { defaultValue: 'Classic Slides' }),
 	}
 
 	const normalizeKey = (str) => {
@@ -607,59 +641,59 @@ export default function ProductsPage() {
 	return (
 		<main className="pt-20" style={{ backgroundColor: 'var(--th-bg)' }}>
 			{/* ── Page Hero ── */}
-			<section className="py-28" style={{ backgroundColor: 'var(--th-primary)' }}>
+			<section className="relative py-20 lg:py-24 min-h-[320px] lg:min-h-[360px] flex items-center" style={{ backgroundColor: 'var(--th-primary)' }}>
 				{/* Content */}
-				<div className="max-w-7xl  mx-auto px-6 lg:px-12">
-					<div className="grid lg:grid-cols-2 gap-16 items-end">
-
+				<div className="w-full max-w-7xl mx-auto px-6 max-w-[var(--layout-max)] lg:px-12">
+					<div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-end">
 						<div>
 							<p className="text-xs font-bold tracking-[0.3em] uppercase mb-4" style={{ color: 'var(--th-text)' }}>
-								{t('products.catalog_title', {defaultValue: 'Ürün Kataloğu'})}
+								{t('products.catalog_title', { defaultValue: 'Ürün Kataloğu' })}
 							</p>
 							<h1 className="text-5xl lg:text-6xl font-black text-white leading-[1.02]">
 								{t('products.title')}
 							</h1>
 						</div>
-						<p className="text-white/50 text-lg leading-relaxed">
-							{t('products.desc')}
-						</p>
-						<div className="flex gap-4 flex-wrap">
-							<button
-								type="button"
-								onClick={() => navigate('/contact')}
-								className="px-8 py-4 font-bold text-white rounded-full transition-all duration-300 hover:-translate-y-1"
-								style={{ backgroundColor: 'var(--th-polgun-antrasit)', boxShadow: `0 0 32px var(--th-polgun-antrasit)66` }}
-								onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'var(--th-text-muted)'}
-								onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'var(--th-polgun-antrasit)'}
-							>
-								{t('products.request_btn', {defaultValue: 'Ürün Talebi'})}
-							</button>
-							<button
-								onClick={() => {
-									if (catalogs.length > 0) {
-										const path = catalogs[0].file_path.startsWith('/') ? catalogs[0].file_path : '/' + catalogs[0].file_path;
-										window.open(path, '_blank');
-									} else {
-										alert(t('common.no_content'));
-									}
-								}}
-								className="px-8 py-4 font-bold rounded-full transition-all duration-300 border-2"
-								style={{ color: 'var(--th-polgun-antrasit)', borderColor: 'var(--th-polgun-antrasit)', backgroundColor: `var(--th-surface)0D`, backdropFilter: 'blur(8px)' }}
-								onMouseEnter={(e) => {
-									e.currentTarget.style.backgroundColor = `var(--th-polgun-antrasit)26`;
-									e.currentTarget.style.transform = 'translateY(-4px)';
-								}}
-								onMouseLeave={(e) => {
-									e.currentTarget.style.backgroundColor = `var(--th-surface)0D`;
-									e.currentTarget.style.transform = 'translateY(0)';
-								}}
-							>
-								{t('products.download_btn', {defaultValue: 'Katalog İndir'})}
-							</button>
+						<div className="space-y-4">
+							<p className="text-white/70 text-lg leading-relaxed">
+								{t('products.desc')}
+							</p>
+							<div className="flex gap-4 flex-wrap">
+								<button
+									type="button"
+									onClick={() => navigate('/contact')}
+									className="px-8 py-3.5 font-bold text-white rounded-full transition-all duration-300 hover:-translate-y-1"
+									style={{ backgroundColor: 'var(--th-polgun-antrasit)', boxShadow: `0 0 32px var(--th-polgun-antrasit)66` }}
+									onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'var(--th-text-muted)'}
+									onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'var(--th-polgun-antrasit)'}
+								>
+									{t('products.request_btn', { defaultValue: 'Ürün Talebi' })}
+								</button>
+								<button
+									onClick={() => {
+										if (catalogs.length > 0) {
+											const path = catalogs[0].file_path.startsWith('/') ? catalogs[0].file_path : '/' + catalogs[0].file_path;
+											window.open(path, '_blank');
+										} else {
+											alert(t('common.no_content'));
+										}
+									}}
+									className="px-8 py-4 font-bold rounded-full transition-all duration-300 border-2"
+									style={{ color: 'var(--th-polgun-antrasit)', borderColor: 'var(--th-polgun-antrasit)', backgroundColor: `var(--th-surface)0D`, backdropFilter: 'blur(8px)' }}
+									onMouseEnter={(e) => {
+										e.currentTarget.style.backgroundColor = `var(--th-polgun-antrasit)26`;
+										e.currentTarget.style.transform = 'translateY(-4px)';
+									}}
+									onMouseLeave={(e) => {
+										e.currentTarget.style.backgroundColor = `var(--th-surface)0D`;
+										e.currentTarget.style.transform = 'translateY(0)';
+									}}
+								>
+									{t('products.download_btn', { defaultValue: 'Katalog İndir' })}
+								</button>
+							</div>
 						</div>
 					</div>
 				</div>
-
 			</section>
 
 			{/* ── Filtre Şeridi ── */}
@@ -678,7 +712,7 @@ export default function ProductsPage() {
 						{CATEGORIES.map((cat) => (
 							<button
 								key={cat}
-								onClick={() => setActiveFilter(cat)}
+								onClick={() => handleCategoryChange(cat)}
 								className="shrink-0 px-5 py-2 rounded-full text-xs font-semibold tracking-wide transition-all duration-200"
 								style={
 									activeFilter === cat
@@ -843,7 +877,7 @@ export default function ProductsPage() {
 										>
 											{t('common.quote')}
 										</button>
-									
+
 									</div>
 								</div>
 							</article>
@@ -862,7 +896,7 @@ export default function ProductsPage() {
 								className="w-full h-full"
 								preserveAspectRatio="xMidYMid slice"
 							>
-								<circle cx="200" cy="150" r="250" fill="white" />
+								<circle cx="200" cy="150" r="350" fill="white" />
 								<circle cx="1200" cy="150" r="200" fill="white" />
 							</svg>
 						</div>
@@ -871,13 +905,13 @@ export default function ProductsPage() {
 								<p
 									className="text-[11px] font-black tracking-[0.3em] uppercase mb-3 text-white/50"
 								>
-									{t('products.custom_project_tag', {defaultValue: 'Özel Proje'})}
+									{t('products.custom_project_tag', { defaultValue: 'Özel Proje' })}
 								</p>
 								<h2 className="text-3xl font-black text-white">
-									{t('products.not_found_title', {defaultValue: 'Aradığınızı bulamadınız mı?'})}
+									{t('products.not_found_title', { defaultValue: 'Aradığınızı bulamadınız mı?' })}
 								</h2>
 								<p className="text-white/40 mt-3 max-w-lg">
-									{t('products.not_found_desc', {defaultValue: 'Hayalinizdeki su parkını gerçeğe dönüştürmek için geniş ürün yelpazemizi inceleyin ve projenize en uygun çözümleri birlikte tasarlayalım.'})}
+									{t('products.not_found_desc', { defaultValue: 'Hayalinizdeki su parkını gerçeğe dönüştürmek için geniş ürün yelpazemizi inceleyin ve projenize en uygun çözümleri birlikte tasarlayalım.' })}
 								</p>
 							</div>
 							<button
@@ -891,7 +925,7 @@ export default function ProductsPage() {
 								onMouseEnter={(e) => e.currentTarget.style.opacity = '0.9'}
 								onMouseLeave={(e) => e.currentTarget.style.opacity = '1'}
 							>
-								{t('products.custom_request_btn', {defaultValue: 'Özel Çözüm Talep Et'})}
+								{t('products.custom_request_btn', { defaultValue: 'Özel Çözüm Talep Et' })}
 							</button>
 						</div>
 					</div>

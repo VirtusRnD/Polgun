@@ -78,12 +78,21 @@ export default function AwardsPage({ setActivePage }) {
     <main className="pt-20" style={{ backgroundColor: 'var(--th-bg)' }}>
 
       {/* ── Hero ── */}
-      <section className="py-28" style={{ backgroundColor: 'var(--th-primary)' }}>
-        <div className="max-w-7xl mx-auto px-6 lg:px-12">
-          <p className="text-xs font-bold tracking-[0.3em] uppercase mb-4" style={{ color: 'rgba(255,255,255,0.6)' }}>{t('awards.title')}</p>
-          <h1 className="text-5xl lg:text-6xl font-black text-white leading-[1.02]">
-            {t('nav.awards')}
-          </h1>
+      <section className="relative py-20 lg:py-24 min-h-[320px] lg:min-h-[360px] flex items-center" style={{ backgroundColor: 'var(--th-primary)' }}>
+        <div className="w-full max-w-7xl mx-auto px-6 max-w-[var(--layout-max)] lg:px-12">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-end">
+            <div>
+              <p className="text-xs font-bold tracking-[0.3em] uppercase mb-4" style={{ color: 'var(--th-text)' }}>
+                {t('awards.title')}
+              </p>
+              <h1 className="text-5xl lg:text-6xl font-black text-white leading-[1.02]">
+                {t('nav.awards')}
+              </h1>
+            </div>
+            <p className="text-white/70 text-lg leading-relaxed">
+              {t('awards.desc', { defaultValue: 'Polgün’ün ulusal ve uluslararası arenada kazandığı başarılar, tesciller ve kalite standartları.' })}
+            </p>
+          </div>
         </div>
       </section>
 

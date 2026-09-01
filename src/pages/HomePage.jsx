@@ -176,10 +176,10 @@ const HERO_IMAGES = [
   { title: 'Fantazia Resort Marsa Alam', location: 'Mısır', img: hero11 },
   { title: 'Sarvar Fürdö', location: 'Macaristan', img: hero12 },
   { title: 'Paradise Spa Dogo', location: 'Güney Kore', img: hero13 },
-  { title: 'Aquila Rithymna Beach', location: 'Yunanistan', img: hero14},
-  { title: 'Kirman Sidera', location: 'Güney kore', img: hero15 },
-  { title: '', location: '', img: hero16 },
-  
+  { title: 'Aquila Rithymna Beach', location: 'Yunanistan', img: hero14 },
+  { title: 'Kirman Sidera', location: 'Türkiye', img: hero15 },
+  { title: 'Port-Valais', location: 'İsviçre', img: hero16 },
+
 ]
 
 // ── Carousel Görselleri ────────────────────────────────────
@@ -205,15 +205,15 @@ export default function HomePage() {
   // Location translation mapping helper
   const translateLocation = (loc) => {
     const mapping = {
-      'Fransa': t('factories.names.france', {defaultValue: 'France'}),
-      'Suudi Arabistan': t('factories.names.saudi_arabia', {defaultValue: 'Saudi Arabia'}),
-      'Serbia': t('factories.names.serbia', {defaultValue: 'Serbia'}),
-      'Türkiye': t('factories.names.turkey', {defaultValue: 'Turkey'}),
-      'İspanya': t('factories.names.spain', {defaultValue: 'Spain'}),
-      'Mısır': t('factories.names.egypt', {defaultValue: 'Egypt'}),
-      'Macaristan': t('factories.names.hungary', {defaultValue: 'Hungary'}),
-      'Güney Kore': t('factories.names.south_korea', {defaultValue: 'South Korea'}),
-      'Yunanistan': t('factories.names.greece', {defaultValue: 'Greece'}),
+      'Fransa': t('factories.names.france', { defaultValue: 'France' }),
+      'Suudi Arabistan': t('factories.names.saudi_arabia', { defaultValue: 'Saudi Arabia' }),
+      'Serbia': t('factories.names.serbia', { defaultValue: 'Serbia' }),
+      'Türkiye': t('factories.names.turkey', { defaultValue: 'Turkey' }),
+      'İspanya': t('factories.names.spain', { defaultValue: 'Spain' }),
+      'Mısır': t('factories.names.egypt', { defaultValue: 'Egypt' }),
+      'Macaristan': t('factories.names.hungary', { defaultValue: 'Hungary' }),
+      'Güney Kore': t('factories.names.south_korea', { defaultValue: 'South Korea' }),
+      'Yunanistan': t('factories.names.greece', { defaultValue: 'Greece' }),
     };
     return mapping[loc] || loc;
   }
@@ -524,14 +524,14 @@ export default function HomePage() {
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {[
-              { title: t('products.slides.title'), sub: t('home.slides_sub'), img: guralPremier, g: 'linear-gradient(to top,rgba(0,0,0,0.4),transparent)' },
-              { title: t('products.tower.title'), sub: t('home.tower_sub'), img: pirate1, g: 'linear-gradient(to top,rgba(0,0,0,0.4),transparent)' },
-              { title: t('nav.arge') + ' ' + t('footer.products'), sub: t('home.arge_sub'), img: navatu1, g: 'linear-gradient(to top,rgba(0,0,0,0.4),transparent)' },
-              { title: t('products.zone.title'), sub: t('home.zone_sub'), img: frenzy, g: 'linear-gradient(to top,rgba(0,0,0,0.4),transparent)' },
+              { title: t('products.slides.title'), sub: t('home.slides_sub'), img: guralPremier, g: 'linear-gradient(to top,rgba(0,0,0,0.4),transparent)', link_to: "/products" },
+              { title: t('products.tower.title'), sub: t('home.tower_sub'), img: pirate1, g: 'linear-gradient(to top,rgba(0,0,0,0.4),transparent)', link_to: "/splash-tower" },
+              { title: t('nav.arge') + ' ' + t('footer.products'), sub: t('home.arge_sub'), img: navatu1, g: 'linear-gradient(to top,rgba(0,0,0,0.4),transparent)', link_to: "/products?category=Ar-Ge Ürünleri" },
+              { title: t('products.zone.title'), sub: t('home.zone_sub'), img: frenzy, g: 'linear-gradient(to top,rgba(0,0,0,0.4),transparent)', link_to: "/splash-zone" },
             ].map((cat, i) => (
               <Link
                 key={i}
-                to="/products"
+                to={cat.link_to}
                 className="group relative h-72 rounded-2xl overflow-hidden text-left"
                 style={{
                   backgroundImage: `${cat.g}, url(${cat.img})`,

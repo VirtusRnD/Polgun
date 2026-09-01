@@ -2,6 +2,7 @@
 // SERVICES PAGE — Gerçek görseller + CSS değişkenleri + glass efekt
 // =======================================================
 import { useTranslation } from 'react-i18next'
+import { Link, useNavigate } from 'react-router-dom'
 import heroImage from '../assets/polgun-featured-projects-4.avif'
 import concept_design from '../assets/production/concept_design.avif'
 import assemble from '../assets/production/assemble.avif'
@@ -30,6 +31,7 @@ function GlassCard({ children, className = '', style = {} }) {
 
 export default function ServicesPage({ setActivePage }) {
 	const { t } = useTranslation()
+	const navigate = useNavigate()
 
 	const steps = [
 		{
@@ -90,9 +92,9 @@ export default function ServicesPage({ setActivePage }) {
 		<main className="pt-20" style={{ backgroundColor: 'var(--th-bg)' }}>
 
 			{/* ── Page Hero ── */}
-			<section className="py-10" style={{ backgroundColor: 'var(--th-primary)' }}>
-				<div className="max-w-7xl mx-auto px-6 max-w-[var(--layout-max)] lg:px-12">
-					<div className="grid lg:grid-cols-2 gap-16 items-end">
+			<section className="relative py-20 lg:py-24 min-h-[320px] lg:min-h-[360px] flex items-center" style={{ backgroundColor: 'var(--th-primary)' }}>
+				<div className="w-full max-w-7xl mx-auto px-6 max-w-[var(--layout-max)] lg:px-12">
+					<div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-end">
 						<div>
 							<p className="text-xs font-bold tracking-[0.3em] uppercase mb-4" style={{ color: 'var(--th-text)' }}>
 								{t('nav.services')}
@@ -101,40 +103,11 @@ export default function ServicesPage({ setActivePage }) {
 								{t('services.subtitle').includes(' Tam ') ? <>{t('services.subtitle').split(' Tam ')[0]}<br />{t('services.subtitle').split(' Tam ')[1]}</> : t('services.subtitle')}
 							</h1>
 						</div>
-						<p className="text-white/50 text-lg leading-relaxed text-justify">
+						<p className="text-white/70 text-lg leading-relaxed text-justify">
 							{t('services.desc')}
-
 						</p>
-						<div className="flex gap-4 flex-wrap">
-							<button
-								onClick={() => setActivePage('contact')}
-								className="px-8 py-4 font-bold text-white rounded-full transition-all duration-300 hover:-translate-y-1"
-								style={{ backgroundColor: 'var(--th-polgun-antrasit)', boxShadow: `0 0 32px var(--th-polgun-antrasit)66` }}
-								onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'var(--th-text-muted)'}
-								onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'var(--th-polgun-antrasit)'}
-							>
-								{t('common.quote')}
-							</button>
-							<button
-								onClick={() => setActivePage('contact')}
-								className="px-8 py-4 font-bold rounded-full transition-all duration-300 border-2"
-								style={{ color: 'var(--th-polgun-antrasit)', borderColor: 'var(--th-polgun-antrasit)', backgroundColor: 'var(--th-primary)', backdropFilter: 'blur(8px)' }}
-								onMouseEnter={(e) => {
-									e.currentTarget.style.backgroundColor = 'var(--th-polgun-antrasit)26';
-									e.currentTarget.style.transform = 'translateY(-4px)';
-								}}
-								onMouseLeave={(e) => {
-									e.currentTarget.style.backgroundColor = 'var(--th-primary)';
-									e.currentTarget.style.transform = 'translateY(0)';
-								}}
-							>
-								{t('common.learn_more')}
-							</button>
-						</div>
 					</div>
-
 				</div>
-
 			</section>
 
 			{/* ── Neden Polgün Band ── */}
@@ -231,7 +204,7 @@ export default function ServicesPage({ setActivePage }) {
 								{t('services.cta_desc', { defaultValue: 'Proje büyüklüğü ne olursa olsun, ilk günden son güne kadar yanınızdayız.' })}
 							</p>
 							<button
-								onClick={() => setActivePage('contact')}
+								onClick={() => navigate('/contact')}
 								className="px-10 py-4 text-white font-bold text-sm rounded-full transition-all duration-300 hover:-translate-y-1"
 								style={{ backgroundColor: '#FFFFFF', color: 'var(--th-primary-darker)', boxShadow: '0 0 40px rgba(0,0,0,0.2)' }}
 								onMouseEnter={(e) => e.currentTarget.style.opacity = '0.9'}

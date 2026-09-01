@@ -140,25 +140,45 @@
     "production_power_desc": "Mühendislik, üretim ve kalite kontrol süreçlerini aynı çatı altında yöneterek; her projeye özel, güvenilir ve yüksek kaliteli çözümler geliştiriyoruz.",
     "btn_projects": "Projelerimizi İnceleyin",
     "production_sections": {
-      "cnc_mold": {
+      "entegre_depo": {
+        "title": "Entegre Depo ve Malzeme Yönetimi",
+        "desc": "Polgün, üretimde kullanılan hammadde, yardımcı malzeme ve teknik ekipmanların tedarik, depolama ve üretime aktarım süreçlerini kendi operasyon yapısı içerisinde yönetir. Düzenli stok ve malzeme yönetimi, farklı üretim birimlerinin ihtiyaç duyduğu girdilere hızlı ve kontrollü şekilde erişmesini sağlar. Üretim, depo ve tedarik süreçlerinin koordineli yürütülmesi, üretim sürekliliğini desteklerken malzeme takibinin ve operasyonel kontrolün güçlenmesine katkı sağlar."
+      },
+      "model_kalıp": {
         "title": "CNC Model ve Kalıp Hazırlama",
-        "desc": "CNC destekli model ve kalıp hazırlama süreçlerimiz, özgün ürün geometrilerinin hassas şekilde oluşturulmasına olanak sağlar. This altyapı; kompozit parçaların üretim öncesi hazırlık süreçlerini, yüzey kalitesini ve ürün formunun doğruluğunu destekler."
+        "desc": "Polgün, ürün geliştirme ve üretim süreçlerini destekleyen 5 eksen CNC model ve kalıp üretim altyapısı ile özgün ve kompleks geometrileri yüksek hassasiyetle üretime aktarır. Dijital tasarımdan model ve kalıp üretimine kadar tüm süreçlerin kendi bünyemizde yönetilmesi; yüksek yüzey kalitesi, ölçü hassasiyeti ve üretimde tekrarlanabilirlik sağlar. CNC teknolojimiz sayesinde standart ürünlerin yanı sıra projeye özel tasarımlar ve yeni nesil kaydırak geometrileri de hızlı ve kontrollü bir şekilde üretime hazırlanır."
       },
-      "steel": {
-        "title": "Çelik İşleme ve Kesim Teknolojileri",
-        "desc": "Çelik konstrüksiyon sistemlerinin üretiminde CNC kesim, boru ve profil işleme teknolojilerinden yararlanıyoruz. Projeye özel hazırlanan parçalar, üretim ve montaj süreçlerine uygun hassasiyetle işlenerek bir sonraki imalat aşamasına aktarılır."
+      "elyaf": {
+        "title": "CNC Elyaf Kesim Teknolojisi",
+        "desc": "Polgün, kompozit üretim süreçlerinde kullanılan cam elyafı ve takviye malzemelerini CNC kontrollü otomatik kesim sistemleri ile hassas ölçülerde hazırlar. Dijital kesim verilerine göre çalışan sistem sayesinde farklı ürün geometrilerine uygun parçalar hızlı, tekrarlanabilir ve kontrollü şekilde kesilir. Bu teknoloji; malzeme firesinin azaltılmasına, kesim hassasiyetinin artırılmasına ve üretim hazırlık sürelerinin kısaltılmasına katkı sağlar. Elyaf kesim ve hazırlama sürecinin Polgün bünyesinde yürütülmesi, kompozit üretimde kalite ve proses kontrolünün sürekliliğini destekler."
       },
-      "mechanical": {
-        "title": "Mekanik İşleme ve Parça Üretimi",
-        "desc": "Bağlantı elemanları, özel mekanik parçalar ve fonksiyonel bileşenler; projelerin teknik ihtiyaçlarına uygun şekilde üretim sürecinde işlenir. Mekanik imalat altyapımız, farklı ürün gruplarına uygun çözümler geliştirmemizi destekler."
-      },
-      "composite": {
+      "kompozit": {
         "title": "Kompozit Üretim ve Yüzey Uygulamaları",
-        "desc": "Su kaydırakları, temalı ürünler ve özel tasarım parçalar için yürütülen kompozit üretim süreçleri; yüzey hazırlama, boya uygulamaları ve son kat işlemleriyle tamamlanır. Bu süreçler, ürünlerin estetik bütünlüğünü, dayanımını ve uzun dönem kullanım performansını destekler."
+        "desc": "Polgün, su kaydırağı ve su parkı ürünlerinde kullanılan kompozit parçaların üretimini RTM, L-RTM, el yatırma ve püskürtme gibi farklı üretim yöntemleri ile kendi bünyesinde gerçekleştirir. Ürün geometrisine ve performans gereksinimlerine uygun reçine, takviye malzemesi ve katman yapıları kullanılarak dayanıklı ve tekrarlanabilir üretim sağlanır. Üretim sürecinin devamında uygulanan jelkot, yüzey düzeltme, renklendirme, parlatma ve son kat işlemleri ile ürünlerin yüzey kalitesi ve görsel bütünlüğü tamamlanır. Kompozit üretimden yüzey uygulamalarına kadar tüm aşamaların Polgün bünyesinde yürütülmesi, ürün kalitesinin ve proses kontrolünün her aşamada korunmasını sağlar."
       },
-      "digital": {
-        "title": "Dijital Üretim ve Süreç Kontrolü",
-        "desc": "Bilgisayar destekli üretim sistemleri, imalat süreçlerinin planlı, kontrollü ve tekrarlanabilir şekilde ilerlemesini sağlar. Dijital takip ve operatör kontrolü sayesinde üretimde hassasiyet, süreklilik ve süreç izlenebilirliği desteklenir."
+      "çelik_işleme": {
+        "title": "Çelik İşleme ve Kesim Teknolojileri",
+        "desc": "Polgün, çelik konstrüksiyon üretiminde yüksek hassasiyetli kesim ve işleme teknolojilerini kullanarak tasarımları üretime doğru ve kontrollü şekilde aktarır. CNC boru ve profil kesim sistemleri sayesinde farklı çap, kesit ve geometrilerdeki parçalar yüksek ölçü hassasiyetiyle hazırlanır. Dijital tasarım verilerinin doğrudan üretim sürecine aktarılması; karmaşık kaydırak geometrilerine uyumlu taşıyıcı sistemlerin daha hızlı, tekrarlanabilir ve üretilebilir şekilde hazırlanmasını sağlar. Kesimden kaynak ve montaj hazırlığına kadar çelik imalat süreçlerinin Polgün bünyesinde yürütülmesi, proje genelinde kalite ve üretim kontrolünü güçlendirir."
+      },
+      "çelik_konstrüksiyon": {
+        "title": "Çelik Konstrüksiyon ve Kaynaklı İmalat",
+        "desc": "Polgün, su kaydırakları ve su parkı sistemlerinde kullanılan çelik konstrüksiyonların üretimini kendi bünyesinde gerçekleştirir. CNC teknolojileriyle hazırlanan boru, profil ve çelik parçalar, projeye özel geometrilere uygun olarak hassas kaynak ve montaj süreçleriyle bir araya getirilir. Kesimden kaynaklı imalata kadar tüm aşamaların entegre şekilde yürütülmesi; taşıyıcı sistemlerde ölçü hassasiyeti, üretim kontrolü ve projeye özel esneklik sağlar. Böylece farklı kaydırak geometrilerine uyumlu, dayanıklı ve kontrollü çelik konstrüksiyon çözümleri üretilir."
+      },
+      "mekanik": {
+        "title": "Mekanik İşleme ve Parça Üretimi",
+        "desc": "Polgün, su kaydırağı sistemleri ve çelik konstrüksiyonlarda kullanılan özel bağlantı elemanları, flanşlar ve projeye özgü mekanik parçaların üretimini kendi bünyesinde gerçekleştirir. Parçalar, mühendislik verilerine uygun olarak hassas ölçülerde hazırlanarak montaj süreçleriyle tam uyumlu hale getirilir.Mekanik işleme kabiliyetimiz; ölçü hassasiyeti, üretim tekrarlanabilirliği ve hızlı proje adaptasyonu sağlarken, standart dışı geometrilere ve projeye özel teknik ihtiyaçlara esnek çözümler sunar. Tasarımdan imalata kadar sürecin Polgün bünyesinde yönetilmesi, parça kalitesi ve üretim kontrolünün her aşamada korunmasını sağlar."
+      },
+      "boya": {
+        "title": "Boya ve Koruyucu Kaplama Uygulamaları",
+        "desc": "Polgün, çelik konstrüksiyon ve metal parçaların kullanım koşullarına uygun şekilde yüzey hazırlığı, boya ve koruyucu kaplama işlemlerini kendi bünyesinde gerçekleştirir. Uygulanan sistemler, metal yüzeylerin korozyon ve çevresel etkilere karşı korunmasını desteklerken ürünlerin estetik bütünlüğünü de tamamlar. Kontrollü yüzey hazırlığı ve kaplama süreçleri sayesinde farklı iklim ve proje koşullarına uygun, dayanıklı, uzun ömürlü ve yüksek yüzey kalitesine sahip çözümler elde edilir."
+      },
+      "kalite": {
+        "title": "Kalite Kontrol ve Ürün Hazırlama",
+        "desc": "Polgün’de üretimi tamamlanan kompozit parçalar, yüzey kalitesi ve ürün bütünlüğü açısından kontrol edilerek bir sonraki aşamaya hazırlanır. Ürün yüzeylerinin üretim, taşıma ve montaj süreçlerinde korunmasına yönelik uygulamalar kontrollü şekilde gerçekleştirilir. Yüzey kontrolü, koruyucu uygulamalar ve sevkiyata hazırlık süreçlerinin kendi bünyemizde yürütülmesi, ürünlerin üretim tesisinden proje sahasına kadar kalitesinin korunmasına katkı sağlar."
+      },
+      "paketleme": {
+        "title": "Paketleme ve Sevkiyat",
+        "desc": "Polgün, üretimi ve kalite kontrolleri tamamlanan ürünleri proje sahasına güvenli şekilde ulaştırmak için ürün tipine ve sevkiyat koşullarına uygun paketleme ve yükleme süreçleri uygular. Kompozit parçalar, çelik konstrüksiyonlar ve proje ekipmanları taşıma sırasında korunacak şekilde hazırlanarak sevkiyata alınır. Planlı paketleme, yükleme ve lojistik koordinasyonu sayesinde ürünlerin üretim tesisinden proje sahasına kadar kontrollü ve güvenli şekilde taşınması sağlanır."
       }
     },
     "factories": {
@@ -789,6 +809,15 @@
       "2021": "Bakanlık onaylı Ar-Ge Merkezi statüsü kazanıldı — Muğla'nın ilk ve tek Ar-Ge Merkezi.",
       "2025": "Bursa fabrika yatırımıyla toplam 120.000 m² üretim alanına ulaşıldı.",
       "2026": "Marmara Teknopark ofisi ile üniversite-sanayi iş birliği güçlendirildi."
+    },
+    "tags": {
+      "2002": "Kuruluş",
+      "2008": "İlk İhracat",
+      "2015": "Kapasite Artışı",
+      "2019": "İspanya Ofisi",
+      "2021": "Ar-Ge Merkezi",
+      "2025": "Bursa Fabrikası",
+      "2026": "Teknopark Ofisi"
     },
     "milestones_tag": "Kilometre Taşları"
   },

@@ -144,32 +144,48 @@ const SplashZone = () => {
         <main className="pt-20" style={{ backgroundColor: 'var(--th-bg)' }}>
 
             {/* ── Page Hero ── */}
-            <section className="py-28" style={{ backgroundColor: 'var(--th-primary)' }}>
-                <div className="max-w-7xl mx-auto px-6 max-w-[var(--layout-max)] lg:px-12">
-                    <div className="grid lg:grid-cols-2 gap-16 items-end">
+            <section className="relative py-20 lg:py-24 min-h-[320px] lg:min-h-[360px] flex items-center" style={{ backgroundColor: 'var(--th-primary)' }}>
+                <div className="w-full max-w-7xl mx-auto px-6 max-w-[var(--layout-max)] lg:px-12">
+                    <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-end">
                         <div>
+                            <p className="text-xs font-bold tracking-[0.3em] uppercase mb-4" style={{ color: 'var(--th-text)' }}>
+                                {t('products.zone.title', { defaultValue: 'Splash Zone' })}
+                            </p>
                             <h1 className="text-5xl lg:text-6xl font-black text-white leading-[1.02]">
                                 Splash<br />Zone
                             </h1>
-                            <p className="text-white/50 text-lg leading-relaxed mt-4">
-                                {t('splashzone.desc')}
-                            </p>
                         </div>
+                        <p className="text-white/70 text-lg leading-relaxed">
+                            {t('splashzone.desc')}
+                        </p>
                     </div>
                 </div>
             </section>
 
-            <section className='my-20 px-10'>
-                <div className="grid grid-cols-3 gap-10">
+            <section className="my-8 sm:my-14 lg:my-20 px-3 sm:px-6 lg:px-10 max-w-[var(--layout-max)] mx-auto">
+                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-6 lg:gap-8">
                     {images.map((image, index) => (
-                        <div className="gallery-item" key={index}>
-                            <img src={image.src} alt={image.name} />
-                            <div className="glass-effect grid grid-cols-2">
-                                <p>{image.name}</p>
+                        <div 
+                            className="gallery-item group relative aspect-square rounded-xl sm:rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 bg-white" 
+                            key={index}
+                        >
+                            <img 
+                                src={image.src} 
+                                alt={image.name} 
+                                loading="lazy"
+                                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" 
+                            />
+                            <div className="glass-effect absolute bottom-0 inset-x-0 p-2.5 sm:p-3.5 flex flex-col sm:flex-row items-center justify-between gap-1.5 sm:gap-2">
+                                <p 
+                                    className="text-xs sm:text-sm font-bold text-gray-900 truncate w-full text-center sm:text-left" 
+                                    title={image.name}
+                                >
+                                    {image.name}
+                                </p>
                                 <button
                                     onClick={() => navigate('/contact')}
-                                    className="flex-1 py-3 text-white text-sm font-bold rounded-full transition-all duration-200 hover:-translate-y-0.5"
-                                    style={{ backgroundColor: 'var(--th-polgun-blue)', boxShadow: `0 0 32px var(--th-polgun-blue)66` }}
+                                    className="w-full sm:w-auto px-2.5 sm:px-4 py-1.5 sm:py-2 text-[11px] sm:text-xs md:text-sm font-bold text-white rounded-full transition-all duration-200 hover:-translate-y-0.5 whitespace-nowrap cursor-pointer shrink-0"
+                                    style={{ backgroundColor: 'var(--th-polgun-blue)', boxShadow: `0 0 20px var(--th-polgun-blue)44` }}
                                     onMouseEnter={(e) =>
                                     (e.currentTarget.style.backgroundColor =
                                         'var(--th-primary)')
@@ -181,7 +197,6 @@ const SplashZone = () => {
                                 >
                                     {t('common.quote')}
                                 </button>
-
                             </div>
                         </div>
                     ))}

@@ -108,9 +108,9 @@ export default function PatentsPage() {
   return (
     <main className="pt-20" style={{ backgroundColor: 'var(--th-bg)' }}>
       {/* ── Page Hero ── */}
-      <section className="py-28" style={{ backgroundColor: 'var(--th-primary)' }}>
-        <div className="max-w-7xl mx-auto px-6 max-w-[var(--layout-max)] lg:px-12">
-          <div className="grid lg:grid-cols-2 gap-16 items-end">
+      <section className="relative py-20 lg:py-24 min-h-[320px] lg:min-h-[360px] flex items-center" style={{ backgroundColor: 'var(--th-primary)' }}>
+        <div className="w-full max-w-7xl mx-auto px-6 max-w-[var(--layout-max)] lg:px-12">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-end">
             <div>
               <p className="text-xs font-bold tracking-[0.3em] uppercase mb-4" style={{ color: 'var(--th-text)' }}>
                 {t('nav.arge')} · {t('nav.patents', { defaultValue: 'Patentler' })}

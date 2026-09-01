@@ -24,12 +24,12 @@ import iftar5 from '../assets/news/iftar-2026-5.png'
 
 // Static Newsletter Data (PDFs served secure-fetch from /public/newsletter)
 const BULLETINS_DATA = [
-  { id: 6, file: '/newsletter/newsletter-6.pdf', year: 2026, monthKey: 'months.july', issue: 6 },
-  { id: 5, file: '/newsletter/newsletter-5.pdf', year: 2026, monthKey: 'months.june', issue: 5 },
-  { id: 4, file: '/newsletter/newsletter-4.pdf', year: 2026, monthKey: 'months.may', issue: 4 },
-  { id: 3, file: '/newsletter/newsletter-3.pdf', year: 2026, monthKey: 'months.april', issue: 3 },
-  { id: 2, file: '/newsletter/newsletter-2.pdf', year: 2026, monthKey: 'months.march', issue: 2 },
-  { id: 1, file: '/newsletter/newsletter-1.pdf', year: 2026, monthKey: 'months.february', issue: 1 },
+  { id: 6, file: '/newsletter/newsletter-6.pdf', cover: '/newsletter/covers/cover-6.jpg', year: 2026, monthKey: 'months.july', issue: 6 },
+  { id: 5, file: '/newsletter/newsletter-5.pdf', cover: '/newsletter/covers/cover-5.jpg', year: 2026, monthKey: 'months.june', issue: 5 },
+  { id: 4, file: '/newsletter/newsletter-4.pdf', cover: '/newsletter/covers/cover-4.jpg', year: 2026, monthKey: 'months.may', issue: 4 },
+  { id: 3, file: '/newsletter/newsletter-3.pdf', cover: '/newsletter/covers/cover-3.jpg', year: 2026, monthKey: 'months.april', issue: 3 },
+  { id: 2, file: '/newsletter/newsletter-2.pdf', cover: '/newsletter/covers/cover-2.jpg', year: 2026, monthKey: 'months.march', issue: 2 },
+  { id: 1, file: '/newsletter/newsletter-1.pdf', cover: '/newsletter/covers/cover-1.jpg', year: 2026, monthKey: 'months.february', issue: 1 },
 ]
 
 // Static Fairs Stand Data Array
@@ -160,20 +160,27 @@ export default function NewsPage() {
     <main className="pt-20" style={{ backgroundColor: 'var(--th-bg)' }}>
 
       {/* ── Page Hero Banner ── */}
-      <section className="py-28" style={{ backgroundColor: 'var(--th-primary)' }}>
-        <div className="max-w-7xl mx-auto px-6 lg:px-12">
-          <p className="text-xs font-bold tracking-[0.3em] uppercase mb-4" style={{ color: 'rgba(255,255,255,0.6)' }}>
-            {activeTab === 'bulletins'
-              ? t('news.tabs.bulletins')
-              : (activeTab === 'fairs' ? t('news.tabs.fairs') : t('news.title'))
-            }
-          </p>
-          <h1 className="text-5xl lg:text-6xl font-black text-white leading-[1.02]">
-            {activeTab === 'bulletins'
-              ? t('news.bulletins_title', { defaultValue: 'Kurumsal E-Bültenler' })
-              : (activeTab === 'fairs' ? t('news.fairs_title', { defaultValue: 'Katıldığımız Fuarlar' }) : t('news.title'))
-            }
-          </h1>
+      <section className="relative py-20 lg:py-24 min-h-[320px] lg:min-h-[360px] flex items-center" style={{ backgroundColor: 'var(--th-primary)' }}>
+        <div className="w-full max-w-7xl mx-auto px-6 max-w-[var(--layout-max)] lg:px-12">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-end">
+            <div>
+              <p className="text-xs font-bold tracking-[0.3em] uppercase mb-4" style={{ color: 'var(--th-text)' }}>
+                {activeTab === 'bulletins'
+                  ? t('news.tabs.bulletins')
+                  : (activeTab === 'fairs' ? t('news.tabs.fairs') : t('news.title'))
+                }
+              </p>
+              <h1 className="text-5xl lg:text-6xl font-black text-white leading-[1.02]">
+                {activeTab === 'bulletins'
+                  ? t('news.bulletins_title', { defaultValue: 'Kurumsal E-Bültenler' })
+                  : (activeTab === 'fairs' ? t('news.fairs_title', { defaultValue: 'Katıldığımız Fuarlar' }) : t('news.title'))
+                }
+              </h1>
+            </div>
+            <p className="text-white/70 text-lg leading-relaxed">
+              {t('news.desc', { defaultValue: 'Polgün ile ilgili en son haberler, sektörel gelişmeler, bültenler ve etkinlikler.' })}
+            </p>
+          </div>
         </div>
       </section>
 
@@ -349,7 +356,7 @@ export default function NewsPage() {
                   >
                     {/* Rendered PDF Cover Page */}
                     <div className="relative overflow-hidden aspect-[1/1.41]">
-                      <NewsletterCover pdfUrl={item.file} alt={t('news.issue_format', { number: item.issue })} />
+                      <NewsletterCover pdfUrl={item.file} coverImg={item.cover} alt={t('news.issue_format', { number: item.issue })} />
 
                       {/* Dark Overlay Hover Actions */}
                       <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between p-6 z-20">

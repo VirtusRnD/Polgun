@@ -199,9 +199,9 @@ export default function ContactPage({ setActivePage }) {
     <main className="pt-20" style={{ backgroundColor: 'var(--th-bg)' }}>
 
       {/* ── Page Hero ── */}
-      <section className="py-28" style={{ backgroundColor: 'var(--th-primary)' }}>
-        <div className="max-w-7xl mx-auto px-6 max-w-[var(--layout-max)] lg:px-12">
-          <div className="grid lg:grid-cols-2 gap-16 items-end">
+      <section className="relative py-20 lg:py-24 min-h-[320px] lg:min-h-[360px] flex items-center" style={{ backgroundColor: 'var(--th-primary)' }}>
+        <div className="w-full max-w-7xl mx-auto px-6 max-w-[var(--layout-max)] lg:px-12">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-end">
             <div>
               <p className="text-xs font-bold tracking-[0.3em] uppercase mb-4" style={{ color: 'var(--th-text)' }}>
                 {t('contact.title', {defaultValue: 'İletişim'})}
@@ -211,7 +211,7 @@ export default function ContactPage({ setActivePage }) {
                 {t('contact.hero_title', {defaultValue: 'Sizinle Tanışalım'}).split(' ').slice(1).join(' ')}
               </h1>
             </div>
-            <p className="text-white/50 text-lg leading-relaxed">
+            <p className="text-white/70 text-lg leading-relaxed">
               {t('contact.hero_desc', {defaultValue: 'Yeni bir su parkı projesi geliştirmek, mevcut tesisinizi yenilemek veya ürünlerimiz hakkında detaylı bilgi almak için uzman ekibimizle iletişime geçebilirsiniz. Projenizin her aşamasında size destek olmaktan memnuniyet duyarız.'})}
             </p>
           </div>

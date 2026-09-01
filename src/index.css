@@ -72,37 +72,23 @@ body {
 .gallery-item {
   position: relative;
   overflow: hidden;
-  border-radius: 10px;
+  border-radius: 16px;
 }
 
 .gallery-item img {
   width: 100%;
   height: 100%;
-  
-  transition: transform 0.3s ease;
+  object-fit: cover;
+  transition: transform 0.4s ease;
 }
 
 .gallery-item:hover img {
-  transform: scale(1.1);
+  transform: scale(1.08);
 }
 
 .glass-effect {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  color: black;
-  text-align: center;
-  padding: 10px;
-  opacity: 1;
-  
-}
-
-.glass-effect p {
-  margin: 0;
-  font-size: 1rem;
-  font-weight: 500;
+  background-color: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-top: 1px solid rgba(255, 255, 255, 0.4);
 }

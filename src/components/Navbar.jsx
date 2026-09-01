@@ -66,11 +66,22 @@ export default function Navbar({ activePage, setActivePage, colorPalette, locati
       mega: true,
       sections: [
         {
-          title: t('nav.categories'),
+          title: t('nav.categories', { defaultValue: 'Ürün Grupları' }),
           links: [
-            { label: t('nav.slides'), desc: '', page: 'products', to: '/products' },
-            { label: t('nav.splash_tower'), desc: '', page: 'splash-tower', to: '/splash-tower' },
-            { label: t('nav.splash_zone'), desc: '', page: 'splash-zone', to: '/splash-zone' },
+            { label: t('common.all', { defaultValue: 'Tüm Ürünler' }), desc: '', page: 'products', to: '/products' },
+            { label: t('products.tower.title', { defaultValue: 'Splash Tower' }), desc: '', page: 'splash-tower', to: '/splash-tower' },
+            { label: t('products.zone.title', { defaultValue: 'Splash Zone' }), desc: '', page: 'splash-zone', to: '/splash-zone' },
+            { label: t('nav.arge') + ' ' + t('footer.products'), desc: '', page: 'products', to: '/products?category=Ar-Ge Ürünleri' },
+          ],
+        },
+        {
+          title: t('nav.slides', { defaultValue: 'Su Kaydırakları' }),
+          links: [
+            { label: t('products.categories.family_slides', { defaultValue: 'Family Slides' }), desc: '', page: 'products', to: '/products?category=Family Slides' },
+            { label: t('products.categories.fast_slide', { defaultValue: 'Fast Slide' }), desc: '', page: 'products', to: '/products?category=Fast Slide' },
+            { label: t('products.categories.jumbo_slides', { defaultValue: 'Jumbo Slides' }), desc: '', page: 'products', to: '/products?category=Jumbo Slides' },
+            { label: t('products.categories.racer_slides', { defaultValue: 'Racer Slides' }), desc: '', page: 'products', to: '/products?category=Racer Slides' },
+            { label: t('products.categories.classic_slides', { defaultValue: 'Classic Slides' }), desc: '', page: 'products', to: '/products?category=Classic Slides' },
           ],
         },
       ],

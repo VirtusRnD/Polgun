@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
+import FlipbookModal from '../components/FlipbookModal'
 
 const PUBLICATIONS_DATA = [
   {
@@ -15,7 +16,7 @@ const PUBLICATIONS_DATA = [
     identifierKey: 'e_issn',
     identifierVal: '',
     authors: 'Kübra Tuna',
-    sourceUrl: 'https://www.rdconf.org',
+    sourceUrl: '/documents/makale/1.pdf',
     buttonType: 'view_proceedings'
   },
   {
@@ -31,7 +32,7 @@ const PUBLICATIONS_DATA = [
     identifierKey: 'online_issn',
     identifierVal: '2822-2296',
     authors: 'Nazmi Türkhan, Kübra Tuna, Hüseyin Arıkan, Yusuf Uzun',
-    sourceUrl: 'https://www.researchgate.net',
+    sourceUrl: 'https://scholar.google.com/scholar?hl=tr&as_sdt=0%2C5&q=Mechanical+and+Environmental+Comparison+of+Natural+Fibers+and+Glass+Fiber+in+the+L-RTM+Method&btnG=',
     buttonType: 'inspect'
   },
   {
@@ -47,8 +48,8 @@ const PUBLICATIONS_DATA = [
     identifierKey: 'isbn',
     identifierVal: '978-625-6959-40-8',
     authors: 'Yusuf Uzun, Hüseyin Arıkan, Nazmi Türkhan, Dila Yaz',
-    sourceUrl: 'https://www.isres.org',
-    buttonType: 'open_doc'
+    sourceUrl: 'https://scholar.google.com/scholar?hl=tr&as_sdt=0%2C5&q=R%26D+Studies+in+the+Water+Slides+Industry&btnG=',
+    buttonType: 'open_doc',
   },
   {
     id: 10,
@@ -63,7 +64,7 @@ const PUBLICATIONS_DATA = [
     identifierKey: 'issn',
     identifierVal: '2980-020X',
     authors: 'Nazmi Türkhan, Dila Yaz, Hüseyin Arıkan, Yusuf Uzun',
-    sourceUrl: 'https://www.researchgate.net',
+    sourceUrl: 'https://scholar.google.com/scholar?hl=tr&as_sdt=0%2C5&q=Su+Parklar%C4%B1nda+Yenilik%C3%A7i+Temal%C4%B1+Kayd%C4%B1rak+Tasar%C4%B1m%C4%B1%3A+Savanna&btnG=',
     buttonType: 'inspect'
   },
   {
@@ -79,7 +80,7 @@ const PUBLICATIONS_DATA = [
     identifierKey: 'isbn',
     identifierVal: '978-625-6959-42-2',
     authors: 'Yusuf Uzun, Hüseyin Arıkan, Nazmi Türkhan, Dila Yaz',
-    sourceUrl: 'https://www.isres.org',
+    sourceUrl: '/documents/makale/3.pdf',
     buttonType: 'open_doc'
   },
   {
@@ -111,7 +112,7 @@ const PUBLICATIONS_DATA = [
     identifierKey: 'e_issn',
     identifierVal: '2587-1110',
     authors: 'Yusuf Uzun, Mehmet Kayrıcı, Nazmi Türkhan, Dila Yaz',
-    sourceUrl: 'https://www.researchgate.net',
+    sourceUrl: 'https://dergipark.org.tr/en/pub/ems/article/1430128',
     buttonType: 'inspect'
   },
   {
@@ -159,7 +160,7 @@ const PUBLICATIONS_DATA = [
     identifierKey: 'e_isbn',
     identifierVal: '978-625-69690-478-0',
     authors: 'Nazmi Türkhan, Yusuf Uzun, Mehmet Kayrıcı',
-    sourceUrl: 'https://www.researchgate.net',
+    sourceUrl: '/documents/makale/4.pdf',
     buttonType: 'view_proceedings'
   },
   {
@@ -175,7 +176,7 @@ const PUBLICATIONS_DATA = [
     identifierKey: 'e_isbn',
     identifierVal: '978-625-69690-478-0',
     authors: 'Nazmi Türkhan, Yusuf Uzun, Mehmet Kayrıcı',
-    sourceUrl: 'https://www.libraryturk.com', // Libraryturk source
+    sourceUrl: '/documents/makale/2.pdf',
     buttonType: 'view_proceedings'
   },
   {
@@ -191,7 +192,7 @@ const PUBLICATIONS_DATA = [
     identifierKey: 'e_isbn',
     identifierVal: '978-625-69690-478-0',
     authors: 'Nazmi Türkhan, Yusuf Uzun, Hüseyin Arıkan',
-    sourceUrl: 'https://www.researchgate.net',
+    sourceUrl: '/documents/makale/5.pdf',
     buttonType: 'view_proceedings'
   },
   {
@@ -207,7 +208,7 @@ const PUBLICATIONS_DATA = [
     identifierKey: '',
     identifierVal: '',
     authors: 'Jale Kahvecioğlu, Cafer Topaloğlu',
-    sourceUrl: 'https://dergipark.org.tr/tr/pub/sita/issue/39832',
+    sourceUrl: 'https://dergipark.org.tr/en/download/article-file/601581',
     buttonType: 'inspect'
   }
 ]
@@ -219,6 +220,7 @@ export default function PublicationsPage() {
   const [filterScope, setFilterScope] = useState('all') // 'all' | 'national' | 'international'
   const [filterType, setFilterType] = useState('all') // 'all' | 'article' | 'proceedings' | 'book_chapter'
   const [filterYear, setFilterYear] = useState('Tümü')
+  const [selectedPdf, setSelectedPdf] = useState(null)
 
   useEffect(() => {
     window.scrollTo(0, 0)
@@ -256,9 +258,9 @@ export default function PublicationsPage() {
   return (
     <main className="pt-20" style={{ backgroundColor: 'var(--th-bg)' }}>
       {/* ── Page Hero ── */}
-      <section className="py-28" style={{ backgroundColor: 'var(--th-primary)' }}>
-        <div className="max-w-7xl mx-auto px-6 max-w-[var(--layout-max)] lg:px-12">
-          <div className="grid lg:grid-cols-2 gap-16 items-end">
+      <section className="relative py-20 lg:py-24 min-h-[320px] lg:min-h-[360px] flex items-center" style={{ backgroundColor: 'var(--th-primary)' }}>
+        <div className="w-full max-w-7xl mx-auto px-6 max-w-[var(--layout-max)] lg:px-12">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-end">
             <div>
               <p className="text-xs font-bold tracking-[0.3em] uppercase mb-4" style={{ color: 'var(--th-text)' }}>
                 {t('nav.arge')} · {t('nav.publications', { defaultValue: 'Akademik Yayınlar' })}

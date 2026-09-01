@@ -62,25 +62,25 @@ export default function KnowledgeCenterDetailPage() {
   return (
     <main className="pt-20 min-h-screen" style={{ backgroundColor: 'var(--th-bg)' }}>
       {/* ── Page Hero ── */}
-      <section className="py-20 border-b" style={{ borderColor: 'color-mix(in srgb, var(--th-border) 10%, transparent)' }}>
-        <div className="max-w-7xl mx-auto px-6 max-w-[var(--layout-max)] lg:px-12">
+      <section className="relative py-20 lg:py-24 min-h-[320px] lg:min-h-[360px] flex items-center" style={{ backgroundColor: 'var(--th-primary)' }}>
+        <div className="w-full max-w-7xl mx-auto px-6 max-w-[var(--layout-max)] lg:px-12">
           {/* Breadcrumbs */}
-          <nav className="flex items-center gap-2 text-xs font-bold mb-6" style={{ color: 'var(--th-text-muted)' }}>
-            <Link to="/bilgi-merkezi" className="hover:text-[var(--th-primary)] transition-colors">
+          <nav className="flex items-center gap-2 text-xs font-bold mb-4 text-white/70">
+            <Link to="/bilgi-merkezi" className="hover:text-white transition-colors">
               {t('nav.knowledge_center', { defaultValue: 'Bilgi Merkezi' })}
             </Link>
             <span>/</span>
-            <span style={{ color: 'var(--th-text)' }}>{blog.title}</span>
+            <span className="text-white truncate max-w-xs">{blog.title}</span>
           </nav>
 
-          <div className="max-w-4xl space-y-6">
+          <div className="max-w-4xl space-y-4">
             {blog.focusKeyword && (
-              <span className="inline-block text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded bg-neutral-100 dark:bg-neutral-800 text-neutral-600 dark:text-neutral-300">
+              <span className="inline-block text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded bg-white/20 text-white backdrop-blur-sm">
                 {blog.focusKeyword}
               </span>
             )}
             {/* H1 Heading */}
-            <h1 className="text-4xl lg:text-5xl font-black leading-tight" style={{ color: 'var(--th-text)' }}>
+            <h1 className="text-4xl lg:text-5xl font-black leading-tight text-white">
               {blog.title}
             </h1>
           </div>

@@ -28,25 +28,28 @@ export default function FactoriesPage({ setActivePage }) {
   }, [])
 
   return (
-    <main style={{ backgroundColor: 'var(--th-bg)' }} className="min-h-screen pt-32 pb-24">
-      {/* Hero Section */}
-      <section className="container mx-auto px-6 xl:px-0 max-w-7xl mb-16">
-        <h1 
-          className="text-4xl md:text-5xl lg:text-6xl font-black mb-6"
-          style={{ color: 'var(--th-primary-darker)' }}
-        >
-          {t('factories.title')}
-        </h1>
-        <p 
-          className="text-lg md:text-xl max-w-3xl"
-          style={{ color: 'color-mix(in srgb, var(--th-text-muted) 80%, transparent)' }}
-        >
-          {t('factories.desc')}
-        </p>
+    <main className="pt-20" style={{ backgroundColor: 'var(--th-bg)' }}>
+      {/* ── Page Hero ── */}
+      <section className="relative py-20 lg:py-24 min-h-[320px] lg:min-h-[360px] flex items-center" style={{ backgroundColor: 'var(--th-primary)' }}>
+        <div className="w-full max-w-7xl mx-auto px-6 max-w-[var(--layout-max)] lg:px-12">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-end">
+            <div>
+              <p className="text-xs font-bold tracking-[0.3em] uppercase mb-4" style={{ color: 'var(--th-text)' }}>
+                {t('nav.about')} · {t('nav.factories', { defaultValue: 'Fabrikalarımız' })}
+              </p>
+              <h1 className="text-5xl lg:text-6xl font-black text-white leading-[1.02]">
+                {t('factories.title')}
+              </h1>
+            </div>
+            <p className="text-white/70 text-lg leading-relaxed">
+              {t('factories.desc')}
+            </p>
+          </div>
+        </div>
       </section>
 
       {/* Factories Grid */}
-      <section className="container mx-auto px-6 xl:px-0 max-w-7xl">
+      <section className="container mx-auto px-6 max-w-7xl py-20 lg:py-28">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {FACTORIES.map((factory) => (
             <div 
