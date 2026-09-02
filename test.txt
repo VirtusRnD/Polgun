@@ -1,0 +1,10 @@
+1.	Entegre Depo ve Malzeme Yönetimi 
+2.	CNC Model ve Kalıp Hazırlama 
+3.	CNC Elyaf Kesim Teknolojisi 
+4.	Kompozit Üretim ve Yüzey Uygulamaları 
+5.	Çelik İşleme ve Kesim Teknolojileri 
+6.	Çelik Konstrüksiyon ve Kaynaklı İmalat 
+7.	Mekanik İşleme ve Parça Üretimi 
+8.	Boya ve Koruyucu Kaplama Uygulamaları 
+9.	Kalite Kontrol ve Ürün Hazırlama 
+10.	Paketleme ve Sevkiyat 
