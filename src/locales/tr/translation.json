@@ -22,7 +22,8 @@
     "images": "Görsel",
     "view": "İncele",
     "turkey": "Türkiye",
-    "spain": "İspanya"
+    "spain": "İspanya",
+    "not_found": "İçerik Bulunamadı"
   },
   "nav": {
     "services": "Hizmetlerimiz",
@@ -47,12 +48,21 @@
     "knowledge_center": "Bilgi Merkezi",
     "arge": "Ar-Ge",
     "arge_center": "Ar-Ge Merkezi",
-    "fikri_sinai_haklar": "Fikrî & Sınai Haklar",
+    "fikri_sinai_haklar": "Fikri ve Sınai Mülkiyet",
     "utility_models": "Faydalı Modeller",
     "designs": "Endüstriyel Tasarımlar",
-    "publications": "Akademik Yayınlar",
+    "publications": "Bilimsel Yayınlar",
     "patents": "Patentler",
-    "career": "Kariyer"
+    "career": "Kariyer",
+    "brands": "Markalarımız",
+    "renovation": "Modernizasyon & Yenileme",
+    "all_products": "Tüm Ürünler",
+    "contact": "İletişim",
+    "fast_contact": "Hızlı İletişim",
+    "portal": "Müşteri Portalı",
+    "production": "Üretim & Montaj",
+    "quality_mgmt": "Kalite Yönetimi",
+    "quote_btn": "Teklif Al"
   },
   "footer": {
     "products_title": "ÜRÜNLER",
@@ -60,20 +70,20 @@
     "projects_title": "PROJELER",
     "corporate_title": "KURUMSAL",
     "quality_title": "KALİTE & GÜVEN",
-    "brand_desc": "Su kaydırakları ve su parkı sistemlerinde dünya standartlarında mühendislik, tasarım ve entegre üretim.",
+    "brand_desc": "Dünya standartlarında su kaydırakları ve su parkı çözümleri.",
     "quality_mgmt": "Kalite Yönetimi",
     "sustainability": "Sürdürülebilirlik",
-    "newsletter_title": "E-BÜLTEN",
-    "newsletter_desc": "Yenilikler, projeler ve etkinliklerden haberdar olmak için abone olun.",
-    "newsletter_placeholder": "E-posta adresiniz",
+    "newsletter_title": "E-Bültenimize Abone Olun",
+    "newsletter_desc": "Sektördeki yenilikler, projelerimiz ve en son gelişmelerden ilk siz haberdar olun.",
+    "newsletter_placeholder": "E-posta adresinizi giriniz...",
     "newsletter_btn": "ABONE OL",
-    "newsletter_success": "Aboneliğiniz alındı! Teşekkür ederiz.",
+    "newsletter_success": "Aboneliğiniz başarıyla kaydedildi! Teşekkür ederiz.",
     "all_rights_reserved": "Tüm hakları saklıdır.",
     "disclosure": "Aydınlatma Metni",
     "cookie_policy": "Çerez Politikası",
     "terms": "Kullanım Koşulları",
-    "ethics": "Etik İlkeler",
-    "info_security": "Bilgi Güvenliği",
+    "ethics": "Etik İlkelerimiz",
+    "info_security": "Bilgi Güvenliği Politikası",
     "products": "Ürünler",
     "corporate": "Kurumsal",
     "support": "Destek",
@@ -81,7 +91,12 @@
     "spare_parts": "Yedek Parça",
     "maintenance_services": "Bakım Hizmetleri",
     "copyright": "© 2026 Polgün Waterparks. Tüm hakları saklıdır.",
-    "kvkk": "KVKK"
+    "kvkk": "KVKK",
+    "kvkk_policy": "KVKK Aydınlatma Metni",
+    "privacy": "Gizlilik Politikası",
+    "projects": "Projeler",
+    "quality": "Kalite & Güven",
+    "services": "Hizmetler"
   },
   "home": {
     "hero_title": "Bir su parkından daha fazlasını tasarlıyoruz.",
@@ -122,7 +137,38 @@
       "grp": "GRP Üretim",
       "design3d": "3D Tasarım",
       "turnkey": "Anahtar Teslim"
-    }
+    },
+    "cta_btn": "预约专家咨询",
+    "feature_1_desc": "根据客户场地特点与游客体验量身打造独具吸引力的主题景观。",
+    "feature_1_title": "独特的主题化定制",
+    "feature_2_desc": "双面光滑的高品质玻璃钢滑道，确保极致耐磨与持久光泽度。",
+    "feature_2_title": "先进 RTM 闭模成型",
+    "feature_3_desc": "严格遵循 EN 1069 及 ASTM 国际顶级安全与工程规范。",
+    "feature_3_title": "严谨的国际安全认证",
+    "feature_4_desc": "提供从项目可行性研究、工程制造到现场组装与定期保养的全方位支持。",
+    "feature_4_title": "全生命周期一站式服务",
+    "featured_projects_desc": "探索我们在世界各地奢华度假村、水上乐园及商业中心打造的经典之作。",
+    "featured_projects_tag": "标杆工程",
+    "featured_projects_title": "全球代表项目",
+    "features_subtitle": "从设计蓝图到卓越交付的品质保证",
+    "features_title": "为何选择 Polgün？",
+    "hero_badge": "全球领先的水上乐园制造商",
+    "hero_cta_primary": "探索产品系列",
+    "hero_cta_secondary": "查看经典项目",
+    "hero_title_1": "打造无限激情的",
+    "hero_title_2": "水上奇迹",
+    "stats": {
+      "capacity": "100,000 m²",
+      "capacity_label": "综合生产基地",
+      "countries": "70+",
+      "countries_label": "出口国家",
+      "experience": "40+",
+      "experience_label": "年行业积淀",
+      "projects": "3000+",
+      "projects_label": "交付项目"
+    },
+    "testimonials_tag": "合作伙伴评价",
+    "testimonials_title": "来自全球业主的信赖"
   },
   "about": {
     "title": "Hakkımızda",
@@ -158,44 +204,64 @@
     "btn_projects": "Projelerimizi İnceleyin",
     "production_sections": {
       "entegre_depo": {
-        "title": "Entegre Depo ve Malzeme Yönetimi",
-        "desc": "Polgün, üretimde kullanılan hammadde, yardımcı malzeme ve teknik ekipmanların tedarik, depolama ve üretime aktarım süreçlerini kendi operasyon yapısı içerisinde yönetir. Düzenli stok ve malzeme yönetimi, farklı üretim birimlerinin ihtiyaç duyduğu girdilere hızlı ve kontrollü şekilde erişmesini sağlar. Üretim, depo ve tedarik süreçlerinin koordineli yürütülmesi, üretim sürekliliğini desteklerken malzeme takibinin ve operasyonel kontrolün güçlenmesine katkı sağlar."
+        "title": "Entegre Hammadde & Lojistik Deposu",
+        "desc": "Üretim için gerekli tüm hammadde ve bileşenlerin standartlara uygun depolandığı alan."
       },
       "model_kalıp": {
-        "title": "CNC Model ve Kalıp Hazırlama",
-        "desc": "Polgün, ürün geliştirme ve üretim süreçlerini destekleyen 5 eksen CNC model ve kalıp üretim altyapısı ile özgün ve kompleks geometrileri yüksek hassasiyetle üretime aktarır. Dijital tasarımdan model ve kalıp üretimine kadar tüm süreçlerin kendi bünyemizde yönetilmesi; yüksek yüzey kalitesi, ölçü hassasiyeti ve üretimde tekrarlanabilirlik sağlar. CNC teknolojimiz sayesinde standart ürünlerin yanı sıra projeye özel tasarımlar ve yeni nesil kaydırak geometrileri de hızlı ve kontrollü bir şekilde üretime hazırlanır."
+        "title": "Model ve Kalıphane",
+        "desc": "Yüksek hassasiyetli 5 eksenli CNC teknolojileri ile su kaydırağı kalıplarının üretildiği merkez."
       },
       "elyaf": {
-        "title": "CNC Elyaf Kesim Teknolojisi",
-        "desc": "Polgün, kompozit üretim süreçlerinde kullanılan cam elyafı ve takviye malzemelerini CNC kontrollü otomatik kesim sistemleri ile hassas ölçülerde hazırlar. Dijital kesim verilerine göre çalışan sistem sayesinde farklı ürün geometrilerine uygun parçalar hızlı, tekrarlanabilir ve kontrollü şekilde kesilir. Bu teknoloji; malzeme firesinin azaltılmasına, kesim hassasiyetinin artırılmasına ve üretim hazırlık sürelerinin kısaltılmasına katkı sağlar. Elyaf kesim ve hazırlama sürecinin Polgün bünyesinde yürütülmesi, kompozit üretimde kalite ve proses kontrolünün sürekliliğini destekler."
+        "title": "Cam Elyaf & Takviye Hazırlık",
+        "desc": "Kompozit üretimi için gerekli özel cam elyaf dokumalarının hassas biçimde kesilip hazırlandığı bölüm."
       },
       "kompozit": {
-        "title": "Kompozit Üretim ve Yüzey Uygulamaları",
-        "desc": "Polgün, su kaydırağı ve su parkı ürünlerinde kullanılan kompozit parçaların üretimini RTM, L-RTM, el yatırma ve püskürtme gibi farklı üretim yöntemleri ile kendi bünyesinde gerçekleştirir. Ürün geometrisine ve performans gereksinimlerine uygun reçine, takviye malzemesi ve katman yapıları kullanılarak dayanıklı ve tekrarlanabilir üretim sağlanır. Üretim sürecinin devamında uygulanan jelkot, yüzey düzeltme, renklendirme, parlatma ve son kat işlemleri ile ürünlerin yüzey kalitesi ve görsel bütünlüğü tamamlanır. Kompozit üretimden yüzey uygulamalarına kadar tüm aşamaların Polgün bünyesinde yürütülmesi, ürün kalitesinin ve proses kontrolünün her aşamada korunmasını sağlar."
+        "title": "Kompozit Üretim & RTM Teknolojisi",
+        "desc": "Çift taraflı pürüzsüz yüzey sağlayan RTM ve L-RTM teknolojileri ile kaydırak bileşenlerinin üretimi."
       },
       "çelik_işleme": {
-        "title": "Çelik İşleme ve Kesim Teknolojileri",
-        "desc": "Polgün, çelik konstrüksiyon üretiminde yüksek hassasiyetli kesim ve işleme teknolojilerini kullanarak tasarımları üretime doğru ve kontrollü şekilde aktarır. CNC boru ve profil kesim sistemleri sayesinde farklı çap, kesit ve geometrilerdeki parçalar yüksek ölçü hassasiyetiyle hazırlanır. Dijital tasarım verilerinin doğrudan üretim sürecine aktarılması; karmaşık kaydırak geometrilerine uyumlu taşıyıcı sistemlerin daha hızlı, tekrarlanabilir ve üretilebilir şekilde hazırlanmasını sağlar. Kesimden kaynak ve montaj hazırlığına kadar çelik imalat süreçlerinin Polgün bünyesinde yürütülmesi, proje genelinde kalite ve üretim kontrolünü güçlendirir."
+        "title": "Çelik İşleme ve Kaynak",
+        "desc": "EN 1090 ve ISO 3834-2 sertifikalı robotik ve manuel kaynak yöntemleriyle çelik yapı elemanlarının imalatı."
       },
       "çelik_konstrüksiyon": {
-        "title": "Çelik Konstrüksiyon ve Kaynaklı İmalat",
-        "desc": "Polgün, su kaydırakları ve su parkı sistemlerinde kullanılan çelik konstrüksiyonların üretimini kendi bünyesinde gerçekleştirir. CNC teknolojileriyle hazırlanan boru, profil ve çelik parçalar, projeye özel geometrilere uygun olarak hassas kaynak ve montaj süreçleriyle bir araya getirilir. Kesimden kaynaklı imalata kadar tüm aşamaların entegre şekilde yürütülmesi; taşıyıcı sistemlerde ölçü hassasiyeti, üretim kontrolü ve projeye özel esneklik sağlar. Böylece farklı kaydırak geometrilerine uyumlu, dayanıklı ve kontrollü çelik konstrüksiyon çözümleri üretilir."
+        "title": "Çelik Konstrüksiyon & Kule İmalatı",
+        "desc": "Taşıyıcı çelik kule ve platform sistemlerinin mühendislik hesaplarına uygun olarak üretildiği tesis."
       },
       "mekanik": {
-        "title": "Mekanik İşleme ve Parça Üretimi",
-        "desc": "Polgün, su kaydırağı sistemleri ve çelik konstrüksiyonlarda kullanılan özel bağlantı elemanları, flanşlar ve projeye özgü mekanik parçaların üretimini kendi bünyesinde gerçekleştirir. Parçalar, mühendislik verilerine uygun olarak hassas ölçülerde hazırlanarak montaj süreçleriyle tam uyumlu hale getirilir.Mekanik işleme kabiliyetimiz; ölçü hassasiyeti, üretim tekrarlanabilirliği ve hızlı proje adaptasyonu sağlarken, standart dışı geometrilere ve projeye özel teknik ihtiyaçlara esnek çözümler sunar. Tasarımdan imalata kadar sürecin Polgün bünyesinde yönetilmesi, parça kalitesi ve üretim kontrolünün her aşamada korunmasını sağlar."
+        "title": "Mekanik & Otomasyon Montaj",
+        "desc": "Su pompaları, vana sistemleri, sensörler ve kontrol panolarının montaj ve test alanı."
       },
       "boya": {
-        "title": "Boya ve Koruyucu Kaplama Uygulamaları",
-        "desc": "Polgün, çelik konstrüksiyon ve metal parçaların kullanım koşullarına uygun şekilde yüzey hazırlığı, boya ve koruyucu kaplama işlemlerini kendi bünyesinde gerçekleştirir. Uygulanan sistemler, metal yüzeylerin korozyon ve çevresel etkilere karşı korunmasını desteklerken ürünlerin estetik bütünlüğünü de tamamlar. Kontrollü yüzey hazırlığı ve kaplama süreçleri sayesinde farklı iklim ve proje koşullarına uygun, dayanıklı, uzun ömürlü ve yüksek yüzey kalitesine sahip çözümler elde edilir."
+        "title": "Yüzey İşlem & Boya Tesisi",
+        "desc": "Korozyona dayanıklı sıcak daldırma galvaniz ve elektrostatik toz boya uygulama hattı."
       },
       "kalite": {
-        "title": "Kalite Kontrol ve Ürün Hazırlama",
-        "desc": "Polgün’de üretimi tamamlanan kompozit parçalar, yüzey kalitesi ve ürün bütünlüğü açısından kontrol edilerek bir sonraki aşamaya hazırlanır. Ürün yüzeylerinin üretim, taşıma ve montaj süreçlerinde korunmasına yönelik uygulamalar kontrollü şekilde gerçekleştirilir. Yüzey kontrolü, koruyucu uygulamalar ve sevkiyata hazırlık süreçlerinin kendi bünyemizde yürütülmesi, ürünlerin üretim tesisinden proje sahasına kadar kalitesinin korunmasına katkı sağlar."
+        "title": "Kalite Kontrol & Laboratuvar",
+        "desc": "Tüm parçaların uluslararası güvenlik ve mukavemet standartlarına göre test edildiği kontrol merkezi."
       },
       "paketleme": {
         "title": "Paketleme ve Sevkiyat",
-        "desc": "Polgün, üretimi ve kalite kontrolleri tamamlanan ürünleri proje sahasına güvenli şekilde ulaştırmak için ürün tipine ve sevkiyat koşullarına uygun paketleme ve yükleme süreçleri uygular. Kompozit parçalar, çelik konstrüksiyonlar ve proje ekipmanları taşıma sırasında korunacak şekilde hazırlanarak sevkiyata alınır. Planlı paketleme, yükleme ve lojistik koordinasyonu sayesinde ürünlerin üretim tesisinden proje sahasına kadar kontrollü ve güvenli şekilde taşınması sağlanır."
+        "desc": "Ürünlerin global lojistik kurallarına uygun biçimde güvenle ambalajlanıp sevk edildiği lojistik alanı."
+      },
+      "cnc_mold": {
+        "title": "Model ve Kalıphane",
+        "desc": "Yüksek hassasiyetli 5 eksenli CNC teknolojileri ile su kaydırağı kalıplarının üretildiği merkez."
+      },
+      "steel": {
+        "title": "Çelik Konstrüksiyon & Kule İmalatı",
+        "desc": "Taşıyıcı çelik kule ve platform sistemlerinin mühendislik hesaplarına uygun olarak üretildiği tesis."
+      },
+      "mechanical": {
+        "title": "Mekanik & Otomasyon Montaj",
+        "desc": "Su pompaları, vana sistemleri, sensörler ve kontrol panolarının montaj ve test alanı."
+      },
+      "composite": {
+        "title": "Kompozit Üretim & RTM Teknolojisi",
+        "desc": "Çift taraflı pürüzsüz yüzey sağlayan RTM ve L-RTM teknolojileri ile kaydırak bileşenlerinin üretimi."
+      },
+      "digital": {
+        "title": "Endüstri 4.0 ve Akıllı Üretim",
+        "desc": "Dijital üretim izleme ve ileri kalite güvence altyapısı."
       }
     },
     "factories": {
@@ -212,7 +278,28 @@
         "desc": "Ar-Ge ve inovasyon çalışmalarının yürütüldüğü Marmara Teknopark ofisi. Yeni ürün geliştirme ve teknik analiz merkezi."
       }
     },
-    "story_title": "Geleceği Tasarlıyoruz"
+    "story_title": "Geleceği Tasarlıyoruz",
+    "hero_stat1": "1985",
+    "hero_stat1_label": "创立年份",
+    "hero_stat2": "70+",
+    "hero_stat2_label": "出口国家与地区",
+    "hero_stat3": "3000+",
+    "hero_stat3_label": "全球竣工项目",
+    "hero_stat4": "100,000 m²",
+    "hero_stat4_label": "综合生产面积",
+    "story_desc1": "1985 年创立于土耳其穆拉，Polgün 从高性能复合材料制造起步，逐步成长为享誉全球的水上乐园设计与建造专家。",
+    "story_desc2": "我们在水动力学仿真、游客安全保障及绿色环保生产方面精益求精，致力于为全球家庭带来安全与欢乐。",
+    "tag": "关于 Polgün",
+    "value1_desc": "坚守全球最严苛的安全标准（EN 1069, ASTM, ISO）。",
+    "value1_title": "安全第一",
+    "value2_desc": "持续研发颠覆性的滑梯几何构型与沉浸式声光电游乐系统。",
+    "value2_title": "科技与创新",
+    "value3_desc": "采用国际顶级原料与尖端 RTM 制造工艺，确保极长使用寿命。",
+    "value3_title": "匠心品质",
+    "value4_desc": "提供从概念设计到终身维护的全程贴心陪伴。",
+    "value4_title": "客户至上",
+    "values_desc": "指引我们在全球每一个项目中追求卓越的核心准则。",
+    "values_title": "核心价值观"
   },
   "services": {
     "title": "Hizmetlerimiz",
@@ -264,6 +351,26 @@
       "step5": {
         "title": "Montaj ve Devreye Alma",
         "desc": "Kaydıraklar, çelik konstrüksiyonlar ve ilgili ekipmanlar deneyimli saha ekipleri tarafından veya Polgün teknik gözetimi altında monte edilir. Montaj sonrasında bağlantılar, kayma yüzeyleri, su akışı ve sistem fonksiyonları detaylı olarak kontrol edilir."
+      },
+      "design": {
+        "desc": "开展严密的有限元力学计算、水动力学仿真及地下管网综合管线设计。",
+        "title": "工程力学与项目设计"
+      },
+      "engineering": {
+        "desc": "在符合 EN 1069 及 ISO 标准的自动化厂区内完成滑道与钢构制造。",
+        "title": "高精工业制造"
+      },
+      "installation": {
+        "desc": "全球跨国物流协调、集装箱防损装载及目的地清关门到门运输。",
+        "title": "项目统筹与国际物流"
+      },
+      "planning": {
+        "desc": "提供概念规划、3D 渲染表现与符合当地文化特色的定制主题设计。",
+        "title": "产品设计与主题化包装"
+      },
+      "production": {
+        "desc": "资深外派工程师现场指导安装、满载水力测试运行与运营人员专业培训。",
+        "title": "现场安装与调试验收"
       }
     },
     "why": {
@@ -287,7 +394,9 @@
     "process_tag": "Hizmet Sürecimiz",
     "process_title": "Başından sonuna her adımda yanınızdayız",
     "cta_title": "Hayalinizi birlikte inşa edelim",
-    "cta_desc": "Proje büyüklüğü ne olursa olsun, ilk günden son güne kadar yanınızdayız."
+    "cta_desc": "Proje büyüklüğü ne olursa olsun, ilk günden son güne kadar yanınızdayız.",
+    "cta_btn": "联系专家团队",
+    "cta_tag": "开启合作"
   },
   "projects": {
     "title": "Projelerimiz",
@@ -306,7 +415,8 @@
     },
     "filters": {
       "region": "Bölge",
-      "type": "Tür"
+      "type": "Tür",
+      "all": "全部"
     },
     "types": {
       "outdoor": "Açık Alan Su Parkı",
@@ -340,7 +450,12 @@
       "fast_slide": "Hızlı Kaydıraklar",
       "jumbo_slides": "Jumbo Kaydıraklar",
       "racer_slides": "Yarış Kaydırakları",
-      "classic_slides": "Klasik Kaydıraklar"
+      "classic_slides": "Klasik Kaydıraklar",
+      "body_slides": "人体直滑滑梯",
+      "extreme_slides": "极限垂直自由落体滑梯",
+      "kids_slides": "趣味儿童滑梯",
+      "rafting_slides": "激流大漂流滑梯",
+      "tube_slides": "皮筏浮圈滑梯"
     },
     "specs": {
       "tema": "Tema",
@@ -507,7 +622,14 @@
     "custom_project_tag": "Özel Proje",
     "not_found_title": "Aradığınızı bulamadınız mı?",
     "not_found_desc": "Hayalinizdeki su parkını gerçeğe dönüştürmek için geniş ürün yelpazemizi inceleyin ve projenize en uygun çözümleri birlikte tasarlayalım.",
-    "custom_request_btn": "Özel Çözüm Talep Et"
+    "custom_request_btn": "Özel Çözüm Talep Et",
+    "filters": {
+      "all": "所有产品",
+      "capacity": "接待量",
+      "category": "产品类别",
+      "space_type": "场地类型",
+      "thrill_level": "惊险等级"
+    }
   },
   "arge": {
     "title": "Ar-Ge & İnovasyon",
@@ -534,18 +656,25 @@
     "p3": "Ülkemiz için millileştirme ve yerlileştirme çalışmalarını stratejik bir sorumluluk olarak görüyor; dışa bağımlılığı azaltan, hızlı uygulanabilir ve müşteri ihtiyaçlarına doğrudan yanıt veren çözümler geliştiriyoruz. Tasarımdan üretime, analizden saha uygulamasına kadar tüm Ar-Ge süreçlerimizde güvenlik, kalite, uluslararası standartlara uygunluk ve sürdürülebilirlik ilkelerini esas alıyoruz.",
     "p4": "Polgün Ar-Ge Merkezi'nde geliştirilen projeler; su tasarrufu, kullanıcı güvenliği, kapasite artışı, tematik deneyim, modüler üretim, kompozit malzeme teknolojileri ve yeni nesil su kaydırağı geometrileri gibi alanlarda sektöre değer katmaktadır. Navatu, Savana, Monarch Butterfly ve Eclipse gibi yenilikçi ürün projelerimiz; Polgün'ün tasarım, mühendislik ve üretim gücünü uluslararası pazarda temsil eden önemli Ar-Ge çıktıları arasında yer almaktadır.",
     "p5": "Ar-Ge faaliyetlerimiz yalnızca yeni ürün geliştirme ile sınırlı değildir. Aynı zamanda mevcut ürünlerin performansını artırmak, üretim süreçlerini iyileştirmek, çevresel etkileri azaltmak, malzeme verimliliğini yükseltmek ve uluslararası pazarlarda rekabet gücümüzü artırmak amacıyla sürekli geliştirme çalışmaları yürütüyoruz. Akademik iş birlikleri, bilimsel yayınlar, patent ve tasarım tescili süreçleri ile kurumsal bilgi birikimimizi güçlendiriyor; elde edilen çıktıları sürdürülebilir bir inovasyon kültürüne dönüştürüyoruz.",
-    "fikri_sinai_title": "Fikrî ve Sınai Mülkiyet Haklarımız",
-    "fikri_sinai_desc": "Polgün, Ar-Ge çalışmaları sonucunda geliştirilen yenilikçi ürün, tasarım ve teknolojileri fikrî ve sınai mülkiyet haklarıyla koruma altına almaktadır. Patent, faydalı model, endüstriyel tasarım, marka ve akademik yayın çalışmalarıyla şirketin bilgi birikimi sürdürülebilir ve ticarileştirilebilir bir yapıya dönüştürülmektedir.",
-    "utility_models_title": "Faydalı Modeller",
-    "dag_kizagi": "Dağ Kızağı",
+    "fikri_sinai_title": "Fikri ve Sınai Mülkiyet Haklarımız",
+    "fikri_sinai_desc": "Polgün Ar-Ge Merkezi tarafından geliştirilen yenilikçi teknolojiler ve mühendislik çözümleri, patent ve faydalı model tescilleri ile ulusal ve uluslararası düzeyde koruma altındadır.",
+    "utility_models_title": "Faydalı Modellerimiz",
+    "dag_kizagi": "Dağ Kızağı Taşıyıcı Gövde ve Fren Sistemi",
     "project_code": "Proje Kodu",
-    "work_name": "Hak / Çalışma Adı",
+    "work_name": "Eser Adı",
     "scope": "Kapsam",
     "status": "Durum",
     "app_date": "Başvuru Tarihi",
     "reg_date": "Tescil Tarihi",
     "registered": "Tescilli",
-    "national": "Ulusal"
+    "national": "Ulusal",
+    "brands_tag": "FİKRİ MÜLKİYET",
+    "brands_title": "Markalarımız",
+    "brands_desc": "Polgün’ün ulusal ve uluslararası tescilli marka kayıtları, küresel pazardaki özgün kimliğimizi ve güvenirliğimizi temsil etmektedir.",
+    "international": "Uluslararası",
+    "pending": "Başvuru Aşamasında",
+    "fikri_sinai_tag": "FİKRİ MÜLKİYET",
+    "utility_models_tag": "RESMİ KAYITLAR"
   },
   "career": {
     "title": "Polgün'de Kariyer",
@@ -612,12 +741,36 @@
       "read_approved": "okudum.",
       "cv_consent_label": "Mevcut ilan dışında doğabilecek uygun pozisyonlar için CV bilgilerimin değerlendirilmesine izin veriyorum.",
       "submit_btn": "Başvuruyu Gönder",
-      "security_label": "Kişisel verileriniz KVKK kapsamında güvenli bir şekilde korunmaktadır."
+      "security_label": "Kişisel verileriniz KVKK kapsamında güvenli bir şekilde korunmaktadır.",
+      "cv_invalid": "Lütfen geçerli formatta (PDF, DOCX) ve 10 MB altında bir dosya yükleyiniz.",
+      "kvkk_required": "Lütfen Aday Çalışan Aydınlatma Metnini okuyup onaylayınız.",
+      "cv_required": "Lütfen CV belgenizi yükleyin.",
+      "apply_error": "Başvuru gönderilemedi. Lütfen tekrar deneyiniz.",
+      "general_error": "Bir hata oluştu. Lütfen tekrar deneyin.",
+      "apply_note_prefix": "Pozisyon Başvurusu: "
     },
     "internship_programs": "Staj ve Yeni Mezun Programları",
     "internships_subtitle": "Geleceğin profesyonellerini yetiştiriyoruz.",
     "internships": {
-      "apply_btn": "Staj Başvurusu Yap"
+      "apply_btn": "Staj Başvurusu Yap",
+      "summer": {
+        "title": "Yaz Stajı Programı",
+        "desc": "Üniversite öğrencileri için yaz dönemi staj fırsatları."
+      },
+      "long": {
+        "title": "Uzun Dönem Staj",
+        "desc": "Akademik yıl boyunca uzun dönem staj imkânı."
+      },
+      "graduate": {
+        "title": "Yeni Mezun Programı",
+        "desc": "Yeni mezunlar için gelişim ve kariyer programı."
+      },
+      "technical": {
+        "title": "Teknik Okul Stajı",
+        "desc": "Meslek lisesi ve teknik okul öğrencileri için staj imkânı."
+      },
+      "apply_note_prefix": "Başvuru Notu: ",
+      "general_note": "Sayın Yetkili,\n\nStaj programı / Yeni mezun gelişim programı hakkında başvuruda bulunmak istiyorum."
     },
     "testimonials_title": "Çalışanlarımız Anlatıyor",
     "testimonials_subtitle": "Polgün'de çalışmak nasıl bir deneyim? Onlardan dinleyin.",
@@ -684,7 +837,24 @@
         "title": "Hoş Geldiniz!",
         "desc": "Ekibimize katılımınızla birlikte yolculuğumuz başlar."
       }
-    }
+    },
+    "testimonials": {
+      "selin": {
+        "quote": "Polgün ailesinde inovasyona ve bilimsel araştırmalara verilen değer, kendimi sürekli geliştirmeme olanak tanıyor.",
+        "role": "Ar-Ge Mühendisi"
+      },
+      "mehmet": {
+        "quote": "Üretimden sahaya uzanan projelerde yer almak, kariyerimde büyük bir deneyim kazanmamı sağladı.",
+        "role": "Proje Mühendisi"
+      },
+      "emre": {
+        "quote": "Uluslararası projelerde görev almak ve farklı kültürlerle çalışmak, en keyif aldığım yanlardan biri.",
+        "role": "Saha Şefi"
+      }
+    },
+    "internships_title": "实习生与青年人才发展计划",
+    "positions_title": "最新热招职位",
+    "values_title": "为什么选择加入 Polgün？"
   },
   "contact": {
     "title": "İletişim",
@@ -734,7 +904,8 @@
         "kids_parks": "Çocuk Parkları",
         "custom_project": "Özel Proje",
         "maintenance": "Bakım & Servis"
-      }
+      },
+      "submit_error": "发送失败，请稍后重试。"
     },
     "info_title": "İletişim Bilgileri",
     "hours_label": "Çalışma Saatleri",
@@ -769,7 +940,11 @@
         "title": "Muğla Sıtkı Koçman Üniversitesi Ziyareti",
         "desc": "MSKÜ yönetiminin Polgün ziyareti kapsamında; Ar-Ge, üretim ve tasarım faaliyetleri yerinde incelendi. Üniversite-sanayi iş birliği güçlendirildi."
       },
-      "title": "Kurumsal Ziyaretler"
+      "title": "Kurumsal Ziyaretler",
+      "dates": {
+        "2023": "2023 年",
+        "2024": "2024 年"
+      }
     },
     "tesciller": {
       "benelux": "Benelux Tescil Kesinlik Kararı",
@@ -788,7 +963,9 @@
     },
     "patent_title": "Fikri Mülkiyet",
     "cert_title": "Sertifikalar",
-    "cert_subtitle": "Kalite Belgelerimiz"
+    "cert_subtitle": "Kalite Belgelerimiz",
+    "certificates": "荣誉证书",
+    "tag": "品质与荣誉"
   },
   "factories": {
     "title": "Fabrikalarımız",
@@ -805,7 +982,15 @@
       "egypt": "Mısır",
       "hungary": "Macaristan",
       "south_korea": "Güney Kore",
-      "greece": "Yunanistan"
+      "greece": "Yunanistan",
+      "composite": "Kompozit & RTM Üretim Tesisi",
+      "mold": "Model & CNC Kalıphane",
+      "steel": "Çelik Konstrüksiyon Fabrikası"
+    },
+    "areas": {
+      "composite": "45.000 m²",
+      "mold": "15.000 m²",
+      "steel": "25.000 m²"
     }
   },
   "history": {
@@ -828,15 +1013,31 @@
       "2026": "Marmara Teknopark ofisi ile üniversite-sanayi iş birliği güçlendirildi."
     },
     "tags": {
-      "2002": "Kuruluş",
-      "2008": "İlk İhracat",
-      "2015": "Kapasite Artışı",
-      "2019": "İspanya Ofisi",
-      "2021": "Ar-Ge Merkezi",
-      "2025": "Bursa Fabrikası",
-      "2026": "Teknopark Ofisi"
+      "1985": "Kuruluş ve İlk Kompozit Üretim",
+      "2002": "İlk Su Parkı İhracatı",
+      "2008": "Ar-Ge ve Mühendislik Departmanı",
+      "2015": "Yeni Entegre Üretim Tesisi",
+      "2019": "50+ Ülkeye İhracat Ağı",
+      "2021": "T.C. Sanayi Bakanlığı Onaylı Ar-Ge Merkezi",
+      "2025": "Endüstri 4.0 ve Akıllı Park Teknolojileri",
+      "2026": "Küresel Liderlik Vizyonu"
     },
-    "milestones_tag": "Kilometre Taşları"
+    "milestones_tag": "Kilometre Taşları",
+    "desc": "Yıllar içinde üretim gücümüzü, mühendislik yetkinliğimizi ve global proje deneyimimizi sürekli geliştirerek büyüdük. Attığımız her adım; daha güçlü bir üretim altyapısının, yenilikçi ürünlerin ve bugün 70’ten fazla ülkeye ulaşan Polgün yolculuğunun bir parçası oldu.",
+    "stats": {
+      "completed": "Tamamlanan Proje",
+      "countries": "Ülke",
+      "production": "Entegre Üretim",
+      "team": "Çalışan",
+      "experience": "Yıllık Tecrübe",
+      "projects": "Proje"
+    },
+    "cta_btn": "立即咨询",
+    "cta_desc": "让行业先驱的专业经验为您的投资项目保驾护航。",
+    "cta_title": "与我们携手共创辉煌",
+    "intro": "自 1985 年创立至今，在水上游乐产业谱写不断超越的创新篇章。",
+    "milestones_desc": "镌刻在企业辉煌发展史上的重要时刻。",
+    "tag": "发展历程"
   },
   "news": {
     "title": "Haberler & Etkinlikler",
@@ -893,14 +1094,27 @@
         "title": "MSKÜ Kariyer Fuarı",
         "desc": "Polgün Waterparks & Attractions Yönetim Kurulu Başkanı Sayın İbrahim Güngör, Muğla Sıtkı Koçman Üniversitesi’nde düzenlenen Kariyer Fuarı’nda geleceğin profesyonannyaşarıyla bir araya geldi. Genç yeteneklerle sektördeki bilgi birikimini ve tecrübelerini paylaşan İbrahim Güngör, su parkı ve eğlence sektörünün dinamikleri, yenilikçi projelerimiz ve kariyer planlaması üzerine öğrencilerle ilham verici bir sohbet gerçekleştirdi. Sektörümüzün geleceğini şekillendirecek olan gençlerin heyecanı ve vizyonu bizlere bir kez daha büyük bir motivasyon kaynağı oldu. Polgün ailesi olarak, genç yeteneklerin yanında olmaktan ve kariyer yolculuklarında onlara destek vermekten büyük gurur duyuyoruz!"
       }
-    }
+    },
+    "all_news": "全部新闻",
+    "bulletin": "电子期刊",
+    "flipbook_open": "在线阅读期刊画册",
+    "read_more": "阅读全文"
   },
   "team": {
     "title": "Ekibimiz",
     "subtitle": "Polgün Ailesi",
     "desc": "Projelerimize değer katan, alanında uzman yönetim ve teknik kadromuz.",
     "board": "Yönetim Kurulu",
-    "technical_staff": "Teknik Kadro"
+    "technical_staff": "Teknik Kadro",
+    "departments": {
+      "all": "所有部门",
+      "design": "设计与建筑部",
+      "engineering": "工程与研发部",
+      "management": "管理决策层",
+      "production": "生产与质检部",
+      "sales": "全球商务与客户成功部"
+    },
+    "tag": "核心团队"
   },
   "splashtower": {
     "title": "Splash Tower",
@@ -1016,7 +1230,12 @@
       "inspect": "Yayını İncele",
       "view_proceedings": "Bildiriyi Görüntüle",
       "open_doc": "Dokümanı Aç",
-      "details": "Detaylı Bilgi"
+      "details": "Detaylı Bilgi",
+      "authors": "Yazarlar:",
+      "project": "Proje / Konu",
+      "international": "Uluslararası",
+      "national": "Ulusal",
+      "download": "PDF İndir"
     }
   },
   "patentsPage": {
@@ -1040,6 +1259,33 @@
       "status": "Güncel Durum",
       "registered_badge": "Tescilli",
       "pending_badge": "Başvuru Aşamasında"
+    },
+    "filter": {
+      "all": "Tümü"
     }
+  },
+  "flipbook": {
+    "single_page": "Büyük Boyut",
+    "dual_page": "Çift Sayfa",
+    "single_page_title": "Tek Sayfa (Büyük Okuma)",
+    "dual_page_title": "Çift Sayfa (Dergi Görünümü)",
+    "zoom_out": "Küçült (-)",
+    "zoom_reset": "Yakınlaştırmayı Sıfırla (0)",
+    "zoom_in": "Büyüt (+)",
+    "open_pdf": "PDF'i Yeni Sekmede Aç / İndir",
+    "keyboard_hint": "Klavye: ← / →",
+    "zoom_hint": "Yakınlaştır: + / -"
+  },
+  "knowledgeCenter": {
+    "title": "Bilgi Merkezi",
+    "desc": "Polgün Waterparks & Attractions mühendislik, tasarım, üretim teknolojileri ve su parkı yönetimi konusundaki zengin teknik makalelerini keşfedin.",
+    "read_more": "Devamını Oku",
+    "faqs_title": "Sık Sorulan Sorular",
+    "related_title": "İlgili Yazılar"
+  },
+  "factoriesPage": {
+    "desc": "Dünya standartlarında su kaydırakları ve su parkı ekipmanlarının üretildiği modern entegre tesislerimizi keşfedin.",
+    "subtitle": "Modern ve Sürdürülebilir Üretim Tesisleri",
+    "title": "Üretim Tesislerimiz"
   }
 }

@@ -21,7 +21,9 @@
     "images": "Imágenes",
     "view": "Ver",
     "turkey": "Turquía",
-    "spain": "España"
+    "spain": "España",
+    "not_found": "Contenido no encontrado",
+    "all_projects": "Todos los proyectos"
   },
   "nav": {
     "services": "Servicios",
@@ -30,7 +32,7 @@
     "engineering": "Ingeniería",
     "installation": "Instalación y Montaje",
     "maintenance": "Mantenimiento y Reparación",
-    "renovation": "Renovación",
+    "renovation": "Modernización y Renovación",
     "projects": "Proyectos",
     "products": "Productos",
     "categories": "Categorías de Productos",
@@ -45,7 +47,22 @@
     "news": "Noticias y Eventos",
     "newsletter": "Boletines Electrónicos",
     "arge": "I+D",
-    "career": "Empleo"
+    "career": "Empleo",
+    "brands": "Nuestras Marcas",
+    "knowledge_center": "Centro de Conocimiento",
+    "arge_center": "Centro de I+D",
+    "fikri_sinai_haklar": "Propiedad Intelectual",
+    "utility_models": "Modelos de Utilidad",
+    "designs": "Diseños Industriales",
+    "publications": "Publicaciones Científicas",
+    "patents": "Patentes",
+    "all_products": "Todos los Productos",
+    "contact": "Contacto",
+    "fast_contact": "Contacto Rápido",
+    "portal": "Portal de Clientes",
+    "production": "Producción y Montaje",
+    "quality_mgmt": "Gestión de Calidad",
+    "quote_btn": "Solicitar Presupuesto"
   },
   "footer": {
     "products": "Productos",
@@ -58,7 +75,28 @@
     "kvkk": "Protección de Datos",
     "disclosure": "Texto Aclaratorio",
     "cookie_policy": "Política de Cookies",
-    "terms": "Términos de Uso"
+    "terms": "Términos de Uso",
+    "products_title": "PRODUCTOS",
+    "services_title": "SERVICIOS",
+    "projects_title": "PROYECTOS",
+    "corporate_title": "CORPORATIVO",
+    "quality_title": "CALIDAD Y CONFIANZA",
+    "brand_desc": "Toboganes de agua y soluciones de parques acuáticos de clase mundial.",
+    "quality_mgmt": "Gestión de Calidad",
+    "sustainability": "Sostenibilidad",
+    "ethics": "Código de Ética",
+    "info_security": "Política de Seguridad de la Información",
+    "kvkk_policy": "Aviso de Privacidad / RGPD",
+    "privacy": "Política de Privacidad",
+    "all_rights_reserved": "Todos los derechos reservados.",
+    "newsletter_title": "Suscríbase a Nuestro Boletín",
+    "newsletter_desc": "Sea el primero en conocer las innovaciones del sector, nuestros proyectos y las últimas novedades.",
+    "newsletter_placeholder": "Ingrese su correo electrónico...",
+    "newsletter_btn": "SUSCRIBIRSE",
+    "newsletter_success": "¡Su suscripción se ha guardado correctamente! Gracias.",
+    "projects": "Proyectos",
+    "quality": "Calidad y Confianza",
+    "services": "Servicios"
   },
   "home": {
     "hero_title": "Diseñamos más que un parque acuático.",
@@ -99,7 +137,38 @@
       "grp": "Producción GRP",
       "design3d": "Diseño 3D",
       "turnkey": "Llave en Mano"
-    }
+    },
+    "cta_btn": "预约专家咨询",
+    "feature_1_desc": "根据客户场地特点与游客体验量身打造独具吸引力的主题景观。",
+    "feature_1_title": "独特的主题化定制",
+    "feature_2_desc": "双面光滑的高品质玻璃钢滑道，确保极致耐磨与持久光泽度。",
+    "feature_2_title": "先进 RTM 闭模成型",
+    "feature_3_desc": "严格遵循 EN 1069 及 ASTM 国际顶级安全与工程规范。",
+    "feature_3_title": "严谨的国际安全认证",
+    "feature_4_desc": "提供从项目可行性研究、工程制造到现场组装与定期保养的全方位支持。",
+    "feature_4_title": "全生命周期一站式服务",
+    "featured_projects_desc": "探索我们在世界各地奢华度假村、水上乐园及商业中心打造的经典之作。",
+    "featured_projects_tag": "标杆工程",
+    "featured_projects_title": "全球代表项目",
+    "features_subtitle": "从设计蓝图到卓越交付的品质保证",
+    "features_title": "为何选择 Polgün？",
+    "hero_badge": "全球领先的水上乐园制造商",
+    "hero_cta_primary": "探索产品系列",
+    "hero_cta_secondary": "查看经典项目",
+    "hero_title_1": "打造无限激情的",
+    "hero_title_2": "水上奇迹",
+    "stats": {
+      "capacity": "100,000 m²",
+      "capacity_label": "综合生产基地",
+      "countries": "70+",
+      "countries_label": "出口国家",
+      "experience": "40+",
+      "experience_label": "年行业积淀",
+      "projects": "3000+",
+      "projects_label": "交付项目"
+    },
+    "testimonials_tag": "合作伙伴评价",
+    "testimonials_title": "来自全球业主的信赖"
   },
   "about": {
     "title": "Nosotros",
@@ -135,24 +204,64 @@
     "btn_projects": "Ver Proyectos",
     "production_sections": {
       "cnc_mold": {
-        "title": "Modelado CNC y Preparación de Moldes",
-        "desc": "Nuestros procesos de modelado asistido por CNC permiten crear geometrías complejas con alta precisión, garantizando la calidad superficial del composite."
+        "title": "Taller de Modelos y Moldes",
+        "desc": "Fabricación de moldes de alta precisión con tecnología CNC de 5 ejes."
       },
       "steel": {
-        "title": "Procesamiento de Acero y Corte",
-        "desc": "Utilizamos tecnologías de corte CNC y conformado de perfiles de acero para fabricar las estructuras soporte con tolerancias mínimas de montaje."
+        "title": "Estructuras de Acero y Torres",
+        "desc": "Fabricación de torres y plataformas según cálculos de ingeniería certificados."
       },
       "mechanical": {
-        "title": "Mecanizado Mecánico y Componentes",
-        "desc": "Los elementos de unión y piezas mecánicas especiales se fabrican con la precisión requerida por las normas técnicas del proyecto."
+        "title": "Montaje Mecánico y Automatización",
+        "desc": "Área de prueba y montaje de bombas, válvulas, sensores y cuadros de mando PLC."
       },
       "composite": {
-        "title": "Producción de Composite y Acabados",
-        "desc": "La laminación de toboganes y el pintado se realizan bajo estrictos controles para garantizar la resistencia a la intemperie y un excelente brillo a largo plazo."
+        "title": "Producción Compuesta y Tecnología RTM",
+        "desc": "Producción de toboganes con tecnología RTM y L-RTM con acabados lisos en ambas caras."
       },
       "digital": {
-        "title": "Producción Digital y Trazabilidad",
-        "desc": "Los sistemas automatizados aseguran procesos de producción repetibles, controlados y totalmente trazables."
+        "title": "Industria 4.0 y Producción Inteligente",
+        "desc": "Monitoreo digital de la producción y control de calidad avanzado."
+      },
+      "entegre_depo": {
+        "title": "Almacén Integrado de Materias Primas",
+        "desc": "Almacenamiento de materiales y componentes bajo estándares internacionales."
+      },
+      "model_kalıp": {
+        "title": "Taller de Modelos y Moldes",
+        "desc": "Fabricación de moldes de alta precisión con tecnología CNC de 5 ejes."
+      },
+      "elyaf": {
+        "title": "Preparación de Fibra de Vidrio",
+        "desc": "Corte y preparación de tejidos técnicos de fibra de vidrio para compuestos."
+      },
+      "kompozit": {
+        "title": "Producción Compuesta y Tecnología RTM",
+        "desc": "Producción de toboganes con tecnología RTM y L-RTM con acabados lisos en ambas caras."
+      },
+      "çelik_işleme": {
+        "title": "Procesamiento y Soldadura de Acero",
+        "desc": "Fabricación de elementos estructurales con soldadura certificada EN 1090 e ISO 3834-2."
+      },
+      "çelik_konstrüksiyon": {
+        "title": "Estructuras de Acero y Torres",
+        "desc": "Fabricación de torres y plataformas según cálculos de ingeniería certificados."
+      },
+      "mekanik": {
+        "title": "Montaje Mecánico y Automatización",
+        "desc": "Área de prueba y montaje de bombas, válvulas, sensores y cuadros de mando PLC."
+      },
+      "boya": {
+        "title": "Tratamiento de Superficies y Pintura",
+        "desc": "Línea de galvanizado en caliente y pintura electrostática resistente a la corrosión."
+      },
+      "kalite": {
+        "title": "Control de Calidad y Laboratorio",
+        "desc": "Centro de ensayos donde se verifica la seguridad y resistencia de cada componente."
+      },
+      "paketleme": {
+        "title": "Embalaje y Envío Global",
+        "desc": "Embalaje seguro y logística internacional conforme a normas globales."
       }
     },
     "factories": {
@@ -169,7 +278,28 @@
         "desc": "Oficina del Tecnoparque de Mármara donde se realizan estudios de I+D e innovación. Centro de desarrollo de nuevos productos y análisis técnico."
       }
     },
-    "story_title": "Diseñando el Futuro"
+    "story_title": "Diseñando el Futuro",
+    "hero_stat1": "1985",
+    "hero_stat1_label": "创立年份",
+    "hero_stat2": "70+",
+    "hero_stat2_label": "出口国家与地区",
+    "hero_stat3": "3000+",
+    "hero_stat3_label": "全球竣工项目",
+    "hero_stat4": "100,000 m²",
+    "hero_stat4_label": "综合生产面积",
+    "story_desc1": "1985 年创立于土耳其穆拉，Polgün 从高性能复合材料制造起步，逐步成长为享誉全球的水上乐园设计与建造专家。",
+    "story_desc2": "我们在水动力学仿真、游客安全保障及绿色环保生产方面精益求精，致力于为全球家庭带来安全与欢乐。",
+    "tag": "关于 Polgün",
+    "value1_desc": "坚守全球最严苛的安全标准（EN 1069, ASTM, ISO）。",
+    "value1_title": "安全第一",
+    "value2_desc": "持续研发颠覆性的滑梯几何构型与沉浸式声光电游乐系统。",
+    "value2_title": "科技与创新",
+    "value3_desc": "采用国际顶级原料与尖端 RTM 制造工艺，确保极长使用寿命。",
+    "value3_title": "匠心品质",
+    "value4_desc": "提供从概念设计到终身维护的全程贴心陪伴。",
+    "value4_title": "客户至上",
+    "values_desc": "指引我们在全球每一个项目中追求卓越的核心准则。",
+    "values_title": "核心价值观"
   },
   "services": {
     "title": "Servicios",
@@ -221,6 +351,26 @@
       "step5": {
         "title": "Montaje y Puesta en Servicio",
         "desc": "Los toboganes, las construcciones de acero y los equipos relacionados son montados por equipos de campo experimentados o bajo la supervisión técnica de Polgün. Después del montaje, las conexiones, las superficies de deslizamiento, el flujo de agua y las funciones del sistema se controlan en detalle."
+      },
+      "design": {
+        "desc": "开展严密的有限元力学计算、水动力学仿真及地下管网综合管线设计。",
+        "title": "工程力学与项目设计"
+      },
+      "engineering": {
+        "desc": "在符合 EN 1069 及 ISO 标准的自动化厂区内完成滑道与钢构制造。",
+        "title": "高精工业制造"
+      },
+      "installation": {
+        "desc": "全球跨国物流协调、集装箱防损装载及目的地清关门到门运输。",
+        "title": "项目统筹与国际物流"
+      },
+      "planning": {
+        "desc": "提供概念规划、3D 渲染表现与符合当地文化特色的定制主题设计。",
+        "title": "产品设计与主题化包装"
+      },
+      "production": {
+        "desc": "资深外派工程师现场指导安装、满载水力测试运行与运营人员专业培训。",
+        "title": "现场安装与调试验收"
       }
     },
     "why": {
@@ -244,7 +394,9 @@
     "process_tag": "Nuestro Proceso de Servicio",
     "process_title": "Estamos con usted en cada paso del camino, de principio a fin",
     "cta_title": "Construyamos su sueño juntos",
-    "cta_desc": "No importa el tamaño del proyecto, estamos con usted desde el primer día hasta el último."
+    "cta_desc": "No importa el tamaño del proyecto, estamos con usted desde el primer día hasta el último.",
+    "cta_btn": "联系专家团队",
+    "cta_tag": "开启合作"
   },
   "projects": {
     "title": "Nuestros Proyectos",
@@ -263,7 +415,8 @@
     },
     "filters": {
       "region": "Región",
-      "type": "Tipo"
+      "type": "Tipo",
+      "all": "全部"
     },
     "types": {
       "outdoor": "Parque Acuático al Aire Libre",
@@ -297,7 +450,12 @@
       "fast_slide": "Toboganes Rápidos",
       "jumbo_slides": "Toboganes Jumbo",
       "racer_slides": "Toboganes de Carreras",
-      "classic_slides": "Toboganes Clásicos"
+      "classic_slides": "Toboganes Clásicos",
+      "body_slides": "人体直滑滑梯",
+      "extreme_slides": "极限垂直自由落体滑梯",
+      "kids_slides": "趣味儿童滑梯",
+      "rafting_slides": "激流大漂流滑梯",
+      "tube_slides": "皮筏浮圈滑梯"
     },
     "specs": {
       "tema": "Tema",
@@ -464,7 +622,14 @@
     "custom_project_tag": "Proyecto Personalizado",
     "not_found_title": "¿No encontró lo que buscaba?",
     "not_found_desc": "Explore nuestra amplia gama de productos para hacer realidad el parque acuático de sus sueños y diseñemos juntos las mejores soluciones para su proyecto.",
-    "custom_request_btn": "Solicitar Solución Personalizada"
+    "custom_request_btn": "Solicitar Solución Personalizada",
+    "filters": {
+      "all": "所有产品",
+      "capacity": "接待量",
+      "category": "产品类别",
+      "space_type": "场地类型",
+      "thrill_level": "惊险等级"
+    }
   },
   "arge": {
     "title": "I+D e Innovación",
@@ -490,7 +655,26 @@
     "p2": "En nuestro Centro de I+D, gestionamos el diseño de nuevos productos, análisis de ingeniería, prototipado, pruebas, validación, desarrollo de métodos de producción y procesos de propiedad intelectual de manera integral con 30 personal de I+D equivalente a tiempo completo que trabaja como investigadores, técnicos y personal de apoyo.",
     "p3": "Vemos los esfuerzos de nacionalización y localización para nuestro país como una responsabilidad estratégica; desarrollamos soluciones que reducen la dependencia externa, son rápidamente aplicables y responden directamente a las necesidades del cliente. En todos nuestros procesos de I+D, desde el diseño hasta la producción, desde el análisis hasta la aplicación en campo, nos adherimos a los principios de seguridad, calidad, cumplimiento de normas internacionales y sostenibilidad.",
     "p4": "Los proyectos desarrollados en el Centro de I+D de Polgün añaden valor al sector en áreas como el ahorro de agua, la seguridad del usuario, el aumento de capacidad, la experiencia temática, la producción modular, las tecnologías de materiales compuestos y las geometrías de toboganes de agua de próxima generación. Nuestros proyectos de productos innovadores como Navatu, Savana, Monarch Butterfly y Eclipse se encuentran entre los importantes resultados de I+D que representan la fortaleza de diseño, ingeniería y producción de Polgün en el mercado internacional.",
-    "p5": "Nuestras actividades de I+D no se limitan solo al desarrollo de nuevos productos. También llevamos a cabo trabajos de desarrollo continuo para mejorar el rendimiento de los productos existentes, mejorar los procesos de producción, reducir los impactos ambientales, aumentar la eficiencia de los materiales y aumentar nuestra competitividad en los mercados internacionales. Reforzamos nuestra base de conocimiento corporativo a través de colaboraciones académicas, publicaciones científicas, procesos de registro de patentes y diseños; y transformamos los resultados obtenidos en una cultura de innovación sostenible."
+    "p5": "Nuestras actividades de I+D no se limitan solo al desarrollo de nuevos productos. También llevamos a cabo trabajos de desarrollo continuo para mejorar el rendimiento de los productos existentes, mejorar los procesos de producción, reducir los impactos ambientales, aumentar la eficiencia de los materiales y aumentar nuestra competitividad en los mercados internacionales. Reforzamos nuestra base de conocimiento corporativo a través de colaboraciones académicas, publicaciones científicas, procesos de registro de patentes y diseños; y transformamos los resultados obtenidos en una cultura de innovación sostenible.",
+    "brands_tag": "PROPIEDAD INTELECTUAL",
+    "brands_title": "Nuestras Marcas",
+    "brands_desc": "Las marcas registradas nacionales e internacionales de Polgün representan nuestra identidad única y confiabilidad en el mercado global.",
+    "international": "Internacional",
+    "national": "Nacional",
+    "pending": "En proceso de solicitud",
+    "registered": "Registrado",
+    "fikri_sinai_tag": "PROPIEDAD INTELECTUAL",
+    "utility_models_tag": "REGISTROS OFICIALES",
+    "fikri_sinai_title": "Derechos de Propiedad Intelectual e Industrial",
+    "fikri_sinai_desc": "Las tecnologías innovadoras y las soluciones de ingeniería desarrolladas por el Centro de I+D de Polgün están protegidas a nivel nacional e internacional.",
+    "utility_models_title": "Nuestros Modelos de Utilidad",
+    "app_date": "Fecha de Solicitud",
+    "reg_date": "Fecha de Registro",
+    "project_code": "Código de Proyecto",
+    "work_name": "Nombre de la Obra",
+    "scope": "Alcance",
+    "status": "Estado",
+    "dag_kizagi": "Cuerpo Portador y Sistema de Frenos de Montaña Rusa"
   },
   "career": {
     "title": "Empleo en Polgün",
@@ -557,12 +741,36 @@
       "read_approved": "leído y aceptado.",
       "cv_consent_label": "Permito que mi CV sea evaluado para otros puestos adecuados que puedan surgir fuera de la oferta actual.",
       "submit_btn": "Enviar solicitud",
-      "security_label": "Sus datos personales están protegidos de forma segura bajo las regulaciones de protección de datos."
+      "security_label": "Sus datos personales están protegidos de forma segura bajo las regulaciones de protección de datos.",
+      "cv_invalid": "Por favor suba un archivo válido (PDF, DOCX) menor de 10 MB.",
+      "kvkk_required": "Por favor lea y acepte el Aviso de Privacidad para Candidatos.",
+      "cv_required": "Por favor adjunte su CV.",
+      "apply_error": "No se pudo enviar la solicitud. Por favor inténtelo de nuevo.",
+      "general_error": "Ha ocurrido un error. Por favor inténtelo de nuevo.",
+      "apply_note_prefix": "Solicitud de Puesto: "
     },
     "internship_programs": "Programas de Prácticas y Graduados",
     "internships_subtitle": "Formamos a los profesionales del futuro.",
     "internships": {
-      "apply_btn": "Solicitar prácticas"
+      "apply_btn": "Solicitar prácticas",
+      "summer": {
+        "title": "Programa de Prácticas de Verano",
+        "desc": "Oportunidades de prácticas de verano para estudiantes universitarios."
+      },
+      "long": {
+        "title": "Prácticas de Larga Duración",
+        "desc": "Prácticas continuas a lo largo de todo el año académico."
+      },
+      "graduate": {
+        "title": "Programa para Recién Graduados",
+        "desc": "Programa de desarrollo profesional para nuevos titulados."
+      },
+      "technical": {
+        "title": "Prácticas de Escuelas Técnicas",
+        "desc": "Prácticas para estudiantes de formación profesional y técnica."
+      },
+      "apply_note_prefix": "Nota de Solicitud: ",
+      "general_note": "Estimado/a responsable,\n\nMe gustaría solicitar información y presentar mi candidatura para el programa de prácticas."
     },
     "testimonials_title": "Lo que dice nuestro equipo",
     "testimonials_subtitle": "¿Cómo es trabajar en Polgün? Escuche sus historias.",
@@ -629,7 +837,24 @@
         "title": "¡Bienvenido!",
         "desc": "Nuestro viaje comienza con su incorporación a nuestro equipo."
       }
-    }
+    },
+    "testimonials": {
+      "selin": {
+        "quote": "El valor otorgado a la innovación y la investigación en Polgün me permite desarrollarme continuamente.",
+        "role": "Ingeniera de I+D"
+      },
+      "mehmet": {
+        "quote": "Participar en proyectos desde la fabricación hasta el montaje en campo ha sido una gran experiencia para mi carrera.",
+        "role": "Ingeniero de Proyectos"
+      },
+      "emre": {
+        "quote": "Trabajar en proyectos internacionales y colaborar con diversas culturas es una de mis mayores satisfacciones.",
+        "role": "Jefe de Campo"
+      }
+    },
+    "internships_title": "实习生与青年人才发展计划",
+    "positions_title": "最新热招职位",
+    "values_title": "为什么选择加入 Polgün？"
   },
   "contact": {
     "title": "Contacto",
@@ -679,7 +904,8 @@
         "kids_parks": "Parques infantiles",
         "custom_project": "Proyecto personalizado",
         "maintenance": "Mantenimiento y servicio"
-      }
+      },
+      "submit_error": "发送失败，请稍后重试。"
     },
     "info_title": "Información de Contacto",
     "hours_label": "Horario de Trabajo",
@@ -714,7 +940,11 @@
         "title": "Visita de la Universidad Muğla Sıtkı Koçman",
         "desc": "Inspección de las líneas de producción y el centro de I+D para potenciar la colaboración universidad-empresa."
       },
-      "title": "Visitas Corporativas"
+      "title": "Visitas Corporativas",
+      "dates": {
+        "2023": "2023 年",
+        "2024": "2024 年"
+      }
     },
     "tesciller": {
       "benelux": "Decisión Final de Registro Benelux",
@@ -733,7 +963,9 @@
     },
     "patent_title": "Propiedad Intelectual",
     "cert_title": "Certificados",
-    "cert_subtitle": "Nuestros Documentos de Calidad"
+    "cert_subtitle": "Nuestros Documentos de Calidad",
+    "certificates": "荣誉证书",
+    "tag": "品质与荣誉"
   },
   "factories": {
     "title": "Nuestras Fábricas",
@@ -750,7 +982,15 @@
       "egypt": "Egipto",
       "hungary": "Hungría",
       "south_korea": "Corea del Sur",
-      "greece": "Grecia"
+      "greece": "Grecia",
+      "composite": "Planta de Producción de Compuestos y RTM",
+      "mold": "Taller de Modelos y Moldes CNC",
+      "steel": "Fábrica de Estructuras de Acero"
+    },
+    "areas": {
+      "composite": "45.000 m²",
+      "mold": "15.000 m²",
+      "steel": "25.000 m²"
     }
   },
   "history": {
@@ -772,7 +1012,32 @@
       "2025": "Se alcanzó un área de producción total de 120.000 m² con la inversión en la fábrica de Bursa.",
       "2026": "La cooperación universidad-industria se fortaleció con la oficina de Marmara Teknokent."
     },
-    "milestones_tag": "Hitos"
+    "milestones_tag": "Hitos",
+    "desc": "A lo largo de los años, hemos ampliado continuamente nuestra capacidad de fabricación, experiencia en ingeniería y proyectos globales. Cada paso dado ha formado parte de una infraestructura más sólida y de la trayectoria de Polgün, que hoy llega a más de 70 países.",
+    "stats": {
+      "completed": "Proyectos Completados",
+      "countries": "Países",
+      "production": "Producción Integrada",
+      "team": "Empleados",
+      "experience": "Años de Experiencia",
+      "projects": "Proyectos"
+    },
+    "tags": {
+      "1985": "Fundación y primera producción de compuestos",
+      "2002": "Primera exportación de parque acuático",
+      "2008": "Departamento de I+D e ingeniería",
+      "2015": "Nueva planta de producción integrada",
+      "2019": "Red de exportación a más de 50 países",
+      "2021": "Centro de I+D certificado por el Ministerio",
+      "2025": "Industria 4.0 y tecnologías de parques inteligentes",
+      "2026": "Visión de liderazgo global"
+    },
+    "cta_btn": "立即咨询",
+    "cta_desc": "让行业先驱的专业经验为您的投资项目保驾护航。",
+    "cta_title": "与我们携手共创辉煌",
+    "intro": "自 1985 年创立至今，在水上游乐产业谱写不断超越的创新篇章。",
+    "milestones_desc": "镌刻在企业辉煌发展史上的重要时刻。",
+    "tag": "发展历程"
   },
   "news": {
     "title": "Noticias y Eventos",
@@ -829,14 +1094,27 @@
         "title": "Feria de Empleo MSKÜ",
         "desc": "Polgün Waterparks & Attractions, el Presidente de la Junta de Directores, Sr. İbrahim Güngör, se reunió con los profesionales del futuro en la Feria de Empleo organizada en la Universidad Muğla Sıtkı Koçman. Compartiendo su conocimiento y experiencia en el sector con jóvenes talentos, İbrahim Güngör mantuvo una inspiradora conversación con los estudiantes sobre la dinámica del sector de los parques acuáticos y del entretenimiento, nuestros proyectos innovadores y la planificación de carreras. El entusiasmo y la visión de los jóvenes que darán forma al futuro de nuestra industria una vez más se convirtieron en una gran fuente de motivación para nosotros. ¡Como la familia Polgün, nos enorgullece estar al lado de los jóvenes talentos y apoyarlos en sus trayectorias profesionales!"
       }
-    }
+    },
+    "all_news": "全部新闻",
+    "bulletin": "电子期刊",
+    "flipbook_open": "在线阅读期刊画册",
+    "read_more": "阅读全文"
   },
   "team": {
     "title": "Nuestro Equipo",
     "subtitle": "Familia Polgün",
     "desc": "El equipo directivo y los ingenieros especializados que hacen posibles nuestros proyectos.",
     "board": "Junta Directiva",
-    "technical_staff": "Personal Técnico"
+    "technical_staff": "Personal Técnico",
+    "departments": {
+      "all": "所有部门",
+      "design": "设计与建筑部",
+      "engineering": "工程与研发部",
+      "management": "管理决策层",
+      "production": "生产与质检部",
+      "sales": "全球商务与客户成功部"
+    },
+    "tag": "核心团队"
   },
   "splashtower": {
     "title": "Splash Tower",
@@ -897,5 +1175,117 @@
     "europe": "Europa",
     "africa": "África",
     "america": "América"
+  },
+  "flipbook": {
+    "single_page": "Vista Grande",
+    "dual_page": "Doble Página",
+    "single_page_title": "Página Única (Lectura Grande)",
+    "dual_page_title": "Doble Página (Revista)",
+    "zoom_out": "Alejar (-)",
+    "zoom_reset": "Restablecer Zoom (0)",
+    "zoom_in": "Acercar (+)",
+    "open_pdf": "Abrir / Descargar PDF en nueva pestaña",
+    "keyboard_hint": "Teclado: ← / →",
+    "zoom_hint": "Zoom: + / -"
+  },
+  "patentsPage": {
+    "title": "Nuestras Patentes",
+    "desc": "Polgün lidera la industria de parques acuáticos con patentes registradas que resultan de procesos continuos de investigación y desarrollo.",
+    "filters": {
+      "all": "Todos",
+      "registered": "Registrados",
+      "pending": "En Trámite",
+      "national": "Nacionales",
+      "international": "Internacionales"
+    },
+    "filter": {
+      "all": "Todos"
+    },
+    "card": {
+      "patent_name": "Nombre de la Patente",
+      "project": "Proyecto / Referencia",
+      "scope": "Alcance",
+      "app_date": "Fecha de Solicitud",
+      "reg_date": "Fecha de Registro",
+      "app_no": "Nº de Solicitud",
+      "pct_no": "Nº PCT / Registro",
+      "status": "Estado",
+      "registered_badge": "Patente Registrada",
+      "pending_badge": "En Proceso de Registro"
+    }
+  },
+  "designsPage": {
+    "title": "Nuestros Diseños Industriales",
+    "desc": "Polgün da forma a la industria con diseños industriales originales y registrados.",
+    "filters": {
+      "all": "Todos",
+      "project_bound": "Diseños Ligados a Proyectos",
+      "independent": "Diseños Independientes",
+      "by_year": "Por Año"
+    },
+    "card": {
+      "registered": "Registrado",
+      "project": "Nombre del Proyecto",
+      "design_name": "Nombre del Diseño",
+      "scope": "Alcance",
+      "application_no": "Nº de Solicitud",
+      "registration_no": "Nº de Registro",
+      "app_date": "Fecha de Solicitud",
+      "reg_date": "Fecha de Registro",
+      "inspect": "Examinar Diseño",
+      "national": "Nacional",
+      "independent_label": "Diseño Independiente"
+    }
+  },
+  "publicationsPage": {
+    "title": "Nuestras Publicaciones Académicas",
+    "desc": "Los estudios de publicaciones académicas, técnicas y sectoriales de Polgün contribuyen a las soluciones de ingeniería de nueva generación y a la literatura del sector.",
+    "filters": {
+      "all": "Todos",
+      "article": "Artículos",
+      "proceedings": "Ponencias",
+      "book_chapter": "Capítulos de Libros",
+      "national": "Nacional",
+      "international": "Internacional",
+      "by_year": "Por Año"
+    },
+    "card": {
+      "project": "Proyecto / Tema",
+      "authors": "Autores:",
+      "scope": "Alcance",
+      "pub_date": "Fecha de Publicación",
+      "inspect": "Ver Publicación",
+      "open_doc": "Abrir Documento",
+      "view_proceedings": "Ver Ponencia",
+      "download": "Descargar PDF",
+      "details": "Detalles",
+      "accepted": "Aceptado",
+      "published": "Publicado",
+      "international": "Internacional",
+      "national": "Nacional",
+      "e_isbn": "e-ISBN",
+      "online_issn": "ISSN en línea",
+      "project_code": "Código de Proyecto",
+      "project_name": "Nombre del Proyecto",
+      "type": "Tipo de Publicación",
+      "isbn": "ISBN",
+      "issn": "ISSN",
+      "e_issn": "e-ISSN",
+      "preparing": "En preparación",
+      "submitted": "Enviado"
+    },
+    "search_placeholder": "Buscar por título de publicación, nombre del proyecto o código de proyecto..."
+  },
+  "knowledgeCenter": {
+    "title": "Centro de Conocimiento",
+    "desc": "Explore artículos técnicos completos sobre ingeniería, diseño, fabricación y gestión de parques acuáticos por Polgün Waterparks & Attractions.",
+    "read_more": "Leer Más",
+    "faqs_title": "Preguntas Frecuentes",
+    "related_title": "Artículos Relacionados"
+  },
+  "factoriesPage": {
+    "desc": "Descubra nuestras modernas instalaciones integradas donde se fabrican toboganes de agua de clase mundial.",
+    "subtitle": "Instalaciones de Fabricación Modernas y Sostenibles",
+    "title": "Nuestras Instalaciones de Fabricación"
   }
 }

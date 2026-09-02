@@ -10,9 +10,11 @@ import polgunLogo from '../assets/logoPolgun.png'
 const LANGUAGES = [
   { code: 'tr', label: 'TR', name: 'Türkçe' },
   { code: 'en', label: 'EN', name: 'English' },
+  { code: 'fr', label: 'FR', name: 'Français' },
   { code: 'es', label: 'ES', name: 'Español' },
-  { code: 'ar', label: 'AR', name: 'العربية' },
   { code: 'ru', label: 'RU', name: 'Русский' },
+  { code: 'zh', label: 'ZH', name: '中文' },
+  { code: 'ar', label: 'AR', name: 'العربية' },
 ]
 
 export default function Footer({ setActivePage }) {

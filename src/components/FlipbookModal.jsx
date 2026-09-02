@@ -273,22 +273,22 @@ export default function FlipbookModal({ pdfUrl, title, onClose }) {
               <button
                 onClick={() => setViewMode('single')}
                 className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all flex items-center gap-1.5 ${viewMode === 'single' ? 'bg-[#22ABE6] text-white shadow-md' : 'text-neutral-400 hover:text-white'}`}
-                title="Tek Sayfa (Büyük Okuma)"
+                title={t('flipbook.single_page_title', { defaultValue: 'Tek Sayfa (Büyük Okuma)' })}
               >
                 <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
                 </svg>
-                <span>Büyük Boyut</span>
+                <span>{t('flipbook.single_page', { defaultValue: 'Büyük Boyut' })}</span>
               </button>
               <button
                 onClick={() => setViewMode('dual')}
                 className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all flex items-center gap-1.5 ${viewMode === 'dual' ? 'bg-[#22ABE6] text-white shadow-md' : 'text-neutral-400 hover:text-white'}`}
-                title="Çift Sayfa (Dergi Görünümü)"
+                title={t('flipbook.dual_page_title', { defaultValue: 'Çift Sayfa (Dergi Görünümü)' })}
               >
                 <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
                 </svg>
-                <span>Çift Sayfa</span>
+                <span>{t('flipbook.dual_page', { defaultValue: 'Çift Sayfa' })}</span>
               </button>
             </div>
 
@@ -298,7 +298,7 @@ export default function FlipbookModal({ pdfUrl, title, onClose }) {
                 onClick={handleZoomOut}
                 disabled={zoom <= 0.75}
                 className="w-8 h-8 rounded-lg flex items-center justify-center text-white hover:bg-neutral-700 disabled:opacity-30 disabled:hover:bg-transparent transition-colors"
-                title="Küçült (-)"
+                title={t('flipbook.zoom_out', { defaultValue: 'Küçült (-)' })}
               >
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 12h-15" />
@@ -307,7 +307,7 @@ export default function FlipbookModal({ pdfUrl, title, onClose }) {
               <button
                 onClick={handleZoomReset}
                 className="px-2 text-xs font-black text-white hover:text-[#22ABE6] transition-colors"
-                title="Yakınlaştırmayı Sıfırla (0)"
+                title={t('flipbook.zoom_reset', { defaultValue: 'Yakınlaştırmayı Sıfırla (0)' })}
               >
                 {Math.round(zoom * 100)}%
               </button>
@@ -315,7 +315,7 @@ export default function FlipbookModal({ pdfUrl, title, onClose }) {
                 onClick={handleZoomIn}
                 disabled={zoom >= 2.0}
                 className="w-8 h-8 rounded-lg flex items-center justify-center text-white hover:bg-neutral-700 disabled:opacity-30 disabled:hover:bg-transparent transition-colors"
-                title="Büyüt (+)"
+                title={t('flipbook.zoom_in', { defaultValue: 'Büyüt (+)' })}
               >
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
@@ -333,7 +333,7 @@ export default function FlipbookModal({ pdfUrl, title, onClose }) {
             rel="noopener noreferrer"
             download
             className="w-9 h-9 sm:w-10 sm:h-10 rounded-full flex items-center justify-center bg-white/10 hover:bg-white/20 transition-all text-white shrink-0 hover:scale-105"
-            title="PDF'i Yeni Sekmede Aç / İndir"
+            title={t('flipbook.open_pdf', { defaultValue: 'PDF\'i Yeni Sekmede Aç / İndir' })}
           >
             <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
@@ -491,9 +491,9 @@ export default function FlipbookModal({ pdfUrl, title, onClose }) {
 
           {/* Info Badge on right */}
           <div className="hidden sm:flex items-center gap-2 text-xs text-neutral-500">
-            <span>Klavye: ← / →</span>
+            <span>{t('flipbook.keyboard_hint', { defaultValue: 'Klavye: ← / →' })}</span>
             <span>·</span>
-            <span>Yakınlaştır: + / -</span>
+            <span>{t('flipbook.zoom_hint', { defaultValue: 'Yakınlaştır: + / -' })}</span>
           </div>
         </footer>
       )}

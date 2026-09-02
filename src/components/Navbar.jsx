@@ -11,14 +11,18 @@ import EnFlag from '../assets/flags/en.svg';
 import EsFlag from '../assets/flags/es.svg';
 import ArFlag from '../assets/flags/ar.svg';
 import RuFlag from '../assets/flags/ru.svg';
+import FrFlag from '../assets/flags/fr.svg';
+import ZhFlag from '../assets/flags/zh.svg';
 
 // ── Menü Yapısı (WWW ile birebir karşılıklı) ───────────────
 const LANGUAGES = [
   { code: 'tr', name: 'Türkçe', flag: TrFlag },
   { code: 'en', name: 'English', flag: EnFlag },
+  { code: 'fr', name: 'Français', flag: FrFlag },
   { code: 'es', name: 'Español', flag: EsFlag },
-  { code: 'ar', name: 'العربية', flag: ArFlag },
   { code: 'ru', name: 'Русский', flag: RuFlag },
+  { code: 'zh', name: '中文', flag: ZhFlag },
+  { code: 'ar', name: 'العربية', flag: ArFlag },
 ];
 
 export default function Navbar({ activePage, setActivePage, colorPalette, location }) {

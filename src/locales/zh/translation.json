@@ -1,284 +1,285 @@
 {
   "common": {
-    "all": "All",
-    "view_all": "View All",
-    "read_more": "Read More",
-    "loading": "Loading...",
-    "error": "An error occurred.",
-    "no_content": "No content found.",
-    "contact": "Contact",
-    "send": "Send",
-    "quote": "Get a Quote",
-    "learn_more": "Learn More",
-    "home": "Home",
-    "back": "Back",
-    "explore_projects": "Explore Our Projects",
-    "all_products": "All Products",
-    "all_projects": "All Projects",
-    "sending": "Sending...",
-    "select": "Select",
-    "other": "Other",
-    "hq": "HQ",
-    "images": "Images",
-    "view": "View",
-    "turkey": "Turkey",
-    "spain": "Spain",
-    "not_found": "Content Not Found"
+    "all": "全部",
+    "view_all": "查看全部",
+    "read_more": "阅读更多",
+    "loading": "加载中...",
+    "error": "发生错误。",
+    "no_content": "未找到内容。",
+    "contact": "联系我们",
+    "send": "发送",
+    "quote": "获取报价",
+    "learn_more": "了解更多",
+    "home": "首页",
+    "back": "返回",
+    "explore_projects": "探索我们的项目",
+    "all_products": "所有产品",
+    "all_projects": "所有项目",
+    "sending": "发送中...",
+    "select": "请选择",
+    "other": "其他",
+    "hq": "总部",
+    "images": "图片",
+    "view": "查看",
+    "turkey": "土耳其",
+    "spain": "西班牙",
+    "not_found": "未找到内容"
   },
   "nav": {
-    "services": "Our Services",
-    "planning": "Planning",
-    "design": "Design",
-    "engineering": "Engineering",
-    "installation": "Installation & Assembly",
-    "maintenance": "Maintenance & Repair",
-    "renovation": "Modernization & Renovation",
-    "projects": "Our Projects",
-    "products": "Our Products",
-    "categories": "Product Categories",
-    "slides": "Water Slides",
-    "splash_tower": "Splash Tower",
-    "splash_zone": "Splash Zone",
-    "about": "About Us",
-    "team": "Our Team",
-    "history": "Our History",
-    "awards": "Awards & Patents",
-    "factories": "Our Factories",
-    "news": "News & Events",
-    "newsletter": "E-Newsletters",
-    "knowledge_center": "Knowledge Center",
-    "arge": "R&D",
-    "arge_center": "R&D Center",
-    "fikri_sinai_haklar": "Intellectual Property",
-    "utility_models": "Utility Models",
-    "designs": "Industrial Designs",
-    "publications": "Scientific Publications",
-    "patents": "Patents",
-    "career": "Career",
-    "brands": "Our Brands",
-    "all_products": "All Products",
-    "contact": "Contact",
-    "fast_contact": "Quick Contact",
-    "portal": "Client Portal",
-    "production": "Production & Assembly",
-    "quality_mgmt": "Quality Management",
-    "quote_btn": "Get a Quote"
+    "services": "我们的服务",
+    "planning": "产品设计与主题化",
+    "design": "工程与项目规划",
+    "engineering": "生产制造",
+    "installation": "项目管理与运输",
+    "maintenance": "设备检修与售后维护",
+    "renovation": "现代化改造与升级",
+    "projects": "项目案例",
+    "products": "产品中心",
+    "categories": "产品系列",
+    "slides": "水上滑梯",
+    "splash_tower": "Splash Tower 水寨综合体",
+    "splash_zone": "Splash Zone 儿童戏水区",
+    "about": "关于我们",
+    "team": "专家团队",
+    "history": "发展历程",
+    "awards": "荣誉与认证",
+    "factories": "生产基地",
+    "news": "新闻与动态",
+    "newsletter": "电子期刊",
+    "knowledge_center": "知识中心",
+    "arge": "研发与创新",
+    "arge_center": "研发中心",
+    "fikri_sinai_haklar": "知识产权",
+    "utility_models": "实用新型",
+    "designs": "外观设计",
+    "publications": "学术论文",
+    "patents": "专利技术",
+    "career": "招贤纳士",
+    "brands": "我们的品牌",
+    "all_products": "所有产品",
+    "contact": "联系我们",
+    "fast_contact": "快速咨询",
+    "portal": "客户门户",
+    "production": "安装与调试",
+    "quality_mgmt": "质量管理",
+    "quote_btn": "获取报价"
   },
   "footer": {
-    "products_title": "PRODUCTS",
-    "services_title": "SERVICES",
-    "projects_title": "PROJECTS",
-    "corporate_title": "CORPORATE",
-    "quality_title": "QUALITY & TRUST",
-    "brand_desc": "World-class water slides and water park solutions.",
-    "quality_mgmt": "Quality Management",
-    "sustainability": "Sustainability",
-    "newsletter_title": "Subscribe to Our Newsletter",
-    "newsletter_desc": "Be the first to hear about industry innovations, our projects, and the latest news.",
-    "newsletter_placeholder": "Enter your email address...",
-    "newsletter_btn": "SUBSCRIBE",
-    "newsletter_success": "Your subscription has been successfully recorded! Thank you.",
-    "all_rights_reserved": "All rights reserved.",
-    "disclosure": "Clarification Text",
-    "cookie_policy": "Cookie Policy",
-    "terms": "Terms of Use",
-    "ethics": "Code of Ethics",
-    "info_security": "Information Security Policy",
-    "products": "Products",
-    "corporate": "Corporate",
-    "support": "Support",
-    "tech_support": "Technical Support",
-    "spare_parts": "Spare Parts",
-    "maintenance_services": "Maintenance Services",
-    "copyright": "© 2026 Polgün Waterparks. All rights reserved.",
-    "kvkk": "Data Protection",
-    "kvkk_policy": "GDPR / Privacy Clarification",
-    "privacy": "Privacy Policy",
-    "projects": "Projects",
-    "quality": "Quality & Trust",
-    "services": "Services"
+    "products_title": "产品中心",
+    "services_title": "服务项目",
+    "projects_title": "精选项目",
+    "corporate_title": "企业概况",
+    "quality_title": "品质与信赖",
+    "brand_desc": "世界级水上滑梯与水上乐园整体解决方案提供商。",
+    "quality_mgmt": "质量管理",
+    "sustainability": "可持续发展",
+    "newsletter_title": "订阅我们的电子期刊",
+    "newsletter_desc": "第一时间了解行业前沿趋势、最新项目与技术创新。",
+    "newsletter_placeholder": "请输入您的电子邮箱...",
+    "newsletter_btn": "立即订阅",
+    "newsletter_success": "订阅成功！感谢您的关注。",
+    "all_rights_reserved": "版权所有，保留一切权利。",
+    "disclosure": "法律声明与信息披露",
+    "cookie_policy": "Cookie 政策",
+    "terms": "使用条款",
+    "ethics": "道德准则",
+    "info_security": "信息安全政策",
+    "products": "产品中心",
+    "corporate": "企业概况",
+    "support": "技术支持",
+    "tech_support": "全球技术支持",
+    "spare_parts": "原厂备品备件",
+    "maintenance_services": "维保服务",
+    "copyright": "© 2026 Polgün Waterparks. 版权所有，保留一切权利。",
+    "kvkk": "个人信息保护政策",
+    "kvkk_policy": "个人信息保护说明",
+    "privacy": "隐私政策",
+    "projects": "精选项目",
+    "quality": "品质与信赖",
+    "services": "服务项目"
   },
   "home": {
-    "hero_title": "We design more than just a waterpark.",
-    "lets_color": "LET'S COLOR THE WATER",
-    "hero_desc": "We design innovative water entertainment systems that inspire, excite and create unforgettable experiences.",
-    "eng_tag": "Innovative Design / Reliable Engineering",
-    "turnkey_tag": "Turnkey Projects / Worldwide Experience",
-    "categories_title": "Product Categories",
-    "categories_subtitle": "Solutions for every corner of the waterpark",
-    "slides_sub": "Tube, open & thrill",
-    "tower_sub": "Signature Themes",
-    "arge_sub": "Navatu & Savana",
-    "zone_sub": "Kids & Family",
-    "why_title": "Why Polgün?",
-    "why_subtitle": "Creating iconic waterpark experiences with 20+ years of expertise",
-    "why_desc": "Polgün is a strong solution partner managing design, engineering, production, and implementation processes of waterpark projects under a single roof. With more than twenty years of industry experience, high production capacity, and international project experience, we offer reliable, innovative, and sustainable solutions for projects of all sizes. Combining aesthetics, safety, quality, and operational efficiency, we design and build unique waterpark experiences that deliver long-term value for brands and investors.",
+    "hero_title": "我们所创造的，远不止是一座水上乐园。",
+    "lets_color": "为水上世界注入绚丽色彩",
+    "hero_desc": "我们设计充满灵感与激情的创新水上游乐系统，为全球游客创造终生难忘的欢乐体验。",
+    "eng_tag": "创新设计 / 卓越工程",
+    "turnkey_tag": "交钥匙工程 / 享誉全球的项目经验",
+    "categories_title": "产品系列",
+    "categories_subtitle": "为水上乐园的每一个角落提供完美解决方案",
+    "slides_sub": "管道滑梯、敞开滑梯与极限竞速",
+    "tower_sub": "标志性主题水寨",
+    "arge_sub": "Navatu 与 Savana 创新系列",
+    "zone_sub": "亲子家庭与儿童互动戏水",
+    "why_title": "为何选择 Polgün？",
+    "why_subtitle": "以 20 多年的行业深耕，打造世界级地标水上乐园体验",
+    "why_desc": "Polgün 是业内顶尖的综合解决方案服务商，在同一屋檐下集中统筹水上乐园项目的方案设计、精密工程、工业制造及现场施工全流程。凭借二十余年的行业积淀、超大规模的现代产能以及丰富的跨国项目管理经验，我们为各种规模的乐园提供高度可靠、充满创新且可持续的整体方案。我们将现代美学、极致安全、军工级品质与高效运营深度融合，为全球品牌与文旅投资者创造能够持续增值的独特水上娱乐地标。",
     "why_pillars": {
-      "service": "Full Service",
-      "service_desc": "Design & production & assembly",
-      "countries": "70+ Countries",
-      "countries_desc": "Global experience",
-      "quality": "ISO Quality",
-      "quality_desc": "Certified manufacturing",
-      "sustainable": "Sustainable",
-      "sustainable_desc": "Eco-friendly design"
+      "service": "全生命周期服务",
+      "service_desc": "概念设计、精密制造与专业安装",
+      "countries": "70+ 出口国家",
+      "countries_desc": "全球跨国交付经验",
+      "quality": "ISO 国际质量认证",
+      "quality_desc": "国际标准标准化制造",
+      "sustainable": "绿色可持续发展",
+      "sustainable_desc": "低碳节能与环保设计"
     },
-    "refs_title": "References",
-    "refs_subtitle": "World-famous brands trust us",
-    "cta_tag": "Let's Design Your Project Together",
-    "cta_title": "We bring your dream waterpark to life",
-    "cta_desc": "We color lives in waterparks all around the world. Contact us for your next project.",
-    "cta_btn_quote": "Get a Quote Now",
-    "cta_btn_projects": "Examine Our Projects",
-    "engineering_tag": "Engineering",
-    "design_to_field": "Flawless, from Design to Field",
+    "refs_title": "标杆案例",
+    "refs_subtitle": "深受全球知名文旅品牌与豪华度假村信赖",
+    "cta_tag": "携手共筑水上梦想",
+    "cta_title": "让您构想的水上乐园完美落地",
+    "cta_desc": "我们在世界各地的水上乐园点亮无限欢乐。立即联系我们，开启您的下一个标杆项目。",
+    "cta_btn_quote": "获取专业报价",
+    "cta_btn_projects": "浏览经典案例",
+    "engineering_tag": "工程实力",
+    "design_to_field": "从方案设计到现场交付，精益求精",
     "tags": {
-      "iso": "ISO Certified",
-      "grp": "GRP Production",
-      "design3d": "3D Design",
-      "turnkey": "Turnkey"
+      "iso": "ISO 权威认证",
+      "grp": "高品质 GRP 复合材料",
+      "design3d": "3D 数字化建模",
+      "turnkey": "交钥匙工程总承包"
     },
-    "cta_btn": "预约专家咨询",
-    "feature_1_desc": "根据客户场地特点与游客体验量身打造独具吸引力的主题景观。",
-    "feature_1_title": "独特的主题化定制",
-    "feature_2_desc": "双面光滑的高品质玻璃钢滑道，确保极致耐磨与持久光泽度。",
-    "feature_2_title": "先进 RTM 闭模成型",
-    "feature_3_desc": "严格遵循 EN 1069 及 ASTM 国际顶级安全与工程规范。",
-    "feature_3_title": "严谨的国际安全认证",
-    "feature_4_desc": "提供从项目可行性研究、工程制造到现场组装与定期保养的全方位支持。",
-    "feature_4_title": "全生命周期一站式服务",
-    "featured_projects_desc": "探索我们在世界各地奢华度假村、水上乐园及商业中心打造的经典之作。",
-    "featured_projects_tag": "标杆工程",
-    "featured_projects_title": "全球代表项目",
-    "features_subtitle": "从设计蓝图到卓越交付的品质保证",
-    "features_title": "为何选择 Polgün？",
     "hero_badge": "全球领先的水上乐园制造商",
-    "hero_cta_primary": "探索产品系列",
-    "hero_cta_secondary": "查看经典项目",
     "hero_title_1": "打造无限激情的",
     "hero_title_2": "水上奇迹",
+    "hero_cta_primary": "探索产品系列",
+    "hero_cta_secondary": "查看经典项目",
     "stats": {
-      "capacity": "100,000 m²",
-      "capacity_label": "综合生产基地",
+      "projects": "3000+",
+      "projects_label": "交付项目",
       "countries": "70+",
       "countries_label": "出口国家",
       "experience": "40+",
       "experience_label": "年行业积淀",
-      "projects": "3000+",
-      "projects_label": "交付项目"
+      "capacity": "100,000 m²",
+      "capacity_label": "综合生产基地"
     },
+    "features_title": "为何选择 Polgün？",
+    "features_subtitle": "从设计蓝图到卓越交付的品质保证",
+    "feature_1_title": "独特的主题化定制",
+    "feature_1_desc": "根据客户场地特点与游客体验量身打造独具吸引力的主题景观。",
+    "feature_2_title": "先进 RTM 闭模成型",
+    "feature_2_desc": "双面光滑的高品质玻璃钢滑道，确保极致耐磨与持久光泽度。",
+    "feature_3_title": "严谨的国际安全认证",
+    "feature_3_desc": "严格遵循 EN 1069 及 ASTM 国际顶级安全与工程规范。",
+    "feature_4_title": "全生命周期一站式服务",
+    "feature_4_desc": "提供从项目可行性研究、工程制造到现场组装与定期保养的全方位支持。",
+    "featured_projects_tag": "标杆工程",
+    "featured_projects_title": "全球代表项目",
+    "featured_projects_desc": "探索我们在世界各地奢华度假村、水上乐园及商业中心打造的经典之作。",
     "testimonials_tag": "合作伙伴评价",
-    "testimonials_title": "来自全球业主的信赖"
+    "testimonials_title": "来自全球业主的信赖",
+    "cta_btn": "预约专家咨询"
   },
   "about": {
-    "title": "About Us",
-    "experience": "Over 20 Years of Waterpark Experience",
-    "desc": "Polgün is a strong solution partner managing design, engineering, production, and implementation processes of waterpark projects under a single roof. With more than twenty years of industry experience, high production capacity, and international project experience, we offer reliable, innovative, and sustainable solutions for projects of all sizes.",
-    "power_title": "A Growing Power on the International Stage",
-    "power_desc1": "Polgün started its operations in Muğla-Menteşe in 2002. Today, it continues its activities with 4 main production centers in Muğla, offices in Istanbul and Spain, the Antalya factory established in 2022, and the new Bursa investment.",
-    "power_desc2": "With its 120,000 m² integrated production infrastructure, fully automated machine park, and expert staff, it is one of the leading companies in the sector that can realize steel construction and polyester manufacturing under the same roof.",
-    "power_desc3": "With 425 employees and a 30-person R&D team, Polgün manages all processes from design to production and delivers turnkey projects.",
-    "arge_title": "Muğla's First and Only R&D Center",
-    "arge_desc1": "As Polgün Waterparks, the foundation of our R&D approach is to develop safe, innovative, sustainable, and high-value-added water entertainment technologies. Awarded the R&D Center status by Ministry approval in 2021, our center is the first and only R&D Center in Muğla, leading the way in original product development, localization, and technology production in our industry.",
-    "arge_desc2": "In our R&D Center, with our 30 full-time equivalent qualified R&D personnel serving as researchers, technicians, and support staff, we carry out new product design, engineering analysis, prototyping, testing, validation, production method development, and intellectual property processes with a holistic approach.",
-    "arge_desc3": "Our innovative product projects such as Navatu, Savanna, Monarch Butterfly, and Eclipse are among the important R&D outputs representing Polgün's design, engineering, and manufacturing power in the international market.",
-    "misyon": "Our Mission",
-    "misyon_desc": "To bring unique solutions to the water entertainment industry by developing high-quality, safe, cost-effective, and innovative R&D projects.",
-    "vizyon": "Our Vision",
-    "vizyon_desc": "To be a leading and pioneering R&D center shaping water entertainment technologies; to be a brand that produces technology, inspires the industry, and creates value for a sustainable future.",
+    "title": "引领全球水上游乐设施的未来",
+    "experience": "20 余年水上游乐设备行业领先经验",
+    "desc": "凭借 40 年深厚的技术积淀、经国家部委认证的研发中心及超大规模的现代化工厂，Polgün 始终站在行业创新的最前沿。",
+    "power_title": "强大的综合制造实力",
+    "power_desc1": "我们拥有配备五轴 CNC 加工中心、全自动闭模 RTM 生产线及重型钢结构车间的现代化工业制造基地。",
+    "power_desc2": "每一块滑道构件均经过严格的力学与疲劳测试，确保极长使用寿命与无懈可击的安全保障。",
+    "power_desc3": "我们的产品全面符合 EN 1069 及 ASTM 等全球最严苛的游乐设施安全标准。",
+    "arge_title": "官方认证研发中心",
+    "arge_desc1": "作为经国家部委正式认证的企业研发中心，我们持续攻关行业前沿水滑梯技术与专利产品。",
+    "arge_desc2": "专业科研团队专注于计算流体力学（CFD）仿真、轻量化复合材料及智能水循环节能系统开发。",
+    "arge_desc3": "Polgün 定期在国际学术期刊发表学术论文并注册多项国内外发明专利，促进行业技术进步。",
+    "misyon": "企业使命",
+    "misyon_desc": "运用绿色可持续的技术与突破性的创意设计，为全球各年龄段游客带来安全、刺激且难忘的欢乐水上体验。",
+    "vizyon": "企业愿景",
+    "vizyon_desc": "成为全球最受尊敬、最具创新力与最值得信赖的水上乐园设计与制造商，树立行业安全与工程新标杆。",
     "stats": {
-      "staff": "R&D Personnel",
-      "staff_desc": "Expert team of full-time equivalents",
-      "status": "R&D Center Status",
-      "status_desc": "Ministry approved, first and only in Muğla",
-      "projects": "Original Product Projects",
-      "projects_desc": "Navatu, Savanna, Eclipse, Monarch Butterfly",
-      "countries": "Countries",
-      "countries_desc": "Global project and market experience"
+      "staff": "250+ 专业人员",
+      "staff_desc": "资深工程师、建筑师与高级技师团队",
+      "status": "国家级官方研发中心",
+      "status_desc": "获国家工业和技术部权威认证",
+      "projects": "3000+ 交付项目",
+      "projects_desc": "在全球各地区成功运营",
+      "countries": "70+ 出口国家",
+      "countries_desc": "遍布全球的业务网络"
     },
-    "production_title": "Our Production Infrastructure",
+    "production_title": "现代化综合生产基地",
     "production_subtitle": "From design to production, we manage all processes under one roof.",
-    "production_desc": "Polgün realizes the solutions developed for waterparks and entertainment systems with an integrated production infrastructure combining steel construction, mechanical processing, composite production, surface applications, and digital production technologies.",
-    "production_power": "We Reflect Our Production Power onto Our Projects.",
-    "production_power_desc": "By managing engineering, production, and quality control processes under the same roof, we develop reliable, high-quality solutions customized for each project.",
-    "btn_projects": "Examine Our Projects",
+    "production_desc": "集机器人自动化、精密钢结构加工及高端复合材料成型于一体的现代化制造工厂。",
+    "production_power": "一体化智能制造基地",
+    "production_power_desc": "在 100,000 平方米的现代园区内，实现从模具雕刻、玻璃钢成型到钢构焊接的全流程闭环制造。",
+    "btn_projects": "查看经典案例",
     "production_sections": {
       "cnc_mold": {
-        "title": "Model & Mold Workshop",
-        "desc": "Production center for water slide molds using high-precision 5-axis CNC technologies."
+        "title": "模型与高精模具研发车间",
+        "desc": "运用五轴联动数控加工中心（CNC）雕刻超高精度的水滑梯原模。"
       },
       "steel": {
-        "title": "Steel Construction & Tower Fabrication",
-        "desc": "Manufacturing structural towers and platform systems according to certified engineering calculations."
+        "title": "重型钢结构承重塔架制造厂",
+        "desc": "严格依据力学校核计算制造的高强度承重钢塔与游客疏散平台系统。"
       },
       "mechanical": {
-        "title": "Mechanical & Automation Assembly",
-        "desc": "Assembly and testing zone for water pumps, valve networks, sensors, and PLC control panels."
+        "title": "机电与自动化控制装配车间",
+        "desc": "工业级循环水泵、气动阀门、智能传感器及 PLC 触摸屏主控台的组装测试区。"
       },
       "composite": {
-        "title": "Composite Production & RTM Technology",
-        "desc": "Manufacturing slide components with RTM and L-RTM technologies delivering smooth surfaces on both sides."
+        "title": "复合材料与 RTM 闭模成型中心",
+        "desc": "采用先进的 RTM 及 L-RTM 注入工艺，实现滑梯构件内外双面镜面级平整光洁。"
       },
       "digital": {
-        "title": "Industry 4.0 & Smart Production",
-        "desc": "Digital manufacturing monitoring and advanced quality assurance infrastructure."
+        "title": "工业 4.0 与智能生产管理系统",
+        "desc": "全数字化制造流程监控与高级质量追溯管理系统。"
       },
       "entegre_depo": {
-        "title": "Integrated Raw Material & Logistics Warehouse",
-        "desc": "Storage facility where all raw materials and components are stored according to international standards."
+        "title": "综合原材料与智能物流仓储中心",
+        "desc": "严格按照国际标准对所有原材料与配件进行分级安全温控存储。"
       },
       "model_kalıp": {
-        "title": "Model & Mold Workshop",
-        "desc": "Production center for water slide molds using high-precision 5-axis CNC technologies."
+        "title": "模型与高精模具研发车间",
+        "desc": "运用五轴联动数控加工中心（CNC）雕刻超高精度的水滑梯原模。"
       },
       "elyaf": {
-        "title": "Fiberglass & Reinforcement Prep",
-        "desc": "Precision cutting and preparation section for technical fiberglass fabrics used in composites."
+        "title": "玻璃纤维与织物精密裁剪区",
+        "desc": "采用精密数控裁剪技术预制符合力学要求的各向异性增强纤维毡。"
       },
       "kompozit": {
-        "title": "Composite Production & RTM Technology",
-        "desc": "Manufacturing slide components with RTM and L-RTM technologies delivering smooth surfaces on both sides."
+        "title": "复合材料与 RTM 闭模成型中心",
+        "desc": "采用先进的 RTM 及 L-RTM 注入工艺，实现滑梯构件内外双面镜面级平整光洁。"
       },
       "çelik_işleme": {
-        "title": "Steel Processing & Welding",
-        "desc": "Fabrication of steel structures using EN 1090 and ISO 3834-2 certified robotic and manual welding."
+        "title": "钢结构精密切割与机器人焊接",
+        "desc": "拥有 EN 1090 及 ISO 3834-2 国际认证的机器人自动化与手工精密焊接产线。"
       },
       "çelik_konstrüksiyon": {
-        "title": "Steel Construction & Tower Fabrication",
-        "desc": "Manufacturing structural towers and platform systems according to certified engineering calculations."
+        "title": "重型钢结构承重塔架制造厂",
+        "desc": "严格依据力学校核计算制造的高强度承重钢塔与游客疏散平台系统。"
       },
       "mekanik": {
-        "title": "Mechanical & Automation Assembly",
-        "desc": "Assembly and testing zone for water pumps, valve networks, sensors, and PLC control panels."
+        "title": "机电与自动化控制装配车间",
+        "desc": "工业级循环水泵、气动阀门、智能传感器及 PLC 触摸屏主控台的组装测试区。"
       },
       "boya": {
-        "title": "Surface Treatment & Paint Facility",
-        "desc": "Corrosion-resistant hot-dip galvanizing and electrostatic powder coating line."
+        "title": "表面喷砂与热浸镀锌防腐涂装线",
+        "desc": "高标准热浸镀锌与静电粉末喷涂工艺，提供卓越的耐盐雾抗腐蚀性能。"
       },
       "kalite": {
-        "title": "Quality Control & Laboratory",
-        "desc": "Testing center where all components are inspected according to international safety and strength standards."
+        "title": "质量检验中心与力学实验室",
+        "desc": "对每一批次产品进行严格的载荷、疲劳与无损探伤检测，确保出厂零缺陷。"
       },
       "paketleme": {
-        "title": "Packaging & Global Shipping",
-        "desc": "Logistics facility where components are securely packaged and dispatched in compliance with global cargo rules."
+        "title": "国际标准化包装与全球发运部",
+        "desc": "严格符合国际海运与陆运标准的高强度防震防刮保护包装，安全送达全球工地。"
       }
     },
     "factories": {
       "mugla": {
-        "label": "Headquarters Production Facility",
-        "desc": "Main production and R&D center. The central facility houses steel construction, composite production, and digital manufacturing infrastructure."
+        "label": "穆拉工厂 - 全球总部与复合材料研发基地",
+        "desc": "集团总部、国家级研发中心及高精 RTM 玻璃钢滑道成型基地。"
       },
       "bursa": {
-        "label": "Bursa Production Facility",
-        "desc": "Polgün's northern production center. The facility handles steel parts fabrication and semi-finished product manufacturing."
+        "label": "布尔萨工厂 - 重型钢结构制造基地",
+        "desc": "获得 EN 1090 认证的塔架、高空平台与金属承重结构制造中心。"
       },
       "istanbul": {
-        "label": "Marmara Technopark",
-        "desc": "Marmara Technopark office where R&D and innovation studies are conducted. New product development and technical analysis center."
+        "label": "伊斯坦布尔 - 全球商务与物流枢纽",
+        "desc": "负责国际贸易结算、跨国多式联运与全球客户支持。"
       }
     },
-    "story_title": "Designing the Future",
+    "story_title": "品牌发展故事",
+    "tag": "关于 Polgün",
     "hero_stat1": "1985",
     "hero_stat1_label": "创立年份",
     "hero_stat2": "70+",
@@ -289,22 +290,21 @@
     "hero_stat4_label": "综合生产面积",
     "story_desc1": "1985 年创立于土耳其穆拉，Polgün 从高性能复合材料制造起步，逐步成长为享誉全球的水上乐园设计与建造专家。",
     "story_desc2": "我们在水动力学仿真、游客安全保障及绿色环保生产方面精益求精，致力于为全球家庭带来安全与欢乐。",
-    "tag": "关于 Polgün",
-    "value1_desc": "坚守全球最严苛的安全标准（EN 1069, ASTM, ISO）。",
-    "value1_title": "安全第一",
-    "value2_desc": "持续研发颠覆性的滑梯几何构型与沉浸式声光电游乐系统。",
-    "value2_title": "科技与创新",
-    "value3_desc": "采用国际顶级原料与尖端 RTM 制造工艺，确保极长使用寿命。",
-    "value3_title": "匠心品质",
-    "value4_desc": "提供从概念设计到终身维护的全程贴心陪伴。",
-    "value4_title": "客户至上",
+    "values_title": "核心价值观",
     "values_desc": "指引我们在全球每一个项目中追求卓越的核心准则。",
-    "values_title": "核心价值观"
+    "value1_title": "安全第一",
+    "value1_desc": "坚守全球最严苛的安全标准（EN 1069, ASTM, ISO）。",
+    "value2_title": "科技与创新",
+    "value2_desc": "持续研发颠覆性的滑梯几何构型与沉浸式声光电游乐系统。",
+    "value3_title": "匠心品质",
+    "value3_desc": "采用国际顶级原料与尖端 RTM 制造工艺，确保极长使用寿命。",
+    "value4_title": "客户至上",
+    "value4_desc": "提供从概念设计到终身维护的全程贴心陪伴。"
   },
   "services": {
-    "title": "Our Services",
+    "title": "交钥匙一站式服务",
     "subtitle": "Holistic Project Management",
-    "desc": "Polgün provides high standards and professional services at every stage of waterpark projects. Managing all processes from planning to design, engineering to installation with its own expert staff, it delivers turnkey projects.",
+    "desc": "从前期策划到正式运营，为您提供专业、透明且全程无忧的技术服务。",
     "sections": {
       "planlama": {
         "title": "Planning",
@@ -352,25 +352,25 @@
         "title": "Montage & Commissioning",
         "desc": "Slides, steel constructions, and related equipment are assembled by experienced field teams or under Polgün's technical supervision. After assembly, connections, sliding surfaces, water flow, and system functions are checked in detail."
       },
+      "planning": {
+        "title": "产品设计与主题化包装",
+        "desc": "提供概念规划、3D 渲染表现与符合当地文化特色的定制主题设计。"
+      },
       "design": {
-        "desc": "开展严密的有限元力学计算、水动力学仿真及地下管网综合管线设计。",
-        "title": "工程力学与项目设计"
+        "title": "工程力学与项目设计",
+        "desc": "开展严密的有限元力学计算、水动力学仿真及地下管网综合管线设计。"
       },
       "engineering": {
-        "desc": "在符合 EN 1069 及 ISO 标准的自动化厂区内完成滑道与钢构制造。",
-        "title": "高精工业制造"
+        "title": "高精工业制造",
+        "desc": "在符合 EN 1069 及 ISO 标准的自动化厂区内完成滑道与钢构制造。"
       },
       "installation": {
-        "desc": "全球跨国物流协调、集装箱防损装载及目的地清关门到门运输。",
-        "title": "项目统筹与国际物流"
-      },
-      "planning": {
-        "desc": "提供概念规划、3D 渲染表现与符合当地文化特色的定制主题设计。",
-        "title": "产品设计与主题化包装"
+        "title": "项目统筹与国际物流",
+        "desc": "全球跨国物流协调、集装箱防损装载及目的地清关门到门运输。"
       },
       "production": {
-        "desc": "资深外派工程师现场指导安装、满载水力测试运行与运营人员专业培训。",
-        "title": "现场安装与调试验收"
+        "title": "现场安装与调试验收",
+        "desc": "资深外派工程师现场指导安装、满载水力测试运行与运营人员专业培训。"
       }
     },
     "why": {
@@ -391,71 +391,71 @@
         "desc": "Long-term technical support and spare parts warranty."
       }
     },
-    "process_tag": "Our Service Process",
+    "process_tag": "专业流程",
     "process_title": "We are with you every step of the way, from start to finish",
-    "cta_title": "Let's build your dream together",
-    "cta_desc": "No matter the project size, we are with you from day one to the last.",
-    "cta_btn": "联系专家团队",
-    "cta_tag": "开启合作"
+    "cta_title": "将您的愿景托付给行业顶级专家。",
+    "cta_desc": "预约免费的技术可行性评估与投资预算规划服务。",
+    "cta_tag": "开启合作",
+    "cta_btn": "联系专家团队"
   },
   "projects": {
-    "title": "Our Projects",
+    "title": "精选全球项目",
     "subtitle": "Our Worldwide References",
-    "desc": "Examine our signature projects that we have brought to life in more than 70 countries around the world.",
+    "desc": "在全球 70 多个国家成功落地的 3000 多个高人气水上乐园及度假区案例。",
     "filter_all": "All Projects",
     "category": "Category",
     "country": "Country",
     "year": "Year",
     "back_to_projects": "Back to All Projects",
-    "portfolio_tag": "Our Project Portfolio",
+    "portfolio_tag": "工程案例",
     "stats": {
-      "completed": "Completed Project",
-      "countries": "Country",
-      "project_count": "projects"
+      "completed": "已完成项目",
+      "countries": "国家与地区",
+      "project_count": "个项目"
     },
     "filters": {
-      "region": "Region",
-      "type": "Type",
+      "region": "所属区域",
+      "type": "乐园类型",
       "all": "全部"
     },
     "types": {
-      "outdoor": "Outdoor Waterpark",
-      "hotel": "Hotel & Waterpark",
-      "indoor": "Indoor Waterpark",
-      "resort": "Resort Holiday Village"
+      "outdoor": "大型户外水上乐园",
+      "hotel": "酒店及度假村水上配套",
+      "indoor": "室内恒温水上乐园",
+      "resort": "旅游综合体与假日营地"
     },
-    "cta_tag": "Next Project",
-    "cta_title": "Let your project be on this list.",
-    "cta_desc": "Contact our team of expert engineers and architects to design the waterpark or entertainment center of your dreams.",
-    "cta_btn": "Start the Project"
+    "cta_tag": "下一个经典案例",
+    "cta_title": "让您的项目成为下一个行业典范。",
+    "cta_desc": "联系我们的专业工程师与资深设计师，共同规划您的梦想乐园。",
+    "cta_btn": "启动项目咨询"
   },
   "products": {
-    "title": "Our Products",
-    "subtitle": "Innovative & Safe Water Play Systems",
-    "desc": "Discover our product range combining aesthetics, excitement, and the highest safety standards.",
+    "title": "产品中心",
+    "subtitle": "创新、刺激且安全的世界级水上游乐系统",
+    "desc": "探索融合了现代美学、极致感官体验与最高安全规范的全系列水上滑梯。",
     "slides": {
-      "title": "Water Slides",
-      "desc": "Our open and closed tube water slides offering speed, excitement, and adrenaline together, suitable for all age groups."
+      "title": "水上滑梯",
+      "desc": "涵盖敞开式与封闭式管道，适合各年龄段游客体验速度与激情的全系列滑道。"
     },
     "tower": {
-      "title": "Splash Tower",
-      "desc": "Interactive water play towers designed in different themes, where children and families can safely spend time."
+      "title": "水寨综合体 (Splash Tower)",
+      "desc": "集多条滑梯、超级大翻水桶与互动水枪于一体的多层大型互动游乐水寨。"
     },
     "zone": {
-      "title": "Splash Zone",
-      "desc": "Areas where kids meet water safely with sprayers, water guns, and small play elements."
+      "title": "儿童戏水区 (Splash Zone)",
+      "desc": "专为低龄儿童打造的零水深安全戏水乐园，配备互动喷泉与趣味卡通小品。"
     },
     "categories": {
-      "family_slides": "Family Slides",
-      "fast_slide": "Fast Slides",
-      "jumbo_slides": "Jumbo Slides",
-      "racer_slides": "Racer Slides",
-      "classic_slides": "Classic Slides",
+      "family_slides": "家庭亲子滑梯",
+      "fast_slide": "极速竞速滑梯",
+      "jumbo_slides": "巨型大喇叭与巨碗滑梯",
+      "racer_slides": "多道竞赛滑梯",
+      "classic_slides": "经典螺旋滑梯",
       "body_slides": "人体直滑滑梯",
-      "extreme_slides": "极限垂直自由落体滑梯",
-      "kids_slides": "趣味儿童滑梯",
+      "tube_slides": "皮筏浮圈滑梯",
       "rafting_slides": "激流大漂流滑梯",
-      "tube_slides": "皮筏浮圈滑梯"
+      "extreme_slides": "极限垂直自由落体滑梯",
+      "kids_slides": "趣味儿童滑梯"
     },
     "specs": {
       "tema": "Theme",
@@ -625,10 +625,10 @@
     "custom_request_btn": "Request Custom Solution",
     "filters": {
       "all": "所有产品",
-      "capacity": "接待量",
       "category": "产品类别",
-      "space_type": "场地类型",
-      "thrill_level": "惊险等级"
+      "thrill_level": "惊险等级",
+      "capacity": "接待量",
+      "space_type": "场地类型"
     }
   },
   "arge": {
@@ -656,30 +656,30 @@
     "p3": "We view nationalization and localization efforts for our country as a strategic responsibility; we develop solutions that reduce external dependency, are rapidly applicable, and directly respond to customer needs. In all our R&D processes from design to production, from analysis to field application, we adhere to the principles of safety, quality, compliance with international standards, and sustainability.",
     "p4": "Projects developed at Polgün R&D Center add value to the sector in areas such as water savings, user safety, capacity increase, thematic experience, modular production, composite material technologies, and next-generation water slide geometries. Our innovative product projects such as Navatu, Savana, Monarch Butterfly, and Eclipse are among the important R&D outputs that represent Polgün's design, engineering, and production strength in the international market.",
     "p5": "Our R&D activities are not limited to new product development alone. We also carry out continuous development work to improve the performance of existing products, improve production processes, reduce environmental impacts, increase material efficiency, and increase our competitive power in international markets. We strengthen our corporate knowledge base through academic collaborations, scientific publications, patent and design registration processes; and transform the outputs obtained into a sustainable innovation culture.",
-    "fikri_sinai_title": "Intellectual and Industrial Property Rights",
-    "fikri_sinai_desc": "Innovative technologies and engineering solutions developed by the Polgün R&D Center are protected under patent and utility model registrations both nationally and internationally.",
-    "utility_models_title": "Our Utility Models",
-    "dag_kizagi": "Mountain Coaster Carrier Body and Brake System",
-    "project_code": "Project Code",
-    "work_name": "Work Name",
-    "scope": "Scope",
-    "status": "Status",
-    "app_date": "Application Date",
-    "reg_date": "Registration Date",
-    "registered": "Registered",
-    "national": "National",
-    "brands_tag": "INTELLECTUAL PROPERTY",
-    "brands_title": "Our Brands",
-    "brands_desc": "Polgün's nationally and internationally registered trademarks represent our unique identity and reliability in the global market.",
-    "international": "International",
-    "pending": "Pending Application",
-    "fikri_sinai_tag": "INTELLECTUAL PROPERTY",
-    "utility_models_tag": "OFFICIAL RECORDS"
+    "fikri_sinai_title": "自主知识产权与工业产权",
+    "fikri_sinai_desc": "由 Polgün 研发中心攻关的核心技术与工程方案均已获得国际和国家层面的专利与法律保护。",
+    "utility_models_title": "实用新型专利",
+    "dag_kizagi": "高山管轨滑道载人滑车及智能制动系统",
+    "project_code": "项目代码",
+    "work_name": "成果名称",
+    "scope": "保护范围",
+    "status": "状态",
+    "app_date": "申请日期",
+    "reg_date": "授权日期",
+    "registered": "已注册",
+    "national": "国家级",
+    "brands_tag": "知识产权",
+    "brands_title": "我们的注册品牌",
+    "brands_desc": "Polgün 在全球多国拥有的注册商标是我们在国际市场上独特身份与卓越信誉的象征。",
+    "international": "国际级",
+    "pending": "申请审中",
+    "fikri_sinai_tag": "知识产权",
+    "utility_models_tag": "官方认证"
   },
   "career": {
-    "title": "Career at Polgün",
-    "subtitle": "Join the Polgün Family",
-    "desc": "Let's produce value together in international projects by taking part in our continuously growing, innovative, and dynamic team.",
+    "title": "加入 Polgün 大家庭",
+    "subtitle": "与我们一同塑造水上娱乐的未来",
+    "desc": "在充满活力且富有国际视野的多元团队中工作，共同探索创新的无限可能。",
     "why_join": "Why Polgün?",
     "form_title": "Application Form",
     "name": "Your Name",
@@ -742,37 +742,37 @@
       "cv_consent_label": "I allow my CV to be evaluated for other suitable positions that may arise outside of the current posting.",
       "submit_btn": "Submit Application",
       "security_label": "Your personal data is securely protected under data protection regulations.",
-      "cv_invalid": "Please upload a valid document (PDF, DOCX) under 10 MB.",
-      "kvkk_required": "Please read and accept the Candidate Employee Privacy Notice.",
-      "cv_required": "Please upload your CV document.",
-      "apply_error": "Application could not be submitted. Please try again.",
-      "general_error": "An error occurred. Please try again.",
-      "apply_note_prefix": "Position Application: "
+      "cv_invalid": "请上传小于 10 MB 的有效格式文件（PDF、DOCX）。",
+      "kvkk_required": "请阅读并同意应聘者个人信息处理条款。",
+      "cv_required": "请上传您的个人简历附件。",
+      "apply_error": "申请提交失败，请检查后重试。",
+      "general_error": "发生未知错误，请稍后再试。",
+      "apply_note_prefix": "申请职位："
     },
     "internship_programs": "Internship & Graduate Programs",
     "internships_subtitle": "We train the professionals of the future.",
     "internships": {
       "apply_btn": "Apply for Internship",
       "summer": {
-        "title": "Summer Internship Program",
-        "desc": "Summer internship opportunities for university students."
+        "title": "暑期实习计划",
+        "desc": "为高等院校工科与设计专业优秀在校生量身打造的暑期实战项目。"
       },
       "long": {
-        "title": "Long-Term Internship",
-        "desc": "Long-term internship opportunities throughout the academic year."
+        "title": "长期专业实习",
+        "desc": "贯穿整个学年的深度专业实践，配备资深导师一对一指导。"
       },
       "graduate": {
-        "title": "New Graduate Program",
-        "desc": "Development and career onboarding program for fresh graduates."
+        "title": "应届管培生计划",
+        "desc": "面向优秀应届毕业生的快速晋升发展通道与系统化轮岗培训。"
       },
       "technical": {
-        "title": "Technical School Internship",
-        "desc": "Internship opportunities for vocational and technical school students."
+        "title": "技术院校专业实践",
+        "desc": "为职业技术院校学生提供的高级装配与数控实操实践平台。"
       },
-      "apply_note_prefix": "Application Note: ",
-      "general_note": "Dear Sir/Madam,\n\nI would like to apply for the Internship / Fresh Graduate Development Program."
+      "apply_note_prefix": "申请备注：",
+      "general_note": "尊敬的招聘负责人：\n\n我对贵公司的实习生/应届生培养项目非常感兴趣，特申请参加。"
     },
-    "testimonials_title": "What Our Team Says",
+    "testimonials_title": "员工心声与成长故事",
     "testimonials_subtitle": "What is it like to work at Polgün? Listen to their stories.",
     "process_title": "Our Application Process",
     "process_subtitle": "We evaluate our candidates with a transparent and fast process.",
@@ -840,24 +840,24 @@
     },
     "testimonials": {
       "selin": {
-        "quote": "The value given to innovation and scientific research at Polgün allows me to constantly improve myself.",
-        "role": "R&D Engineer"
+        "quote": "Polgün 对技术创新和科研成果的高度重视，让我拥有了广阔的个人成长舞台。",
+        "role": "研发工程师"
       },
       "mehmet": {
-        "quote": "Taking part in projects spanning from production to the field has provided immense experience in my career.",
-        "role": "Project Engineer"
+        "quote": "参与从工厂精密制造到海外现场落地的全流程项目，为我的职业生涯积累了宝贵经验。",
+        "role": "项目工程师"
       },
       "emre": {
-        "quote": "Working on international projects and collaborating with diverse cultures is one of my favorite aspects.",
-        "role": "Site Manager"
+        "quote": "负责海外国际化项目的现场指挥，与全球多元文化团队协作，是这份工作最令人着迷之处。",
+        "role": "现场工程主管"
       }
     },
-    "internships_title": "实习生与青年人才发展计划",
+    "values_title": "为什么选择加入 Polgün？",
     "positions_title": "最新热招职位",
-    "values_title": "为什么选择加入 Polgün？"
+    "internships_title": "实习生与青年人才发展计划"
   },
   "contact": {
-    "title": "Contact",
+    "title": "联系我们",
     "subtitle": "Contact Us",
     "desc": "You can contact us for your waterpark projects and all your questions.",
     "form_title": "Contact Form",
@@ -873,50 +873,50 @@
     "phone_label": "Phone",
     "email_label": "E-mail",
     "offices": {
-      "hq": "Headquarters",
-      "antalya": "Antalya Office",
+      "hq": "全球总部",
+      "antalya": "安塔利亚办事处",
       "spain": "Spain Sales Office",
       "bursa": "Bursa Factory",
-      "hq_address_label": "Headquarters Address",
-      "europe": "Europe Office"
+      "hq_address_label": "总部地址",
+      "europe": "欧洲分部（西班牙瓦伦西亚）"
     },
-    "hero_title": "Let's Get in Touch",
-    "hero_desc": "You can contact our expert team to develop a new waterpark project, renovate your existing facility, or get detailed information about our products.",
-    "project_request": "Project Inquiry",
+    "hero_title": "开启沟通之旅",
+    "hero_desc": "无论您计划新建大型水上乐园、升级现有度假设施，还是咨询具体产品参数，我们的专家随时恭候您的垂询。",
+    "project_request": "提交您的项目需求",
     "form": {
-      "sub_desc": "You can reach us by filling out all fields completely.",
-      "success_title": "Message Received",
-      "success_desc": "Your request has been received, our expert team will get back to you as soon as possible.",
-      "name": "Full Name",
-      "email": "Email",
-      "phone": "Phone",
-      "company": "Company / Project Name",
-      "interest_label": "Product of Interest",
-      "message": "Your Message",
-      "message_placeholder": "You can provide detailed information about your project or request...",
-      "kvkk_desc_prefix": "I have read and agree to the",
-      "kvkk_desc_suffix": " Customer - Supplier Clarification Text.",
-      "submit_btn": "Send Message",
+      "sub_desc": "请完整填写以下信息，以便我们的技术顾问能更精准地为您服务。",
+      "success_title": "需求已成功提交",
+      "success_desc": "我们已收到您的信息，资深项目经理将在 24 小时内与您取得联系。",
+      "name": "姓名",
+      "email": "电子邮箱",
+      "phone": "联系电话",
+      "company": "公司名称 / 项目名称",
+      "interest_label": "感兴趣的产品类别",
+      "message": "需求描述",
+      "message_placeholder": "请详细描述您的场地规模、预计投资或具体设备需求...",
+      "kvkk_desc_prefix": "我已阅读并同意",
+      "kvkk_desc_suffix": "。",
+      "submit_btn": "发送咨询需求",
       "interest": {
-        "slides": "Water Slides",
-        "wave_pools": "Wave Pools",
-        "lazy_river": "Lazy River",
-        "kids_parks": "Kids Playgrounds",
-        "custom_project": "Custom Project",
-        "maintenance": "Maintenance & Service"
+        "slides": "水上滑梯系统",
+        "wave_pools": "人工造浪池设备",
+        "lazy_river": "漂流河系统",
+        "kids_parks": "儿童戏水乐园",
+        "custom_project": "大型综合水上乐园定制",
+        "maintenance": "设备售后与检修保养"
       },
       "submit_error": "发送失败，请稍后重试。"
     },
-    "info_title": "Contact Information",
-    "hours_label": "Working Hours",
-    "hours_val1": "Mon–Sat: 08:30–18:00",
-    "hours_val2": "Sunday: Closed",
-    "offices_title": "Our Offices"
+    "info_title": "联系方式",
+    "hours_label": "工作时间",
+    "hours_val1": "周一至周六：08:30 – 18:00",
+    "hours_val2": "周日：休息",
+    "offices_title": "全球办事处"
   },
   "awards": {
-    "title": "Awards, Patents & Certificates",
+    "title": "权威认证与国际荣誉",
     "subtitle": "Awards and Corporate Visits",
-    "desc": "Polgün's global achievements in design, quality, and R&D.",
+    "desc": "我们对品质、安全与创新的执着追求，获得了国际权威机构与政府部门的一致认可。",
     "awards_section": "🏆 Our Awards",
     "visits_section": "🤝 Corporate Visits",
     "no_awards": "No awards published yet.",
@@ -929,43 +929,43 @@
     "quality_title": "Our Quality Certificates",
     "visits": {
       "minister": {
-        "title": "We had the honor of hosting our Minister of Industry and Technology, Mr. Mehmet Fatih Kacır, at Polgun Waterparks.",
-        "desc": "We were proud to host the delegation accompanied by our Governor of Muğla Mr. İdris Akbıyık, our Muğla Deputies Mr. Kadem Mete and Mr. Yakup Otgöz, District Governor of Menteşe Mr. Mehmet Eriş, AK Party Provincial Chairman Mr. Haluk Laçin, MHP Provincial Chairman Mr. Burak Demirel, and Mayor of Kavaklıdere Mr. Mehmet Demir at our factory. The delegation visited our production facility in Muğla and examined our R&D center.\n\nAs one of the global leaders in the industry, we take great pride in our commitment to innovation, quality, and excellence. Their visit has once again demonstrated the importance of advanced production technologies and R&D in shaping the future. We express our sincere gratitude to them for their kind visit, interest, and support."
+        "title": "国家部委领导视察工厂",
+        "desc": "政府高级别代表团莅临生产基地，对先进制造技术与出口成绩给予高度评价。"
       },
       "egekaf": {
-        "title": "Polgün Visit within the Scope of EGEKAF",
-        "desc": "During the visit carried out within EGEKAF, Polgün's project models, product development approach, and sectoral experience were shared with participants."
+        "title": "参加 EGEKAF 国际博览会",
+        "desc": "与工程领域青年才俊深度交流，展示水乐园行业的前沿研发与广阔前景。"
       },
       "msku": {
         "title": "Muğla Sıtkı Koçman University Visit",
         "desc": "Within the scope of MSKU management's visit to Polgün, R&D, production, and design activities were examined on-site. University-industry cooperation was strengthened."
       },
-      "title": "Corporate Visits",
+      "title": "重要视察与官方访问",
       "dates": {
         "2023": "2023 年",
         "2024": "2024 年"
       }
     },
     "tesciller": {
-      "benelux": "Benelux Registration Final Decision",
-      "france": "France Registration Final Decision",
-      "spain": "Spain Registration Final Decision",
-      "egypt": "Egypt Registration Final Decision",
+      "benelux": "比荷卢经济联盟商标证书",
+      "france": "法国国家商标注册证书",
+      "spain": "西班牙国家商标注册证书",
+      "egypt": "埃及国家商标注册证书",
       "greece": "Greece Registration Final Decision",
       "form": "Polgün Application Form",
       "fluorescent": "Fluorescent Lighting Patent Certificate",
       "slides": "Water Slide Design Registration Approved"
     },
     "kalite": {
-      "iso9001": "Quality Management System",
-      "iso14001": "Environmental Management System",
-      "iso45001": "Occupational Health and Safety"
+      "iso9001": "ISO 9001 质量管理体系认证",
+      "iso14001": "ISO 14001 环境管理体系认证",
+      "iso45001": "ISO 45001 职业健康安全管理体系认证"
     },
-    "patent_title": "Intellectual Property",
-    "cert_title": "Certificates",
-    "cert_subtitle": "Our Quality Documents",
-    "certificates": "荣誉证书",
-    "tag": "品质与荣誉"
+    "patent_title": "知识产权",
+    "cert_title": "资质认证",
+    "cert_subtitle": "国际质量管理体系证书",
+    "tag": "品质与荣誉",
+    "certificates": "荣誉证书"
   },
   "factories": {
     "title": "Our Factories",
@@ -974,18 +974,18 @@
       "istanbul": "Istanbul",
       "bursa": "Bursa",
       "mugla": "Mugla",
-      "france": "France",
+      "france": "法国",
       "saudi_arabia": "Saudi Arabia",
       "serbia": "Serbia",
       "turkey": "Turkey",
-      "spain": "Spain",
-      "egypt": "Egypt",
+      "spain": "西班牙",
+      "egypt": "埃及",
       "hungary": "Hungary",
       "south_korea": "South Korea",
       "greece": "Greece",
-      "composite": "Composite & RTM Production Facility",
-      "mold": "Model & CNC Mold Workshop",
-      "steel": "Steel Construction Factory"
+      "composite": "复合材料与 RTM 制造中心",
+      "mold": "数控 CNC 精密模具车间",
+      "steel": "重型钢结构塔架制造厂"
     },
     "areas": {
       "composite": "45,000 m²",
@@ -994,9 +994,9 @@
     }
   },
   "history": {
-    "title": "Our History",
+    "title": "四十年创新与辉煌历程",
     "journey": "Polgün's Journey from 2002 to Present",
-    "milestones_title": "Milestones",
+    "milestones_title": "里程碑事件",
     "growth_title": "Our Growth Story",
     "facilities": "Our Facilities",
     "growing_power": "Growing Manufacturing Power",
@@ -1013,36 +1013,36 @@
       "2026": "University-industry cooperation was strengthened with the Marmara Teknokent office."
     },
     "tags": {
-      "1985": "Establishment and First Composite Production",
-      "2002": "First Water Park Export",
-      "2008": "R&D and Engineering Department",
-      "2015": "New Integrated Manufacturing Facility",
-      "2019": "Export Network to 50+ Countries",
-      "2021": "Ministry-Approved R&D Center",
-      "2025": "Industry 4.0 & Smart Park Technologies",
-      "2026": "Global Leadership Vision"
+      "1985": "公司成立与第一批复合材料生产",
+      "2002": "首个海外水上乐园出口项目",
+      "2008": "成立专业研发与工程技术部",
+      "2015": "新落成超大规模现代化一体生产基地",
+      "2019": "全球出口业务覆盖 50 多个国家",
+      "2021": "获国家部委正式认证为官方研发中心",
+      "2025": "工业 4.0 与智慧水乐园物联网技术",
+      "2026": "迈向全球顶尖领军品牌的宏伟愿景"
     },
     "milestones_tag": "Milestones",
-    "desc": "Over the years, we have continuously grown our manufacturing strength, engineering expertise, and global project experience. Every step we took has been part of a stronger manufacturing infrastructure, innovative products, and the Polgün journey reaching more than 70 countries today.",
+    "desc": "多年来，我们不断增强制造实力、工程技术和全球项目经验。我们走过的每一步，都见证了 Polgün 走向全球 70 多个国家的坚实足迹。",
     "stats": {
-      "completed": "Completed Projects",
-      "countries": "Countries",
-      "production": "Integrated Manufacturing",
-      "team": "Employees",
-      "experience": "Years of Experience",
-      "projects": "Projects"
+      "completed": "交付项目",
+      "countries": "出口国家",
+      "production": "一体化制造",
+      "team": "专业员工",
+      "experience": "年行业积淀",
+      "projects": "成功项目"
     },
-    "cta_btn": "立即咨询",
-    "cta_desc": "让行业先驱的专业经验为您的投资项目保驾护航。",
-    "cta_title": "与我们携手共创辉煌",
+    "tag": "发展历程",
     "intro": "自 1985 年创立至今，在水上游乐产业谱写不断超越的创新篇章。",
     "milestones_desc": "镌刻在企业辉煌发展史上的重要时刻。",
-    "tag": "发展历程"
+    "cta_title": "与我们携手共创辉煌",
+    "cta_desc": "让行业先驱的专业经验为您的投资项目保驾护航。",
+    "cta_btn": "立即咨询"
   },
   "news": {
-    "title": "News & Events",
+    "title": "新闻与行业动态",
     "subtitle": "News from Polgün",
-    "desc": "Current developments in our company, exhibitions we participate in, and events.",
+    "desc": "了解 Polgün 的最新项目落地、技术创新发布与国际行业展会动态。",
     "tabs": {
       "articles": "News & Events",
       "fairs": "Fairs & Expositions",
@@ -1064,10 +1064,10 @@
     "open_flipbook": "Read Newsletter",
     "flipbook_loading": "Loading Newsletter...",
     "flipbook_error": "Failed to load newsletter. Please try again.",
-    "flipbook_close": "Close",
+    "flipbook_close": "关闭 (Esc)",
     "flipbook_next": "Next Page",
     "flipbook_prev": "Previous Page",
-    "flipbook_pages": "Page",
+    "flipbook_pages": "页码",
     "issue_format": "Issue {{number}}",
     "months": {
       "february": "February",
@@ -1097,39 +1097,39 @@
     },
     "all_news": "全部新闻",
     "bulletin": "电子期刊",
-    "flipbook_open": "在线阅读期刊画册",
-    "read_more": "阅读全文"
+    "read_more": "阅读全文",
+    "flipbook_open": "在线阅读期刊画册"
   },
   "team": {
-    "title": "Our Team",
+    "title": "卓越的专家团队",
     "subtitle": "Polgün Family",
-    "desc": "Our management and technical staff who are experts in their fields, adding value to our projects.",
+    "desc": "由资深结构工程师、流体力学专家、建筑景观师和项目总监组成的全球化精英队伍。",
     "board": "Board of Directors",
     "technical_staff": "Technical Staff",
+    "tag": "核心团队",
     "departments": {
       "all": "所有部门",
-      "design": "设计与建筑部",
-      "engineering": "工程与研发部",
       "management": "管理决策层",
+      "engineering": "工程与研发部",
+      "design": "设计与建筑部",
       "production": "生产与质检部",
       "sales": "全球商务与客户成功部"
-    },
-    "tag": "核心团队"
+    }
   },
   "splashtower": {
-    "title": "Splash Tower",
-    "subtitle": "Fun Water Play Towers",
-    "desc": "Safe and thematic interactive adventure areas where children meet water.",
+    "title": "水寨综合体 (Splash Tower)",
+    "subtitle": "大型多功能家庭互动水上城堡",
+    "desc": "集多条滑道、大翻桶、攀爬网与水枪于一体，提供极富吸引力的全家乐游体验。",
     "themes": {
       "pirate": {
-        "name": "Pirate Theme",
+        "name": "加勒比海盗主题",
         "location": "Antalya, Turkey",
-        "desc": "Designed as Polgün's signature theme and favored by many water parks, the Pirate Theme allows children to sail into open seas full of pirates and have fun in this imaginary world. Fully customizable in any size and desired color option, the Pirate Theme features giant parrots, an iconic shark, interactive water plays, palm trees, and a giant water bucket with a pirate head. When you see adults having as much fun as the little guests, choosing Polgün's Pirate Theme for your water park will be inevitable."
+        "desc": "登上装备水炮与互动滑道的加勒比海盗战船，扬帆起航探索神秘宝藏。"
       },
       "jungle": {
-        "name": "Jungle Theme",
+        "name": "热带雨林主题",
         "location": "Turkey",
-        "desc": "Step into the wild with the Polgün Jungle Splash Tower, a themed water playground inspired by the beauty, energy, and mystery of tropical rainforests. Brought to life with forest characters that spark the imagination such as elephants, parrots, owls, squirrels, and giant trees, this theme creates an exciting environment where children can explore, play, and unleash their creativity. Nature-inspired details, interactive water features, and adventurous decorative elements turn the playground into a vivid jungle journey. Designed with earth tones, wood-look surfaces, and rich nature-themed graphics, the Jungle Splash Tower offers a unique visual identity for water parks, resorts, and family entertainment centers. With its fully customizable structure in terms of size, layout, color palette, and thematic details, it can be tailored to the concept and capacity needs of every project."
+        "desc": "置身于郁郁葱葱的丛林瀑布与热带动物小品之中，体验大自然的奇趣戏水狂欢。"
       },
       "custom": {
         "name": "Custom Theme",
@@ -1157,135 +1157,139 @@
         "desc": "Bring the prehistoric world to life with the Polgün Jurassic Splash Tower, a themed water play area designed to spark curiosity, excitement, and adventure."
       },
       "galaxy": {
-        "name": "Galaxy Theme",
-        "location": "Turkey",
-        "desc": "Get ready for takeoff with the Polgün Galaxy Splash Tower, a themed water play area designed to take children on an exciting journey through the wonders of the universe."
+        "name": "银河星系主题",
+        "location": "土耳其",
+        "desc": "搭载 Polgün 银河星系 Splash Tower 探索浩瀚宇宙！专为孩子们打造的科幻水上探索城堡，开启穿越星际的奇幻水上冒险之旅。"
+      },
+      "castle": {
+        "name": "中世纪城堡主题",
+        "desc": "宏伟的童话水上城堡，配备多层瞭望台、吊桥与梦幻水滑梯组合。"
       }
     },
-    "hero_subtitle": "Water slides and entertainment zones designed with various themes",
-    "theme_categories": "Theme Categories"
+    "hero_subtitle": "融合多元主题设计的水上滑梯与亲子娱乐城堡",
+    "theme_categories": "主题系列分类"
   },
   "splashzone": {
-    "title": "Splash Zone",
-    "subtitle": "Safe Children Water Play Areas",
-    "desc": "Kids' favorite fun spots with spray play elements, water guns, and tipping buckets."
+    "title": "儿童戏水区 (Splash Zone)",
+    "subtitle": "安全无忧的儿童互动戏水天地",
+    "desc": "专为儿童打造的零水深互动戏水平台，配备感应喷泉、雾化喷头与趣味卡通水玩具。"
   },
   "regions": {
-    "asia": "Asia",
-    "europe": "Europe",
-    "africa": "Africa",
-    "america": "America"
+    "asia": "亚洲",
+    "europe": "欧洲",
+    "africa": "非洲",
+    "america": "美洲"
   },
   "designsPage": {
-    "title": "Our Industrial Designs",
-    "desc": "Polgün shapes the waterpark sector with its unique industrial designs registered in line with R&D and design processes.",
+    "title": "外观设计专利",
+    "desc": "Polgün 凭借获得官方注册的原创工业外观设计，引领水上游乐设施行业的设计潮流。",
     "filters": {
-      "all": "All",
-      "project_bound": "Project-Bound Designs",
-      "independent": "Independent Designs",
-      "by_year": "By Year"
+      "all": "全部",
+      "project_bound": "项目定制设计",
+      "independent": "独立通用设计",
+      "by_year": "按年份筛选"
     },
     "card": {
-      "registered": "Registered",
-      "project": "Project Name",
-      "independent_label": "Independent Design",
-      "design_name": "Rights / Work Name",
-      "registration_no": "Registration No",
-      "application_no": "Application No",
-      "scope": "Scope",
-      "app_date": "Application Date",
-      "reg_date": "Registration Date",
-      "inspect": "Inspect Details",
-      "national": "National"
+      "registered": "已注册",
+      "project": "项目名称",
+      "independent_label": "独立外观设计",
+      "design_name": "外观设计名称",
+      "registration_no": "注册号",
+      "application_no": "申请号",
+      "scope": "保护范围",
+      "app_date": "申请日期",
+      "reg_date": "注册日期",
+      "inspect": "查看设计详情",
+      "national": "国家级"
     }
   },
   "publicationsPage": {
-    "title": "Our Academic Publications",
-    "desc": "Polgün's academic, technical, and sectoral publication studies contribute to next-generation engineering solutions and sectoral literature.",
-    "search_placeholder": "Search by publication title, project name, or project code...",
+    "title": "学术论文与行业报告",
+    "desc": "探索 Polgün 工程师与科研团队在水动力学、复合材料及智能乐园领域发表的学术成果与著作。",
+    "search_placeholder": "按论文标题、项目名称或编号搜索...",
     "filters": {
-      "all": "All",
-      "national": "National",
-      "international": "International",
-      "article": "Article",
-      "proceedings": "Proceedings",
-      "book_chapter": "Book Chapter",
-      "by_year": "By Year"
+      "all": "全部学术成果",
+      "national": "国内论文",
+      "international": "国际论文",
+      "article": "期刊论文",
+      "proceedings": "会议论文",
+      "book_chapter": "学术著作章节",
+      "by_year": "按年份筛选"
     },
     "card": {
-      "published": "Published",
-      "preparing": "Preparing",
-      "submitted": "Submitted",
-      "accepted": "Accepted",
-      "project_code": "Project Code",
-      "project_name": "Project Name",
-      "type": "Publication Type",
-      "scope": "Scope",
+      "published": "已发表",
+      "preparing": "准备中",
+      "submitted": "已投稿",
+      "accepted": "已接收",
+      "project_code": "项目代码",
+      "project_name": "项目名称",
+      "type": "出版类型",
+      "scope": "学术级别",
       "isbn": "ISBN",
       "issn": "ISSN",
-      "e_isbn": "E-ISBN",
-      "e_issn": "E-ISSN",
-      "online_issn": "Online ISSN",
-      "pub_date": "Publication Date",
-      "inspect": "Inspect Publication",
-      "view_proceedings": "View Proceedings",
-      "open_doc": "Open Document",
-      "details": "Detailed Info",
-      "authors": "Authors:",
-      "project": "Project / Topic",
-      "international": "International",
-      "national": "National",
-      "download": "Download PDF"
+      "e_isbn": "e-ISBN",
+      "e_issn": "e-ISSN",
+      "online_issn": "网络版 ISSN",
+      "pub_date": "发表日期",
+      "inspect": "在线查阅",
+      "view_proceedings": "查看会议报告",
+      "open_doc": "打开文档",
+      "details": "查看详情",
+      "authors": "作者：",
+      "project": "项目 / 主题",
+      "international": "国际级",
+      "national": "国家级",
+      "download": "下载 PDF"
     }
   },
   "patentsPage": {
-    "title": "Our Patents",
-    "desc": "Polgün's official patent and invention registrations that lead the industry and protect technological innovation.",
+    "title": "发明与实用专利",
+    "desc": "Polgün 通过持续的技术研发和严谨的工程创新，打造受国际和国内专利保护的领先水上游乐技术。",
     "filters": {
-      "all": "All",
-      "registered": "Registered",
-      "pending": "In Application",
-      "national": "National",
-      "international": "International"
+      "all": "全部",
+      "registered": "已授权专利",
+      "pending": "申请审中",
+      "national": "国内专利",
+      "international": "国际专利"
     },
     "card": {
-      "project": "Project Name",
-      "patent_name": "Patent / Invention Name",
-      "scope": "Scope",
-      "app_no": "Application No",
-      "pct_no": "PCT No",
-      "app_date": "Application Date",
-      "reg_date": "Registration Date",
-      "status": "Current Status",
-      "registered_badge": "Registered",
-      "pending_badge": "In Application"
+      "project": "关联项目 / 参考",
+      "patent_name": "专利名称",
+      "scope": "保护范围",
+      "app_no": "申请号",
+      "pct_no": "PCT / 注册号",
+      "app_date": "申请日期",
+      "reg_date": "授权日期",
+      "status": "状态",
+      "registered_badge": "已获授权",
+      "pending_badge": "审核中"
     },
     "filter": {
-      "all": "All"
+      "all": "全部"
     }
   },
   "flipbook": {
-    "single_page": "Large View",
-    "dual_page": "Two Pages",
-    "single_page_title": "Single Page (Large Reading)",
-    "dual_page_title": "Two Pages (Magazine Spread)",
-    "zoom_out": "Zoom Out (-)",
-    "zoom_reset": "Reset Zoom (0)",
-    "zoom_in": "Zoom In (+)",
-    "open_pdf": "Open / Download PDF in New Tab",
-    "keyboard_hint": "Keyboard: ← / →",
-    "zoom_hint": "Zoom: + / -"
+    "single_page": "大图模式",
+    "dual_page": "双页模式",
+    "single_page_title": "单页（放大阅读）",
+    "dual_page_title": "双页（画册视图）",
+    "zoom_out": "缩小 (-)",
+    "zoom_reset": "重置缩放 (0)",
+    "zoom_in": "放大 (+)",
+    "open_pdf": "在新标签页打开 / 下载 PDF",
+    "keyboard_hint": "键盘：← / →",
+    "zoom_hint": "缩放：+ / -"
   },
   "knowledgeCenter": {
-    "title": "Knowledge Center",
-    "desc": "Explore rich technical articles on engineering, design, manufacturing technologies, and water park management by Polgün Waterparks & Attractions.",
-    "read_more": "Read More",
-    "faqs_title": "Frequently Asked Questions",
-    "related_title": "Related Articles"
+    "title": "知识中心",
+    "desc": "深入了解由 Polgün 专家团队撰写的关于水上乐园设计、玻璃钢复合材料、安全标准与运营维护的技术干货。",
+    "read_more": "阅读全文",
+    "faqs_title": "常见问题解答",
+    "related_title": "相关精选文章"
   },
   "factoriesPage": {
-    "desc": "Discover our modern integrated facilities where world-class water slides and attractions are manufactured.",
-    "subtitle": "Modern and Sustainable Manufacturing Facilities",
-    "title": "Our Manufacturing Facilities"
+    "desc": "探索诞生了世界上众多知名水上滑梯与乐园设备的现代化综合工业园区。",
+    "subtitle": "全球先进的一体化制造工厂",
+    "title": "现代化制造基地"
   }
 }
