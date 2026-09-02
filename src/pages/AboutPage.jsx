@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, useLocation, useSearchParams } from 'react-router-dom'
 // ============================================================
 // ABOUT PAGE — Gerçek metinler + Ödüller & Ziyaretler bölümü
 // ============================================================
@@ -174,6 +174,8 @@ const BRANDS_DATA = [
 export default function AboutPage() {
   const { t } = useTranslation()
   const navigate = useNavigate()
+  const location = useLocation()
+  const [searchParams] = useSearchParams()
   const [liveAwards, setLiveAwards] = useState([])
   const [brandFilter, setBrandFilter] = useState('all')
 
@@ -206,23 +208,23 @@ export default function AboutPage() {
   }, [])
 
   useEffect(() => {
-    const params = new URLSearchParams(window.location.search);
-    const anchor = params.get('anchor');
+    const anchor = searchParams.get('anchor') || (location.hash ? location.hash.replace('#', '') : null)
     if (anchor) {
-      setTimeout(() => {
-        const el = document.getElementById(anchor);
+      const timer = setTimeout(() => {
+        const el = document.getElementById(anchor)
         if (el) {
-          const yOffset = -100;
+          const yOffset = -100
           window.scrollTo({
             top: el.getBoundingClientRect().top + window.pageYOffset + yOffset,
             behavior: 'smooth'
-          });
+          })
         }
-      }, 100);
+      }, 150)
+      return () => clearTimeout(timer)
     } else {
-      window.scrollTo(0, 0);
+      window.scrollTo(0, 0)
     }
-  }, []);
+  }, [searchParams, location.search, location.hash])
 
   const visits = [
     {
@@ -697,7 +699,7 @@ export default function AboutPage() {
             </div>
 
             {/* Kalite Belgeleri */}
-            <div>
+            <div id="sertifikalar" className="scroll-mt-28">
               <p className="text-xs font-bold tracking-[0.25em] uppercase mb-4" style={{ color: 'var(--th-polgun-blue)' }}>{t('awards.cert_title', { defaultValue: 'Sertifikalar' })}</p>
               <h2 className="text-3xl font-black mb-8" style={{ color: 'var(--th-text)' }}>{t('awards.cert_subtitle', { defaultValue: 'Kalite Belgelerimiz' })}</h2>
               <div className="flex flex-col gap-3">

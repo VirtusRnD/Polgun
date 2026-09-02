@@ -1875,21 +1875,42 @@ export default function ProjectsPage({ setActivePage }) {
   const location = useLocation()
 
   const getMatchedRegion = () => {
-    const param = searchParams.get('region') || searchParams.get('bolge') || location.state?.region;
-    if (param) {
-      const normalizedParam = param.toLowerCase().replace(/[-_]/g, '');
-      const matched = REGIONS.find((r) => r.toLowerCase().replace(/[-_]/g, '') === normalizedParam);
-      if (matched) return matched;
+    const raw = searchParams.get('region') || searchParams.get('bolge') || location.state?.region;
+    if (raw) {
+      try {
+        const decoded = decodeURIComponent(raw).trim();
+        const normalizedParam = decoded.toLowerCase().replace(/[-_\s]/g, '');
+        const matched = REGIONS.find((r) => {
+          const normR = r.toLowerCase().replace(/[-_\s]/g, '');
+          return normR === normalizedParam || r.toLowerCase() === decoded.toLowerCase();
+        });
+        if (matched) return matched;
+      } catch (e) {
+        // fallback
+      }
     }
     return 'Tümü';
   };
 
   const getMatchedType = () => {
-    const param = searchParams.get('type') || searchParams.get('tur') || searchParams.get('category') || location.state?.type;
-    if (param) {
-      const normalizedParam = param.toLowerCase().replace(/[-_&]/g, '');
-      const matched = TYPES.find((typ) => typ.toLowerCase().replace(/[-_&]/g, '') === normalizedParam);
-      if (matched) return matched;
+    const raw = searchParams.get('type') || searchParams.get('tur') || searchParams.get('category') || location.state?.type;
+    if (raw) {
+      try {
+        const decoded = decodeURIComponent(raw).trim();
+        const normalizedParam = decoded.toLowerCase().replace(/[-_&\s]/g, '');
+        const matched = TYPES.find((typ) => {
+          const normT = typ.toLowerCase().replace(/[-_&\s]/g, '');
+          if (normT === normalizedParam || typ.toLowerCase() === decoded.toLowerCase()) return true;
+          if (normalizedParam.includes('otel') && typ.includes('Otel')) return true;
+          if (normalizedParam.includes('kapali') && typ.includes('Kapalı')) return true;
+          if (normalizedParam.includes('acik') && typ.includes('Açık')) return true;
+          if (normalizedParam.includes('resort') && typ.includes('Resort')) return true;
+          return false;
+        });
+        if (matched) return matched;
+      } catch (e) {
+        // fallback
+      }
     }
     return 'Tümü';
   };
@@ -1917,14 +1938,10 @@ export default function ProjectsPage({ setActivePage }) {
 
   useEffect(() => {
     const targetRegion = getMatchedRegion();
-    if (targetRegion !== region) {
-      setRegion(targetRegion);
-    }
+    setRegion(targetRegion);
     const targetType = getMatchedType();
-    if (targetType !== type) {
-      setType(targetType);
-    }
-  }, [searchParams, location.state]);
+    setType(targetType);
+  }, [searchParams, location.search, location.state]);
 
   const regionTranslationMap = {
     'Tümü': t('common.all'),

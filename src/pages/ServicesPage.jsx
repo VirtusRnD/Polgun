@@ -1,8 +1,9 @@
 // ============================================================
 // SERVICES PAGE — Gerçek görseller + CSS değişkenleri + glass efekt
 // =======================================================
+import { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link, useNavigate, useSearchParams, useLocation } from 'react-router-dom'
 import heroImage from '../assets/polgun-featured-projects-4.avif'
 import concept_design from '../assets/production/concept_design.avif'
 import assemble from '../assets/production/assemble.avif'
@@ -32,6 +33,21 @@ function GlassCard({ children, className = '', style = {} }) {
 export default function ServicesPage({ setActivePage }) {
 	const { t } = useTranslation()
 	const navigate = useNavigate()
+	const [searchParams] = useSearchParams()
+	const location = useLocation()
+
+	useEffect(() => {
+		const anchor = searchParams.get('anchor') || (location.hash ? location.hash.replace('#', '') : null)
+		if (anchor) {
+			const timer = setTimeout(() => {
+				const el = document.getElementById(anchor)
+				if (el) {
+					el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+				}
+			}, 150)
+			return () => clearTimeout(timer)
+		}
+	}, [searchParams, location.hash])
 
 	const steps = [
 		{
@@ -144,7 +160,7 @@ export default function ServicesPage({ setActivePage }) {
 							<div
 								key={i}
 								id={step.id}
-								className={`grid lg:grid-cols-2 gap-16 items-center ${i % 2 === 1 ? 'lg:[&>*:first-child]:order-2' : ''}`}
+								className={`scroll-mt-28 grid lg:grid-cols-2 gap-16 items-center ${i % 2 === 1 ? 'lg:[&>*:first-child]:order-2' : ''}`}
 							>
 								{/* Metin */}
 								<div>

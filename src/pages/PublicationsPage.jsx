@@ -465,7 +465,7 @@ export default function PublicationsPage() {
                     {/* Yazarlar & Kod Tanımlayıcılar */}
                     <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-xs" style={{ color: 'var(--th-text-muted)' }}>
                       <div>
-                        <span className="font-bold">Yazarlar:</span> {pub.authors}
+                        <span className="font-bold">{t('publicationsPage.card.authors', { defaultValue: 'Yazarlar:' })}</span> {pub.authors}
                       </div>
                       {pub.identifierVal && (
                         <div className="flex items-center gap-1.5">

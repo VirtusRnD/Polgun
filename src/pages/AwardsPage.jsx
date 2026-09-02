@@ -58,7 +58,7 @@ export default function AwardsPage({ setActivePage }) {
   ]
 
   const tesciller = [
-    { title: t('awards.tesciller.benelux'), country: t('factories.names.france', {defaultValue: 'Benelux'}), file: '/documents/tesciller/Benelux-Tescil.pdf' },
+    { title: t('awards.tesciller.benelux'), country: t('factories.names.france', { defaultValue: 'Benelux' }), file: '/documents/tesciller/Benelux-Tescil.pdf' },
     { title: t('awards.tesciller.france'), country: t('factories.names.france'), file: '/documents/tesciller/Fransa-Tescil.pdf' },
     { title: t('awards.tesciller.spain'), country: t('factories.names.spain'), file: '/documents/tesciller/Ispanya-Tescil.pdf' },
     { title: t('awards.tesciller.egypt'), country: t('factories.names.egypt'), file: '/documents/tesciller/Misir-Tescil.pdf' },
@@ -69,11 +69,17 @@ export default function AwardsPage({ setActivePage }) {
   ]
 
   const kaliteBelgeleri = [
-    { title: 'ISO 9001:2015', desc: t('awards.kalite.iso9001'), file: '/documents/kalite/ISO-9001.pdf' },
-    { title: 'ISO 14001:2015', desc: t('awards.kalite.iso14001'), file: '/documents/kalite/ISO-14001.pdf' },
-    { title: 'ISO 45001:2018', desc: t('awards.kalite.iso45001'), file: '/documents/kalite/ISO-45001.pdf' },
-  ]
+    { title: 'ISO 9001:2015', desc: t('awards.kalite.iso9001'), file: '/documents/kalite/ISO-9001.pdf', icon: 'ISO' },
+    { title: 'ISO 14001:2015', desc: t('awards.kalite.iso14001'), file: '/documents/kalite/ISO-14001.pdf', icon: 'ISO' },
+    { title: 'ISO 45001:2018', desc: t('awards.kalite.iso45001'), file: '/documents/kalite/ISO-45001.pdf', icon: 'ISO' },
+    { title: 'ISO 3834-2', desc: 'Çelik Konstrüksiyon İmalatı', file: '/documents/kalite/ISO-3834-2.pdf', icon: 'ISO' },
+    { title: 'ASTM F2376-22', desc: 'Ürün Standart Belgesi', file: '/documents/kalite/ASTM-F2376-22.pdf', icon: 'ASTM' },
+    { title: 'CPR 15473-1090', desc: 'Kaynak Sertifikası', file: '/documents/kalite/CPR-15473-1090.pdf', icon: 'CPR' },
+    { title: 'TS-EN 1069', desc: 'Ürün Standart Belgesi', file: '/documents/kalite/TS-EN-1069.pdf', icon: 'TS-EN' },
+    { title: 'TS-EN 1176-1', desc: 'Ürün Standart Belgesi', file: '/documents/kalite/TS-EN-1176-1.pdf', icon: 'TS-EN' },
+    { title: 'TS-EN 17232', desc: 'Ürün Standart Belgesi', file: '/documents/kalite/TS-EN-17232.pdf', icon: 'TS-EN' },
 
+  ]
   return (
     <main className="pt-20" style={{ backgroundColor: 'var(--th-bg)' }}>
 
@@ -133,7 +139,7 @@ export default function AwardsPage({ setActivePage }) {
 
           {/* Ziyaretler */}
           <div>
-            <h3 className="text-xl font-black mb-10" style={{ color: 'var(--th-text)' }}>🤝 {t('awards.visits.title', {defaultValue: 'Kurumsal Ziyaretler'})}</h3>
+            <h3 className="text-xl font-black mb-10" style={{ color: 'var(--th-text)' }}>🤝 {t('awards.visits.title', { defaultValue: 'Kurumsal Ziyaretler' })}</h3>
             <div className="grid sm:grid-cols-2 gap-6">
               {visits.map((visit, i) => (
                 <div key={i} className="rounded-2xl overflow-hidden group" style={{ backgroundColor: 'var(--th-bg)', border: '1px solid color-mix(in srgb, var(--th-border) 12%, transparent)', boxShadow: '0 4px 24px rgba(0,0,0,0.06)' }}>
@@ -171,7 +177,7 @@ export default function AwardsPage({ setActivePage }) {
 
             {/* Tesciller */}
             <div>
-              <p className="text-xs font-bold tracking-[0.25em] uppercase mb-4" style={{ color: 'var(--th-polgun-blue)' }}>{t('awards.patent_title', {defaultValue: 'Fikri Mülkiyet'})}</p>
+              <p className="text-xs font-bold tracking-[0.25em] uppercase mb-4" style={{ color: 'var(--th-polgun-blue)' }}>{t('awards.patent_title', { defaultValue: 'Fikri Mülkiyet' })}</p>
               <h2 className="text-3xl font-black mb-8" style={{ color: 'var(--th-text)' }}>{t('nav.awards')}</h2>
               <div className="flex flex-col gap-3">
                 {tesciller.map((t, i) => (
@@ -183,7 +189,7 @@ export default function AwardsPage({ setActivePage }) {
                       <span className="text-sm font-semibold" style={{ color: 'var(--th-text)' }}>{t.title}</span>
                     </div>
                     <svg className="w-4 h-4 shrink-0 ml-3 group-hover:translate-x-0.5 transition-transform" style={{ color: 'var(--th-primary)' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                     </svg>
                   </a>
                 ))}
@@ -192,22 +198,22 @@ export default function AwardsPage({ setActivePage }) {
 
             {/* Kalite Belgeleri */}
             <div>
-              <p className="text-xs font-bold tracking-[0.25em] uppercase mb-4" style={{ color: 'var(--th-polgun-blue)' }}>{t('awards.cert_title', {defaultValue: 'Sertifikalar'})}</p>
-              <h2 className="text-3xl font-black mb-8" style={{ color: 'var(--th-text)' }}>{t('awards.cert_subtitle', {defaultValue: 'Kalite Belgelerimiz'})}</h2>
-              <div className="flex flex-col gap-4">
+              <p className="text-xs font-bold tracking-[0.25em] uppercase mb-4" style={{ color: 'var(--th-polgun-blue)' }}>{t('awards.cert_title', { defaultValue: 'Sertifikalar' })}</p>
+              <h2 className="text-3xl font-black mb-8" style={{ color: 'var(--th-text)' }}>{t('awards.cert_subtitle', { defaultValue: 'Kalite Belgelerimiz' })}</h2>
+              <div className="flex flex-col gap-3">
                 {kaliteBelgeleri.map((kb, i) => (
                   <a key={i} href={kb.file} target="_blank" rel="noopener noreferrer"
-                    className="flex items-center gap-5 p-6 rounded-2xl transition-all duration-200 hover:-translate-y-0.5 group"
-                    style={{ backgroundColor: 'var(--th-surface)', border: '1px solid color-mix(in srgb, var(--th-border) 12%, transparent)', boxShadow: '0 4px 20px rgba(0,0,0,0.05)' }}>
-                    <div className="w-14 h-14 rounded-2xl flex items-center justify-center shrink-0 text-xl font-black" style={{ backgroundColor: 'color-mix(in srgb, var(--th-primary) 10%, transparent)', color: 'var(--th-primary)' }}>
-                      ISO
+                    className="flex items-center gap-3.5 p-3.5 sm:p-4 rounded-xl transition-all duration-200 hover:-translate-y-0.5 group"
+                    style={{ backgroundColor: 'var(--th-surface)', border: '1px solid color-mix(in srgb, var(--th-border) 12%, transparent)', boxShadow: '0 2px 12px rgba(0,0,0,0.03)' }}>
+                    <div className="w-11 h-11 rounded-xl flex items-center justify-center shrink-0 text-xs font-black tracking-wider" style={{ backgroundColor: 'color-mix(in srgb, var(--th-primary) 10%, transparent)', color: 'var(--th-primary)' }}>
+                      {kb.icon}
                     </div>
-                    <div>
-                      <div className="font-black" style={{ color: 'var(--th-text)' }}>{kb.title}</div>
-                      <div className="text-sm mt-0.5" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 60%, transparent)' }}>{kb.desc}</div>
+                    <div className="min-w-0">
+                      <div className="font-black text-sm truncate" style={{ color: 'var(--th-text)' }}>{kb.title}</div>
+                      <div className="text-xs mt-0.5 truncate" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 60%, transparent)' }}>{kb.desc}</div>
                     </div>
                     <svg className="w-4 h-4 ml-auto shrink-0 group-hover:translate-x-0.5 transition-transform" style={{ color: 'var(--th-primary)' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                     </svg>
                   </a>
                 ))}

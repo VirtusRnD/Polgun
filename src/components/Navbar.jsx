@@ -42,7 +42,7 @@ export default function Navbar({ activePage, setActivePage, colorPalette, locati
         {
           title: null,
           links: [
-            { label: t('nav.planning'), desc: '', page: 'services', anchor: 'urun-tasarimi-ve-temalandirma', to: '/services?anchor=urun-tasarimi-ve-temalandirma  ' },
+            { label: t('nav.planning'), desc: '', page: 'services', anchor: 'urun-tasarimi-ve-temalandirma', to: '/services?anchor=urun-tasarimi-ve-temalandirma' },
             { label: t('nav.design'), desc: '', page: 'services', anchor: 'muhendislik-ve-projelendirme', to: '/services?anchor=muhendislik-ve-projelendirme' },
             { label: t('nav.engineering'), desc: '', page: 'services', anchor: 'uretim', to: '/services?anchor=uretim' },
             { label: t('nav.installation'), desc: '', page: 'services', anchor: 'proje-yonetimi-ve-sevkiyat', to: '/services?anchor=proje-yonetimi-ve-sevkiyat' },
@@ -56,8 +56,28 @@ export default function Navbar({ activePage, setActivePage, colorPalette, locati
       id: 'projects',
       label: t('nav.projects'),
       page: 'projects',
-      mega: false,
-      to: '/projects',
+      mega: true,
+      sections: [
+        {
+          title: t('projects.filters.region', { defaultValue: 'Bölgeye Göre' }),
+          links: [
+            { label: t('common.all_projects', { defaultValue: 'Tüm Projeler' }), desc: '', page: 'projects', to: '/projects' },
+            { label: `${t('regions.europe', { defaultValue: 'Avrupa' })} ${t('footer.projects_title', { defaultValue: 'Projeleri' })}`, desc: '', page: 'projects', to: '/projects?region=Avrupa' },
+            { label: `${t('regions.asia', { defaultValue: 'Asya' })} ${t('footer.projects_title', { defaultValue: 'Projeleri' })}`, desc: '', page: 'projects', to: '/projects?region=Asya' },
+            { label: `${t('regions.africa', { defaultValue: 'Afrika' })} ${t('footer.projects_title', { defaultValue: 'Projeleri' })}`, desc: '', page: 'projects', to: '/projects?region=Afrika' },
+            { label: `${t('regions.america', { defaultValue: 'Amerika' })} ${t('footer.projects_title', { defaultValue: 'Projeleri' })}`, desc: '', page: 'projects', to: '/projects?region=Amerika' },
+          ],
+        },
+        {
+          title: t('projects.filters.type', { defaultValue: 'Türe Göre' }),
+          links: [
+            { label: t('projects.types.outdoor', { defaultValue: 'Açık Alan Su Parkı' }), desc: '', page: 'projects', to: '/projects?type=Açık Alan Su Parkı' },
+            { label: t('projects.types.hotel', { defaultValue: 'Otel & Su Parkı' }), desc: '', page: 'projects', to: '/projects?type=Otel & Su Parkı' },
+            { label: t('projects.types.indoor', { defaultValue: 'Kapalı Alan Su Parkı' }), desc: '', page: 'projects', to: '/projects?type=Kapalı Alan Su Parkı' },
+            { label: t('projects.types.resort', { defaultValue: 'Resort Tatil Köyü' }), desc: '', page: 'projects', to: '/projects?type=Resort Tatil Köyü' },
+          ],
+        },
+      ],
     },
     {
       id: 'products',
@@ -327,6 +347,7 @@ export default function Navbar({ activePage, setActivePage, colorPalette, locati
                     <span className="text-xs" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 55%, transparent)' }}>
                       {item.id === 'products' && 'Tüm ürün ve mekan tiplerini keşfedin'}
                       {item.id === 'services' && 'Anahtar teslim proje süreçlerimizi inceleyin'}
+                      {item.id === 'projects' && '3000+ tamamlanan global su parkı projesini inceleyin'}
                       {item.id === 'about' && "Polgün'ün 40 yıllık hikayesini keşfedin"}
                       {item.id === 'arge' && "Yenilikçi su parkı teknolojileri ve tescillerimiz"}
                     </span>

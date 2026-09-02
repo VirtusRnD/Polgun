@@ -65,6 +65,45 @@ function SelectField({ label, name, value, onChange, options }) {
 }
 
 // ── İletişim Kartı ─────────────────────────────────────────
+function formatContactLine(line) {
+  if (typeof line !== 'string') return line
+
+  // E-posta kontrolü
+  if (line.includes('@')) {
+    return (
+      <a
+        href={`mailto:${line.trim()}`}
+        className="text-sm leading-relaxed block transition-colors hover:underline font-medium"
+        style={{ color: 'var(--th-polgun-blue)' }}
+      >
+        {line}
+      </a>
+    )
+  }
+
+  // Telefon kontrolü (uluslararası veya yerel numara formatı)
+  if (line.startsWith('+') || /^\+?[\d\s\(\)-]{7,}$/.test(line.trim())) {
+    const rawNumber = line.replace(/[\s\(\)-]/g, '')
+    return (
+      <a
+        href={`tel:${rawNumber}`}
+        className="text-sm leading-relaxed block transition-colors hover:underline"
+        style={{ color: 'color-mix(in srgb, var(--th-text-muted) 85%, transparent)' }}
+        onMouseEnter={(e) => (e.currentTarget.style.color = 'var(--th-polgun-blue)')}
+        onMouseLeave={(e) => (e.currentTarget.style.color = 'color-mix(in srgb, var(--th-text-muted) 85%, transparent)')}
+      >
+        {line}
+      </a>
+    )
+  }
+
+  return (
+    <p className="text-sm leading-relaxed" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 70%, transparent)' }}>
+      {line}
+    </p>
+  )
+}
+
 function ContactCard({ icon, title, lines }) {
   return (
     <div className="flex gap-5 items-start">
@@ -77,7 +116,7 @@ function ContactCard({ icon, title, lines }) {
       <div>
         <p className="text-xs font-bold tracking-widest uppercase mb-1.5" style={{ color: 'var(--th-polgun-blue)' }}>{title}</p>
         {lines.map((line, i) => (
-          <p key={i} className="text-sm leading-relaxed" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 70%, transparent)' }}>{line}</p>
+          <div key={i}>{formatContactLine(line)}</div>
         ))}
       </div>
     </div>
@@ -126,7 +165,7 @@ export default function ContactPage({ setActivePage }) {
   })
   const [sent, setSent] = useState(false)
   const [activeMap, setActiveMap] = useState('mugla')
-  
+
   const [submitting, setSubmitting] = useState(false)
   const [submitError, setSubmitError] = useState('')
 
@@ -155,38 +194,38 @@ export default function ContactPage({ setActivePage }) {
 
       if (!response.ok) {
         const data = await response.json().catch(() => ({}))
-        throw new Error(data.error || t('contact.form.submit_error', {defaultValue: 'Mesaj gönderilemedi, lütfen tekrar deneyin.'}))
+        throw new Error(data.error || t('contact.form.submit_error', { defaultValue: 'Mesaj gönderilemedi, lütfen tekrar deneyin.' }))
       }
 
       setSent(true)
     } catch (err) {
-      setSubmitError(err.message || t('career.form.general_error', {defaultValue: 'Bir hata oluştu.'}))
+      setSubmitError(err.message || t('career.form.general_error', { defaultValue: 'Bir hata oluştu.' }))
     } finally {
       setSubmitting(false)
     }
   }
 
   const interestOptions = [
-    { value: 'Su Kaydırakları', label: t('contact.form.interest.slides', {defaultValue: 'Su Kaydırakları'}) },
-    { value: 'Dalga Havuzları', label: t('contact.form.interest.wave_pools', {defaultValue: 'Dalga Havuzları'}) },
-    { value: 'Lazy River', label: t('contact.form.interest.lazy_river', {defaultValue: 'Lazy River'}) },
-    { value: 'Çocuk Parkları', label: t('contact.form.interest.kids_parks', {defaultValue: 'Çocuk Parkları'}) },
-    { value: 'Özel Proje', label: t('contact.form.interest.custom_project', {defaultValue: 'Özel Proje'}) },
-    { value: 'Bakım & Servis', label: t('contact.form.interest.maintenance', {defaultValue: 'Bakım & Servis'}) },
+    { value: 'Su Kaydırakları', label: t('contact.form.interest.slides', { defaultValue: 'Su Kaydırakları' }) },
+    { value: 'Dalga Havuzları', label: t('contact.form.interest.wave_pools', { defaultValue: 'Dalga Havuzları' }) },
+    { value: 'Lazy River', label: t('contact.form.interest.lazy_river', { defaultValue: 'Lazy River' }) },
+    { value: 'Çocuk Parkları', label: t('contact.form.interest.kids_parks', { defaultValue: 'Çocuk Parkları' }) },
+    { value: 'Özel Proje', label: t('contact.form.interest.custom_project', { defaultValue: 'Özel Proje' }) },
+    { value: 'Bakım & Servis', label: t('contact.form.interest.maintenance', { defaultValue: 'Bakım & Servis' }) },
   ]
 
   const translatedOffices = OFFICES.map(office => {
     let name = office.name
     let country = office.country
     if (office.id === 'mugla') {
-      name = t('contact.offices.hq', {defaultValue: 'Merkez'})
-      country = t('common.turkey', {defaultValue: 'Türkiye'})
+      name = t('contact.offices.hq', { defaultValue: 'Merkez' })
+      country = t('common.turkey', { defaultValue: 'Türkiye' })
     } else if (office.id === 'antalya') {
-      name = t('contact.offices.antalya', {defaultValue: 'Antalya Ofis'})
-      country = t('common.turkey', {defaultValue: 'Türkiye'})
+      name = t('contact.offices.antalya', { defaultValue: 'Antalya Ofis' })
+      country = t('common.turkey', { defaultValue: 'Türkiye' })
     } else if (office.id === 'valencia') {
-      name = t('contact.offices.europe', {defaultValue: 'Avrupa Ofis'})
-      country = t('common.spain', {defaultValue: 'İspanya'})
+      name = t('contact.offices.europe', { defaultValue: 'Avrupa Ofis' })
+      country = t('common.spain', { defaultValue: 'İspanya' })
     }
     return {
       ...office,
@@ -204,15 +243,15 @@ export default function ContactPage({ setActivePage }) {
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-end">
             <div>
               <p className="text-xs font-bold tracking-[0.3em] uppercase mb-4" style={{ color: 'var(--th-text)' }}>
-                {t('contact.title', {defaultValue: 'İletişim'})}
+                {t('contact.title', { defaultValue: 'İletişim' })}
               </p>
               <h1 className="text-5xl lg:text-6xl font-black text-white leading-[1.02]">
-                {t('contact.hero_title', {defaultValue: 'Sizinle Tanışalım'}).split(' ')[0]}<br />
-                {t('contact.hero_title', {defaultValue: 'Sizinle Tanışalım'}).split(' ').slice(1).join(' ')}
+                {t('contact.hero_title', { defaultValue: 'Sizinle Tanışalım' }).split(' ')[0]}<br />
+                {t('contact.hero_title', { defaultValue: 'Sizinle Tanışalım' }).split(' ').slice(1).join(' ')}
               </h1>
             </div>
             <p className="text-white/70 text-lg leading-relaxed">
-              {t('contact.hero_desc', {defaultValue: 'Yeni bir su parkı projesi geliştirmek, mevcut tesisinizi yenilemek veya ürünlerimiz hakkında detaylı bilgi almak için uzman ekibimizle iletişime geçebilirsiniz. Projenizin her aşamasında size destek olmaktan memnuniyet duyarız.'})}
+              {t('contact.hero_desc', { defaultValue: 'Yeni bir su parkı projesi geliştirmek, mevcut tesisinizi yenilemek veya ürünlerimiz hakkında detaylı bilgi almak için uzman ekibimizle iletişime geçebilirsiniz. Projenizin her aşamasında size destek olmaktan memnuniyet duyarız.' })}
             </p>
           </div>
         </div>
@@ -225,9 +264,9 @@ export default function ContactPage({ setActivePage }) {
 
             {/* ── Form Bölümü (3/5) ── */}
             <div className="lg:col-span-3">
-              <h2 className="text-2xl font-black mb-2" style={{ color: 'var(--th-text)' }}>{t('contact.project_request', {defaultValue: 'Proje Talebi'})}</h2>
+              <h2 className="text-2xl font-black mb-2" style={{ color: 'var(--th-text)' }}>{t('contact.project_request', { defaultValue: 'Proje Talebi' })}</h2>
               <p className="text-sm mb-10" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 60%, transparent)' }}>
-                {t('contact.form.sub_desc', {defaultValue: 'Tüm alanları eksiksiz doldurarak bize ulaşabilirsiniz.'})}
+                {t('contact.form.sub_desc', { defaultValue: 'Tüm alanları eksiksiz doldurarak bize ulaşabilirsiniz.' })}
               </p>
 
               {sent ? (
@@ -247,32 +286,32 @@ export default function ContactPage({ setActivePage }) {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
-                  <h3 className="text-xl font-black mb-3" style={{ color: 'var(--th-text)' }}>{t('contact.form.success_title', {defaultValue: 'Mesajınız Alındı'})}</h3>
+                  <h3 className="text-xl font-black mb-3" style={{ color: 'var(--th-text)' }}>{t('contact.form.success_title', { defaultValue: 'Mesajınız Alındı' })}</h3>
                   <p className="text-sm leading-relaxed" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 60%, transparent)' }}>
-                    {t('contact.form.success_desc', {defaultValue: 'Talebiniz alınmıştır, uzman ekibimiz en kısa sürede size dönüş yapacaktır.'})}
+                    {t('contact.form.success_desc', { defaultValue: 'Talebiniz alınmıştır, uzman ekibimiz en kısa sürede size dönüş yapacaktır.' })}
                   </p>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="flex flex-col gap-6">
                   {/* Ad - Soyad / E-posta */}
                   <div className="grid sm:grid-cols-2 gap-6">
-                    <Field label={t('contact.form.name', {defaultValue: 'Ad Soyad'})} name="name" placeholder="Ahmet Yılmaz"
+                    <Field label={t('contact.form.name', { defaultValue: 'Ad Soyad' })} name="name" placeholder="Ahmet Yılmaz"
                       value={form.name} onChange={handleChange} required />
-                    <Field label={t('contact.form.email', {defaultValue: 'E-posta'})} name="email" type="email" placeholder="ornek@sirketiniz.com"
+                    <Field label={t('contact.form.email', { defaultValue: 'E-posta' })} name="email" type="email" placeholder="ornek@sirketiniz.com"
                       value={form.email} onChange={handleChange} required />
                   </div>
 
                   {/* Telefon / Şirket */}
                   <div className="grid sm:grid-cols-2 gap-6">
-                    <Field label={t('contact.form.phone', {defaultValue: 'Telefon'})} name="phone" type="tel" placeholder="+90 5XX XXX XX XX"
+                    <Field label={t('contact.form.phone', { defaultValue: 'Telefon' })} name="phone" type="tel" placeholder="+90 5XX XXX XX XX"
                       value={form.phone} onChange={handleChange} />
-                    <Field label={t('contact.form.company', {defaultValue: 'Şirket / Proje Adı'})} name="company" placeholder="Polgün Waterparks"
+                    <Field label={t('contact.form.company', { defaultValue: 'Şirket / Proje Adı' })} name="company" placeholder="Polgün Waterparks"
                       value={form.company} onChange={handleChange} />
                   </div>
 
                   {/* İlgi Alanı */}
                   <SelectField
-                    label={t('contact.form.interest_label', {defaultValue: 'İlgilendiğiniz Ürün'})}
+                    label={t('contact.form.interest_label', { defaultValue: 'İlgilendiğiniz Ürün' })}
                     name="interest"
                     value={form.interest}
                     onChange={handleChange}
@@ -282,7 +321,7 @@ export default function ContactPage({ setActivePage }) {
                   {/* Mesaj */}
                   <div className="flex flex-col gap-2">
                     <label htmlFor="message" className="text-xs font-semibold tracking-wide uppercase" style={{ color: 'color-mix(in srgb, var(--th-text) 60%, transparent)' }}>
-                      {t('contact.form.message', {defaultValue: 'Mesajınız'})} <span style={{ color: 'var(--th-polgun-blue)' }}>*</span>
+                      {t('contact.form.message', { defaultValue: 'Mesajınız' })} <span style={{ color: 'var(--th-polgun-blue)' }}>*</span>
                     </label>
                     <textarea
                       id="message"
@@ -290,7 +329,7 @@ export default function ContactPage({ setActivePage }) {
                       rows={6}
                       value={form.message}
                       onChange={handleChange}
-                      placeholder={t('contact.form.message_placeholder', {defaultValue: 'Projeniz veya talebiniz hakkında detaylı bilgi verebilirsiniz...'})}
+                      placeholder={t('contact.form.message_placeholder', { defaultValue: 'Projeniz veya talebiniz hakkında detaylı bilgi verebilirsiniz...' })}
                       required
                       className="w-full px-5 py-3.5 bg-white border rounded-xl text-sm transition-all duration-200 resize-none
                         text-[var(--th-text)]
@@ -305,8 +344,8 @@ export default function ContactPage({ setActivePage }) {
                     <input type="checkbox" required
                       className="mt-0.5 w-4 h-4 rounded cursor-pointer shrink-0 border-[color-mix(in_srgb,var(--th-border)_30%,transparent)] accent-[var(--th-polgun-blue)]" />
                     <span className="text-xs leading-relaxed" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 60%, transparent)' }}>
-                      {t('contact.form.kvkk_desc_prefix', {defaultValue: 'Müşteri - Tedarikçi'})}{' '}
-                      <a href="/documents/kvkk/musteri-tedarikci-aydinlatma.doc" target="_blank" className="hover:underline" style={{ color: 'var(--th-polgun-blue)' }}>{t('career.form.kvkk_link', {defaultValue: 'Aday Çalışan Aydınlatma Metni'})}</a>'{t('contact.form.kvkk_desc_suffix', {defaultValue: 'ni okudum ve onaylıyorum.'})}
+                      {t('contact.form.kvkk_desc_prefix', { defaultValue: 'Müşteri - Tedarikçi' })}{' '}
+                      <a href="/documents/kvkk/musteri-tedarikci-aydinlatma.doc" target="_blank" className="hover:underline" style={{ color: 'var(--th-polgun-blue)' }}>{t('career.form.kvkk_link', { defaultValue: 'Aday Çalışan Aydınlatma Metni' })}</a>'{t('contact.form.kvkk_desc_suffix', { defaultValue: 'ni okudum ve onaylıyorum.' })}
                     </span>
                   </label>
 
@@ -323,7 +362,7 @@ export default function ContactPage({ setActivePage }) {
                     disabled={submitting}
                     className="w-full sm:w-auto self-start px-8 py-3.5 bg-[#22ABE6] hover:bg-[#1a8fc2] disabled:opacity-70 disabled:cursor-not-allowed text-white font-bold text-xs rounded-xl shadow-md shadow-blue-500/10 hover:shadow-lg transition-all duration-200 transform active:scale-[0.98] cursor-pointer"
                   >
-                    {submitting ? t('common.sending', {defaultValue: 'Gönderiliyor...'}) : t('contact.form.submit_btn', {defaultValue: 'Mesajı Gönder'})}
+                    {submitting ? t('common.sending', { defaultValue: 'Gönderiliyor...' }) : t('contact.form.submit_btn', { defaultValue: 'Mesajı Gönder' })}
                   </button>
                 </form>
               )}
@@ -333,33 +372,33 @@ export default function ContactPage({ setActivePage }) {
             <div className="lg:col-span-2 max-w-[var(--layout-max)] flex flex-col gap-12">
               {/* İletişim Bilgileri */}
               <div className="bg-white rounded-2xl p-8 flex flex-col gap-8 border border-[color-mix(in_srgb,var(--th-border)_25%,transparent)]">
-                <h3 className="text-lg font-black" style={{ color: 'var(--th-text)' }}>{t('contact.info_title', {defaultValue: 'İletişim Bilgileri'})}</h3>
+                <h3 className="text-lg font-black" style={{ color: 'var(--th-text)' }}>{t('contact.info_title', { defaultValue: 'İletişim Bilgileri' })}</h3>
                 <ContactCard
                   icon="📍"
-                  title={t('contact.offices.hq_address_label', {defaultValue: 'Merkez Adres'})}
+                  title={t('contact.offices.hq_address_label', { defaultValue: 'Merkez Adres' })}
                   lines={['Salihpaşalar Mh. Köyiçi Sokak', '241 A Blok S.Room Menteşe/MUĞLA']}
                 />
                 <ContactCard
                   icon="📞"
-                  title={t('contact.form.phone', {defaultValue: 'Telefon'})}
+                  title={t('contact.form.phone', { defaultValue: 'Telefon' })}
                   lines={['+90 (252) 225 58 88', '+90 (555) 800 34 76']}
                 />
                 <ContactCard
                   icon="✉️"
-                  title={t('contact.form.email', {defaultValue: 'E-posta'})}
+                  title={t('contact.form.email', { defaultValue: 'E-posta' })}
                   lines={['info@polgun.com']}
                 />
                 <ContactCard
                   icon="🕐"
-                  title={t('contact.hours_label', {defaultValue: 'Çalışma Saatleri'})}
-                  lines={[t('contact.hours_val1', {defaultValue: 'Pzt–Cmt: 08:30–18:00'}), t('contact.hours_val2', {defaultValue: 'Pazar: Kapalı'})]}
+                  title={t('contact.hours_label', { defaultValue: 'Çalışma Saatleri' })}
+                  lines={[t('contact.hours_val1', { defaultValue: 'Pzt–Cmt: 08:30–18:00' }), t('contact.hours_val2', { defaultValue: 'Pazar: Kapalı' })]}
                 />
               </div>
 
               {/* Ofisler */}
               <div>
                 <h3 className="text-xs font-bold tracking-[0.2em] uppercase mb-5" style={{ color: 'color-mix(in srgb, var(--th-text) 40%, transparent)' }}>
-                  {t('contact.offices_title', {defaultValue: 'Ofislerimiz'})}
+                  {t('contact.offices_title', { defaultValue: 'Ofislerimiz' })}
                 </h3>
                 <div className="flex flex-col gap-3">
                   {translatedOffices.map((office) => (
@@ -372,8 +411,43 @@ export default function ContactPage({ setActivePage }) {
                         <span className="text-sm font-bold" style={{ color: 'var(--th-text)' }}>{office.name}</span>
                         <span className="text-xs px-2 py-0.5 rounded-full" style={{ backgroundColor: 'color-mix(in srgb, var(--th-polgun-blue) 10%, transparent)', color: 'var(--th-polgun-blue)' }}>{office.country}</span>
                       </div>
-                      <p className="text-xs ml-[18px] leading-relaxed" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 60%, transparent)' }}>{office.address}</p>
-                      <p className="text-xs ml-[18px]" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 60%, transparent)' }}>{office.phone}{office.mobile ? ` / ${office.mobile}` : ''}</p>
+                      <p className="text-xs ml-[18px] flex flex-wrap items-center gap-x-2 gap-y-1" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 60%, transparent)' }}>
+                        <a
+                          href={`tel:${office.phone.replace(/[\s\(\)-]/g, '')}`}
+                          className="hover:underline transition-colors"
+                          style={{ color: 'color-mix(in srgb, var(--th-text-muted) 80%, transparent)' }}
+                          onMouseEnter={(e) => (e.currentTarget.style.color = 'var(--th-polgun-blue)')}
+                          onMouseLeave={(e) => (e.currentTarget.style.color = 'color-mix(in srgb, var(--th-text-muted) 80%, transparent)')}
+                        >
+                          {office.phone}
+                        </a>
+                        {office.mobile && (
+                          <>
+                            <span>/</span>
+                            <a
+                              href={`tel:${office.mobile.replace(/[\s\(\)-]/g, '')}`}
+                              className="hover:underline transition-colors"
+                              style={{ color: 'color-mix(in srgb, var(--th-text-muted) 80%, transparent)' }}
+                              onMouseEnter={(e) => (e.currentTarget.style.color = 'var(--th-polgun-blue)')}
+                              onMouseLeave={(e) => (e.currentTarget.style.color = 'color-mix(in srgb, var(--th-text-muted) 80%, transparent)')}
+                            >
+                              {office.mobile}
+                            </a>
+                          </>
+                        )}
+                        {office.email && (
+                          <>
+                            <span>•</span>
+                            <a
+                              href={`mailto:${office.email}`}
+                              className="hover:underline transition-colors font-medium"
+                              style={{ color: 'var(--th-polgun-blue)' }}
+                            >
+                              {office.email}
+                            </a>
+                          </>
+                        )}
+                      </p>
                     </div>
                   ))}
                 </div>
@@ -396,14 +470,14 @@ export default function ContactPage({ setActivePage }) {
                 style={
                   activeMap === office.id
                     ? {
-                        backgroundColor: 'var(--th-polgun-blue)',
-                        color: '#fff',
-                        boxShadow: '0 4px 16px color-mix(in srgb, var(--th-polgun-blue) 30%, transparent)',
-                      }
+                      backgroundColor: 'var(--th-polgun-blue)',
+                      color: '#fff',
+                      boxShadow: '0 4px 16px color-mix(in srgb, var(--th-polgun-blue) 30%, transparent)',
+                    }
                     : {
-                        color: 'var(--th-text-muted)',
-                        backgroundColor: 'color-mix(in srgb, var(--th-border) 15%, transparent)',
-                      }
+                      color: 'var(--th-text-muted)',
+                      backgroundColor: 'color-mix(in srgb, var(--th-border) 15%, transparent)',
+                    }
                 }
                 onMouseEnter={(e) => {
                   if (activeMap !== office.id)
