@@ -23,7 +23,10 @@
     "turkey": "Turquía",
     "spain": "España",
     "not_found": "Contenido no encontrado",
-    "all_projects": "Todos los proyectos"
+    "all_projects": "Todos los proyectos",
+    "pause": "Pausar",
+    "play": "Reproducir",
+    "close": "Cerrar"
   },
   "nav": {
     "services": "Servicios",
@@ -62,7 +65,15 @@
     "portal": "Portal de Clientes",
     "production": "Producción y Montaje",
     "quality_mgmt": "Gestión de Calidad",
-    "quote_btn": "Solicitar Presupuesto"
+    "quote_btn": "Solicitar Presupuesto",
+    "view_all": "Ver Todo",
+    "cta_products": "Descubra todos los productos y tipos de espacios acuáticos",
+    "cta_services": "Conozca nuestros procesos de proyectos llave en mano",
+    "cta_projects": "Explore más de 3000 proyectos globales de parques acuáticos",
+    "cta_about": "Descubra la historia de más de 40 años de Polgün",
+    "cta_arge": "Tecnologías innovadoras y patentes registradas",
+    "arge_products": "Productos de I+D",
+    "all_services": "Todos los Servicios"
   },
   "footer": {
     "products": "Productos",
@@ -203,65 +214,45 @@
     "production_power_desc": "Al integrar ingeniería, producción y control de calidad, desarrollamos soluciones confiables a la medida de cada cliente.",
     "btn_projects": "Ver Proyectos",
     "production_sections": {
-      "cnc_mold": {
-        "title": "Taller de Modelos y Moldes",
-        "desc": "Fabricación de moldes de alta precisión con tecnología CNC de 5 ejes."
-      },
-      "steel": {
-        "title": "Estructuras de Acero y Torres",
-        "desc": "Fabricación de torres y plataformas según cálculos de ingeniería certificados."
-      },
-      "mechanical": {
-        "title": "Montaje Mecánico y Automatización",
-        "desc": "Área de prueba y montaje de bombas, válvulas, sensores y cuadros de mando PLC."
-      },
-      "composite": {
-        "title": "Producción Compuesta y Tecnología RTM",
-        "desc": "Producción de toboganes con tecnología RTM y L-RTM con acabados lisos en ambas caras."
-      },
-      "digital": {
-        "title": "Industria 4.0 y Producción Inteligente",
-        "desc": "Monitoreo digital de la producción y control de calidad avanzado."
-      },
       "entegre_depo": {
-        "title": "Almacén Integrado de Materias Primas",
-        "desc": "Almacenamiento de materiales y componentes bajo estándares internacionales."
+        "title": "Almacén Integrado de Materias Primas y Logística",
+        "desc": "Polgün gestiona el aprovisionamiento, almacenamiento y suministro a producción de materias primas, insumos auxiliares y equipos técnicos dentro de su propia estructura operativa. La gestión sistemática de inventarios garantiza que las distintas unidades de fabricación accedan a los materiales necesarios de manera rápida y controlada, asegurando la continuidad productiva y la trazabilidad total."
       },
       "model_kalıp": {
-        "title": "Taller de Modelos y Moldes",
-        "desc": "Fabricación de moldes de alta precisión con tecnología CNC de 5 ejes."
+        "title": "Taller de Modelos y Moldes CNC",
+        "desc": "Polgün traslada geometrías originales y complejas a la producción con máxima precisión mediante su infraestructura de fabricación de moldes y modelos CNC de 5 ejes. La gestión interna desde el diseño digital hasta la fabricación de moldes garantiza un acabado superficial superior, exactitud dimensional y repetibilidad de fabricación para diseños estándar y proyectos personalizados."
       },
       "elyaf": {
-        "title": "Preparación de Fibra de Vidrio",
-        "desc": "Corte y preparación de tejidos técnicos de fibra de vidrio para compuestos."
+        "title": "Corte y Preparación de Fibra de Vidrio",
+        "desc": "Polgün prepara los tejidos de fibra de vidrio y materiales de refuerzo utilizados en la producción de composites mediante sistemas de corte automático por control numérico (CNC). El corte digitalizado permite preparar piezas para geometrías variadas de forma rápida y exacta, reduciendo el desperdicio de material y optimizando los tiempos de preparación en los talleres de composite."
       },
       "kompozit": {
-        "title": "Producción Compuesta y Tecnología RTM",
-        "desc": "Producción de toboganes con tecnología RTM y L-RTM con acabados lisos en ambas caras."
+        "title": "Producción de Composite y Tecnología RTM",
+        "desc": "Polgün fabrica piezas de composite para toboganes y parques acuáticos utilizando métodos avanzados como RTM, L-RTM, moldeo manual y proyección. La selección de resinas y refuerzos adaptados a cada geometría garantiza una durabilidad superior. Los acabados de gelcoat, nivelación, pulido y revestimiento final otorgan una superficie suave, brillante y visualmente impecable."
       },
       "çelik_işleme": {
-        "title": "Procesamiento y Soldadura de Acero",
-        "desc": "Fabricación de elementos estructurales con soldadura certificada EN 1090 e ISO 3834-2."
+        "title": "Mecanizado y Tecnologías de Corte de Acero",
+        "desc": "Polgün aplica tecnologías de corte y conformado de alta precisión para materializar fielmente los diseños de ingeniería. Los sistemas CNC de corte de tuberías y perfiles preparan componentes estructurales con tolerancias dimensionales exactas. La transferencia directa de datos CAD agiliza la fabricación precisa y modular de estructuras de soporte para toboganes complejos."
       },
       "çelik_konstrüksiyon": {
-        "title": "Estructuras de Acero y Torres",
-        "desc": "Fabricación de torres y plataformas según cálculos de ingeniería certificados."
+        "title": "Estructuras de Acero y Fabricación Soldada",
+        "desc": "Polgün fabrica íntegramente en sus instalaciones las estructuras metálicas de soporte para parques acuáticos. Las piezas de acero cortadas por CNC se ensamblan mediante procesos certificados de soldadura y montaje ajustados a cada proyecto. La integración desde el corte hasta la soldadura asegura exactitud dimensional, solidez estructural y total adaptabilidad a cada diseño."
       },
       "mekanik": {
-        "title": "Montaje Mecánico y Automatización",
-        "desc": "Área de prueba y montaje de bombas, válvulas, sensores y cuadros de mando PLC."
+        "title": "Mecanizado Mecánico y Piezas Especiales",
+        "desc": "Polgün fabrica en sus talleres elementos de unión, bridas y componentes mecánicos específicos para toboganes y estructuras. Estas piezas se elaboran según tolerancias de ingeniería precisas para garantizar un ensamblaje en obra perfecto y sin holguras, ofreciendo soluciones flexibles para especificaciones técnicas no estándar."
       },
       "boya": {
-        "title": "Tratamiento de Superficies y Pintura",
-        "desc": "Línea de galvanizado en caliente y pintura electrostática resistente a la corrosión."
+        "title": "Pintura y Recubrimientos Protectores",
+        "desc": "Polgün realiza internamente los procesos de preparación superficial, granallado y aplicación de recubrimientos protectores en piezas metálicas. Los sistemas anticorrosivos aplicados protegen eficazmente las estructuras frente a la humedad, el cloro y los rayos UV, proporcionando durabilidad y un acabado estético de alto nivel en todo tipo de climas."
       },
       "kalite": {
-        "title": "Control de Calidad y Laboratorio",
-        "desc": "Centro de ensayos donde se verifica la seguridad y resistencia de cada componente."
+        "title": "Control Final y Protección de Producto",
+        "desc": "Las piezas de composite finalizadas son sometidas a rigurosas inspecciones de calidad superficial, espesor e integridad estructural antes de su expedición. Se aplican envolturas y protecciones especiales para conservar las superficies intactas durante el almacenamiento, transporte y montaje en obra."
       },
       "paketleme": {
-        "title": "Embalaje y Envío Global",
-        "desc": "Embalaje seguro y logística internacional conforme a normas globales."
+        "title": "Embalaje y Despacho Logístico Global",
+        "desc": "Para transportar los productos certificados con total seguridad hasta los sitios de obra en todo el mundo, Polgün aplica rigurosos protocolos de embalaje y estiba en contenedores adaptados a cada componente. Las piezas de composite y estructuras de acero se aseguran contra golpes y corrosión marina, garantizando entregas puntuales y sin daños."
       }
     },
     "factories": {
@@ -302,101 +293,87 @@
     "values_title": "核心价值观"
   },
   "services": {
-    "title": "Servicios",
+    "title": "Nuestros Servicios",
     "subtitle": "Gestión Integral de Proyectos",
-    "desc": "Ofrecemos servicios profesionales en cada etapa del desarrollo del parque, desde la concepción inicial hasta la puesta en marcha.",
-    "sections": {
-      "planlama": {
-        "title": "Planificación",
-        "desc": "El éxito del proyecto comienza con un análisis del terreno, presupuesto del inversor y estudio de mercado para plantear la mejor distribución."
+    "desc": "Polgün ofrece servicios profesionales de alto nivel en cada etapa de los proyectos de parques acuáticos. Gestionando todos los procesos desde la planificación hasta el diseño, desde la ingeniería hasta la instalación con su propio personal experto, entrega proyectos llave en mano.",
+    "process_tag": "Nuestro Proceso de Servicio",
+    "process_title": "Estamos con usted en cada paso del camino, de principio a fin",
+    "cta_title": "Construyamos juntos su sueño",
+    "cta_desc": "Sin importar el tamaño del proyecto, estamos con usted desde el primer día hasta la inauguración.",
+    "cta_btn": "Solicitar Presupuesto",
+    "cta_tag": "Nuestros Servicios",
+    "why": {
+      "service": {
+        "title": "Servicio Completo",
+        "desc": "Desde el diseño hasta el montaje, desde el mantenimiento hasta el software en cada fase."
       },
-      "tasarim": {
-        "title": "Diseño",
-        "desc": "Creamos conceptos creativos y renders 3D detallados para que pueda visualizar el proyecto de manera realista antes de su construcción."
+      "countries": {
+        "title": "70+ Países",
+        "desc": "Experiencia global en proyectos y conocimiento local especializado."
       },
-      "muhendislik": {
-        "title": "Ingeniería",
-        "desc": "Desarrollamos planos estructurales e hidráulicos que cumplen con las normativas internacionales de seguridad y durabilidad."
+      "iso": {
+        "title": "ISO 9001",
+        "desc": "Procesos de fabricación certificados y riguroso control de calidad."
       },
-      "montaj": {
-        "title": "Montaje e Instalación",
-        "desc": "Nuestros experimentados equipos de obra instalan los componentes de forma segura y eficiente respetando los plazos estipulados."
-      },
-      "bakim": {
-        "title": "Mantenimiento y Soporte",
-        "desc": "Ofrecemos planes de inspección regulares, suministro de repuestos y asistencia técnica para garantizar un funcionamiento seguro del parque."
-      },
-      "yenileme": {
-        "title": "Renovación",
-        "desc": "Actualizamos parques existentes añadiendo nuevos juegos, toboganes temáticos y sistemas eficientes para revitalizar el negocio."
+      "lifetime": {
+        "title": "De por Vida",
+        "desc": "Soporte técnico a largo plazo y garantía de repuestos originales."
       }
     },
     "steps": {
       "step1": {
         "title": "Diseño de Producto y Tematización",
-        "desc": "Los toboganes de agua, los grupos de juego para niños y las atracciones de parques acuáticos se diseñan especialmente de acuerdo con el concepto del proyecto y las expectativas del cliente. El color, el patrón, el tema y los detalles visuales se desarrollan en armonía con la geometría del producto para crear diseños únicos que fortalezcan la experiencia del visitante."
+        "sub": "Diseño de Producto y Tematización",
+        "desc": "Los toboganes de agua, los grupos de juego para niños y las atracciones se diseñan a medida según el concepto del proyecto y las expectativas del cliente. Los colores, patrones, temas y detalles visuales se integran con la geometría del producto para brindar experiencias únicas a los visitantes."
       },
       "step2": {
         "title": "Ingeniería y Proyección",
-        "desc": "Los sistemas de toboganes, las estructuras portantes de acero y las infraestructuras mecánicas e hidráulicas son proyectados en detalle por equipos de ingeniería. Los cálculos estructurales, los análisis técnicos, los dibujos de producción y los documentos de montaje se preparan de acuerdo con las condiciones del proyecto."
+        "sub": "Ingeniería y Proyección",
+        "desc": "Los sistemas de toboganes, las estructuras de soporte de acero y las infraestructuras mecánicas e hidráulicas son diseñados detalladamente por nuestros equipos de ingeniería. Cálculos estructurales, análisis técnicos, planos de fabricación y documentos de montaje se elaboran según las condiciones del proyecto."
       },
       "step3": {
-        "title": "Producción",
-        "desc": "Las piezas de toboganes de fibra de vidrio, las construcciones de acero, los modelos, los moldes y los componentes específicos del proyecto se preparan en las instalaciones de producción de Polgün. Los procesos de producción se llevan a cabo sobre la base de la precisión dimensional, la calidad de la superficie, la durabilidad y la trazabilidad."
+        "title": "Producción de Precisión",
+        "sub": "Producción de Precisión",
+        "desc": "Los componentes de toboganes de fibra de vidrio, estructuras de acero, modelos y moldes se fabrican en las instalaciones de Polgün bajo estrictos estándares de precisión dimensional, acabado superficial y trazabilidad total."
       },
       "step4": {
-        "title": "Gestión de Proyectos y Envío",
-        "desc": "El diseño, la producción, el embalaje, la logística y los procesos de campo se coordinan de acuerdo con el calendario del proyecto. Los productos se preparan con un sistema de codificación y etiquetado correcto, se embalan de forma segura y se entregan completos en el lugar del proyecto."
+        "title": "Gestión de Proyecto y Envío",
+        "sub": "Gestión de Proyecto y Logística",
+        "desc": "El diseño, la producción, el embalaje, la logística y los cronogramas en obra se coordinan de manera impecable. Los productos se codifican, empaquetan de forma segura y se entregan completos en el sitio del proyecto."
       },
       "step5": {
-        "title": "Montaje y Puesta en Servicio",
-        "desc": "Los toboganes, las construcciones de acero y los equipos relacionados son montados por equipos de campo experimentados o bajo la supervisión técnica de Polgün. Después del montaje, las conexiones, las superficies de deslizamiento, el flujo de agua y las funciones del sistema se controlan en detalle."
-      },
-      "design": {
-        "desc": "开展严密的有限元力学计算、水动力学仿真及地下管网综合管线设计。",
-        "title": "工程力学与项目设计"
-      },
-      "engineering": {
-        "desc": "在符合 EN 1069 及 ISO 标准的自动化厂区内完成滑道与钢构制造。",
-        "title": "高精工业制造"
-      },
-      "installation": {
-        "desc": "全球跨国物流协调、集装箱防损装载及目的地清关门到门运输。",
-        "title": "项目统筹与国际物流"
-      },
-      "planning": {
-        "desc": "提供概念规划、3D 渲染表现与符合当地文化特色的定制主题设计。",
-        "title": "产品设计与主题化包装"
-      },
-      "production": {
-        "desc": "资深外派工程师现场指导安装、满载水力测试运行与运营人员专业培训。",
-        "title": "现场安装与调试验收"
+        "title": "Montaje y Puesta en Marcha",
+        "sub": "Montaje y Puesta en Marcha",
+        "desc": "Los toboganes, estructuras de acero y equipos asociados son instalados por equipos de campo experimentados o bajo la supervisión técnica de Polgün. Tras el montaje, se realizan verificaciones exhaustivas de conexiones, deslizamiento, flujo de agua y funciones del sistema."
       }
     },
-    "why": {
-      "service": {
-        "title": "Servicio Completo",
-        "desc": "En cada paso, desde el diseño hasta el montaje, desde el mantenimiento hasta el software."
+    "sections": {
+      "planlama": {
+        "title": "Planificación",
+        "desc": "El éxito de cada parque acuático comienza con una planificación precisa. Analizando el presupuesto, la topografía, el público objetivo y la dinámica del mercado, se diseña el concepto más adecuado."
       },
-      "countries": {
-        "title": "70+ Países",
-        "desc": "Experiencia en proyectos globales y especialización local."
+      "tasarim": {
+        "title": "Diseño",
+        "desc": "Creamos conceptos de parques acuáticos innovadores con diseños originales. Utilizando modelado 3D, mostramos el resultado final de la forma más realista."
       },
-      "iso": {
-        "title": "ISO 9001",
-        "desc": "Procesos de producción y calidad certificados."
+      "muhendislik": {
+        "title": "Ingeniería",
+        "desc": "Diseñamos estructuras seguras y duraderas conformes a las normas EN 1069 y ASTM, garantizando los más altos estándares de calidad."
       },
-      "lifetime": {
-        "title": "De por Vida",
-        "desc": "Soporte técnico a largo plazo y garantía de repuestos."
+      "montaj": {
+        "title": "Instalación y Montaje",
+        "desc": "Con personal especializado y directores de obra, completamos las instalaciones en campo con rapidez y en estricto cumplimiento de las normas de seguridad."
+      },
+      "bakim": {
+        "title": "Mantenimiento y Reparación",
+        "desc": "Ofrecemos mantenimiento periódico, inspecciones pretemporada y suministro de repuestos para garantizar una diversión ininterrumpida."
+      },
+      "yenileme": {
+        "title": "Renovación",
+        "desc": "Modernizamos parques acuáticos existentes con tecnología avanzada y nuevas atracciones para renovar su atractivo."
       }
     },
-    "process_tag": "Nuestro Proceso de Servicio",
-    "process_title": "Estamos con usted en cada paso del camino, de principio a fin",
-    "cta_title": "Construyamos su sueño juntos",
-    "cta_desc": "No importa el tamaño del proyecto, estamos con usted desde el primer día hasta el último.",
-    "cta_btn": "联系专家团队",
-    "cta_tag": "开启合作"
+    "all": "Todos los Servicios"
   },
   "projects": {
     "title": "Nuestros Proyectos",
@@ -446,16 +423,16 @@
       "desc": "Parques de chorros sin profundidad con cañones de agua y elementos interactivos para los más pequeños."
     },
     "categories": {
-      "family_slides": "Toboganes Familiares",
-      "fast_slide": "Toboganes Rápidos",
-      "jumbo_slides": "Toboganes Jumbo",
-      "racer_slides": "Toboganes de Carreras",
+      "body_slides": "Toboganes de Cuerpo",
       "classic_slides": "Toboganes Clásicos",
-      "body_slides": "人体直滑滑梯",
-      "extreme_slides": "极限垂直自由落体滑梯",
-      "kids_slides": "趣味儿童滑梯",
-      "rafting_slides": "激流大漂流滑梯",
-      "tube_slides": "皮筏浮圈滑梯"
+      "extreme_slides": "Toboganes Extremos",
+      "family_slides": "Toboganes Familiares",
+      "fast_slide": "Tobogán Rápido",
+      "jumbo_slides": "Toboganes Jumbo",
+      "kids_slides": "Toboganes Infantiles",
+      "racer_slides": "Toboganes de Carreras",
+      "rafting_slides": "Toboganes de Rafting",
+      "tube_slides": "Toboganes Tubulares"
     },
     "specs": {
       "tema": "Tema",
@@ -632,49 +609,61 @@
     }
   },
   "arge": {
-    "title": "I+D e Innovación",
-    "subtitle": "Tecnología para el Futuro del Ocio",
-    "desc": "Desarrollamos soluciones patentadas e innovaciones que optimizan el rendimiento y la vida útil de los parques acuáticos.",
-    "section1_title": "Ingeniería Avanzada",
-    "section1_desc": "Aplicamos simulación de fluidos y software de análisis estructural para diseñar toboganes más seguros y dinámicos.",
-    "section2_title": "Productos de I+D",
-    "navatu_desc": "Un innovador sistema de piscina de olas que lleva la experiencia de las olas naturales a una nueva dimensión.",
-    "savana_desc": "Un innovador proyecto de I+D que combina cuatro trayectorias de deslizamiento diferentes en una sola estructura.",
-    "monarch_desc": "Un diseño icónico inspirado en las alas de mariposa que ofrece un recorrido de alta velocidad con giros de doble sentido.",
-    "hero_desc": "En Polgün Waterparks, la base de nuestro enfoque de I+D es desarrollar tecnologías de entretenimiento acuático seguras, innovadoras, sostenibles y de alto valor añadido.",
-    "innovative_title": "Productos Innovadores",
-    "continuous_title": "Desarrollo Continuo",
-    "projects_title": "Nuestros proyectos de I+D",
-    "savana_sub": "Tobogán acuático temático de varios carriles",
-    "misyon": "Nuestra Misión",
-    "misyon_desc": "Aportar soluciones únicas a la industria del entretenimiento acuático mediante el desarrollo de proyectos de I+D de alta calidad, seguros, rentables e innovadores; y crear productos pioneros que representen a nuestro país en los mercados nacionales e internacionales. Nuestro objetivo es aportar conocimiento cualificado, tecnología y recursos humanos a nuestro sector adhiriéndose a los calendarios de trabajo, las verificaciones de ingeniería, el cumplimiento de las normas y los principios de producción sostenible en nuestros procesos de I+D.",
-    "vizyon": "Nuestra Visión",
-    "vizyon_desc": "Como Centro de I+D de Polgün Waterparks, nuestra visión es ser un centro de I+D líder y pionero que da forma a las tecnologías de entretenimiento acuático con sus diseños únicos, soluciones de ingeniería innovadoras, sólida capacidad de producción y proyectos que cumplen con los estándares internacionales. Aspiramos a convertirnos en una marca reconocida tanto a nivel de país como internacional con los proyectos que desarrollamos sin comprometer la calidad.",
+    "title": "I+D & Innovación",
+    "subtitle": "Tecnologías del Futuro en Entretenimiento Acuático",
+    "desc": "Como primer centro de I+D homologado de Muğla, el Centro de I+D de Polgün diseña tecnologías y productos innovadores que lideran la industria.",
+    "section1_title": "Nuestra Capacidad de I+D",
+    "section1_desc": "Optimizamos el rendimiento y la durabilidad de nuestros productos mediante software de ingeniería avanzado, análisis de flujo CFD y métodos de fabricación de última generación.",
+    "section2_title": "Productos Destacados de I+D",
     "header_title": "Centro de I+D",
-    "p1": "Nuestro centro, que obtuvo el estatus de Centro de I+D con aprobación ministerial en 2021, es pionero en el desarrollo de productos originales, la localización y la producción de tecnología en nuestro sector como el primer y único Centro de I+D de Muğla.",
-    "p2": "En nuestro Centro de I+D, gestionamos el diseño de nuevos productos, análisis de ingeniería, prototipado, pruebas, validación, desarrollo de métodos de producción y procesos de propiedad intelectual de manera integral con 30 personal de I+D equivalente a tiempo completo que trabaja como investigadores, técnicos y personal de apoyo.",
-    "p3": "Vemos los esfuerzos de nacionalización y localización para nuestro país como una responsabilidad estratégica; desarrollamos soluciones que reducen la dependencia externa, son rápidamente aplicables y responden directamente a las necesidades del cliente. En todos nuestros procesos de I+D, desde el diseño hasta la producción, desde el análisis hasta la aplicación en campo, nos adherimos a los principios de seguridad, calidad, cumplimiento de normas internacionales y sostenibilidad.",
-    "p4": "Los proyectos desarrollados en el Centro de I+D de Polgün añaden valor al sector en áreas como el ahorro de agua, la seguridad del usuario, el aumento de capacidad, la experiencia temática, la producción modular, las tecnologías de materiales compuestos y las geometrías de toboganes de agua de próxima generación. Nuestros proyectos de productos innovadores como Navatu, Savana, Monarch Butterfly y Eclipse se encuentran entre los importantes resultados de I+D que representan la fortaleza de diseño, ingeniería y producción de Polgün en el mercado internacional.",
-    "p5": "Nuestras actividades de I+D no se limitan solo al desarrollo de nuevos productos. También llevamos a cabo trabajos de desarrollo continuo para mejorar el rendimiento de los productos existentes, mejorar los procesos de producción, reducir los impactos ambientales, aumentar la eficiencia de los materiales y aumentar nuestra competitividad en los mercados internacionales. Reforzamos nuestra base de conocimiento corporativo a través de colaboraciones académicas, publicaciones científicas, procesos de registro de patentes y diseños; y transformamos los resultados obtenidos en una cultura de innovación sostenible.",
-    "brands_tag": "PROPIEDAD INTELECTUAL",
-    "brands_title": "Nuestras Marcas",
-    "brands_desc": "Las marcas registradas nacionales e internacionales de Polgün representan nuestra identidad única y confiabilidad en el mercado global.",
-    "international": "Internacional",
-    "national": "Nacional",
-    "pending": "En proceso de solicitud",
-    "registered": "Registrado",
+    "hero_desc": "En Polgün Waterparks, la base de nuestro enfoque de I+D reside en desarrollar tecnologías de entretenimiento acuático seguras, innovadoras, sostenibles y de alto valor añadido.",
+    "p1": "Reconocido oficialmente por el Ministerio en 2021, nuestro centro es el primer y único Centro de I+D de Muğla, liderando el desarrollo de productos exclusivos, la producción de tecnología propia y la ingeniería de vanguardia.",
+    "p2": "En nuestro Centro de I+D, un equipo de 30 profesionales cualificados a tiempo completo gestiona de manera integral el diseño de nuevos productos, análisis de ingeniería, prototipado, ensayos, validación, desarrollo de procesos de fabricación y propiedad intelectual.",
+    "p3": "Consideramos el desarrollo tecnológico nacional como una responsabilidad estratégica; creamos soluciones que reducen la dependencia externa, de rápida implementación y ajustadas a las necesidades del cliente. En todos los procesos aplicamos rigurosamente los principios de seguridad, calidad, cumplimiento de normas internacionales y sostenibilidad.",
+    "innovative_title": "Productos Innovadores",
+    "p4": "Los proyectos desarrollados en el Centro de I+D de Polgün aportan valor en ámbitos como el ahorro de agua, seguridad del usuario, aumento de capacidad, experiencia temática, fabricación modular y geometrías de tobogán de última generación. Proyectos emblemáticos como Navatu, Savana, Monarch Butterfly y Eclipse representan la capacidad de diseño e ingeniería de Polgün en el mercado internacional.",
+    "continuous_title": "Desarrollo Continuo",
+    "p5": "Nuestras actividades de I+D no se limitan al desarrollo de nuevos productos. Realizamos trabajos continuos de mejora para elevar el rendimiento del catálogo existente, optimizar procesos productivos, reducir el impacto ambiental y fortalecer la competitividad global a través de colaboraciones académicas, publicaciones científicas y registro de patentes y diseños.",
+    "misyon": "Nuestra Misión",
+    "misyon_desc": "Aportar soluciones exclusivas a la industria del ocio acuático mediante proyectos de I+D innovadores, seguros y rentables; creando productos pioneros que representen nuestra excelencia en mercados globales.",
+    "vizyon": "Nuestra Visión",
+    "vizyon_desc": "Ser un centro de I+D líder a escala mundial que guíe las tecnologías de ocio acuático con diseños originales, ingeniería de vanguardia y cumplimiento estricto de estándares internacionales.",
+    "projects_title": "Nuestros Proyectos de I+D",
+    "navatu_desc": "Innovador sistema de parque acuático galardonado con el premio IAAPA Brass Ring, que lleva la experiencia de olas naturales a una nueva dimensión.",
+    "savana_sub": "Tobogán Acuático Temático Multicamino",
+    "savana_desc": "Proyecto pionero de I+D que combina cuatro trayectorias de deslizamiento distintas en una sola estructura.",
+    "monarch_desc": "Diseño exclusivo que fusiona la silueta de las alas de mariposa con la hidrodinámica de alta velocidad.",
     "fikri_sinai_tag": "PROPIEDAD INTELECTUAL",
-    "utility_models_tag": "REGISTROS OFICIALES",
     "fikri_sinai_title": "Derechos de Propiedad Intelectual e Industrial",
-    "fikri_sinai_desc": "Las tecnologías innovadoras y las soluciones de ingeniería desarrolladas por el Centro de I+D de Polgün están protegidas a nivel nacional e internacional.",
+    "fikri_sinai_desc": "Las innovaciones y diseños desarrollados por el Centro de I+D de Polgün están protegidos mediante registros nacionales e internacionales.",
+    "stats": {
+      "patent": "Patente",
+      "utility_model": "Modelo de Utilidad",
+      "design": "Diseño Industrial",
+      "brand": "Marca Registrada",
+      "publication": "Publicación / Artículo",
+      "total": "Total"
+    },
+    "utility_models_tag": "REGISTROS OFICIALES",
     "utility_models_title": "Nuestros Modelos de Utilidad",
-    "app_date": "Fecha de Solicitud",
-    "reg_date": "Fecha de Registro",
+    "dag_kizagi": "Chasis Portante y Sistema de Frenado de Trineo Alpino",
     "project_code": "Código de Proyecto",
     "work_name": "Nombre de la Obra",
     "scope": "Alcance",
     "status": "Estado",
-    "dag_kizagi": "Cuerpo Portador y Sistema de Frenos de Montaña Rusa"
+    "app_date": "Fecha de Solicitud",
+    "reg_date": "Fecha de Registro",
+    "registered": "Registrado",
+    "national": "Nacional",
+    "international": "Internacional",
+    "pending": "En Tramitación",
+    "brands_tag": "PROPIEDAD INTELECTUAL",
+    "brands_title": "Nuestras Marcas",
+    "brands_desc": "Las marcas registradas de Polgün en Turquía y en el mundo son el reflejo de nuestra identidad única y prestigio internacional.",
+    "official_record": "Registro Oficial",
+    "patent_management": "© Gestión de Patentes Polgün Waterparks",
+    "project_type": "Proyecto de I+D",
+    "center_location": "Centro de I+D"
   },
   "career": {
     "title": "Empleo en Polgün",
@@ -929,15 +918,15 @@
     "quality_title": "Nuestros Certificados de Calidad",
     "visits": {
       "minister": {
-        "title": "Tuvimos el honor de recibir a nuestro Ministro de Industria y Tecnología, el Sr. Mehmet Fatih Kacır, en Polgun Waterparks.",
-        "desc": "Nos enorgulleció recibir en nuestra fábrica a la delegación acompañada por el Gobernador de Muğla, el Sr. İdris Akbıyık, los Diputados de Muğla, el Sr. Kadem Mete y el Sr. Yakup Otgöz, el Gobernador de Distrito de Menteşe, el Sr. Mehmet Eriş, el Presidente Provincial de AK Party, el Sr. Haluk Laçin, el Presidente Provincial de MHP, el Sr. Burak Demirel, y el Alcalde de Kavaklıdere, el Sr. Mehmet Demir. La delegación visitó nuestra planta de producción en Muğla y examinó nuestro centro de I+D.\n\nComo uno de los líderes globales de la industria, nos enorgullece enormemente nuestro compromiso con la innovación, la calidad y la excelencia. Su visita ha demostrado una vez más la importancia de las tecnologías de producción avanzadas y el desarrollo de I+D para dar forma al futuro. Expresamos nuestro más sincero agradecimiento por su amable visita, interés y apoyo."
+        "title": "Tuvimos el honor de recibir a nuestro Ministro de Industria y Tecnología, el Sr. Mehmet Fatih Kacir, en Polgun Waterparks.",
+        "desc": "Nos enorgulleció recibir en nuestra fábrica a la delegación acompañada por el Gobernador de Muğla, el Sr. Idris Akbiyik, los Diputados de Muğla, el Sr. Kadem Mete y el Sr. Yakup Otgöz, el Gobernador de Distrito de Menteşe, el Sr. Mehmet Eriş, el Presidente Provincial de AK Party, el Sr. Haluk Laçin, el Presidente Provincial de MHP, el Sr. Burak Demirel, y el Alcalde de Kavaklidere, el Sr. Mehmet Demir. La delegación visitó nuestra planta de producción en Muğla y examinó nuestro centro de I+D.\n\nComo uno de los líderes globales de la industria, nos enorgullece enormemente nuestro compromiso con la innovación, la calidad y la excelencia. Su visita ha demostrado una vez más la importancia de las tecnologías de producción avanzadas y el desarrollo de I+D para dar forma al futuro. Expresamos nuestro más sincero agradecimiento por su amable visita, interés y apoyo."
       },
       "egekaf": {
         "title": "Visita en el Marco de EGEKAF",
         "desc": "Presentamos nuestros modelos a escala, metodologías de trabajo y planes de expansión a los visitantes del congreso."
       },
       "msku": {
-        "title": "Visita de la Universidad Muğla Sıtkı Koçman",
+        "title": "Visita de la Universidad Muğla Sitki Koçman",
         "desc": "Inspección de las líneas de producción y el centro de I+D para potenciar la colaboración universidad-empresa."
       },
       "title": "Visitas Corporativas",
@@ -959,7 +948,13 @@
     "kalite": {
       "iso9001": "Sistema de Gestión de Calidad",
       "iso14001": "Sistema de Gestión Ambiental",
-      "iso45001": "Seguridad y Salud en el Trabajo"
+      "iso45001": "Salud y Seguridad en el Trabajo",
+      "iso3834": "Fabricación de Estructuras de Acero",
+      "astm": "Certificado de Estándares de Producto",
+      "cpr": "Certificado de Calidad de Soldadura",
+      "ts_en_1069": "Certificado Estándar de Toboganes Acuáticos",
+      "ts_en_1176": "Certificado Estándar de Equipos de Juego",
+      "ts_en_17232": "Certificado Estándar de Juegos Acuáticos"
     },
     "patent_title": "Propiedad Intelectual",
     "cert_title": "Certificados",
@@ -994,50 +989,53 @@
     }
   },
   "history": {
-    "title": "Historia",
-    "journey": "La Trayectoria de Polgün desde 2002",
-    "milestones_title": "Hitos",
+    "title": "Nuestra Historia",
+    "journey": "La Trayectoria de Polgün desde 2002 hasta el Presente",
+    "milestones_tag": "Hitos Principales",
+    "milestones_title": "Hitos Históricos",
     "growth_title": "Nuestra Historia de Crecimiento",
-    "facilities": "Instalaciones",
-    "growing_power": "Capacidad de Producción en Expansión",
-    "desc1": "Para atender la demanda global, realizamos constantes inversiones en nuestras fábricas, alcanzando los 120.000 m² de superficie de producción total incorporando procesos avanzados de pintura y revestimiento termoplástico.",
-    "desc2": "Hemos firmado un acuerdo de colaboración con Marmara Teknokent para establecer oficinas de ingeniería avanzada que refuercen nuestros vínculos científicos.",
-    "bold_summary": "Hoy, Polgün atiende al mercado global con fábricas en Turquía y una oficina de representación y ventas en España.",
-    "milestones": {
-      "2002": "Polgün inició sus operaciones en Muğla-Menteşe.",
-      "2008": "Se realizó la primera entrega de proyecto internacional.",
-      "2015": "Se aumentó la capacidad de producción y se pusieron en servicio nuevas instalaciones.",
-      "2019": "Se abrió la oficina de España.",
-      "2021": "Se obtuvo el estatus de Centro de I+D aprobado por el Ministerio — el primer y único Centro de I+D de Muğla.",
-      "2025": "Se alcanzó un área de producción total de 120.000 m² con la inversión en la fábrica de Bursa.",
-      "2026": "La cooperación universidad-industria se fortaleció con la oficina de Marmara Teknokent."
-    },
-    "milestones_tag": "Hitos",
-    "desc": "A lo largo de los años, hemos ampliado continuamente nuestra capacidad de fabricación, experiencia en ingeniería y proyectos globales. Cada paso dado ha formado parte de una infraestructura más sólida y de la trayectoria de Polgün, que hoy llega a más de 70 países.",
+    "facilities": "Nuestras Instalaciones",
+    "growing_power": "Poder de Fabricación en Crecimiento",
+    "desc": "A lo largo de los años, hemos crecido continuamente fortaleciendo nuestra capacidad de fabricación, excelencia en ingeniería y experiencia en proyectos internacionales. Cada paso ha formado parte de una infraestructura más sólida y de un viaje que hoy llega a más de 70 países.",
+    "desc1": "Polgün realiza continuas inversiones en infraestructura para satisfacer la creciente demanda y perfeccionar sus capacidades de producción; al tiempo que crea nuevas áreas de producción de poliéster, recubrimiento termoplástico y pintura en sus instalaciones de Muğla, consolida su presencia internacional alcanzando 120.000 m² de superficie con la nueva fábrica en Bursa.",
+    "desc2": "Para llevar la competencia de I+D y Diseño aún más lejos, se completó la apertura de la oficina en el Teknopark de Mármara, formalizando colaboraciones estratégicas con universidades y centros de investigación.",
+    "bold_summary": "Hoy en día, Polgün fortalece su posición en el mercado internacional con su infraestructura de fabricación en Turquía y su oficina de ventas en España.",
+    "tag": "Nuestra Trayectoria",
+    "intro": "Ingeniería innovadora y fabricación confiable en la industria de parques acuáticos desde 2002.",
+    "milestones_desc": "Hitos decisivos en el éxito global de Polgün desde su fundación.",
+    "cta_title": "Diseñemos Juntos los Parques Acuáticos del Futuro",
+    "cta_desc": "Aportamos valor a sus proyectos con más de 20 años de experiencia y un sólido equipo de ingenieros.",
+    "cta_btn": "Contáctenos",
     "stats": {
-      "completed": "Proyectos Completados",
+      "completed": "Proyectos Realizados",
       "countries": "Países",
       "production": "Producción Integrada",
-      "team": "Empleados",
+      "team": "Colaboradores",
       "experience": "Años de Experiencia",
-      "projects": "Proyectos"
+      "projects": "Proyectos",
+      "countries_sub": "Exportación y Presencia Global",
+      "projects_sub": "Parques Acuáticos Completados",
+      "production_sub": "3 Fábricas de Alta Tecnología",
+      "team_sub": "Equipo de Ingeniería y Producción"
     },
     "tags": {
-      "1985": "Fundación y primera producción de compuestos",
-      "2002": "Primera exportación de parque acuático",
-      "2008": "Departamento de I+D e ingeniería",
-      "2015": "Nueva planta de producción integrada",
-      "2019": "Red de exportación a más de 50 países",
-      "2021": "Centro de I+D certificado por el Ministerio",
-      "2025": "Industria 4.0 y tecnologías de parques inteligentes",
-      "2026": "Visión de liderazgo global"
+      "2002": "Fundación",
+      "2008": "Primera Exportación",
+      "2015": "Expansión de Capacidad",
+      "2019": "Oficina en España",
+      "2021": "Centro de I+D",
+      "2025": "Fábrica de Bursa",
+      "2026": "Oficina en Technopark"
     },
-    "cta_btn": "立即咨询",
-    "cta_desc": "让行业先驱的专业经验为您的投资项目保驾护航。",
-    "cta_title": "与我们携手共创辉煌",
-    "intro": "自 1985 年创立至今，在水上游乐产业谱写不断超越的创新篇章。",
-    "milestones_desc": "镌刻在企业辉煌发展史上的重要时刻。",
-    "tag": "发展历程"
+    "milestones": {
+      "2002": "Polgün inició sus operaciones en Muğla-Menteşe.",
+      "2008": "Se realizó la primera entrega de un proyecto internacional.",
+      "2015": "Se incrementó la capacidad de producción con nuevas instalaciones.",
+      "2019": "Se inauguró la oficina comercial en España.",
+      "2021": "Se obtuvo el estatus de Centro de I+D certificado por el Ministerio — Primer y único centro de Muğla.",
+      "2025": "Se alcanzaron 120.000 m² de área de producción con la fábrica de Bursa.",
+      "2026": "Se reforzó la cooperación universidad-empresa con la oficina en Marmara Teknopark."
+    }
   },
   "news": {
     "title": "Noticias y Eventos",
@@ -1080,19 +1078,19 @@
     "articles": {
       "gunes_bakim_evi": {
         "title": "Apertura de la Guardería Especial Güneş",
-        "desc": "Nuestro apoyo a proyectos de responsabilidad social continúa sin interrupciones. La inauguración de la Guardería Infantil Especial Güneş, llevada a cabo por el Municipio de Menteşe, se celebró con la participación de nuestro Director General, el Sr. İbrahim Güngör. Como Familia Polgün, nos alegra tocar corazones pequeños hoy también."
+        "desc": "Nuestro apoyo a proyectos de responsabilidad social continúa sin interrupciones. La inauguración de la Guardería Infantil Especial Güneş, llevada a cabo por el Municipio de Menteşe, se celebró con la participación de nuestro Director General, el Sr. Ibrahim Güngör. Como Familia Polgün, nos alegra tocar corazones pequeños hoy también."
       },
       "aile_sosyal_hizmetler": {
         "title": "Colaboración con la Dirección de Servicios Familiares y Sociales",
-        "desc": "Como familia Polgün, nos complace apoyar una valiosa labor realizada por la Dirección Provincial de Servicios Familiares y Sociales de Muğla. Gracias a esta cooperación, que se inició a través de nuestro Gobernador İdris Akbıyık, se crean espacios de vida más cálidos y seguros para los niños. Creemos en el poder de la solidaridad social y adoptamos la importancia de estas contribuciones en cada paso para mirar al futuro con esperanza."
+        "desc": "Como familia Polgün, nos complace apoyar una valiosa labor realizada por la Dirección Provincial de Servicios Familiares y Sociales de Muğla. Gracias a esta cooperación, que se inició a través de nuestro Gobernador Idris Akbiyik, se crean espacios de vida más cálidos y seguros para los niños. Creemos en el poder de la solidaridad social y adoptamos la importancia de estas contribuciones en cada paso para mirar al futuro con esperanza."
       },
       "iftar_programi": {
         "title": "Nuestra Invitación Tradicional al Iftar",
-        "desc": "Nuestra invitación tradicional al iftar, honrada por nuestro Gobernador de Muğla, el Sr. İdris Akbıyık, el Gobernador del Distrito de Menteşe, el Sr. Mehmet Eriş, el Rector de la MSKÜ, el Prof. Dr. Turhan Kaçar, el Alcalde de Yatağan, el Sr. Mesut Günay, la Diputada de la 27ª Legislatura de Muğla, la Sra. Yelda Erol, el Presidente de TÜBİTAK MARTEK y Diputado de la 24ª Legislatura, el Sr. Mehmet Ali Okur, valiosos empresarios de Muğla, representantes de partidos políticos y nuestra gran familia Polgün, tuvo lugar el 14 de marzo de 2026 en el Centro de Educación y Cultura Türkan Saylan con la participación de más de 600 invitados. En el programa de iftar organizado por Polgün Waterparks & Attractions, el Presidente de la Junta, İbrahim Güngör y su distinguida familia, acompañado por los himnos cantados por el artista de música sufí turca Abdurrahman Önül, la presentación de Enes Çiftçi y el espectáculo de semazen atrajeron gran atención. Extendemos nuestro agradecimiento a todos los miembros de nuestra familia que asistieron y honraron nuestra invitación."
+        "desc": "Nuestra invitación tradicional al iftar, honrada por nuestro Gobernador de Muğla, el Sr. Idris Akbiyik, el Gobernador del Distrito de Menteşe, el Sr. Mehmet Eriş, el Rector de la MSKÜ, el Prof. Dr. Turhan Kaçar, el Alcalde de Yatağan, el Sr. Mesut Günay, la Diputada de la 27ª Legislatura de Muğla, la Sra. Yelda Erol, el Presidente de TÜBITAK MARTEK y Diputado de la 24ª Legislatura, el Sr. Mehmet Ali Okur, valiosos empresarios de Muğla, representantes de partidos políticos y nuestra gran familia Polgün, tuvo lugar el 14 de marzo de 2026 en el Centro de Educación y Cultura Türkan Saylan con la participación de más de 600 invitados. En el programa de iftar organizado por Polgün Waterparks & Attractions, el Presidente de la Junta, Ibrahim Güngör y su distinguida familia, acompañado por los himnos cantados por el artista de música sufí turca Abdurrahman Önül, la presentación de Enes Çiftçi y el espectáculo de semazen atrajeron gran atención. Extendemos nuestro agradecimiento a todos los miembros de nuestra familia que asistieron y honraron nuestra invitación."
       },
       "msku_kariyer_fuari": {
         "title": "Feria de Empleo MSKÜ",
-        "desc": "Polgün Waterparks & Attractions, el Presidente de la Junta de Directores, Sr. İbrahim Güngör, se reunió con los profesionales del futuro en la Feria de Empleo organizada en la Universidad Muğla Sıtkı Koçman. Compartiendo su conocimiento y experiencia en el sector con jóvenes talentos, İbrahim Güngör mantuvo una inspiradora conversación con los estudiantes sobre la dinámica del sector de los parques acuáticos y del entretenimiento, nuestros proyectos innovadores y la planificación de carreras. El entusiasmo y la visión de los jóvenes que darán forma al futuro de nuestra industria una vez más se convirtieron en una gran fuente de motivación para nosotros. ¡Como la familia Polgün, nos enorgullece estar al lado de los jóvenes talentos y apoyarlos en sus trayectorias profesionales!"
+        "desc": "Polgün Waterparks & Attractions, el Presidente de la Junta de Directores, Sr. Ibrahim Güngör, se reunió con los profesionales del futuro en la Feria de Empleo organizada en la Universidad Muğla Sitki Koçman. Compartiendo su conocimiento y experiencia en el sector con jóvenes talentos, Ibrahim Güngör mantuvo una inspiradora conversación con los estudiantes sobre la dinámica del sector de los parques acuáticos y del entretenimiento, nuestros proyectos innovadores y la planificación de carreras. El entusiasmo y la visión de los jóvenes que darán forma al futuro de nuestra industria una vez más se convirtieron en una gran fuente de motivación para nosotros. ¡Como la familia Polgün, nos enorgullece estar al lado de los jóvenes talentos y apoyarlos en sus trayectorias profesionales!"
       }
     },
     "all_news": "全部新闻",
@@ -1160,6 +1158,10 @@
         "name": "Tema de Galaxia",
         "location": "Turquía",
         "desc": "Prepárese para el despegue con la Polgün Galaxy Splash Tower, una zona de juegos acuáticos temática diseñada para llevar a los niños a un viaje emocionante a través de las maravillas del universo."
+      },
+      "castle": {
+        "name": "Tema Castillo",
+        "desc": "Un reino acuático medieval lleno de torres de cuento de hadas y puentes colgantes."
       }
     },
     "hero_subtitle": "Toboganes de agua y zonas de entretenimiento diseñadas con varios temas",
@@ -1212,6 +1214,24 @@
       "status": "Estado",
       "registered_badge": "Patente Registrada",
       "pending_badge": "En Proceso de Registro"
+    },
+    "items": {
+      "floresan": {
+        "project_name": "Iluminación Fluorescente",
+        "patent_name": "Tobogán Acuático con Sistema de Iluminación Fluorescente Integrado"
+      },
+      "eclipse": {
+        "project_name": "Eclipse",
+        "patent_name": "Tobogán Acuático Tipo Tazón con Doble Superficie de Deslizamiento"
+      },
+      "navatu": {
+        "project_name": "Navatu",
+        "patent_name": "Tobogán Acuático Innovador con Sistema Integrado de Generación de Olas"
+      },
+      "modular": {
+        "project_name": "Tobogán Modular Body Slide",
+        "patent_name": "Tobogán Acuático Modular Convertible Bidireccionalmente Entre Secciones Abiertas y Cerradas"
+      }
     }
   },
   "designsPage": {
@@ -1281,7 +1301,9 @@
     "desc": "Explore artículos técnicos completos sobre ingeniería, diseño, fabricación y gestión de parques acuáticos por Polgün Waterparks & Attractions.",
     "read_more": "Leer Más",
     "faqs_title": "Preguntas Frecuentes",
-    "related_title": "Artículos Relacionados"
+    "related_title": "Artículos Relacionados",
+    "not_found_desc": "El artículo o contenido que busca no está disponible en nuestro Centro de Conocimiento.",
+    "back_to_list": "Volver al Centro de Conocimiento"
   },
   "factoriesPage": {
     "desc": "Descubra nuestras modernas instalaciones integradas donde se fabrican toboganes de agua de clase mundial.",

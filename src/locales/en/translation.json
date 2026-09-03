@@ -23,7 +23,10 @@
     "view": "View",
     "turkey": "Turkey",
     "spain": "Spain",
-    "not_found": "Content Not Found"
+    "not_found": "Content Not Found",
+    "pause": "Pause",
+    "play": "Play",
+    "close": "Close"
   },
   "nav": {
     "services": "Our Services",
@@ -62,7 +65,15 @@
     "portal": "Client Portal",
     "production": "Production & Assembly",
     "quality_mgmt": "Quality Management",
-    "quote_btn": "Get a Quote"
+    "quote_btn": "Get a Quote",
+    "view_all": "View All",
+    "cta_products": "Explore all products and aquatic venue types",
+    "cta_services": "Discover our turnkey project execution processes",
+    "cta_projects": "Explore 3000+ completed global waterpark projects",
+    "cta_about": "Discover Polgün's 40-year story of innovation",
+    "cta_arge": "Innovative waterpark technologies and proprietary IP",
+    "arge_products": "R&D Products",
+    "all_services": "All Services"
   },
   "footer": {
     "products_title": "PRODUCTS",
@@ -203,65 +214,45 @@
     "production_power_desc": "By managing engineering, production, and quality control processes under the same roof, we develop reliable, high-quality solutions customized for each project.",
     "btn_projects": "Examine Our Projects",
     "production_sections": {
-      "cnc_mold": {
-        "title": "Model & Mold Workshop",
-        "desc": "Production center for water slide molds using high-precision 5-axis CNC technologies."
-      },
-      "steel": {
-        "title": "Steel Construction & Tower Fabrication",
-        "desc": "Manufacturing structural towers and platform systems according to certified engineering calculations."
-      },
-      "mechanical": {
-        "title": "Mechanical & Automation Assembly",
-        "desc": "Assembly and testing zone for water pumps, valve networks, sensors, and PLC control panels."
-      },
-      "composite": {
-        "title": "Composite Production & RTM Technology",
-        "desc": "Manufacturing slide components with RTM and L-RTM technologies delivering smooth surfaces on both sides."
-      },
-      "digital": {
-        "title": "Industry 4.0 & Smart Production",
-        "desc": "Digital manufacturing monitoring and advanced quality assurance infrastructure."
-      },
       "entegre_depo": {
         "title": "Integrated Raw Material & Logistics Warehouse",
-        "desc": "Storage facility where all raw materials and components are stored according to international standards."
+        "desc": "Polgün manages the procurement, storage, and production dispatch processes of raw materials, auxiliary supplies, and technical equipment within its own operational structure. Systematic inventory and materials management ensures that various manufacturing units access required inputs swiftly and in a controlled manner. The coordinated execution of production, warehousing, and procurement maintains continuous manufacturing while reinforcing material traceability and operational control."
       },
       "model_kalıp": {
         "title": "Model & Mold Workshop",
-        "desc": "Production center for water slide molds using high-precision 5-axis CNC technologies."
+        "desc": "Polgün translates original and complex geometries into production with high precision via its 5-axis CNC model and mold manufacturing infrastructure. Managing all processes in-house from digital design to mold fabrication delivers superior surface finish, dimensional precision, and repeatable production quality. Thanks to our CNC technology, custom project designs and next-generation slide profiles are prepared for production rapidly alongside standard models."
       },
       "elyaf": {
-        "title": "Fiberglass & Reinforcement Prep",
-        "desc": "Precision cutting and preparation section for technical fiberglass fabrics used in composites."
+        "title": "Fiberglass & Reinforcement Preparation",
+        "desc": "Polgün prepares the fiberglass fabrics and reinforcement materials used in composite production to exact dimensions using CNC automated cutting systems. Operating on digital CAD data, parts matching diverse product geometries are cut with speed, repeatability, and precision. This technology minimizes material waste, enhances cutting accuracy, and significantly shortens manufacturing lead times, supporting consistent quality across composite processes."
       },
       "kompozit": {
         "title": "Composite Production & RTM Technology",
-        "desc": "Manufacturing slide components with RTM and L-RTM technologies delivering smooth surfaces on both sides."
+        "desc": "Polgün manufactures composite components for water slides and park attractions in-house utilizing methods such as RTM, L-RTM, hand lay-up, and spray-up. Durable and repeatable parts are crafted using resin, reinforcement, and layup schedules tailored to product geometry and performance demands. Subsequent gelcoat application, surface leveling, pigmentation, buffing, and topcoating ensure impeccable visual integrity and surface excellence."
       },
       "çelik_işleme": {
-        "title": "Steel Processing & Welding",
-        "desc": "Fabrication of steel structures using EN 1090 and ISO 3834-2 certified robotic and manual welding."
+        "title": "Steel Processing & Cutting Technologies",
+        "desc": "Polgün accurately transfers designs to fabrication utilizing high-precision steel cutting and machining technologies. CNC pipe and profile cutting systems prepare structural components of varying diameters, cross-sections, and geometries with tight dimensional accuracy. Direct transfer of digital CAD data facilitates faster, repeatable production of support structures matching intricate slide paths, strengthening overall quality control."
       },
       "çelik_konstrüksiyon": {
-        "title": "Steel Construction & Tower Fabrication",
-        "desc": "Manufacturing structural towers and platform systems according to certified engineering calculations."
+        "title": "Steel Construction & Welded Fabrication",
+        "desc": "Polgün manufactures the structural steel systems for water slides and parks entirely in-house. CNC-processed pipes, profiles, and structural members are assembled with precision welding and fabrication according to project-specific geometry. Fully integrated execution from cutting to welding ensures strict dimensional fidelity, structural integrity, and architectural flexibility tailored to each installation."
       },
       "mekanik": {
-        "title": "Mechanical & Automation Assembly",
-        "desc": "Assembly and testing zone for water pumps, valve networks, sensors, and PLC control panels."
+        "title": "Mechanical Machining & Parts Fabrication",
+        "desc": "Polgün produces custom fasteners, flanges, and specialized mechanical components used across water slide systems and steel frameworks in-house. Components are machined to precise engineering tolerances to guarantee perfect on-site fit. Our in-house machining capability provides dimensional accuracy, repeatable quality, and rapid project adaptation for non-standard technical requirements."
       },
       "boya": {
-        "title": "Surface Treatment & Paint Facility",
-        "desc": "Corrosion-resistant hot-dip galvanizing and electrostatic powder coating line."
+        "title": "Painting & Protective Coating Applications",
+        "desc": "Polgün executes surface preparation, industrial painting, and protective coating operations for steel structures and metal components in-house according to operational environments. Applied systems safeguard metal surfaces against corrosion, UV, and harsh chemical exposures while delivering flawless aesthetics and lasting durability across varying climatic conditions."
       },
       "kalite": {
-        "title": "Quality Control & Laboratory",
-        "desc": "Testing center where all components are inspected according to international safety and strength standards."
+        "title": "Final Inspection & Product Protection",
+        "desc": "Finished composite components at Polgün undergo rigorous surface finish, thickness, and structural integrity inspections before advancing to dispatch. Protective wrapping and handling procedures are strictly applied to preserve product surfaces during manufacturing, transit, and assembly, safeguarding premium quality from factory floor to job site."
       },
       "paketleme": {
-        "title": "Packaging & Global Shipping",
-        "desc": "Logistics facility where components are securely packaged and dispatched in compliance with global cargo rules."
+        "title": "Packaging & Logistics Dispatch",
+        "desc": "To deliver inspected products securely to job sites worldwide, Polgün implements tailored packaging and container loading protocols suited to each product type and transport route. Composite panels, steel frames, and hardware kits are secured against transit damage, ensuring coordinated, prompt, and intact global site delivery."
       }
     },
     "factories": {
@@ -304,75 +295,13 @@
   "services": {
     "title": "Our Services",
     "subtitle": "Holistic Project Management",
-    "desc": "Polgün provides high standards and professional services at every stage of waterpark projects. Managing all processes from planning to design, engineering to installation with its own expert staff, it delivers turnkey projects.",
-    "sections": {
-      "planlama": {
-        "title": "Planning",
-        "desc": "The success of every waterpark project begins with correct planning. Investor budget, land structure, target audience, and market dynamics are analyzed to design the most suitable layout plan and concept."
-      },
-      "tasarim": {
-        "title": "Design",
-        "desc": "We create exciting waterpark concepts with innovative and unique designs. Using 3D modeling technologies, we present the closest representation of what the project will look like when completed."
-      },
-      "muhendislik": {
-        "title": "Engineering",
-        "desc": "We design safe and durable structures in compliance with international standards. Structural analyses of steel construction and GRP (fiberglass) parts are conducted to ensure the highest safety and quality standards."
-      },
-      "montaj": {
-        "title": "Installation & Assembly",
-        "desc": "We complete site installations of projects as quickly as possible and smoothly with our expert assembly teams and site managers. We ensure full compliance with occupational health and safety rules."
-      },
-      "bakim": {
-        "title": "Maintenance & Repair",
-        "desc": "We offer regular maintenance services for waterparks to operate long-lastingly and safely. Pre-season checks, parts replacement, and technical support guarantee uninterrupted fun."
-      },
-      "yenileme": {
-        "title": "Renovation",
-        "desc": "We renovate existing waterparks with modern technologies and trendy designs. By adding new slides, kids play groups, and themed elements, we boost the attraction of the parks."
-      }
-    },
-    "steps": {
-      "step1": {
-        "title": "Product Design & Theming",
-        "desc": "Water slides, children's play groups, and water park attractions are custom designed according to the project concept and customer expectations. Color, pattern, theme, and visual details are developed in harmony with the product geometry to create unique designs that enhance the visitor experience."
-      },
-      "step2": {
-        "title": "Engineering & Projecting",
-        "desc": "Slide systems, steel support structures, mechanical and hydraulic infrastructures are projected in detail by engineering teams. Structural calculations, technical analyses, production drawings, and assembly documents are prepared in accordance with the project conditions."
-      },
-      "step3": {
-        "title": "Production",
-        "desc": "Fiberglass slide parts, steel constructions, models, molds, and project-specific components are prepared in Polgün's production facilities. Production processes are carried out based on dimensional accuracy, surface quality, durability, and traceability."
-      },
-      "step4": {
-        "title": "Project Management & Shipping",
-        "desc": "Design, production, packaging, logistics, and field processes are coordinated according to the project calendar. Products are prepared with correct coding and labeling systems, securely packaged, and delivered to the project site complete."
-      },
-      "step5": {
-        "title": "Montage & Commissioning",
-        "desc": "Slides, steel constructions, and related equipment are assembled by experienced field teams or under Polgün's technical supervision. After assembly, connections, sliding surfaces, water flow, and system functions are checked in detail."
-      },
-      "design": {
-        "desc": "开展严密的有限元力学计算、水动力学仿真及地下管网综合管线设计。",
-        "title": "工程力学与项目设计"
-      },
-      "engineering": {
-        "desc": "在符合 EN 1069 及 ISO 标准的自动化厂区内完成滑道与钢构制造。",
-        "title": "高精工业制造"
-      },
-      "installation": {
-        "desc": "全球跨国物流协调、集装箱防损装载及目的地清关门到门运输。",
-        "title": "项目统筹与国际物流"
-      },
-      "planning": {
-        "desc": "提供概念规划、3D 渲染表现与符合当地文化特色的定制主题设计。",
-        "title": "产品设计与主题化包装"
-      },
-      "production": {
-        "desc": "资深外派工程师现场指导安装、满载水力测试运行与运营人员专业培训。",
-        "title": "现场安装与调试验收"
-      }
-    },
+    "desc": "Polgün provides high-standard and professional services at every stage of waterpark projects. Managing all processes from planning to design, engineering to installation with its expert staff, it delivers turnkey projects.",
+    "process_tag": "Our Service Process",
+    "process_title": "We are with you every step of the way, from start to finish",
+    "cta_title": "Let's build your dream together",
+    "cta_desc": "No matter the project size, we are with you from day one to the final day.",
+    "cta_btn": "Get a Quote",
+    "cta_tag": "Our Services",
     "why": {
       "service": {
         "title": "Full Service",
@@ -384,19 +313,67 @@
       },
       "iso": {
         "title": "ISO 9001",
-        "desc": "Certified production and quality processes."
+        "desc": "Certified manufacturing and quality processes."
       },
       "lifetime": {
         "title": "Lifetime",
-        "desc": "Long-term technical support and spare parts warranty."
+        "desc": "Long-term technical support and spare parts guarantee."
       }
     },
-    "process_tag": "Our Service Process",
-    "process_title": "We are with you every step of the way, from start to finish",
-    "cta_title": "Let's build your dream together",
-    "cta_desc": "No matter the project size, we are with you from day one to the last.",
-    "cta_btn": "联系专家团队",
-    "cta_tag": "开启合作"
+    "steps": {
+      "step1": {
+        "title": "Product Design & Theming",
+        "sub": "Product Design & Theming",
+        "desc": "Water slides, children's play groups, and waterpark attractions are custom designed according to the project concept and customer expectations. Color, pattern, theme, and visual details are developed in harmony with product geometry to create unique designs that enhance the visitor experience."
+      },
+      "step2": {
+        "title": "Engineering & Projecting",
+        "sub": "Engineering & Projecting",
+        "desc": "Slide systems, steel support structures, mechanical and hydraulic infrastructures are engineered in detail by our technical teams. Structural calculations, technical analyses, manufacturing drawings, and assembly documentation are prepared according to project conditions."
+      },
+      "step3": {
+        "title": "Production",
+        "sub": "Precision Manufacturing",
+        "desc": "Fiberglass slide components, steel structures, models, molds, and project-specific parts are manufactured in Polgün’s advanced facilities based on strict dimensional accuracy, surface finish, durability, and full traceability."
+      },
+      "step4": {
+        "title": "Project Management & Shipping",
+        "sub": "Project Management & Shipping",
+        "desc": "Design, manufacturing, packaging, logistics, and site schedules are seamlessly coordinated. Products are labeled with an accurate coding system, packed securely, and delivered completely to the project site."
+      },
+      "step5": {
+        "title": "Installation & Commissioning",
+        "sub": "Installation & Commissioning",
+        "desc": "Slides, steel frames, and related equipment are installed by experienced site teams or under Polgün technical supervision. Connections, sliding surfaces, water flow, and system functions are thoroughly verified and commissioned."
+      }
+    },
+    "sections": {
+      "planlama": {
+        "title": "Planning",
+        "desc": "The success of every waterpark project begins with accurate planning. Analyzing the investor's budget, land topography, target audience, and market dynamics, the most suitable layout and concept are crafted."
+      },
+      "tasarim": {
+        "title": "Design",
+        "desc": "We create exciting waterpark concepts with innovative and unique designs. Utilizing 3D modeling technologies, we present the project's completed look in the most realistic way possible."
+      },
+      "muhendislik": {
+        "title": "Engineering",
+        "desc": "We engineer safe and durable structures compliant with international standards. Through structural analysis of steel frames and GRP (fiberglass) parts, we ensure the highest safety and quality standards."
+      },
+      "montaj": {
+        "title": "Installation & Assembly",
+        "desc": "With expert assembly crews and site supervisors, we complete on-site installations swiftly and seamlessly, strictly adhering to occupational health and safety standards."
+      },
+      "bakim": {
+        "title": "Maintenance & Repair",
+        "desc": "We offer regular maintenance services to ensure long-lasting and safe waterpark operations. Through pre-season inspections, spare parts supply, and technical assistance, we ensure uninterrupted fun."
+      },
+      "yenileme": {
+        "title": "Renovation",
+        "desc": "We modernize existing waterparks with state-of-the-art technologies and trending designs. Adding new slide attractions, kids' play zones, and themed elements, we rejuvenate the park's appeal."
+      }
+    },
+    "all": "All Services"
   },
   "projects": {
     "title": "Our Projects",
@@ -446,16 +423,16 @@
       "desc": "Areas where kids meet water safely with sprayers, water guns, and small play elements."
     },
     "categories": {
-      "family_slides": "Family Slides",
-      "fast_slide": "Fast Slides",
-      "jumbo_slides": "Jumbo Slides",
-      "racer_slides": "Racer Slides",
+      "body_slides": "Body Slides",
       "classic_slides": "Classic Slides",
-      "body_slides": "人体直滑滑梯",
-      "extreme_slides": "极限垂直自由落体滑梯",
-      "kids_slides": "趣味儿童滑梯",
-      "rafting_slides": "激流大漂流滑梯",
-      "tube_slides": "皮筏浮圈滑梯"
+      "extreme_slides": "Extreme Slides",
+      "family_slides": "Family Slides",
+      "fast_slide": "Fast Slide",
+      "jumbo_slides": "Jumbo Slides",
+      "kids_slides": "Kids Slides",
+      "racer_slides": "Racer Slides",
+      "rafting_slides": "Rafting Slides",
+      "tube_slides": "Tube Slides"
     },
     "specs": {
       "tema": "Theme",
@@ -638,43 +615,55 @@
     "section1_title": "Our R&D Competence",
     "section1_desc": "Using engineering software, flow analyses, and next-generation production methods, we optimize the performance and durability of our products.",
     "section2_title": "Featured R&D Products",
-    "navatu_desc": "An innovative wave pool system that takes the natural wave experience to a new dimension.",
-    "savana_desc": "An innovative R&D project that combines four different slide paths in a single structure.",
-    "monarch_desc": "A custom design bringing the aesthetic form of butterfly wings together with water slide geometry, offering a high-speed and double-sided riding experience.",
+    "header_title": "R&D Center",
     "hero_desc": "At Polgün Waterparks, the foundation of our R&D approach is to develop safe, innovative, sustainable, and high-value-added water entertainment technologies.",
+    "p1": "Our center, which gained R&D Center status with Ministerial approval in 2021, pioneers original product development, localization, and technology production in our sector as the first and only R&D Center of Muğla.",
+    "p2": "In our R&D Center, we manage new product design, engineering analyses, prototyping, testing, validation, production method development, and intellectual property processes in a holistic approach with 30 full-time equivalent qualified R&D personnel working as researchers, technicians, and support staff.",
+    "p3": "We view nationalization and localization efforts for our country as a strategic responsibility; we develop solutions that reduce external dependency, are rapidly applicable, and directly respond to customer needs. In all our R&D processes from design to production, from analysis to field application, we adhere to the principles of safety, quality, compliance with international standards, and sustainability.",
     "innovative_title": "Innovative Products",
+    "p4": "Projects developed at Polgün R&D Center add value to the sector in areas such as water savings, user safety, capacity increase, thematic experience, modular production, composite material technologies, and next-generation water slide geometries. Our innovative product projects such as Navatu, Savana, Monarch Butterfly, and Eclipse are among the important R&D outputs that represent Polgün's design, engineering, and production strength in the international market.",
     "continuous_title": "Continuous Development",
-    "projects_title": "Our R&D Projects",
-    "savana_sub": "Multi-Lane Themed Water Slide",
+    "p5": "Our R&D activities are not limited to new product development alone. We also carry out continuous development work to improve the performance of existing products, improve production processes, reduce environmental impacts, increase material efficiency, and increase our competitive power in international markets. We strengthen our corporate knowledge base through academic collaborations, scientific publications, patent and design registration processes; and transform the outputs obtained into a sustainable innovation culture.",
     "misyon": "Our Mission",
     "misyon_desc": "To bring unique solutions to the water entertainment industry by developing high-quality, safe, cost-effective, and innovative R&D projects; and to create pioneering products that represent our country in national and international markets. We aim to bring qualified knowledge, technology, and human resources to our sector by adhering to work schedules, engineering verifications, standards compliance, and sustainable production principles in our R&D processes.",
     "vizyon": "Our Vision",
     "vizyon_desc": "As Polgün Waterparks R&D Center, our vision is to be a leading and pioneering R&D center that shapes water entertainment technologies with its unique designs, innovative engineering solutions, strong production capability, and projects in compliance with international standards. We aim to become a brand recognized both nationally and internationally with projects we develop without compromising quality.",
-    "header_title": "R&D Center",
-    "p1": "Our center, which gained R&D Center status with Ministerial approval in 2021, pioneers original product development, localization, and technology production in our sector as the first and only R&D Center of Muğla.",
-    "p2": "In our R&D Center, we manage new product design, engineering analyses, prototyping, testing, validation, production method development, and intellectual property processes in a holistic approach with 30 full-time equivalent qualified R&D personnel working as researchers, technicians, and support staff.",
-    "p3": "We view nationalization and localization efforts for our country as a strategic responsibility; we develop solutions that reduce external dependency, are rapidly applicable, and directly respond to customer needs. In all our R&D processes from design to production, from analysis to field application, we adhere to the principles of safety, quality, compliance with international standards, and sustainability.",
-    "p4": "Projects developed at Polgün R&D Center add value to the sector in areas such as water savings, user safety, capacity increase, thematic experience, modular production, composite material technologies, and next-generation water slide geometries. Our innovative product projects such as Navatu, Savana, Monarch Butterfly, and Eclipse are among the important R&D outputs that represent Polgün's design, engineering, and production strength in the international market.",
-    "p5": "Our R&D activities are not limited to new product development alone. We also carry out continuous development work to improve the performance of existing products, improve production processes, reduce environmental impacts, increase material efficiency, and increase our competitive power in international markets. We strengthen our corporate knowledge base through academic collaborations, scientific publications, patent and design registration processes; and transform the outputs obtained into a sustainable innovation culture.",
-    "fikri_sinai_title": "Intellectual and Industrial Property Rights",
-    "fikri_sinai_desc": "Innovative technologies and engineering solutions developed by the Polgün R&D Center are protected under patent and utility model registrations both nationally and internationally.",
+    "projects_title": "Our R&D Projects",
+    "navatu_desc": "An innovative waterpark system that takes the natural wave experience to a new dimension.",
+    "savana_sub": "Multi-Lane Themed Water Slide",
+    "savana_desc": "An innovative R&D project that combines four different slide paths in a single structure.",
+    "monarch_desc": "A custom design bringing the aesthetic form of butterfly wings together with water slide geometry, offering a high-speed and double-sided riding experience.",
+    "fikri_sinai_tag": "INTELLECTUAL PROPERTY",
+    "fikri_sinai_title": "Intellectual & Industrial Property Rights",
+    "fikri_sinai_desc": "Technological innovations and designs developed by Polgün R&D Center are protected by national and international registrations.",
+    "stats": {
+      "patent": "Patent",
+      "utility_model": "Utility Model",
+      "design": "Design",
+      "brand": "Trademark",
+      "publication": "Publication / Article",
+      "total": "Total"
+    },
+    "utility_models_tag": "OFFICIAL RECORDS",
     "utility_models_title": "Our Utility Models",
-    "dag_kizagi": "Mountain Coaster Carrier Body and Brake System",
+    "dag_kizagi": "Alpine Coaster Chassis & Braking System",
     "project_code": "Project Code",
-    "work_name": "Work Name",
+    "work_name": "Attraction Title",
     "scope": "Scope",
     "status": "Status",
     "app_date": "Application Date",
     "reg_date": "Registration Date",
     "registered": "Registered",
     "national": "National",
-    "brands_tag": "INTELLECTUAL PROPERTY",
-    "brands_title": "Our Brands",
-    "brands_desc": "Polgün's nationally and internationally registered trademarks represent our unique identity and reliability in the global market.",
     "international": "International",
     "pending": "Pending Application",
-    "fikri_sinai_tag": "INTELLECTUAL PROPERTY",
-    "utility_models_tag": "OFFICIAL RECORDS"
+    "brands_tag": "INTELLECTUAL PROPERTY",
+    "brands_title": "Our Trademarks",
+    "brands_desc": "Polgün's registered trademarks in Turkey and worldwide embody our unique identity and recognized reliability.",
+    "official_record": "Official Record",
+    "patent_management": "© Polgün Waterparks Patent Management",
+    "project_type": "R&D Project",
+    "center_location": "R&D Center"
   },
   "career": {
     "title": "Career at Polgün",
@@ -929,15 +918,15 @@
     "quality_title": "Our Quality Certificates",
     "visits": {
       "minister": {
-        "title": "We had the honor of hosting our Minister of Industry and Technology, Mr. Mehmet Fatih Kacır, at Polgun Waterparks.",
-        "desc": "We were proud to host the delegation accompanied by our Governor of Muğla Mr. İdris Akbıyık, our Muğla Deputies Mr. Kadem Mete and Mr. Yakup Otgöz, District Governor of Menteşe Mr. Mehmet Eriş, AK Party Provincial Chairman Mr. Haluk Laçin, MHP Provincial Chairman Mr. Burak Demirel, and Mayor of Kavaklıdere Mr. Mehmet Demir at our factory. The delegation visited our production facility in Muğla and examined our R&D center.\n\nAs one of the global leaders in the industry, we take great pride in our commitment to innovation, quality, and excellence. Their visit has once again demonstrated the importance of advanced production technologies and R&D in shaping the future. We express our sincere gratitude to them for their kind visit, interest, and support."
+        "title": "We had the honor of hosting our Minister of Industry and Technology, Mr. Mehmet Fatih Kacir, at Polgun Waterparks.",
+        "desc": "We were proud to host the delegation accompanied by our Governor of Muğla Mr. Idris Akbiyik, our Muğla Deputies Mr. Kadem Mete and Mr. Yakup Otgöz, District Governor of Menteşe Mr. Mehmet Eriş, AK Party Provincial Chairman Mr. Haluk Laçin, MHP Provincial Chairman Mr. Burak Demirel, and Mayor of Kavaklidere Mr. Mehmet Demir at our factory. The delegation visited our production facility in Muğla and examined our R&D center.\n\nAs one of the global leaders in the industry, we take great pride in our commitment to innovation, quality, and excellence. Their visit has once again demonstrated the importance of advanced production technologies and R&D in shaping the future. We express our sincere gratitude to them for their kind visit, interest, and support."
       },
       "egekaf": {
         "title": "Polgün Visit within the Scope of EGEKAF",
         "desc": "During the visit carried out within EGEKAF, Polgün's project models, product development approach, and sectoral experience were shared with participants."
       },
       "msku": {
-        "title": "Muğla Sıtkı Koçman University Visit",
+        "title": "Muğla Sitki Koçman University Visit",
         "desc": "Within the scope of MSKU management's visit to Polgün, R&D, production, and design activities were examined on-site. University-industry cooperation was strengthened."
       },
       "title": "Corporate Visits",
@@ -959,7 +948,13 @@
     "kalite": {
       "iso9001": "Quality Management System",
       "iso14001": "Environmental Management System",
-      "iso45001": "Occupational Health and Safety"
+      "iso45001": "Occupational Health and Safety",
+      "iso3834": "Steel Construction Fabrication",
+      "astm": "Product Standards Certificate",
+      "cpr": "Welding Quality Certificate",
+      "ts_en_1069": "Water Slides Standard Certificate",
+      "ts_en_1176": "Playground Equipment Standard Certificate",
+      "ts_en_17232": "Water Play Equipment Standard Certificate"
     },
     "patent_title": "Intellectual Property",
     "cert_title": "Certificates",
@@ -996,13 +991,42 @@
   "history": {
     "title": "Our History",
     "journey": "Polgün's Journey from 2002 to Present",
+    "milestones_tag": "Milestones",
     "milestones_title": "Milestones",
     "growth_title": "Our Growth Story",
     "facilities": "Our Facilities",
     "growing_power": "Growing Manufacturing Power",
-    "desc1": "Polgün continuously carries out infrastructure investments to meet the increasing capacity need and advance its production capabilities; while creating new production areas for polyester, thermoplastic coating, and painting processes in its existing facilities in Muğla, it consolidates its growing operational power on an international scale by reaching a total of 120.000 m² production area with the new factory investment in Bursa.",
+    "desc": "Over the years, we have continuously grown our manufacturing strength, engineering expertise, and global project experience. Every step we took has been part of a stronger manufacturing infrastructure, innovative products, and the Polgün journey reaching more than 70 countries today.",
+    "desc1": "Polgün continuously carries out infrastructure investments to meet the increasing capacity need and advance its production capabilities; while creating new production areas for polyester, thermoplastic coating, and painting processes in its existing facilities in Muğla, it consolidates its growing operational power on an international scale by reaching a total of 120,000 m² production area with the new factory investment in Bursa.",
     "desc2": "In order to carry R&D and Design competence even further, the application process for the Marmara Teknokent office has been completed and the contract has been signed, officializing the structure. This setup aims to strengthen university collaborations.",
     "bold_summary": "Today, Polgün strengthens its position in the international market with its manufacturing setup in Turkey and sales office in Spain.",
+    "tag": "Our Journey",
+    "intro": "Innovative engineering and reliable manufacturing in the waterpark industry since 2002.",
+    "milestones_desc": "Key milestones of Polgün's global journey from inception to today.",
+    "cta_title": "Let's Design the Future of Waterparks Together",
+    "cta_desc": "We bring value to your projects with over 20 years of experience and a strong engineering team.",
+    "cta_btn": "Contact Us",
+    "stats": {
+      "completed": "Completed Projects",
+      "countries": "Countries",
+      "production": "Integrated Manufacturing",
+      "team": "Team Members",
+      "experience": "Years of Experience",
+      "projects": "Projects",
+      "countries_sub": "Global Export & Presence",
+      "projects_sub": "Completed Waterparks",
+      "production_sub": "3 Advanced Factories",
+      "team_sub": "Engineering & Production Team"
+    },
+    "tags": {
+      "2002": "Foundation",
+      "2008": "First Export",
+      "2015": "Capacity Expansion",
+      "2019": "Spain Office",
+      "2021": "R&D Center",
+      "2025": "Bursa Factory",
+      "2026": "Technopark Office"
+    },
     "milestones": {
       "2002": "Polgün started its operations in Muğla-Menteşe.",
       "2008": "First international project delivery was accomplished.",
@@ -1010,34 +1034,8 @@
       "2019": "Spain office was opened.",
       "2021": "Ministry-approved R&D Center status was obtained — Muğla's first and only R&D Center.",
       "2025": "A total of 120,000 m² production area was reached with the Bursa factory investment.",
-      "2026": "University-industry cooperation was strengthened with the Marmara Teknokent office."
-    },
-    "tags": {
-      "1985": "Establishment and First Composite Production",
-      "2002": "First Water Park Export",
-      "2008": "R&D and Engineering Department",
-      "2015": "New Integrated Manufacturing Facility",
-      "2019": "Export Network to 50+ Countries",
-      "2021": "Ministry-Approved R&D Center",
-      "2025": "Industry 4.0 & Smart Park Technologies",
-      "2026": "Global Leadership Vision"
-    },
-    "milestones_tag": "Milestones",
-    "desc": "Over the years, we have continuously grown our manufacturing strength, engineering expertise, and global project experience. Every step we took has been part of a stronger manufacturing infrastructure, innovative products, and the Polgün journey reaching more than 70 countries today.",
-    "stats": {
-      "completed": "Completed Projects",
-      "countries": "Countries",
-      "production": "Integrated Manufacturing",
-      "team": "Employees",
-      "experience": "Years of Experience",
-      "projects": "Projects"
-    },
-    "cta_btn": "立即咨询",
-    "cta_desc": "让行业先驱的专业经验为您的投资项目保驾护航。",
-    "cta_title": "与我们携手共创辉煌",
-    "intro": "自 1985 年创立至今，在水上游乐产业谱写不断超越的创新篇章。",
-    "milestones_desc": "镌刻在企业辉煌发展史上的重要时刻。",
-    "tag": "发展历程"
+      "2026": "University-industry cooperation was strengthened with the Marmara Teknopark office."
+    }
   },
   "news": {
     "title": "News & Events",
@@ -1080,19 +1078,19 @@
     "articles": {
       "gunes_bakim_evi": {
         "title": "Special Güneş Day Care Center Opening",
-        "desc": "Our support for social responsibility projects continues uninterrupted. The opening of the Special Güneş Day Care Center, implemented by Menteşe Municipality, was held with the participation of our General Manager, Mr. İbrahim Güngör. As the Polgün Family, we are happy to touch little hearts today as well."
+        "desc": "Our support for social responsibility projects continues uninterrupted. The opening of the Special Güneş Day Care Center, implemented by Menteşe Municipality, was held with the participation of our General Manager, Mr. Ibrahim Güngör. As the Polgün Family, we are happy to touch little hearts today as well."
       },
       "aile_sosyal_hizmetler": {
         "title": "Collaboration with Family and Social Services Directorate",
-        "desc": "As the Polgün family, we are happy to support a meaningful work carried out by the Muğla Provincial Directorate of Family and Social Services. Thanks to this cooperation, which was initiated through our Governor İdris Akbıyık, warmer and safer living spaces are created for children. We believe in the power of social solidarity and adopt the importance of such contributions in every step looking to the future with hope."
+        "desc": "As the Polgün family, we are happy to support a meaningful work carried out by the Muğla Provincial Directorate of Family and Social Services. Thanks to this cooperation, which was initiated through our Governor Idris Akbiyik, warmer and safer living spaces are created for children. We believe in the power of social solidarity and adopt the importance of such contributions in every step looking to the future with hope."
       },
       "iftar_programi": {
         "title": "Our Traditional Iftar Invitation",
-        "desc": "Our traditional iftar invitation, honored by our Muğla Governor Mr. İdris Akbıyık, Menteşe District Governor Mr. Mehmet Eriş, MSKÜ Rector Prof. Dr. Turhan Kaçar, Yatağan Mayor Mr. Mesut Günay, 27th Term Muğla Deputy Mrs. Yelda Erol, TÜBİTAK MARTEK President and 24th Term Deputy Mr. Mehmet Ali Okur, valuable businesspeople of Muğla, political party representatives and our big Polgün family, took place on March 14, 2026, at Türkan Saylan Education and Culture Center with the participation of more than 600 guests. In the iftar program organized by Polgün Waterparks & Attractions Chairman of the Board İbrahim Güngör and his precious family, accompanied by hymns sung by Turkish Sufi Music artist Abdurrahman Önül, Enes Çiftçi's presentation and semazen show attracted great attention. We extend our thanks to all our family members who attended and honored our invitation."
+        "desc": "Our traditional iftar invitation, honored by our Muğla Governor Mr. Idris Akbiyik, Menteşe District Governor Mr. Mehmet Eriş, MSKÜ Rector Prof. Dr. Turhan Kaçar, Yatağan Mayor Mr. Mesut Günay, 27th Term Muğla Deputy Mrs. Yelda Erol, TÜBITAK MARTEK President and 24th Term Deputy Mr. Mehmet Ali Okur, valuable businesspeople of Muğla, political party representatives and our big Polgün family, took place on March 14, 2026, at Türkan Saylan Education and Culture Center with the participation of more than 600 guests. In the iftar program organized by Polgün Waterparks & Attractions Chairman of the Board Ibrahim Güngör and his precious family, accompanied by hymns sung by Turkish Sufi Music artist Abdurrahman Önül, Enes Çiftçi's presentation and semazen show attracted great attention. We extend our thanks to all our family members who attended and honored our invitation."
       },
       "msku_kariyer_fuari": {
         "title": "MSKÜ Career Fair",
-        "desc": "Polgün Waterparks & Attractions Chairman of the Board Mr. İbrahim Güngör met with the professionals of the future at the Career Fair organized at Muğla Sıtkı Koçman University. Sharing his knowledge and experience in the sector with young talents, İbrahim Güngör held an inspiring conversation with students on the dynamics of the water park and entertainment sector, our innovative projects, and career planning. The excitement and vision of the youth who will shape the future of our industry once again became a great source of motivation for us. As the Polgün family, we are proud to stand by young talents and support them in their career journeys!"
+        "desc": "Polgün Waterparks & Attractions Chairman of the Board Mr. Ibrahim Güngör met with the professionals of the future at the Career Fair organized at Muğla Sitki Koçman University. Sharing his knowledge and experience in the sector with young talents, Ibrahim Güngör held an inspiring conversation with students on the dynamics of the water park and entertainment sector, our innovative projects, and career planning. The excitement and vision of the youth who will shape the future of our industry once again became a great source of motivation for us. As the Polgün family, we are proud to stand by young talents and support them in their career journeys!"
       }
     },
     "all_news": "全部新闻",
@@ -1160,6 +1158,10 @@
         "name": "Galaxy Theme",
         "location": "Turkey",
         "desc": "Get ready for takeoff with the Polgün Galaxy Splash Tower, a themed water play area designed to take children on an exciting journey through the wonders of the universe."
+      },
+      "castle": {
+        "name": "Castle Theme",
+        "desc": "A medieval aquatic kingdom filled with fairy-tale towers and suspension bridges."
       }
     },
     "hero_subtitle": "Water slides and entertainment zones designed with various themes",
@@ -1262,6 +1264,24 @@
     },
     "filter": {
       "all": "All"
+    },
+    "items": {
+      "floresan": {
+        "project_name": "Fluorescent Lighting",
+        "patent_name": "Water Slide with Integrated Fluorescent Lighting System"
+      },
+      "eclipse": {
+        "project_name": "Eclipse",
+        "patent_name": "Bowl-Type Water Slide with Dual Sliding Surfaces"
+      },
+      "navatu": {
+        "project_name": "Navatu",
+        "patent_name": "Innovative Water Slide with Integrated Wave Generation System"
+      },
+      "modular": {
+        "project_name": "Modular Body Slide",
+        "patent_name": "Modular Body Slide Bidirectionally Convertible Between Open and Enclosed Sections"
+      }
     }
   },
   "flipbook": {
@@ -1281,7 +1301,9 @@
     "desc": "Explore rich technical articles on engineering, design, manufacturing technologies, and water park management by Polgün Waterparks & Attractions.",
     "read_more": "Read More",
     "faqs_title": "Frequently Asked Questions",
-    "related_title": "Related Articles"
+    "related_title": "Related Articles",
+    "not_found_desc": "The article or content you are looking for is not available in our Knowledge Center.",
+    "back_to_list": "Back to Knowledge Center"
   },
   "factoriesPage": {
     "desc": "Discover our modern integrated facilities where world-class water slides and attractions are manufactured.",

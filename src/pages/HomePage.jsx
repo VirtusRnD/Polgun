@@ -79,7 +79,7 @@ const REFS = [
   { src: refCemi, alt: 'Cemi' },
   { src: refCrystal, alt: 'Crystal Hotels' },
   { src: refDelphin, alt: 'Delphin' },
-  { src: refIsaba, alt: 'İsaba' },
+  { src: refIsaba, alt: 'Isaba' },
   { src: refLimak, alt: 'Limak' },
   { src: refNg, alt: 'NG Hotels' },
   { src: refOtium, alt: 'Otium' },

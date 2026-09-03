@@ -45,4 +45,21 @@ i18n
     },
   });
 
+// Automatically update HTML lang and dir attributes when language changes
+const updateDocumentLang = (lng) => {
+  if (typeof document !== 'undefined') {
+    const lang = (lng || 'en').split('-')[0].toLowerCase();
+    document.documentElement.lang = lang;
+    document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+  }
+};
+
+i18n.on('languageChanged', (lng) => {
+  updateDocumentLang(lng);
+});
+
+// Set initial html attributes
+updateDocumentLang(i18n.language);
+
 export default i18n;
+

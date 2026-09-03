@@ -222,7 +222,7 @@ export default function HistoryPage({ setActivePage }) {
                     {t('history.stats.countries', { defaultValue: 'Ülke' })}
                   </span>
                   <span className="text-[11px] text-[var(--th-text-muted)] font-medium block">
-                    Küresel İhracat & Varlık
+                    {t('history.stats.countries_sub', { defaultValue: 'Küresel İhracat & Varlık' })}
                   </span>
                 </div>
               </div>
@@ -242,7 +242,7 @@ export default function HistoryPage({ setActivePage }) {
                     {t('history.stats.projects', { defaultValue: 'Proje' })}
                   </span>
                   <span className="text-[11px] text-[var(--th-text-muted)] font-medium block">
-                    Tamamlanan Su Parkı
+                    {t('history.stats.projects_sub', { defaultValue: 'Tamamlanan Su Parkı' })}
                   </span>
                 </div>
               </div>
@@ -262,7 +262,7 @@ export default function HistoryPage({ setActivePage }) {
                     {t('history.stats.production', { defaultValue: 'Entegre Üretim' })}
                   </span>
                   <span className="text-[11px] text-[var(--th-text-muted)] font-medium block">
-                    3 İleri Düzey Fabrika
+                    {t('history.stats.production_sub', { defaultValue: '3 İleri Düzey Fabrika' })}
                   </span>
                 </div>
               </div>
@@ -282,7 +282,7 @@ export default function HistoryPage({ setActivePage }) {
                     {t('history.stats.team', { defaultValue: 'Çalışan' })}
                   </span>
                   <span className="text-[11px] text-[var(--th-text-muted)] font-medium block">
-                    Mühendis & Üretim Kadrosu
+                    {t('history.stats.team_sub', { defaultValue: 'Mühendis & Üretim Kadrosu' })}
                   </span>
                 </div>
               </div>

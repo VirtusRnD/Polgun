@@ -279,13 +279,12 @@ export default function AboutPage() {
     { title: 'ISO 9001:2015', desc: t('awards.kalite.iso9001'), file: '/documents/kalite/ISO-9001.pdf', icon: 'ISO' },
     { title: 'ISO 14001:2015', desc: t('awards.kalite.iso14001'), file: '/documents/kalite/ISO-14001.pdf', icon: 'ISO' },
     { title: 'ISO 45001:2018', desc: t('awards.kalite.iso45001'), file: '/documents/kalite/ISO-45001.pdf', icon: 'ISO' },
-    { title: 'ISO 3834-2', desc: 'Çelik Konstrüksiyon İmalatı', file: '/documents/kalite/ISO-3834-2.pdf', icon: 'ISO' },
-    { title: 'ASTM F2376-22', desc: 'Ürün Standart Belgesi', file: '/documents/kalite/ASTM-F2376-22.pdf', icon: 'ASTM' },
-    { title: 'CPR 15473-1090', desc: 'Kaynak Sertifikası', file: '/documents/kalite/CPR-15473-1090.pdf', icon: 'CPR' },
-    { title: 'TS-EN 1069', desc: 'Ürün Standart Belgesi', file: '/documents/kalite/TS-EN-1069.pdf', icon: 'TS-EN' },
-    { title: 'TS-EN 1176-1', desc: 'Ürün Standart Belgesi', file: '/documents/kalite/TS-EN-1176-1.pdf', icon: 'TS-EN' },
-    { title: 'TS-EN 17232', desc: 'Ürün Standart Belgesi', file: '/documents/kalite/TS-EN-17232.pdf', icon: 'TS-EN' },
-
+    { title: 'ISO 3834-2', desc: t('awards.kalite.iso3834', { defaultValue: 'Çelik Konstrüksiyon İmalatı' }), file: '/documents/kalite/ISO-3834-2.pdf', icon: 'ISO' },
+    { title: 'ASTM F2376-22', desc: t('awards.kalite.astm', { defaultValue: 'Ürün Standart Belgesi' }), file: '/documents/kalite/ASTM-F2376-22.pdf', icon: 'ASTM' },
+    { title: 'CPR 15473-1090', desc: t('awards.kalite.cpr', { defaultValue: 'Kaynak Sertifikası' }), file: '/documents/kalite/CPR-15473-1090.pdf', icon: 'CPR' },
+    { title: 'TS-EN 1069', desc: t('awards.kalite.ts_en_1069', { defaultValue: 'Ürün Standart Belgesi' }), file: '/documents/kalite/TS-EN-1069.pdf', icon: 'TS-EN' },
+    { title: 'TS-EN 1176-1', desc: t('awards.kalite.ts_en_1176', { defaultValue: 'Ürün Standart Belgesi' }), file: '/documents/kalite/TS-EN-1176-1.pdf', icon: 'TS-EN' },
+    { title: 'TS-EN 17232', desc: t('awards.kalite.ts_en_17232', { defaultValue: 'Ürün Standart Belgesi' }), file: '/documents/kalite/TS-EN-17232.pdf', icon: 'TS-EN' },
   ]
 
   return (

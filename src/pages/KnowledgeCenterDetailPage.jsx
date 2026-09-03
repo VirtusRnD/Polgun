@@ -1,15 +1,17 @@
 import { useEffect, useState } from 'react'
 import { useParams, Link, useNavigate } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
-import { BLOG_DATA } from '../constants/blogData'
+import { BLOG_DATA, getLocalizedBlog, getLocalizedBlogs } from '../constants/blogData'
 
 export default function KnowledgeCenterDetailPage() {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
   const { slug } = useParams()
   const navigate = useNavigate()
   const [activeFaq, setActiveFaq] = useState(null)
 
-  const blog = BLOG_DATA.find((b) => b.slug === slug)
+  const rawBlog = BLOG_DATA.find((b) => b.slug === slug)
+  const blog = getLocalizedBlog(rawBlog, i18n.language)
+  const allLocalizedBlogs = getLocalizedBlogs(i18n.language)
 
   useEffect(() => {
     window.scrollTo(0, 0)
@@ -18,10 +20,10 @@ export default function KnowledgeCenterDetailPage() {
   // SEO updates
   useEffect(() => {
     if (blog) {
-      document.title = blog.seoTitle
+      document.title = blog.seoTitle || blog.title
       const metaDescription = document.querySelector('meta[name="description"]')
       if (metaDescription) {
-        metaDescription.setAttribute('content', blog.metaDesc)
+        metaDescription.setAttribute('content', blog.metaDesc || blog.description)
       }
     }
   }, [blog])
@@ -34,14 +36,14 @@ export default function KnowledgeCenterDetailPage() {
             {t('common.not_found', { defaultValue: 'İçerik Bulunamadı' })}
           </h1>
           <p style={{ color: 'var(--th-text-muted)' }}>
-            Aradığınız makale veya içerik Bilgi Merkezi'mizde mevcut değil.
+            {t('knowledgeCenter.not_found_desc', { defaultValue: "Aradığınız makale veya içerik Bilgi Merkezi'mizde mevcut değil." })}
           </p>
           <Link
-            to="/bilgi-merkezi"
+            to="/knowledge-center"
             className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-xs font-bold text-white transition-all hover:bg-opacity-90"
             style={{ backgroundColor: 'var(--th-primary)' }}
           >
-            Bilgi Merkezi'ne Dön
+            {t('knowledgeCenter.back_to_list', { defaultValue: "Bilgi Merkezi'ne Dön" })}
           </Link>
         </div>
       </div>
@@ -49,12 +51,13 @@ export default function KnowledgeCenterDetailPage() {
   }
 
   // Match internal links to other actual BLOG_DATA items
-  const matchedRelated = blog.internalLinks
+  const matchedRelated = (rawBlog?.internalLinks || [])
     .map((linkText) => {
-      return BLOG_DATA.find(
+      return allLocalizedBlogs.find(
         (b) =>
           b.title.toLowerCase().includes(linkText.toLowerCase()) ||
-          linkText.toLowerCase().includes(b.title.toLowerCase())
+          linkText.toLowerCase().includes(b.title.toLowerCase()) ||
+          BLOG_DATA.find((rb) => rb.id === b.id)?.title.toLowerCase().includes(linkText.toLowerCase())
       )
     })
     .filter(Boolean)
@@ -66,7 +69,7 @@ export default function KnowledgeCenterDetailPage() {
         <div className="w-full max-w-7xl mx-auto px-6 max-w-[var(--layout-max)] lg:px-12">
           {/* Breadcrumbs */}
           <nav className="flex items-center gap-2 text-xs font-bold mb-4 text-white/70">
-            <Link to="/bilgi-merkezi" className="hover:text-white transition-colors">
+            <Link to="/knowledge-center" className="hover:text-white transition-colors">
               {t('nav.knowledge_center', { defaultValue: 'Bilgi Merkezi' })}
             </Link>
             <span>/</span>
@@ -211,7 +214,7 @@ export default function KnowledgeCenterDetailPage() {
                     {matchedRelated.map((related) => (
                       <Link
                         key={related.id}
-                        to={`/bilgi-merkezi/${related.slug}`}
+                        to={`/knowledge-center/${related.slug}`}
                         className="group flex gap-4 items-center"
                       >
                         <div className="w-16 h-12 rounded-xl overflow-hidden bg-neutral-100 shrink-0">

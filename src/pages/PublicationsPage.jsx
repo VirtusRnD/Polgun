@@ -255,6 +255,13 @@ export default function PublicationsPage() {
       : t('publicationsPage.filters.national', { defaultValue: 'Ulusal' })
   }
 
+  const getTypeLabel = (type) => {
+    if (type === 'Makale' || type === 'article') return t('publicationsPage.filters.article', { defaultValue: 'Makale' })
+    if (type === 'Bildiri' || type === 'proceedings') return t('publicationsPage.filters.proceedings', { defaultValue: 'Bildiri' })
+    if (type === 'Kitap Bölümü' || type === 'book_chapter') return t('publicationsPage.filters.book_chapter', { defaultValue: 'Kitap Bölümü' })
+    return type
+  }
+
   return (
     <main className="pt-20" style={{ backgroundColor: 'var(--th-bg)' }}>
       {/* ── Page Hero ── */}
@@ -444,7 +451,7 @@ export default function PublicationsPage() {
                           color: pub.type === 'Makale' ? 'var(--th-primary)' : 'var(--th-polgun-blue)'
                         }}
                       >
-                        {pub.type}
+                        {getTypeLabel(pub.type)}
                       </span>
                       {/* Kapsam Badgesi */}
                       <span className="text-[10px] font-bold tracking-wider px-2.5 py-1 rounded-full border" style={{ borderColor: 'color-mix(in srgb, var(--th-border) 20%, transparent)', color: 'var(--th-text-muted)' }}>

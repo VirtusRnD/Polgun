@@ -487,8 +487,10 @@ export default function ArGePage({ setActivePage }) {
 
               {/* Alt Bilgi */}
               <div className="flex items-center justify-between text-xs mt-4" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 60%, transparent)' }}>
-                <span>© Polgün Waterparks Patent Management</span>
-                <span className="font-bold uppercase tracking-wider" style={{ color: 'var(--th-primary)' }}>Offıcıal Record</span>
+                <span>{t('arge.patent_management', { defaultValue: '© Polgün Waterparks Patent Management' })}</span>
+                <span className="font-bold uppercase tracking-wider" style={{ color: 'var(--th-primary)' }}>
+                  {t('arge.official_record', { defaultValue: 'Official Record' })}
+                </span>
               </div>
             </div>
           </div>

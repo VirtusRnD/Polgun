@@ -1731,7 +1731,7 @@ const REGIONS = ['Tümü', 'Asya', 'Avrupa', 'Afrika', 'Amerika']
 const TYPES = ['Tümü', 'Açık Alan Su Parkı', 'Otel & Su Parkı', 'Kapalı Alan Su Parkı', 'Resort Tatil Köyü']
 
 // ── Slider Modal Bileşeni ──────────────────────────────────
-function ProjectSliderModal({ project, isOpen, onClose }) {
+function ProjectSliderModal({ project, isOpen, onClose, translateLocation }) {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [isPlaying, setIsPlaying] = useState(true)
   const autoplayRef = useRef(null)
@@ -1791,7 +1791,7 @@ function ProjectSliderModal({ project, isOpen, onClose }) {
 
           {/* Bilgi */}
           <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-            <p className="text-[11px] font-bold tracking-[0.25em] uppercase mb-1.5 opacity-60">{slide.location}</p>
+            <p className="text-[11px] font-bold tracking-[0.25em] uppercase mb-1.5 opacity-60">{translateLocation ? translateLocation(slide.location) : slide.location}</p>
             <h3 className="text-2xl font-black leading-tight">{slide.title}</h3>
           </div>
 
@@ -1978,8 +1978,11 @@ export default function ProjectsPage({ setActivePage }) {
     'saint-jean-de-monts': { tr: 'Saint-Jean-de-Monts', en: 'Saint-Jean-de-Monts', es: 'Saint-Jean-de-Monts', ru: 'Сен-Жан-де-Мон', ar: 'سان جان دي مونتس', fr: 'Saint-Jean-de-Monts', zh: '圣让德蒙' },
     'marsa alam': { tr: 'Marsa Alam', en: 'Marsa Alam', es: 'Marsa Alam', ru: 'Марса-Алам', ar: 'مرسى علم', fr: 'Marsa Alam', zh: '马萨阿拉姆' },
     'hurghada': { tr: 'Hurghada', en: 'Hurghada', es: 'Hurghada', ru: 'Хургада', ar: 'الغردقة', fr: 'Hurghada', zh: '赫尔格达' },
+    'hurgada': { tr: 'Hurgada', en: 'Hurghada', es: 'Hurghada', ru: 'Хургада', ar: 'الغردقة', fr: 'Hurghada', zh: '赫尔格达' },
     'sharm el sheikh': { tr: 'Sharm El Sheikh', en: 'Sharm El Sheikh', es: 'Sharm El Sheikh', ru: 'Шарм-эль-Шейх', ar: 'شرم الشيخ', fr: 'Charm el-Cheikh', zh: '沙姆沙伊赫' },
+    'sarm el-seyh': { tr: 'Şarm El-Şeyh', en: 'Sharm El Sheikh', es: 'Sharm El Sheikh', ru: 'Шарм-эль-Шейх', ar: 'شرم الشيخ', fr: 'Charm el-Cheikh', zh: '沙姆沙伊赫' },
     'bigacs': { tr: 'Bogács', en: 'Bogács', es: 'Bogács', ru: 'Богач', ar: 'بوغاتش', fr: 'Bogács', zh: '博加奇' },
+    'bogacs': { tr: 'Bogács', en: 'Bogács', es: 'Bogács', ru: 'Богач', ar: 'بوغاتش', fr: 'Bogács', zh: '博加奇' },
     'gyula': { tr: 'Gyula', en: 'Gyula', es: 'Gyula', ru: 'Дьюла', ar: 'جيولا', fr: 'Gyula', zh: '久洛' },
     'nyiregyhaza': { tr: 'Nyíregyháza', en: 'Nyíregyháza', es: 'Nyíregyháza', ru: 'Ньиредьхаза', ar: 'نيريغيهازا', fr: 'Nyíregyháza', zh: '尼赖吉哈佐' },
     'sarvar': { tr: 'Sárvár', en: 'Sárvár', es: 'Sárvár', ru: 'Шарвар', ar: 'شارفار', fr: 'Sárvár', zh: '沙尔瓦尔' },
@@ -1988,6 +1991,7 @@ export default function ProjectsPage({ setActivePage }) {
     'novi sad': { tr: 'Novi Sad', en: 'Novi Sad', es: 'Novi Sad', ru: 'Нови-Сад', ar: 'نوفي ساد', fr: 'Novi Sad', zh: '诺维萨德' },
     'vrnjacka banja': { tr: 'Vrnjačka Banja', en: 'Vrnjačka Banja', es: 'Vrnjačka Banja', ru: 'Врнячка-Баня', ar: 'فرنياتشكا بانيا', fr: 'Vrnjačka Banja', zh: '弗尔尼亚奇卡矿泉镇' },
     'jeddah': { tr: 'Cidde', en: 'Jeddah', es: 'Yeda', ru: 'Джидда', ar: 'جدة', fr: 'Djeddah', zh: '吉达' },
+    'cidde': { tr: 'Cidde', en: 'Jeddah', es: 'Yeda', ru: 'Джидда', ar: 'جدة', fr: 'Djeddah', zh: '吉达' },
     'riyadh': { tr: 'Riyad', en: 'Riyadh', es: 'Riad', ru: 'Эр-Рияд', ar: 'الرياض', fr: 'Riyad', zh: '利雅得' },
     'doha': { tr: 'Doha', en: 'Doha', es: 'Doha', ru: 'Доха', ar: 'الدوحة', fr: 'Doha', zh: '多哈' },
     'seoul': { tr: 'Seul', en: 'Seoul', es: 'Seúl', ru: 'Сеул', ar: 'سيول', fr: 'Séoul', zh: '首尔' },
@@ -2002,12 +2006,36 @@ export default function ProjectsPage({ setActivePage }) {
     'kyrenia': { tr: 'Girne', en: 'Kyrenia', es: 'Kyrenia', ru: 'Кирения', ar: 'كيرينيا', fr: 'Kyrenia', zh: '凯里尼亚' },
     'oran': { tr: 'Vahran', en: 'Oran', es: 'Orán', ru: 'Оран', ar: 'وهران', fr: 'Oran', zh: '奥兰' },
     'marrakech': { tr: 'Marakeş', en: 'Marrakech', es: 'Marrakech', ru: 'Марракеш', ar: 'مراكش', fr: 'Marrakech', zh: '马拉喀什' },
+    'marakes': { tr: 'Marakeş', en: 'Marrakech', es: 'Marrakech', ru: 'Марракеш', ar: 'مراكش', fr: 'Marrakech', zh: '马拉喀什' },
+    'agadir': { tr: 'Agadir', en: 'Agadir', es: 'Agadir', ru: 'Агадир', ar: 'أكادير', fr: 'Agadir', zh: '阿加迪尔' },
     'sousse': { tr: 'Susa', en: 'Sousse', es: 'Susa', ru: 'Сус', ar: 'سوسة', fr: 'Sousse', zh: '苏塞' },
     'antalya': { tr: 'Antalya', en: 'Antalya', es: 'Antalya', ru: 'Анталья', ar: 'أنطاليا', fr: 'Antalya', zh: '安塔利亚' },
     'mugla': { tr: 'Muğla', en: 'Muğla', es: 'Muğla', ru: 'Мугла', ar: 'موغla', fr: 'Muğla', zh: '穆拉' },
     'izmir': { tr: 'İzmir', en: 'Izmir', es: 'Esmirna', ru: 'Измир', ar: 'إزمير', fr: 'Izmir', zh: '伊兹密尔' },
     'bodrum': { tr: 'Bodrum', en: 'Bodrum', es: 'Bodrum', ru: 'Бодрум', ar: 'بودروم', fr: 'Bodrum', zh: '博德鲁姆' },
     'fethiye': { tr: 'Fethiye', en: 'Fethiye', es: 'Fethiye', ru: 'Фетхие', ar: 'فتحية', fr: 'Fethiye', zh: '费特希耶' },
+    'didim': { tr: 'Didim', en: 'Didim', es: 'Didim', ru: 'Дидим', ar: 'ديديم', fr: 'Didim', zh: '迪迪姆' },
+    'aydin': { tr: 'Aydın', en: 'Aydin', es: 'Aydın', ru: 'Айдын', ar: 'أيدين', fr: 'Aydın', zh: '艾登' },
+    'aydın': { tr: 'Aydın', en: 'Aydin', es: 'Aydın', ru: 'Айдын', ar: 'أيدين', fr: 'Aydın', zh: '艾登' },
+    'asan': { tr: 'Asan', en: 'Asan', es: 'Asan', ru: 'Асан', ar: 'أسان', fr: 'Asan', zh: '牙山' },
+    'bagdat': { tr: 'Bağdat', en: 'Baghdad', es: 'Bagdad', ru: 'Багдад', ar: 'بغداد', fr: 'Bagdad', zh: '巴格达' },
+    'bangalore': { tr: 'Bangalore', en: 'Bangalore', es: 'Bangalore', ru: 'Бангалор', ar: 'بنغالور', fr: 'Bangalore', zh: '班加罗尔' },
+    'd city': { tr: 'D City', en: 'D City', es: 'D City', ru: 'D City', ar: 'دي سيتي', fr: 'D City', zh: 'D City' },
+    'fafe': { tr: 'Fafe', en: 'Fafe', es: 'Fafe', ru: 'Фафе', ar: 'فافي', fr: 'Fafe', zh: '法菲' },
+    'karayipler': { tr: 'Karayipler', en: 'Caribbean', es: 'Caribe', ru: 'Карибы', ar: 'الكاريبي', fr: 'Caraïbes', zh: '加勒比' },
+    'makadi bay': { tr: 'Makadi Bay', en: 'Makadi Bay', es: 'Makadi Bay', ru: 'Макади Бэй', ar: 'خليج مكادي', fr: 'Makadi Bay', zh: '马卡迪湾' },
+    'nasiriye': { tr: 'Nasıriye', en: 'Nasiriyah', es: 'Nasiriya', ru: 'Эн-Насирия', ar: 'الناصرية', fr: 'Nassiriya', zh: '纳西里耶' },
+    'nasıriye': { tr: 'Nasıriye', en: 'Nasiriyah', es: 'Nasiriya', ru: 'Эн-Насирия', ar: 'الناصرية', fr: 'Nassiriya', zh: '纳西里耶' },
+    'porec': { tr: 'Poreč', en: 'Porec', es: 'Poreč', ru: 'Пореч', ar: 'بوريتش', fr: 'Poreč', zh: '波雷奇' },
+    'port ghalib': { tr: 'Port Ghalib', en: 'Port Ghalib', es: 'Port Ghalib', ru: 'Порт Галиб', ar: 'بورت غالب', fr: 'Port Ghalib', zh: '加利卜港' },
+    'seignosse': { tr: 'Seignosse', en: 'Seignosse', es: 'Seignosse', ru: 'Сеньос', ar: 'سينيوس', fr: 'Seignosse', zh: '塞尼奥斯' },
+    'skikda': { tr: 'Skikda', en: 'Skikda', es: 'Skikda', ru: 'Скикда', ar: 'سكيكدة', fr: 'Skikda', zh: '斯基克达' },
+    'sofya': { tr: 'Sofya', en: 'Sofia', es: 'Sofía', ru: 'София', ar: 'صوفيا', fr: 'Sofia', zh: '索菲亚' },
+    'soma bay': { tr: 'Soma Bay', en: 'Soma Bay', es: 'Soma Bay', ru: 'Сома Бэй', ar: 'خليج سوما', fr: 'Soma Bay', zh: '索马湾' },
+    'sterlitamak': { tr: 'Sterlitamak', en: 'Sterlitamak', es: 'Sterlitamak', ru: 'Стерлитамак', ar: 'ستيرليتاماك', fr: 'Sterlitamak', zh: '斯捷尔利塔马克' },
+    'vendays-montalivet': { tr: 'Vendays-Montalivet', en: 'Vendays-Montalivet', es: 'Vendays-Montalivet', ru: 'Ванде-Монталиве', ar: 'فانديه مونتاليفيه', fr: 'Vendays-Montalivet', zh: '旺代蒙塔利韦' },
+    'volgograd': { tr: 'Volgograd', en: 'Volgograd', es: 'Volgogrado', ru: 'Волгоград', ar: 'فولغوغراد', fr: 'Volgograd', zh: '伏尔加格勒' },
+
     // Countries
     'türkiye': { tr: 'Türkiye', en: 'Turkey', es: 'Turquía', ru: 'Турция', ar: 'تركيا', fr: 'Turquie', zh: '土耳其' },
     'romanya': { tr: 'Romanya', en: 'Romania', es: 'Rumania', ru: 'Румыния', ar: 'رومانيا', fr: 'Roumanie', zh: '罗马尼亚' },
@@ -2035,8 +2063,14 @@ export default function ProjectsPage({ setActivePage }) {
     'cezayir': { tr: 'Cezayir', en: 'Algeria', es: 'Argelia', ru: 'Алжир', ar: 'الجزائر', fr: 'Algérie', zh: '阿尔及利亚' },
     'fas': { tr: 'Fas', en: 'Morocco', es: 'Marruecos', ru: 'Марокко', ar: 'المغرب', fr: 'Maroc', zh: '摩洛哥' },
     'tunus': { tr: 'Tunus', en: 'Tunisia', es: 'Túnez', ru: 'Тунис', ar: 'تونس', fr: 'Tunisie', zh: '突尼斯' },
-    'ispanya': { tr: 'İspanya', en: 'Spain', es: 'España', ru: 'Испания', ar: 'إسبانيا', fr: 'Espagne', zh: '西班牙' }
-  }
+    'ispanya': { tr: 'İspanya', en: 'Spain', es: 'España', ru: 'Испания', ar: 'إسبانيا', fr: 'Espagne', zh: '西班牙' },
+    'suudi arabistan': { tr: 'Suudi Arabistan', en: 'Saudi Arabia', es: 'Arabia Saudita', ru: 'Саудовская Аравия', ar: 'المملكة العربية السعودية', fr: 'Arabie Saoudite', zh: '沙特阿拉伯' },
+    'portekiz': { tr: 'Portekiz', en: 'Portugal', es: 'Portugal', ru: 'Португалия', ar: 'البرتغال', fr: 'Portugal', zh: '葡萄牙' },
+    'hirvatistan': { tr: 'Hırvatistan', en: 'Croatia', es: 'Croacia', ru: 'Хорватия', ar: 'كرواتيا', fr: 'Croatie', zh: '克罗地亚' },
+    'hırvatistan': { tr: 'Hırvatistan', en: 'Croatia', es: 'Croacia', ru: 'Хорватия', ar: 'كرواتيا', fr: 'Croatie', zh: '克罗地亚' },
+    'rusya': { tr: 'Rusya', en: 'Russia', es: 'Rusia', ru: 'Россия', ar: 'روسيا', fr: 'Russie', zh: '俄罗斯' },
+    'hindistan': { tr: 'Hindistan', en: 'India', es: 'India', ru: 'Индия', ar: 'الهند', fr: 'Inde', zh: '印度' }
+  };
 
   const translateLocation = (locStr) => {
     if (!locStr) return '';
@@ -2193,7 +2227,7 @@ export default function ProjectsPage({ setActivePage }) {
 
       {/* Slider Modal */}
       {selectedProject && (
-        <ProjectSliderModal project={selectedProject} isOpen={sliderOpen} onClose={() => setSliderOpen(false)} />
+        <ProjectSliderModal project={selectedProject} isOpen={sliderOpen} onClose={() => setSliderOpen(false)} translateLocation={translateLocation} />
       )}
 
       {/* CTA */}

@@ -6,51 +6,46 @@ import floresanImg from '../assets/patents/floresan_aydınlatma/Floresan Aydınl
 import navatuImg from '../assets/patents/navatu/Navatu.3.avif'
 import slipandflyImg from '../assets/brands/Polgün Waterparks&Attractions.avif'
 const PATENTS_DATA = [
-
   {
     id: 1,
-    projectName: 'Floresan Aydınlatma',
-    patentName: 'Floresan Işıklandırmaya Sahip Su Kaydırağı',
+    key: 'floresan',
     appNo: '2022/001778',
     isPct: false,
-    scope: 'Ulusal',
-    status: 'Tescilli', // registered
+    scope: 'national',
+    status: 'registered',
     appDate: '11.02.2022',
     regDate: '11.02.2022',
     image: floresanImg
   },
   {
     id: 4,
-    projectName: 'Eclipse',
-    patentName: 'Çift Kayma Yüzeyine Sahip Çanak Tipi Su Kaydırağı',
+    key: 'eclipse',
     appNo: '2025/016021',
     isPct: false,
-    scope: 'Ulusal',
-    status: 'Başvuru Aşamasında', // pending
+    scope: 'national',
+    status: 'pending',
     appDate: '27.10.2025',
     regDate: '—',
     image: eclipseImg
   },
   {
     id: 3,
-    projectName: 'Navatu',
-    patentName: 'A Water Slide',
+    key: 'navatu',
     appNo: 'TR2024/051001',
     isPct: true,
-    scope: 'Uluslararası',
-    status: 'Başvuru Aşamasında',
+    scope: 'international',
+    status: 'pending',
     appDate: '26.08.2024',
     regDate: '—',
     image: navatuImg
   },
   {
     id: 2,
-    projectName: '',
-    patentName: 'Açık ve Kapalı Kesitli Formlar Arasında Çift Yönlü Dönüştürülebilen Modüler Vücut Kaydırağı ',
+    key: 'modular',
     appNo: '2026/010391',
     isPct: false,
-    scope: 'Ulusal',
-    status: 'Başvuru Aşamasında',
+    scope: 'national',
+    status: 'pending',
     appDate: '14.07.2026',
     regDate: '—',
     image: slipandflyImg
@@ -69,21 +64,17 @@ export default function PatentsPage() {
   // Filtering
   const filteredData = PATENTS_DATA.filter((item) => {
     const matchesStatus =
-      filterStatus === 'all' ||
-      (filterStatus === 'registered' && item.status === 'Tescilli') ||
-      (filterStatus === 'pending' && item.status === 'Başvuru Aşamasında')
+      filterStatus === 'all' || item.status === filterStatus
 
     const matchesScope =
-      filterScope === 'all' ||
-      (filterScope === 'national' && item.scope === 'Ulusal') ||
-      (filterScope === 'international' && item.scope === 'Uluslararası')
+      filterScope === 'all' || item.scope === filterScope
 
     return matchesStatus && matchesScope
   })
 
   // Normalize labels
   const getStatusBadge = (status) => {
-    if (status === 'Tescilli') {
+    if (status === 'registered') {
       return (
         <span className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-bold bg-emerald-500/10 text-emerald-600 border border-emerald-500/15">
           <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
@@ -100,7 +91,7 @@ export default function PatentsPage() {
   }
 
   const getScopeLabel = (scope) => {
-    return scope === 'Uluslararası'
+    return scope === 'international'
       ? t('patentsPage.filters.international', { defaultValue: 'Uluslararası' })
       : t('patentsPage.filters.national', { defaultValue: 'Ulusal' })
   }
@@ -254,11 +245,13 @@ export default function PatentsPage() {
 
                       {/* Başlıklar */}
                       <div className="space-y-2">
-                        <span className="block text-xs font-bold uppercase tracking-wider text-neutral-400">
-                          {item.projectName}
-                        </span>
+                        {t(`patentsPage.items.${item.key}.project_name`, { defaultValue: '' }) && (
+                          <span className="block text-xs font-bold uppercase tracking-wider text-neutral-400">
+                            {t(`patentsPage.items.${item.key}.project_name`)}
+                          </span>
+                        )}
                         <h3 className="text-xl lg:text-2xl font-black leading-tight" style={{ color: 'var(--th-text)' }}>
-                          {item.patentName}
+                          {t(`patentsPage.items.${item.key}.patent_name`)}
                         </h3>
                       </div>
 
@@ -277,7 +270,7 @@ export default function PatentsPage() {
                             {t('patentsPage.card.status', { defaultValue: 'Güncel Durum' })}
                           </span>
                           <span className="text-xs font-bold" style={{ color: 'var(--th-text)' }}>
-                            {item.status}
+                            {item.status === 'registered' ? t('patentsPage.filters.registered', { defaultValue: 'Tescilli' }) : t('patentsPage.filters.pending', { defaultValue: 'Başvuru Aşamasında' })}
                           </span>
                         </div>
                       </div>

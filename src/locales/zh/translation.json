@@ -23,7 +23,10 @@
     "view": "查看",
     "turkey": "土耳其",
     "spain": "西班牙",
-    "not_found": "未找到内容"
+    "not_found": "未找到内容",
+    "pause": "暂停",
+    "play": "播放",
+    "close": "关闭"
   },
   "nav": {
     "services": "我们的服务",
@@ -62,7 +65,15 @@
     "portal": "客户门户",
     "production": "安装与调试",
     "quality_mgmt": "质量管理",
-    "quote_btn": "获取报价"
+    "quote_btn": "获取报价",
+    "view_all": "查看全部",
+    "cta_products": "探索全系水上游乐装备与定制乐园方案",
+    "cta_services": "了解我们的交钥匙全流程工程服务体系",
+    "cta_projects": "鉴赏全球交付的 3000+ 标杆水上乐园工程",
+    "cta_about": "探寻 Polgün 四十年专注水上科技的辉煌历程",
+    "cta_arge": "探索前沿水上游乐核心科技与自主知识产权",
+    "arge_products": "研发创新产品",
+    "all_services": "所有服务"
   },
   "footer": {
     "products_title": "产品中心",
@@ -203,65 +214,45 @@
     "production_power_desc": "在 100,000 平方米的现代园区内，实现从模具雕刻、玻璃钢成型到钢构焊接的全流程闭环制造。",
     "btn_projects": "查看经典案例",
     "production_sections": {
-      "cnc_mold": {
-        "title": "模型与高精模具研发车间",
-        "desc": "运用五轴联动数控加工中心（CNC）雕刻超高精度的水滑梯原模。"
-      },
-      "steel": {
-        "title": "重型钢结构承重塔架制造厂",
-        "desc": "严格依据力学校核计算制造的高强度承重钢塔与游客疏散平台系统。"
-      },
-      "mechanical": {
-        "title": "机电与自动化控制装配车间",
-        "desc": "工业级循环水泵、气动阀门、智能传感器及 PLC 触摸屏主控台的组装测试区。"
-      },
-      "composite": {
-        "title": "复合材料与 RTM 闭模成型中心",
-        "desc": "采用先进的 RTM 及 L-RTM 注入工艺，实现滑梯构件内外双面镜面级平整光洁。"
-      },
-      "digital": {
-        "title": "工业 4.0 与智能生产管理系统",
-        "desc": "全数字化制造流程监控与高级质量追溯管理系统。"
-      },
       "entegre_depo": {
-        "title": "综合原材料与智能物流仓储中心",
-        "desc": "严格按照国际标准对所有原材料与配件进行分级安全温控存储。"
+        "title": "综合原材料与智能物流仓储",
+        "desc": "Polgün 在自有运营体系内全面统筹水上乐园生产所需的原材料、辅助辅料及技术设备的采购、标准化仓储与车间精准配送。系统化的库存与物料管理确保各生产工序高效、有序地获取所需物资。生产、仓储与供应链的高效协同，在保障不间断制造的同时，显著强化了原材料全流程追溯与精细化运营管控。"
       },
       "model_kalıp": {
-        "title": "模型与高精模具研发车间",
-        "desc": "运用五轴联动数控加工中心（CNC）雕刻超高精度的水滑梯原模。"
+        "title": "数控模具与原模研发中心",
+        "desc": "Polgün 依托先进的五轴联动数控加工中心（5-Axis CNC），将极具原创性与复杂曲面的滑梯几何设计高精度转化为生产模具。从三维数字化建模到原模及生产模具制造全流程自主掌控，确保了模具的高表面光洁度、严苛的尺寸公差以及批次生产的极高重复一致性。先进的 CNC 技术支持常规标准滑道及大型定制化旗舰滑道的快速研发与投产。"
       },
       "elyaf": {
-        "title": "玻璃纤维与织物精密裁剪区",
-        "desc": "采用精密数控裁剪技术预制符合力学要求的各向异性增强纤维毡。"
+        "title": "玻璃纤维与复合增强材料裁切中心",
+        "desc": "Polgün 采用全自动 CNC 智能裁剪系统，对复合材料生产中使用的玻璃纤维布及多轴向增强织物进行精准下料。系统直接读取数字化 CAD 裁切数据，确保异形构件下料迅速、规整且高度一致。该工艺大幅降低材料损耗，显著提升铺层贴合精度，缩短备料周期，为玻璃钢复合材料的高品质生产提供坚实保障。"
       },
       "kompozit": {
-        "title": "复合材料与 RTM 闭模成型中心",
-        "desc": "采用先进的 RTM 及 L-RTM 注入工艺，实现滑梯构件内外双面镜面级平整光洁。"
+        "title": "复合材料制造与 RTM 尖端成型",
+        "desc": "Polgün 在工厂内部全面掌握 RTM（树脂传递模塑）、L-RTM（轻质真空导入）、手糊及喷射成型等多元化玻璃钢制造工艺。根据产品几何与受力工况量身定制专用树脂、增强材料及结构铺层方案。后续经过严谨的胶衣喷涂、表面平整修磨、高光抛光及耐候顶涂处理，赋予滑道无可挑剔的双面镜面光洁度与长久鲜艳色彩，全流程严密受控。"
       },
       "çelik_işleme": {
-        "title": "钢结构精密切割与机器人焊接",
-        "desc": "拥有 EN 1090 及 ISO 3834-2 国际认证的机器人自动化与手工精密焊接产线。"
+        "title": "钢结构精密加工与数控切割技术",
+        "desc": "Polgün 在钢结构制造中引入工业级高精度切割与成型设备，确保工程设计蓝图被精准付诸生产。数控相贯线切管机及型材下料系统可高精度加工各种管径、截面与复杂坡口。三维数字化模型数据直接驱动数控机床，使适应复杂滑梯立体轨迹的承重钢塔架加工更加快速、精准与模块化，全面夯实了钢构工程的品质基石。"
       },
       "çelik_konstrüksiyon": {
-        "title": "重型钢结构承重塔架制造厂",
-        "desc": "严格依据力学校核计算制造的高强度承重钢塔与游客疏散平台系统。"
+        "title": "钢结构工程与高标焊接制造",
+        "desc": "Polgün 全程自主制造水上滑梯及水上乐园系统所需的全部承重钢结构。经数控下料的钢管、型材与节点连接件，严格按照工程几何由持证焊工通过高精度工装夹具进行装配与焊接。从原材下料到焊接成型的垂直整合制造，赋予了结构体系极高的尺寸精度、卓越的结构安全冗余以及应对特殊地貌的工程定制灵活性。"
       },
       "mekanik": {
-        "title": "机电与自动化控制装配车间",
-        "desc": "工业级循环水泵、气动阀门、智能传感器及 PLC 触摸屏主控台的组装测试区。"
+        "title": "机械精密加工与专用配件生产",
+        "desc": "Polgün 自主加工水滑梯系统及钢塔架中使用的专用连接法兰、高强度紧固件以及定制机械构件。所有零件严格按照机械工程图纸精密加工，确保与现场装配实现无缝契合。卓越的机加工能力不仅保障了尺寸公差与装配互换性，更能灵活满足非标几何与严苛工况的定制技术需求，实现配件品质的源头把控。"
       },
       "boya": {
-        "title": "表面喷砂与热浸镀锌防腐涂装线",
-        "desc": "高标准热浸镀锌与静电粉末喷涂工艺，提供卓越的耐盐雾抗腐蚀性能。"
+        "title": "防腐喷涂与表面耐久防护工程",
+        "desc": "Polgün 在环保涂装车间内自主完成钢构与金属构件的喷砂除锈、热浸镀锌及多道重防腐涂层作业。专业防护涂层系统能有效隔绝潮湿、盐雾、强紫外线及泳池氯水侵蚀，同时赋予设备历久弥新的光泽质感。严密可控的表面处理工艺，为全球不同气候与极端环境下的水上乐园提供长效耐腐蚀保障。"
       },
       "kalite": {
-        "title": "质量检验中心与力学实验室",
-        "desc": "对每一批次产品进行严格的载荷、疲劳与无损探伤检测，确保出厂零缺陷。"
+        "title": "成品终检与全方位表面防护",
+        "desc": "在 Polgün 完成制造的每一件玻璃钢滑道构件均须通过严苛的表面光洁度、测厚及结构完整性终检。检验合格后立即进行专业防刮抗震保护包装，严密防护构件在厂内周转、国际集装箱海运及工地现场吊装过程中的表面品质，确保从现代化车间到项目工地的全流程品质零损耗。"
       },
       "paketleme": {
-        "title": "国际标准化包装与全球发运部",
-        "desc": "严格符合国际海运与陆运标准的高强度防震防刮保护包装，安全送达全球工地。"
+        "title": "专业包装与全球国际物流发运",
+        "desc": "为确保通过严苛质检的产品完好无损地送达全球工程现场，Polgün 根据构件形态与跨国运输路线制定专属海运包装与集装箱防损配载方案。大型玻璃钢管件与重型钢构件均采用防震、防潮、防刮装载。科学的装箱规划与无缝的全球物流协调，确保货物安全、完整且准时交付至各大洲工程现场。"
       }
     },
     "factories": {
@@ -302,101 +293,87 @@
     "value4_desc": "提供从概念设计到终身维护的全程贴心陪伴。"
   },
   "services": {
-    "title": "交钥匙一站式服务",
-    "subtitle": "Holistic Project Management",
-    "desc": "从前期策划到正式运营，为您提供专业、透明且全程无忧的技术服务。",
-    "sections": {
-      "planlama": {
-        "title": "Planning",
-        "desc": "The success of every waterpark project begins with correct planning. Investor budget, land structure, target audience, and market dynamics are analyzed to design the most suitable layout plan and concept."
+    "title": "我们的服务",
+    "subtitle": "全生命周期统筹项目管理",
+    "desc": "Polgün 在水上乐园项目的每一个阶段均提供高标准、全方位的专业技术服务。从前期规划、创意设计、工程验算到现场安装调试，依托资深自有专家团队，向全球客户交付高品质的交钥匙工程。",
+    "process_tag": "专业服务流程",
+    "process_title": "从始至终，全程伴随项目的每一个关键节点",
+    "cta_title": "共同铸就您的梦想乐园",
+    "cta_desc": "无论项目体量规模如何，从破土动工到开园运营，我们全程为您保驾护航。",
+    "cta_btn": "立即获取报价",
+    "cta_tag": "我们的服务",
+    "why": {
+      "service": {
+        "title": "一站式全包服务",
+        "desc": "贯穿方案设计、精密制造、现场安装到售后运维的每一步。"
       },
-      "tasarim": {
-        "title": "Design",
-        "desc": "We create exciting waterpark concepts with innovative and unique designs. Using 3D modeling technologies, we present the closest representation of what the project will look like when completed."
+      "countries": {
+        "title": "70+ 交付国家",
+        "desc": "享誉全球的跨国项目管理经验与本土化专家团队支持。"
       },
-      "muhendislik": {
-        "title": "Engineering",
-        "desc": "We design safe and durable structures in compliance with international standards. Structural analyses of steel construction and GRP (fiberglass) parts are conducted to ensure the highest safety and quality standards."
+      "iso": {
+        "title": "ISO 9001 认证",
+        "desc": "全流程标准化制造体系与严苛的质量管控标准。"
       },
-      "montaj": {
-        "title": "Installation & Assembly",
-        "desc": "We complete site installations of projects as quickly as possible and smoothly with our expert assembly teams and site managers. We ensure full compliance with occupational health and safety rules."
-      },
-      "bakim": {
-        "title": "Maintenance & Repair",
-        "desc": "We offer regular maintenance services for waterparks to operate long-lastingly and safely. Pre-season checks, parts replacement, and technical support guarantee uninterrupted fun."
-      },
-      "yenileme": {
-        "title": "Renovation",
-        "desc": "We renovate existing waterparks with modern technologies and trendy designs. By adding new slides, kids play groups, and themed elements, we boost the attraction of the parks."
+      "lifetime": {
+        "title": "全周期技术支持",
+        "desc": "长效技术支持、原厂配件直供与定期检修维护保障。"
       }
     },
     "steps": {
       "step1": {
-        "title": "Product Design & Theming",
-        "desc": "Water slides, children's play groups, and water park attractions are custom designed according to the project concept and customer expectations. Color, pattern, theme, and visual details are developed in harmony with the product geometry to create unique designs that enhance the visitor experience."
+        "title": "产品设计与主题化包装",
+        "sub": "产品设计与主题化",
+        "desc": "根据项目的总体规划定位与客户期望，量身定制水上滑梯、儿童水寨及互动戏水设备。将色彩搭配、定制图案、文化主题与设备几何造型完美融合，创造出极具视觉冲击力与沉浸感的游客体验。"
       },
       "step2": {
-        "title": "Engineering & Projecting",
-        "desc": "Slide systems, steel support structures, mechanical and hydraulic infrastructures are projected in detail by engineering teams. Structural calculations, technical analyses, production drawings, and assembly documents are prepared in accordance with the project conditions."
+        "title": "工程力学与项目设计",
+        "sub": "工程力学与深化设计",
+        "desc": "工程技术团队对滑道轨迹、承重钢结构、动力水循环与电气自控系统进行严密细致的设计。按照项目工况编制有限元力学计算书、水动力学仿真报告、制造施工图及现场安装指导文件。"
       },
       "step3": {
-        "title": "Production",
-        "desc": "Fiberglass slide parts, steel constructions, models, molds, and project-specific components are prepared in Polgün's production facilities. Production processes are carried out based on dimensional accuracy, surface quality, durability, and traceability."
+        "title": "生产制造",
+        "sub": "工业级精密制造",
+        "desc": "玻璃钢复合材料滑道、重型钢结构支撑塔架、高精原模原胎及专用构件均在 Polgün 现代化工厂内自主制造。生产流程严格执行尺寸公差控制、表面平整度检测、疲劳耐用性及全流程质量追溯管理。"
       },
       "step4": {
-        "title": "Project Management & Shipping",
-        "desc": "Design, production, packaging, logistics, and field processes are coordinated according to the project calendar. Products are prepared with correct coding and labeling systems, securely packaged, and delivered to the project site complete."
+        "title": "项目统筹与国际物流",
+        "sub": "项目管理与跨国运输",
+        "desc": "根据严格的项目进度表，无缝协同设计、制造、包装、报关、海运与现场交付。所有构件均采用严密的编码和标签管理系统，进行专业防震防刮海运包装，安全完整地送达全球工程现场。"
       },
       "step5": {
-        "title": "Montage & Commissioning",
-        "desc": "Slides, steel constructions, and related equipment are assembled by experienced field teams or under Polgün's technical supervision. After assembly, connections, sliding surfaces, water flow, and system functions are checked in detail."
-      },
-      "planning": {
-        "title": "产品设计与主题化包装",
-        "desc": "提供概念规划、3D 渲染表现与符合当地文化特色的定制主题设计。"
-      },
-      "design": {
-        "title": "工程力学与项目设计",
-        "desc": "开展严密的有限元力学计算、水动力学仿真及地下管网综合管线设计。"
-      },
-      "engineering": {
-        "title": "高精工业制造",
-        "desc": "在符合 EN 1069 及 ISO 标准的自动化厂区内完成滑道与钢构制造。"
-      },
-      "installation": {
-        "title": "项目统筹与国际物流",
-        "desc": "全球跨国物流协调、集装箱防损装载及目的地清关门到门运输。"
-      },
-      "production": {
-        "title": "现场安装与调试验收",
-        "desc": "资深外派工程师现场指导安装、满载水力测试运行与运营人员专业培训。"
+        "title": "安装与调试验收",
+        "sub": "现场安装与调试运行",
+        "desc": "滑道、承重钢架及水电设备由经验丰富的专业工程团队在 Polgün 高级技术专家的指导下进行现场装配。安装完成后，对连接法兰、滑行接缝、水流循环及电控联锁系统进行全负荷调试与严苛验收。"
       }
     },
-    "why": {
-      "service": {
-        "title": "Full Service",
-        "desc": "From design to assembly, maintenance to software at every step."
+    "sections": {
+      "planlama": {
+        "title": "前期策划与规划",
+        "desc": "任何成功的水上乐园项目都始于科学合理的规划。通过深入分析投资预算、地形地貌、目标客群与市场竞品动态，为您量身定制最具商业价值的总体布局规划与概念方案。"
       },
-      "countries": {
-        "title": "70+ Countries",
-        "desc": "Global project experience and local expertise."
+      "tasarim": {
+        "title": "创意设计",
+        "desc": "运用原创理念与前沿审美打造极富吸引力的水上乐园主题概念。借助三维数字建模与仿真渲染技术，全景逼真呈现项目竣工后的惊艳效果。"
       },
-      "iso": {
-        "title": "ISO 9001",
-        "desc": "Certified production and quality processes."
+      "muhendislik": {
+        "title": "结构与水力工程",
+        "desc": "依据国际安全规范设计坚固耐用、安全可靠的结构体系。对钢结构与玻璃钢构件进行严谨的有限元结构力学计算，确保达到国际最高安全标准。"
       },
-      "lifetime": {
-        "title": "Lifetime",
-        "desc": "Long-term technical support and spare parts warranty."
+      "montaj": {
+        "title": "现场安装与搭建",
+        "desc": "由资深装配技师与专业项目经理带队，在确保符合职业健康与安全生产规范的前提下，以高效率、高精度完成现场组装与管网碰头。"
+      },
+      "bakim": {
+        "title": "售后运维与检修",
+        "desc": "为确保水上乐园长期安全稳定运营，提供专业维保服务。通过开园前全面检测、原厂损耗件更换与全天候技术指导，保障乐园安全无忧运营。"
+      },
+      "yenileme": {
+        "title": "现代化改造与升级",
+        "desc": "运用最新行业科技与潮流主题对老旧水上乐园进行升级换代。通过增设新一代刺激滑道、亲子水寨及互动戏水设备，让现有乐园焕发全新生机与巨大客流吸引力。"
       }
     },
-    "process_tag": "专业流程",
-    "process_title": "We are with you every step of the way, from start to finish",
-    "cta_title": "将您的愿景托付给行业顶级专家。",
-    "cta_desc": "预约免费的技术可行性评估与投资预算规划服务。",
-    "cta_tag": "开启合作",
-    "cta_btn": "联系专家团队"
+    "all": "所有服务"
   },
   "projects": {
     "title": "精选全球项目",
@@ -446,177 +423,177 @@
       "desc": "专为低龄儿童打造的零水深安全戏水乐园，配备互动喷泉与趣味卡通小品。"
     },
     "categories": {
-      "family_slides": "家庭亲子滑梯",
-      "fast_slide": "极速竞速滑梯",
-      "jumbo_slides": "巨型大喇叭与巨碗滑梯",
-      "racer_slides": "多道竞赛滑梯",
-      "classic_slides": "经典螺旋滑梯",
-      "body_slides": "人体直滑滑梯",
-      "tube_slides": "皮筏浮圈滑梯",
-      "rafting_slides": "激流大漂流滑梯",
-      "extreme_slides": "极限垂直自由落体滑梯",
-      "kids_slides": "趣味儿童滑梯"
+      "body_slides": "人体直滑系列",
+      "classic_slides": "经典滑道系列",
+      "extreme_slides": "极速极限滑道",
+      "family_slides": "家庭型滑道",
+      "fast_slide": "极速高速滑道",
+      "jumbo_slides": "巨型大喇叭/巨碗系列",
+      "kids_slides": "儿童亲子滑梯",
+      "racer_slides": "多道竞速滑梯",
+      "rafting_slides": "激流皮筏滑梯",
+      "tube_slides": "封闭管道滑道"
     },
     "specs": {
-      "tema": "Theme",
-      "aktivite": "Activity",
-      "yas_grubu": "Age Group",
-      "kapasite": "Capacity",
-      "odul": "Award",
-      "tur": "Type",
-      "gelistirme": "Development",
-      "kaydirak_yolu": "Slide Path",
-      "tescil": "Registration",
-      "malzeme": "Material"
+      "tema": "主题",
+      "aktivite": "互动体验",
+      "yas_grubu": "适用年龄",
+      "kapasite": "游客承载力",
+      "odul": "所获奖项",
+      "tur": "产品类型",
+      "gelistirme": "研发单位",
+      "kaydirak_yolu": "滑道数量",
+      "tescil": "专利认证",
+      "malzeme": "主体材料"
     },
     "values": {
-      "2024": "2024",
-      "korsan": "Pirate",
-      "ozellestirilebilir": "Customizable",
-      "tum_yaslar": "All Ages",
-      "yuksek": "High",
-      "sualti": "Underwater",
-      "iaapa_brass_ring": "IAAPA Brass Ring",
-      "dalga_sistemi": "Wave System",
-      "ar_ge_merkezi": "R&D Center",
-      "4_adet": "4 Units",
-      "8_kisi_seans": "8 Persons/session",
-      "kompozit_celik": "Composite+Steel"
+      "2024": "2024年",
+      "korsan": "海盗主题",
+      "ozellestirilebilir": "深度可定制",
+      "tum_yaslar": "全年龄段通用",
+      "yuksek": "高承载量",
+      "sualti": "水下世界",
+      "iaapa_brass_ring": "IAAPA 铜环奖",
+      "dalga_sistemi": "深海造浪系统",
+      "ar_ge_merkezi": "Polgün 官方研发中心",
+      "4_adet": "4 条独立滑道",
+      "8_kisi_seans": "8 人/次",
+      "kompozit_celik": "高精复合材料 + 结构钢"
     },
     "badges": {
-      "imza_tema": "Signature Theme",
-      "ar_ge": "R&D"
+      "imza_tema": "旗舰主题",
+      "ar_ge": "自主研发"
     },
     "items": {
       "pirate_theme": {
-        "sub": "Pirate Themed Water Slides",
-        "desc": "Polgün's signature theme, the Pirate Theme, is designed for children to sail in open seas full of pirates and have fun in this imaginary world."
+        "sub": "海盗主题水寨滑梯系统",
+        "desc": "作为 Polgün 的旗舰级经典主题，海盗主题专为激发儿童探索欲望而打造，带领孩子们在充满海盗传奇的大海上扬帆起航，在沉浸式的梦幻水世界中尽情欢笑。"
       },
       "underwater_theme": {
-        "sub": "Underwater World Themed Structures",
-        "desc": "An interactive playground designed based on colorful corals and different species waiting to be discovered, sparking children's curiosity about the underwater world."
+        "sub": "水下探秘主题戏水设施",
+        "desc": "以神秘绚丽的海洋生物与色彩斑斓的珊瑚礁为灵感，精心构筑集互动戏水与科普探索于一体的梦幻水上乐园，唤醒孩子们对浩瀚深海的无限好奇心。"
       },
       "navatu": {
-        "sub": "IAAPA Brass Ring Award-Winning Wave System",
-        "desc": "Navatu is an innovative waterpark system developed at Polgün's R&D Center and awarded the Brass Ring award at IAAPA Expo Orlando. It takes the natural wave experience to a new dimension."
+        "sub": "IAAPA 铜环奖创新造浪系统",
+        "desc": "Navatu 是由 Polgün 官方研发中心倾力打造、并在美国 IAAPA 奥兰多博览会上斩获国际权威“铜环奖”（Brass Ring Award）的划时代造浪设备，将真实自然的深海冲浪体验提升至崭新维度。"
       },
       "savana": {
-        "sub": "Multi-Lane Themed Water Slide",
-        "desc": "An innovative R&D project that combines four different slide paths in a single body. Savana offers its users a unique visual feast and sliding experience."
+        "sub": "多滑道复合主题水上滑梯",
+        "desc": "Savana 是一项颠覆性的技术研发结晶，在同一支撑结构中高度集成了 4 条截然不同的滑行轨迹，可支持 8 名游客同时体验不同的俯冲与回旋模式，该设计已于 2024 年正式获得国际专利认证。"
       },
       "big_hole": {
-        "desc": "Big Hole is a large-scale enclosed water slide designed to offer a shared family rafting experience. Its wide-section tube structure delivers an impressive sense of speed and movement, turning the classic enclosed slide concept into a fun, social, and unforgettable family adventure."
+        "desc": "Big Hole 是一款专为家庭多人员浮圈共同滑行设计的大型封闭式滑梯。其宽阔的管径横截面带来震撼的加速感与空间感，将传统的封闭滑道升华为充满欢声笑语、增进亲子感情的顶级水上游乐地标。"
       },
       "big_raft": {
-        "desc": "Big Raft is a wide and comfortable family slide designed for shared use. Thanks to its wide sliding surface, families and groups of friends can experience speed and excitement together, combining social interaction with a delightful waterpark experience."
+        "desc": "Big Raft 是一款超大口径家庭筏艇滑道，专为全家及好友团队设计。平稳流畅的轨迹与宽阔的转弯空间，为游客带来安全、刺激且极富社交乐趣的漂流滑行体验。"
       },
       "family_slide": {
-        "desc": "Family Slide is a multi-person raft slide designed for families and groups to enjoy together. With its wide turns, smooth transitions, and rafts accommodating up to four people, it offers interactive fun and high-capacity entertainment."
+        "desc": "Family Slide 是一款高吞吐量、适合全年龄段游客的宽体家庭滑梯，平缓舒适的坡度与严密的安全设计让家长与孩子能够并肩滑行，共享天伦之乐。"
       },
       "family_tornado": {
-        "desc": "Family Tornado brings the iconic funnel experience on a larger scale, allowing larger groups to experience the thrill together. Its wide funnel structure and strong oscillation movement offer high acceleration and an instantaneous feeling of weightlessness."
+        "desc": "Family Tornado 将标志性的大喇叭（Tornado）造型与多人员家庭大浮筏完美融合。游客在巨型喇叭内壁高频往复摆动，在重力与水流的交织中体验失重与俯冲的双重震撼。"
       },
       "mid_hole": {
-        "desc": "Mid Hole is an enclosed family-type water slide offering a wide and impressive riding experience. The enclosed tube design increases the sense of mystery and excitement throughout the journey, providing a comfortable and shared sliding experience."
+        "desc": "Mid Hole 中型管状滑梯完美平衡了速度与适度刺激，结合半透明与封闭光影特效，为中等刺激偏好游客带来极其顺畅的管内探险。"
       },
       "ufo_slide": {
-        "desc": "UFO Slide is a family-friendly raft water slide inspired by its unique elliptical form. The enclosed tube structure offers a smooth and comfortable slide for up to four riders, combining shared fun with high entertainment value."
+        "desc": "UFO Slide 飞碟滑梯借助强大的离心力，引导浮圈在犹如飞碟般的圆盘内壁进行多圈高速环形回旋，随后精准冲入跌水池，带来强烈的科幻视觉与滑行快感。"
       },
       "freefall": {
-        "desc": "Freefall is a high-adrenaline water slide designed to deliver the intense sensation of free fall. With its nearly vertical drop angle and continuous high-speed track, it offers a short but extremely impressive sliding experience."
+        "desc": "Freefall 自由落体滑梯专为极致极限爱好者设计，近乎 90 度的垂直陡降带来失重般的惊险心跳，瞬间加速让人肾上腺素飙升。"
       },
       "hydro_river": {
-        "desc": "Hydro River is an action-packed water slide that simulates a wild river adventure. Combining high-speed water currents, sharp turns, and sudden drops, it provides an exhilarating rafting experience for thrill-seekers."
+        "desc": "Hydro River 水力漂流河模拟自然界峡谷激流的汹涌水势，游客在跌宕起伏的波浪与急速水流中感受大自然的奔放力量。"
       },
       "rocket_slide": {
-        "desc": "Rocket Slide is a high-speed capsule slide that launches riders with a trapdoor start. Delivering maximum acceleration and speed, it offers a thrilling gravity-defying ride for adrenaline lovers."
+        "desc": "Rocket Slide 火箭发射滑梯配备全自动机械翻板发射舱，随着倒计时舱底瞬间打开，游客如火箭发射般坠入高落差滑道并穿过高速大回环。"
       },
       "uphill_slide": {
-        "desc": "Uphill Slide uses advanced water propulsion technology to push riders uphill against gravity. With its dynamic roller-coaster-like ups and downs, it delivers an innovative and exciting slide experience."
+        "desc": "Uphill Slide 逆流冲天滑梯运用强劲高压水推技术打破重力束缚，将浮筏瞬间推上陡峭坡顶，实现先俯冲再极速爬升的过山车式奇妙体验。"
       },
       "kamikaze": {
-        "desc": "Kamikaze is a classic high-speed speed slide offering multiple drops and intense acceleration. Designed for thrill-seekers, it provides an adrenaline-pumping sliding experience with a clear view of the descent."
+        "desc": "Kamikaze 敢死队高速滑梯以多段式起伏坡度为特色，让滑行者在连续加速与短暂失重中感受风驰电掣般的纯粹速度冲击。"
       },
       "babochka": {
-        "desc": "Babochka is a double-wing butterfly slide offering high-speed drops and bidirectional sliding action. With its unique wing-like geometry, it delivers a thrilling oscillation experience for riders."
+        "desc": "Babochka 蝶翼滑梯汲取蝴蝶振翅的对称几何灵感，在两侧弧形翼板间产生独特的左右大摆幅震荡滑行。"
       },
       "boomerango": {
-        "desc": "Boomerango is a high-thrill slide that drops riders down a steep launch path before sending them high up a vertical wall. After experiencing temporary weightlessness at the peak, riders slide backward into a splash pool."
+        "desc": "Boomerango 回旋镖滑梯以回旋镖运动为灵感。游客经急速俯冲后，瞬间冲上接近垂直的巨大滑壁体验瞬间失重，随后顺势回落冲向出水区，刺激感十足。"
       },
       "drone": {
-        "desc": "Drone Slide features a futuristic, enclosed design that combines light effects and sharp curves. It offers an interactive and mysterious journey, simulating a high-tech drone flight."
+        "desc": "Drone 无人机穹顶滑梯配有极具未来感的宽阔穹顶模块，在滑行中营造豁然开朗的巨幅空间感，带来极佳的视觉与体感体验。"
       },
       "magic_tray": {
-        "desc": "Magic Tray is a wide-section circular bowl slide that spins riders around its perimeter before dropping them through the center hole into a splash pool below."
+        "desc": "Magic Tray 飞碟托盘滑梯以连续平滑的倾斜盘旋、稳定的速度控制与舒适的乘坐感，成为兼顾家庭温馨与动感乐趣的明星产品。"
       },
       "mini_boomerango": {
-        "desc": "Mini Boomerango brings the popular vertical wall experience on a smaller scale, making it accessible and fun for younger adventurers and families."
+        "desc": "Mini Boomerango 迷你回旋镖滑梯将经典回旋镖的往复摆动体验微缩化，专为儿童戏水区与水寨配套定制，安全又充满童趣。"
       },
       "space_rocket": {
-        "desc": "Space Rocket is a high-speed slide featuring a launch capsule and a loop path, delivering high G-forces and maximum thrill for extreme sports enthusiasts."
+        "desc": "Space Rocket 太空火箭滑梯融合未来太空科幻美学与超高滑行初速，为游客带来沉浸式星际穿越探险体验。"
       },
       "super_bowl": {
-        "desc": "Super Bowl spins riders around a massive circular bowl before dropping them through a central exit, creating a suspenseful and highly entertaining slide experience."
+        "desc": "Super Bowl 超级大碗滑梯通过加长碗体回旋周长，使浮圈在宽阔碗壁内完成数圈平稳旋转后优雅切入出口滑道。"
       },
       "space_bowl": {
-        "desc": "Space Bowl combines an enclosed tube entry with a giant open bowl spin, offering a thrilling combination of speed and centrifugal force."
+        "desc": "Space Bowl 太空碗滑梯集高速直线穿梭与中心漩涡于一体，游客在高速入碗盘旋后，直落入下方的缓冲池中。"
       },
       "tornado_slide": {
-        "desc": "Tornado Slide features a massive funnel that sucks rafts in, tossing them from side to side in a high-speed spiral before exiting into the splash pool."
+        "desc": "Tornado 巨型大喇叭滑梯是水上乐园当之无愧的人气王者，巨型四人浮圈在巨大漏斗形内壁高高荡起，宛如置身真实龙卷风的能量核心。"
       },
       "planeta": {
-        "desc": "Planeta is a themed multi-sensory slide combining visual projections, sound effects, and unique slide paths to create an out-of-this-world journey."
+        "desc": "Planeta 行星轨道滑梯拥有浑圆优美的天体流线造型，宽广的回转与加速螺旋让游客仿佛沿着行星公转轨道飞速滑行。"
       },
       "body_racer": {
-        "desc": "Body Racer is a head-first mat racing slide with side-by-side lanes, allowing friends and family to compete in a high-speed dash to the finish line."
+        "desc": "Body Racer 竞速人体滑梯支持多条透明或半封闭滑道并行，参赛者可在滑行全程观察对手位置，享受并驾齐驱的竞速快感。"
       },
       "multi_slide": {
-        "desc": "Multi Slide features multiple parallel lanes for side-by-side racing, offering high capacity and competitive fun for waterpark visitors."
+        "desc": "Multi Slide 经典多道波浪竞赛滑梯采用多条并列波浪式起伏滑道，超高的游客吞吐能力与多人比赛乐趣使其成为乐园必备项目。"
       },
       "twister_slide": {
-        "desc": "Twister Slide consists of interlocking, twisting tubes that create a dizzying and fast-paced sliding experience."
+        "desc": "Twister Slide 缠绕双绞滑梯由两条或三条交织缠绕的螺旋管道组成，多名游客在封闭管道内展开看不见的盲测竞速。"
       },
       "racer_slide": {
-        "desc": "Racer Slide is a competitive racing slide featuring enclosed loops and open racing lanes, allowing riders to track their positions throughout the race."
+        "desc": "Racer Slide 双道对决滑梯以高对称性与高同步性为特色，是好友与家庭成员同台比拼滑行速度的绝佳舞台。"
       },
       "spider_slide": {
-        "desc": "Spider Slide features a multi-legged design with branching slide paths, offering a mysterious and unique descent."
+        "desc": "Spider Slide 蛛网滑梯交织了复杂的急转弯与交错隧道，最多可容纳四人并排滑行，带来层出不穷的方向变化。"
       },
       "aquatube": {
-        "desc": "Aquatube is a classic high-speed enclosed tube slide, offering a fast and smooth ride in total darkness or with translucent color rings."
+        "desc": "Aquatube 经典水管滑梯提供多样化的半透明采光与声光电多媒体集成选项，将经典管滑提升为如梦似幻的流光旅程。"
       },
       "black_hole": {
-        "desc": "Black Hole is a popular enclosed slide featuring spectacular light and sound effects inside the dark tube, creating a sensory-rich adventure."
+        "desc": "Black Hole 黑洞滑梯在全封闭黑暗管道中巧妙配置星光光纤、动态光环等光影特效，为游客打造身临其境的超时空穿梭感。"
       },
       "compact_slide": {
-        "desc": "Compact Slide is a space-saving water slide featuring tight curves and quick drops, perfect for smaller parks or hotel pools."
+        "desc": "Compact Slide 紧凑型滑梯结构轻巧、安装便捷，能够灵活适配各种水寨系统与小型泳池，且具备出色的耐用度与维护经济性。"
       },
       "rafting_slide": {
-        "desc": "Rafting Slide offers a classic, moderate-speed open slide experience for single or double rafts, simulating a gentle river rafting trip."
+        "desc": "Rafting Slide 激流探险滑梯以大曲率弯道和连续翻转为特色，模拟山涧皮筏艇漂流的惊险与畅快。"
       },
       "wide_slide": {
-        "desc": "Wide Slide features a broad, open lane that allows multiple riders to slide side-by-side without rafts, offering safe and simple fun for families."
+        "desc": "Wide Slide 超宽平滑滑梯允许三人以上并排携手下滑，宽敞的滑行面带来极佳的互动性与安全感。"
       },
       "body_slide": {
-        "desc": "Body Slide is a classic open-air body slide featuring smooth curves and gentle drops, providing a fun and relaxing ride for all ages."
+        "desc": "Body Slide 经典敞开式人体滑梯采用 RTM 顶级双面光洁模压工艺制造，滑行顺畅细腻，色彩经久耐用，是全球水上乐园的核心基石。"
       },
       "slip_fly": {
-        "desc": "Slip & Fly features a ramp at the end of the slide that launches riders into the air before landing in a deep pool. It offers a spectacular, high-action attraction that is as fun to watch as it is to ride."
+        "desc": "Slip & Fly 飞天滑梯将极速直滑道与尾端仰角起飞跳台精妙结合，滑行者在末端飞跃腾空划出优美抛物线后落入深水池，极具观赏性与轰动效应。"
       },
       "canyon_slide": {
-        "desc": "Canyon Slide simulates a rafting journey through deep rocky canyons. With its high walls, sudden turns, and varied water flow, it offers an immersive and adventurous sliding experience for all ages."
+        "desc": "Canyon 峡谷滑梯采用紧凑型节约空间布局，在有限占地内巧妙融合了侧倾摆动与急转回旋，是中小型场地打造高人气地标的理想之选。"
       },
       "crazy_cone": {
-        "desc": "Crazy Cone features one or more conical shapes that create sudden swings and directional changes. As rafts enter the cone, they oscillate high on the walls before exiting back into the slide tube."
+        "desc": "Crazy Cone 疯狂锥体滑梯通过嵌入多个锥形扩展舱，使浮圈在进入锥体后发生出其不意的变向摆动，带来充满惊喜的变轨滑行。"
       },
       "hill_slide": {
-        "desc": "Hill Slide is a multi-bump slide that simulates a series of small hills, creating exciting airtime moments and speed variations throughout the descent."
+        "desc": "Hill Slide 冲天飞浪滑梯在陡降之后紧接大型驼峰爬升，带来极强的推背感与再次重力释放，让游客欲罢不能。"
       },
       "hydra_slide": {
-        "desc": "Hydra Slide features a multi-lane design with twisting paths, allowing multiple riders to slide simultaneously and race to the finish line."
+        "desc": "Hydra 九头蛇多道竞速滑梯将超大客流量与霸气雕塑感建筑完美融合，多道同时出发激发游客间的竞技对抗热情。"
       }
     },
-    "catalog_title": "Product Catalog",
+    "catalog_title": "产品中心与目录",
     "request_btn": "Product Inquiry",
     "download_btn": "Download Catalog",
     "custom_project_tag": "Custom Project",
@@ -632,32 +609,42 @@
     }
   },
   "arge": {
-    "title": "R&D & Innovation",
-    "subtitle": "Future Water Entertainment Technologies",
-    "desc": "As the first approved R&D center in Muğla, Polgün R&D Center designs innovative technologies and products shaping the industry.",
-    "section1_title": "Our R&D Competence",
-    "section1_desc": "Using engineering software, flow analyses, and next-generation production methods, we optimize the performance and durability of our products.",
-    "section2_title": "Featured R&D Products",
-    "navatu_desc": "An innovative wave pool system that takes the natural wave experience to a new dimension.",
-    "savana_desc": "An innovative R&D project that combines four different slide paths in a single structure.",
-    "monarch_desc": "A custom design bringing the aesthetic form of butterfly wings together with water slide geometry, offering a high-speed and double-sided riding experience.",
-    "hero_desc": "At Polgün Waterparks, the foundation of our R&D approach is to develop safe, innovative, sustainable, and high-value-added water entertainment technologies.",
-    "innovative_title": "Innovative Products",
-    "continuous_title": "Continuous Development",
-    "projects_title": "Our R&D Projects",
-    "savana_sub": "Multi-Lane Themed Water Slide",
-    "misyon": "Our Mission",
-    "misyon_desc": "To bring unique solutions to the water entertainment industry by developing high-quality, safe, cost-effective, and innovative R&D projects; and to create pioneering products that represent our country in national and international markets. We aim to bring qualified knowledge, technology, and human resources to our sector by adhering to work schedules, engineering verifications, standards compliance, and sustainable production principles in our R&D processes.",
-    "vizyon": "Our Vision",
-    "vizyon_desc": "As Polgün Waterparks R&D Center, our vision is to be a leading and pioneering R&D center that shapes water entertainment technologies with its unique designs, innovative engineering solutions, strong production capability, and projects in compliance with international standards. We aim to become a brand recognized both nationally and internationally with projects we develop without compromising quality.",
-    "header_title": "R&D Center",
-    "p1": "Our center, which gained R&D Center status with Ministerial approval in 2021, pioneers original product development, localization, and technology production in our sector as the first and only R&D Center of Muğla.",
-    "p2": "In our R&D Center, we manage new product design, engineering analyses, prototyping, testing, validation, production method development, and intellectual property processes in a holistic approach with 30 full-time equivalent qualified R&D personnel working as researchers, technicians, and support staff.",
-    "p3": "We view nationalization and localization efforts for our country as a strategic responsibility; we develop solutions that reduce external dependency, are rapidly applicable, and directly respond to customer needs. In all our R&D processes from design to production, from analysis to field application, we adhere to the principles of safety, quality, compliance with international standards, and sustainability.",
-    "p4": "Projects developed at Polgün R&D Center add value to the sector in areas such as water savings, user safety, capacity increase, thematic experience, modular production, composite material technologies, and next-generation water slide geometries. Our innovative product projects such as Navatu, Savana, Monarch Butterfly, and Eclipse are among the important R&D outputs that represent Polgün's design, engineering, and production strength in the international market.",
-    "p5": "Our R&D activities are not limited to new product development alone. We also carry out continuous development work to improve the performance of existing products, improve production processes, reduce environmental impacts, increase material efficiency, and increase our competitive power in international markets. We strengthen our corporate knowledge base through academic collaborations, scientific publications, patent and design registration processes; and transform the outputs obtained into a sustainable innovation culture.",
+    "title": "研发与前沿创新",
+    "subtitle": "引领未来水上游乐核心科技",
+    "desc": "作为穆拉省首家获得国家部委认证的官方研发中心，Polgün 研发中心专注研发引领全球水上游乐行业的创新技术与旗舰产品。",
+    "section1_title": "我们的研发实力",
+    "section1_desc": "运用顶尖工程软件、CFD 流体动力学仿真计算及新一代复合材料成型工艺，持续优化产品的安全性能与长效耐久度。",
+    "section2_title": "代表性研发成果",
+    "header_title": "企业研发中心",
+    "hero_desc": "在 Polgün Waterparks，我们研发理念的核心是打造安全可靠、持续创新、节能环保且具备高附加值的水上文旅装备与科技。",
+    "p1": "我们的研发中心于 2021 年荣获土耳其工业与技术部官方认证，作为穆拉省首家且唯一的国家级水上装备研发中心，始终引领着行业自主知识产权开发、核心技术攻关与高端装备制造。",
+    "p2": "研发中心汇聚了 30 名全职高素质研发团队（涵盖资深研究员、机械工程师、复合材料专家及技术人员），以系统化全流程体系统筹推进工业外观设计、工程仿真分析、精密原模制作、严苛荷载测试、工艺革新与知识产权申报。",
+    "p3": "我们将装备自主化与技术突破视为企业的战略责任；积极研发降低外部依赖、具备快速落地能力并精准契合全球客户需求的定制方案。从三维建模到批量智造，从有限元分析到现场吊装，我们始终坚守最高安全准则、严苛质量要求与国际行业标准。",
+    "innovative_title": "突破性创新产品",
+    "p4": "Polgün 研发中心攻关的项目在节水节能、游客安全保护、小时吞吐量提升、沉浸式主题体验、模块化装配式结构及新一代滑道曲面拓扑学等领域持续赋能行业。Navatu、Savana、Monarch Butterfly 与 Eclipse 等明星旗舰产品，已成为 Polgün 卓越设计与智造硬实力享誉全球市场的亮丽名片。",
+    "continuous_title": "精益求精·持续超越",
+    "p5": "我们的科研探索不仅限于全新滑道的开发，更涵盖对在役产品的性能迭代、车间生产工艺升级、环保减碳降耗、材料利用率最大化及全球竞争优势的持续强化。依托与一流高校的产学研合作、高水平学术论文发表以及专利与外观设计申报，构建起生生不息的创新生态体系。",
+    "misyon": "我们的使命",
+    "misyon_desc": "通过打造高品质、高安全性、高性价比且极具前瞻性的研发项目，为全球水上游乐行业注入源源不断的原创动力；在国内外市场上推出代表最高制造水准的地标性游乐装备。严格恪守工程时间节点与国际认证标准，为行业培养输送顶尖人才与核心技术成果。",
+    "vizyon": "我们的愿景",
+    "vizyon_desc": "将 Polgün 研发中心建设成为以原创设计、先进工程计算、强大工业制造与严苛国际标准为基石的全球领军型水上科技创新高地。以永不妥协的匠心品质，成为享誉国际的标杆品牌。",
+    "projects_title": "前沿研发项目",
+    "navatu_desc": "荣获国际 IAAPA Brass Ring 权威大奖的革命性造浪滑道系统，开创自然冲浪与水上滑行的全新维度。",
+    "savana_sub": "多滑道复合主题水滑梯",
+    "savana_desc": "在单一巨型钢构主体内巧妙融合四条截然不同滑行轨迹与体验的突破性研发巨作。",
+    "monarch_desc": "将仿生帝王蝶羽翼的唯美形态与双向高速滑行动力学完美融合的标志性定制滑道。",
+    "fikri_sinai_tag": "知识产权",
     "fikri_sinai_title": "自主知识产权与工业产权",
     "fikri_sinai_desc": "由 Polgün 研发中心攻关的核心技术与工程方案均已获得国际和国家层面的专利与法律保护。",
+    "stats": {
+      "patent": "发明专利",
+      "utility_model": "实用新型",
+      "design": "外观设计",
+      "brand": "注册商标",
+      "publication": "学术论文",
+      "total": "总计"
+    },
+    "utility_models_tag": "官方认证",
     "utility_models_title": "实用新型专利",
     "dag_kizagi": "高山管轨滑道载人滑车及智能制动系统",
     "project_code": "项目代码",
@@ -668,13 +655,15 @@
     "reg_date": "授权日期",
     "registered": "已注册",
     "national": "国家级",
+    "international": "国际级",
+    "pending": "审核中",
     "brands_tag": "知识产权",
     "brands_title": "我们的注册品牌",
     "brands_desc": "Polgün 在全球多国拥有的注册商标是我们在国际市场上独特身份与卓越信誉的象征。",
-    "international": "国际级",
-    "pending": "申请审中",
-    "fikri_sinai_tag": "知识产权",
-    "utility_models_tag": "官方认证"
+    "official_record": "官方认证记录",
+    "patent_management": "© Polgün Waterparks 知识产权与专利管理",
+    "project_type": "研发重点项目",
+    "center_location": "企业研发中心"
   },
   "career": {
     "title": "加入 Polgün 大家庭",
@@ -937,7 +926,7 @@
         "desc": "与工程领域青年才俊深度交流，展示水乐园行业的前沿研发与广阔前景。"
       },
       "msku": {
-        "title": "Muğla Sıtkı Koçman University Visit",
+        "title": "Muğla Sitki Koçman University Visit",
         "desc": "Within the scope of MSKU management's visit to Polgün, R&D, production, and design activities were examined on-site. University-industry cooperation was strengthened."
       },
       "title": "重要视察与官方访问",
@@ -959,7 +948,13 @@
     "kalite": {
       "iso9001": "ISO 9001 质量管理体系认证",
       "iso14001": "ISO 14001 环境管理体系认证",
-      "iso45001": "ISO 45001 职业健康安全管理体系认证"
+      "iso45001": "ISO 45001 职业健康安全管理认证",
+      "iso3834": "ISO 3834-2 钢结构焊接质量认证",
+      "astm": "ASTM F2376-22 水上滑梯国际标准认证",
+      "cpr": "EN 1090 欧盟钢结构 CE 认证",
+      "ts_en_1069": "EN 1069 欧洲水上滑梯安全标准认证",
+      "ts_en_1176": "EN 1176-1 儿童游乐设施安全认证",
+      "ts_en_17232": "EN 17232 水上互动戏水设备标准认证"
     },
     "patent_title": "知识产权",
     "cert_title": "资质认证",
@@ -994,50 +989,53 @@
     }
   },
   "history": {
-    "title": "四十年创新与辉煌历程",
-    "journey": "Polgün's Journey from 2002 to Present",
-    "milestones_title": "里程碑事件",
-    "growth_title": "Our Growth Story",
-    "facilities": "Our Facilities",
-    "growing_power": "Growing Manufacturing Power",
-    "desc1": "Polgün continuously carries out infrastructure investments to meet the increasing capacity need and advance its production capabilities; while creating new production areas for polyester, thermoplastic coating, and painting processes in its existing facilities in Muğla, it consolidates its growing operational power on an international scale by reaching a total of 120.000 m² production area with the new factory investment in Bursa.",
-    "desc2": "In order to carry R&D and Design competence even further, the application process for the Marmara Teknokent office has been completed and the contract has been signed, officializing the structure. This setup aims to strengthen university collaborations.",
-    "bold_summary": "Today, Polgün strengthens its position in the international market with its manufacturing setup in Turkey and sales office in Spain.",
-    "milestones": {
-      "2002": "Polgün started its operations in Muğla-Menteşe.",
-      "2008": "First international project delivery was accomplished.",
-      "2015": "Production capacity was increased and new facilities were commissioned.",
-      "2019": "Spain office was opened.",
-      "2021": "Ministry-approved R&D Center status was obtained — Muğla's first and only R&D Center.",
-      "2025": "A total of 120,000 m² production area was reached with the Bursa factory investment.",
-      "2026": "University-industry cooperation was strengthened with the Marmara Teknokent office."
-    },
-    "tags": {
-      "1985": "公司成立与第一批复合材料生产",
-      "2002": "首个海外水上乐园出口项目",
-      "2008": "成立专业研发与工程技术部",
-      "2015": "新落成超大规模现代化一体生产基地",
-      "2019": "全球出口业务覆盖 50 多个国家",
-      "2021": "获国家部委正式认证为官方研发中心",
-      "2025": "工业 4.0 与智慧水乐园物联网技术",
-      "2026": "迈向全球顶尖领军品牌的宏伟愿景"
-    },
-    "milestones_tag": "Milestones",
-    "desc": "多年来，我们不断增强制造实力、工程技术和全球项目经验。我们走过的每一步，都见证了 Polgün 走向全球 70 多个国家的坚实足迹。",
+    "title": "发展历程与里程碑",
+    "journey": "Polgün 从 2002 年至今的跨越式发展征程",
+    "milestones_tag": "里程碑节点",
+    "milestones_title": "发展里程碑",
+    "growth_title": "我们的成长故事",
+    "facilities": "现代化制造基地",
+    "growing_power": "持续扩张的工业制造硬实力",
+    "desc": "多年来，我们持续提升工业制造能力、精进工程技术并积累深厚的全球项目管理经验。我们迈出的每一步，都在为构建更强大的生产体系、打造创新产品奠定基石，汇聚成今天业务遍及全球 70 多个国家的辉煌历程。",
+    "desc1": "Polgün 持续加大基础设施与智能制造投资，以满足日益增长的全球订单需求并全面提升生产工艺；在穆拉现有厂区扩建聚酯复合材料、热塑性涂层及静电喷涂车间的同时，通过在布尔萨投资建设全新重型制造厂区，将整体生产面积拓展至 120,000 平方米，全面巩固跨国运营实力。",
+    "desc2": "为了将研发与创意设计实力提升至更高水平，Polgün 正式入驻马尔马拉科技园（Teknopark）设立产学研基地，全力深化与高等院校及科研院所的前沿技术合作。",
+    "bold_summary": "今天，依托在土耳其的超级一体化智造基地与在西班牙的欧洲办事处，Polgün 正不断巩固在全球水上游乐行业的领军地位。",
+    "tag": "发展历程",
+    "intro": "自 2002 年起，以严苛工程标准与精湛制造技术引领水上乐园行业发展。",
+    "milestones_desc": "镌刻在企业辉煌跨国发展史上的关键时刻。",
+    "cta_title": "携手共筑下一座地标水上乐园",
+    "cta_desc": "依托 20 余年行业深耕与顶尖工程师团队，为您的文旅投资项目注入长效价值。",
+    "cta_btn": "立即咨询",
     "stats": {
-      "completed": "交付项目",
+      "completed": "竣工交付项目",
       "countries": "出口国家",
       "production": "一体化制造",
-      "team": "专业员工",
-      "experience": "年行业积淀",
-      "projects": "成功项目"
+      "team": "专业团队",
+      "experience": "年行业经验",
+      "projects": "精品项目",
+      "countries_sub": "全球出口与跨国布局",
+      "projects_sub": "竣工交付水上乐园",
+      "production_sub": "3 座大型高精现代化厂区",
+      "team_sub": "资深工程师与制造团队"
     },
-    "tag": "发展历程",
-    "intro": "自 1985 年创立至今，在水上游乐产业谱写不断超越的创新篇章。",
-    "milestones_desc": "镌刻在企业辉煌发展史上的重要时刻。",
-    "cta_title": "与我们携手共创辉煌",
-    "cta_desc": "让行业先驱的专业经验为您的投资项目保驾护航。",
-    "cta_btn": "立即咨询"
+    "tags": {
+      "2002": "公司创立",
+      "2008": "首个出口项目",
+      "2015": "产能跨越式扩张",
+      "2019": "设立西班牙办事处",
+      "2021": "国家级研发中心",
+      "2025": "布尔萨大型工厂",
+      "2026": "科技园研发中心"
+    },
+    "milestones": {
+      "2002": "Polgün 在土耳其穆拉-曼泰谢正式成立并开展生产运营。",
+      "2008": "成功交付首个海外跨国水上乐园大型工程。",
+      "2015": "大幅扩充现代化制造产能，多座全新综合生产车间投入运营。",
+      "2019": "在西班牙正式设立欧洲销售与技术服务办事处。",
+      "2021": "荣获国家部委正式认证，成为穆拉省首家且唯一的官方水上游乐研发中心。",
+      "2025": "斥资建设布尔萨新工厂，整体制造基地总面积突破 120,000 平方米。",
+      "2026": "入驻马尔马拉科技园（Teknopark），深化产学研一体化创新合作。"
+    }
   },
   "news": {
     "title": "新闻与行业动态",
@@ -1080,19 +1078,19 @@
     "articles": {
       "gunes_bakim_evi": {
         "title": "Special Güneş Day Care Center Opening",
-        "desc": "Our support for social responsibility projects continues uninterrupted. The opening of the Special Güneş Day Care Center, implemented by Menteşe Municipality, was held with the participation of our General Manager, Mr. İbrahim Güngör. As the Polgün Family, we are happy to touch little hearts today as well."
+        "desc": "Our support for social responsibility projects continues uninterrupted. The opening of the Special Güneş Day Care Center, implemented by Menteşe Municipality, was held with the participation of our General Manager, Mr. Ibrahim Güngör. As the Polgün Family, we are happy to touch little hearts today as well."
       },
       "aile_sosyal_hizmetler": {
         "title": "Collaboration with Family and Social Services Directorate",
-        "desc": "As the Polgün family, we are happy to support a meaningful work carried out by the Muğla Provincial Directorate of Family and Social Services. Thanks to this cooperation, which was initiated through our Governor İdris Akbıyık, warmer and safer living spaces are created for children. We believe in the power of social solidarity and adopt the importance of such contributions in every step looking to the future with hope."
+        "desc": "As the Polgün family, we are happy to support a meaningful work carried out by the Muğla Provincial Directorate of Family and Social Services. Thanks to this cooperation, which was initiated through our Governor Idris Akbiyik, warmer and safer living spaces are created for children. We believe in the power of social solidarity and adopt the importance of such contributions in every step looking to the future with hope."
       },
       "iftar_programi": {
         "title": "Our Traditional Iftar Invitation",
-        "desc": "Our traditional iftar invitation, honored by our Muğla Governor Mr. İdris Akbıyık, Menteşe District Governor Mr. Mehmet Eriş, MSKÜ Rector Prof. Dr. Turhan Kaçar, Yatağan Mayor Mr. Mesut Günay, 27th Term Muğla Deputy Mrs. Yelda Erol, TÜBİTAK MARTEK President and 24th Term Deputy Mr. Mehmet Ali Okur, valuable businesspeople of Muğla, political party representatives and our big Polgün family, took place on March 14, 2026, at Türkan Saylan Education and Culture Center with the participation of more than 600 guests. In the iftar program organized by Polgün Waterparks & Attractions Chairman of the Board İbrahim Güngör and his precious family, accompanied by hymns sung by Turkish Sufi Music artist Abdurrahman Önül, Enes Çiftçi's presentation and semazen show attracted great attention. We extend our thanks to all our family members who attended and honored our invitation."
+        "desc": "Our traditional iftar invitation, honored by our Muğla Governor Mr. Idris Akbiyik, Menteşe District Governor Mr. Mehmet Eriş, MSKÜ Rector Prof. Dr. Turhan Kaçar, Yatağan Mayor Mr. Mesut Günay, 27th Term Muğla Deputy Mrs. Yelda Erol, TÜBITAK MARTEK President and 24th Term Deputy Mr. Mehmet Ali Okur, valuable businesspeople of Muğla, political party representatives and our big Polgün family, took place on March 14, 2026, at Türkan Saylan Education and Culture Center with the participation of more than 600 guests. In the iftar program organized by Polgün Waterparks & Attractions Chairman of the Board Ibrahim Güngör and his precious family, accompanied by hymns sung by Turkish Sufi Music artist Abdurrahman Önül, Enes Çiftçi's presentation and semazen show attracted great attention. We extend our thanks to all our family members who attended and honored our invitation."
       },
       "msku_kariyer_fuari": {
         "title": "MSKÜ Career Fair",
-        "desc": "Polgün Waterparks & Attractions Chairman of the Board Mr. İbrahim Güngör met with the professionals of the future at the Career Fair organized at Muğla Sıtkı Koçman University. Sharing his knowledge and experience in the sector with young talents, İbrahim Güngör held an inspiring conversation with students on the dynamics of the water park and entertainment sector, our innovative projects, and career planning. The excitement and vision of the youth who will shape the future of our industry once again became a great source of motivation for us. As the Polgün family, we are proud to stand by young talents and support them in their career journeys!"
+        "desc": "Polgün Waterparks & Attractions Chairman of the Board Mr. Ibrahim Güngör met with the professionals of the future at the Career Fair organized at Muğla Sitki Koçman University. Sharing his knowledge and experience in the sector with young talents, Ibrahim Güngör held an inspiring conversation with students on the dynamics of the water park and entertainment sector, our innovative projects, and career planning. The excitement and vision of the youth who will shape the future of our industry once again became a great source of motivation for us. As the Polgün family, we are proud to stand by young talents and support them in their career journeys!"
       }
     },
     "all_news": "全部新闻",
@@ -1266,6 +1264,24 @@
     },
     "filter": {
       "all": "全部"
+    },
+    "items": {
+      "floresan": {
+        "project_name": "荧光光效系统",
+        "patent_name": "具备一体化荧光照明系统的复合水滑梯"
+      },
+      "eclipse": {
+        "project_name": "日食 Eclipse",
+        "patent_name": "具备双滑行面的大碗型/太空盆复合水滑梯"
+      },
+      "navatu": {
+        "project_name": "纳瓦图 Navatu",
+        "patent_name": "集成自然造浪动力学系统的新型水滑道装置"
+      },
+      "modular": {
+        "project_name": "模块化直滑滑道",
+        "patent_name": "可在开敞截面与封闭管道形态间双向转换的模块化人体水滑道"
+      }
     }
   },
   "flipbook": {
@@ -1285,7 +1301,9 @@
     "desc": "深入了解由 Polgün 专家团队撰写的关于水上乐园设计、玻璃钢复合材料、安全标准与运营维护的技术干货。",
     "read_more": "阅读全文",
     "faqs_title": "常见问题解答",
-    "related_title": "相关精选文章"
+    "related_title": "相关精选文章",
+    "not_found_desc": "您所查找的文章或技术文献暂未收录在知识中心。",
+    "back_to_list": "返回知识中心"
   },
   "factoriesPage": {
     "desc": "探索诞生了世界上众多知名水上滑梯与乐园设备的现代化综合工业园区。",

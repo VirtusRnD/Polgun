@@ -3,38 +3,31 @@ import { useTranslation } from 'react-i18next'
 import heroImage from '../assets/polgun-featured-projects-4.avif'
 
 // Üretim görselleri
-import cncOperator from '../assets/production/cnc-operator.avif'
-import pipeCutting from '../assets/production/pipe-cutting.avif'
-import paintApplication from '../assets/production/paint-application.avif'
-import inotekCnc from '../assets/production/inotek-cnc.avif'
-import compositeControl from '../assets/production/composite-control.avif'
-import mechanicalOperator from '../assets/production/mechanical-operator.avif'
-import cncCutting from '../assets/production/cnc-cutting.avif'
+import entegre_depo from '../assets/production/1.jpg'
+import model_kalıp from '../assets/production/2.png'
+import elyaf from '../assets/production/3.jpg'
+import kompozit from '../assets/production/4.jpg'
+import çelik_işleme from '../assets/production/5.png'
+import çelik_konstrüksiyon from '../assets/production/6.png'
+import mekanik from '../assets/production/7.png'
+import boya from '../assets/production/8.png'
+import kalite from '../assets/production/9.jpg'
+import paketleme from '../assets/production/10.jpeg'
 
-const PRODUCTION_SECTIONS = [
-  {
-    id: 'cnc_mold',
-    img: inotekCnc,
-  },
-  {
-    id: 'steel',
-    img: cncCutting,
-    img2: pipeCutting,
-  },
-  {
-    id: 'mechanical',
-    img: mechanicalOperator,
-  },
-  {
-    id: 'composite',
-    img: paintApplication,
-    img2: compositeControl,
-  },
-  {
-    id: 'digital',
-    img: cncOperator,
-  },
+
+const productionSections = [
+  { id: 'entegre_depo', img: entegre_depo },
+  { id: 'model_kalıp', img: model_kalıp },
+  { id: 'elyaf', img: elyaf },
+  { id: 'kompozit', img: kompozit },
+  { id: 'çelik_işleme', img: çelik_işleme },
+  { id: 'çelik_konstrüksiyon', img: çelik_konstrüksiyon },
+  { id: 'mekanik', img: mekanik },
+  { id: 'boya', img: boya },
+  { id: 'kalite', img: kalite },
+  { id: 'paketleme', img: paketleme },
 ]
+
 
 export default function TeamPage({ setActivePage }) {
   const { t } = useTranslation()
@@ -139,22 +132,23 @@ export default function TeamPage({ setActivePage }) {
         </div>
       </section>
 
+
       {/* ── Üretim Altyapımız ── */}
       <section className="py-28" style={{ backgroundColor: 'var(--th-surface)' }}>
-        <div className="max-w-7xl mx-auto px-6 lg:px-12">
+        <div className="max-w-7xl mx-auto px-6 max-w-[var(--layout-max)] lg:px-12">
           <div className="text-center mb-20">
             <p className="text-xs font-bold tracking-[0.25em] uppercase mb-4" style={{ color: 'var(--th-polgun-blue)' }}>{t('about.production_title')}</p>
             <h2 className="text-4xl font-black mb-6" style={{ color: 'var(--th-text)' }}>{t('about.production_subtitle')}</h2>
-            <p className="max-w-2xl mx-auto leading-relaxed" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 70%, transparent)' }}>
+            <p className="max-w-2xl mx-auto text-justify leading-relaxed" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 70%, transparent)' }}>
               {t('about.production_desc')}
             </p>
           </div>
           <div className="flex flex-col gap-24">
-            {PRODUCTION_SECTIONS.map((sec, i) => (
+            {productionSections.map((sec, i) => (
               <div key={i} className={`grid lg:grid-cols-2 gap-16 items-center ${i % 2 === 1 ? 'lg:[&>*:first-child]:order-2' : ''}`}>
                 <div>
                   <h3 className="text-2xl font-black mb-5" style={{ color: 'var(--th-text)' }}>{t('about.production_sections.' + sec.id + '.title')}</h3>
-                  <p className="leading-relaxed" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 70%, transparent)' }}>{t('about.production_sections.' + sec.id + '.desc')}</p>
+                  <p className="text-justify leading-relaxed" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 70%, transparent)' }}>{t('about.production_sections.' + sec.id + '.desc')}</p>
                 </div>
                 <div className={sec.img2 ? 'grid grid-cols-2 gap-3' : ''}>
                   <img src={sec.img} alt={t('about.production_sections.' + sec.id + '.title')} className="w-full aspect-[4/3] rounded-2xl object-cover" />
@@ -165,11 +159,11 @@ export default function TeamPage({ setActivePage }) {
           </div>
           <div className="mt-20 text-center">
             <h3 className="text-3xl font-black mb-4" style={{ color: 'var(--th-text)' }}>{t('about.production_power')}</h3>
-            <p className="mb-8 max-w-lg mx-auto" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 70%, transparent)' }}>
+            <p className="mb-8 max-w-lg mx-auto text-center" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 70%, transparent)' }}>
               {t('about.production_power_desc')}
             </p>
             <button
-              onClick={() => setActivePage('projects')}
+              onClick={() => navigate('/projects')}
               className="px-8 py-3.5 text-sm font-bold rounded-full transition-all duration-200 hover:-translate-y-0.5"
               style={{ backgroundColor: 'var(--th-primary)', color: '#fff' }}
               onMouseEnter={(e) => e.currentTarget.style.opacity = '0.85'}
@@ -180,6 +174,7 @@ export default function TeamPage({ setActivePage }) {
           </div>
         </div>
       </section>
+
     </main>
   )
 }

@@ -10,6 +10,8 @@ import {
   useLocation,
   Outlet,
   useNavigate,
+  useParams,
+  Navigate,
   createSearchParams,
 } from 'react-router-dom';
 
@@ -45,6 +47,11 @@ function ScrollToTop() {
   }, [pathname]);
 
   return null;
+}
+
+function KnowledgeCenterSlugRedirect() {
+  const { slug } = useParams();
+  return <Navigate to={`/knowledge-center/${slug}`} replace />;
 }
 
 function clamp01(n) {
@@ -100,6 +107,10 @@ const PAGE_COLOR_PALETTES = {
   projects: 1,     // Default
   about: 1,        // Default
   contact: 1,      // Default
+  career: 1,       // Default
+  'r-and-d': 1,    // Default
+  rd: 1,           // Default
+  arge: 1,         // Default
   factories: 1,    // Default
   team: 1,         // Default
   history: 1,      // Default
@@ -122,11 +133,13 @@ const pageToPathMapping = {
   about: '/about',
   contact: '/contact',
   career: '/career',
-  arge: '/arge',
+  'r-and-d': '/r-and-d',
+  rd: '/r-and-d',
+  arge: '/r-and-d',
   designs: '/designs',
   publications: '/publications',
   patents: '/patents',
-  'knowledge-center': '/bilgi-merkezi',
+  'knowledge-center': '/knowledge-center',
   factories: '/factories',
   team: '/team',
   history: '/history',
@@ -187,7 +200,9 @@ export default function App() {
           <Route path="/about" element={<AboutPage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/career" element={<CareerPage />} />
-          <Route path="/arge" element={<ArGePage />} />
+          <Route path="/r-and-d" element={<ArGePage />} />
+          <Route path="/rd" element={<Navigate to="/r-and-d" replace />} />
+          <Route path="/arge" element={<Navigate to="/r-and-d" replace />} />
           <Route path="/designs" element={<DesignsPage />} />
           <Route path="/publications" element={<PublicationsPage />} />
           <Route path="/patents" element={<PatentsPage />} />
@@ -196,8 +211,10 @@ export default function App() {
           <Route path="/history" element={<HistoryPage />} />
           <Route path="/awards" element={<AwardsPage />} />
           <Route path="/news" element={<NewsPage />} />
-          <Route path="/bilgi-merkezi" element={<KnowledgeCenterPage />} />
-          <Route path="/bilgi-merkezi/:slug" element={<KnowledgeCenterDetailPage />} />
+          <Route path="/knowledge-center" element={<KnowledgeCenterPage />} />
+          <Route path="/bilgi-merkezi" element={<Navigate to="/knowledge-center" replace />} />
+          <Route path="/knowledge-center/:slug" element={<KnowledgeCenterDetailPage />} />
+          <Route path="/bilgi-merkezi/:slug" element={<KnowledgeCenterSlugRedirect />} />
         </Route>
       </Routes>
     </div>

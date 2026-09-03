@@ -95,7 +95,7 @@ export default function Navbar({ activePage, setActivePage, colorPalette, locati
             { label: t('common.all', { defaultValue: 'Tüm Ürünler' }), desc: '', page: 'products', to: '/products' },
             { label: t('products.tower.title', { defaultValue: 'Splash Tower' }), desc: '', page: 'splash-tower', to: '/splash-tower' },
             { label: t('products.zone.title', { defaultValue: 'Splash Zone' }), desc: '', page: 'splash-zone', to: '/splash-zone' },
-            { label: t('nav.arge') + ' ' + t('footer.products'), desc: '', page: 'products', to: '/products?category=Ar-Ge Ürünleri' },
+            { label: t('nav.arge_products', { defaultValue: 'Ar-Ge Ürünleri' }), desc: '', page: 'products', to: '/products?category=Ar-Ge Ürünleri' },
           ],
         },
         {
@@ -126,23 +126,23 @@ export default function Navbar({ activePage, setActivePage, colorPalette, locati
             { label: t('nav.factories'), desc: '', page: 'factories', to: '/factories' },
             { label: t('nav.news'), desc: '', page: 'news', to: '/news' },
             { label: t('nav.newsletter', { defaultValue: 'E-Bültenlerimiz' }), desc: '', page: 'news', to: '/news?tab=bulletin' },
-            { label: t('nav.knowledge_center', { defaultValue: 'Bilgi Merkezi' }), desc: '', page: 'knowledge-center', to: '/bilgi-merkezi' },
+            { label: t('nav.knowledge_center', { defaultValue: 'Bilgi Merkezi' }), desc: '', page: 'knowledge-center', to: '/knowledge-center' },
           ],
         },
       ],
     },
     {
-      id: 'arge',
+      id: 'r-and-d',
       label: t('nav.arge'),
-      page: 'arge',
+      page: 'r-and-d',
       mega: true,
       sections: [
         {
           title: null,
           links: [
-            { label: t('nav.arge_center', { defaultValue: 'Ar-Ge Merkezi' }), desc: '', page: 'arge', to: '/arge' },
-            { label: t('nav.fikri_sinai_haklar', { defaultValue: 'Fikrî & Sınai Haklar' }), desc: '', page: 'arge', anchor: 'fikri-ve-sinai-mulkiyet-haklari', to: '/arge?anchor=fikri-ve-sinai-mulkiyet-haklari' },
-            { label: t('nav.utility_models', { defaultValue: 'Faydalı Modeller' }), desc: '', page: 'arge', anchor: 'faydali-modeller', to: '/arge?anchor=faydali-modeller' },
+            { label: t('nav.arge_center', { defaultValue: 'Ar-Ge Merkezi' }), desc: '', page: 'r-and-d', to: '/r-and-d' },
+            { label: t('nav.fikri_sinai_haklar', { defaultValue: 'Fikrî & Sınai Haklar' }), desc: '', page: 'r-and-d', anchor: 'fikri-ve-sinai-mulkiyet-haklari', to: '/r-and-d?anchor=fikri-ve-sinai-mulkiyet-haklari' },
+            { label: t('nav.utility_models', { defaultValue: 'Faydalı Modeller' }), desc: '', page: 'r-and-d', anchor: 'faydali-modeller', to: '/r-and-d?anchor=faydali-modeller' },
             { label: t('nav.patents', { defaultValue: 'Patentler' }), desc: '', page: 'patents', to: '/patents' },
             { label: t('nav.designs', { defaultValue: 'Endüstriyel Tasarımlar' }), desc: '', page: 'designs', to: '/designs' },
             { label: t('nav.publications', { defaultValue: 'Akademik Yayınlar' }), desc: '', page: 'publications', to: '/publications' },
@@ -349,11 +349,11 @@ export default function Navbar({ activePage, setActivePage, colorPalette, locati
                     }}
                   >
                     <span className="text-xs" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 55%, transparent)' }}>
-                      {item.id === 'products' && 'Tüm ürün ve mekan tiplerini keşfedin'}
-                      {item.id === 'services' && 'Anahtar teslim proje süreçlerimizi inceleyin'}
-                      {item.id === 'projects' && '3000+ tamamlanan global su parkı projesini inceleyin'}
-                      {item.id === 'about' && "Polgün'ün 40 yıllık hikayesini keşfedin"}
-                      {item.id === 'arge' && "Yenilikçi su parkı teknolojileri ve tescillerimiz"}
+                      {item.id === 'products' && t('nav.cta_products', { defaultValue: 'Tüm ürün ve mekan tiplerini keşfedin' })}
+                      {item.id === 'services' && t('nav.cta_services', { defaultValue: 'Anahtar teslim proje süreçlerimizi inceleyin' })}
+                      {item.id === 'projects' && t('nav.cta_projects', { defaultValue: '3000+ tamamlanan global su parkı projesini inceleyin' })}
+                      {item.id === 'about' && t('nav.cta_about', { defaultValue: "Polgün'ün 40 yıllık hikayesini keşfedin" })}
+                      {(item.id === 'r-and-d' || item.id === 'arge') && t('nav.cta_arge', { defaultValue: 'Yenilikçi su parkı teknolojileri ve tescillerimiz' })}
                     </span>
                     <Link
                       to={item.to || `/${item.page}`}
@@ -368,7 +368,7 @@ export default function Navbar({ activePage, setActivePage, colorPalette, locati
                         e.currentTarget.style.color = 'var(--th-polgun-blue)'
                       }}
                     >
-                      Tümünü Gör
+                      {t('nav.view_all', { defaultValue: 'Tümünü Gör' })}
                       <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
                       </svg>
@@ -411,15 +411,16 @@ export default function Navbar({ activePage, setActivePage, colorPalette, locati
 
             {/* Dil Menü Paneli */}
             <div
-              className={`absolute top-[45px] right-0 shadow-lg rounded-xl overflow-hidden transition-all duration-200 origin-top
+              className={`absolute top-[45px] right-0 shadow-2xl rounded-2xl overflow-hidden transition-all duration-200 origin-top z-50
                 ${langOpen ? 'opacity-100 translate-y-0 pointer-events-auto' : 'opacity-0 -translate-y-2 pointer-events-none'}`}
               style={{
                 backgroundColor: 'var(--th-surface)',
-                border: '1px solid color-mix(in srgb, var(--th-border) 8%, transparent)',
-                minWidth: '130px'
+                border: '1px solid color-mix(in srgb, var(--th-border) 12%, transparent)',
+                width: '280px',
+                minWidth: '280px'
               }}
             >
-              <div className="p-1.5 flex flex-col gap-0.5">
+              <div className="p-2 grid grid-cols-2 gap-1.5">
                 {LANGUAGES.map((lang) => (
                   <button
                     key={lang.code}
@@ -427,7 +428,7 @@ export default function Navbar({ activePage, setActivePage, colorPalette, locati
                       i18n.changeLanguage(lang.code);
                       setLangOpen(false);
                     }}
-                    className="flex items-center gap-3 px-3 py-2 rounded-lg transition-colors text-sm font-medium w-full text-left"
+                    className="flex items-center gap-2.5 px-2.5 py-2 rounded-lg transition-colors text-xs font-semibold w-full text-left"
                     style={{
                       color: 'var(--th-text)',
                       backgroundColor: currentLang.code === lang.code ? 'var(--th-bg)' : 'transparent'
@@ -435,8 +436,8 @@ export default function Navbar({ activePage, setActivePage, colorPalette, locati
                     onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'var(--th-bg)'}
                     onMouseLeave={(e) => e.currentTarget.style.backgroundColor = currentLang.code === lang.code ? 'var(--th-bg)' : 'transparent'}
                   >
-                    <img src={lang.flag} alt={lang.name} className="w-5 h-3.5 rounded-sm object-cover border" style={{ borderColor: 'color-mix(in srgb, var(--th-border) 30%, transparent)' }} />
-                    {lang.name}
+                    <img src={lang.flag} alt={lang.name} className="w-5 h-3.5 rounded-sm object-cover border shrink-0" style={{ borderColor: 'color-mix(in srgb, var(--th-border) 30%, transparent)' }} />
+                    <span className="truncate">{lang.name}</span>
                   </button>
                 ))}
               </div>

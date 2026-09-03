@@ -131,7 +131,7 @@ const DESIGNS_DATA = [
     regDate: '20.06.2024',
     year: 2024,
     isProjectBound: true,
-    link: '/arge'
+    link: '/r-and-d'
   },
   {
     id: 11,
@@ -144,7 +144,7 @@ const DESIGNS_DATA = [
     regDate: '25.07.2024',
     year: 2024,
     isProjectBound: true,
-    link: '/arge'
+    link: '/r-and-d'
   },
   {
     id: 12,

@@ -1,10 +1,11 @@
 import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
-import { BLOG_DATA } from '../constants/blogData'
+import { getLocalizedBlogs } from '../constants/blogData'
 
 export default function KnowledgeCenterPage() {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
+  const blogs = getLocalizedBlogs(i18n.language)
 
   useEffect(() => {
     window.scrollTo(0, 0)
@@ -37,7 +38,7 @@ export default function KnowledgeCenterPage() {
       <section className="py-24" style={{ backgroundColor: 'var(--th-surface)' }}>
         <div className="max-w-7xl mx-auto px-6 max-w-[var(--layout-max)] lg:px-12">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {BLOG_DATA.map((blog) => (
+            {blogs.map((blog) => (
               <article
                 key={blog.id}
                 className="group rounded-3xl overflow-hidden flex flex-col transition-all duration-300 hover:shadow-2xl hover:shadow-black/5"
@@ -80,7 +81,7 @@ export default function KnowledgeCenterPage() {
                   {/* Devamını Oku */}
                   <div className="pt-6 border-t mt-6" style={{ borderColor: 'color-mix(in srgb, var(--th-border) 10%, transparent)' }}>
                     <Link
-                      to={`/bilgi-merkezi/${blog.slug}`}
+                      to={`/knowledge-center/${blog.slug}`}
                       className="inline-flex items-center gap-2 text-xs font-bold transition-colors"
                       style={{ color: 'var(--th-primary)' }}
                       onMouseEnter={(e) => e.currentTarget.style.color = 'var(--th-polgun-blue)'}
