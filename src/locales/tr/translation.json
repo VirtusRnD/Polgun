@@ -377,6 +377,8 @@
   },
   "projects": {
     "title": "Projelerimiz",
+    "hero_title_1": "Global",
+    "hero_title_2": "Projelerimiz",
     "subtitle": "Dünya Çapında Referanslarımız",
     "desc": "Dünyanın 70'ten fazla ülkesinde hayata geçirdiğimiz imza projelerimizi inceleyin.",
     "filter_all": "Tüm Projeler",
@@ -959,8 +961,8 @@
     "patent_title": "Fikri Mülkiyet",
     "cert_title": "Sertifikalar",
     "cert_subtitle": "Kalite Belgelerimiz",
-    "certificates": "荣誉证书",
-    "tag": "品质与荣誉"
+    "certificates": "Sertifikalar",
+    "tag": "Kalite & Başarı"
   },
   "factories": {
     "title": "Fabrikalarımız",

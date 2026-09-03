@@ -377,6 +377,8 @@
   },
   "projects": {
     "title": "Nos Projets",
+    "hero_title_1": "Projets",
+    "hero_title_2": "Mondiaux",
     "subtitle": "Nos Références Internationales",
     "desc": "Découvrez les projets emblématiques que nous avons réalisés dans plus de 70 pays à travers le monde.",
     "filter_all": "Tous les Projets",

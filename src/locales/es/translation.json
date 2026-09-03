@@ -377,6 +377,8 @@
   },
   "projects": {
     "title": "Nuestros Proyectos",
+    "hero_title_1": "Proyectos",
+    "hero_title_2": "Globales",
     "subtitle": "Nuestras Referencias Globales",
     "desc": "Examine nuestros proyectos de firma que hemos llevado a cabo en más de 70 países en todo el mundo.",
     "filter_all": "Todos los Proyectos",
@@ -959,8 +961,8 @@
     "patent_title": "Propiedad Intelectual",
     "cert_title": "Certificados",
     "cert_subtitle": "Nuestros Documentos de Calidad",
-    "certificates": "荣誉证书",
-    "tag": "品质与荣誉"
+    "certificates": "Certificados",
+    "tag": "Calidad y Honores"
   },
   "factories": {
     "title": "Nuestras Fábricas",

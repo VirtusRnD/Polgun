@@ -23,8 +23,6 @@ import refSherwood from '../assets/references/sherwood-logo.avif'
 import refTitanic from '../assets/references/titanic-hotels-logo.avif'
 import refValamar from '../assets/references/valamar-logo.avif'
 import refVoyage from '../assets/references/voyage-logo.avif'
-import guralPremier from '../assets/kategori/GüralPremierBelek.avif'
-import syHotel from '../assets/kategori/SYHotel.avif'
 import frenzy from '../assets/kategori/FrenzyWaterpark.avif'
 import curaCao from '../assets/products/Kunuku-Aqua-Resort-CuraCao.avif'
 import aqualand1 from '../assets//products/AqualandTorremolInos-Spain.avif'
@@ -32,8 +30,6 @@ import aqualand2 from '../assets//products/AqualandTorremolInos-Spain2.avif'
 import kaec from '../assets/products/KAEC-RixosJeddah-SaudiArabia.avif'
 import navatu from '../assets/products/navatu.avif'
 import nickelodeon from '../assets/products/NickelodeonHotel-Antalya.avif'
-import navatu1 from '../assets/navatu/navatu1.avif'
-import pirate1 from '../assets/splashTower/pirateTheme/1001.avif'
 
 import rixosKaec from '../assets/hero/3.RixosKAEC.avif'
 import pantheon from '../assets/hero/4.PantheonWaterpark.avif'
@@ -496,84 +492,17 @@ export default function HomePage() {
       </section>
 
       {/* ══════════════════════════════════════════════════════
-          KATEGORİLER — 4 büyük gradient kart
+          NEDEN POLGÜN — Carousel & Kurumsal Özellikler
       ══════════════════════════════════════════════════════ */}
       <section className="py-24" style={{ backgroundColor: 'var(--th-bg)' }}>
         <div className="max-w-[var(--layout-max)] mx-auto px-6 lg:px-14">
-          <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-14">
-            <div>
-              <p className="text-[11px] font-black tracking-[0.3em] uppercase mb-4 flex items-center gap-3"
-                style={{ color: 'var(--th-primary)' }}>
-                <span className="inline-block w-6 h-px" style={{ backgroundColor: 'var(--th-primary)' }} />
-                {t('home.categories_title')}
-              </p>
-              <h2 className="font-black leading-tight" style={{ color: 'var(--th-text)', fontSize: 'clamp(2rem,4vw,3.5rem)' }}>
-                {t('home.categories_subtitle').includes(' her ') ? <>{t('home.categories_subtitle').split(' her ')[0]}<br />{t('home.categories_subtitle').split(' her ')[1]}</> : t('home.categories_subtitle')}
-              </h2>
-            </div>
-            <Link
-              to="/products"
-              className="shrink-0 px-7 py-3.5 text-sm font-bold rounded-full transition-all duration-200 hover:-translate-y-0.5"
-              style={{ backgroundColor: 'var(--th-primary)', color: '#fff' }}
-              onMouseEnter={(e) => e.currentTarget.style.opacity = '0.85'}
-              onMouseLeave={(e) => e.currentTarget.style.opacity = '1'}
-            >
-              {t('common.all_products')}
-            </Link>
-          </div>
-
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            {[
-              { title: t('products.slides.title'), sub: t('home.slides_sub'), img: guralPremier, g: 'linear-gradient(to top,rgba(0,0,0,0.4),transparent)', link_to: "/products" },
-              { title: t('products.tower.title'), sub: t('home.tower_sub'), img: pirate1, g: 'linear-gradient(to top,rgba(0,0,0,0.4),transparent)', link_to: "/splash-tower" },
-              { title: t('nav.arge') + ' ' + t('footer.products'), sub: t('home.arge_sub'), img: navatu1, g: 'linear-gradient(to top,rgba(0,0,0,0.4),transparent)', link_to: "/products?category=Ar-Ge Ürünleri" },
-              { title: t('products.zone.title'), sub: t('home.zone_sub'), img: frenzy, g: 'linear-gradient(to top,rgba(0,0,0,0.4),transparent)', link_to: "/splash-zone" },
-            ].map((cat, i) => (
-              <Link
-                key={i}
-                to={cat.link_to}
-                className="group relative h-72 rounded-2xl overflow-hidden text-left"
-                style={{
-                  backgroundImage: `${cat.g}, url(${cat.img})`,
-                  backgroundSize: 'cover',
-                  backgroundPosition: 'center',
-                  backgroundColor: 'rgba(0,0,0,0.2)'
-                }}
-              >
-                {/* Dekoratif dalgalar */}
-                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                  style={{ background: 'linear-gradient(to top,rgba(0,0,0,0.4),transparent)' }} />
-                <div className="absolute inset-0 p-7 flex flex-col justify-between">
-                  <div className="w-10 h-10 rounded-xl flex items-center justify-center">
-                  </div>
-                  <div>
-                    <div className="text-white text-xs mb-2">{cat.sub}</div>
-                    <div className="text-white font-black text-xl leading-tight">{cat.title}</div>
-                    <div className="mt-4 flex items-center gap-2 text-white/60 text-xs font-semibold
-                      group-hover:text-white group-hover:gap-3 transition-all duration-200">
-                      {t('common.learn_more')}
-                      <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
-                      </svg>
-                    </div>
-                  </div>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── &Ouml;ZELLIK ── */}
-      <section className="py-20" style={{ backgroundColor: 'var(--th-surface)' }}>
-        <div className="max-w-(--layout-max) mx-auto px-6 lg:px-14">
           <div className="grid lg:grid-cols-2 gap-0 rounded-3xl overflow-hidden"
             style={{ boxShadow: '0 24px 80px rgba(0,0,0,0.10)' }}>
 
             {/* Sol — Carousel Panel */}
             <div className="relative min-h-95 flex items-end p-10 group"
               style={{ background: 'linear-gradient(to top,rgba(0,0,0,0.4),transparent)' }}>
-              {/* Carousel G&ouml;rselleri */}
+              {/* Carousel Görselleri */}
               <div className="absolute inset-0 overflow-hidden">
                 {CAROUSEL_IMAGES.map((img, idx) => (
                   <img
