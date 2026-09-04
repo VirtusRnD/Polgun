@@ -2132,7 +2132,7 @@ export default function ProjectsPage({ setActivePage }) {
                 <span
                   className="block"
                   style={{
-                    color: '#FFFFFF',
+                    color: 'var(--th-primary)',
                     WebkitTextStroke: '15.5px var(--th-polgun-antrasit)',
                     paintOrder: 'stroke fill',
                   }}
