@@ -23,36 +23,13 @@ import refSherwood from '../assets/references/sherwood-logo.avif'
 import refTitanic from '../assets/references/titanic-hotels-logo.avif'
 import refValamar from '../assets/references/valamar-logo.avif'
 import refVoyage from '../assets/references/voyage-logo.avif'
-import frenzy from '../assets/kategori/FrenzyWaterpark.avif'
-import curaCao from '../assets/products/Kunuku-Aqua-Resort-CuraCao.avif'
-import aqualand1 from '../assets//products/AqualandTorremolInos-Spain.avif'
-import aqualand2 from '../assets//products/AqualandTorremolInos-Spain2.avif'
-import kaec from '../assets/products/KAEC-RixosJeddah-SaudiArabia.avif'
-import navatu from '../assets/products/navatu.avif'
-import nickelodeon from '../assets/products/NickelodeonHotel-Antalya.avif'
 
-import rixosKaec from '../assets/hero/3.RixosKAEC.avif'
-import pantheon from '../assets/hero/4.PantheonWaterpark.avif'
-import theLandOfLegends from '../assets/hero/5.TheLandofLegends.avif'
-import sClub from '../assets/hero/6.SClubResortHotelAquaPark.avif'
-import kunuku from '../assets/hero/7.KunukuAquaResort.avif'
-import movenpick from '../assets/hero/9MövenpickResort.avif'
-import delphinPalace from '../assets/hero/11.DelphinPalace.avif'
-import nirvana from '../assets/hero/12.NirvanaCosmopolitan.avif'
+import why1 from '../assets/products/1.jpg'
+import why2 from '../assets/products/2.jpg'
+import why3 from '../assets/products/3.jpg'
+import why4 from '../assets/products/4.jpg'
+import why5 from '../assets/products/5.jpg'
 
-import fantazia from '../assets/hero/14.FantaziaResortMarsaAlam.avif'
-import pickalbatros from '../assets/hero/15.PickalbatrosSungoClub.avif'
-import aquila from '../assets/hero/16.AquilaRithymnaBeach.avif'
-import ethno from '../assets/hero/17.EthnoHotels.avif'
-import syHotelAntalya from '../assets/hero/10.SYHotel.avif'
-import frenzyFrance from '../assets/hero/Frenzy Water Park - France.avif'
-import guralBelek from '../assets/hero/Gural Belek - Turkiye.avif'
-import movenpickNew from '../assets/hero/Movenpick Resort - Turkiye.avif'
-import nirvanaDolce from '../assets/hero/Nirvana Dolce Vita - Turkiye.avif'
-import pineBeach from '../assets/hero/Pine Beach - Turkiye.avif'
-import sClubJakovo from '../assets/hero/S Club Jakovo - Serbia.avif'
-import seignosseNew from '../assets/hero/Seignosse Atlantic - France.avif'
-import landLegendsNew from '../assets/hero/The Land of Legends - Turkiye.avif'
 import hero1 from '../assets/hero/1.avif'
 import hero2 from '../assets/hero/2.avif'
 import hero3 from '../assets/hero/3.avif'
@@ -180,14 +157,12 @@ const HERO_IMAGES = [
 
 // ── Carousel Görselleri ────────────────────────────────────
 const CAROUSEL_IMAGES = [
-  { src: curaCao, alt: 'Kunuku Aqua Resort - Curaçao' },
-  { src: aqualand1, alt: 'Aqualand Torremolinos - İspanya' },
-  { src: aqualand2, alt: 'Aqualand Torremolinos - İspanya 2' },
-  { src: frenzy, alt: 'Frenzy Waterpark - Fransa' },
-  { src: kaec, alt: 'KAEC Rixos Jeddah - Suudi Arabistan' },
-  { src: navatu, alt: 'Navatu Su Parkı' },
-  { src: syHotelAntalya, alt: 'SY Hotel Antalya' },
-  { src: nickelodeon, alt: 'Nickelodeon Hotel - Antalya' },
+  { src: why1, alt: 'Kunuku Aqua Resort - Curaçao' },
+  { src: why2, alt: 'Aqualand Torremolinos - İspanya' },
+  { src: why3, alt: 'Aqualand Torremolinos - İspanya 2' },
+  { src: why4, alt: 'Frenzy Waterpark - Fransa' },
+  { src: why5, alt: 'KAEC Rixos Jeddah - Suudi Arabistan' },
+
 ]
 
 // ── Sayfa bileşeni ─────────────────────────────────────────

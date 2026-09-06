@@ -965,10 +965,10 @@ export default function CareerPage() {
                         onDrop={handleDrop}
                         onClick={() => fileInputRef.current?.click()}
                         className={`w-full py-6 px-4 border-2 border-dashed rounded-2xl flex flex-col items-center justify-center text-center cursor-pointer transition-all duration-200 ${isDragOver
-                            ? 'border-[#22ABE6] bg-blue-50/20'
-                            : cvFile
-                              ? 'border-emerald-400 bg-emerald-50/10'
-                              : 'border-gray-300 hover:border-gray-400 hover:bg-gray-50/50'
+                          ? 'border-[#22ABE6] bg-blue-50/20'
+                          : cvFile
+                            ? 'border-emerald-400 bg-emerald-50/10'
+                            : 'border-gray-300 hover:border-gray-400 hover:bg-gray-50/50'
                           }`}
                       >
                         <input
@@ -1193,8 +1193,8 @@ export default function CareerPage() {
                       key={index}
                       onClick={() => setCurrentSlide(index)}
                       className={`h-2.5 rounded-full transition-all duration-300 focus:outline-none cursor-pointer ${currentSlide === index
-                          ? 'w-6 bg-[#22ABE6]'
-                          : 'w-2.5 bg-gray-200 hover:bg-gray-300'
+                        ? 'w-6 bg-[#22ABE6]'
+                        : 'w-2.5 bg-gray-200 hover:bg-gray-300'
                         }`}
                       aria-label={`Slayt ${index + 1}`}
                     />

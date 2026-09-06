@@ -78,13 +78,28 @@ export default function KnowledgeCenterDetailPage() {
 
           <div className="max-w-4xl space-y-4">
             {blog.focusKeyword && (
-              <span className="inline-block text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded bg-white/20 text-white backdrop-blur-sm">
+              <p
+                className="text-lg lg:text-3xl font-black block text-white tracking-normal mb-2"
+                style={{
+                  WebkitTextStroke: '0.8px #FFFFFF',
+                  paintOrder: 'stroke fill',
+                }}
+              >
                 {blog.focusKeyword}
-              </span>
+              </p>
             )}
             {/* H1 Heading */}
-            <h1 className="text-4xl lg:text-5xl font-black leading-tight text-white">
-              {blog.title}
+            <h1 className="text-4xl lg:text-6xl font-black leading-[1.05] tracking-tight">
+              <span
+                className="block"
+                style={{
+                  color: 'var(--th-primary)',
+                  WebkitTextStroke: '15.5px var(--th-polgun-antrasit)',
+                  paintOrder: 'stroke fill',
+                }}
+              >
+                {blog.title}
+              </span>
             </h1>
           </div>
         </div>

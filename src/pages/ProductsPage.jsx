@@ -646,11 +646,26 @@ export default function ProductsPage() {
 				<div className="w-full max-w-7xl mx-auto px-6 max-w-[var(--layout-max)] lg:px-12">
 					<div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-end">
 						<div>
-							<p className="text-xs font-bold tracking-[0.3em] uppercase mb-4" style={{ color: 'var(--th-text)' }}>
+							<p
+								className="text-lg lg:text-4xl font-black block text-white tracking-normal mb-2"
+								style={{
+									WebkitTextStroke: '0.8px #FFFFFF',
+									paintOrder: 'stroke fill',
+								}}
+							>
 								{t('products.catalog_title', { defaultValue: 'Ürün Kataloğu' })}
 							</p>
-							<h1 className="text-5xl lg:text-6xl font-black text-white leading-[1.02]">
-								{t('products.title')}
+							<h1 className="text-5xl lg:text-7xl font-black leading-[1.05] tracking-tight">
+								<span
+									className="block"
+									style={{
+										color: 'var(--th-primary)',
+										WebkitTextStroke: '15.5px var(--th-polgun-antrasit)',
+										paintOrder: 'stroke fill',
+									}}
+								>
+									{t('products.title')}
+								</span>
 							</h1>
 						</div>
 						<div className="space-y-4">
