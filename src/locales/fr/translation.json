@@ -1311,5 +1311,32 @@
     "title": "Nos Usines de Production",
     "subtitle": "Installations de Fabrication Modernes et Durables",
     "desc": "Découvrez nos usines de production intégrées où naissent les attractions aquatiques les plus spectaculaires du monde."
+  },
+  "notFound": {
+    "tag": "404 · Page Non Trouvée",
+    "hero_title": "Sortie de Piste !",
+    "hero_desc": "La page que vous recherchez a peut-être été déplacée, renommée ou emportée par les flots. Laissez-nous vous guider vers le parcours principal.",
+    "home_btn": "Retour à l'Accueil",
+    "back_btn": "Page Précédente",
+    "badge": "Parcours Aquatique Introuvable",
+    "heading": "Ce Toboggan Mène Tout Droit au Large !",
+    "message": "Le lien que vous avez suivi est peut-être expiré, modifié ou mal orthographié. Poursuivez votre aventure grâce à nos rubriques populaires ci-dessous.",
+    "card1_tag": "Nos Produits",
+    "card1_title": "Toboggans Aquatiques & Systèmes Splash",
+    "card1_desc": "Découvrez nos toboggans aquatiques à sensations, nos attractions familiales et nos structures Splash Tower interactives.",
+    "card1_cta": "Découvrir les Produits",
+    "card2_tag": "Nos Projets",
+    "card2_title": "Portfolio Mondial de Projets",
+    "card2_desc": "Explorez notre portfolio de plus de 3000 réalisations de parcs aquatiques et complexes hôteliers dans plus de 70 pays.",
+    "card2_cta": "Voir les Projets",
+    "card3_tag": "Centre de R&D",
+    "card3_title": "Conception & Innovation",
+    "card3_desc": "Brevets, modèles industriels déposés et innovations technologiques conçus au sein de notre Centre de R&D agréé.",
+    "card3_cta": "Explorer la R&D",
+    "card4_tag": "Contact",
+    "card4_title": "Nous Contacter",
+    "card4_desc": "Contactez nos équipes d'ingénieurs et chefs de projets pour la conception sur mesure ou l'estimation de votre projet.",
+    "card4_cta": "Prendre Contact",
+    "quick_links": "Accès Rapide :"
   }
 }

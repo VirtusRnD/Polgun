@@ -1311,5 +1311,32 @@
     "desc": "Descubra nuestras modernas instalaciones integradas donde se fabrican toboganes de agua de clase mundial.",
     "subtitle": "Instalaciones de Fabricación Modernas y Sostenibles",
     "title": "Nuestras Instalaciones de Fabricación"
+  },
+  "notFound": {
+    "tag": "404 · Página No Encontrada",
+    "hero_title": "¡Fuera del Tobogán!",
+    "hero_desc": "Es posible que la página que busca haya sido eliminada, renombrada o arrastrada por el agua. Permítanos guiarle de vuelta a la ruta principal.",
+    "home_btn": "Volver al Inicio",
+    "back_btn": "Regresar",
+    "badge": "Ruta del Parque Acuático Perdida",
+    "heading": "¡Este Tobogán Conduce a Aguas Abiertas!",
+    "message": "El enlace que ha seguido puede estar roto, actualizado o mal escrito. Puede continuar su recorrido explorando nuestras secciones principales a continuación.",
+    "card1_tag": "Nuestros Productos",
+    "card1_title": "Toboganes Acuáticos y Sistemas Splash",
+    "card1_desc": "Descubra nuestros toboganes de alta adrenalina, sistemas de atracciones familiares y zonas interactivas Splash Tower.",
+    "card1_cta": "Ver Productos",
+    "card2_tag": "Nuestros Proyectos",
+    "card2_title": "Portafolio Global de Proyectos",
+    "card2_desc": "Explore nuestra cartera de más de 3000 proyectos de parques acuáticos y resorts completados en más de 70 países.",
+    "card2_cta": "Ver Proyectos",
+    "card3_tag": "Centro de I+D",
+    "card3_title": "Diseño e Innovación",
+    "card3_desc": "Patentes, diseños industriales certificados y soluciones tecnológicas desarrolladas en nuestro Centro de I+D homologado.",
+    "card3_cta": "Descubrir I+D",
+    "card4_tag": "Contacto",
+    "card4_title": "Contáctenos",
+    "card4_desc": "Póngase en contacto con nuestros ingenieros y especialistas para el desarrollo o cotización de su proyecto acuático.",
+    "card4_cta": "Contactar",
+    "quick_links": "Enlaces Rápidos:"
   }
 }

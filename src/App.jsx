@@ -38,6 +38,7 @@ import PublicationsPage from './pages/PublicationsPage';
 import PatentsPage from './pages/PatentsPage';
 import KnowledgeCenterPage from './pages/KnowledgeCenterPage';
 import KnowledgeCenterDetailPage from './pages/KnowledgeCenterDetailPage';
+import NotFoundPage from './pages/NotFoundPage';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -215,6 +216,7 @@ export default function App() {
           <Route path="/bilgi-merkezi" element={<Navigate to="/knowledge-center" replace />} />
           <Route path="/knowledge-center/:slug" element={<KnowledgeCenterDetailPage />} />
           <Route path="/bilgi-merkezi/:slug" element={<KnowledgeCenterSlugRedirect />} />
+          <Route path="*" element={<NotFoundPage />} />
         </Route>
       </Routes>
     </div>

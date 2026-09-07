@@ -1919,6 +1919,32 @@ export default function ProjectsPage({ setActivePage }) {
   const [type, setType] = useState(getMatchedType)
   const [selectedProject, setSelectedProject] = useState(null)
   const [sliderOpen, setSliderOpen] = useState(false)
+  const [liveProjects, setLiveProjects] = useState(null)
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    let cancelled = false
+
+    async function fetchProjects() {
+      try {
+        const res = await fetch('/api/project/visible')
+        if (!res.ok) return
+        const contentType = res.headers.get('content-type') ?? ''
+        if (!contentType.includes('json')) return
+        const data = await res.json()
+        if (!cancelled && Array.isArray(data)) {
+          setLiveProjects(data)
+        }
+      } catch (err) {
+        console.error('Failed to fetch projects from CMS:', err)
+      } finally {
+        if (!cancelled) setLoading(false)
+      }
+    }
+
+    fetchProjects()
+    return () => { cancelled = true }
+  }, [])
 
   const handleRegionChange = (newRegion) => {
     setRegion(newRegion);
@@ -1978,7 +2004,7 @@ export default function ProjectsPage({ setActivePage }) {
     'saint-jean-de-monts': { tr: 'Saint-Jean-de-Monts', en: 'Saint-Jean-de-Monts', es: 'Saint-Jean-de-Monts', ru: 'Сен-Жан-де-Мон', ar: 'سان جان دي مونتس', fr: 'Saint-Jean-de-Monts', zh: '圣让德蒙' },
     'marsa alam': { tr: 'Marsa Alam', en: 'Marsa Alam', es: 'Marsa Alam', ru: 'Марса-Алам', ar: 'مرسى علم', fr: 'Marsa Alam', zh: '马萨阿拉姆' },
     'hurghada': { tr: 'Hurghada', en: 'Hurghada', es: 'Hurghada', ru: 'Хургада', ar: 'الغردقة', fr: 'Hurghada', zh: '赫尔格达' },
-    'hurgada': { tr: 'Hurgada', en: 'Hurghada', es: 'Hurghada', ru: 'Хургада', ar: 'الغردقة', fr: 'Hurghada', zh: '赫尔格达' },
+    'hurgada': { tr: 'Hurghada', en: 'Hurghada', es: 'Hurghada', ru: 'Хургада', ar: 'الغردقة', fr: 'Hurghada', zh: '赫尔格达' },
     'sharm el sheikh': { tr: 'Sharm El Sheikh', en: 'Sharm El Sheikh', es: 'Sharm El Sheikh', ru: 'Шарм-эль-Шейх', ar: 'شرم الشيخ', fr: 'Charm el-Cheikh', zh: '沙姆沙伊赫' },
     'sarm el-seyh': { tr: 'Şarm El-Şeyh', en: 'Sharm El Sheikh', es: 'Sharm El Sheikh', ru: 'Шарм-эль-Шейх', ar: 'شرم الشيخ', fr: 'Charm el-Cheikh', zh: '沙姆沙伊赫' },
     'bigacs': { tr: 'Bogács', en: 'Bogács', es: 'Bogács', ru: 'Богач', ar: 'بوغاتش', fr: 'Bogács', zh: '博加奇' },
@@ -2096,6 +2122,53 @@ export default function ProjectsPage({ setActivePage }) {
     return result;
   }
 
+  const mapApiProject = (item) => {
+    const lang = (i18n.language || 'tr').toLowerCase()
+    const translation = item.translations?.find((t) => t.language?.toLowerCase() === lang)
+      || item.translations?.find((t) => t.language?.toLowerCase() === 'tr')
+      || item.translations?.[0]
+
+    const name = translation?.title || item.client || item.title || ''
+    const location = translation?.location || item.location || ''
+    const type = translation?.category || item.category || 'Otel & Su Parkı'
+    const region = item.tags || 'Asya'
+
+    let gallery = []
+    if (Array.isArray(item.gallery_images)) {
+      gallery = item.gallery_images
+    } else if (typeof item.gallery_images === 'string' && item.gallery_images.trim().startsWith('[')) {
+      try {
+        gallery = JSON.parse(item.gallery_images)
+      } catch {
+        gallery = []
+      }
+    }
+
+    if (!gallery.length && item.image_path) {
+      gallery = [item.image_path]
+    }
+
+    const coverImg = item.image_path || gallery[0] || ''
+
+    const slides = gallery.map((imgUrl, idx) => ({
+      id: idx + 1,
+      title: name,
+      location: location,
+      img: imgUrl
+    }))
+
+    return {
+      id: item.id,
+      name,
+      location,
+      type,
+      region,
+      img: coverImg,
+      imgAlt: `${name} - ${location}`,
+      slides: slides.length > 0 ? slides : [{ id: 1, title: name, location, img: coverImg }]
+    }
+  }
+
   const getProjectTranslated = (p) => {
     return {
       ...p,
@@ -2105,7 +2178,11 @@ export default function ProjectsPage({ setActivePage }) {
     }
   }
 
-  const filtered = PROJECTS.filter((p) =>
+  const projectList = liveProjects && liveProjects.length > 0
+    ? liveProjects.map(mapApiProject)
+    : PROJECTS
+
+  const filtered = projectList.filter((p) =>
     (region === 'Tümü' || p.region === region) &&
     (type === 'Tümü' || p.type === type)
   ).map(getProjectTranslated)

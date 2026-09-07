@@ -1311,5 +1311,32 @@
     "desc": "Discover our modern integrated facilities where world-class water slides and attractions are manufactured.",
     "subtitle": "Modern and Sustainable Manufacturing Facilities",
     "title": "Our Manufacturing Facilities"
+  },
+  "notFound": {
+    "tag": "404 · Page Not Found",
+    "hero_title": "Off the Slide!",
+    "hero_desc": "The page you are looking for may have been removed, had its name changed, or washed away in our waters. Let us guide you back to the main route.",
+    "home_btn": "Back to Home",
+    "back_btn": "Go Back",
+    "badge": "Water Park Course Lost",
+    "heading": "This Slide Leads to Open Waters!",
+    "message": "The link you followed may be broken, updated, or mistyped. You can continue your journey from our popular sections below.",
+    "card1_tag": "Our Products",
+    "card1_title": "Water Slides & Splash Systems",
+    "card1_desc": "Explore our high-thrill slides, family attraction systems, and Splash Tower interactive zones.",
+    "card1_cta": "Explore Products",
+    "card2_tag": "Our Projects",
+    "card2_title": "Global Project Portfolio",
+    "card2_desc": "Discover our portfolio of over 3000 completed water park and resort installations across 70+ countries.",
+    "card2_cta": "View Projects",
+    "card3_tag": "R&D Center",
+    "card3_title": "Design & Innovation",
+    "card3_desc": "Patents, certified industrial designs, and technological breakthroughs developed at our Ministry-certified R&D Center.",
+    "card3_cta": "Discover R&D",
+    "card4_tag": "Contact",
+    "card4_title": "Get in Touch",
+    "card4_desc": "Contact our engineering and project teams for custom water park master planning or quotation.",
+    "card4_cta": "Contact Us",
+    "quick_links": "Quick Links:"
   }
 }

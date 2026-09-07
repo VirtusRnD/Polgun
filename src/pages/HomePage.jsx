@@ -168,34 +168,94 @@ const CAROUSEL_IMAGES = [
 // ── Sayfa bileşeni ─────────────────────────────────────────
 // ── Sayfa bileşeni ─────────────────────────────────────────
 export default function HomePage() {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
   const { setActivePage } = useOutletContext();
   const [heroImageIndex, setHeroImageIndex] = useState(0)
   const [carouselImageIndex, setCarouselImageIndex] = useState(0)
+  const [liveHeroImages, setLiveHeroImages] = useState(null)
+
+  useEffect(() => {
+    let cancelled = false
+
+    async function fetchHeroImages() {
+      try {
+        const res = await fetch('/api/hero/visible')
+        if (!res.ok) return
+        const contentType = res.headers.get('content-type') ?? ''
+        if (!contentType.includes('json')) return
+        const data = await res.json()
+        if (!cancelled && Array.isArray(data)) {
+          setLiveHeroImages(data)
+        }
+      } catch (err) {
+        console.error('Failed to fetch hero images from CMS:', err)
+      }
+    }
+
+    fetchHeroImages()
+    return () => { cancelled = true }
+  }, [])
 
   // Location translation mapping helper
   const translateLocation = (loc) => {
+    if (!loc) return ''
     const mapping = {
       'Fransa': t('factories.names.france', { defaultValue: 'France' }),
+      'France': t('factories.names.france', { defaultValue: 'France' }),
       'Suudi Arabistan': t('factories.names.saudi_arabia', { defaultValue: 'Saudi Arabia' }),
+      'Saudi Arabia': t('factories.names.saudi_arabia', { defaultValue: 'Saudi Arabia' }),
       'Serbia': t('factories.names.serbia', { defaultValue: 'Serbia' }),
+      'Sırbistan': t('factories.names.serbia', { defaultValue: 'Serbia' }),
       'Türkiye': t('factories.names.turkey', { defaultValue: 'Turkey' }),
+      'Turkey': t('factories.names.turkey', { defaultValue: 'Turkey' }),
       'İspanya': t('factories.names.spain', { defaultValue: 'Spain' }),
+      'Spain': t('factories.names.spain', { defaultValue: 'Spain' }),
       'Mısır': t('factories.names.egypt', { defaultValue: 'Egypt' }),
+      'Egypt': t('factories.names.egypt', { defaultValue: 'Egypt' }),
       'Macaristan': t('factories.names.hungary', { defaultValue: 'Hungary' }),
+      'Hungary': t('factories.names.hungary', { defaultValue: 'Hungary' }),
       'Güney Kore': t('factories.names.south_korea', { defaultValue: 'South Korea' }),
+      'South Korea': t('factories.names.south_korea', { defaultValue: 'South Korea' }),
       'Yunanistan': t('factories.names.greece', { defaultValue: 'Greece' }),
+      'Greece': t('factories.names.greece', { defaultValue: 'Greece' }),
+      'İsviçre': t('factories.names.switzerland', { defaultValue: 'Switzerland' }),
+      'Switzerland': t('factories.names.switzerland', { defaultValue: 'Switzerland' }),
     };
     return mapping[loc] || loc;
   }
 
+  const mapApiHero = (item) => {
+    const lang = (i18n.language || 'tr').toLowerCase()
+    const translation = item.translations?.find((t) => t.language?.toLowerCase() === lang)
+      || item.translations?.find((t) => t.language?.toLowerCase() === 'tr')
+      || item.translations?.[0]
+
+    const title = translation?.title || item.title || ''
+    const location = translation?.location || item.location || item.subtitle || ''
+    const img = item.image_path || item.image || ''
+
+    return {
+      id: item.id,
+      title,
+      location,
+      img,
+    }
+  }
+
+  const heroList = liveHeroImages && liveHeroImages.length > 0
+    ? liveHeroImages.map(mapApiHero)
+    : HERO_IMAGES
+
+  const activeHero = heroList[heroImageIndex] || heroList[0]
+
   // ── Otomatik resim değiştirme
   useEffect(() => {
+    if (!heroList.length) return
     const interval = setInterval(() => {
-      setHeroImageIndex((prev) => (prev + 1) % HERO_IMAGES.length)
+      setHeroImageIndex((prev) => (prev + 1) % heroList.length)
     }, 1500) // Her 1.5 saniyede bir resim değişimi
     return () => clearInterval(interval)
-  }, [])
+  }, [heroList.length])
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -395,9 +455,9 @@ export default function HomePage() {
                     background: 'rgba(15,43,91,0.12)',
                   }}
                 >
-                  {HERO_IMAGES.map((img, idx) => (
+                  {heroList.map((img, idx) => (
                     <img
-                      key={`${img.title}-${idx}`}
+                      key={`${img.title}-${img.id || idx}`}
                       src={img.img}
                       alt={img.title}
                       loading={idx === heroImageIndex ? 'eager' : 'lazy'}
@@ -416,48 +476,50 @@ export default function HomePage() {
                   />
 
                   {/* Sol-alt başlık overlay */}
-                  <div
-                    className="absolute left-6 bottom-6 z-20 flex items-center gap-3"
-                    style={{
-                      padding: '12px 16px',
-                      borderRadius: '12px',
-                      maxWidth: 'min(560px, calc(100% - 2rem))',
-                      background:
-                        'linear-gradient(180deg, rgba(32, 32, 32, 0.52) 0%, rgba(77, 77, 77, 0.22) 55%, rgba(79, 79, 79, 0.1) 100%)',
-                      backdropFilter: 'blur(4px)',
-                      WebkitBackdropFilter: 'blur(4px)',
-                      border: '1px solid rgba(255,255,255,0.18)',
-                      boxShadow: '0 18px 50px rgba(0,0,0,0.35)',
-                    }}
-                  >
-                    {/* Lokasyon İkonu */}
-                    <div className="shrink-0 text-white/90">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 24 24"
-                        fill="currentColor"
-                        className="w-6 h-6"
-                      >
-                        <path fillRule="evenodd" d="M11.54 22.351l.07.04.028.016a.76.76 0 00.723 0l.028-.015.071-.041a16.975 16.975 0 001.144-.742 19.58 19.58 0 002.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 00-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 002.682 2.282 16.975 16.975 0 001.145.742zM12 13.5a3 3 0 100-6 3 3 0 000 6z" clipRule="evenodd" />
-                      </svg>
-                    </div>
+                  {activeHero && (
+                    <div
+                      className="absolute left-6 bottom-6 z-20 flex items-center gap-3"
+                      style={{
+                        padding: '12px 16px',
+                        borderRadius: '12px',
+                        maxWidth: 'min(560px, calc(100% - 2rem))',
+                        background:
+                          'linear-gradient(180deg, rgba(32, 32, 32, 0.52) 0%, rgba(77, 77, 77, 0.22) 55%, rgba(79, 79, 79, 0.1) 100%)',
+                        backdropFilter: 'blur(4px)',
+                        WebkitBackdropFilter: 'blur(4px)',
+                        border: '1px solid rgba(255,255,255,0.18)',
+                        boxShadow: '0 18px 50px rgba(0,0,0,0.35)',
+                      }}
+                    >
+                      {/* Lokasyon İkonu */}
+                      <div className="shrink-0 text-white/90">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                          fill="currentColor"
+                          className="w-6 h-6"
+                        >
+                          <path fillRule="evenodd" d="M11.54 22.351l.07.04.028.016a.76.76 0 00.723 0l.028-.015.071-.041a16.975 16.975 0 001.144-.742 19.58 19.58 0 002.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 00-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 002.682 2.282 16.975 16.975 0 001.145.742zM12 13.5a3 3 0 100-6 3 3 0 000 6z" clipRule="evenodd" />
+                        </svg>
+                      </div>
 
-                    {/* Metin İçeriği */}
-                    <div className="flex flex-col">
-                      <h2
-                        className="text-sm font-black text-white mb-0.5"
-                        style={{ textShadow: '0 10px 26px rgba(0,0,0,0.65)' }}
-                      >
-                        {HERO_IMAGES[heroImageIndex].title}
-                      </h2>
-                      <p
-                        className="text-xs text-white/90"
-                        style={{ textShadow: '0 8px 18px rgba(0,0,0,0.55)' }}
-                      >
-                        {translateLocation(HERO_IMAGES[heroImageIndex].location)}
-                      </p>
+                      {/* Metin İçeriği */}
+                      <div className="flex flex-col">
+                        <h2
+                          className="text-sm font-black text-white mb-0.5"
+                          style={{ textShadow: '0 10px 26px rgba(0,0,0,0.65)' }}
+                        >
+                          {activeHero.title}
+                        </h2>
+                        <p
+                          className="text-xs text-white/90"
+                          style={{ textShadow: '0 8px 18px rgba(0,0,0,0.55)' }}
+                        >
+                          {translateLocation(activeHero.location)}
+                        </p>
+                      </div>
                     </div>
-                  </div>
+                  )}
 
                 </div>
               </div>

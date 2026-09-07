@@ -5,7 +5,7 @@ import tailwindcss from '@tailwindcss/vite'
 // https://vite.dev/config/
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), '')
-  const apiTarget = env.VITE_API_URL?.replace(/\/$/, '')
+  const apiTarget = env.VITE_API_URL?.replace(/\/$/, '') || 'http://localhost:3000'
 
   return {
     plugins: [
@@ -16,19 +16,17 @@ export default defineConfig(({ mode }) => {
         },
       }),
     ],
-    server: apiTarget
-      ? {
-          proxy: {
-            '/api': {
-              target: apiTarget,
-              changeOrigin: true,
-            },
-            '/uploads': {
-              target: apiTarget,
-              changeOrigin: true,
-            },
-          },
-        }
-      : undefined,
+    server: {
+      proxy: {
+        '/api': {
+          target: apiTarget,
+          changeOrigin: true,
+        },
+        '/uploads': {
+          target: apiTarget,
+          changeOrigin: true,
+        },
+      },
+    },
   }
 })

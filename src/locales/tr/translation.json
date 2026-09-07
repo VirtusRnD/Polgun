@@ -1311,5 +1311,32 @@
     "desc": "Dünya standartlarında su kaydırakları ve su parkı ekipmanlarının üretildiği modern entegre tesislerimizi keşfedin.",
     "subtitle": "Modern ve Sürdürülebilir Üretim Tesisleri",
     "title": "Üretim Tesislerimiz"
+  },
+  "notFound": {
+    "tag": "404 · Sayfa Bulunamadı",
+    "hero_title": "Rotadan Çıktınız!",
+    "hero_desc": "Aradığınız sayfa kaldırılmış, adı değiştirilmiş veya sularımıza kapılıp gitmiş olabilir. Sizi ana rotaya güvenle geri döndürelim.",
+    "home_btn": "Ana Sayfaya Dön",
+    "back_btn": "Geri Dön",
+    "badge": "Su Parkuru Rotası Kayıp",
+    "heading": "Bu Kaydırağın Sonu Açık Sulara Çıkıyor!",
+    "message": "Aradığınız bağlantı taşınmış, güncellenmiş veya yanlış yazılmış olabilir. Aşağıdaki popüler bölümlerden yolculuğunuza devam edebilirsiniz.",
+    "card1_tag": "Ürünlerimiz",
+    "card1_title": "Su Kaydırakları & Splash Sistemleri",
+    "card1_desc": "En popüler adrenalin kaydıraklarımızı, aile eğlence sistemlerimizi ve Splash Tower parkurlarımızı inceleyin.",
+    "card1_cta": "Ürünleri İncele",
+    "card2_tag": "Projelerimiz",
+    "card2_title": "Global Proje Portföyümüz",
+    "card2_desc": "70'ten fazla ülkede hayata geçirdiğimiz 3000'i aşkın referans projemizi ve tematik su parklarını keşfedin.",
+    "card2_cta": "Projeleri Gör",
+    "card3_tag": "Ar-Ge Merkezi",
+    "card3_title": "Tasarım & İnovasyon",
+    "card3_desc": "Bakanlık onaylı Ar-Ge merkezimizde geliştirilen tescilli tasarımlar, patentler ve teknolojik çözümler.",
+    "card3_cta": "Ar-Ge'yi Keşfet",
+    "card4_tag": "İletişim",
+    "card4_title": "Bize Ulaşın",
+    "card4_desc": "Yeni bir su parkı yatırımı veya ürün talebi için uzman mühendis ve proje ekibimizle iletişime geçin.",
+    "card4_cta": "İletişime Geç",
+    "quick_links": "Hızlı Erişim:"
   }
 }
