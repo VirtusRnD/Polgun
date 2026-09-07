@@ -22,16 +22,6 @@ import iftar3 from '../assets/news/iftar-2026-3.png'
 import iftar4 from '../assets/news/iftar-2026-4.png'
 import iftar5 from '../assets/news/iftar-2026-5.png'
 
-// Static Newsletter Data (PDFs served secure-fetch from /public/newsletter)
-const BULLETINS_DATA = [
-  { id: 6, file: '/newsletter/newsletter-6.pdf', cover: '/newsletter/covers/cover-6.jpg', year: 2026, monthKey: 'months.july', issue: 6 },
-  { id: 5, file: '/newsletter/newsletter-5.pdf', cover: '/newsletter/covers/cover-5.jpg', year: 2026, monthKey: 'months.june', issue: 5 },
-  { id: 4, file: '/newsletter/newsletter-4.pdf', cover: '/newsletter/covers/cover-4.jpg', year: 2026, monthKey: 'months.may', issue: 4 },
-  { id: 3, file: '/newsletter/newsletter-3.pdf', cover: '/newsletter/covers/cover-3.jpg', year: 2026, monthKey: 'months.april', issue: 3 },
-  { id: 2, file: '/newsletter/newsletter-2.pdf', cover: '/newsletter/covers/cover-2.jpg', year: 2026, monthKey: 'months.march', issue: 2 },
-  { id: 1, file: '/newsletter/newsletter-1.pdf', cover: '/newsletter/covers/cover-1.jpg', year: 2026, monthKey: 'months.february', issue: 1 },
-]
-
 // Static Fairs Stand Data Array
 const FAIRS_DATA = [
   { id: 1, img: dealDubai2026, key: 'deal_dubai_2026', title: 'Deal Dubai 2026' },
@@ -84,6 +74,47 @@ export default function NewsPage() {
     tabParam === 'bulletin' ? 'bulletins' : (tabParam === 'fairs' ? 'fairs' : 'articles')
   )
   const [selectedBulletin, setSelectedBulletin] = useState(null)
+  const [liveBulletins, setLiveBulletins] = useState([])
+
+  useEffect(() => {
+    let cancelled = false
+
+    async function fetchBulletins() {
+      try {
+        const res = await fetch('/api/bulletin/visible')
+        if (!res.ok) return
+        const contentType = res.headers.get('content-type') ?? ''
+        if (!contentType.includes('json')) return
+        const data = await res.json()
+        if (!cancelled && Array.isArray(data)) {
+          setLiveBulletins(data)
+        }
+      } catch (err) {
+        console.error('Failed to fetch bulletins from CMS:', err)
+      }
+    }
+
+    fetchBulletins()
+    return () => { cancelled = true }
+  }, [])
+
+  const mapApiBulletin = (item) => ({
+    id: item.id,
+    title: item.title || '',
+    file: item.file || item.file_path || item.pdf_url || '',
+    cover: item.cover || item.cover_image || item.cover_path || '',
+    year: item.year || 2026,
+    monthKey: item.monthKey || item.month_key || 'months.january',
+    issue: item.issue || item.issue_number || item.order_index || item.id,
+  })
+
+  const bulletinsList = (liveBulletins || []).map(mapApiBulletin)
+
+  const getMonthName = (key) => {
+    if (!key) return ''
+    const cleanKey = key.replace(/^months\./, '')
+    return t(`news.months.${cleanKey}`, { defaultValue: t(`news.${key}`, { defaultValue: key }) })
+  }
 
   // Article Lightbox States
   const [selectedArticle, setSelectedArticle] = useState(null)
@@ -357,59 +388,65 @@ export default function NewsPage() {
               </div>
 
               {/* Grid Layout of Magazine Covers */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
-                {BULLETINS_DATA.map((item) => (
-                  <div
-                    key={item.id}
-                    onClick={() => setSelectedBulletin(item)}
-                    className="group cursor-pointer rounded-2xl overflow-hidden relative flex flex-col hover:shadow-2xl transition-all duration-300"
-                    style={{
-                      backgroundColor: 'var(--th-bg)',
-                      border: '1px solid color-mix(in srgb, var(--th-border) 10%, transparent)',
-                      boxShadow: '0 4px 20px rgba(0,0,0,0.03)',
-                    }}
-                  >
-                    {/* Rendered PDF Cover Page */}
-                    <div className="relative overflow-hidden aspect-[1/1.41]">
-                      <NewsletterCover pdfUrl={item.file} coverImg={item.cover} alt={t('news.issue_format', { number: item.issue })} />
+              {bulletinsList.length === 0 ? (
+                <div className="text-center py-16" style={{ color: 'var(--th-text-muted)' }}>
+                  <p className="text-base font-semibold">{t('common.no_content', { defaultValue: 'Henüz içerik bulunmamaktadır.' })}</p>
+                </div>
+              ) : (
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
+                  {bulletinsList.map((item) => (
+                    <div
+                      key={item.id}
+                      onClick={() => setSelectedBulletin(item)}
+                      className="group cursor-pointer rounded-2xl overflow-hidden relative flex flex-col hover:shadow-2xl transition-all duration-300"
+                      style={{
+                        backgroundColor: 'var(--th-bg)',
+                        border: '1px solid color-mix(in srgb, var(--th-border) 10%, transparent)',
+                        boxShadow: '0 4px 20px rgba(0,0,0,0.03)',
+                      }}
+                    >
+                      {/* Rendered PDF Cover Page */}
+                      <div className="relative overflow-hidden aspect-[1/1.41]">
+                        <NewsletterCover pdfUrl={item.file} coverImg={item.cover} alt={t('news.issue_format', { number: item.issue })} />
 
-                      {/* Dark Overlay Hover Actions */}
-                      <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between p-6 z-20">
-                        <span className="text-[10px] font-black uppercase tracking-widest px-2.5 py-1 rounded bg-white/20 text-white self-start backdrop-blur-xs">
-                          PDF · SECURE
-                        </span>
+                        {/* Dark Overlay Hover Actions */}
+                        <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between p-6 z-20">
+                          <span className="text-[10px] font-black uppercase tracking-widest px-2.5 py-1 rounded bg-white/20 text-white self-start backdrop-blur-xs">
+                            PDF · SECURE
+                          </span>
 
-                        <div className="w-12 h-12 rounded-full bg-white text-[var(--th-polgun-blue)] flex items-center justify-center shadow-lg transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 self-center">
+                          <div className="w-12 h-12 rounded-full bg-white text-[var(--th-polgun-blue)] flex items-center justify-center shadow-lg transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 self-center">
+                            <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
+                            </svg>
+                          </div>
+
+                          <span className="text-white text-xs font-bold uppercase tracking-wider text-center">
+                            {t('news.open_flipbook', { defaultValue: 'Bülteni Oku' })}
+                          </span>
+                        </div>
+                      </div>
+
+                      {/* Meta Info Displayed Under Cover */}
+                      <div className="p-5 flex items-center justify-between">
+                        <div>
+                          <h4 className="font-black text-base leading-snug" style={{ color: 'var(--th-text)' }}>
+                            {t('news.issue_format', { number: item.issue })}
+                          </h4>
+                          <span className="text-[11px] font-bold mt-1 block text-neutral-400 uppercase tracking-wide">
+                            {getMonthName(item.monthKey)} {item.year}
+                          </span>
+                        </div>
+                        <div className="text-[var(--th-polgun-blue)] opacity-60 group-hover:opacity-100 transition-opacity">
                           <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
                           </svg>
                         </div>
-
-                        <span className="text-white text-xs font-bold uppercase tracking-wider text-center">
-                          {t('news.open_flipbook', { defaultValue: 'Bülteni Oku' })}
-                        </span>
                       </div>
                     </div>
-
-                    {/* Meta Info Displayed Under Cover */}
-                    <div className="p-5 flex items-center justify-between">
-                      <div>
-                        <h4 className="font-black text-base leading-snug" style={{ color: 'var(--th-text)' }}>
-                          {t('news.issue_format', { number: item.issue })}
-                        </h4>
-                        <span className="text-[11px] font-bold mt-1 block text-neutral-400 uppercase tracking-wide">
-                          {t(`news.${item.monthKey}`)} {item.year}
-                        </span>
-                      </div>
-                      <div className="text-[var(--th-polgun-blue)] opacity-60 group-hover:opacity-100 transition-opacity">
-                        <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
+                  ))}
+                </div>
+              )}
             </div>
           )}
         </div>
@@ -419,7 +456,7 @@ export default function NewsPage() {
       {selectedBulletin && (
         <FlipbookModal
           pdfUrl={selectedBulletin.file}
-          title={`${t('news.bulletins_title', { defaultValue: 'Kurumsal E-Bültenler' })} - ${t('news.issue_format', { number: selectedBulletin.issue })} (${t(`news.${selectedBulletin.monthKey}`)} ${selectedBulletin.year})`}
+          title={`${t('news.bulletins_title', { defaultValue: 'Kurumsal E-Bültenler' })} - ${t('news.issue_format', { number: selectedBulletin.issue })} (${getMonthName(selectedBulletin.monthKey)} ${selectedBulletin.year})`}
           onClose={() => setSelectedBulletin(null)}
         />
       )}
