@@ -12,16 +12,6 @@ import dealDubai2026 from '../assets/fairs/deal-dubai-2026.jpeg'
 import tashkentUzbekistan2026 from '../assets/fairs/tashkent-uzbekistan-2026.jpeg'
 import piscinaWellnessBarcelona2025 from '../assets/fairs/piscina-wellness-barcelona-2025.jpg'
 
-// Static News & Events Images
-import gunesBakimEvi from '../assets/news/gunes-bakim-evi.jpg'
-import aileSosyalHizmetler from '../assets/news/aile-ve-sosyal-hizmetler.jpeg'
-import mskuKariyerFuari from '../assets/news/msku-kariyer-fuari.jpg'
-import iftar1 from '../assets/news/iftar-2026-1.png'
-import iftar2 from '../assets/news/iftar-2026-2.png'
-import iftar3 from '../assets/news/iftar-2026-3.png'
-import iftar4 from '../assets/news/iftar-2026-4.png'
-import iftar5 from '../assets/news/iftar-2026-5.png'
-
 // Static Fairs Stand Data Array
 const FAIRS_DATA = [
   { id: 1, img: dealDubai2026, key: 'deal_dubai_2026', title: 'Deal Dubai 2026' },
@@ -30,38 +20,6 @@ const FAIRS_DATA = [
   { id: 4, img: iaapaOrlando2025, key: 'iaapa_orlando_2025', title: 'IAAPA Expo Orlando 2025' },
   { id: 5, img: iaapaBarcelona2025, key: 'iaapa_barcelona_2025', title: 'IAAPA Expo Barcelona 2025' },
   { id: 6, img: iaapaOrlando2024, key: 'iaapa_orlando_2024', title: 'IAAPA Expo Orlando 2024' },
-]
-
-// Static News & Events Data Array
-const NEWS_DATA = [
-  {
-    id: 'msku_kariyer_fuari',
-    tagId: 'event',
-    date: '2026',
-    img: mskuKariyerFuari,
-    images: [mskuKariyerFuari]
-  },
-  {
-    id: 'iftar_programi',
-    tagId: 'event',
-    date: '14 Mart 2026',
-    img: iftar1,
-    images: [iftar1, iftar2, iftar3, iftar4, iftar5]
-  },
-  {
-    id: 'gunes_bakim_evi',
-    tagId: 'social',
-    date: '2026',
-    img: gunesBakimEvi,
-    images: [gunesBakimEvi]
-  },
-  {
-    id: 'aile_sosyal_hizmetler',
-    tagId: 'social',
-    date: '2026',
-    img: aileSosyalHizmetler,
-    images: [aileSosyalHizmetler]
-  }
 ]
 
 export default function NewsPage() {
@@ -75,6 +33,7 @@ export default function NewsPage() {
   )
   const [selectedBulletin, setSelectedBulletin] = useState(null)
   const [liveBulletins, setLiveBulletins] = useState([])
+  const [liveNews, setLiveNews] = useState([])
 
   useEffect(() => {
     let cancelled = false
@@ -94,7 +53,23 @@ export default function NewsPage() {
       }
     }
 
+    async function fetchNews() {
+      try {
+        const res = await fetch('/api/news/visible')
+        if (!res.ok) return
+        const contentType = res.headers.get('content-type') ?? ''
+        if (!contentType.includes('json')) return
+        const data = await res.json()
+        if (!cancelled && Array.isArray(data)) {
+          setLiveNews(data)
+        }
+      } catch (err) {
+        console.error('Failed to fetch news from CMS:', err)
+      }
+    }
+
     fetchBulletins()
+    fetchNews()
     return () => { cancelled = true }
   }, [])
 
@@ -109,6 +84,44 @@ export default function NewsPage() {
   })
 
   const bulletinsList = (liveBulletins || []).map(mapApiBulletin)
+
+  const mapApiNews = (item) => {
+    const lang = (i18n.language || 'tr').toLowerCase()
+    const translation = item.translations?.find((t) => t.language?.toLowerCase() === lang)
+      || item.translations?.find((t) => t.language?.toLowerCase() === 'tr')
+      || item.translations?.[0]
+
+    let images = []
+    if (Array.isArray(item.images)) {
+      images = item.images
+    } else if (typeof item.images === 'string' && item.images.trim().startsWith('[')) {
+      try {
+        images = JSON.parse(item.images)
+      } catch {
+        images = []
+      }
+    }
+
+    const coverImg = item.img || item.image || item.image_path || (images.length > 0 ? images[0] : '')
+    if (images.length === 0 && coverImg) {
+      images = [coverImg]
+    }
+
+    const title = translation?.title || item.title || ''
+    const desc = translation?.description || item.description || item.desc || ''
+
+    return {
+      id: item.id || `news-${item.order_index || Math.random()}`,
+      tagId: item.tagId || item.tag_id || item.tag || 'event',
+      date: item.date || item.created_at || '',
+      img: coverImg,
+      images,
+      title,
+      desc
+    }
+  }
+
+  const newsList = (liveNews || []).map(mapApiNews)
 
   const getMonthName = (key) => {
     if (!key) return ''
@@ -271,59 +284,72 @@ export default function NewsPage() {
 
           {/* TAB 1: Local News & Events List */}
           {activeTab === 'articles' && (
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 animate-fade-in">
-              {NEWS_DATA.map((item) => (
-                <article
-                  key={item.id}
-                  onClick={() => openArticle(item)}
-                  className="rounded-2xl overflow-hidden group flex flex-col hover:shadow-lg transition-shadow duration-300 cursor-pointer"
-                  style={{
-                    backgroundColor: 'var(--th-bg)',
-                    border: '1px solid color-mix(in srgb, var(--th-border) 12%, transparent)',
-                    boxShadow: '0 4px 24px rgba(0,0,0,0.04)',
-                  }}
-                >
-                  {/* Image wrapper */}
-                  <div className="overflow-hidden aspect-[16/10]">
-                    <img
-                      src={item.img}
-                      alt={t(`news.articles.${item.id}.title`)}
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                    />
-                  </div>
+            <>
+              {newsList.length === 0 ? (
+                <div className="text-center py-16" style={{ color: 'var(--th-text-muted)' }}>
+                  <p className="text-base font-semibold">{t('common.no_content', { defaultValue: 'Henüz içerik bulunmamaktadır.' })}</p>
+                </div>
+              ) : (
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 animate-fade-in">
+                  {newsList.map((item) => {
+                    const displayTitle = t(`news.articles.${item.id}.title`, { defaultValue: item.title })
+                    const displayDesc = t(`news.articles.${item.id}.desc`, { defaultValue: item.desc })
 
-                  {/* Card Body */}
-                  <div className="p-6 flex flex-col flex-1">
-                    <div className="flex items-center gap-3 mb-4">
-                      <span
-                        className="text-[10px] font-black tracking-widest uppercase px-2.5 py-1 rounded-full"
+                    return (
+                      <article
+                        key={item.id}
+                        onClick={() => openArticle(item)}
+                        className="rounded-2xl overflow-hidden group flex flex-col hover:shadow-lg transition-shadow duration-300 cursor-pointer"
                         style={{
-                          backgroundColor: 'color-mix(in srgb, var(--th-polgun-blue) 10%, transparent)',
-                          color: 'var(--th-polgun-blue)',
+                          backgroundColor: 'var(--th-bg)',
+                          border: '1px solid color-mix(in srgb, var(--th-border) 12%, transparent)',
+                          boxShadow: '0 4px 24px rgba(0,0,0,0.04)',
                         }}
                       >
-                        {getLocalizedTag(item.tagId)}
-                      </span>
-                      <span className="text-xs font-semibold" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 50%, transparent)' }}>
-                        {item.date}
-                      </span>
-                    </div>
+                        {/* Image wrapper */}
+                        <div className="overflow-hidden aspect-[16/10]">
+                          <img
+                            src={item.img}
+                            alt={displayTitle}
+                            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                          />
+                        </div>
 
-                    <h3 className="font-black text-lg mb-3 leading-snug group-hover:text-[var(--th-polgun-blue)] transition-colors" style={{ color: 'var(--th-text)' }}>
-                      {t(`news.articles.${item.id}.title`)}
-                    </h3>
+                        {/* Card Body */}
+                        <div className="p-6 flex flex-col flex-1">
+                          <div className="flex items-center gap-3 mb-4">
+                            <span
+                              className="text-[10px] font-black tracking-widest uppercase px-2.5 py-1 rounded-full"
+                              style={{
+                                backgroundColor: 'color-mix(in srgb, var(--th-polgun-blue) 10%, transparent)',
+                                color: 'var(--th-polgun-blue)',
+                              }}
+                            >
+                              {getLocalizedTag(item.tagId)}
+                            </span>
+                            <span className="text-xs font-semibold" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 50%, transparent)' }}>
+                              {item.date}
+                            </span>
+                          </div>
 
-                    <p className="text-sm leading-relaxed flex-1 line-clamp-3" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 70%, transparent)' }}>
-                      {t(`news.articles.${item.id}.desc`)}
-                    </p>
+                          <h3 className="font-black text-lg mb-3 leading-snug group-hover:text-[var(--th-polgun-blue)] transition-colors" style={{ color: 'var(--th-text)' }}>
+                            {displayTitle}
+                          </h3>
 
-                    <span className="mt-4 inline-flex items-center gap-1.5 text-xs font-bold text-[var(--th-polgun-blue)]">
-                      {t('common.read_more')} ➔
-                    </span>
-                  </div>
-                </article>
-              ))}
-            </div>
+                          <p className="text-sm leading-relaxed flex-1 line-clamp-3" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 70%, transparent)' }}>
+                            {displayDesc}
+                          </p>
+
+                          <span className="mt-4 inline-flex items-center gap-1.5 text-xs font-bold text-[var(--th-polgun-blue)]">
+                            {t('common.read_more')} ➔
+                          </span>
+                        </div>
+                      </article>
+                    )
+                  })}
+                </div>
+              )}
+            </>
           )}
 
           {/* TAB 2: Fuar Katılımları (Fairs Archive) */}
@@ -493,7 +519,7 @@ export default function NewsPage() {
             <div className="w-full md:w-1/2 bg-black flex items-center justify-center relative min-h-[300px] md:min-h-0">
               <img
                 src={selectedArticle.images[galleryIndex]}
-                alt={t(`news.articles.${selectedArticle.id}.title`)}
+                alt={t(`news.articles.${selectedArticle.id}.title`, { defaultValue: selectedArticle.title })}
                 className="w-full h-full object-contain max-h-[50vh] md:max-h-[80vh]"
               />
 
@@ -541,10 +567,10 @@ export default function NewsPage() {
                   </span>
                 </div>
                 <h3 className="text-xl font-black text-white mb-4 leading-snug">
-                  {t(`news.articles.${selectedArticle.id}.title`)}
+                  {t(`news.articles.${selectedArticle.id}.title`, { defaultValue: selectedArticle.title })}
                 </h3>
                 <p className="text-neutral-300 text-sm leading-relaxed whitespace-pre-line" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 80%, transparent)' }}>
-                  {t(`news.articles.${selectedArticle.id}.desc`)}
+                  {t(`news.articles.${selectedArticle.id}.desc`, { defaultValue: selectedArticle.desc })}
                 </p>
               </div>
             </div>
