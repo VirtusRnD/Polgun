@@ -1,15 +1,44 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { getLocalizedBlogs } from '../constants/blogData'
 
 export default function KnowledgeCenterPage() {
   const { t, i18n } = useTranslation()
-  const blogs = getLocalizedBlogs(i18n.language)
+  const [liveBlogs, setLiveBlogs] = useState([])
+  const [loading, setLoading] = useState(true)
 
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
+
+  useEffect(() => {
+    let cancelled = false
+
+    async function fetchBlogs() {
+      try {
+        const res = await fetch('/api/blog/visible')
+        if (!res.ok) return
+        const contentType = res.headers.get('content-type') ?? ''
+        if (!contentType.includes('json')) return
+        const data = await res.json()
+        if (!cancelled && Array.isArray(data)) {
+          setLiveBlogs(data)
+        }
+      } catch (err) {
+        console.error('Failed to fetch blogs from CMS:', err)
+      } finally {
+        if (!cancelled) {
+          setLoading(false)
+        }
+      }
+    }
+
+    fetchBlogs()
+    return () => { cancelled = true }
+  }, [])
+
+  const blogs = getLocalizedBlogs(liveBlogs, i18n.language)
 
   return (
     <main className="pt-20" style={{ backgroundColor: 'var(--th-bg)' }}>
@@ -52,66 +81,72 @@ export default function KnowledgeCenterPage() {
       {/* ── Grid of Blog Cards ── */}
       <section className="py-24" style={{ backgroundColor: 'var(--th-surface)' }}>
         <div className="max-w-7xl mx-auto px-6 max-w-[var(--layout-max)] lg:px-12">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {blogs.map((blog) => (
-              <article
-                key={blog.id}
-                className="group rounded-3xl overflow-hidden flex flex-col transition-all duration-300 hover:shadow-2xl hover:shadow-black/5"
-                style={{
-                  backgroundColor: 'var(--th-bg)',
-                  border: '1px solid color-mix(in srgb, var(--th-border) 8%, transparent)'
-                }}
-              >
-                {/* Kapak Görseli */}
-                <div className="relative aspect-[16/10] overflow-hidden bg-neutral-100 dark:bg-neutral-900">
-                  <img
-                    src={blog.image}
-                    alt={blog.altText}
-                    className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                </div>
-
-                {/* İçerik */}
-                <div className="p-6 flex-1 flex flex-col justify-between">
-                  <div className="space-y-4">
-                    {/* Odak Kelime / Kategori */}
-                    {blog.focusKeyword && (
-                      <span className="inline-block text-[9px] font-black uppercase tracking-widest px-2.5 py-1 rounded bg-neutral-100 dark:bg-neutral-800 text-neutral-600 dark:text-neutral-300">
-                        {blog.focusKeyword}
-                      </span>
-                    )}
-
-                    {/* Blog Başlığı */}
-                    <h2 className="text-xl font-black leading-snug group-hover:text-[var(--th-primary)] transition-colors duration-300" style={{ color: 'var(--th-text)' }}>
-                      {blog.title}
-                    </h2>
-
-                    {/* Kısa Açıklama */}
-                    <p className="text-xs leading-relaxed line-clamp-3" style={{ color: 'var(--th-text-muted)' }}>
-                      {blog.description || (blog.sections[0]?.paragraphs[0] || '')}
-                    </p>
+          {blogs.length === 0 && !loading ? (
+            <div className="text-center py-20" style={{ color: 'var(--th-text-muted)' }}>
+              <p className="text-base font-semibold">{t('common.no_content', { defaultValue: 'Henüz içerik bulunmamaktadır.' })}</p>
+            </div>
+          ) : (
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {blogs.map((blog) => (
+                <article
+                  key={blog.id}
+                  className="group rounded-3xl overflow-hidden flex flex-col transition-all duration-300 hover:shadow-2xl hover:shadow-black/5"
+                  style={{
+                    backgroundColor: 'var(--th-bg)',
+                    border: '1px solid color-mix(in srgb, var(--th-border) 8%, transparent)'
+                  }}
+                >
+                  {/* Kapak Görseli */}
+                  <div className="relative aspect-[16/10] overflow-hidden bg-neutral-100 dark:bg-neutral-900">
+                    <img
+                      src={blog.image}
+                      alt={blog.altText}
+                      className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   </div>
 
-                  {/* Devamını Oku */}
-                  <div className="pt-6 border-t mt-6" style={{ borderColor: 'color-mix(in srgb, var(--th-border) 10%, transparent)' }}>
-                    <Link
-                      to={`/knowledge-center/${blog.slug}`}
-                      className="inline-flex items-center gap-2 text-xs font-bold transition-colors"
-                      style={{ color: 'var(--th-primary)' }}
-                      onMouseEnter={(e) => e.currentTarget.style.color = 'var(--th-polgun-blue)'}
-                      onMouseLeave={(e) => e.currentTarget.style.color = 'var(--th-primary)'}
-                    >
-                      {t('knowledgeCenter.read_more', { defaultValue: 'Devamını Oku' })}
-                      <svg className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
-                      </svg>
-                    </Link>
+                  {/* İçerik */}
+                  <div className="p-6 flex-1 flex flex-col justify-between">
+                    <div className="space-y-4">
+                      {/* Odak Kelime / Kategori */}
+                      {blog.focusKeyword && (
+                        <span className="inline-block text-[9px] font-black uppercase tracking-widest px-2.5 py-1 rounded bg-neutral-100 dark:bg-neutral-800 text-neutral-600 dark:text-neutral-300">
+                          {blog.focusKeyword}
+                        </span>
+                      )}
+
+                      {/* Blog Başlığı */}
+                      <h2 className="text-xl font-black leading-snug group-hover:text-[var(--th-primary)] transition-colors duration-300" style={{ color: 'var(--th-text)' }}>
+                        {blog.title}
+                      </h2>
+
+                      {/* Kısa Açıklama */}
+                      <p className="text-xs leading-relaxed line-clamp-3" style={{ color: 'var(--th-text-muted)' }}>
+                        {blog.description || (blog.sections[0]?.paragraphs[0] || '')}
+                      </p>
+                    </div>
+
+                    {/* Devamını Oku */}
+                    <div className="pt-6 border-t mt-6" style={{ borderColor: 'color-mix(in srgb, var(--th-border) 10%, transparent)' }}>
+                      <Link
+                        to={`/knowledge-center/${blog.slug}`}
+                        className="inline-flex items-center gap-2 text-xs font-bold transition-colors"
+                        style={{ color: 'var(--th-primary)' }}
+                        onMouseEnter={(e) => e.currentTarget.style.color = 'var(--th-polgun-blue)'}
+                        onMouseLeave={(e) => e.currentTarget.style.color = 'var(--th-primary)'}
+                      >
+                        {t('knowledgeCenter.read_more', { defaultValue: 'Devamını Oku' })}
+                        <svg className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
+                        </svg>
+                      </Link>
+                    </div>
                   </div>
-                </div>
-              </article>
-            ))}
-          </div>
+                </article>
+              ))}
+            </div>
+          )}
         </div>
       </section>
     </main>

@@ -1,21 +1,76 @@
 import { useEffect, useState } from 'react'
-import { useParams, Link, useNavigate } from 'react-router-dom'
+import { useParams, Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
-import { BLOG_DATA, getLocalizedBlog, getLocalizedBlogs } from '../constants/blogData'
+import { getLocalizedBlog, getLocalizedBlogs } from '../constants/blogData'
 
 export default function KnowledgeCenterDetailPage() {
   const { t, i18n } = useTranslation()
   const { slug } = useParams()
-  const navigate = useNavigate()
   const [activeFaq, setActiveFaq] = useState(null)
-
-  const rawBlog = BLOG_DATA.find((b) => b.slug === slug)
-  const blog = getLocalizedBlog(rawBlog, i18n.language)
-  const allLocalizedBlogs = getLocalizedBlogs(i18n.language)
+  const [rawBlog, setRawBlog] = useState(null)
+  const [allBlogs, setAllBlogs] = useState([])
+  const [loading, setLoading] = useState(true)
 
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [slug])
+
+  useEffect(() => {
+    let cancelled = false
+    setLoading(true)
+
+    async function loadData() {
+      try {
+        const [blogRes, allRes] = await Promise.all([
+          fetch(`/api/blog/slug/${encodeURIComponent(slug)}`),
+          fetch('/api/blog/visible'),
+        ])
+
+        let fetchedBlog = null
+        let fetchedAll = []
+
+        if (blogRes.ok) {
+          const ct = blogRes.headers.get('content-type') ?? ''
+          if (ct.includes('json')) {
+            const data = await blogRes.json()
+            if (data && !data.error && data.id) {
+              fetchedBlog = data
+            }
+          }
+        }
+
+        if (allRes.ok) {
+          const ct = allRes.headers.get('content-type') ?? ''
+          if (ct.includes('json')) {
+            const data = await allRes.json()
+            if (Array.isArray(data)) {
+              fetchedAll = data
+              if (!fetchedBlog) {
+                fetchedBlog = data.find((b) => b.slug === slug || String(b.id) === slug) || null
+              }
+            }
+          }
+        }
+
+        if (!cancelled) {
+          setRawBlog(fetchedBlog)
+          setAllBlogs(fetchedAll)
+        }
+      } catch (err) {
+        console.error('Failed to load blog from CMS:', err)
+      } finally {
+        if (!cancelled) {
+          setLoading(false)
+        }
+      }
+    }
+
+    loadData()
+    return () => { cancelled = true }
+  }, [slug])
+
+  const blog = getLocalizedBlog(rawBlog, i18n.language)
+  const allLocalizedBlogs = getLocalizedBlogs(allBlogs, i18n.language)
 
   // SEO updates
   useEffect(() => {
@@ -27,6 +82,16 @@ export default function KnowledgeCenterDetailPage() {
       }
     }
   }, [blog])
+
+  if (loading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center pt-20" style={{ backgroundColor: 'var(--th-bg)' }}>
+        <div className="animate-pulse flex flex-col items-center gap-4">
+          <div className="w-12 h-12 rounded-full border-4 border-[var(--th-primary)] border-t-transparent animate-spin" />
+        </div>
+      </div>
+    )
+  }
 
   if (!blog) {
     return (
@@ -50,14 +115,15 @@ export default function KnowledgeCenterDetailPage() {
     )
   }
 
-  // Match internal links to other actual BLOG_DATA items
-  const matchedRelated = (rawBlog?.internalLinks || [])
+  // Match internal links to other actual blog items
+  const matchedRelated = (blog?.internalLinks || [])
     .map((linkText) => {
       return allLocalizedBlogs.find(
         (b) =>
-          b.title.toLowerCase().includes(linkText.toLowerCase()) ||
-          linkText.toLowerCase().includes(b.title.toLowerCase()) ||
-          BLOG_DATA.find((rb) => rb.id === b.id)?.title.toLowerCase().includes(linkText.toLowerCase())
+          b.id !== blog.id &&
+          (b.title.toLowerCase().includes(linkText.toLowerCase()) ||
+           linkText.toLowerCase().includes(b.title.toLowerCase()) ||
+           b.raw?.title?.toLowerCase().includes(linkText.toLowerCase()))
       )
     })
     .filter(Boolean)
@@ -132,19 +198,20 @@ export default function KnowledgeCenterDetailPage() {
                     </h2>
                     <div className="space-y-4 text-sm leading-relaxed" style={{ color: 'var(--th-text-muted)' }}>
                       {section.paragraphs.map((p, pIdx) => {
+                        if (typeof p !== 'string') return null
                         // Check if paragraph is list item
                         if (p.startsWith('•') || p.startsWith('-')) {
                           return (
                             <ul key={pIdx} className="list-disc pl-5 space-y-1 my-2">
                               {p.split('•').map((item, itemIdx) => {
-                                const trimmed = item.strip ? item.strip() : item.trim();
-                                if (!trimmed) return null;
-                                return <li key={itemIdx}>{trimmed}</li>;
+                                const trimmed = item.trim()
+                                if (!trimmed) return null
+                                return <li key={itemIdx}>{trimmed}</li>
                               })}
                             </ul>
-                          );
+                          )
                         }
-                        return <p key={pIdx}>{p}</p>;
+                        return <p key={pIdx}>{p}</p>
                       })}
                     </div>
                   </div>
@@ -197,21 +264,23 @@ export default function KnowledgeCenterDetailPage() {
             {/* Right Column: Sticky Sidebar */}
             <aside className="lg:col-span-4 lg:sticky lg:top-[160px] space-y-8">
               {/* Cover Image Box */}
-              <div
-                className="rounded-3xl overflow-hidden border p-3"
-                style={{
-                  backgroundColor: 'var(--th-bg)',
-                  borderColor: 'color-mix(in srgb, var(--th-border) 8%, transparent)'
-                }}
-              >
-                <div className="relative aspect-[16/10] rounded-2xl overflow-hidden bg-neutral-50">
-                  <img
-                    src={blog.image}
-                    alt={blog.altText}
-                    className="w-full h-full object-cover"
-                  />
+              {blog.image && (
+                <div
+                  className="rounded-3xl overflow-hidden border p-3"
+                  style={{
+                    backgroundColor: 'var(--th-bg)',
+                    borderColor: 'color-mix(in srgb, var(--th-border) 8%, transparent)'
+                  }}
+                >
+                  <div className="relative aspect-[16/10] rounded-2xl overflow-hidden bg-neutral-50">
+                    <img
+                      src={blog.image}
+                      alt={blog.altText}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
                 </div>
-              </div>
+              )}
 
               {/* İlgili Yazılar (Related/Internal Links) */}
               {matchedRelated.length > 0 && (
