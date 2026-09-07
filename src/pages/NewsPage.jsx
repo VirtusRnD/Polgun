@@ -4,24 +4,6 @@ import { useSearchParams } from 'react-router-dom'
 import NewsletterCover from '../components/NewsletterCover'
 import FlipbookModal from '../components/FlipbookModal'
 
-// Static Fairs Stand Images
-import iaapaBarcelona2025 from '../assets/fairs/iaapa-barcelona-2025.jpg'
-import iaapaOrlando2025 from '../assets/fairs/iaapa-orlando-2025.jpg'
-import iaapaOrlando2024 from '../assets/fairs/iaapa-orlando-2024.jpeg'
-import dealDubai2026 from '../assets/fairs/deal-dubai-2026.jpeg'
-import tashkentUzbekistan2026 from '../assets/fairs/tashkent-uzbekistan-2026.jpeg'
-import piscinaWellnessBarcelona2025 from '../assets/fairs/piscina-wellness-barcelona-2025.jpg'
-
-// Static Fairs Stand Data Array
-const FAIRS_DATA = [
-  { id: 1, img: dealDubai2026, key: 'deal_dubai_2026', title: 'Deal Dubai 2026' },
-  { id: 2, img: tashkentUzbekistan2026, key: 'tashkent_2026', title: 'Tashkent Uzbekistan 2026' },
-  { id: 3, img: piscinaWellnessBarcelona2025, key: 'piscina_barcelona_2025', title: 'Piscina & Wellness Barcelona 2025' },
-  { id: 4, img: iaapaOrlando2025, key: 'iaapa_orlando_2025', title: 'IAAPA Expo Orlando 2025' },
-  { id: 5, img: iaapaBarcelona2025, key: 'iaapa_barcelona_2025', title: 'IAAPA Expo Barcelona 2025' },
-  { id: 6, img: iaapaOrlando2024, key: 'iaapa_orlando_2024', title: 'IAAPA Expo Orlando 2024' },
-]
-
 export default function NewsPage() {
   const { t, i18n } = useTranslation()
   const [searchParams] = useSearchParams()
@@ -34,6 +16,7 @@ export default function NewsPage() {
   const [selectedBulletin, setSelectedBulletin] = useState(null)
   const [liveBulletins, setLiveBulletins] = useState([])
   const [liveNews, setLiveNews] = useState([])
+  const [liveFairs, setLiveFairs] = useState([])
 
   useEffect(() => {
     let cancelled = false
@@ -68,8 +51,24 @@ export default function NewsPage() {
       }
     }
 
+    async function fetchFairs() {
+      try {
+        const res = await fetch('/api/fair/visible')
+        if (!res.ok) return
+        const contentType = res.headers.get('content-type') ?? ''
+        if (!contentType.includes('json')) return
+        const data = await res.json()
+        if (!cancelled && Array.isArray(data)) {
+          setLiveFairs(data)
+        }
+      } catch (err) {
+        console.error('Failed to fetch fairs from CMS:', err)
+      }
+    }
+
     fetchBulletins()
     fetchNews()
+    fetchFairs()
     return () => { cancelled = true }
   }, [])
 
@@ -122,6 +121,25 @@ export default function NewsPage() {
   }
 
   const newsList = (liveNews || []).map(mapApiNews)
+
+  const mapApiFair = (item) => {
+    const lang = (i18n.language || 'tr').toLowerCase()
+    const translation = item.translations?.find((t) => t.language?.toLowerCase() === lang)
+      || item.translations?.find((t) => t.language?.toLowerCase() === 'tr')
+      || item.translations?.[0]
+
+    return {
+      id: item.id,
+      key: item.key || `fair_${item.id}`,
+      title: translation?.title || item.title || '',
+      description: translation?.description || item.description || '',
+      img: item.img || item.image || item.image_path || '',
+      location: item.location || '',
+      website: item.website || '',
+    }
+  }
+
+  const fairsList = (liveFairs || []).map(mapApiFair)
 
   const getMonthName = (key) => {
     if (!key) return ''
@@ -367,35 +385,50 @@ export default function NewsPage() {
               </div>
 
               {/* Grid of Fair Stand Cards */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-                {FAIRS_DATA.map((fair) => (
-                  <div
-                    key={fair.id}
-                    className="group rounded-2xl overflow-hidden flex flex-col hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
-                    style={{
-                      backgroundColor: 'var(--th-bg)',
-                      border: '1px solid color-mix(in srgb, var(--th-border) 10%, transparent)',
-                      boxShadow: '0 4px 20px rgba(0,0,0,0.03)',
-                    }}
-                  >
-                    {/* Stand Image Container */}
-                    <div className="overflow-hidden aspect-[4/3] relative">
-                      <img
-                        src={fair.img}
-                        alt={`${t(`news.fairs.${fair.key}`, { defaultValue: fair.title })} stand`} // SEO alt tag format requirement
-                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                      />
-                    </div>
+              {fairsList.length === 0 ? (
+                <div className="text-center py-16" style={{ color: 'var(--th-text-muted)' }}>
+                  <p className="text-base font-semibold">{t('common.no_content', { defaultValue: 'Henüz içerik bulunmamaktadır.' })}</p>
+                </div>
+              ) : (
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+                  {fairsList.map((fair) => {
+                    const displayTitle = fair.title ? t(`news.fairs.${fair.key}`, { defaultValue: fair.title }) : fair.title
 
-                    {/* Centered Caption matching corporate style */}
-                    <div className="p-6 text-center">
-                      <h4 className="font-black text-base leading-snug tracking-wide" style={{ color: 'var(--th-text)' }}>
-                        {t(`news.fairs.${fair.key}`, { defaultValue: fair.title })}
-                      </h4>
-                    </div>
-                  </div>
-                ))}
-              </div>
+                    return (
+                      <div
+                        key={fair.id}
+                        className="group rounded-2xl overflow-hidden flex flex-col hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+                        style={{
+                          backgroundColor: 'var(--th-bg)',
+                          border: '1px solid color-mix(in srgb, var(--th-border) 10%, transparent)',
+                          boxShadow: '0 4px 20px rgba(0,0,0,0.03)',
+                        }}
+                      >
+                        {/* Stand Image Container */}
+                        <div className="overflow-hidden aspect-[4/3] relative">
+                          <img
+                            src={fair.img}
+                            alt={`${displayTitle} stand`} // SEO alt tag format requirement
+                            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                          />
+                        </div>
+
+                        {/* Centered Caption matching corporate style */}
+                        <div className="p-6 text-center">
+                          <h4 className="font-black text-base leading-snug tracking-wide" style={{ color: 'var(--th-text)' }}>
+                            {displayTitle}
+                          </h4>
+                          {fair.location && (
+                            <p className="text-xs mt-1.5 font-medium" style={{ color: 'var(--th-text-muted)' }}>
+                              {fair.location}
+                            </p>
+                          )}
+                        </div>
+                      </div>
+                    )
+                  })}
+                </div>
+              )}
             </div>
           )}
 
