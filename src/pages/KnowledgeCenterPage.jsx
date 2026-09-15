@@ -17,7 +17,7 @@ export default function KnowledgeCenterPage() {
 
     async function fetchBlogs() {
       try {
-        const res = await fetch('/api/blog/visible')
+        const res = await fetch(`/api/blog/visible?t=${Date.now()}`, { cache: 'no-store' })
         if (!res.ok) return
         const contentType = res.headers.get('content-type') ?? ''
         if (!contentType.includes('json')) return
@@ -35,7 +35,16 @@ export default function KnowledgeCenterPage() {
     }
 
     fetchBlogs()
-    return () => { cancelled = true }
+
+    const handleFocus = () => {
+      fetchBlogs()
+    }
+    window.addEventListener('focus', handleFocus)
+
+    return () => {
+      cancelled = true
+      window.removeEventListener('focus', handleFocus)
+    }
   }, [])
 
   const blogs = getLocalizedBlogs(liveBlogs, i18n.language)

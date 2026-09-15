@@ -30,22 +30,14 @@ import why3 from '../assets/products/3.jpg'
 import why4 from '../assets/products/4.jpg'
 import why5 from '../assets/products/5.jpg'
 
-import hero1 from '../assets/hero/1.avif'
-import hero2 from '../assets/hero/2.avif'
-import hero3 from '../assets/hero/3.avif'
-import hero4 from '../assets/hero/4.avif'
-import hero5 from '../assets/hero/5.avif'
-import hero6 from '../assets/hero/6.avif'
-import hero7 from '../assets/hero/7.avif'
-import hero8 from '../assets/hero/8.avif'
-import hero9 from '../assets/hero/9.avif'
-import hero10 from '../assets/hero/10.avif'
-import hero11 from '../assets/hero/11.avif'
-import hero12 from '../assets/hero/12.avif'
-import hero13 from '../assets/hero/13.avif'
-import hero14 from '../assets/hero/14.avif'
-import hero15 from '../assets/hero/15.avif'
-import hero16 from '../assets/hero/16.avif'
+const API_URL = import.meta.env.VITE_API_URL || '';
+const getImageUrl = (path) => {
+  if (!path) return '';
+  if (path.startsWith('data:') || path.startsWith('blob:') || path.startsWith('http://') || path.startsWith('https://')) {
+    return path;
+  }
+  return `${API_URL}${path.startsWith('/') ? '' : '/'}${path}`;
+};
 
 const REFS = [
   { src: refAmara, alt: 'Amara Prestige Elite' },
@@ -134,27 +126,6 @@ function MarqueeStrip() {
     </div>
   )
 }
-// Hero görselleri
-const HERO_IMAGES = [
-  { title: 'Frenzy Water Park', location: 'Fransa', img: hero1 },
-  { title: 'Seignosse Atlantic Park', location: 'Fransa', img: hero2 },
-  { title: 'Rixos Murjana Park', location: 'Suudi Arabistan', img: hero3 },
-  { title: 'S Club Park', location: 'Serbia', img: hero4 },
-  { title: 'Nirvana Dolce Vita', location: 'Türkiye', img: hero5 },
-  { title: 'Pine Beach', location: 'Türkiye', img: hero6 },
-  { title: 'The Land of Legends', location: 'Türkiye', img: hero7 },
-  { title: 'Aqualand Mallorca', location: 'İspanya', img: hero8 },
-  { title: 'Mövenpick Resort', location: 'Türkiye', img: hero9 },
-  { title: 'Güral Premier', location: 'Türkiye', img: hero10 },
-  { title: 'Fantazia Resort Marsa Alam', location: 'Mısır', img: hero11 },
-  { title: 'Sarvar Fürdö', location: 'Macaristan', img: hero12 },
-  { title: 'Paradise Spa Dogo', location: 'Güney Kore', img: hero13 },
-  { title: 'Aquila Rithymna Beach', location: 'Yunanistan', img: hero14 },
-  { title: 'Kirman Sidera', location: 'Türkiye', img: hero15 },
-  { title: 'Port-Valais', location: 'İsviçre', img: hero16 },
-
-]
-
 // ── Carousel Görselleri ────────────────────────────────────
 const CAROUSEL_IMAGES = [
   { src: why1, alt: 'Kunuku Aqua Resort - Curaçao' },
@@ -166,35 +137,41 @@ const CAROUSEL_IMAGES = [
 ]
 
 // ── Sayfa bileşeni ─────────────────────────────────────────
-// ── Sayfa bileşeni ─────────────────────────────────────────
 export default function HomePage() {
   const { t, i18n } = useTranslation()
   const { setActivePage } = useOutletContext();
   const [heroImageIndex, setHeroImageIndex] = useState(0)
   const [carouselImageIndex, setCarouselImageIndex] = useState(0)
-  const [liveHeroImages, setLiveHeroImages] = useState(null)
+  const [liveHeroImages, setLiveHeroImages] = useState([])
 
   useEffect(() => {
-    let cancelled = false
-
+    let cancelled = false;
     async function fetchHeroImages() {
       try {
-        const res = await fetch('/api/hero/visible')
-        if (!res.ok) return
-        const contentType = res.headers.get('content-type') ?? ''
-        if (!contentType.includes('json')) return
-        const data = await res.json()
+        const res = await fetch(`${API_URL}/api/hero/visible?t=${Date.now()}`, {
+          cache: 'no-store',
+        });
+        if (!res.ok) return;
+        const data = await res.json();
         if (!cancelled && Array.isArray(data)) {
-          setLiveHeroImages(data)
+          setLiveHeroImages(data);
         }
       } catch (err) {
-        console.error('Failed to fetch hero images from CMS:', err)
+        console.error('Failed to fetch hero images from CMS:', err);
       }
     }
+    fetchHeroImages();
 
-    fetchHeroImages()
-    return () => { cancelled = true }
-  }, [])
+    const handleFocus = () => {
+      fetchHeroImages();
+    };
+    window.addEventListener('focus', handleFocus);
+
+    return () => {
+      cancelled = true;
+      window.removeEventListener('focus', handleFocus);
+    };
+  }, [i18n.language]);
 
   // Location translation mapping helper
   const translateLocation = (loc) => {
@@ -225,26 +202,41 @@ export default function HomePage() {
   }
 
   const mapApiHero = (item) => {
-    const lang = (i18n.language || 'tr').toLowerCase()
-    const translation = item.translations?.find((t) => t.language?.toLowerCase() === lang)
-      || item.translations?.find((t) => t.language?.toLowerCase() === 'tr')
-      || item.translations?.[0]
+    const rawLang = (i18n.language || 'tr').toLowerCase();
+    const langCode = rawLang.split('-')[0];
 
-    const title = translation?.title || item.title || ''
-    const location = translation?.location || item.location || item.subtitle || ''
-    const img = item.image_path || item.image || ''
+    const findLatestTranslation = (lang) => {
+      const list = item.translations?.filter((t) => t.language?.toLowerCase() === lang) || [];
+      if (!list.length) return null;
+      return list.slice().sort((a, b) => {
+        const timeDiff = new Date(b.updated_at || 0) - new Date(a.updated_at || 0);
+        return timeDiff !== 0 ? timeDiff : (b.id || 0) - (a.id || 0);
+      })[0];
+    };
 
+    const resolveField = (field, fallback = '') => {
+      const translation = findLatestTranslation(langCode) || (langCode !== 'tr' ? findLatestTranslation('tr') : null);
+      const itemTime = item.updated_at ? new Date(item.updated_at).getTime() : 0;
+      const transTime = translation?.updated_at ? new Date(translation.updated_at).getTime() : 0;
+      if (itemTime >= transTime && item[field]) {
+        return item[field];
+      }
+      return translation?.[field] || item[field] || fallback;
+    };
+
+    const title = resolveField('title');
+    const location = resolveField('location') || item.subtitle || '';
+    const rawImg = item.image_path || item.image || item.ImagePath || '';
+    const img = getImageUrl(rawImg);
     return {
       id: item.id,
       title,
       location,
       img,
-    }
-  }
+    };
+  };
 
-  const heroList = liveHeroImages && liveHeroImages.length > 0
-    ? liveHeroImages.map(mapApiHero)
-    : HERO_IMAGES
+  const heroList = (liveHeroImages || []).map(mapApiHero)
 
   const activeHero = heroList[heroImageIndex] || heroList[0]
 

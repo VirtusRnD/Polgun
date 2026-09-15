@@ -25,10 +25,24 @@ export function mapApiBlog(item, lang = 'tr') {
   if (!item) return null;
   const langKey = (lang || 'tr').toLowerCase().split('-')[0];
 
+  const findLatestTranslation = (translations, targetLang) => {
+    if (!Array.isArray(translations)) return null;
+    const matches = translations.filter(
+      (t) => (t.language || '').toLowerCase().split('-')[0] === targetLang.toLowerCase()
+    );
+    if (matches.length === 0) return null;
+    matches.sort((a, b) => {
+      const timeA = a.updated_at ? new Date(a.updated_at).getTime() : 0;
+      const timeB = b.updated_at ? new Date(b.updated_at).getTime() : 0;
+      if (timeA !== timeB) return timeB - timeA;
+      return (b.id || 0) - (a.id || 0);
+    });
+    return matches[0];
+  };
+
   // 1. Check if backend translations contain requested language
-  const dbTrans = item.translations?.find(
-    (t) => (t.language || '').toLowerCase().split('-')[0] === langKey
-  );
+  const dbTrans = findLatestTranslation(item.translations, langKey)
+    || findLatestTranslation(item.translations, 'tr');
 
   // 2. Check fallback dictionary translations (e.g. static translation table if DB translation missing)
   const dictTrans = langKey !== 'tr' ? (BLOG_TRANSLATIONS[item.id]?.[langKey] || BLOG_TRANSLATIONS[item.id]?.['en']) : null;

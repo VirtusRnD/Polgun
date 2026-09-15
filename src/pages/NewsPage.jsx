@@ -4,6 +4,31 @@ import { useSearchParams } from 'react-router-dom'
 import NewsletterCover from '../components/NewsletterCover'
 import FlipbookModal from '../components/FlipbookModal'
 
+const API_URL = import.meta.env.VITE_API_URL || '';
+const getImageUrl = (path) => {
+  if (!path) return '';
+  if (path.startsWith('data:') || path.startsWith('blob:') || path.startsWith('http://') || path.startsWith('https://')) {
+    return path;
+  }
+  const cleanPath = path.startsWith('/') ? path : '/' + path;
+  return `${API_URL}${cleanPath}`;
+};
+
+const findLatestTranslation = (translations, targetLang) => {
+  if (!Array.isArray(translations)) return null;
+  const matches = translations.filter(
+    (t) => (t.language || '').toLowerCase().split('-')[0] === targetLang.toLowerCase()
+  );
+  if (matches.length === 0) return null;
+  matches.sort((a, b) => {
+    const timeA = a.updated_at ? new Date(a.updated_at).getTime() : 0;
+    const timeB = b.updated_at ? new Date(b.updated_at).getTime() : 0;
+    if (timeA !== timeB) return timeB - timeA;
+    return (b.id || 0) - (a.id || 0);
+  });
+  return matches[0];
+};
+
 export default function NewsPage() {
   const { t, i18n } = useTranslation()
   const [searchParams] = useSearchParams()
@@ -23,7 +48,7 @@ export default function NewsPage() {
 
     async function fetchBulletins() {
       try {
-        const res = await fetch('/api/bulletin/visible')
+        const res = await fetch(`${API_URL}/api/bulletin/visible?t=${Date.now()}`, { cache: 'no-store' })
         if (!res.ok) return
         const contentType = res.headers.get('content-type') ?? ''
         if (!contentType.includes('json')) return
@@ -38,7 +63,7 @@ export default function NewsPage() {
 
     async function fetchNews() {
       try {
-        const res = await fetch('/api/news/visible')
+        const res = await fetch(`${API_URL}/api/news/visible?t=${Date.now()}`, { cache: 'no-store' })
         if (!res.ok) return
         const contentType = res.headers.get('content-type') ?? ''
         if (!contentType.includes('json')) return
@@ -53,7 +78,7 @@ export default function NewsPage() {
 
     async function fetchFairs() {
       try {
-        const res = await fetch('/api/fair/visible')
+        const res = await fetch(`${API_URL}/api/fair/visible?t=${Date.now()}`, { cache: 'no-store' })
         if (!res.ok) return
         const contentType = res.headers.get('content-type') ?? ''
         if (!contentType.includes('json')) return
@@ -66,30 +91,57 @@ export default function NewsPage() {
       }
     }
 
-    fetchBulletins()
-    fetchNews()
-    fetchFairs()
-    return () => { cancelled = true }
+    function fetchAll() {
+      fetchBulletins()
+      fetchNews()
+      fetchFairs()
+    }
+
+    fetchAll()
+
+    const handleFocus = () => {
+      fetchAll()
+    }
+    window.addEventListener('focus', handleFocus)
+
+    return () => {
+      cancelled = true
+      window.removeEventListener('focus', handleFocus)
+    }
   }, [])
 
-  const mapApiBulletin = (item) => ({
-    id: item.id,
-    title: item.title || '',
-    file: item.file || item.file_path || item.pdf_url || '',
-    cover: item.cover || item.cover_image || item.cover_path || '',
-    year: item.year || 2026,
-    monthKey: item.monthKey || item.month_key || 'months.january',
-    issue: item.issue || item.issue_number || item.order_index || item.id,
-  })
+  const resolveLocalizedField = (item, field) => {
+    const rawLang = (i18n.language || 'tr').toLowerCase();
+    const lang = rawLang.split('-')[0];
+    const translation = findLatestTranslation(item.translations, lang)
+      || (lang !== 'tr' ? findLatestTranslation(item.translations, 'tr') : null);
+
+    const itemTime = item.updated_at ? new Date(item.updated_at).getTime() : 0;
+    const transTime = translation?.updated_at ? new Date(translation.updated_at).getTime() : 0;
+
+    if (itemTime >= transTime && item[field]) {
+      return item[field];
+    }
+    return translation?.[field] || item[field] || '';
+  };
+
+  const mapApiBulletin = (item) => {
+    const title = resolveLocalizedField(item, 'title')
+
+    return {
+      id: item.id,
+      title,
+      file: getImageUrl(item.file || item.file_path || item.pdf_url || ''),
+      cover: getImageUrl(item.cover || item.cover_image || item.cover_path || ''),
+      year: item.year || 2026,
+      monthKey: item.monthKey || item.month_key || 'months.january',
+      issue: item.issue || item.issue_number || item.order_index || item.id,
+    }
+  }
 
   const bulletinsList = (liveBulletins || []).map(mapApiBulletin)
 
   const mapApiNews = (item) => {
-    const lang = (i18n.language || 'tr').toLowerCase()
-    const translation = item.translations?.find((t) => t.language?.toLowerCase() === lang)
-      || item.translations?.find((t) => t.language?.toLowerCase() === 'tr')
-      || item.translations?.[0]
-
     let images = []
     if (Array.isArray(item.images)) {
       images = item.images
@@ -101,13 +153,14 @@ export default function NewsPage() {
       }
     }
 
-    const coverImg = item.img || item.image || item.image_path || (images.length > 0 ? images[0] : '')
+    const coverImg = getImageUrl(item.img || item.image || item.image_path || (images.length > 0 ? images[0] : ''))
+    images = images.map((img) => getImageUrl(img))
     if (images.length === 0 && coverImg) {
       images = [coverImg]
     }
 
-    const title = translation?.title || item.title || ''
-    const desc = translation?.description || item.description || item.desc || ''
+    const title = resolveLocalizedField(item, 'title')
+    const desc = resolveLocalizedField(item, 'description') || item.desc || ''
 
     return {
       id: item.id || `news-${item.order_index || Math.random()}`,
@@ -123,17 +176,15 @@ export default function NewsPage() {
   const newsList = (liveNews || []).map(mapApiNews)
 
   const mapApiFair = (item) => {
-    const lang = (i18n.language || 'tr').toLowerCase()
-    const translation = item.translations?.find((t) => t.language?.toLowerCase() === lang)
-      || item.translations?.find((t) => t.language?.toLowerCase() === 'tr')
-      || item.translations?.[0]
+    const title = resolveLocalizedField(item, 'title')
+    const description = resolveLocalizedField(item, 'description')
 
     return {
       id: item.id,
       key: item.key || `fair_${item.id}`,
-      title: translation?.title || item.title || '',
-      description: translation?.description || item.description || '',
-      img: item.img || item.image || item.image_path || '',
+      title,
+      description,
+      img: getImageUrl(item.img || item.image || item.image_path || ''),
       location: item.location || '',
       website: item.website || '',
     }
@@ -310,8 +361,8 @@ export default function NewsPage() {
               ) : (
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 animate-fade-in">
                   {newsList.map((item) => {
-                    const displayTitle = t(`news.articles.${item.id}.title`, { defaultValue: item.title })
-                    const displayDesc = t(`news.articles.${item.id}.desc`, { defaultValue: item.desc })
+                    const displayTitle = item.title
+                    const displayDesc = item.desc
 
                     return (
                       <article
@@ -392,7 +443,7 @@ export default function NewsPage() {
               ) : (
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
                   {fairsList.map((fair) => {
-                    const displayTitle = fair.title ? t(`news.fairs.${fair.key}`, { defaultValue: fair.title }) : fair.title
+                    const displayTitle = fair.title
 
                     return (
                       <div
@@ -552,7 +603,7 @@ export default function NewsPage() {
             <div className="w-full md:w-1/2 bg-black flex items-center justify-center relative min-h-[300px] md:min-h-0">
               <img
                 src={selectedArticle.images[galleryIndex]}
-                alt={t(`news.articles.${selectedArticle.id}.title`, { defaultValue: selectedArticle.title })}
+                alt={selectedArticle.title}
                 className="w-full h-full object-contain max-h-[50vh] md:max-h-[80vh]"
               />
 
@@ -600,10 +651,10 @@ export default function NewsPage() {
                   </span>
                 </div>
                 <h3 className="text-xl font-black text-white mb-4 leading-snug">
-                  {t(`news.articles.${selectedArticle.id}.title`, { defaultValue: selectedArticle.title })}
+                  {selectedArticle.title}
                 </h3>
                 <p className="text-neutral-300 text-sm leading-relaxed whitespace-pre-line" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 80%, transparent)' }}>
-                  {t(`news.articles.${selectedArticle.id}.desc`, { defaultValue: selectedArticle.desc })}
+                  {selectedArticle.desc}
                 </p>
               </div>
             </div>
