@@ -1,19 +1,62 @@
 import { BLOG_TRANSLATIONS } from './blogTranslations';
 
 /**
+ * Safely resolves a multi-language field value.
+ * Handles strings, numbers, objects like { tr: "...", en: "..." }, or nested object fields.
+ */
+export function getLocalizedText(val, lang = 'tr') {
+  if (val === null || val === undefined) return '';
+  if (typeof val === 'string') return val;
+  if (typeof val === 'number') return String(val);
+
+  if (typeof val === 'object') {
+    const langKey = (lang || 'tr').toLowerCase().split('-')[0];
+    if (val[langKey] !== undefined && val[langKey] !== null) {
+      return getLocalizedText(val[langKey], lang);
+    }
+    if (val.tr !== undefined && val.tr !== null) {
+      return getLocalizedText(val.tr, lang);
+    }
+    if (val.en !== undefined && val.en !== null) {
+      return getLocalizedText(val.en, lang);
+    }
+    if (val.text !== undefined && val.text !== null) {
+      return getLocalizedText(val.text, lang);
+    }
+    if (val.content !== undefined && val.content !== null) {
+      return getLocalizedText(val.content, lang);
+    }
+    if (val.value !== undefined && val.value !== null) {
+      return getLocalizedText(val.value, lang);
+    }
+    const values = Object.values(val).filter((v) => v !== null && v !== undefined);
+    if (values.length > 0) {
+      return getLocalizedText(values[0], lang);
+    }
+  }
+  return '';
+}
+
+/**
  * Safely parses a field that might be a JSON string, array, or object.
  */
 export function parseJsonField(field, fallback = []) {
   if (!field) return fallback;
   if (Array.isArray(field)) return field;
   if (typeof field === 'string') {
+    const trimmed = field.trim();
+    if (!trimmed) return fallback;
     try {
-      const parsed = JSON.parse(field);
-      return Array.isArray(parsed) ? parsed : fallback;
-    } catch {
+      const parsed = JSON.parse(trimmed);
+      if (Array.isArray(parsed)) return parsed;
+      if (parsed && typeof parsed === 'object') return [parsed];
+      if (typeof parsed === 'string') return [parsed];
       return fallback;
+    } catch {
+      return [trimmed];
     }
   }
+  if (typeof field === 'object') return [field];
   return fallback;
 }
 
@@ -28,7 +71,7 @@ export function mapApiBlog(item, lang = 'tr') {
   const findLatestTranslation = (translations, targetLang) => {
     if (!Array.isArray(translations)) return null;
     const matches = translations.filter(
-      (t) => (t.language || '').toLowerCase().split('-')[0] === targetLang.toLowerCase()
+      (t) => (t?.language || '').toLowerCase().split('-')[0] === targetLang.toLowerCase()
     );
     if (matches.length === 0) return null;
     matches.sort((a, b) => {
@@ -54,20 +97,78 @@ export function mapApiBlog(item, lang = 'tr') {
   const rawIntro = trans?.intro ?? item.intro;
   const rawInternalLinks = trans?.internal_links ?? trans?.internalLinks ?? item.internal_links ?? item.internalLinks;
 
+  // Process intro paragraphs
+  const parsedIntro = parseJsonField(rawIntro, [])
+    .map((p) => getLocalizedText(p, langKey))
+    .filter(Boolean);
+
+  // Process sections and paragraphs
+  const parsedSections = parseJsonField(rawSections, [])
+    .map((sec) => {
+      if (!sec) return null;
+      if (typeof sec === 'string') {
+        const text = getLocalizedText(sec, langKey);
+        return text ? { heading: '', paragraphs: [text] } : null;
+      }
+      const heading = getLocalizedText(sec.heading || sec.title || sec.name, langKey);
+      const rawParas = sec.paragraphs ?? sec.content ?? sec.text ?? [];
+      const paragraphs = parseJsonField(rawParas, [])
+        .map((p) => getLocalizedText(p, langKey))
+        .filter(Boolean);
+      return { heading, paragraphs };
+    })
+    .filter(Boolean);
+
+  // Process FAQs
+  const parsedFaqs = parseJsonField(rawFaqs, [])
+    .map((faq) => {
+      if (!faq) return null;
+      if (typeof faq === 'string') {
+        const text = getLocalizedText(faq, langKey);
+        return text ? { question: text, answer: '' } : null;
+      }
+      const question = getLocalizedText(faq.question || faq.q, langKey);
+      const answer = getLocalizedText(faq.answer || faq.a, langKey);
+      return { question, answer };
+    })
+    .filter(Boolean);
+
+  // Process internal links (supports strings and object links with title/label/url/slug)
+  const parsedInternalLinks = parseJsonField(rawInternalLinks, [])
+    .map((link) => {
+      if (!link) return null;
+      if (typeof link === 'string') {
+        const text = getLocalizedText(link, langKey);
+        return text ? { title: text, url: '', label: text } : null;
+      }
+      if (typeof link === 'object') {
+        const title = getLocalizedText(link.title || link.label || link.text || link.name, langKey);
+        const url = link.url || link.link || link.href || link.path || link.slug || '';
+        return {
+          title: title || url,
+          url: url || '',
+          label: title || url,
+          ...link,
+        };
+      }
+      return null;
+    })
+    .filter(Boolean);
+
   return {
     id: item.id,
-    title: trans?.title || item.title || '',
-    description: trans?.description || item.description || '',
-    seoTitle: trans?.seo_title || trans?.seoTitle || item.seo_title || item.seoTitle || trans?.title || item.title || '',
-    metaDesc: trans?.meta_desc || trans?.metaDesc || item.meta_desc || item.metaDesc || trans?.description || item.description || '',
+    title: getLocalizedText(trans?.title || item.title, langKey),
+    description: getLocalizedText(trans?.description || item.description, langKey),
+    seoTitle: getLocalizedText(trans?.seo_title || trans?.seoTitle || item.seo_title || item.seoTitle || trans?.title || item.title, langKey),
+    metaDesc: getLocalizedText(trans?.meta_desc || trans?.metaDesc || item.meta_desc || item.metaDesc || trans?.description || item.description, langKey),
     slug: item.slug || String(item.id),
     image: item.image || item.image_path || item.img || '',
-    altText: trans?.alt_text || trans?.altText || item.alt_text || item.altText || item.title || '',
-    focusKeyword: trans?.focus_keyword || trans?.focusKeyword || item.focus_keyword || item.focusKeyword || '',
-    intro: parseJsonField(rawIntro, []),
-    sections: parseJsonField(rawSections, []),
-    faqs: parseJsonField(rawFaqs, []),
-    internalLinks: parseJsonField(rawInternalLinks, []),
+    altText: getLocalizedText(trans?.alt_text || trans?.altText || item.alt_text || item.altText || item.title, langKey),
+    focusKeyword: getLocalizedText(trans?.focus_keyword || trans?.focusKeyword || item.focus_keyword || item.focusKeyword, langKey),
+    intro: parsedIntro,
+    sections: parsedSections,
+    faqs: parsedFaqs,
+    internalLinks: parsedInternalLinks,
     order_index: item.order_index || 0,
     raw: item,
   };
@@ -90,3 +191,4 @@ export function getLocalizedBlogs(blogs = [], lang = 'tr') {
 
 // Fallback empty export
 export const BLOG_DATA = [];
+

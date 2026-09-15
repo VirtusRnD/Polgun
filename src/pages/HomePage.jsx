@@ -154,7 +154,8 @@ export default function HomePage() {
         if (!res.ok) return;
         const data = await res.json();
         if (!cancelled && Array.isArray(data)) {
-          setLiveHeroImages(data);
+          const sorted = data.slice().sort((a, b) => (a.order_index ?? a.order ?? 0) - (b.order_index ?? b.order ?? 0));
+          setLiveHeroImages(sorted);
         }
       } catch (err) {
         console.error('Failed to fetch hero images from CMS:', err);

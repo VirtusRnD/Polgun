@@ -54,7 +54,8 @@ export default function NewsPage() {
         if (!contentType.includes('json')) return
         const data = await res.json()
         if (!cancelled && Array.isArray(data)) {
-          setLiveBulletins(data)
+          const sorted = data.slice().sort((a, b) => (a.order_index ?? a.order ?? 0) - (b.order_index ?? b.order ?? 0))
+          setLiveBulletins(sorted)
         }
       } catch (err) {
         console.error('Failed to fetch bulletins from CMS:', err)
@@ -69,7 +70,8 @@ export default function NewsPage() {
         if (!contentType.includes('json')) return
         const data = await res.json()
         if (!cancelled && Array.isArray(data)) {
-          setLiveNews(data)
+          const sorted = data.slice().sort((a, b) => (a.order_index ?? a.order ?? 0) - (b.order_index ?? b.order ?? 0))
+          setLiveNews(sorted)
         }
       } catch (err) {
         console.error('Failed to fetch news from CMS:', err)
@@ -84,7 +86,8 @@ export default function NewsPage() {
         if (!contentType.includes('json')) return
         const data = await res.json()
         if (!cancelled && Array.isArray(data)) {
-          setLiveFairs(data)
+          const sorted = data.slice().sort((a, b) => (a.order_index ?? a.order ?? 0) - (b.order_index ?? b.order ?? 0))
+          setLiveFairs(sorted)
         }
       } catch (err) {
         console.error('Failed to fetch fairs from CMS:', err)
@@ -139,7 +142,47 @@ export default function NewsPage() {
     }
   }
 
-  const bulletinsList = (liveBulletins || []).map(mapApiBulletin)
+  const monthOrder = {
+    december: 12,
+    november: 11,
+    october: 10,
+    september: 9,
+    august: 8,
+    july: 7,
+    june: 6,
+    may: 5,
+    april: 4,
+    march: 3,
+    february: 2,
+    january: 1,
+  }
+
+  const bulletinsList = (liveBulletins || [])
+    .slice()
+    .sort((a, b) => {
+      // 1. Sort by ID descending (newest DB entry first)
+      const idA = Number(a.id) || 0
+      const idB = Number(b.id) || 0
+      if (idA !== idB && idA > 0 && idB > 0) return idB - idA
+
+      // 2. Sort by year descending
+      const yearA = Number(a.year) || 0
+      const yearB = Number(b.year) || 0
+      if (yearA !== yearB) return yearB - yearA
+
+      // 3. Sort by month descending
+      const keyA = String(a.monthKey || a.month_key || '').replace(/^months\./, '').toLowerCase()
+      const keyB = String(b.monthKey || b.month_key || '').replace(/^months\./, '').toLowerCase()
+      const mA = monthOrder[keyA] || 0
+      const mB = monthOrder[keyB] || 0
+      if (mA !== mB) return mB - mA
+
+      // 4. Sort by issue descending
+      const issueA = Number(a.issue || a.issue_number || a.order_index) || 0
+      const issueB = Number(b.issue || b.issue_number || b.order_index) || 0
+      return issueB - issueA
+    })
+    .map(mapApiBulletin)
 
   const mapApiNews = (item) => {
     let images = []
@@ -194,8 +237,51 @@ export default function NewsPage() {
 
   const getMonthName = (key) => {
     if (!key) return ''
-    const cleanKey = key.replace(/^months\./, '')
-    return t(`news.months.${cleanKey}`, { defaultValue: t(`news.${key}`, { defaultValue: key }) })
+    const cleanKey = String(key).replace(/^news\.months\./, '').replace(/^months\./, '').trim().toLowerCase()
+    
+    const fallbackTr = {
+      january: 'Ocak',
+      february: 'Şubat',
+      march: 'Mart',
+      april: 'Nisan',
+      may: 'Mayıs',
+      june: 'Haziran',
+      july: 'Temmuz',
+      august: 'Ağustos',
+      september: 'Eylül',
+      october: 'Ekim',
+      november: 'Kasım',
+      december: 'Aralık',
+    }
+
+    const fallbackEn = {
+      january: 'January',
+      february: 'February',
+      march: 'March',
+      april: 'April',
+      may: 'May',
+      june: 'June',
+      july: 'July',
+      august: 'August',
+      september: 'September',
+      october: 'October',
+      november: 'November',
+      december: 'December',
+    }
+
+    const currentLang = (i18n.language || 'tr').toLowerCase()
+    const isEn = currentLang.startsWith('en')
+
+    const transVal = t(`news.months.${cleanKey}`, { defaultValue: '' })
+    if (transVal && !transVal.includes('news.months.') && !transVal.includes('months.')) {
+      return transVal
+    }
+
+    if (isEn && fallbackEn[cleanKey]) return fallbackEn[cleanKey]
+    if (fallbackTr[cleanKey]) return fallbackTr[cleanKey]
+
+    // Capitalize first letter of cleanKey if unknown
+    return cleanKey.charAt(0).toUpperCase() + cleanKey.slice(1)
   }
 
   // Article Lightbox States

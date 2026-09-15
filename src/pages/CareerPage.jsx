@@ -6,6 +6,45 @@ import careerSample from '../assets/career/career-sample.avif'
 // CMS API — uses relative paths (frontend and backend are on the same server)
 const API_URL = ''
 
+function resolveJobLocalizedField(job, field, lang = 'tr') {
+  if (!job) return ''
+  const val = job[field]
+
+  // 1. If translations array is provided by CMS Go backend:
+  if (Array.isArray(job.translations) && job.translations.length > 0) {
+    const activeLang = lang ? lang.toLowerCase() : 'tr'
+    const match = job.translations.find((t) => t.language?.toLowerCase() === activeLang)
+    if (match && match[field]) {
+      return match[field]
+    }
+    // Fallback to Turkish or English translation
+    const trMatch = job.translations.find((t) => t.language?.toLowerCase() === 'tr')
+    if (trMatch && trMatch[field]) return trMatch[field]
+    const enMatch = job.translations.find((t) => t.language?.toLowerCase() === 'en')
+    if (enMatch && enMatch[field]) return enMatch[field]
+    if (job.translations[0] && job.translations[0][field]) return job.translations[0][field]
+  }
+
+  // 2. If object with language keys: { tr: '...', en: '...' }
+  if (val && typeof val === 'object') {
+    const activeLang = lang ? lang.toLowerCase() : 'tr'
+    return val[activeLang] || val.tr || val.en || Object.values(val)[0] || ''
+  }
+
+  // 3. If JSON string:
+  if (typeof val === 'string' && val.trim().startsWith('{')) {
+    try {
+      const parsed = JSON.parse(val)
+      const activeLang = lang ? lang.toLowerCase() : 'tr'
+      return parsed[activeLang] || parsed.tr || parsed.en || Object.values(parsed)[0] || ''
+    } catch {
+      // not JSON
+    }
+  }
+
+  return typeof val === 'string' ? val : ''
+}
+
 /* Mock positions retained only as a reference. Live jobs must be created in CMS.
 const POSITIONS = [
   {
@@ -279,27 +318,58 @@ export default function CareerPage() {
     let cancelled = false
     async function loadJobs() {
       try {
-        const res = await fetch(`${API_URL}/api/career/jobs?lang=${i18n.language}`)
-        if (!res.ok) throw new Error('API error')
-        const data = await res.json()
-        if (!cancelled && Array.isArray(data)) {
-          // Map CMS job shape to the shape the UI expects
-          setLivePositions(data.map((job) => ({
-            id: String(job.id),
-            cmsId: job.id,           // numeric id used when submitting application
-            title: job.title || '',
-            department: job.location || 'Genel', // CMS jobs have location, not department
-            location: job.location || 'Muğla',
-            type: job.type || 'Tam Zamanlı',
-            date: job.created_at
-              ? new Date(job.created_at).toLocaleDateString(i18n.language === 'tr' ? 'tr-TR' : 'en-US', { day: 'numeric', month: 'long', year: 'numeric' })
-              : '',
-            desc: job.description || '',
-            icon: 'default',
-          })))
+        const endpoints = [
+          `${API_URL}/api/career/jobs/visible?lang=${i18n.language}&t=${Date.now()}`,
+          `${API_URL}/api/career/jobs?lang=${i18n.language}&t=${Date.now()}`,
+          `${API_URL}/api/job/visible?lang=${i18n.language}&t=${Date.now()}`,
+          `${API_URL}/api/career/visible?lang=${i18n.language}&t=${Date.now()}`,
+        ];
+
+        let data = null;
+        for (const url of endpoints) {
+          try {
+            const res = await fetch(url, { cache: 'no-store' });
+            if (res.ok) {
+              const ct = res.headers.get('content-type') ?? '';
+              if (ct.includes('json')) {
+                const json = await res.json();
+                if (Array.isArray(json)) {
+                  data = json;
+                  break;
+                }
+              }
+            }
+          } catch {
+            // try next endpoint candidate
+          }
         }
-      } catch {
-        // Keep the list empty when the CMS is unavailable.
+
+        if (!cancelled && Array.isArray(data)) {
+          const sorted = data.slice().sort((a, b) => (a.order_index ?? a.order ?? 0) - (b.order_index ?? b.order ?? 0))
+          setLivePositions(sorted.map((job) => {
+            const title = resolveJobLocalizedField(job, 'title', i18n.language) || job.title || '';
+            const desc = resolveJobLocalizedField(job, 'description', i18n.language) || job.description || '';
+            const location = resolveJobLocalizedField(job, 'location', i18n.language) || job.location || 'Muğla';
+            const type = resolveJobLocalizedField(job, 'type', i18n.language) || job.type || 'Tam Zamanlı';
+            const department = resolveJobLocalizedField(job, 'department', i18n.language) || location || 'Genel';
+
+            return {
+              id: String(job.id),
+              cmsId: job.id,
+              title,
+              department,
+              location,
+              type,
+              date: job.created_at
+                ? new Date(job.created_at).toLocaleDateString(i18n.language === 'tr' ? 'tr-TR' : 'en-US', { day: 'numeric', month: 'long', year: 'numeric' })
+                : '',
+              desc,
+              icon: 'default',
+            }
+          }))
+        }
+      } catch (err) {
+        console.error('Failed to load career jobs from CMS:', err)
       }
     }
     loadJobs()

@@ -1070,12 +1070,18 @@
     "flipbook_pages": "Page",
     "issue_format": "Issue {{number}}",
     "months": {
+      "january": "January",
       "february": "February",
       "march": "March",
       "april": "April",
       "may": "May",
       "june": "June",
-      "july": "July"
+      "july": "July",
+      "august": "August",
+      "september": "September",
+      "october": "October",
+      "november": "November",
+      "december": "December"
     },
     "articles": {
       "gunes_bakim_evi": {
