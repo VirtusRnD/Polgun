@@ -219,7 +219,7 @@
         "desc": "Polgün manages the procurement, storage, and production dispatch processes of raw materials, auxiliary supplies, and technical equipment within its own operational structure. Systematic inventory and materials management ensures that various manufacturing units access required inputs swiftly and in a controlled manner. The coordinated execution of production, warehousing, and procurement maintains continuous manufacturing while reinforcing material traceability and operational control."
       },
       "model_kalıp": {
-        "title": "Model & Mold Workshop",
+        "title": "CNC Machining",
         "desc": "Polgün translates original and complex geometries into production with high precision via its 5-axis CNC model and mold manufacturing infrastructure. Managing all processes in-house from digital design to mold fabrication delivers superior surface finish, dimensional precision, and repeatable production quality. Thanks to our CNC technology, custom project designs and next-generation slide profiles are prepared for production rapidly alongside standard models."
       },
       "elyaf": {
@@ -227,7 +227,7 @@
         "desc": "Polgün prepares the fiberglass fabrics and reinforcement materials used in composite production to exact dimensions using CNC automated cutting systems. Operating on digital CAD data, parts matching diverse product geometries are cut with speed, repeatability, and precision. This technology minimizes material waste, enhances cutting accuracy, and significantly shortens manufacturing lead times, supporting consistent quality across composite processes."
       },
       "kompozit": {
-        "title": "Composite Production & RTM Technology",
+        "title": "Final Inspection & Product Protection",
         "desc": "Polgün manufactures composite components for water slides and park attractions in-house utilizing methods such as RTM, L-RTM, hand lay-up, and spray-up. Durable and repeatable parts are crafted using resin, reinforcement, and layup schedules tailored to product geometry and performance demands. Subsequent gelcoat application, surface leveling, pigmentation, buffing, and topcoating ensure impeccable visual integrity and surface excellence."
       },
       "çelik_işleme": {
@@ -247,7 +247,7 @@
         "desc": "Polgün executes surface preparation, industrial painting, and protective coating operations for steel structures and metal components in-house according to operational environments. Applied systems safeguard metal surfaces against corrosion, UV, and harsh chemical exposures while delivering flawless aesthetics and lasting durability across varying climatic conditions."
       },
       "kalite": {
-        "title": "Final Inspection & Product Protection",
+        "title": "RTM Preparation",
         "desc": "Finished composite components at Polgün undergo rigorous surface finish, thickness, and structural integrity inspections before advancing to dispatch. Protective wrapping and handling procedures are strictly applied to preserve product surfaces during manufacturing, transit, and assembly, safeguarding premium quality from factory floor to job site."
       },
       "paketleme": {

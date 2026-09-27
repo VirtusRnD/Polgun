@@ -219,7 +219,7 @@
         "desc": "Polgün gestiona el aprovisionamiento, almacenamiento y suministro a producción de materias primas, insumos auxiliares y equipos técnicos dentro de su propia estructura operativa. La gestión sistemática de inventarios garantiza que las distintas unidades de fabricación accedan a los materiales necesarios de manera rápida y controlada, asegurando la continuidad productiva y la trazabilidad total."
       },
       "model_kalıp": {
-        "title": "Taller de Modelos y Moldes CNC",
+        "title": "Mecanizado CNC",
         "desc": "Polgün traslada geometrías originales y complejas a la producción con máxima precisión mediante su infraestructura de fabricación de moldes y modelos CNC de 5 ejes. La gestión interna desde el diseño digital hasta la fabricación de moldes garantiza un acabado superficial superior, exactitud dimensional y repetibilidad de fabricación para diseños estándar y proyectos personalizados."
       },
       "elyaf": {
@@ -227,7 +227,7 @@
         "desc": "Polgün prepara los tejidos de fibra de vidrio y materiales de refuerzo utilizados en la producción de composites mediante sistemas de corte automático por control numérico (CNC). El corte digitalizado permite preparar piezas para geometrías variadas de forma rápida y exacta, reduciendo el desperdicio de material y optimizando los tiempos de preparación en los talleres de composite."
       },
       "kompozit": {
-        "title": "Producción de Composite y Tecnología RTM",
+        "title": "Control Final y Protección de Producto",
         "desc": "Polgün fabrica piezas de composite para toboganes y parques acuáticos utilizando métodos avanzados como RTM, L-RTM, moldeo manual y proyección. La selección de resinas y refuerzos adaptados a cada geometría garantiza una durabilidad superior. Los acabados de gelcoat, nivelación, pulido y revestimiento final otorgan una superficie suave, brillante y visualmente impecable."
       },
       "çelik_işleme": {
@@ -247,7 +247,7 @@
         "desc": "Polgün realiza internamente los procesos de preparación superficial, granallado y aplicación de recubrimientos protectores en piezas metálicas. Los sistemas anticorrosivos aplicados protegen eficazmente las estructuras frente a la humedad, el cloro y los rayos UV, proporcionando durabilidad y un acabado estético de alto nivel en todo tipo de climas."
       },
       "kalite": {
-        "title": "Control Final y Protección de Producto",
+        "title": "Preparación RTM",
         "desc": "Las piezas de composite finalizadas son sometidas a rigurosas inspecciones de calidad superficial, espesor e integridad estructural antes de su expedición. Se aplican envolturas y protecciones especiales para conservar las superficies intactas durante el almacenamiento, transporte y montaje en obra."
       },
       "paketleme": {

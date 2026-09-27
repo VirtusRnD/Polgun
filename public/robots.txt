@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+
+
+Disallow: /tr/
+Disallow: /en/
+Disallow: /es/
+Disallow: /ru/
+Disallow: /ar/
+Disallow: /fr/
+Disallow: /zh/
+
+Sitemap: https://www.polgunwaterparks.com/sitemap.xml

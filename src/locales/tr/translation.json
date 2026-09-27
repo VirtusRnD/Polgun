@@ -219,7 +219,7 @@
         "desc": "Polgün, üretimde kullanılan hammadde, yardımcı malzeme ve teknik ekipmanların tedarik, depolama ve üretime aktarım süreçlerini kendi operasyon yapısı içerisinde yönetir. Düzenli stok ve malzeme yönetimi, farklı üretim birimlerinin ihtiyaç duyduğu girdilere hızlı ve kontrollü şekilde erişmesini sağlar. Üretim, depo ve tedarik süreçlerinin koordineli yürütülmesi, üretim sürekliliğini desteklerken malzeme takibinin ve operasyonel kontrolün güçlenmesine katkı sağlar."
       },
       "model_kalıp": {
-        "title": "Model ve Kalıphane",
+        "title": "CNC İşleme",
         "desc": "Polgün, ürün geliştirme ve üretim süreçlerini destekleyen 5 eksen CNC model ve kalıp üretim altyapısı ile özgün ve kompleks geometrileri yüksek hassasiyetle üretime aktarır. Dijital tasarımdan model ve kalıp üretimine kadar tüm süreçlerin kendi bünyemizde yönetilmesi; yüksek yüzey kalitesi, ölçü hassasiyeti ve üretimde tekrarlanabilirlik sağlar. CNC teknolojimiz sayesinde standart ürünlerin yanı sıra projeye özel tasarımlar ve yeni nesil kaydırak geometrileri de hızlı ve kontrollü bir şekilde üretime hazırlanır."
       },
       "elyaf": {
@@ -227,7 +227,7 @@
         "desc": "Polgün, kompozit üretim süreçlerinde kullanılan cam elyafı ve takviye malzemelerini CNC kontrollü otomatik kesim sistemleri ile hassas ölçülerde hazırlar. Dijital kesim verilerine göre çalışan sistem sayesinde farklı ürün geometrilerine uygun parçalar hızlı, tekrarlanabilir ve kontrollü şekilde kesilir. Bu teknoloji; malzeme firesinin azaltılmasına, kesim hassasiyetinin artırılmasına ve üretim hazırlık sürelerinin kısaltılmasına katkı sağlar. Elyaf kesim ve hazırlama sürecinin Polgün bünyesinde yürütülmesi, kompozit üretimde kalite ve proses kontrolünün sürekliliğini destekler."
       },
       "kompozit": {
-        "title": "Kompozit Üretim & RTM Teknolojisi",
+        "title": "Son Kontrol & Ürün Koruma",
         "desc": "Polgün, su kaydırağı ve su parkı ürünlerinde kullanılan kompozit parçaların üretimini RTM, L-RTM, el yatırma ve püskürtme gibi farklı üretim yöntemleri ile kendi bünyesinde gerçekleştirir. Ürün geometrisine ve performans gereksinimlerine uygun reçine, takviye malzemesi ve katman yapıları kullanılarak dayanıklı ve tekrarlanabilir üretim sağlanır. Üretim sürecinin devamında uygulanan jelkot, yüzey düzeltme, renklendirme, parlatma ve son kat işlemleri ile ürünlerin yüzey kalitesi ve görsel bütünlüğü tamamlanır. Kompozit üretimden yüzey uygulamalarına kadar tüm aşamaların Polgün bünyesinde yürütülmesi, ürün kalitesinin ve proses kontrolünün her aşamada korunmasını sağlar."
       },
       "çelik_işleme": {
@@ -247,7 +247,7 @@
         "desc": "Polgün, çelik konstrüksiyon ve metal parçaların kullanım koşullarına uygun şekilde yüzey hazırlığı, boya ve koruyucu kaplama işlemlerini kendi bünyesinde gerçekleştirir. Uygulanan sistemler, metal yüzeylerin korozyon ve çevresel etkilere karşı korunmasını desteklerken ürünlerin estetik bütünlüğünü de tamamlar. Kontrollü yüzey hazırlığı ve kaplama süreçleri sayesinde farklı iklim ve proje koşullarına uygun, dayanıklı, uzun ömürlü ve yüksek yüzey kalitesine sahip çözümler elde edilir."
       },
       "kalite": {
-        "title": "Son Kontrol & Ürün Koruma",
+        "title": "RTM Hazırlık",
         "desc": "Polgün’de üretimi tamamlanan kompozit parçalar, yüzey kalitesi ve ürün bütünlüğü açısından kontrol edilerek bir sonraki aşamaya hazırlanır. Ürün yüzeylerinin üretim, taşıma ve montaj süreçlerinde korunmasına yönelik uygulamalar kontrollü şekilde gerçekleştirilir. Yüzey kontrolü, koruyucu uygulamalar ve sevkiyata hazırlık süreçlerinin kendi bünyemizde yürütülmesi, ürünlerin üretim tesisinden proje sahasına kadar kalitesinin korunmasına katkı sağlar."
       },
       "paketleme": {

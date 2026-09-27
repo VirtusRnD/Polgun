@@ -218,6 +218,16 @@ export default function App() {
           <Route path="/knowledge-center/:slug" element={<KnowledgeCenterDetailPage />} />
           <Route path="/bilgi-merkezi/:slug" element={<KnowledgeCenterSlugRedirect />} />
           <Route path="/knowled-center/:slug" element={<KnowledgeCenterSlugRedirect />} />
+          {/* Eski site URL'leri — Google indexinden kaldırmak için redirect */}
+          <Route path="/tr/ana-sayfa" element={<Navigate to="/" replace />} />
+          <Route path="/tr/ana-sayfa/" element={<Navigate to="/" replace />} />
+          <Route path="/tr/*" element={<Navigate to="/" replace />} />
+          <Route path="/en/*" element={<Navigate to="/" replace />} />
+          <Route path="/es/*" element={<Navigate to="/" replace />} />
+          <Route path="/ru/*" element={<Navigate to="/" replace />} />
+          <Route path="/ar/*" element={<Navigate to="/" replace />} />
+          <Route path="/fr/*" element={<Navigate to="/" replace />} />
+          <Route path="/zh/*" element={<Navigate to="/" replace />} />
           <Route path="*" element={<NotFoundPage />} />
         </Route>
       </Routes>

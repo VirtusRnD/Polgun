@@ -219,7 +219,7 @@
         "desc": "Polgün gère l'approvisionnement, le stockage et le transfert vers la production des matières premières, fournitures techniques et équipements au sein de sa propre structure opérationnelle. Une gestion rigoureuse des stocks garantit un accès rapide et maîtrisé aux intrants pour chaque unité de fabrication. La synchronisation parfaite entre entrepôt, chaîne d'approvisionnement et ateliers assure la continuité de production et une traçabilité totale des matériaux."
       },
       "model_kalıp": {
-        "title": "Atelier Modèles & Moules CNC",
+        "title": "Usinage CNC",
         "desc": "Polgün concrétise des géométries originales et complexes avec une extrême précision grâce à son parc de machines CNC 5 axes dédié à la fabrication des modèles et moules. La maîtrise intégrée de la conception numérique à la réalisation des outillages garantit une qualité de surface irréprochable, une conformité dimensionnelle absolue et une parfaite répétabilité industrielle pour les gammes standards comme pour les projets sur mesure."
       },
       "elyaf": {
@@ -227,7 +227,7 @@
         "desc": "Polgün découpe les tissus de fibre de verre et renforts structurels aux cotes exactes grâce à des tables de découpe automatique pilotées par CNC. Travaillant d'après les données numériques CAO, ce système permet une découpe rapide, répétable et sans bavure pour chaque géométrie de pièce. Cette technologie réduit les chutes de matière, accroît la précision d'assemblage et optimise les temps de préparation dans les ateliers composites."
       },
       "kompozit": {
-        "title": "Production Composite & Technologie RTM",
+        "title": "Contrôle Final & Protection des Produits",
         "desc": "Polgün réalise en interne la fabrication de l'ensemble des pièces composites pour toboggans aquatiques via des procédés avancés tels que le RTM, le L-RTM, le moulage au contact et la projection simultanée. L'utilisation de résines et de renforts adaptés aux exigences structurelles garantit une résistance exceptionnelle. L'application soignée de gelcoat, les finitions de surface et le lustrage confèrent aux produits une brillance durable et une esthétique parfaite."
       },
       "çelik_işleme": {
@@ -247,7 +247,7 @@
         "desc": "Polgün effectue en interne la préparation de surface, la galvanisation et l'application des revêtements protecteurs sur toutes les pièces métalliques. Les systèmes anticorrosion appliqués protègent durablement les structures contre l'humidité, les rayons UV et les environnements chlorés agressifs, tout en assurant une finition esthétique éclatante et pérenne face aux contraintes climatiques mondiales."
       },
       "kalite": {
-        "title": "Contrôle Final & Protection des Produits",
+        "title": "Préparation RTM",
         "desc": "Chaque pièce composite sortant des ateliers fait l'objet d'un contrôle qualité minutieux portant sur l'état de surface, les épaisseurs et l'intégrité structurelle. Des films et emballages protecteurs haute résistance sont appliqués pour préserver les surfaces pendant le stockage, le transport et le montage, garantissant une qualité irréprochable de l'usine jusqu'au site d'installation."
       },
       "paketleme": {
