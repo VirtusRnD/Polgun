@@ -1,392 +1,268 @@
 {
   "common": {
-    "all": "Tous",
-    "view_all": "Voir tout",
-    "read_more": "En savoir plus",
-    "loading": "Chargement...",
-    "error": "Une erreur s'est produite.",
+    "all": "Tout",
+    "read_more": "Lire la suite",
     "no_content": "Aucun contenu trouvé.",
     "contact": "Contact",
-    "send": "Envoyer",
-    "quote": "Obtenir un devis",
+    "quote": "Demander un Devis",
     "learn_more": "Découvrir",
-    "home": "Accueil",
-    "back": "Retour",
-    "explore_projects": "Découvrir nos projets",
-    "all_products": "Tous les produits",
-    "all_projects": "Tous les projets",
+    "explore_projects": "Découvrez Nos Projets",
+    "all_projects": "Tous les Projets",
     "sending": "Envoi en cours...",
     "select": "Sélectionnez",
     "other": "Autre",
-    "hq": "Siège social",
-    "images": "Photos",
-    "view": "Consulter",
+    "hq": "Siège",
+    "images": "Visuel",
+    "view": "Voir",
     "turkey": "Turquie",
     "spain": "Espagne",
-    "not_found": "Contenu non trouvé",
-    "pause": "Pause",
-    "play": "Lecture",
+    "not_found": "Contenu Introuvable",
     "close": "Fermer"
   },
   "nav": {
     "services": "Nos Services",
-    "planning": "Conception de Produits & Thématisation",
-    "design": "Ingénierie & Planification de Projet",
-    "engineering": "Fabrication",
-    "installation": "Gestion de Projet & Expédition",
-    "maintenance": "Entretien & Service Après-Vente",
-    "renovation": "Modernisation & Rénovation",
-    "projects": "Projets",
+    "planning": "Conception de Produits et Thématisation",
+    "design": "Ingénierie et Conception de Projets",
+    "engineering": "Production",
+    "installation": "Gestion de Projet et Expédition",
+    "maintenance": "Montage et Mise en Service",
+    "projects": "Nos Projets",
     "products": "Nos Produits",
-    "categories": "Groupes de Produits",
+    "categories": "Catégories de Produits",
     "slides": "Toboggans Aquatiques",
     "splash_tower": "Splash Tower",
     "splash_zone": "Splash Zone",
     "about": "À Propos",
     "team": "Notre Équipe",
     "history": "Notre Histoire",
-    "awards": "Prix & Récompenses",
+    "awards": "Prix et Brevets",
     "factories": "Nos Usines",
-    "news": "Actualités & Blog",
-    "newsletter": "Nos Bulletins",
+    "news": "Actualités et Événements",
+    "newsletter": "Nos Newsletters",
     "knowledge_center": "Centre de Connaissances",
-    "arge": "R&D & Innovation",
+    "arge": "R&D",
     "arge_center": "Centre de R&D",
-    "fikri_sinai_haklar": "Propriété Intellectuelle",
+    "fikri_sinai_haklar": "Propriété Intellectuelle et Industrielle",
     "utility_models": "Modèles d'Utilité",
-    "designs": "Modèles Industriels",
-    "publications": "Publications Scientifiques",
+    "designs": "Dessins et Modèles Industriels",
+    "publications": "Publications Académiques",
     "patents": "Brevets",
-    "career": "Carrières",
+    "career": "Carrière",
     "brands": "Nos Marques",
-    "production": "Montage & Mise en Service",
     "all_products": "Tous les Produits",
     "contact": "Contact",
-    "portal": "Portail Client",
-    "quality_mgmt": "Gestion de la Qualité",
-    "quote_btn": "Demander un Devis",
-    "fast_contact": "Contact Rapide",
-    "view_all": "Voir Tout",
-    "cta_products": "Découvrez toutes nos gammes de produits et attractions",
+    "view_all": "Tout Voir",
+    "cta_products": "Découvrez tous nos produits et types d'espaces",
     "cta_services": "Découvrez nos processus de projets clés en main",
-    "cta_projects": "Découvrez plus de 3000 parcs aquatiques réalisés dans le monde",
-    "cta_about": "Découvrez les 40 ans d'histoire et d'innovation de Polgün",
-    "cta_arge": "Technologies aquatiques innovantes et brevets exclusifs",
-    "arge_products": "Produits de R&D",
-    "all_services": "Tous les Services"
+    "cta_projects": "Découvrez plus de 3000 projets de parcs aquatiques réalisés dans le monde",
+    "cta_about": "Découvrez l'histoire de 40 ans de Polgün",
+    "cta_arge": "Technologies innovantes pour parcs aquatiques et nos enregistrements",
+    "arge_products": "Produits R&D",
+    "region_projects": "Projets en {{region}}",
+    "menu": "Menu"
   },
   "footer": {
     "products_title": "PRODUITS",
     "services_title": "SERVICES",
     "projects_title": "PROJETS",
     "corporate_title": "ENTREPRISE",
-    "quality_title": "QUALITÉ & CONFIANCE",
-    "brand_desc": "Toboggans aquatiques et solutions de parcs aquatiques de classe mondiale.",
-    "quality_mgmt": "Gestion de la Qualité",
-    "sustainability": "Développement Durable",
-    "newsletter_title": "Abonnez-vous à notre Bulletin",
-    "newsletter_desc": "Soyez le premier informé des innovations du secteur, de nos projets et des dernières actualités.",
-    "newsletter_placeholder": "Entrez votre adresse e-mail...",
+    "quality_title": "QUALITÉ ET CONFIANCE",
+    "sustainability": "Durabilité",
+    "newsletter_title": "Abonnez-vous à Notre Newsletter",
+    "newsletter_desc": "Soyez les premiers informés des nouveautés du secteur, de nos projets et des derniers développements.",
+    "newsletter_placeholder": "Saisissez votre adresse e-mail...",
     "newsletter_btn": "S'ABONNER",
-    "newsletter_success": "Votre inscription a bien été enregistrée ! Merci.",
+    "newsletter_success": "Votre abonnement a bien été enregistré ! Merci.",
     "all_rights_reserved": "Tous droits réservés.",
-    "disclosure": "Texte d'Information",
-    "cookie_policy": "Politique des Cookies",
+    "disclosure": "Notice d'Information",
+    "cookie_policy": "Politique de Cookies",
     "terms": "Conditions d'Utilisation",
-    "ethics": "Code d'Éthique",
+    "ethics": "Nos Principes Éthiques",
     "info_security": "Politique de Sécurité de l'Information",
     "products": "Produits",
-    "corporate": "Entreprise",
-    "support": "Support Technique",
-    "tech_support": "Support Technique",
-    "spare_parts": "Pièces Détachées",
-    "maintenance_services": "Services de Maintenance",
-    "copyright": "© 2026 Polgün Waterparks. Tous droits réservés.",
-    "kvkk": "Protection des Données Personnelles",
-    "kvkk_policy": "Mentions Légales / RGPD",
-    "privacy": "Politique de Confidentialité",
-    "services": "Services",
-    "projects": "Projets",
-    "quality": "Qualité"
+    "location": "Muğla, Turquie"
   },
   "home": {
-    "hero_title": "Nous concevons bien plus qu'un simple parc aquatique.",
-    "lets_color": "DONNONS DES COULEURS À L'EAU",
-    "hero_desc": "Nous concevons des attractions aquatiques innovantes qui inspirent, créent des sensations fortes et offrent des souvenirs inoubliables.",
-    "eng_tag": "Design Innovant / Ingénierie Fiable",
-    "turnkey_tag": "Projets Clé en Main / Expérience Internationale",
-    "categories_title": "Catégories de Produits",
-    "categories_subtitle": "Des solutions sur mesure pour chaque espace du parc aquatique",
-    "slides_sub": "Tubulaires, ouverts & sensations extrêmes",
-    "tower_sub": "Thèmes Emblématiques",
-    "arge_sub": "Navatu & Savana",
-    "zone_sub": "Enfants & Familles",
-    "why_title": "Pourquoi Polgün ?",
-    "why_subtitle": "Créer des parcs aquatiques emblématiques avec plus de 20 ans d'expertise",
-    "why_desc": "Polgün est un partenaire solide qui regroupe la conception, l'ingénierie, la fabrication et l'installation de parcs aquatiques sous un même toit. Forts de plus de vingt ans d'expérience dans l'industrie, d'une capacité de production élevée et d'une expertise reconnue à l'international, nous offrons des solutions fiables, innovantes et durables pour des projets de toutes dimensions. En alliant esthétique, sécurité, qualité et rentabilité opérationnelle, nous concevons et bâtissons des expériences aquatiques uniques qui génèrent une valeur durable pour les marques et les investisseurs.",
+    "hero_title": "Nous concevons bien plus qu'un parc aquatique",
+    "hero_desc": "Nous concevons des systèmes de divertissement aquatique innovants qui inspirent, enthousiasment et donnent vie à des expériences inoubliables.",
+    "eng_tag": "Conception Innovante / Ingénierie Fiable",
+    "turnkey_tag": "Projets Clés en Main / Expérience Mondiale",
+    "why_title": "Pourquoi Polgün",
+    "why_subtitle": "Nous créons des expériences de parcs aquatiques emblématiques grâce à plus de 20 ans d'expérience",
+    "why_desc": "Polgün est un partenaire solide qui gère sous un même toit les processus de conception, d'ingénierie, de production et de mise en œuvre des projets de parcs aquatiques. Grâce à plus de vingt ans d'expérience dans le secteur, à une grande capacité de production et à notre expérience des projets internationaux, nous proposons des solutions fiables, innovantes et durables pour des projets de toutes tailles. En réunissant esthétique, sécurité, qualité et efficacité opérationnelle, nous concevons et réalisons des expériences de parcs aquatiques originales qui apportent une valeur durable aux marques et aux investisseurs.",
     "why_pillars": {
       "service": "Service Complet",
-      "service_desc": "Design, fabrication & assemblage",
+      "service_desc": "Conception, production et montage",
       "countries": "70+ Pays",
-      "countries_desc": "Expérience globale",
+      "countries_desc": "Expérience mondiale",
       "quality": "Qualité ISO",
       "quality_desc": "Production certifiée",
       "sustainable": "Durable",
-      "sustainable_desc": "Conception écoresponsable"
+      "sustainable_desc": "Conception respectueuse de l'environnement"
     },
     "refs_title": "Nos Références",
     "refs_subtitle": "Des marques de renommée mondiale nous font confiance",
     "cta_tag": "Concevons Votre Projet Ensemble",
     "cta_title": "Nous donnons vie au parc aquatique de vos rêves",
-    "cta_desc": "Nous apportons de la couleur aux parcs aquatiques à travers le monde. Contactez-nous pour votre prochain projet.",
-    "cta_btn_quote": "Demander un Devis Immédiat",
-    "cta_btn_projects": "Découvrir nos Réalisations",
+    "cta_desc": "Nous colorons la vie dans les parcs aquatiques du monde entier. Contactez-nous pour votre prochain projet.",
+    "cta_btn_quote": "Demandez un Devis",
+    "cta_btn_projects": "Voir Nos Projets",
     "engineering_tag": "Ingénierie",
-    "design_to_field": "De la Conception au Chantier, sans Faille",
+    "design_to_field": "De la Conception au Chantier, Sans Rien Omettre",
     "tags": {
       "iso": "Certifié ISO",
-      "grp": "Fabrication Composite GRP",
-      "design3d": "Modélisation 3D",
-      "turnkey": "Clé en Main"
-    },
-    "cta_btn": "预约专家咨询",
-    "feature_1_desc": "根据客户场地特点与游客体验量身打造独具吸引力的主题景观。",
-    "feature_1_title": "独特的主题化定制",
-    "feature_2_desc": "双面光滑的高品质玻璃钢滑道，确保极致耐磨与持久光泽度。",
-    "feature_2_title": "先进 RTM 闭模成型",
-    "feature_3_desc": "严格遵循 EN 1069 及 ASTM 国际顶级安全与工程规范。",
-    "feature_3_title": "严谨的国际安全认证",
-    "feature_4_desc": "提供从项目可行性研究、工程制造到现场组装与定期保养的全方位支持。",
-    "feature_4_title": "全生命周期一站式服务",
-    "featured_projects_desc": "探索我们在世界各地奢华度假村、水上乐园及商业中心打造的经典之作。",
-    "featured_projects_tag": "标杆工程",
-    "featured_projects_title": "全球代表项目",
-    "features_subtitle": "从设计蓝图到卓越交付的品质保证",
-    "features_title": "为何选择 Polgün？",
-    "hero_badge": "全球领先的水上乐园制造商",
-    "hero_cta_primary": "探索产品系列",
-    "hero_cta_secondary": "查看经典项目",
-    "hero_title_1": "打造无限激情的",
-    "hero_title_2": "水上奇迹",
-    "stats": {
-      "capacity": "100,000 m²",
-      "capacity_label": "综合生产基地",
-      "countries": "70+",
-      "countries_label": "出口国家",
-      "experience": "40+",
-      "experience_label": "年行业积淀",
-      "projects": "3000+",
-      "projects_label": "交付项目"
-    },
-    "testimonials_tag": "合作伙伴评价",
-    "testimonials_title": "来自全球业主的信赖"
+      "grp": "Production GRP",
+      "design3d": "Conception 3D",
+      "turnkey": "Clés en Main"
+    }
   },
   "about": {
-    "title": "À Propos",
-    "experience": "Plus de 20 ans d'expertise dans le secteur",
-    "desc": "Polgün est un partenaire de référence solide qui regroupe la conception, l'ingénierie, la fabrication et l'installation de parcs aquatiques sous un même toit. Forts de plus de vingt ans d'expérience dans l'industrie, d'une capacité de production industrielle élevée et d'une expertise reconnue à l'international, nous offrons des solutions fiables, innovantes et durables pour des projets de toutes dimensions.",
-    "power_title": "Notre Puissance Industrielle",
-    "power_desc1": "Nos usines de fabrication à la pointe de la technologie intègrent des centres d'usinage CNC 5 axes, des lignes de moulage RTM automatisées et des ateliers de métallurgie lourde.",
-    "power_desc2": "Chaque composant fait l'objet de contrôles qualité rigoureux garantissant une longévité maximale et une sécurité sans compromis.",
-    "power_desc3": "Nous fabriquons des toboggans aquatiques répondant aux normes les plus exigeantes du marché international (EN 1069, ASTM).",
-    "arge_title": "Centre de R&D & Innovation",
-    "arge_desc1": "Agréé par le Ministère de l'Industrie et de la Technologie, notre centre de R&D développe continuellement des attractions aquatiques brevetées.",
-    "arge_desc2": "Nos ingénieurs et chercheurs travaillent sur la dynamique des fluides computationnelle (CFD), les composites allégés et les systèmes intelligents d'économie d'eau et d'énergie.",
-    "arge_desc3": "Polgün contribue activement à la littérature scientifique mondiale avec des publications et brevets déposés régulièrement.",
+    "experience": "Plus de 20 Ans d'Expérience dans les Parcs Aquatiques",
+    "desc": "Polgün est un partenaire solide qui gère sous un même toit les processus de conception, d'ingénierie, de production et de mise en œuvre des projets de parcs aquatiques. Grâce à plus de vingt ans d'expérience dans le secteur, à une grande capacité de production et à notre expérience des projets internationaux, nous proposons des solutions fiables, innovantes et durables pour des projets de toutes tailles.",
+    "power_title": "Une Force qui Grandit sur la Scène Internationale",
+    "power_desc1": "Polgün a commencé ses activités à Muğla-Menteşe en 2002. Aujourd'hui, elle poursuit ses activités avec ses 4 principaux centres de production à Muğla, ses bureaux d'Istanbul et d'Espagne, l'usine d'Antalya créée en 2022 et le nouvel investissement de Bursa.",
+    "power_desc2": "Avec ses 120 000 m² d'infrastructure de production intégrée, son parc de machines entièrement automatisé et son équipe d'experts, elle est l'une des entreprises pionnières du secteur capables de réaliser sous un même toit la fabrication de structures en acier et de polyester.",
+    "power_desc3": "Avec 425 employés et une équipe R&D de 30 personnes, Polgün gère tous les processus, de la conception à la production, et réalise des projets clés en main.",
+    "arge_title": "Le Premier et Unique Centre de R&D de Muğla",
+    "arge_desc1": "Chez Polgün Waterparks, notre approche de la R&D repose sur le développement de technologies de divertissement aquatique sûres, innovantes, durables et à forte valeur ajoutée. Notre centre, qui a obtenu le statut de Centre de R&D avec l'approbation du Ministère en 2021, est le premier et unique Centre de R&D de Muğla et ouvre la voie, dans notre secteur, au développement de produits originaux, à la localisation et à la production de technologies.",
+    "arge_desc2": "Au sein de notre Centre de R&D, avec nos 30 collaborateurs R&D qualifiés en équivalent temps plein exerçant en tant que chercheurs, techniciens et personnel de soutien, nous menons selon une approche globale les processus de conception de nouveaux produits, d'analyses d'ingénierie, de prototypage, d'essais, de validation, de développement de méthodes de production et de propriété intellectuelle.",
+    "arge_desc3": "Nos projets de produits innovants tels que Navatu, Savana, Monarch Butterfly et Eclipse figurent parmi les principaux résultats de R&D qui représentent la force de conception, d'ingénierie et de production de Polgün sur le marché international.",
     "misyon": "Notre Mission",
-    "misyon_desc": "Créer des expériences de divertissement aquatique inoubliables et sûres dans le monde entier, grâce à des technologies durables et des designs novateurs.",
+    "misyon_desc": "Apporter des solutions originales au secteur du divertissement aquatique en développant des projets de R&D de haute qualité, sûrs, économiques et innovants.",
     "vizyon": "Notre Vision",
-    "vizyon_desc": "Devenir le constructeur de parcs aquatiques le plus innovant et le plus fiable au monde, en fixant les plus hauts standards d'ingénierie et de satisfaction client.",
+    "vizyon_desc": "Être un centre de R&D leader et pionnier qui oriente les technologies du divertissement aquatique ; être une marque qui produit de la technologie, inspire le secteur et crée de la valeur pour un avenir durable.",
     "stats": {
-      "staff": "250+ Collaborateurs",
-      "staff_desc": "Ingénieurs, architectes et techniciens qualifiés",
-      "status": "Centre R&D Agréé",
-      "status_desc": "Certifié par le Ministère de l'Industrie",
-      "projects": "3000+ Projets",
-      "projects_desc": "Réalisés avec succès dans le monde",
-      "countries": "70+ Pays",
-      "countries_desc": "Réseau d'exportation mondial"
+      "staff": "Personnel R&D",
+      "staff_desc": "Équipe d'experts qualifiés en équivalent temps plein",
+      "status": "Statut de Centre de R&D",
+      "status_desc": "Approuvé par le Ministère, le premier et unique centre de Muğla",
+      "projects": "Projets de Produits Originaux",
+      "projects_desc": "Navatu, Savana, Eclipse, Monarch Butterfly",
+      "countries": "Pays",
+      "countries_desc": "Expérience mondiale des projets et des marchés"
     },
     "production_title": "Notre Infrastructure de Production",
-    "production_subtitle": "De la conception à la fabrication, nous pilotons l'ensemble des processus sous un même toit.",
-    "production_desc": "Polgün concrétise les solutions développées pour les parcs aquatiques et les systèmes récréatifs grâce à une infrastructure de production intégrée alliant construction métallique, usinage de précision, moulage composite RTM, traitements de surface et technologies numériques de pointe.",
-    "production_power": "Capacité de Production Intégrée",
-    "production_power_desc": "Sur 100 000 m² d'installations réparties sur plusieurs sites industriels, nous combinons ingénierie de pointe et fabrication de haute précision.",
-    "btn_projects": "Découvrir nos Projets",
+    "production_subtitle": "Nous gérons tous les processus, de la conception à la production, sous un même toit",
+    "production_desc": "Polgün concrétise les solutions qu'elle développe pour les parcs aquatiques et les systèmes de divertissement grâce à une infrastructure de production intégrée réunissant construction métallique, usinage mécanique, production de composites, applications de surface et technologies de production numérique.",
+    "production_power": "Nous Reflétons Notre Force de Production dans Nos Projets",
+    "production_power_desc": "En gérant sous un même toit les processus d'ingénierie, de production et de contrôle qualité, nous développons des solutions fiables et de haute qualité, propres à chaque projet.",
+    "btn_projects": "Voir Nos Projets",
     "production_sections": {
       "entegre_depo": {
-        "title": "Entrepôt Intégré de Matières Premières & Logistique",
-        "desc": "Polgün gère l'approvisionnement, le stockage et le transfert vers la production des matières premières, fournitures techniques et équipements au sein de sa propre structure opérationnelle. Une gestion rigoureuse des stocks garantit un accès rapide et maîtrisé aux intrants pour chaque unité de fabrication. La synchronisation parfaite entre entrepôt, chaîne d'approvisionnement et ateliers assure la continuité de production et une traçabilité totale des matériaux."
+        "title": "Entrepôt Intégré de Matières Premières et Logistique",
+        "desc": "Polgün gère au sein de sa propre structure opérationnelle l'approvisionnement, le stockage et le transfert vers la production des matières premières, des matériaux auxiliaires et des équipements techniques utilisés en production. Une gestion rigoureuse des stocks et des matériaux permet aux différentes unités de production d'accéder rapidement et de manière contrôlée aux intrants dont elles ont besoin. La coordination des processus de production, d'entreposage et d'approvisionnement soutient la continuité de la production tout en renforçant le suivi des matériaux et le contrôle opérationnel."
       },
       "model_kalıp": {
         "title": "Usinage CNC",
-        "desc": "Polgün concrétise des géométries originales et complexes avec une extrême précision grâce à son parc de machines CNC 5 axes dédié à la fabrication des modèles et moules. La maîtrise intégrée de la conception numérique à la réalisation des outillages garantit une qualité de surface irréprochable, une conformité dimensionnelle absolue et une parfaite répétabilité industrielle pour les gammes standards comme pour les projets sur mesure."
+        "desc": "Grâce à son infrastructure de fabrication de modèles et de moules CNC 5 axes, qui soutient les processus de développement de produits et de production, Polgün transfère vers la production des géométries originales et complexes avec une grande précision. La gestion en interne de tous les processus, de la conception numérique à la fabrication des modèles et des moules, garantit une haute qualité de surface, une précision dimensionnelle et une répétabilité de la production. Grâce à notre technologie CNC, outre les produits standard, les conceptions propres à chaque projet et les géométries de toboggans de nouvelle génération sont préparées pour la production de manière rapide et contrôlée."
       },
       "elyaf": {
-        "title": "Découpe & Préparation Fibre de Verre",
-        "desc": "Polgün découpe les tissus de fibre de verre et renforts structurels aux cotes exactes grâce à des tables de découpe automatique pilotées par CNC. Travaillant d'après les données numériques CAO, ce système permet une découpe rapide, répétable et sans bavure pour chaque géométrie de pièce. Cette technologie réduit les chutes de matière, accroît la précision d'assemblage et optimise les temps de préparation dans les ateliers composites."
+        "title": "Préparation de la Fibre de Verre et des Renforts",
+        "desc": "Polgün prépare aux dimensions précises la fibre de verre et les matériaux de renfort utilisés dans les processus de production de composites grâce à des systèmes de découpe automatique à commande CNC. Grâce au système, qui fonctionne à partir de données de découpe numériques, les pièces adaptées aux différentes géométries de produits sont découpées de manière rapide, répétable et contrôlée. Cette technologie contribue à réduire les chutes de matière, à accroître la précision de découpe et à raccourcir les délais de préparation de la production. La réalisation des processus de découpe et de préparation des fibres au sein de Polgün favorise la continuité du contrôle de la qualité et des procédés dans la production de composites."
       },
       "kompozit": {
-        "title": "Contrôle Final & Protection des Produits",
-        "desc": "Polgün réalise en interne la fabrication de l'ensemble des pièces composites pour toboggans aquatiques via des procédés avancés tels que le RTM, le L-RTM, le moulage au contact et la projection simultanée. L'utilisation de résines et de renforts adaptés aux exigences structurelles garantit une résistance exceptionnelle. L'application soignée de gelcoat, les finitions de surface et le lustrage confèrent aux produits une brillance durable et une esthétique parfaite."
+        "title": "Préparation RTM",
+        "desc": "Polgün produit en interne les pièces composites utilisées dans les toboggans aquatiques et les produits pour parcs aquatiques, selon différentes méthodes de production telles que le RTM, le L-RTM, le moulage au contact et la projection. Une production durable et répétable est obtenue en utilisant des résines, des matériaux de renfort et des structures de couches adaptés à la géométrie du produit et aux exigences de performance. Dans la suite du processus, les applications de gelcoat, de correction de surface, de coloration, de polissage et de couche de finition complètent la qualité de surface et l'intégrité visuelle des produits. La réalisation au sein de Polgün de toutes les étapes, de la production des composites aux applications de surface, garantit le maintien de la qualité des produits et du contrôle des procédés à chaque étape."
       },
       "çelik_işleme": {
-        "title": "Usinage & Technologies de Découpe Métallique",
-        "desc": "Polgün utilise des technologies de découpe et d'usinage de haute précision pour transcrire fidèlement les plans d'ingénierie dans la matière. Nos centres de découpe laser et CNC pour tubes et profilés façonnent des pièces de tous diamètres avec des tolérances très serrées. L'intégration directe des fichiers CAO permet une fabrication rapide et reproductible des charpentes adaptées aux tracés de toboggans les plus audacieux."
+        "title": "Usinage de l'Acier et Technologies de Découpe",
+        "desc": "Polgün transfère les conceptions vers la production de manière précise et contrôlée en utilisant des technologies de découpe et d'usinage de haute précision dans la fabrication des structures en acier. Grâce aux systèmes CNC de découpe de tubes et de profilés, des pièces de différents diamètres, sections et géométries sont préparées avec une grande précision dimensionnelle. Le transfert direct des données de conception numérique vers le processus de production permet de préparer plus rapidement, de manière répétable et fabricable, des structures porteuses compatibles avec des géométries de toboggans complexes. La réalisation au sein de Polgün des processus de fabrication de l'acier, de la découpe à la préparation du soudage et du montage, renforce le contrôle de la qualité et de la production sur l'ensemble du projet."
       },
       "çelik_konstrüksiyon": {
-        "title": "Charpente Métallique & Fabrication Soudée",
-        "desc": "Polgün fabrique intégralement dans ses usines les structures porteuses métalliques destinées aux parcs aquatiques. Les tubes et profilés préparés par CNC sont assemblés et soudés avec une rigueur absolue selon les géométries propres à chaque projet. Cette chaîne de valeur intégrée, du débitage au soudage certifié, garantit la robustesse, la conformité dimensionnelle et la flexibilité indispensables aux systèmes de glisse modernes."
+        "title": "Construction Métallique et Fabrication Soudée",
+        "desc": "Polgün réalise en interne la production des structures en acier utilisées dans les toboggans aquatiques et les systèmes de parcs aquatiques. Les tubes, profilés et pièces en acier préparés grâce aux technologies CNC sont assemblés par des processus précis de soudage et de montage, conformément aux géométries propres à chaque projet. La réalisation intégrée de toutes les étapes, de la découpe à la fabrication soudée, apporte précision dimensionnelle, contrôle de la production et flexibilité propre à chaque projet pour les structures porteuses. Ainsi sont produites des solutions de construction métallique durables et maîtrisées, compatibles avec différentes géométries de toboggans."
       },
       "mekanik": {
-        "title": "Usinage Mécanique & Fabrication de Composants",
-        "desc": "Polgün conçoit et usine en interne les brides d'assemblage, pièces de liaison et organes mécaniques sur mesure indispensables aux toboggans et tours porteuses. Réalisées dans le respect strict des tolérances d'ingénierie, ces pièces assurent un montage fluide et parfaitement ajusté sur chantier. Cette autonomie mécanique garantit réactivité et adaptation sur mesure à toutes les spécifications techniques complexes."
+        "title": "Usinage Mécanique et Fabrication de Pièces",
+        "desc": "Polgün produit en interne les éléments de fixation spéciaux, les brides et les pièces mécaniques propres à chaque projet utilisés dans les systèmes de toboggans aquatiques et les structures en acier. Les pièces sont préparées aux dimensions précises conformément aux données d'ingénierie et rendues parfaitement compatibles avec les processus de montage. Notre capacité d'usinage mécanique apporte précision dimensionnelle, répétabilité de la production et adaptation rapide aux projets, tout en offrant des solutions flexibles pour les géométries non standard et les besoins techniques propres à chaque projet. La gestion du processus au sein de Polgün, de la conception à la fabrication, garantit le maintien de la qualité des pièces et du contrôle de la production à chaque étape."
       },
       "boya": {
-        "title": "Peinture & Traitements Protecteurs de Surface",
-        "desc": "Polgün effectue en interne la préparation de surface, la galvanisation et l'application des revêtements protecteurs sur toutes les pièces métalliques. Les systèmes anticorrosion appliqués protègent durablement les structures contre l'humidité, les rayons UV et les environnements chlorés agressifs, tout en assurant une finition esthétique éclatante et pérenne face aux contraintes climatiques mondiales."
+        "title": "Peinture et Revêtements de Protection",
+        "desc": "Polgün réalise en interne la préparation de surface, la peinture et les revêtements de protection des structures en acier et des pièces métalliques en fonction de leurs conditions d'utilisation. Les systèmes appliqués contribuent à protéger les surfaces métalliques contre la corrosion et les effets environnementaux, tout en complétant l'intégrité esthétique des produits. Grâce à des processus maîtrisés de préparation de surface et de revêtement, on obtient des solutions durables, de longue durée de vie et d'une haute qualité de surface, adaptées à différents climats et conditions de projet."
       },
       "kalite": {
-        "title": "Préparation RTM",
-        "desc": "Chaque pièce composite sortant des ateliers fait l'objet d'un contrôle qualité minutieux portant sur l'état de surface, les épaisseurs et l'intégrité structurelle. Des films et emballages protecteurs haute résistance sont appliqués pour préserver les surfaces pendant le stockage, le transport et le montage, garantissant une qualité irréprochable de l'usine jusqu'au site d'installation."
+        "title": "Contrôle Final et Protection des Produits",
+        "desc": "Chez Polgün, les pièces composites dont la production est terminée sont contrôlées du point de vue de la qualité de surface et de l'intégrité du produit, puis préparées pour l'étape suivante. Les mesures visant à protéger les surfaces des produits pendant la production, le transport et le montage sont appliquées de manière contrôlée. La réalisation en interne du contrôle de surface, des applications de protection et de la préparation à l'expédition contribue à préserver la qualité des produits de l'usine jusqu'au chantier."
       },
       "paketleme": {
-        "title": "Emballage & Expédition Internationale",
-        "desc": "Afin d'acheminer en toute sécurité les équipements certifiés jusqu'aux chantiers internationaux, Polgün met en œuvre des protocoles d'emballage et de calage en conteneurs spécialement adaptés à chaque typologie de pièce. Les modules composites et charpentes en acier sont protégés contre les chocs et la corrosion marine, assurant une livraison sécurisée, complète et ponctuelle sur tous les continents."
+        "title": "Emballage et Expédition",
+        "desc": "Afin que les produits dont la production et les contrôles qualité sont terminés arrivent en toute sécurité sur le chantier, Polgün applique des processus d'emballage et de chargement adaptés au type de produit et aux conditions d'expédition. Les pièces composites, les structures en acier et les équipements du projet sont préparés de manière à être protégés pendant le transport, puis expédiés. Grâce à la planification de l'emballage, du chargement et de la coordination logistique, les produits sont transportés de manière contrôlée et sûre de l'usine jusqu'au chantier."
       }
     },
     "factories": {
       "mugla": {
-        "label": "Muğla - Usine Centrale & Centre R&D",
-        "desc": "Siège mondial, centre de R&D et installations de production composite RTM de pointe."
+        "label": "Site de Production Central",
+        "desc": "Principal centre de production et de R&D. Site central abritant les infrastructures de construction métallique, de production de composites et de fabrication numérique."
       },
       "bursa": {
-        "label": "Bursa - Usine de Structures Métalliques",
-        "desc": "Fabrication des tours porteuses, plateformes et charpentes métalliques certifiées EN 1090."
+        "label": "Site de Production de Bursa",
+        "desc": "Centre de production nord de Polgün. Site où sont fabriqués les pièces en acier et les produits semi-finis."
       },
       "istanbul": {
-        "label": "Istanbul - Bureau Commercial & Logistique",
-        "desc": "Coordination du commerce international, de l'ingénierie d'affaires et du fret maritime mondial."
+        "label": "Technoparc de Marmara",
+        "desc": "Bureau du Technoparc de Marmara où sont menés les travaux de R&D et d'innovation. Centre de développement de nouveaux produits et d'analyse technique."
       }
     },
-    "story_title": "Concevoir l'Avenir",
-    "tag": "À Propos de Polgün",
-    "hero_stat1": "1985",
-    "hero_stat1_label": "Année de Fondation",
-    "hero_stat2": "70+",
-    "hero_stat2_label": "Pays d'Exportation",
-    "hero_stat3": "3000+",
-    "hero_stat3_label": "Projets Réalisés",
-    "hero_stat4": "100 000 m²",
-    "hero_stat4_label": "Superficie de Production",
-    "story_desc1": "Fondée en 1985 à Muğla en Turquie, Polgün s'est imposée dès ses débuts dans les composites de haute performance pour devenir l'un des leaders mondiaux de la conception et de la fabrication de parcs aquatiques.",
-    "story_desc2": "Notre excellence en simulation hydrodynamique, sécurité des usagers et processus de fabrication écoresponsables nous permet d'apporter joie et divertissement aux familles du monde entier.",
-    "values_title": "Nos Valeurs Fondamentales",
-    "values_desc": "Les principes qui guident notre recherche constante de l'excellence à travers le monde.",
-    "value1_title": "Sécurité Avant Tout",
-    "value1_desc": "Respect absolu des normes de sécurité internationales les plus strictes (EN 1069, ASTM, ISO).",
-    "value2_title": "Innovation & Technologie",
-    "value2_desc": "Recherche continue sur les géométries de glisse avant-gardistes et les attractions interactives.",
-    "value3_title": "Qualité Supérieure",
-    "value3_desc": "Matières premières d'excellence et technologie de moulage RTM pour une durabilité maximale.",
-    "value4_title": "Orientation Client",
-    "value4_desc": "Accompagnement personnalisé et dévoué, de l'esquisse conceptuelle jusqu'à la maintenance à vie."
+    "story_title": "Nous Concevons l'Avenir"
   },
   "services": {
-    "title": "Nos Services",
     "subtitle": "Gestion Globale de Projet",
-    "desc": "Polgün offre des prestations professionnelles de très haut niveau à chaque étape des projets de parcs aquatiques. De la planification à la conception, de l'ingénierie à l'installation, nous pilotons l'ensemble des processus avec nos propres équipes d'experts pour livrer des projets clé en main irréprochables.",
+    "desc": "Polgün offre un service professionnel de haut niveau à chaque étape des projets de parcs aquatiques. Elle mène avec sa propre équipe d'experts tous les processus, de la planification à la conception et de l'ingénierie à l'installation, et réalise des projets clés en main.",
     "process_tag": "Notre Processus de Service",
-    "process_title": "À vos côtés à chaque étape, du début à la fin",
-    "cta_title": "Bâtissons ensemble votre rêve aquatique",
-    "cta_desc": "Quelle que soit l'envergure de votre projet, nos ingénieurs et spécialistes vous accompagnent du premier jour jusqu'à l'ouverture.",
-    "cta_btn": "Demander un Devis",
-    "cta_tag": "Nos Services",
+    "process_title": "Nous sommes à vos côtés à chaque étape, du début à la fin",
+    "cta_title": "Construisons votre rêve ensemble",
+    "cta_desc": "Quelle que soit la taille du projet, nous sommes à vos côtés du premier au dernier jour.",
     "why": {
       "service": {
         "title": "Service Complet",
-        "desc": "De la conception au montage, de la maintenance aux logiciels à chaque phase."
+        "desc": "À chaque étape, de la conception à la production et du montage à la maintenance."
       },
       "countries": {
         "title": "70+ Pays",
-        "desc": "Expérience éprouvée de projets internationaux et savoir-faire local."
+        "desc": "Expérience mondiale des projets et expertise locale."
       },
       "iso": {
-        "title": "Qualité ISO 9001",
-        "desc": "Processus de fabrication et d'assurance qualité certifiés."
+        "title": "ISO 9001",
+        "desc": "Processus de production et de qualité certifiés."
       },
       "lifetime": {
-        "title": "Garantie Durable",
-        "desc": "Support technique à long terme et disponibilité garantie des pièces détachées."
+        "title": "Assistance à Long Terme",
+        "desc": "Assistance technique après-vente et fourniture de pièces de rechange."
       }
     },
     "steps": {
       "step1": {
-        "title": "Conception de Produits & Thématisation",
-        "sub": "Conception & Thématisation",
-        "desc": "Les toboggans aquatiques, aires de jeux aquatiques pour enfants et attractions sont conçus sur mesure selon le concept du projet et les exigences du client. Les couleurs, motifs, thématiques et détails visuels sont harmonisés avec la géométrie du produit pour créer des attractions uniques qui maximisent l'expérience des visiteurs."
+        "title": "Conception de Produits et Thématisation",
+        "sub": "Conception de Produits et Thématisation",
+        "desc": "Les toboggans aquatiques, les aires de jeux pour enfants et les attractions de parcs aquatiques sont conçus sur mesure selon le concept du projet et les attentes du client. La couleur, le motif, le thème et les détails visuels sont développés en harmonie avec la géométrie du produit afin de créer des designs originaux qui renforcent l'expérience des visiteurs."
       },
       "step2": {
-        "title": "Ingénierie & Planification de Projet",
-        "sub": "Ingénierie & Calculs de Structure",
-        "desc": "Les systèmes de glisse, les structures porteuses en acier, les infrastructures mécaniques et les réseaux hydrauliques sont minutieusement calculés par nos ingénieurs. Les notes de calcul, analyses par éléments finis, plans de fabrication et manuels de montage sont rédigés selon les normes internationales."
+        "title": "Ingénierie et Conception de Projets",
+        "sub": "Ingénierie et Conception de Projets",
+        "desc": "Les systèmes de toboggans, les structures porteuses en acier ainsi que les infrastructures mécaniques et hydrauliques sont étudiés en détail par les équipes d'ingénierie. Les calculs structurels, les analyses techniques, les plans de production et les documents de montage sont préparés en fonction des conditions du projet."
       },
       "step3": {
-        "title": "Fabrication de Haute Précision",
-        "sub": "Fabrication Composite & Métallique",
-        "desc": "Les modules de toboggans en fibre de verre, charpentes en acier, moules CNC et pièces spécifiques sont fabriqués dans les usines intégrées de Polgün. Les protocoles de fabrication garantissent une précision dimensionnelle absolue, un état de surface lisse miroir, une haute durabilité et une traçabilité intégrale."
+        "title": "Production",
+        "sub": "Production de Précision",
+        "desc": "Les pièces de toboggans en fibre de verre, les structures en acier, les modèles, les moules et les composants propres à chaque projet sont préparés dans les sites de production de Polgün. Les processus de production sont menés sur la base de la précision dimensionnelle, de la qualité de surface, de la durabilité et de la traçabilité."
       },
       "step4": {
-        "title": "Gestion de Projet & Expédition",
-        "sub": "Logistique & Fret International",
-        "desc": "La conception, la production, le conditionnement, la logistique et les interventions sur site sont rigoureusement synchronisés selon le calendrier d'exécution. Les produits sont étiquetés selon un système de codage précis, protégés par des emballages sécurisés et acheminés sur le chantier sans accroc."
+        "title": "Gestion de Projet et Expédition",
+        "sub": "Gestion de Projet et Expédition",
+        "desc": "Les processus de conception, de production, d'emballage, de logistique et de chantier sont coordonnés conformément au calendrier du projet. Les produits sont préparés avec un système de codification et d'étiquetage correct, emballés en toute sécurité et livrés complets sur le chantier."
       },
       "step5": {
-        "title": "Montage & Mise en Service",
-        "sub": "Assemblage sur Site & Essais",
-        "desc": "Les toboggans, structures métalliques et équipements techniques sont montés par des techniciens chevronnés sous la supervision directe des ingénieurs Polgün. Après l'assemblage, les liaisons, surfaces de glisse, débits d'eau et automatismes font l'objet d'essais approfondis avant la mise en service officielle."
-      }
-    },
-    "sections": {
-      "planlama": {
-        "title": "Planification",
-        "desc": "La réussite de tout parc aquatique commence par une planification rigoureuse. En analysant le budget de l'investisseur, la topographie du terrain, la typologie des visiteurs et le marché local, nous définissons l'implantation et le concept idéaux."
-      },
-      "tasarim": {
-        "title": "Conception & Modélisation",
-        "desc": "Nous concevons des concepts d'attractions spectaculaires alliant créativité et innovation. Grâce aux technologies de modélisation 3D avancées, nous présentons le projet achevé avec un réalisme parfait."
-      },
-      "muhendislik": {
-        "title": "Ingénierie Structurelle",
-        "desc": "Nous concevons des structures extrêmement robustes et sécurisées conformes aux normes EN 1069 et ASTM. Les analyses structurelles des charpentes métalliques et des composants en composite GRP assurent une sécurité sans compromis."
-      },
-      "montaj": {
-        "title": "Installation & Montage",
-        "desc": "Grâce à nos équipes de montage qualifiées et nos chefs de projet sur le terrain, nous réalisons les installations sur site rapidement et sans encombre, dans le respect scrupuleux des normes de sécurité au travail."
-      },
-      "bakim": {
-        "title": "Maintenance & Réparation",
-        "desc": "Nous assurons un suivi et une maintenance périodique pour garantir la sécurité et la pérennité de vos installations. Révisions pré-saisonnières, fourniture de pièces détachées d'origine et support technique réactif."
-      },
-      "yenileme": {
-        "title": "Rénovation & Modernisation",
-        "desc": "Nous redonnons vie aux parcs aquatiques existants grâce aux dernières technologies et aux designs tendance. L'ajout de nouveaux toboggans, d'espaces interactifs et d'éléments thématiques booste immédiatement l'attractivité du site."
+        "title": "Montage et Mise en Service",
+        "sub": "Montage et Mise en Service",
+        "desc": "Les toboggans, les structures en acier et les équipements associés sont montés par des équipes de chantier expérimentées ou sous la supervision technique de Polgün. Après le montage, les assemblages, les surfaces de glisse, le débit d'eau et les fonctions du système sont contrôlés en détail."
       }
     },
     "all": "Tous les Services"
   },
   "projects": {
-    "title": "Nos Projets",
-    "hero_title_1": "Projets",
-    "hero_title_2": "Mondiaux",
-    "subtitle": "Nos Références Internationales",
-    "desc": "Découvrez les projets emblématiques que nous avons réalisés dans plus de 70 pays à travers le monde.",
-    "filter_all": "Tous les Projets",
-    "category": "Catégorie",
-    "country": "Pays",
-    "year": "Année",
-    "back_to_projects": "Retour à tous les projets",
-    "portfolio_tag": "Notre Portefeuille de Réalisations",
+    "hero_title_2": "Nos Projets",
+    "desc": "Découvrez nos projets emblématiques réalisés dans plus de 70 pays à travers le monde.",
+    "portfolio_tag": "Notre Portefeuille de Projets",
     "stats": {
       "completed": "Projets Réalisés",
       "countries": "Pays",
@@ -394,57 +270,154 @@
     },
     "filters": {
       "region": "Région",
-      "type": "Type",
-      "all": "Tous"
+      "type": "Type"
     },
     "types": {
-      "outdoor": "Parc Aquatique Extérieur",
-      "hotel": "Hôtel & Parc Aquatique",
+      "outdoor": "Parc Aquatique en Plein Air",
+      "hotel": "Hôtel et Parc Aquatique",
       "indoor": "Parc Aquatique Couvert",
-      "resort": "Village Vacances & Resort"
+      "resort": "Village de Vacances"
     },
-    "cta_tag": "Votre Futur Projet",
-    "cta_title": "Votre projet mérite de figurer sur cette liste.",
-    "cta_desc": "Contactez notre équipe d'ingénieurs et d'architectes experts pour concevoir le parc aquatique de vos rêves.",
-    "cta_btn": "Lancer le Projet"
+    "cta_tag": "Prochain Projet",
+    "cta_title": "Que votre projet figure sur cette liste",
+    "cta_desc": "Contactez notre équipe d'ingénieurs et d'architectes experts pour concevoir le parc aquatique ou le centre de loisirs de vos rêves.",
+    "cta_btn": "Lancer le Projet",
+    "list_title": "Quelques-uns de Nos Projets Réalisés",
+    "locations": {
+      "girit": "Crète",
+      "hanya": "La Canée",
+      "kefalonya": "Céphalonie",
+      "moravya": "Moravie",
+      "rethymno": "Rethymnon",
+      "selangor": "Selangor",
+      "timisoara": "Timișoara",
+      "benidorm": "Benidorm",
+      "tenerife": "Tenerife",
+      "gran_canaria": "Grande Canarie",
+      "mallorca": "Majorque",
+      "torremolinos": "Torremolinos",
+      "saint_cyprien": "Saint-Cyprien",
+      "torreilles": "Torreilles",
+      "saint_jean_de_monts": "Saint-Jean-de-Monts",
+      "marsa_alam": "Marsa Alam",
+      "hurghada": "Hurghada",
+      "hurgada": "Hurghada",
+      "sharm_el_sheikh": "Charm el-Cheikh",
+      "sarm_el_seyh": "Charm el-Cheikh",
+      "bigacs": "Bogács",
+      "bogacs": "Bogács",
+      "gyula": "Gyula",
+      "nyiregyhaza": "Nyíregyháza",
+      "sarvar": "Sárvár",
+      "zalakaros": "Zalakaros",
+      "jakovo": "Jakovo",
+      "novi_sad": "Novi Sad",
+      "vrnjacka_banja": "Vrnjačka Banja",
+      "jeddah": "Djeddah",
+      "cidde": "Djeddah",
+      "riyadh": "Riyad",
+      "doha": "Doha",
+      "seoul": "Séoul",
+      "almaty": "Almaty",
+      "tashkent": "Tachkent",
+      "baku": "Bakou",
+      "budva": "Budva",
+      "zakopane": "Zakopane",
+      "senec": "Senec",
+      "chisinau": "Chișinău",
+      "tbilisi": "Tbilissi",
+      "kyrenia": "Kyrenia",
+      "oran": "Oran",
+      "marrakech": "Marrakech",
+      "marakes": "Marrakech",
+      "agadir": "Agadir",
+      "sousse": "Sousse",
+      "antalya": "Antalya",
+      "mugla": "Muğla",
+      "izmir": "Izmir",
+      "bodrum": "Bodrum",
+      "fethiye": "Fethiye",
+      "didim": "Didim",
+      "aydin": "Aydın",
+      "asan": "Asan",
+      "bagdat": "Bagdad",
+      "bangalore": "Bangalore",
+      "d_city": "D City",
+      "fafe": "Fafe",
+      "karayipler": "Caraïbes",
+      "makadi_bay": "Makadi Bay",
+      "nasiriye": "Nassiriya",
+      "porec": "Poreč",
+      "port_ghalib": "Port Ghalib",
+      "seignosse": "Seignosse",
+      "skikda": "Skikda",
+      "sofya": "Sofia",
+      "soma_bay": "Soma Bay",
+      "sterlitamak": "Sterlitamak",
+      "vendays_montalivet": "Vendays-Montalivet",
+      "volgograd": "Volgograd",
+      "turkiye": "Turquie",
+      "romanya": "Roumanie",
+      "yunanistan": "Grèce",
+      "fransa": "France",
+      "malezya": "Malaisie",
+      "misir": "Égypte",
+      "macaristan": "Hongrie",
+      "bulgaristan": "Bulgarie",
+      "sirbistan": "Serbie",
+      "katar": "Qatar",
+      "vietnam": "Vietnam",
+      "ozbekistan": "Ouzbékistan",
+      "guney_kore": "Corée du Sud",
+      "kuzey_kibris": "Chypre du Nord",
+      "kazakistan": "Kazakhstan",
+      "karadag": "Monténégro",
+      "curacao": "Curaçao",
+      "irak": "Irak",
+      "azerbaycan": "Azerbaïdjan",
+      "polonya": "Pologne",
+      "slovakya": "Slovaquie",
+      "moldova": "Moldavie",
+      "gurcistan": "Géorgie",
+      "cezayir": "Algérie",
+      "fas": "Maroc",
+      "tunus": "Tunisie",
+      "ispanya": "Espagne",
+      "suudi_arabistan": "Arabie Saoudite",
+      "portekiz": "Portugal",
+      "hirvatistan": "Croatie",
+      "rusya": "Russie",
+      "hindistan": "Inde"
+    }
   },
   "products": {
-    "title": "Our Products",
-    "subtitle": "Innovative & Safe Water Play Systems",
-    "desc": "Discover our product range combining aesthetics, excitement, and the highest safety standards.",
+    "title": "Nos Produits",
+    "desc": "Découvrez notre gamme de produits qui réunit esthétique, sensations et les normes de sécurité les plus élevées.",
     "slides": {
-      "title": "Toboggans Aquatiques",
-      "desc": "Our open and closed tube water slides offering speed, excitement, and adrenaline together, suitable for all age groups."
+      "title": "Toboggans Aquatiques"
     },
     "tower": {
-      "title": "Splash Tower",
-      "desc": "Interactive water play towers designed in different themes, where children and families can safely spend time."
+      "title": "Splash Tower"
     },
     "zone": {
-      "title": "Splash Zone",
-      "desc": "Areas where kids meet water safely with sprayers, water guns, and small play elements."
+      "title": "Splash Zone"
     },
     "categories": {
-      "body_slides": "Toboggans Corps",
       "classic_slides": "Toboggans Classiques",
-      "extreme_slides": "Toboggans Extrêmes",
       "family_slides": "Toboggans Familiaux",
       "fast_slide": "Toboggans Rapides",
       "jumbo_slides": "Toboggans Jumbo",
-      "kids_slides": "Toboggans Enfants",
-      "racer_slides": "Toboggans de Course",
-      "rafting_slides": "Toboggans Rafting",
-      "tube_slides": "Toboggans Tubulaires"
+      "racer_slides": "Toboggans de Course"
     },
     "specs": {
       "tema": "Thème",
       "aktivite": "Activité",
       "yas_grubu": "Tranche d'Âge",
       "kapasite": "Capacité",
-      "odul": "Prix & Distinction",
+      "odul": "Prix",
       "tur": "Type",
       "gelistirme": "Développement",
-      "kaydirak_yolu": "Pistes de Glisse",
+      "kaydirak_yolu": "Piste de Glisse",
       "tescil": "Enregistrement",
       "malzeme": "Matériau"
     },
@@ -454,205 +427,190 @@
       "ozellestirilebilir": "Personnalisable",
       "tum_yaslar": "Tous Âges",
       "yuksek": "Élevée",
-      "sualti": "Monde Sous-Marin",
+      "sualti": "Underwater",
       "iaapa_brass_ring": "IAAPA Brass Ring",
       "dalga_sistemi": "Système de Vagues",
-      "ar_ge_merkezi": "Centre R&D Polgün",
-      "4_adet": "4 Pistes",
-      "8_kisi_seans": "8 Personnes/séance",
-      "kompozit_celik": "Composite + Acier"
+      "ar_ge_merkezi": "Centre de R&D",
+      "4_adet": "4 Unités",
+      "8_kisi_seans": "8 Personnes/Session",
+      "kompozit_celik": "Composite+Acier"
     },
     "badges": {
-      "imza_tema": "Thème Emblématique",
+      "imza_tema": "Thème Signature",
       "ar_ge": "R&D"
     },
     "items": {
       "pirate_theme": {
-        "sub": "Toboggans Aquatiques Thème Pirate",
-        "desc": "Thème signature de Polgün, le Thème Pirate est conçu pour faire naviguer les enfants sur les mers ouvertes peuplées de corsaires et leur offrir une aventure ludique inoubliable au cœur de cet univers imaginaire."
+        "sub": "Toboggans Aquatiques sur le Thème des Pirates",
+        "desc": "Pirate Theme, le thème signature de Polgün, est conçu pour que les enfants naviguent sur des mers remplies de pirates et s'amusent dans ce monde imaginaire."
       },
       "underwater_theme": {
-        "sub": "Structures Thème Monde Sous-Marin",
-        "desc": "Espace de jeu interactif conçu à partir d'espèces fascinantes et de récifs coralliens colorés, éveillant la curiosité des enfants pour le monde sous-marin et ses merveilles inexplorées."
+        "sub": "Structures sur le Thème du Monde Sous-Marin",
+        "desc": "Une aire de jeu interactive qui éveille la curiosité des enfants pour le monde sous-marin, conçue à partir des différentes espèces qui attendent d'être découvertes et des coraux multicolores."
       },
       "navatu": {
-        "sub": "Système de Vagues Primé IAAPA Brass Ring",
-        "desc": "Développé au sein du Centre de R&D de Polgün et récompensé par le prestigieux prix Brass Ring à l'IAAPA Expo Orlando, Navatu est un système de parc aquatique novateur qui porte l'expérience de la vague naturelle à un niveau inédit."
+        "sub": "Système de Vagues Récompensé par le IAAPA Brass Ring",
+        "desc": "Navatu est un système innovant pour parcs aquatiques développé au Centre de R&D de Polgün et récompensé par le prix Brass Ring à l'IAAPA Expo d'Orlando. Il porte l'expérience des vagues naturelles vers une nouvelle dimension."
       },
       "savana": {
-        "sub": "Toboggan Aquatique Multi-Pistes à Thème",
-        "desc": "Savana est un projet de R&D innovant réunissant quatre trajectoires de glisse différentes dans un même corps, permettant à huit utilisateurs d'expérimenter simultanément divers styles de descente. Design breveté en 2024."
+        "sub": "Toboggan Thématique à Plusieurs Pistes de Glisse",
+        "desc": "Savana est un projet de R&D innovant qui réunit quatre pistes de glisse différentes dans un même corps et permet à huit utilisateurs de vivre simultanément différents styles de glisse. Son design a été enregistré en 2024."
       },
       "big_hole": {
-        "desc": "Big Hole est un toboggan aquatique fermé de grand gabarit conçu pour offrir une expérience partagée en bouées familiales. Sa section tubulaire spacieuse procure une sensation impressionnante de vitesse et de fluidité, transformant le concept classique de toboggan fermé en une aventure amusante, conviviale et mémorable."
+        "desc": "Big Hole est un toboggan aquatique fermé de grande dimension, conçu pour offrir une expérience partagée en bouées familiales. Sa structure de tube à large section fait ressentir de manière impressionnante la vitesse et le mouvement, et transforme le concept classique du toboggan fermé en une expérience de parc aquatique amusante, conviviale et inoubliable pour les familles et les groupes."
       },
       "big_raft": {
-        "desc": "Big Raft est un toboggan aquatique à bouées grand format conçu pour faire vivre des moments forts aux familles et aux groupes d'amis. Ses trajectoires fluides et ses larges sections offrent une expérience de glisse dynamique, sécurisée et festive."
+        "desc": "Big Raft est un toboggan pour bouées familiales, large et confortable, conçu pour un usage partagé. Grâce à sa large surface de glisse, il permet aux familles et aux groupes d'amis de vivre ensemble le flux, la vitesse et les sensations. Très attractif pour les familles, ce toboggan offre une expérience de parc aquatique agréable qui associe divertissement et interaction sociale."
       },
       "family_slide": {
-        "desc": "Family Slide est un toboggan familial à haute capacité pensé pour permettre aux parents et aux enfants de glisser ensemble en toute sérénité. Ses virages doux et son parcours sécurisant en font une attraction phare pour tous les âges."
+        "desc": "Family Slide est un toboggan aquatique à bouées pour plusieurs personnes, conçu pour que les familles et les groupes en profitent ensemble. Grâce à ses larges virages, à ses transitions douces et à ses bouées pouvant accueillir jusqu'à quatre personnes, il offre un divertissement interactif, une expérience de glisse dynamique et une expérience de parc aquatique à haute capacité."
       },
       "family_tornado": {
-        "desc": "Family Tornado combine l'immense entonnoir conique Tornado avec des bouées multi-places familiales. Les passagers oscillent le long des parois inclinées avant de plonger vers la sortie dans un tourbillon d'éclats de rire."
+        "desc": "Family Tornado propose l'expérience emblématique de l'entonnoir (funnel) à plus grande échelle et permet à des groupes plus nombreux de partager les sensations. Grâce à sa large structure en entonnoir et à son puissant mouvement d'oscillation, il offre une forte accélération, une sensation momentanée d'apesanteur et des transitions dynamiques. Avec sa grande capacité, son aspect visuel impressionnant et une expérience qui donne envie de recommencer, c'est l'un des toboggans familiaux phares des parcs aquatiques."
       },
       "mid_hole": {
-        "desc": "Mid Hole propose une expérience de glisse tubulaire intermédiaire alliant sections fermées, jeux de lumière et virages dynamiques pour les amateurs de sensations modérées à intenses."
+        "desc": "Mid Hole est un toboggan aquatique familial fermé qui offre une descente ample et impressionnante. Son tube fermé renforce la curiosité et l'excitation tout au long du parcours, tout en offrant aux familles et aux groupes une expérience de glisse amusante, confortable et à partager."
       },
       "ufo_slide": {
-        "desc": "UFO Slide catapulte les glisseurs dans une coupole soucoupe volante spectaculaire. Grâce à la force centrifuge, les bouées décrivent plusieurs orbites le long des parois avant de plonger vers le bassin de réception."
+        "desc": "UFO Slide est un toboggan aquatique à bouées adapté aux familles, inspiré de la forme elliptique des soucoupes volantes. Grâce à sa structure en tube fermé, il offre une glisse fluide et confortable pour jusqu'à quatre utilisateurs et, en associant le plaisir partagé à une grande valeur ludique, apporte aux parcs aquatiques une attraction familiale remarquable."
       },
       "freefall": {
-        "desc": "Freefall est un toboggan à sensations extrêmes offrant une chute quasi verticale vertigineuse. Conçu pour les amateurs d'adrénaline pure, il garantit une accélération fulgurante et un frisson maximal dès le départ."
+        "desc": "Freefall est un toboggan aquatique à forte dose d'adrénaline, conçu pour faire vivre la sensation de chute libre de la manière la plus intense. Grâce à son angle de descente presque vertical et à son parcours ininterrompu à grande vitesse, il offre une expérience de glisse courte mais extrêmement impressionnante. C'est une attraction incontournable pour les amateurs de sensations fortes."
       },
       "hydro_river": {
-        "desc": "Hydro River est une rivière sauvage rapide simulant les courants impétueux d'un torrent de montagne, offrant une aventure rythmée par des accélérations et des remous captivants."
+        "desc": "Hydro River est un toboggan aquatique à bouées de nouvelle génération fonctionnant grâce à une technologie avancée de jets d'eau. En assurant un mouvement continu grâce aux jets d'eau, il offre une expérience de glisse fluide, dynamique et ininterrompue. Associant technologie innovante, confort et divertissement, il crée une attraction unique pour les parcs aquatiques."
       },
       "rocket_slide": {
-        "desc": "Rocket Slide propulse les utilisateurs depuis une cabine de lancement à trappe escamotable pour une chute libre ultra-rapide suivie d'une boucle haute vitesse à couper le souffle."
+        "desc": "Rocket Slide est un toboggan aquatique à forte dose d'adrénaline dont le système de départ à trappe (trapdoor) libère soudainement l'utilisateur et le lance dans une descente à grande vitesse sous l'effet de la gravité. Le plancher qui s'ouvre de manière inattendue après le compte à rebours, combiné à la sensation de chute libre et aux options de boucle (looping), offre l'une des expériences les plus palpitantes de la catégorie des toboggans à grande vitesse."
       },
       "uphill_slide": {
-        "desc": "Uphill Slide défie la gravité grâce à de puissants jets d'eau à haute pression propulsant les bouées vers le haut le long de montées audacieuses avant de nouvelles descentes grisantes."
+        "desc": "Uphill Slide offre une expérience de glisse dynamique grâce à des descentes et des montées successives le long de son parcours ondulé. L'alternance d'accélérations et de ralentissements crée une sensation de mouvement fluide et rythmée, offrant aux utilisateurs des sensations durables et une grande valeur de divertissement."
       },
       "kamikaze": {
-        "desc": "Kamikaze est un toboggan à grande vitesse emblématique, combinant fortes pentes et changements d'inclinaison pour une sensation de vitesse décoiffante et une montée d'adrénaline garantie."
-      },
-      "babochka": {
-        "desc": "Babochka présente une géométrie inspirée des ailes de papillon, générant des mouvements de balancier symétriques et des trajectoires aériennes surprenantes."
-      },
-      "boomerango": {
-        "desc": "Boomerango est un toboggan à bouées haute adrénaline inspiré du retour du boomerang. Après une descente abrupte, les glisseurs grimpent une paroi quasi verticale, vivent un moment d'apesanteur saisissant puis redescendent vers le parcours."
-      },
-      "drone": {
-        "desc": "Drone est un module de toboggan visuellement impressionnant doté d'une vaste chambre en dôme créant une sensation saisissante d'espace et d'apesanteur en plein cœur du parcours."
-      },
-      "magic_tray": {
-        "desc": "Magic Tray s'inspire de la forme d'une soucoupe pour délivrer des virages inclinés ultra-fluides, des accélérations contrôlées et un mouvement de glisse rythmé particulièrement apprécié des familles."
-      },
-      "mini_boomerango": {
-        "desc": "Mini Boomerango adapte les sensations oscillatoires du Boomerang légendaire aux tours Splash Tower et aux parcs compacts avec un format sur mesure."
-      },
-      "space_rocket": {
-        "desc": "Space Rocket combine esthétique futuriste et vitesse supersonique pour une aventure spatiale immersive et visuellement spectaculaire."
-      },
-      "super_bowl": {
-        "desc": "Super Bowl réinvente le toboggan toupie avec une large cuve circulaire où les bouées effectuent plusieurs révolutions centrifuges avant d'être aspirées vers le chenal de sortie."
-      },
-      "space_bowl": {
-        "desc": "Space Bowl est un toboggan compact et intense : après une descente à toute allure en tube fermé, les glisseurs tourbillonnent dans l'entonnoir central avant la chute finale."
-      },
-      "tornado_slide": {
-        "desc": "Tornado offre une descente d'anthologie en projetant les bouées géantes le long des parois d'un immense entonnoir incliné, recréant la force d'un véritable vortex naturel."
-      },
-      "planeta": {
-        "desc": "Planeta séduit par sa forme sphérique inspirée des orbites planétaires, offrant de larges courbes enveloppantes et des spirales dynamiques idéales pour toute la famille."
-      },
-      "body_racer": {
-        "desc": "Body Racer est un toboggan de course au corps à corps multi-pistes où les participants s'affrontent côte à côte dans des tubes ouverts ou transparents pour une émulation totale."
-      },
-      "multi_slide": {
-        "desc": "Multi Slide permet à plusieurs compétiteurs de s'élancer en même temps sur des pistes parallèles avec des bosses d'accélération successives, combinant grande capacité et convivialité."
-      },
-      "twister_slide": {
-        "desc": "Twister Slide entremêle deux ou trois tubes spiralés pour une course palpitante où les trajectoires sinueuses et les virages serrés réservent des surprises jusqu'à l'arrivée."
-      },
-      "racer_slide": {
-        "desc": "Racer Slide est un toboggan duel à deux pistes parallèles synchronisées, parfait pour mesurer sa vitesse entre amis ou en famille."
-      },
-      "spider_slide": {
-        "desc": "Spider Slide déploie des tunnels entrelacés aux virages acérés permettant jusqu'à quatre descendeurs simultanés pour des courses pleines de rebondissements."
-      },
-      "aquatube": {
-        "desc": "Aquatube est le grand classique du toboggan tubulaire fermé, pouvant être agrémenté d'effets lumineux multicolores et de sections transparentes pour une expérience visuelle envoûtante."
-      },
-      "black_hole": {
-        "desc": "Black Hole plonge les glisseurs dans l'obscurité d'un tube fermé sublimé par des jeux de lumière stroboscopiques et des effets visuels psychédéliques captivants."
-      },
-      "compact_slide": {
-        "desc": "Compact Slide est la solution idéale pour les espaces restreints et les Splash Towers, offrant une grande facilité d'installation, un entretien minime et une excellente fluidité de glisse."
-      },
-      "rafting_slide": {
-        "desc": "Rafting Slide s'inspire des descentes en eaux vives pour offrir un parcours de groupe riche en virages relevés, rebonds fluides et éclaboussures rafraîchissantes."
-      },
-      "wide_slide": {
-        "desc": "Wide Slide propose une large piste continue permettant à plusieurs personnes de glisser côte à côte pour un moment de partage joyeux et convivial."
-      },
-      "body_slide": {
-        "desc": "Body Slide est l'incontournable toboggan corps à ciel ouvert, fabriqué en technologie RTM haute brillance, garantissant une glisse soyeuse, sûre et accessible à tous les visiteurs."
+        "desc": "Kamikaze est un toboggan aquatique classique qui offre une grande vitesse et une adrénaline intense grâce à sa surface de glisse en paliers. Les effets d'accélération et de ralentissement soudains renforcent encore la sensation de vitesse ; avec sa glisse fluide, Kamikaze est l'une des attractions les plus populaires des parcs aquatiques pour les amateurs de sensations fortes."
       },
       "slip_fly": {
-        "desc": "Slip & Fly combine une glissade ultra-rapide avec un tremplin final projetant les baigneurs dans les airs avant un amerrissage spectaculaire dans le bassin profond."
+        "desc": "Slip & Fly est un toboggan aquatique original développé par Polgün, conçu pour donner la sensation de rebondir et de voler au-dessus de la surface de l'eau. Réunissant grande vitesse, expérience visuelle impressionnante et adrénaline intense, il porte les sensations à un niveau supérieur et compte parmi les attractions phares des parcs aquatiques."
+      },
+      "babochka": {
+        "desc": "Babochka associe sa géométrie originale inspirée du papillon à l'expérience d'un toboggan familial à bouées. Grâce à ses larges transitions inclinées et à son accélération maîtrisée, il offre une glisse fluide et dynamique, tandis que son design symétrique et remarquable confère aux parcs aquatiques un fort impact visuel et peut être personnalisé pour différents concepts thématiques."
+      },
+      "boomerango": {
+        "desc": "Boomerango est un toboggan aquatique à bouées à forte dose d'adrénaline, inspiré du mouvement de retour du boomerang. Après une descente à grande vitesse, les utilisateurs grimpent sur un mur presque vertical, ressentent un instant d'apesanteur, puis reviennent sur le parcours du toboggan pour poursuivre leur descente. Avec sa dynamique de mouvement et son design emblématique, c'est l'une des attractions les plus remarquables des parcs aquatiques axés sur les sensations fortes."
       },
       "canyon_slide": {
-        "desc": "Canyon offre une expérience sensationnelle en bouées avec un encombrement optimisé. Les utilisateurs ressentent élévation, oscillations et changements d'axe rapides dans un espace compact."
+        "desc": "Canyon offre une expérience palpitante de toboggan aquatique à bouées grâce à son design compact qui permet de gagner de la place. Tout au long de son parcours dynamique, les utilisateurs ressentent à la fois la montée, le balancement et le retour, ce qui en fait une attraction impressionnante offrant une expérience de glisse inoubliable, même sur des zones d'installation restreintes."
       },
       "crazy_cone": {
-        "desc": "Crazy Cone propose une glisse rythmée et surprenante grâce à ses modules coniques intégrés où les bouées effectuent des rotations latérales avant de replonger dans le tube."
+        "desc": "Crazy Cone offre une expérience de glisse amusante et énergique grâce à son design conique caractéristique et à son mouvement d'oscillation fluide. Après être passés dans la large section du cône, les utilisateurs vivent un parcours palpitant et plein de surprises grâce aux changements de direction. Avec son aspect remarquable et sa structure qui s'adapte à différentes options d'implantation, c'est une attraction phare pour les projets de parcs aquatiques destinés aux familles et aux jeunes."
+      },
+      "drone": {
+        "desc": "Drone est un module de toboggan visuellement remarquable qui enrichit l'expérience de glisse grâce à son effet d'élargissement soudain et à sa forte sensation d'espace. La large section en forme de dôme procure à l'utilisateur une sensation d'espace ouvert et aéré, après quoi le parcours de glisse se poursuit. Grâce à son impact visuel, à sa structure adaptée aux applications d'éclairage et à sa facilité d'intégration dans différents systèmes de toboggans, c'est une solution innovante qui apporte sensations et valeur esthétique aux parcs aquatiques."
       },
       "hill_slide": {
-        "desc": "Hill Slide procure des sensations intenses avec une descente abrupte immédiatement suivie d'une spectaculaire remontée sur colline, suscitant un désir irrésistible de recommencer."
+        "desc": "Hill Slide est un toboggan aquatique à bouées qui procure vitesse et adrénaline grâce à une descente abrupte suivie d'une impressionnante remontée en pente. Grâce à son parcours dynamique, à une expérience qui donne envie de recommencer et à un design personnalisable avec différentes couleurs et motifs, il apporte à chaque parc aquatique une attraction remarquable et originale."
       },
       "hydra_slide": {
-        "desc": "Hydra réunit haute capacité et architecture iconique dans un toboggan de course multi-pistes. Sa structure à têtes multiples permet des départs simultanés pour des compétitions endiablées."
+        "desc": "Hydra est un toboggan de course multipiste qui associe une grande capacité à un design architectural audacieux et emblématique. Sa structure originale à plusieurs têtes offre des descentes simultanées à grande vitesse qui renforcent l'esprit de compétition et l'interaction entre utilisateurs. Il transforme le concept classique du toboggan de course sur tapis en une expérience impressionnante qui devient l'une des attractions emblématiques des parcs aquatiques."
+      },
+      "magic_tray": {
+        "desc": "Magic Tray offre une expérience dynamique de toboggan à bouées grâce à ses virages inclinés fluides, à ses changements de direction continus et à son accélération maîtrisée. Son design original inspiré de la forme d'une soucoupe (saucer) crée une sensation de glisse continue et rythmée ; avec ses sensations adaptées aux familles, son confort et son fort impact visuel, il apporte aux parcs aquatiques une attraction remarquable."
+      },
+      "mini_boomerango": {
+        "desc": "Mini Boomerango propose dans un design compact le mouvement de va-et-vient caractéristique et les sensations du toboggan boomerang. Grâce à sa hauteur réduite et à son faible encombrement, c'est une solution idéale pour les projets disposant d'un espace limité, les systèmes Splash Tower et les parcs aquatiques compacts. Malgré ses petites dimensions, il offre une grande expérience de glisse et constitue une alternative d'attraction flexible et efficace."
+      },
+      "space_rocket": {
+        "desc": "Space Rocket associe un design futuriste à une expérience de glisse à grande vitesse et propose une aventure thématique pleine de sensations. Tout au long de sa structure originale inspirée d'une fusée, les utilisateurs vivent des transitions rapides et fluides ; grâce à son fort impact visuel, Space Rocket offre une expérience de glisse inoubliable."
+      },
+      "super_bowl": {
+        "desc": "Super Bowl réinterprète l'expérience classique du toboggan à bol (bowl) avec un mouvement de rotation plus long et une accélération dynamique. Après avoir fait plusieurs tours à l'intérieur de la large section du bol, les utilisateurs rejoignent le parcours de sortie et vivent une expérience de glisse à forte dose d'adrénaline et visuellement impressionnante. Grâce à ses options de conception flexibles et à sa grande efficacité opérationnelle, c'est une attraction phare et remarquable pour les parcs aquatiques."
+      },
+      "space_bowl": {
+        "desc": "Space Bowl est un toboggan aquatique compact mais impressionnant qui réunit vitesse, mouvement de rotation et sensations visuelles. Les utilisateurs entrent dans la section du bol depuis un parcours en tube fermé à grande vitesse, y font plusieurs tours, puis terminent la descente par une chute finale palpitante. Avec son design emblématique, le fort impact visuel qu'il produit sur les spectateurs et sa structure compacte nécessitant peu d'espace, c'est une attraction remarquable qui apporte de la valeur à tout parc aquatique."
+      },
+      "tornado_slide": {
+        "desc": "Tornado offre une expérience de toboggan aquatique à bouées à forte dose d'adrénaline grâce à sa large structure en entonnoir (funnel) et à son puissant mouvement d'oscillation. Après être montés haut sur les parois de l'entonnoir, les utilisateurs poursuivent le parcours par des transitions dynamiques et ont la sensation d'évoluer à l'intérieur d'un tourbillon naturel. Avec son design impressionnant et ses sensations intenses, il se distingue comme l'une des attractions emblématiques des parcs aquatiques."
+      },
+      "planeta": {
+        "desc": "Planeta est un toboggan aquatique emblématique qui associe des sensations adaptées aux familles à des mouvements dynamiques grâce à sa forme ronde évoquant une planète et à son profil de glisse impressionnant. Au fil de transitions fluides, de larges virages et de mouvements en spirale de plus en plus rapides, les utilisateurs ont la sensation d'avancer en orbite dans l'espace. Son design sculptural renforce l'identité visuelle du parc aquatique tout en offrant aux visiteurs de tous âges une attraction équilibrée et inoubliable qui réunit divertissement, mouvement et envie de recommencer."
+      },
+      "body_racer": {
+        "desc": "Body Racer est un toboggan corporel multipiste axé sur la compétition, sur lequel les utilisateurs peuvent faire la course côte à côte. Son design, qui peut être fabriqué avec des options de tube ouvert ou fermé, permet aux utilisateurs de se voir pendant la course et renforce le frisson de la compétition. Réunissant grande vitesse, divertissement et interaction, cette attraction est l'un des toboggans de course incontournables des parcs aquatiques modernes."
+      },
+      "multi_slide": {
+        "desc": "Multi Slide est un toboggan aquatique multipiste qui offre le plaisir de la course côte à côte grâce à ses multiples options de pistes et à un départ palpitant en chute libre. Réunissant grande vitesse, divertissement compétitif et grande capacité d'accueil, il crée une attraction dynamique, conviviale et remarquable pour les parcs aquatiques."
+      },
+      "twister_slide": {
+        "desc": "Twister Slide est un toboggan aquatique multipiste axé sur la compétition, composé de 2 ou 3 tubes en spirale. Tandis que les utilisateurs font la course côte à côte le long de parcours en spirale fermés, les transitions sinueuses et les changements de direction continus renforcent les sensations. Le fait que le vainqueur ne soit connu qu'à la ligne d'arrivée réunit surprise, compétition et grande valeur de divertissement pour une expérience inoubliable."
+      },
+      "racer_slide": {
+        "desc": "Racer Slide est un toboggan de course à deux pistes qui réunit vitesse, compétition et interaction sociale. Les utilisateurs font la course côte à côte sur des parcours simultanés et vivent une expérience amusante qui donne envie de recommencer. Grâce à son design personnalisable avec différentes couleurs et motifs, il donne à chaque parc aquatique un aspect dynamique et remarquable."
+      },
+      "spider_slide": {
+        "desc": "Spider Slide est un toboggan aquatique multipiste qui offre une expérience de glisse dynamique et compétitive grâce à ses virages serrés et ses courbes prononcées. Grâce à sa structure de tunnels entrelacés, il permet à jusqu'à quatre utilisateurs de faire la course côte à côte en même temps, ce qui renforce les sensations et l'interaction. Avec son design architectural impressionnant et sa forte présence visuelle, c'est l'une des attractions de course les plus remarquables des parcs aquatiques."
+      },
+      "aquatube": {
+        "desc": "Aquatube est un toboggan corporel classique qui associe grande vitesse et impressionnante expérience en tube fermé. Son design, qui peut être enrichi d'effets d'éclairage et de sections transparentes ou semi-transparentes, offre aux utilisateurs une expérience de glisse visuellement impressionnante. Grâce à son design intemporel et à son attrait pour un large public, il reste l'une des attractions les plus populaires et incontournables des parcs aquatiques."
+      },
+      "black_hole": {
+        "desc": "Black Hole est un toboggan aquatique à bouées classique, enrichi d'effets lumineux impressionnants. Les effets visuels proposés tout au long de sa structure en tube fermé transforment la glisse en une aventure immersive. Réunissant vitesse, atmosphère et divertissement, il reste l'une des attractions les plus populaires et intemporelles des parcs aquatiques."
+      },
+      "compact_slide": {
+        "desc": "Compact Slide est une solution de toboggan aquatique pratique, développée pour les espaces restreints, qui offre l'avantage d'un montage et d'une maintenance faciles. Utilisable dans les systèmes Splash Tower, dans les parcs aquatiques ou en installation indépendante, ce modèle peut être personnalisé avec différentes options de dimensions, de couleurs et de design. Grâce à sa structure flexible et à son utilisation efficace de l'espace, il offre une attraction fonctionnelle et économique adaptée à des projets de toutes tailles."
+      },
+      "rafting_slide": {
+        "desc": "Rafting Slide est un toboggan de groupe à haute capacité, conçu en s'inspirant des toboggans familiaux à bouées les plus réussis au monde. Grâce à son parcours fondé sur la vitesse, de larges passages sur les parois et des changements de direction continus, il offre aux utilisateurs une expérience de glisse dynamique. Ses descentes impressionnantes, ses virages à grand rayon et ses transitions fluides associent de manière équilibrée confort et adrénaline pour les familles et les amateurs de sensations, et créent une expérience de parc aquatique inoubliable."
+      },
+      "wide_slide": {
+        "desc": "Wide Slide est un toboggan aquatique amusant et convivial qui permet à jusqu'à trois utilisateurs de glisser ensemble en même temps. Grâce à sa large surface de glisse, il permet aux familles et aux groupes d'amis de vivre ensemble une expérience agréable. Sa structure, personnalisable avec différentes couleurs, motifs et dimensions, offre une attraction flexible et visuellement remarquable qui s'adapte à tout parc aquatique."
+      },
+      "body_slide": {
+        "desc": "Body Slide est l'un des modèles classiques de toboggan aquatique qui, grâce à ses couleurs vives et à la technologie RTM, offre aux utilisateurs une glisse fluide, confortable et agréable. Grâce à sa structure flexible et adaptable, il peut être facilement intégré à tout type de parc aquatique, que ce soit comme attraction indépendante ou dans le cadre de différentes combinaisons de toboggans. Avec son design intemporel et son large champ d'utilisation, Body Slide est l'une des solutions de toboggans incontournables pour les parcs aquatiques."
       }
     },
     "catalog_title": "Catalogue de Produits",
-    "request_btn": "Product Inquiry",
-    "download_btn": "Download Catalog",
-    "custom_project_tag": "Custom Project",
-    "not_found_title": "Didn't find what you were looking for?",
-    "not_found_desc": "Explore our wide range of products to turn your dream waterpark into reality, and let's design the best solutions for your project together.",
-    "custom_request_btn": "Request Custom Solution",
-    "filters": {
-      "all": "所有产品",
-      "capacity": "接待量",
-      "category": "产品类别",
-      "space_type": "场地类型",
-      "thrill_level": "惊险等级"
-    }
+    "request_btn": "Demande de Produit",
+    "download_btn": "Télécharger le Catalogue",
+    "custom_project_tag": "Projet Spécial",
+    "not_found_title": "Vous n'avez pas trouvé ce que vous cherchiez",
+    "not_found_desc": "Contactez-nous pour transformer le parc aquatique de vos rêves en réalité ; concevons ensemble les solutions les mieux adaptées à votre projet.",
+    "custom_request_btn": "Demander une Solution sur Mesure"
   },
   "arge": {
-    "title": "R&D & Innovation",
-    "subtitle": "Les Technologies Aquatiques de Demain",
-    "desc": "Premier centre de R&D agréé de Muğla, le Centre de R&D Polgün conçoit des technologies et des attractions novatrices qui façonnent l'industrie.",
-    "section1_title": "Notre Expertise en R&D",
-    "section1_desc": "Grâce aux logiciels d'ingénierie avancés, aux analyses d'écoulement CFD et aux méthodes de fabrication de nouvelle génération, nous optimisons les performances et la longévité de nos produits.",
-    "section2_title": "Produits Phares de R&D",
     "header_title": "Centre de R&D",
-    "hero_desc": "Chez Polgün Waterparks, notre démarche de R&D repose sur le développement de technologies aquatiques sûres, novatrices, durables et à haute valeur ajoutée.",
-    "p1": "Reconnu officiellement par le Ministère en 2021, notre centre de recherche est le premier et unique centre de R&D de Muğla, jouant un rôle pionnier dans le développement de produits exclusifs, l'autonomie technologique et la création de valeur pour notre filière.",
-    "p2": "Au sein de notre centre, 30 collaborateurs qualifiés (chercheurs, ingénieurs, techniciens et spécialistes) pilotent de manière intégrée la conception 3D, les calculs statiques et dynamiques, le prototypage, les bancs d'essais, l'optimisation des procédés composites et la propriété industrielle.",
-    "p3": "Nous considérons la souveraineté technologique et la fabrication locale comme un devoir stratégique ; nous concevons des solutions réduisant la dépendance extérieure, rapidement déployables et répondant précisément aux exigences des investisseurs. De la planche à dessin à la mise en service sur site, nos protocoles appliquent rigoureusement les normes internationales de sécurité et de durabilité environnementale.",
-    "innovative_title": "Produits Novateurs",
-    "p4": "Les innovations développées par le Centre de R&D de Polgün apportent une véritable rupture dans des domaines tels que l'économie d'eau, la sécurité des usagers, l'optimisation du débit horaire, la thématisation immersive, la modularité des structures et les géométries de glisse inédites. Nos attractions phares telles que Navatu, Savana, Monarch Butterfly et Eclipse incarnent l'excellence de l'ingénierie et de la fabrication Polgün sur la scène internationale.",
+    "hero_desc": "Chez Polgün Waterparks, notre approche de la R&D repose sur le développement de technologies de divertissement aquatique sûres, innovantes, durables et à forte valeur ajoutée.",
+    "p1": "Notre centre, qui a obtenu le statut de Centre de R&D avec l'approbation du Ministère en 2021, est le premier et unique Centre de R&D de Muğla et ouvre la voie, dans notre secteur, au développement de produits originaux, à la localisation et à la production de technologies.",
+    "p2": "Au sein de notre Centre de R&D, avec nos 30 collaborateurs R&D qualifiés en équivalent temps plein exerçant en tant que chercheurs, techniciens et personnel de soutien, nous menons selon une approche globale les processus de conception de nouveaux produits, d'analyses d'ingénierie, de prototypage, d'essais, de validation, de développement de méthodes de production et de propriété intellectuelle.",
+    "p3": "Nous considérons les travaux de nationalisation et de localisation comme une responsabilité stratégique pour notre pays ; nous développons des solutions qui réduisent la dépendance extérieure, s'appliquent rapidement et répondent directement aux besoins des clients. Dans tous nos processus de R&D, de la conception à la production et de l'analyse à l'application sur site, nous nous fondons sur les principes de sécurité, de qualité, de conformité aux normes internationales et de durabilité.",
+    "innovative_title": "Produits Innovants",
+    "p4": "Les projets développés au Centre de R&D de Polgün apportent de la valeur au secteur dans des domaines tels que l'économie d'eau, la sécurité des utilisateurs, l'augmentation de la capacité, l'expérience thématique, la production modulaire, les technologies des matériaux composites et les géométries de toboggans de nouvelle génération. Nos projets de produits innovants tels que Navatu, Savana, Monarch Butterfly et Eclipse figurent parmi les principaux résultats de R&D qui représentent la force de conception, d'ingénierie et de production de Polgün sur le marché international.",
     "continuous_title": "Amélioration Continue",
-    "p5": "Nos activités de R&D dépassent la simple création de nouveaux modèles. Nous menons des travaux constants pour accroître les performances de notre catalogue existant, perfectionner nos procédés de fabrication, réduire l'empreinte environnementale et renforcer notre compétitivité mondiale. À travers des partenariats universitaires, des publications scientifiques et une politique active de brevets et de dépôts de modèles, nous pérennisons une véritable culture de l'innovation.",
+    "p5": "Nos activités de R&D ne se limitent pas au développement de nouveaux produits. Nous menons également des travaux d'amélioration continue afin d'accroître les performances des produits existants, d'améliorer les processus de production, de réduire les impacts environnementaux, d'augmenter l'efficacité des matériaux et de renforcer notre compétitivité sur les marchés internationaux. Grâce aux collaborations académiques, aux publications scientifiques et aux processus de brevets et d'enregistrement de dessins et modèles, nous renforçons notre savoir-faire institutionnel et transformons les résultats obtenus en une culture d'innovation durable.",
     "misyon": "Notre Mission",
-    "misyon_desc": "Apporter des solutions d'ingénierie novatrices, sûres, durables et économiquement performantes à l'industrie mondiale des loisirs aquatiques. Nous nous engageons à respecter scrupuleusement les plannings, les validations techniques et les normes internationales pour enrichir notre secteur de technologies d'avant-garde et de talents d'exception.",
+    "misyon_desc": "Apporter des solutions originales au secteur du divertissement aquatique en développant des projets de R&D de haute qualité, sûrs, économiques et innovants, et créer des produits pionniers qui représentent notre pays sur les marchés national et international. Dans nos processus de R&D, en nous fondant sur le respect du programme de travail, les validations d'ingénierie, la conformité aux normes et les principes de production durable, nous visons à apporter à notre secteur des connaissances, des technologies et des ressources humaines qualifiées.",
     "vizyon": "Notre Vision",
-    "vizyon_desc": "Devenir la référence mondiale absolue en ingénierie de parcs aquatiques, reconnue pour ses concepts iconiques, sa maîtrise technologique et ses réalisations hors normes qui redéfinissent les standards du divertissement aquatique.",
+    "vizyon_desc": "En tant que Centre de R&D de Polgün Waterparks, notre vision est d'être un centre de R&D leader et pionnier à l'échelle mondiale, qui oriente les technologies du divertissement aquatique grâce à ses designs originaux, ses solutions d'ingénierie innovantes, sa solide capacité de production et ses projets conformes aux normes internationales. Grâce aux projets que nous développons sans faire de compromis sur la qualité, nous aspirons à devenir une marque de référence tant au niveau national qu'international.",
     "projects_title": "Nos Projets de R&D",
-    "navatu_desc": "Un système révolutionnaire de génération de houle primé par l'IAAPA Brass Ring, offrant une expérience de glisse naturelle inédite.",
-    "savana_sub": "Toboggan Aquatique Thématique Multi-Pistes",
-    "savana_desc": "Un projet de R&D novateur combinant quatre trajectoires de glisse indépendantes au sein d'une seule et même architecture sculpturale.",
-    "monarch_desc": "Une création exclusive mariant la géométrie biomimétique des ailes de papillon aux dynamiques de glisse à très haute vitesse.",
+    "navatu_desc": "Un système innovant pour parcs aquatiques qui porte l'expérience des vagues naturelles vers une nouvelle dimension.",
+    "savana_sub": "Toboggan Thématique à Plusieurs Pistes de Glisse",
+    "savana_desc": "Un projet de R&D innovant qui réunit quatre pistes de glisse différentes dans un même corps.",
     "fikri_sinai_tag": "PROPRIÉTÉ INTELLECTUELLE",
-    "fikri_sinai_title": "Droits de Propriété Intellectuelle & Industrielle",
-    "fikri_sinai_desc": "Les innovations technologiques, brevets et modèles développés par le Centre de R&D de Polgün sont protégés à l'échelle nationale et internationale.",
+    "fikri_sinai_title": "Nos Droits de Propriété Intellectuelle et Industrielle",
+    "fikri_sinai_desc": "Les innovations technologiques et les designs développés par le Centre de R&D de Polgün sont protégés par des enregistrements nationaux et internationaux.",
     "stats": {
       "patent": "Brevet",
       "utility_model": "Modèle d'Utilité",
-      "design": "Dessin & Modèle",
-      "brand": "Marque Déposée",
+      "design": "Dessin et Modèle",
+      "brand": "Marque",
       "publication": "Publication / Article",
       "total": "Total"
     },
-    "utility_models_tag": "REGISTRES OFFICIELS",
+    "utility_models_tag": "ENREGISTREMENTS OFFICIELS",
     "utility_models_title": "Nos Modèles d'Utilité",
-    "dag_kizagi": "Châssis Porteur et Système de Freinage de Luge Alpine",
-    "project_code": "Code Projet",
-    "work_name": "Titre de l'Attraction",
+    "dag_kizagi": "Châssis Porteur et Système de Freinage pour Luge sur Rail",
+    "project_code": "Code du Projet",
+    "work_name": "Titre de l'Œuvre",
     "scope": "Portée",
-    "status": "Statut",
     "app_date": "Date de Dépôt",
     "reg_date": "Date d'Enregistrement",
     "registered": "Enregistré",
@@ -660,519 +618,403 @@
     "international": "International",
     "pending": "En Cours de Dépôt",
     "brands_tag": "PROPRIÉTÉ INTELLECTUELLE",
-    "brands_title": "Nos Marques Déposées",
-    "brands_desc": "Les marques déposées de Polgün en Turquie et à l'international incarnent notre identité exclusive et notre fiabilité reconnue.",
+    "brands_title": "Nos Marques",
+    "brands_desc": "Les marques de Polgün enregistrées en Turquie et à l'international sont le symbole de notre identité originale et de notre fiabilité.",
     "official_record": "Enregistrement Officiel",
-    "patent_management": "© Gestion des Brevets Polgün Waterparks",
+    "patent_management": "© Gestion des Brevets de Polgün Waterparks",
     "project_type": "Projet de R&D",
-    "center_location": "Centre de R&D"
+    "center_location": "Centre de R&D",
+    "design_slide": "{{name}} Design {{number}}"
   },
   "career": {
-    "title": "Carrières at Polgün",
-    "subtitle": "Join the Polgün Family",
-    "desc": "Let's produce value together in international projects by taking part in our continuously growing, innovative, and dynamic team.",
-    "why_join": "Why Polgün?",
-    "form_title": "Application Form",
-    "name": "Your Name",
-    "email": "Your E-mail Address",
-    "phone": "Your Numéro de Téléphone",
-    "position": "Position Applied For",
-    "cv": "Upload CV / Resume",
-    "message": "Votre Message",
-    "submit": "Submit Application",
-    "form_success": "Your application has been received successfully. Thank you.",
-    "form_error": "An error occurred while sending the form. Please try again.",
-    "why_pillars": {
-      "projects": "International Projets",
-      "projects_desc": "Opportunity to work on exciting projects around the world.",
-      "innovation": "R&D and Innovation",
-      "innovation_desc": "A developmental work environment where innovative ideas are supported.",
-      "team": "Strong Team Spirit",
-      "team_desc": "A journey reaching from production to success together with our expert and dynamic team.",
-      "growth": "Carrières and Development",
-      "growth_desc": "We grow your career together with training, mentoring, and promotion opportunities.",
-      "environment": "Modern Workspace",
-      "environment_desc": "A comfortable, modern workspace with social amenities.",
-      "benefits": "Social Benefits",
-      "benefits_desc": "Social opportunities supporting the motivation and peace of mind of our employees."
-    },
-    "hero_desc": "Join us to take part in projects shaping the water entertainment industry, and be a part of a strong team spanning from production to design, R&D to field applications.",
-    "view_jobs": "View Open Positions",
-    "general_apply": "Apply Spontaneously",
-    "why_title": "Why Polgün?",
-    "open_positions": "Open Positions",
-    "jobs_subtitle": "Discover suitable positions for you.",
+    "title": "Carrière chez Polgün",
+    "hero_desc": "Rejoignez-nous pour participer à des projets qui orientent le secteur du divertissement aquatique et faire partie d'une équipe solide qui s'étend de la production à la conception et de la R&D aux applications sur site.",
+    "view_jobs": "Voir les Postes Ouverts",
+    "general_apply": "Candidature Spontanée",
+    "why_title": "Pourquoi Polgün",
+    "open_positions": "Postes Ouverts",
+    "jobs_subtitle": "Découvrez les postes qui vous correspondent.",
     "filters": {
-      "dept": "Department",
-      "all_depts": "Tous Departments",
-      "location": "Location",
-      "all_locations": "Tous Locations",
-      "type": "Employment Type",
-      "all_types": "Tous Types"
+      "dept": "Département",
+      "all_depts": "Tous les Départements",
+      "location": "Lieu",
+      "all_locations": "Tous les Lieux",
+      "type": "Type de Contrat",
+      "all_types": "Tous les Types de Contrat"
     },
-    "search_placeholder": "Search positions...",
-    "apply_btn": "Apply",
-    "no_jobs": "No open positions found matching your search criteria.",
-    "clear_filters": "Clear Filters",
-    "all_jobs_btn": "View Tous Positions",
-    "apply_desc": "If there is no suitable position, you can submit a general application, and we may contact you for future opportunities.",
-    "success_title": "Application Received!",
-    "success_desc": "Your career application has been recorded in our database. Our Human Resources team will evaluate your profile and contact you.",
-    "new_apply_btn": "Submit New Application",
+    "search_placeholder": "Rechercher un poste...",
+    "apply_btn": "Postuler",
+    "no_jobs": "Aucun poste ouvert ne correspond à vos critères de recherche.",
+    "clear_filters": "Effacer les Filtres",
+    "all_jobs_btn": "Voir Tous les Postes",
+    "apply_desc": "S'il n'y a pas de poste qui vous correspond, vous pouvez déposer une candidature spontanée et nous pourrons vous contacter lorsque des opportunités adaptées se présenteront.",
+    "success_title": "Votre Candidature a Été Reçue",
+    "success_desc": "Votre candidature a été enregistrée dans notre base de données. Notre équipe des Ressources Humaines évaluera votre profil et vous contactera.",
+    "new_apply_btn": "Nouvelle Candidature",
     "form": {
-      "city": "City of Residence",
-      "department": "Target Department",
-      "location_preference": "Workplace Location Preference",
-      "cover_letter": "Short Cover Letter (Optional)",
-      "cover_letter_placeholder": "Briefly describe your skills and career goals...",
-      "upload_cv": "Upload CV",
-      "remove_file": "Remove File",
-      "drag_file": "Drag your file here or select",
-      "kvkk_link": "Candidate Privacy Notice",
-      "read_approved": "read and approved.",
-      "cv_consent_label": "I allow my CV to be evaluated for other suitable positions that may arise outside of the current posting.",
-      "submit_btn": "Submit Application",
-      "security_label": "Your personal data is securely protected under data protection regulations.",
-      "cv_invalid": "Please upload a valid document (PDF, DOCX) under 10 MB.",
-      "kvkk_required": "Please read and accept the Candidate Employee Privacy Notice.",
-      "cv_required": "Please upload your CV document.",
-      "apply_error": "Application could not be submitted. Please try again.",
-      "general_error": "An error occurred. Please try again.",
-      "apply_note_prefix": "Position Application: "
+      "city": "Ville de Résidence",
+      "department": "Département Souhaité",
+      "location_preference": "Lieu de Travail Souhaité",
+      "cover_letter": "Courte Lettre de Motivation (Facultatif)",
+      "cover_letter_placeholder": "Parlez brièvement de vos compétences et de vos objectifs...",
+      "upload_cv": "Téléchargez votre CV",
+      "remove_file": "Supprimer le Fichier",
+      "drag_file": "Glissez ou sélectionnez votre fichier",
+      "kvkk_link": "Notice d'Information pour les Candidats",
+      "read_approved": "j'en ai pris connaissance.",
+      "cv_consent_label": "J'autorise l'évaluation des informations de mon CV pour des postes adaptés pouvant se présenter en dehors de l'offre actuelle.",
+      "submit_btn": "Envoyer la Candidature",
+      "security_label": "Vos données personnelles sont protégées en toute sécurité dans le cadre de la KVKK (loi turque sur la protection des données personnelles).",
+      "cv_invalid": "Veuillez télécharger un fichier dans un format valide (PDF, DOCX) et de moins de 10 Mo.",
+      "kvkk_required": "Veuillez lire et confirmer la Notice d'Information pour les Candidats.",
+      "cv_required": "Veuillez télécharger votre CV.",
+      "apply_error": "La candidature n'a pas pu être envoyée. Veuillez réessayer.",
+      "general_error": "Une erreur s'est produite. Veuillez réessayer.",
+      "apply_note_prefix": "Madame, Monsieur,\n\nJe souhaite postuler au poste de {{title}}.",
+      "file_hint": "PDF, DOCX (10 Mo max.)",
+      "kvkk_suffix": " : j'en ai pris connaissance."
     },
-    "internship_programs": "Internship & Graduate Programs",
-    "internships_subtitle": "We train the professionals of the future.",
+    "internship_programs": "Programmes de Stage et Jeunes Diplômés",
+    "internships_subtitle": "Nous formons les professionnels de demain.",
     "internships": {
-      "apply_btn": "Apply for Internship",
+      "apply_btn": "Postuler à un Stage",
       "summer": {
-        "title": "Summer Internship Program",
-        "desc": "Summer internship opportunities for university students."
+        "title": "Programme de Stage d'Été",
+        "desc": "Opportunités de stage d'été pour les étudiants universitaires."
       },
       "long": {
-        "title": "Long-Term Internship",
-        "desc": "Long-term internship opportunities throughout the academic year."
+        "title": "Stage de Longue Durée",
+        "desc": "Possibilité de stage de longue durée pendant l'année universitaire."
       },
       "graduate": {
-        "title": "New Graduate Program",
-        "desc": "Development and career onboarding program for fresh graduates."
+        "title": "Programme Jeunes Diplômés",
+        "desc": "Programme de développement et de carrière pour les jeunes diplômés."
       },
       "technical": {
-        "title": "Technical School Internship",
-        "desc": "Internship opportunities for vocational and technical school students."
+        "title": "Stage pour Écoles Techniques",
+        "desc": "Possibilité de stage pour les élèves de lycées professionnels et d'écoles techniques."
       },
-      "apply_note_prefix": "Application Note: ",
-      "general_note": "Dear Sir/Madam,\n\nI would like to apply for the Internship / Fresh Graduate Development Program."
+      "apply_note_prefix": "Madame, Monsieur,\n\nJe souhaite postuler au programme {{title}}.",
+      "general_note": "Madame, Monsieur,\n\nJe souhaite postuler au Programme de Stage / Programme de Développement pour Jeunes Diplômés."
     },
-    "testimonials_title": "What Our Team Says",
-    "testimonials_subtitle": "What is it like to work at Polgün? Listen to their stories.",
-    "process_title": "Our Application Process",
-    "process_subtitle": "We evaluate our candidates with a transparent and fast process.",
-    "cta_title": "Your talent, our future.",
-    "cta_desc": "Apply today to join the Polgün family and take part in the projects of the future.",
+    "testimonials_title": "Nos Collaborateurs Témoignent",
+    "testimonials_subtitle": "Comment est-ce de travailler chez Polgün ? Écoutez-les.",
+    "process_title": "Notre Processus de Candidature",
+    "process_subtitle": "Nous évaluons nos candidats grâce à un processus transparent et rapide.",
+    "cta_title": "Votre talent est notre avenir",
+    "cta_desc": "Postulez dès aujourd'hui pour rejoindre la famille Polgün et participer aux projets de demain.",
     "depts": {
-      "project_management": "Project Management",
-      "design": "Design",
+      "project_management": "Gestion de Projet",
+      "design": "Conception",
       "production": "Production",
-      "procurement": "Procurement",
-      "admin": "Administrative Affairs",
-      "intern": "Internship / Graduate"
+      "procurement": "Achats",
+      "admin": "Services Administratifs",
+      "intern": "Stage / Jeune Diplômé"
     },
     "locations": {
-      "field": "Field (Construction Sites)",
-      "any": "No preference"
+      "field": "Terrain (Chantiers)",
+      "any": "Indifférent",
+      "technopark": "Technoparc de Marmara"
     },
     "why": {
       "intl": {
-        "title": "International Projets",
-        "desc": "The opportunity to work on exciting projects around the world."
+        "title": "Projets Internationaux",
+        "desc": "La possibilité de travailler sur des projets passionnants aux quatre coins du monde."
       },
       "innovation": {
-        "title": "R&D and Innovation",
-        "desc": "An open-minded work environment where innovative ideas are supported."
+        "title": "R&D et Innovation",
+        "desc": "Un environnement de travail ouvert au développement, où les idées innovantes sont soutenues."
       },
       "team": {
-        "title": "Strong Team Spirit",
-        "desc": "A journey from production to success together with our expert and dynamic team."
+        "title": "Fort Esprit d'Équipe",
+        "desc": "Un parcours qui mène de la production à la réussite avec notre équipe experte et dynamique."
       },
       "growth": {
-        "title": "Carrières and Development",
-        "desc": "We grow your career together with training, mentorship, and promotion opportunities."
+        "title": "Carrière et Développement",
+        "desc": "Nous faisons grandir votre carrière ensemble grâce aux formations, au mentorat et aux possibilités de promotion."
       },
       "safety": {
-        "title": "Safe and Sustainable Work",
-        "desc": "Occupational health and safety is our priority, and our approach to environmentally sensitive production."
+        "title": "Travail Sûr et Durable",
+        "desc": "La santé et la sécurité au travail sont notre priorité ; la production respectueuse de l'environnement, notre approche."
       },
       "diverse": {
-        "title": "Experience in Various Fields",
-        "desc": "Opportunity to gain experience in many fields from engineering to design, production to the field."
+        "title": "Expérience dans Divers Domaines",
+        "desc": "La possibilité d'acquérir de l'expérience dans de nombreux domaines, de l'ingénierie à la conception et de la production au terrain."
       }
     },
     "process": {
       "step1": {
-        "title": "Application",
-        "desc": "Complete your application online."
+        "title": "Candidature",
+        "desc": "Complétez votre candidature en ligne."
       },
       "step2": {
-        "title": "Pre-Evaluation",
-        "desc": "Your application is reviewed by the relevant department."
+        "title": "Évaluation Préliminaire",
+        "desc": "Votre candidature est examinée par le département concerné."
       },
       "step3": {
-        "title": "Interviews",
-        "desc": "Our process continues with HR and technical interviews."
+        "title": "Entretiens",
+        "desc": "Notre processus se poursuit par des entretiens RH et techniques."
       },
       "step4": {
-        "title": "Offer",
-        "desc": "An offer is presented to suitable candidates."
+        "title": "Offre",
+        "desc": "Une offre est présentée aux candidats retenus."
       },
       "step5": {
-        "title": "Welcome!",
-        "desc": "Our journey begins with your joining our team."
+        "title": "Bienvenue",
+        "desc": "Notre aventure commence avec votre arrivée dans notre équipe."
       }
     },
     "testimonials": {
       "selin": {
-        "quote": "The value given to innovation and scientific research at Polgün allows me to constantly improve myself.",
-        "role": "R&D Engineer"
+        "quote": "L'importance accordée à l'innovation et à la recherche scientifique au sein de la famille Polgün me permet de progresser continuellement.",
+        "role": "Ingénieure R&D"
       },
       "mehmet": {
-        "quote": "Taking part in projects spanning from production to the field has provided immense experience in my career.",
-        "role": "Project Engineer"
+        "quote": "Participer à des projets allant de la production au terrain m'a apporté une grande expérience dans ma carrière.",
+        "role": "Ingénieur Projet"
       },
       "emre": {
-        "quote": "Working on international projects and collaborating with diverse cultures is one of my favorite aspects.",
-        "role": "Site Manager"
+        "quote": "Travailler sur des projets internationaux et avec différentes cultures est l'un des aspects que je préfère.",
+        "role": "Chef de Chantier"
       }
     },
-    "internships_title": "实习生与青年人才发展计划",
-    "positions_title": "最新热招职位",
-    "values_title": "为什么选择加入 Polgün？"
+    "prev_testimonial": "Témoignage Précédent",
+    "next_testimonial": "Témoignage Suivant"
   },
   "contact": {
     "title": "Contact",
-    "subtitle": "Nous Contacter",
-    "desc": "You can contact us for your waterpark projects and all your questions.",
-    "form_title": "Contact Form",
-    "name": "Your Name",
-    "email": "Your E-mail Address",
-    "phone": "Your Numéro de Téléphone",
-    "subject": "Subject",
-    "message": "Votre Message",
-    "submit": "Submit",
-    "form_success": "Your message has been sent successfully. We will get back to you as soon as possible.",
-    "office": "Offices & Factories",
-    "address": "Address",
-    "phone_label": "Phone",
-    "email_label": "E-mail",
     "offices": {
-      "hq": "Headquarters",
-      "antalya": "Antalya Office",
-      "spain": "Spain Sales Office",
-      "bursa": "Bursa Factory",
-      "hq_address_label": "Headquarters Address",
-      "europe": "Europe Office"
+      "hq": "Siège",
+      "antalya": "Bureau d'Antalya",
+      "hq_address_label": "Adresse du Siège",
+      "europe": "Bureau Europe"
     },
-    "hero_title": "Let's Get in Touch",
-    "hero_desc": "You can contact our expert team to develop a new waterpark project, renovate your existing facility, or get detailed information about our products.",
-    "project_request": "Project Inquiry",
+    "hero_title": "Faisons Connaissance",
+    "hero_desc": "Vous pouvez contacter notre équipe d'experts pour développer un nouveau projet de parc aquatique, rénover vos installations existantes ou obtenir des informations détaillées sur nos produits.",
+    "project_request": "Demande de Projet",
     "form": {
-      "sub_desc": "You can reach us by filling out all fields completely.",
-      "success_title": "Message Received",
-      "success_desc": "Your request has been received, our expert team will get back to you as soon as possible.",
+      "sub_desc": "Vous pouvez nous joindre en remplissant tous les champs.",
+      "success_title": "Votre Message a Été Reçu",
+      "success_desc": "Votre demande a bien été reçue ; notre équipe d'experts vous répondra dans les plus brefs délais.",
       "name": "Nom et Prénom",
-      "email": "Email",
-      "phone": "Phone",
-      "company": "Société / Project Name",
-      "interest_label": "Product of Interest",
+      "email": "E-mail",
+      "phone": "Téléphone",
+      "company": "Société / Nom du Projet",
+      "interest_label": "Produit qui Vous Intéresse",
       "message": "Votre Message",
-      "message_placeholder": "You can provide detailed information about your project or request...",
-      "kvkk_desc_prefix": "I have read and agree to the",
-      "kvkk_desc_suffix": " Customer - Supplier Clarification Text.",
+      "message_placeholder": "Vous pouvez nous donner des informations détaillées sur votre projet ou votre demande...",
+      "kvkk_desc_prefix": "J'ai lu et j'accepte la",
+      "kvkk_desc_suffix": " Clients - Fournisseurs.",
       "submit_btn": "Envoyer le Message",
       "interest": {
         "slides": "Toboggans Aquatiques",
-        "wave_pools": "Wave Pools",
+        "wave_pools": "Piscines à Vagues",
         "lazy_river": "Lazy River",
-        "kids_parks": "Kids Playgrounds",
-        "custom_project": "Custom Project",
-        "maintenance": "Maintenance & Service"
+        "kids_parks": "Aires de Jeux pour Enfants",
+        "custom_project": "Projet Spécial",
+        "maintenance": "Maintenance et Service"
       },
-      "submit_error": "发送失败，请稍后重试。"
+      "submit_error": "Le message n'a pas pu être envoyé. Veuillez réessayer.",
+      "kvkk_link": "Notice d'Information",
+      "name_placeholder": "Jean Dupont",
+      "email_placeholder": "exemple@votresociete.com"
     },
-    "info_title": "Contact Information",
-    "hours_label": "Working Hours",
-    "hours_val1": "Mon–Sat: 08:30–18:00",
-    "hours_val2": "Sunday: Closed",
-    "offices_title": "Our Offices"
+    "info_title": "Coordonnées",
+    "hours_label": "Horaires d'Ouverture",
+    "hours_val1": "Lun–Sam : 08:30–18:00",
+    "hours_val2": "Dimanche : Fermé",
+    "offices_title": "Nos Bureaux"
   },
   "awards": {
-    "title": "Prix, Brevets & Certifications",
-    "subtitle": "Distinctions & Visites Officielles",
-    "desc": "Les réussites internationales de Polgün en matière de design, de qualité et de R&D.",
-    "awards_section": "🏆 Nos Récompenses",
-    "visits_section": "🤝 Visites Officielles",
-    "no_awards": "Aucune distinction publiée pour le moment.",
-    "cta_title": "Bâtir l'Avenir avec des Projets Innovants.",
-    "cta_desc": "En conjuguant expertise en ingénierie, créativité et recherche avancée, Polgün continue de façonner l'avenir de l'industrie des parcs aquatiques.",
-    "cta_btn": "Nous Contacter",
-    "intellectual_property": "Propriété Intellectuelle",
-    "patents_title": "Brevets & Enregistrements de Modèles",
-    "quality_documents": "Certifications",
-    "quality_title": "Nos Certificats de Qualité",
+    "title": "Prix Brevets et Certificats",
+    "desc": "Les réussites mondiales de Polgün dans les domaines du design, de la qualité et de la R&D.",
     "visits": {
       "minister": {
-        "title": "Nous avons eu l'honneur d'accueillir notre Ministre de l'Industrie et de la Technologie, M. Mehmet Fatih Kacir, chez Polgun Waterparks.",
-        "desc": "Nous avons été très honorés d'accueillir dans notre usine la délégation officielle accompagnée par le Gouverneur de Muğla M. Idris Akbiyik, nos Députés de Muğla MM. Kadem Mete et Yakup Otgöz, le Sous-Préfet de Menteşe M. Mehmet Eriş, le Président Provincial du Parti AK M. Haluk Laçin, le Président Provincial du MHP M. Burak Demirel et le Maire de Kavaklidere M. Mehmet Demir. La délégation a visité notre site de production à Muğla et examiné les travaux de notre centre de R&D.\n\nEn tant qu'acteur de premier plan de l'industrie mondiale, nous sommes fiers de notre engagement envers l'innovation, la qualité et l'excellence. Cette visite a démontré une nouvelle fois le rôle crucial des technologies de production avancées et de la R&D dans la construction de l'avenir. Nous leur exprimons notre profonde gratitude pour leur visite bienveillante, leur intérêt et leur soutien."
+        "title": "Nous avons eu l'honneur d'accueillir chez Polgün Waterparks notre Ministre de l'Industrie et de la Technologie, M. Mehmet Fatih Kacır",
+        "desc": "Nous avons été fiers d'accueillir dans notre usine la délégation accompagnée du Gouverneur de Muğla, M. İdris Akbıyık, des députés de Muğla, M. Kadem Mete et M. Yakup Otgöz, du Sous-préfet de Menteşe, M. Mehmet Eriş, du Président provincial de l'AK Parti, M. Haluk Laçin, du Président provincial du MHP, M. Burak Demirel, et du Maire de Kavaklıdere, M. Mehmet Demir. La délégation a visité notre site de production de Muğla et examiné notre centre de R&D.\n\nEn tant que l'un des leaders mondiaux du secteur, nous sommes très fiers de notre engagement envers l'innovation, la qualité et l'excellence. Leur visite a une nouvelle fois démontré l'importance des technologies de production avancées et de la R&D pour façonner l'avenir. Nous les remercions sincèrement pour leur aimable visite, leur intérêt et leur soutien."
       },
       "egekaf": {
-        "title": "Visite de Polgün dans le cadre d'EGEKAF",
-        "desc": "Lors de la visite organisée dans le cadre d'EGEKAF, les maquettes de projets, l'approche de développement de produits et l'expertise sectorielle de Polgün ont été présentées aux participants."
+        "title": "Visite de Polgün dans le Cadre d'EGEKAF",
+        "desc": "Lors de la visite organisée dans le cadre d'EGEKAF, les maquettes de projets, l'approche de développement de produits et l'expérience sectorielle de Polgün ont été partagées avec les participants."
       },
       "msku": {
-        "title": "Visite de l'Université Muğla Sitki Koçman",
-        "desc": "Dans le cadre de la visite de la direction de l'Université MSKÜ chez Polgün, les activités de R&D, de production et d'ingénierie ont été examinées sur site, renforçant la coopération université-industrie."
+        "title": "Visite de l'Université Muğla Sıtkı Koçman",
+        "desc": "Dans le cadre de la visite de la direction de la MSKÜ chez Polgün, les activités de R&D, de production et de conception ont été examinées sur place. La coopération entre l'université et l'industrie a été renforcée."
       },
       "title": "Visites Institutionnelles",
-      "dates": {
-        "2023": "2023",
-        "2024": "2024"
-      }
+      "tag": "Nos Invités"
     },
     "tesciller": {
-      "benelux": "Décision d'Enregistrement de Marque Benelux",
-      "france": "Décision d'Enregistrement de Marque France",
-      "spain": "Décision d'Enregistrement de Marque Espagne",
-      "egypt": "Décision d'Enregistrement de Marque Égypte",
-      "greece": "Décision d'Enregistrement de Marque Grèce",
-      "form": "Formulaire de Demande Officielle Polgün",
-      "fluorescent": "Brevet d'Éclairage Fluorescent Intégré",
-      "slides": "Enregistrement de Modèle de Toboggans Aquatiques"
+      "benelux": "Décision Définitive d'Enregistrement Benelux",
+      "france": "Décision Définitive d'Enregistrement France",
+      "spain": "Décision Définitive d'Enregistrement Espagne",
+      "egypt": "Décision Définitive d'Enregistrement Égypte",
+      "greece": "Décision Définitive d'Enregistrement Grèce",
+      "form": "Formulaire de Demande Polgün",
+      "fluorescent": "Certificat de Brevet d'Éclairage Fluorescent",
+      "slides": "Certificat d'Enregistrement de Dessin de Toboggan Aquatique"
     },
     "kalite": {
       "iso9001": "Système de Management de la Qualité",
       "iso14001": "Système de Management Environnemental",
       "iso45001": "Santé et Sécurité au Travail",
-      "iso3834": "Fabrication de Structures Métalliques Soudées",
-      "astm": "Certificat de Conformité aux Normes Produits",
-      "cpr": "Certificat de Qualification Soudage",
-      "ts_en_1069": "Certificat de Norme Toboggans Aquatiques",
-      "ts_en_1176": "Certificat d'Équipements d'Aires de Jeux",
-      "ts_en_17232": "Certificat d'Équipements et Jeux Aquatiques"
+      "iso3834": "Certificat de Soudage",
+      "astm": "Certificat de Norme Produit",
+      "cpr": "Fabrication de Constructions Métalliques",
+      "ts_en_1069": "Certificat de Norme pour Toboggans Aquatiques",
+      "ts_en_1176": "Certificat de Norme pour Aires de Jeux pour Enfants",
+      "ts_en_17232": "Certificat de Norme pour Équipements de Jeux d'Eau"
     },
     "patent_title": "Propriété Intellectuelle",
     "cert_title": "Certificats",
-    "cert_subtitle": "Nos Documents de Qualité",
-    "certificates": "Certificats & Agréments",
-    "tag": "Qualité & Distinctions"
+    "cert_subtitle": "Nos Certificats Qualité",
+    "certificates": "Certificats",
+    "awards_title": "Nos Prix"
   },
   "factories": {
-    "title": "Our Factories",
-    "desc": "We produce in our modern facilities reflecting our manufacturing power at the highest quality standards, in a manner respectful to nature and human beings.",
+    "title": "Nos Usines",
+    "desc": "Dans nos installations modernes qui reflètent notre force de production, nous produisons selon les normes de qualité les plus élevées, dans le respect de la nature et de l'humain.",
     "names": {
       "istanbul": "Istanbul",
       "bursa": "Bursa",
-      "mugla": "Mugla",
+      "mugla": "Muğla",
       "france": "France",
-      "saudi_arabia": "Saudi Arabia",
-      "serbia": "Serbia",
-      "turkey": "Turkey",
+      "saudi_arabia": "Arabie Saoudite",
+      "serbia": "Serbie",
+      "turkey": "Turquie",
       "spain": "Espagne",
       "egypt": "Égypte",
-      "hungary": "Hungary",
-      "south_korea": "South Korea",
-      "greece": "Greece",
-      "composite": "Usine Composite & RTM",
-      "steel": "Usine de Structures Métalliques",
-      "mold": "Centre d'Usinage & Moules CNC"
-    },
-    "areas": {
-      "composite": "45.000 m²",
-      "steel": "25.000 m²",
-      "mold": "15.000 m²"
+      "hungary": "Hongrie",
+      "south_korea": "Corée du Sud",
+      "greece": "Grèce",
+      "switzerland": "Suisse",
+      "benelux": "Benelux (Belgique, Pays-Bas, Luxembourg)"
     }
   },
   "history": {
     "title": "Notre Histoire",
-    "journey": "Le Parcours de Polgün de 2002 à nos Jours",
-    "milestones_tag": "Grandes Étapes",
-    "milestones_title": "Grandes Étapes",
+    "milestones_tag": "Étapes Clés",
     "growth_title": "Notre Histoire de Croissance",
     "facilities": "Nos Installations",
-    "growing_power": "Une Puissance Industrielle en Expansion",
-    "desc": "Au fil des années, nous nous sommes développés en renforçant sans cesse notre capacité industrielle, notre excellence en ingénierie et notre expérience des chantiers internationaux. Chaque étape a contribué à bâtir une infrastructure de pointe, des produits novateurs et à porter l'aventure Polgün dans plus de 70 pays aujourd'hui.",
-    "desc1": "Polgün investit continuellement dans ses infrastructures pour répondre à une demande croissante et perfectionner ses procédés industriels ; tout en créant de nouveaux ateliers de polyester, de revêtement thermoplastique et de peinture sur son site historique de Muğla, l'entreprise consolide sa stature internationale en atteignant 120 000 m² d'espace de production grâce à sa nouvelle usine de Bursa.",
-    "desc2": "Afin de porter ses capacités de R&D et d'ingénierie encore plus haut, Polgün a finalisé son implantation au sein du Teknopark Marmara, renforçant ainsi ses synergies avec le monde universitaire et la recherche appliquée.",
-    "bold_summary": "Aujourd'hui, avec ses infrastructures industrielles de premier ordre en Turquie et son bureau commercial en Espagne, Polgün renforce chaque jour son leadership sur le marché international.",
-    "tag": "Notre Évolution",
-    "intro": "Ingénierie novatrice et fabrication de haute précision dans l'industrie des parcs aquatiques depuis 2002.",
-    "milestones_desc": "Les jalons essentiels qui ont façonné le rayonnement mondial de Polgün.",
-    "cta_title": "Concevons Ensemble les Parcs Aquatiques de Demain",
-    "cta_desc": "Nous valorisons vos investissements grâce à plus de 20 ans d'expertise et une équipe d'ingénieurs d'élite.",
-    "cta_btn": "Nous Contacter",
+    "growing_power": "Une Force de Production en Croissance",
+    "desc": "Au fil des années, nous avons grandi en développant continuellement notre force de production, nos compétences en ingénierie et notre expérience des projets mondiaux. Chaque étape franchie a fait partie d'une infrastructure de production plus solide, de produits innovants et du parcours de Polgün, qui s'étend aujourd'hui à plus de 70 pays.",
+    "desc1": "Polgün poursuit sans relâche ses investissements en infrastructure afin de répondre aux besoins croissants de capacité et de faire progresser ses capacités de production ; tout en créant de nouvelles zones de production pour les processus de polyester, de revêtement thermoplastique et de peinture dans ses installations existantes de Muğla, elle consolide sa force opérationnelle, en croissance à l'échelle internationale, en atteignant une surface de production totale de 120 000 m² avec l'investissement dans la nouvelle usine de Bursa.",
+    "desc2": "Afin de porter encore plus loin ses compétences en R&D et en conception, le processus de candidature pour le bureau du Technoparc de Marmara a été finalisé et, avec la signature du contrat, le bureau est devenu officiel. Cette étape vise à renforcer les collaborations avec les universités.",
+    "bold_summary": "Aujourd'hui, Polgün renforce sa position sur le marché international grâce à sa structure de production en Turquie et à son bureau commercial en Espagne.",
     "stats": {
-      "completed": "Projets Réalisés",
       "countries": "Pays",
       "production": "Production Intégrée",
-      "team": "Collaborateurs",
-      "experience": "Ans d'Expérience",
+      "team": "Employés",
       "projects": "Projets",
-      "countries_sub": "Exportation & Présence Mondiale",
+      "countries_sub": "Exportation et Présence Mondiales",
       "projects_sub": "Parcs Aquatiques Réalisés",
-      "production_sub": "3 Usines de Haute Technologie",
-      "team_sub": "Ingénieurs & Équipes de Fabrication"
+      "production_sub": "3 Usines de Pointe",
+      "team_sub": "Ingénieurs et Personnel de Production"
     },
     "tags": {
       "2002": "Fondation",
       "2008": "Première Exportation",
-      "2015": "Expansion Industrielle",
+      "2015": "Augmentation de Capacité",
       "2019": "Bureau en Espagne",
-      "2021": "Centre R&D Officiel",
+      "2021": "Centre de R&D",
       "2025": "Usine de Bursa",
-      "2026": "Bureau Technopark"
+      "2026": "Bureau au Technoparc"
     },
     "milestones": {
-      "2002": "Polgün démarre ses activités industrielles à Muğla-Menteşe.",
-      "2008": "Première livraison réussie d'un projet international de parc aquatique.",
-      "2015": "Augmentation majeure de la capacité de production et mise en service de nouvelles installations.",
-      "2019": "Ouverture du bureau commercial et d'ingénierie en Espagne.",
-      "2021": "Obtention du statut de Centre de R&D agréé par le Ministère — Premier et unique centre de R&D de Muğla.",
-      "2025": "Nouvel investissement dans l'usine de Bursa, atteignant 120 000 m² de superficie totale de production.",
-      "2026": "Renforcement de la coopération université-industrie avec l'ouverture du bureau au Teknopark Marmara."
+      "2002": "Polgün a commencé ses activités à Muğla-Menteşe.",
+      "2008": "La première livraison d'un projet international a été réalisée.",
+      "2015": "La capacité de production a été augmentée et de nouvelles installations ont été mises en service.",
+      "2019": "Le bureau d'Espagne a été ouvert.",
+      "2021": "Le statut de Centre de R&D approuvé par le Ministère a été obtenu — le premier et unique Centre de R&D de Muğla.",
+      "2025": "Avec l'investissement dans l'usine de Bursa, une surface de production totale de 120 000 m² a été atteinte.",
+      "2026": "La coopération entre l'université et l'industrie a été renforcée avec le bureau du Technoparc de Marmara."
     }
   },
   "news": {
-    "title": "Actualités & Events",
-    "subtitle": "Actualités from Polgün",
-    "desc": "Current developments in our company, exhibitions we participate in, and events.",
+    "title": "Actualités et Événements",
+    "desc": "Les dernières nouvelles de notre entreprise, les salons auxquels nous participons et nos événements.",
     "tabs": {
-      "articles": "Actualités & Events",
-      "fairs": "Fairs & Expositions",
-      "bulletins": "E-Actualitésletters"
+      "articles": "Actualités et Événements",
+      "fairs": "Participations aux Salons",
+      "bulletins": "Nos Newsletters"
     },
-    "bulletins_title": "Corporate E-Actualitésletters",
-    "bulletins_subtitle": "Our Monthly E-Actualitésletter Archive",
-    "bulletins_desc": "Our monthly e-newsletters detailing corporate updates, achievements, and events.",
-    "fairs_title": "Fairs We Attend",
-    "fairs_desc": "As Polgün, we take our place in the most important global gathering points of our industry.",
-    "fairs": {
-      "iaapa_barcelona_2025": "IAAPA Expo Barcelona 2025",
-      "iaapa_orlando_2025": "IAAPA Expo Orlando 2025",
-      "iaapa_orlando_2024": "IAAPA Expo Orlando 2024",
-      "deal_dubai_2026": "Deal Dubai 2026",
-      "tashkent_2026": "Tashkent Uzbekistan 2026",
-      "piscina_barcelona_2025": "Piscina & Wellness Barcelona 2025"
-    },
-    "open_flipbook": "Read Actualitésletter",
-    "flipbook_loading": "Loading Actualitésletter...",
-    "flipbook_error": "Failed to load newsletter. Please try again.",
-    "flipbook_close": "Close",
-    "flipbook_next": "Next Page",
-    "flipbook_prev": "Previous Page",
+    "bulletins_title": "Newsletters d'Entreprise",
+    "bulletins_subtitle": "Nos Archives de Newsletters Mensuelles",
+    "bulletins_desc": "Nos newsletters mensuelles qui rassemblent, du passé à aujourd'hui, les actualités internes et nos publications.",
+    "fairs_title": "Les Salons Auxquels Nous Avons Participé",
+    "fairs_desc": "Polgün prend sa place dans les plus importants lieux de rencontre de notre secteur à l'échelle mondiale.",
+    "open_flipbook": "Lire la Newsletter",
+    "flipbook_loading": "Chargement de la Newsletter...",
+    "flipbook_error": "La newsletter n'a pas pu être chargée. Veuillez réessayer.",
+    "flipbook_close": "Fermer",
+    "flipbook_next": "Page Suivante",
+    "flipbook_prev": "Page Précédente",
     "flipbook_pages": "Page",
-    "issue_format": "Issue {{number}}",
+    "issue_format": "Numéro {{number}}",
     "months": {
-      "february": "February",
-      "march": "March",
-      "april": "April",
-      "may": "May",
-      "june": "June",
-      "july": "July"
+      "january": "Janvier",
+      "february": "Février",
+      "march": "Mars",
+      "april": "Avril",
+      "may": "Mai",
+      "june": "Juin",
+      "july": "Juillet",
+      "august": "Août",
+      "september": "Septembre",
+      "october": "Octobre",
+      "november": "Novembre",
+      "december": "Décembre"
     },
-    "articles": {
-      "gunes_bakim_evi": {
-        "title": "Special Güneş Day Care Center Opening",
-        "desc": "Our support for social responsibility projects continues uninterrupted. The opening of the Special Güneş Day Care Center, implemented by Menteşe Municipality, was held with the participation of our General Manager, Mr. Ibrahim Güngör. As the Polgün Family, we are happy to touch little hearts today as well."
-      },
-      "aile_sosyal_hizmetler": {
-        "title": "Collaboration with Family and Social Services Directorate",
-        "desc": "As the Polgün family, we are happy to support a meaningful work carried out by the Muğla Provincial Directorate of Family and Social Services. Thanks to this cooperation, which was initiated through our Governor Idris Akbiyik, warmer and safer living spaces are created for children. We believe in the power of social solidarity and adopt the importance of such contributions in every step looking to the future with hope."
-      },
-      "iftar_programi": {
-        "title": "Our Traditional Iftar Invitation",
-        "desc": "Our traditional iftar invitation, honored by our Muğla Governor Mr. Idris Akbiyik, Menteşe District Governor Mr. Mehmet Eriş, MSKÜ Rector Prof. Dr. Turhan Kaçar, Yatağan Mayor Mr. Mesut Günay, 27th Term Muğla Deputy Mrs. Yelda Erol, TÜBITAK MARTEK President and 24th Term Deputy Mr. Mehmet Ali Okur, valuable businesspeople of Muğla, political party representatives and our big Polgün family, took place on March 14, 2026, at Türkan Saylan Education and Culture Center with the participation of more than 600 guests. In the iftar program organized by Polgün Waterparks & Attractions Chairman of the Board Ibrahim Güngör and his precious family, accompanied by hymns sung by Turkish Sufi Music artist Abdurrahman Önül, Enes Çiftçi's presentation and semazen show attracted great attention. We extend our thanks to all our family members who attended and honored our invitation."
-      },
-      "msku_kariyer_fuari": {
-        "title": "MSKÜ Carrières Fair",
-        "desc": "Polgün Waterparks & Attractions Chairman of the Board Mr. Ibrahim Güngör met with the professionals of the future at the Carrières Fair organized at Muğla Sitki Koçman University. Sharing his knowledge and experience in the sector with young talents, Ibrahim Güngör held an inspiring conversation with students on the dynamics of the water park and entertainment sector, our innovative projects, and career planning. The excitement and vision of the youth who will shape the future of our industry once again became a great source of motivation for us. As the Polgün family, we are proud to stand by young talents and support them in their career journeys!"
-      }
-    },
-    "all_news": "全部新闻",
-    "bulletin": "电子期刊",
-    "flipbook_open": "在线阅读期刊画册",
-    "read_more": "阅读全文"
-  },
-  "team": {
-    "title": "Our Team",
-    "subtitle": "Polgün Family",
-    "desc": "Our management and technical staff who are experts in their fields, adding value to our projects.",
-    "board": "Board of Directors",
-    "technical_staff": "Technical Staff",
-    "departments": {
-      "all": "所有部门",
-      "design": "设计与建筑部",
-      "engineering": "工程与研发部",
-      "management": "管理决策层",
-      "production": "生产与质检部",
-      "sales": "全球商务与客户成功部"
-    },
-    "tag": "核心团队"
+    "pdf_badge": "PDF · SÉCURISÉ"
   },
   "splashtower": {
-    "title": "Splash Tower",
-    "subtitle": "Tours Multi-Attractions Interactives",
-    "desc": "Combinaisons modulaires de toboggans, passerelles, seaux verseurs et jeux aquatiques immersifs pour toute la famille.",
     "themes": {
       "pirate": {
-        "name": "Thème Pirate",
-        "location": "Antalya, Turkey",
-        "desc": "Partez à la conquête des mers avec nos bateaux pirates équipés de canons à eau et de toboggans immersifs."
+        "name": "Pirate Theme",
+        "location": "Antalya, Turquie",
+        "desc": "Pirate Theme, le thème signature de Polgün et le préféré de nombreux parcs aquatiques, est conçu pour que les enfants naviguent sur des mers remplies de pirates et s'amusent dans ce monde imaginaire. Entièrement personnalisable dans toutes les dimensions et toutes les couleurs souhaitées, Pirate Theme comprend des perroquets géants, un requin emblématique, des jeux d'eau interactifs, des palmiers et un seau d'eau géant à tête de pirate. Lorsque vous verrez les adultes s'amuser autant que les petits visiteurs, choisir le Pirate Theme de Polgün pour votre parc aquatique deviendra une évidence."
       },
       "jungle": {
-        "name": "Thème Jungle",
-        "location": "Turkey",
-        "desc": "Une aventure tropicale au cœur de la faune sauvage avec des cascades et des jeux interactifs."
+        "name": "Jungle Theme",
+        "location": "Turquie",
+        "desc": "Entrez dans la nature sauvage avec la Polgün Jungle Splash Tower, une aire de jeux d'eau thématique inspirée de la beauté, de l'énergie et du mystère des forêts tropicales. Ce thème, qui prend vie grâce à des personnages de la forêt stimulant l'imagination comme l'éléphant, le perroquet, la chouette, l'écureuil et les arbres géants, crée un environnement passionnant où les enfants peuvent explorer, jouer et laisser libre cours à leur imagination. Les détails inspirés de la nature, les éléments aquatiques interactifs et les éléments décoratifs pleins d'aventure transforment l'aire de jeux en un voyage vivant dans la jungle. Conçue avec des tons terreux, des surfaces aspect bois et de riches graphismes sur le thème de la nature, la Jungle Splash Tower offre une identité visuelle originale aux parcs aquatiques, aux villages de vacances et aux centres de loisirs familiaux. Grâce à sa structure entièrement personnalisable en termes de dimensions, d'implantation, de palette de couleurs et de détails thématiques, elle s'adapte au concept et aux besoins de capacité de chaque projet."
       },
       "custom": {
         "name": "Custom Theme",
-        "location": "Turkey",
-        "desc": "At Polgün, every project can be turned into a unique story. Our Custom Theme service combines creative design, conceptual development, and carefully selected color palettes to create water playgrounds that reflect the identity and vision of each venue. Supported by decades of industry experience, an in-house R&D team, and advanced CAD design capabilities, our designers develop original concepts tailored to the requirements of each project. From the initial idea to the final themed entertainment area, every detail is meticulously crafted to offer an engaging, visually stunning, and unforgettable experience for visitors. Whether inspired by nature, fantasy worlds, adventure, or starting from a completely original concept, Polgün produces fully personalized thematic solutions for water parks, resorts, hotels, and family entertainment centers."
+        "location": "Turquie",
+        "desc": "Chez Polgün, chaque projet peut devenir une histoire unique. Notre service de Thème Personnalisé réunit conception créative, développement conceptuel et palettes de couleurs soigneusement sélectionnées pour créer des aires de jeux d'eau qui reflètent l'identité et la vision de chaque lieu. Soutenus par des décennies d'expérience dans le secteur, une équipe R&D interne et des compétences avancées en conception CAO, nos designers développent des concepts originaux adaptés aux exigences de chaque projet. De l'idée initiale à l'espace de loisirs thématique final, chaque détail est traité avec soin afin d'offrir aux visiteurs une expérience captivante, visuellement impressionnante et inoubliable. Que le concept s'inspire de la nature, de mondes fantastiques ou de l'aventure, ou qu'il parte d'une idée entièrement originale, Polgün produit des solutions thématiques entièrement personnalisées pour les parcs aquatiques, les villages de vacances, les hôtels et les centres de loisirs familiaux."
       },
       "underwater": {
         "name": "Underwater Theme",
-        "location": "Antalya, Turkey",
-        "desc": "Oceans, seas, and the underwater world have always been a mysterious, exciting, and magical world for children."
+        "location": "Antalya, Turquie",
+        "desc": "Les océans, les mers et le monde sous-marin ont toujours été pour les enfants un univers mystérieux, passionnant et magique. Le parc aquatique conçu avec l'Underwater Theme de Polgün, à partir des différentes espèces qui attendent d'être découvertes dans le monde sous-marin et des coraux multicolores, est un environnement coloré qui soutient l'imagination des enfants, les enthousiasme et les amuse. Toutes les couleurs utilisées dans le parc aquatique sont inspirées des espèces vivantes et des couleurs des coraux du monde sous-marin."
       },
       "candy": {
         "name": "Candy Theme",
-        "location": "Turkey",
-        "desc": "Inspired by the world of sweets and candies, Candy Theme brings joy to waterparks with its vibrant colors and playful design."
+        "location": "Turquie",
+        "desc": "Inspiré de l'univers des bonbons et des douceurs, Candy Theme apporte de la joie aux parcs aquatiques grâce à ses couleurs vives et à son design ludique. Avec sa palette de couleurs qui nourrit l'imagination des enfants et ses produits d'animation originaux, Candy Theme donne à votre parc aquatique une identité différente. Cette structure thématique, où se rencontrent le rose, le jaune et les tons pastel, permet aux petits visiteurs de vivre des moments inoubliables."
       },
       "carnaval": {
         "name": "Carnaval Theme",
-        "location": "Turkey",
-        "desc": "Bring the joyful spirit of the carnival to life with the Polgün Carnival Splash Tower, a lively water playground designed to stimulate children's imagination."
+        "location": "Turquie",
+        "desc": "Donnez vie à l'esprit joyeux du carnaval avec la Polgün Carnaval Splash Tower, une aire de jeux d'eau animée conçue pour stimuler l'imagination des enfants et créer des moments familiaux inoubliables. Inspiré de l'atmosphère magique d'une fête foraine, le thème Carnaval comprend des ballons colorés, des détails rappelant les confiseries, des sucettes géantes et d'amusantes décorations façon chapiteau qui transforment l'aire de jeux en un décor de fête digne d'un rêve. Les éléments aquatiques interactifs et les éléments thématiques vivants encouragent les enfants à explorer, à jouer et à profiter d'une aventure aquatique immersive. Avec son aspect visuel saisissant et son caractère joyeux, la Carnaval Splash Tower devient un point d'attraction fascinant pour les villages de vacances, les hôtels, les parcs aquatiques et les centres de loisirs familiaux. Grâce à sa structure entièrement personnalisable en termes de dimensions, d'implantation et de couleurs, elle s'adapte au concept propre et aux besoins de capacité de chaque projet."
       },
       "jurassic": {
         "name": "Jurassic Theme",
-        "location": "Turkey",
-        "desc": "Bring the prehistoric world to life with the Polgün Jurassic Splash Tower, a themed water play area designed to spark curiosity, excitement, and adventure."
+        "location": "Turquie",
+        "desc": "Faites revivre le monde préhistorique avec la Polgün Jurassic Splash Tower, une aire de jeux d'eau thématique conçue pour éveiller la curiosité, l'enthousiasme et le goût de l'aventure. Inspiré de l'époque fascinante des dinosaures, le thème Jurassic réunit des éléments impressionnants tels que des figures d'Apatosaurus, des œufs de dinosaure, des plantes sauvages et d'adorables bébés T-Rex dans une atmosphère évoquant l'ère mésozoïque. Ces détails créatifs créent un environnement captivant où les enfants peuvent profiter de jeux d'eau animés tout en explorant un monde inspiré de la biodiversité préhistorique. En associant des visuels pleins d'aventure à des éléments aquatiques interactifs, la Jurassic Splash Tower devient un point d'attraction fascinant pour les parcs aquatiques, les villages de vacances et les centres de loisirs familiaux. Grâce à sa structure entièrement personnalisable en termes de dimensions, d'implantation, de palette de couleurs et de composants thématiques, elle s'adapte au concept et aux besoins de capacité de chaque projet."
       },
       "galaxy": {
-        "name": "Thème Galaxie",
+        "name": "Galaxy Theme",
         "location": "Turquie",
-        "desc": "Décollez pour un voyage spatial fascinant avec la tour Galaxy Splash Tower, un espace aquatique thématique conçu pour émerveiller les enfants à travers les mystères du cosmos."
-      },
-      "castle": {
-        "name": "Thème Château Fort",
-        "desc": "Un royaume médiéval aquatique rempli de tours féeriques et de ponts suspendus."
+        "desc": "Préparez-vous au décollage avec la Polgün Galaxy Splash Tower, une aire de jeux d'eau thématique conçue pour emmener les enfants dans un voyage passionnant parmi les merveilles de l'univers. Inspiré du mystère de l'espace, le thème Galaxy réunit des éléments qui stimulent l'imagination, tels que des fusées, des planètes, des extraterrestres et des animations d'inspiration cosmique, avec des détails artistiques saisissants. Les éléments aquatiques interactifs et les composants thématiques pleins d'aventure encouragent les enfants à jouer, à glisser et à explorer, tout en éveillant leur imagination et leur curiosité pour l'inconnu. Avec son concept dynamique et son design inspiré de l'espace, visuellement fascinant, la Galaxy Splash Tower crée un point d'attraction inoubliable pour les parcs aquatiques, les villages de vacances et les centres de loisirs familiaux. Grâce à sa structure entièrement personnalisable en termes de dimensions, d'implantation, de palette de couleurs et de détails thématiques, elle s'adapte au concept et aux besoins de capacité de chaque projet."
       }
     },
-    "hero_subtitle": "Toboggans et zones d'amusement aquatiques conçus avec des thématiques exclusives",
-    "theme_categories": "Catégories Thématiques"
+    "hero_subtitle": "Toboggans aquatiques et espaces de loisirs conçus selon différents thèmes",
+    "theme_categories": "Catégories de Thèmes"
   },
   "splashzone": {
-    "title": "Splash Zone",
-    "subtitle": "Espaces Aquatiques Ludiques & Sécurisés",
-    "desc": "Parcours d'éveil aquatique pour enfants avec jets programmables, brumisateurs et jeux interactifs sans profondeur d'eau."
+    "desc": "Les espaces de jeux préférés des enfants, avec des éléments de jeu à jets d'eau, des pistolets à eau et des seaux qui déversent de l'eau."
   },
   "regions": {
     "asia": "Asie",
@@ -1181,88 +1023,74 @@
     "america": "Amérique"
   },
   "designsPage": {
-    "title": "Nos Modèles Industriels",
-    "desc": "Polgün façonne l'industrie des loisirs aquatiques avec des créations originales protégées et enregistrées.",
+    "title": "Nos Dessins et Modèles Industriels",
+    "desc": "Polgün oriente le secteur des parcs aquatiques avec des dessins et modèles industriels originaux enregistrés dans le cadre de ses processus de R&D et de conception.",
     "filters": {
       "all": "Tous",
-      "project_bound": "Modèles Liés aux Projets",
-      "independent": "Modèles Autonomes",
+      "project_bound": "Dessins Liés à un Projet",
+      "independent": "Dessins Indépendants",
       "by_year": "Par Année"
     },
     "card": {
       "registered": "Enregistré",
-      "project": "Nom du Projet",
-      "independent_label": "Modèle Autonome",
-      "design_name": "Nom du Modèle",
-      "registration_no": "Nº d'Enregistrement",
-      "application_no": "Nº de Dépôt",
+      "independent_label": "Dessin Indépendant",
+      "design_name": "Droit / Nom du Travail",
+      "registration_no": "N° d'Enregistrement",
+      "application_no": "N° de Dépôt",
       "scope": "Portée",
       "app_date": "Date de Dépôt",
       "reg_date": "Date d'Enregistrement",
-      "inspect": "Consulter le Modèle",
       "national": "National"
+    },
+    "work_names": {
+      "water_slide": "Toboggan Aquatique",
+      "waterpark_layout": "Plan d'Aménagement de Parc Aquatique",
+      "waterpark_elements_set": "Ensemble d'Éléments de Parc Aquatique",
+      "water_slide_accessory": "Accessoire de Toboggan Aquatique"
     }
   },
   "publicationsPage": {
-    "title": "Publications Scientifiques & Articles",
-    "desc": "Découvrez les articles universitaires, communications et chapitres d'ouvrages rédigés par les chercheurs et ingénieurs de Polgün.",
-    "search_placeholder": "Rechercher par titre de publication, nom de projet ou code...",
+    "title": "Nos Publications Académiques",
+    "desc": "Les travaux de publication académiques, techniques et sectoriels de Polgün contribuent aux solutions d'ingénierie de nouvelle génération et à la littérature du secteur.",
     "filters": {
-      "all": "Toutes les Publications",
-      "national": "Nationales",
-      "international": "Internationales",
-      "article": "Articles",
-      "proceedings": "Actes de Conférences",
-      "book_chapter": "Chapitres de Livres",
+      "all": "Tous",
+      "national": "National",
+      "international": "International",
+      "article": "Article",
+      "proceedings": "Communication",
+      "book_chapter": "Chapitre d'Ouvrage",
       "by_year": "Par Année"
     },
     "card": {
       "published": "Publié",
-      "preparing": "En Préparation",
-      "submitted": "Soumis",
-      "accepted": "Accepté",
-      "project_code": "Code Projet",
-      "project_name": "Nom du Projet",
       "type": "Type de Publication",
       "scope": "Portée",
-      "isbn": "ISBN",
-      "issn": "ISSN",
-      "e_isbn": "e-ISBN",
-      "e_issn": "e-ISSN",
-      "online_issn": "ISSN en ligne",
       "pub_date": "Date de Publication",
-      "inspect": "Lire la Publication",
-      "view_proceedings": "Consulter les Actes",
+      "inspect": "Voir la Publication",
+      "view_proceedings": "Voir la Communication",
       "open_doc": "Ouvrir le Document",
-      "details": "Détails",
-      "authors": "Auteurs :",
-      "project": "Projet / Thème",
-      "international": "International",
-      "national": "National",
-      "download": "Télécharger le PDF"
+      "authors": "Auteurs :"
     }
   },
   "patentsPage": {
-    "title": "Nos Brevets d'Invention",
-    "desc": "Polgün protège ses innovations majeures par des brevets nationaux et internationaux issus de sa recherche continue.",
+    "title": "Nos Brevets",
+    "desc": "Les enregistrements officiels de brevets et d'inventions de Polgün, qui ouvrent la voie au secteur et protègent l'innovation technologique.",
     "filters": {
       "all": "Tous",
-      "registered": "Brevets Délivrés",
-      "pending": "En Cours d'Examen",
-      "national": "Nationaux",
-      "international": "Internationaux"
+      "registered": "Enregistré",
+      "pending": "En Cours de Dépôt",
+      "national": "National",
+      "international": "International"
     },
     "card": {
-      "project": "Projet / Référence",
-      "patent_name": "Titre du Brevet",
       "scope": "Portée",
-      "app_no": "Nº de Demande",
-      "pct_no": "Nº PCT / Enregistrement",
+      "app_no": "N° de Dépôt",
+      "pct_no": "N° PCT",
       "app_date": "Date de Dépôt",
-      "reg_date": "Date de Délivrance",
-      "status": "Statut",
-      "registered_badge": "Brevet Délivré",
-      "pending_badge": "Dépôt en Cours"
+      "reg_date": "Date d'Enregistrement",
+      "status": "Statut Actuel",
+      "registered_badge": "Enregistré",
+      "pending_badge": "En Cours de Dépôt"
     },
     "filter": {
       "all": "Tous"
@@ -1270,73 +1098,68 @@
     "items": {
       "floresan": {
         "project_name": "Éclairage Fluorescent",
-        "patent_name": "Toboggan Aquatique avec Système d'Éclairage Fluorescent Intégré"
+        "patent_name": "Toboggan Aquatique à Éclairage Fluorescent"
       },
       "eclipse": {
         "project_name": "Eclipse",
-        "patent_name": "Toboggan Aquatique Type Toupie à Double Surface de Glisse"
+        "patent_name": "Toboggan Aquatique de Type Bol à Double Surface de Glisse"
       },
       "navatu": {
         "project_name": "Navatu",
-        "patent_name": "Toboggan Aquatique Innovant avec Système de Génération de Vagues Intégré"
+        "patent_name": "Toboggan Aquatique Innovant à Système de Vagues Intégré"
       },
       "modular": {
-        "project_name": "Toboggan Modulaire Body Slide",
-        "patent_name": "Toboggan Aquatique Modulaire Convertible de Manière Bidirectionnelle Entre Sections Ouvertes et Fermées"
+        "project_name": "Toboggan Corporel Modulaire",
+        "patent_name": "Toboggan Corporel Modulaire Convertible dans les Deux Sens entre Formes à Section Ouverte et Fermée"
       }
     }
   },
   "flipbook": {
-    "single_page": "Grande Vue",
+    "single_page": "Page Simple",
     "dual_page": "Double Page",
-    "single_page_title": "Page Unique (Lecture Agrandie)",
+    "single_page_title": "Page Simple (Lecture Agrandie)",
     "dual_page_title": "Double Page (Vue Magazine)",
-    "zoom_out": "Dézoomer (-)",
+    "zoom_out": "Réduire (-)",
     "zoom_reset": "Réinitialiser le Zoom (0)",
-    "zoom_in": "Zoomer (+)",
-    "open_pdf": "Ouvrir / Télécharger le PDF dans un nouvel onglet",
+    "zoom_in": "Agrandir (+)",
+    "open_pdf": "Ouvrir / Télécharger le PDF dans un Nouvel Onglet",
     "keyboard_hint": "Clavier : ← / →",
     "zoom_hint": "Zoom : + / -"
   },
   "knowledgeCenter": {
     "title": "Centre de Connaissances",
-    "desc": "Consultez des guides complets et des articles techniques sur l'ingénierie, la conception, la maintenance et la gestion des parcs aquatiques par Polgün.",
+    "desc": "Découvrez les riches articles techniques de Polgün Waterparks & Attractions sur l'ingénierie, la conception, les technologies de production et la gestion des parcs aquatiques.",
     "read_more": "Lire la Suite",
-    "faqs_title": "Foire Aux Questions",
+    "faqs_title": "Questions Fréquentes",
     "related_title": "Articles Connexes",
     "not_found_desc": "L'article ou le contenu que vous recherchez n'est pas disponible dans notre Centre de Connaissances.",
     "back_to_list": "Retour au Centre de Connaissances"
   },
-  "factoriesPage": {
-    "title": "Nos Usines de Production",
-    "subtitle": "Installations de Fabrication Modernes et Durables",
-    "desc": "Découvrez nos usines de production intégrées où naissent les attractions aquatiques les plus spectaculaires du monde."
-  },
   "notFound": {
-    "tag": "404 · Page Non Trouvée",
-    "hero_title": "Sortie de Piste !",
-    "hero_desc": "La page que vous recherchez a peut-être été déplacée, renommée ou emportée par les flots. Laissez-nous vous guider vers le parcours principal.",
+    "tag": "404 · Page Introuvable",
+    "hero_title": "Vous Êtes Sorti de la Route",
+    "hero_desc": "La page que vous recherchez a peut-être été supprimée, renommée ou emportée par nos eaux. Laissez-nous vous ramener en toute sécurité sur la route principale.",
     "home_btn": "Retour à l'Accueil",
-    "back_btn": "Page Précédente",
-    "badge": "Parcours Aquatique Introuvable",
-    "heading": "Ce Toboggan Mène Tout Droit au Large !",
-    "message": "Le lien que vous avez suivi est peut-être expiré, modifié ou mal orthographié. Poursuivez votre aventure grâce à nos rubriques populaires ci-dessous.",
+    "back_btn": "Retour",
+    "badge": "Itinéraire du Parcours Aquatique Perdu",
+    "heading": "La Fin de Ce Toboggan Mène vers les Eaux Libres",
+    "message": "Le lien que vous recherchez a peut-être été déplacé, mis à jour ou mal saisi. Vous pouvez poursuivre votre parcours à partir des sections populaires ci-dessous.",
     "card1_tag": "Nos Produits",
-    "card1_title": "Toboggans Aquatiques & Systèmes Splash",
-    "card1_desc": "Découvrez nos toboggans aquatiques à sensations, nos attractions familiales et nos structures Splash Tower interactives.",
-    "card1_cta": "Découvrir les Produits",
+    "card1_title": "Toboggans Aquatiques et Systèmes Splash",
+    "card1_desc": "Découvrez nos toboggans à sensations les plus populaires, nos systèmes de divertissement familial et nos parcours Splash Tower.",
+    "card1_cta": "Voir les Produits",
     "card2_tag": "Nos Projets",
-    "card2_title": "Portfolio Mondial de Projets",
-    "card2_desc": "Explorez notre portfolio de plus de 3000 réalisations de parcs aquatiques et complexes hôteliers dans plus de 70 pays.",
+    "card2_title": "Notre Portefeuille Mondial de Projets",
+    "card2_desc": "Découvrez nos plus de 3000 projets de référence et parcs aquatiques thématiques réalisés dans plus de 70 pays.",
     "card2_cta": "Voir les Projets",
     "card3_tag": "Centre de R&D",
-    "card3_title": "Conception & Innovation",
-    "card3_desc": "Brevets, modèles industriels déposés et innovations technologiques conçus au sein de notre Centre de R&D agréé.",
-    "card3_cta": "Explorer la R&D",
+    "card3_title": "Design et Innovation",
+    "card3_desc": "Dessins enregistrés, brevets et solutions technologiques développés dans notre centre de R&D approuvé par le Ministère.",
+    "card3_cta": "Découvrir la R&D",
     "card4_tag": "Contact",
-    "card4_title": "Nous Contacter",
-    "card4_desc": "Contactez nos équipes d'ingénieurs et chefs de projets pour la conception sur mesure ou l'estimation de votre projet.",
-    "card4_cta": "Prendre Contact",
-    "quick_links": "Accès Rapide :"
+    "card4_title": "Contactez-Nous",
+    "card4_desc": "Contactez notre équipe experte d'ingénieurs et de projets pour un nouvel investissement dans un parc aquatique ou une demande de produit.",
+    "card4_cta": "Nous Contacter",
+    "quick_links": "Accès Rapide"
   }
 }

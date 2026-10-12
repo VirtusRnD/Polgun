@@ -301,119 +301,6 @@ export default function ProjectsPage({ setActivePage }) {
     'Resort Tatil Köyü': t('projects.types.resort', { defaultValue: 'Resort Tatil Köyü' })
   }
 
-  const locationTranslations = {
-    // Cities
-    'girit': { en: 'Crete', es: 'Creta', ru: 'Крит', ar: 'كريت', fr: 'Crète', zh: '克里特岛' },
-    'hanya': { en: 'Chania', es: 'La Canea', ru: 'Ханья', ar: 'خانية', fr: 'La Canée', zh: '哈尼亚' },
-    'kefalonya': { en: 'Kefalonia', es: 'Cefalonia', ru: 'Кефалония', ar: 'كفالونيا', fr: 'Céphalonie', zh: '凯法利尼亚' },
-    'moravya': { en: 'Moravia', es: 'Moravia', ru: 'Моравия', ar: 'مورافيا', fr: 'Moravie', zh: '摩拉维亚' },
-    'rethymno': { en: 'Rethymno', es: 'Rétino', ru: 'Ретимно', ar: 'ريثيمنو', fr: 'Rethymnon', zh: '雷斯蒙' },
-    'selangor': { en: 'Selangor', es: 'Selangor', ru: 'Селангор', ar: 'سيلانجور', fr: 'Selangor', zh: '雪兰莪' },
-    'timisoara': { en: 'Timișoara', es: 'Timișoara', ru: 'Тимишоара', ar: 'تيميشوارا', fr: 'Timișoara', zh: '蒂米什瓦拉' },
-    'benidorm': { en: 'Benidorm', es: 'Benidorm', ru: 'Бенидорм', ar: 'بينيدورم', fr: 'Benidorm', zh: '贝尼多姆' },
-    'tenerife': { en: 'Tenerife', es: 'Tenerife', ru: 'Тенерифе', ar: 'تينيريفي', fr: 'Tenerife', zh: '特内里费' },
-    'gran canaria': { en: 'Gran Canaria', es: 'Gran Canaria', ru: 'Гран-Канария', ar: 'جران كناريا', fr: 'Grande Canarie', zh: '大加那利岛' },
-    'mallorca': { en: 'Mallorca', es: 'Mallorca', ru: 'Мальорка', ar: 'مايوركا', fr: 'Majorque', zh: '马略卡岛' },
-    'torremolinos': { en: 'Torremolinos', es: 'Torremolinos', ru: 'Торремолинос', ar: 'توريمولينوس', fr: 'Torremolinos', zh: '托雷莫利诺斯' },
-    'saint-cyprien': { en: 'Saint-Cyprien', es: 'Saint-Cyprien', ru: 'Сен-Сиприен', ar: 'سان سيبريان', fr: 'Saint-Cyprien', zh: '圣西普里安' },
-    'torreilles': { en: 'Torreilles', es: 'Torreilles', ru: 'Торрей', ar: 'توريي', fr: 'Torreilles', zh: '托雷耶' },
-    'saint-jean-de-monts': { en: 'Saint-Jean-de-Monts', es: 'Saint-Jean-de-Monts', ru: 'Сен-Жан-де-Мон', ar: 'سان جان دي مونتس', fr: 'Saint-Jean-de-Monts', zh: '圣让德蒙' },
-    'marsa alam': { en: 'Marsa Alam', es: 'Marsa Alam', ru: 'Марса-Алам', ar: 'مرسى علم', fr: 'Marsa Alam', zh: '马萨阿拉姆' },
-    'hurghada': { en: 'Hurghada', es: 'Hurghada', ru: 'Хургада', ar: 'الغردقة', fr: 'Hurghada', zh: '赫尔格达' },
-    'hurgada': { en: 'Hurghada', es: 'Hurghada', ru: 'Хургада', ar: 'الغردقة', fr: 'Hurghada', zh: '赫尔格达' },
-    'sharm el sheikh': { en: 'Sharm El Sheikh', es: 'Sharm El Sheikh', ru: 'Шарм-эль-Шейх', ar: 'شرم الشيخ', fr: 'Charm el-Cheikh', zh: '沙姆沙伊赫' },
-    'sarm el-seyh': { en: 'Sharm El Sheikh', es: 'Sharm El Sheikh', ru: 'Шарм-эль-Шейх', ar: 'شرم الشيخ', fr: 'Charm el-Cheikh', zh: '沙姆沙伊赫' },
-    'bigacs': { en: 'Bogács', es: 'Bogács', ru: 'Богач', ar: 'بوغاتش', fr: 'Bogács', zh: '博加奇' },
-    'bogacs': { en: 'Bogács', es: 'Bogács', ru: 'Богач', ar: 'بوغاتش', fr: 'Bogács', zh: '博加奇' },
-    'gyula': { en: 'Gyula', es: 'Gyula', ru: 'Дьюла', ar: 'جيولا', fr: 'Gyula', zh: '久洛' },
-    'nyiregyhaza': { en: 'Nyíregyháza', es: 'Nyíregyháza', ru: 'Ньиредьхаза', ar: 'نيريغيهازا', fr: 'Nyíregyháza', zh: '尼赖吉哈佐' },
-    'sarvar': { en: 'Sárvár', es: 'Sárvár', ru: 'Шарвар', ar: 'شارفار', fr: 'Sárvár', zh: '沙尔瓦尔' },
-    'zalakaros': { en: 'Zalakaros', es: 'Zalakaros', ru: 'Залакарош', ar: 'زالاكاروس', fr: 'Zalakaros', zh: '佐洛考罗什' },
-    'jakovo': { en: 'Jakovo', es: 'Jakovo', ru: 'Яково', ar: 'ياكوفو', fr: 'Jakovo', zh: '雅科沃' },
-    'novi sad': { en: 'Novi Sad', es: 'Novi Sad', ru: 'Нови-Сад', ar: 'نوفي ساد', fr: 'Novi Sad', zh: '诺维萨德' },
-    'vrnjacka banja': { en: 'Vrnjačka Banja', es: 'Vrnjačka Banja', ru: 'Врнячка-Баня', ar: 'فرنياتشكا بانيا', fr: 'Vrnjačka Banja', zh: '弗尔尼亚奇卡矿泉镇' },
-    'jeddah': { en: 'Jeddah', es: 'Yeda', ru: 'Джидда', ar: 'جدة', fr: 'Djeddah', zh: '吉达' },
-    'cidde': { en: 'Jeddah', es: 'Yeda', ru: 'Джидда', ar: 'جدة', fr: 'Djeddah', zh: '吉达' },
-    'riyadh': { en: 'Riyadh', es: 'Riad', ru: 'Эр-Рияд', ar: 'الرياض', fr: 'Riyad', zh: '利雅得' },
-    'doha': { en: 'Doha', es: 'Doha', ru: 'Доха', ar: 'الدوحة', fr: 'Doha', zh: '多哈' },
-    'seoul': { en: 'Seoul', es: 'Seúl', ru: 'Сеул', ar: 'سيول', fr: 'Séoul', zh: '首尔' },
-    'almaty': { en: 'Almaty', es: 'Almatí', ru: 'Алматы', ar: 'ألماتي', fr: 'Almaty', zh: '阿拉木图' },
-    'tashkent': { en: 'Tashkent', es: 'Taskent', ru: 'Ташкент', ar: 'طشقند', fr: 'Tachkent', zh: '塔什干' },
-    'baku': { en: 'Baku', es: 'Bakú', ru: 'Баку', ar: 'باكو', fr: 'Bakou', zh: '巴库' },
-    'budva': { en: 'Budva', es: 'Budva', ru: 'Будва', ar: 'بودفا', fr: 'Budva', zh: '布德瓦' },
-    'zakopane': { en: 'Zakopane', es: 'Zakopane', ru: 'Закопане', ar: 'زاكوباني', fr: 'Zakopane', zh: '扎科帕内' },
-    'senec': { en: 'Senec', es: 'Senec', ru: 'Сенец', ar: 'سينيتس', fr: 'Senec', zh: '塞内茨' },
-    'chisinau': { en: 'Chisinau', es: 'Chisinau', ru: 'Кишинёв', ar: 'كيشيناو', fr: 'Chișinău', zh: '基希讷乌' },
-    'tbilisi': { en: 'Tbilisi', es: 'Tiflis', ru: 'Тбилиси', ar: 'تبليسي', fr: 'Tbilissi', zh: '第比利斯' },
-    'kyrenia': { en: 'Kyrenia', es: 'Kyrenia', ru: 'Кирения', ar: 'كيرينيا', fr: 'Kyrenia', zh: '凯里尼亚' },
-    'oran': { en: 'Oran', es: 'Orán', ru: 'Оран', ar: 'وهران', fr: 'Oran', zh: '奥兰' },
-    'marrakech': { en: 'Marrakech', es: 'Marrakech', ru: 'Марракеш', ar: 'مراكش', fr: 'Marrakech', zh: '马拉喀什' },
-    'marakes': { en: 'Marrakech', es: 'Marrakech', ru: 'Марракеш', ar: 'مراكش', fr: 'Marrakech', zh: '马拉喀什' },
-    'agadir': { en: 'Agadir', es: 'Agadir', ru: 'Агадир', ar: 'أكادير', fr: 'Agadir', zh: '阿加迪尔' },
-    'sousse': { en: 'Sousse', es: 'Susa', ru: 'Сус', ar: 'سوسة', fr: 'Sousse', zh: '苏塞' },
-    'antalya': { en: 'Antalya', es: 'Antalya', ru: 'Анталья', ar: 'أنطاليا', fr: 'Antalya', zh: '安塔利亚' },
-    'mugla': { en: 'Muğla', es: 'Muğla', ru: 'Мугла', ar: 'موغla', fr: 'Muğla', zh: '穆拉' },
-    'izmir': { en: 'Izmir', es: 'Esmirna', ru: 'Измир', ar: 'إزمير', fr: 'Izmir', zh: '伊兹密尔' },
-    'bodrum': { en: 'Bodrum', es: 'Bodrum', ru: 'Бодрум', ar: 'بودروم', fr: 'Bodrum', zh: '博德鲁姆' },
-    'fethiye': { en: 'Fethiye', es: 'Fethiye', ru: 'Фетхие', ar: 'فتحية', fr: 'Fethiye', zh: '费特希耶' },
-    'didim': { en: 'Didim', es: 'Didim', ru: 'Дидим', ar: 'ديديم', fr: 'Didim', zh: '迪迪姆' },
-    'aydin': { en: 'Aydin', es: 'Aydın', ru: 'Айдын', ar: 'أيدين', fr: 'Aydın', zh: '艾登' },
-    'aydın': { en: 'Aydin', es: 'Aydın', ru: 'Айдын', ar: 'أيدين', fr: 'Aydın', zh: '艾登' },
-    'asan': { en: 'Asan', es: 'Asan', ru: 'Асан', ar: 'أسان', fr: 'Asan', zh: '牙山' },
-    'bagdat': { en: 'Baghdad', es: 'Bagdad', ru: 'Багдад', ar: 'بغداد', fr: 'Bagdad', zh: '巴格达' },
-    'bangalore': { en: 'Bangalore', es: 'Bangalore', ru: 'Бангалор', ar: 'بنغالور', fr: 'Bangalore', zh: '班加罗尔' },
-    'd city': { en: 'D City', es: 'D City', ru: 'D City', ar: 'دي سيتي', fr: 'D City', zh: 'D City' },
-    'fafe': { en: 'Fafe', es: 'Fafe', ru: 'Фафе', ar: 'فافي', fr: 'Fafe', zh: '法菲' },
-    'karayipler': { en: 'Caribbean', es: 'Caribe', ru: 'Карибы', ar: 'الكاريبي', fr: 'Caraïbes', zh: '加勒比' },
-    'makadi bay': { en: 'Makadi Bay', es: 'Makadi Bay', ru: 'Макади Бэй', ar: 'خليج مكادي', fr: 'Makadi Bay', zh: '马卡迪湾' },
-    'nasiriye': { en: 'Nasiriyah', es: 'Nasiriya', ru: 'Эн-Насирия', ar: 'الناصرية', fr: 'Nassiriya', zh: '纳西里耶' },
-    'nasıriye': { en: 'Nasiriyah', es: 'Nasiriya', ru: 'Эн-Насирия', ar: 'الناصرية', fr: 'Nassiriya', zh: '纳西里耶' },
-    'porec': { en: 'Porec', es: 'Poreč', ru: 'Пореч', ar: 'بوريتش', fr: 'Poreč', zh: '波雷奇' },
-    'port ghalib': { en: 'Port Ghalib', es: 'Port Ghalib', ru: 'Порт Галиб', ar: 'بورت غالب', fr: 'Port Ghalib', zh: '加利卜港' },
-    'seignosse': { en: 'Seignosse', es: 'Seignosse', ru: 'Сеньос', ar: 'سينيوس', fr: 'Seignosse', zh: '塞尼奥斯' },
-    'skikda': { en: 'Skikda', es: 'Skikda', ru: 'Скикда', ar: 'سكيكدة', fr: 'Skikda', zh: '斯基克达' },
-    'sofya': { en: 'Sofia', es: 'Sofía', ru: 'София', ar: 'صوفيا', fr: 'Sofia', zh: '索菲亚' },
-    'soma bay': { en: 'Soma Bay', es: 'Soma Bay', ru: 'Сома Бэй', ar: 'خليج سوما', fr: 'Soma Bay', zh: '索马湾' },
-    'sterlitamak': { en: 'Sterlitamak', es: 'Sterlitamak', ru: 'Стерлитамак', ar: 'ستيرليتاماك', fr: 'Sterlitamak', zh: '斯捷尔利塔马克' },
-    'vendays-montalivet': { en: 'Vendays-Montalivet', es: 'Vendays-Montalivet', ru: 'Ванде-Монталиве', ar: 'فانديه مونتاليفيه', fr: 'Vendays-Montalivet', zh: '旺代蒙塔利韦' },
-    'volgograd': { en: 'Volgograd', es: 'Volgogrado', ru: 'Волгоград', ar: 'فولغوغراد', fr: 'Volgograd', zh: '伏尔加格勒' },
-
-    // Countries
-    'türkiye': { en: 'Turkey', es: 'Turquía', ru: 'Турция', ar: 'تركيا', fr: 'Turquie', zh: '土耳其' },
-    'romanya': { en: 'Romania', es: 'Rumania', ru: 'Румыния', ar: 'رومانيا', fr: 'Roumanie', zh: '罗马尼亚' },
-    'yunanistan': { en: 'Greece', es: 'Grecia', ru: 'Греция', ar: 'اليونان', fr: 'Grèce', zh: '希腊' },
-    'fransa': { en: 'France', es: 'Francia', ru: 'Франция', ar: 'فرنسا', fr: 'France', zh: '法国' },
-    'malezya': { en: 'Malaysia', es: 'Malasia', ru: 'Малайзия', ar: 'ماليزيا', fr: 'Malaisie', zh: '马来西亚' },
-    'mısır': { en: 'Egypt', es: 'Egipto', ru: 'Египет', ar: 'مصر', fr: 'Égypte', zh: '埃及' },
-    'macaristan': { en: 'Hungary', es: 'Hungría', ru: 'Венгрия', ar: 'المجر', fr: 'Hongrie', zh: '匈牙利' },
-    'bulgaristan': { en: 'Bulgaria', es: 'Bulgaria', ru: 'Богария', ar: 'بلغاريا', fr: 'Bulgarie', zh: '保加利亚' },
-    'sırbistan': { en: 'Serbia', es: 'Serbia', ru: 'Сербия', ar: 'صربيا', fr: 'Serbie', zh: '塞尔维亚' },
-    'katar': { en: 'Qatar', es: 'Qatar', ru: 'Катар', ar: 'قطر', fr: 'Qatar', zh: '卡塔尔' },
-    'vietnam': { en: 'Vietnam', es: 'Vietnam', ru: 'Вьетнам', ar: 'فيتنام', fr: 'Vietnam', zh: '越南' },
-    'özbekistan': { en: 'Uzbekistan', es: 'Uzbekistán', ru: 'Узбекистан', ar: 'أوزبكستان', fr: 'Ouzbékistan', zh: '乌兹别克斯坦' },
-    'güney kore': { en: 'South Korea', es: 'Corea del Sur', ru: 'Южная Корея', ar: 'كوريا الجنوبية', fr: 'Corée du Sud', zh: '韩国' },
-    'kuzey kıbrıs': { en: 'Northern Cyprus', es: 'Chipre del Norte', ru: 'Северный Кипр', ar: 'قبرص الشمالية', fr: 'Chypre du Nord', zh: '北塞浦路斯' },
-    'kazakistan': { en: 'Kazakhstan', es: 'Kazajistán', ru: 'Казахстан', ar: 'كازاخستان', fr: 'Kazakhstan', zh: '哈萨克斯坦' },
-    'karadağ': { en: 'Montenegro', es: 'Montenegro', ru: 'Черногория', ar: 'الجبل الأسود', fr: 'Monténégro', zh: '黑山' },
-    'curaçao': { en: 'Curaçao', es: 'Curaçao', ru: 'Кюрасао', ar: 'كوراساو', fr: 'Curaçao', zh: '库拉索' },
-    'irak': { en: 'Iraq', es: 'Irak', ru: 'Ирак', ar: 'العراق', fr: 'Irak', zh: '伊拉克' },
-    'azerbaycan': { en: 'Azerbaijan', es: 'Azerbaiyán', ru: 'Азербайджан', ar: 'أذربيجان', fr: 'Azerbaïdjan', zh: '阿塞拜疆' },
-    'polonya': { en: 'Poland', es: 'Polonia', ru: 'Польша', ar: 'بولندا', fr: 'Pologne', zh: '波兰' },
-    'slovakya': { en: 'Slovakia', es: 'Eslovaquia', ru: 'Словакия', ar: 'سلوفاкия', fr: 'Slovaquie', zh: '斯洛伐克' },
-    'moldova': { en: 'Moldova', es: 'Moldova', ru: 'Молдова', ar: 'مولدوفا', fr: 'Moldavie', zh: '摩尔多瓦' },
-    'gürcistan': { en: 'Georgia', es: 'Georgia', ru: 'Грузия', ar: 'جورجيا', fr: 'Géorgie', zh: '格鲁吉亚' },
-    'cezayir': { en: 'Algeria', es: 'Argelia', ru: 'Алжир', ar: 'الجزائر', fr: 'Algérie', zh: '阿尔及利亚' },
-    'fas': { en: 'Morocco', es: 'Marruecos', ru: 'Марокко', ar: 'المغرب', fr: 'Maroc', zh: '摩洛哥' },
-    'tunus': { en: 'Tunisia', es: 'Túnez', ru: 'Тунис', ar: 'تونس', fr: 'Tunisie', zh: '突尼斯' },
-    'ispanya': { en: 'Spain', es: 'España', ru: 'Испания', ar: 'إسبانيا', fr: 'Espagne', zh: '西班牙' },
-    'suudi arabistan': { en: 'Saudi Arabia', es: 'Arabia Saudita', ru: 'Саудовская Аравия', ar: 'المملكة العربية السعودية', fr: 'Arabie Saoudite', zh: '沙特阿拉伯' },
-    'portekiz': { en: 'Portugal', es: 'Portugal', ru: 'Португалия', ar: 'البرتغال', fr: 'Portugal', zh: '葡萄牙' },
-    'hirvatistan': { en: 'Croatia', es: 'Croacia', ru: 'Хорватия', ar: 'كرواتيا', fr: 'Croatie', zh: '克罗地亚' },
-    'hırvatistan': { en: 'Croatia', es: 'Croacia', ru: 'Хорватия', ar: 'كرواتيا', fr: 'Croatie', zh: '克罗地亚' },
-    'rusya': { en: 'Russia', es: 'Rusia', ru: 'Россия', ar: 'روسيا', fr: 'Russie', zh: '俄罗斯' },
-    'hindistan': { en: 'India', es: 'India', ru: 'Индия', ar: 'الهند', fr: 'Inde', zh: '印度' }
-  };
-
   const translateLocation = (locStr) => {
     if (!locStr) return '';
     const currentLangCode = i18n.language || 'tr';
@@ -425,14 +312,13 @@ export default function ProjectsPage({ setActivePage }) {
       // Normalize part to matching key (removing accents/diacritics to map correctly)
       const key = part.trim().toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
       const slug = key.replace(/ı/g, 'i').replace(/[^a-z0-9]+/g, '_').replace(/^_|_$/g, '');
-      // Türkçe adlar çeviri dosyasından, diğer diller şimdilik bu tablodan gelir
-      return t(`projects.locations.${slug}`, { defaultValue: locationTranslations[key]?.[currentLangCode] || part });
+      return t(`projects.locations.${slug}`, { defaultValue: part });
     });
 
     let result = translatedParts.join(', ');
     if (currentLangCode !== 'tr' && parts.length === 1 && (cleanStr === 'antalya' || cleanStr === 'mugla' || cleanStr === 'izmir' || cleanStr === 'bodrum' || cleanStr === 'fethiye')) {
       // If it is just a Turkish city, add Turkey suffix in non-Turkish languages
-      result += `, ${locationTranslations['türkiye'][currentLangCode]}`;
+      result += `, ${t('projects.locations.turkiye')}`;
     }
     return result;
   }

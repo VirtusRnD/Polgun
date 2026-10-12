@@ -1158,7 +1158,7 @@ export default function CareerPage() {
                       setForm((prev) => ({
                         ...prev,
                         department: 'Staj / Yeni Mezun',
-                        note: t('career.internships.apply_note_prefix', { defaultValue: `Sayın Yetkili,\n\n${prog.title} programı hakkında başvuruda bulunmak istiyorum.`, title: prog.title }),
+                        note: t('career.internships.apply_note_prefix', { defaultValue: `Sayın Yetkili,\n\n${prog.title} programı için başvuruda bulunmak istiyorum.`, title: prog.title }),
                       }))
                       applyFormRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' })
                     }}
@@ -1185,7 +1185,7 @@ export default function CareerPage() {
                   setForm((prev) => ({
                     ...prev,
                     department: 'Staj / Yeni Mezun',
-                    note: t('career.internships.general_note', { defaultValue: 'Sayın Yetkili,\n\nStaj programı / Yeni mezun gelişim programı hakkında başvuruda bulunmak istiyorum.' }),
+                    note: t('career.internships.general_note', { defaultValue: 'Sayın Yetkili,\n\nStaj programı / Yeni mezun gelişim programı için başvuruda bulunmak istiyorum.' }),
                   }))
                   applyFormRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' })
                 }}

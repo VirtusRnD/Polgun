@@ -35,7 +35,7 @@
     "about": "Hakkımızda",
     "team": "Ekibimiz",
     "history": "Tarihçemiz",
-    "awards": "Ödüller & Patent",
+    "awards": "Ödüller & Patentler",
     "factories": "Fabrikalarımız",
     "news": "Haberler & Etkinlikler",
     "newsletter": "E-Bültenlerimiz",
@@ -125,7 +125,7 @@
     "power_desc3": "425 çalışanı ve 30 kişilik Ar-Ge ekibiyle Polgün, tasarımdan üretime kadar tüm süreçleri yöneterek anahtar teslim projeler gerçekleştirmektedir.",
     "arge_title": "Muğla'nın İlk ve Tek Ar-Ge Merkezi",
     "arge_desc1": "Polgün Waterparks olarak Ar-Ge yaklaşımımızın temelinde; güvenli, yenilikçi, sürdürülebilir ve yüksek katma değerli su eğlence teknolojileri geliştirmek yer almaktadır. 2021 yılında Bakanlık onayıyla Ar-Ge Merkezi statüsü kazanan merkezimiz, Muğla'nın ilk ve tek Ar-Ge Merkezi olma niteliğiyle sektörümüzde özgün ürün geliştirme, yerlileştirme ve teknoloji üretme çalışmalarına öncülük etmektedir.",
-    "arge_desc2": "Ar-Ge Merkezimizde; araştırmacı, teknisyen ve destek personeli statüsünde görev yapan 30 tam zaman eşdeğer nitelikli Ar-Ge personelimiz ile yeni ürün tasarımı, mühendislik analizleri, prototipleme, test, doğrulama, üretim yöntemi geliştirme ve fikri mülkiyet süreçlerini bütüncül bir yaklaşımla yürütüyoruz.",
+    "arge_desc2": "Ar-Ge Merkezimizde; araştırmacı, teknisyen ve destek personeli statüsünde görev yapan 30 tam zaman eşdeğer nitelikli Ar-Ge personelimiz ile yeni ürün tasarımı, mühendislik analizleri, prototipleme, test, doğrulama, üretim yöntemi geliştirme ve fikrî mülkiyet süreçlerini bütüncül bir yaklaşımla yürütüyoruz.",
     "arge_desc3": "Navatu, Savana, Monarch Butterfly ve Eclipse gibi yenilikçi ürün projelerimiz; Polgün'ün tasarım, mühendislik ve üretim gücünü uluslararası pazarda temsil eden önemli Ar-Ge çıktıları arasında yer almaktadır.",
     "misyon": "Misyonumuz",
     "misyon_desc": "Yüksek kaliteli, güvenli, uygun maliyetli ve yenilikçi Ar-Ge projeleri geliştirerek su eğlence sektörüne özgün çözümler kazandırmak.",
@@ -276,7 +276,7 @@
       "outdoor": "Açık Alan Su Parkı",
       "hotel": "Otel & Su Parkı",
       "indoor": "Kapalı Alan Su Parkı",
-      "resort": "Resort Tatil Köyü"
+      "resort": "Tatil Köyü"
     },
     "cta_tag": "Sonraki Proje",
     "cta_title": "Projeniz bu listede olsun",
@@ -423,11 +423,11 @@
     },
     "values": {
       "2024": "2024",
-      "korsan": "Korsan",
+      "korsan": "Pirate",
       "ozellestirilebilir": "Özelleştirilebilir",
       "tum_yaslar": "Tüm Yaşlar",
       "yuksek": "Yüksek",
-      "sualti": "Sualtı",
+      "sualti": "Underwater",
       "iaapa_brass_ring": "IAAPA Brass Ring",
       "dalga_sistemi": "Dalga Sistemi",
       "ar_ge_merkezi": "Ar-Ge Merkezi",
@@ -442,7 +442,7 @@
     "items": {
       "pirate_theme": {
         "sub": "Korsan Temalı Su Kaydırakları",
-        "desc": "Polgün'ün imza teması olan Korsan Tema, çocukların korsanlarla dolu açık denizlerde yelken açmaları ve bu hayal dünyasında eğlenmeleri için tasarlanmıştır."
+        "desc": "Polgün'ün imza teması olan Pirate Theme, çocukların korsanlarla dolu açık denizlerde yelken açmaları ve bu hayal dünyasında eğlenmeleri için tasarlanmıştır."
       },
       "underwater_theme": {
         "sub": "Sualtı Dünyası Temalı Yapılar",
@@ -580,14 +580,14 @@
     "header_title": "Ar-Ge Merkezi",
     "hero_desc": "Polgün Waterparks olarak Ar-Ge yaklaşımımızın temelinde; güvenli, yenilikçi, sürdürülebilir ve yüksek katma değerli su eğlence teknolojileri geliştirmek yer almaktadır.",
     "p1": "2021 yılında Bakanlık onayıyla Ar-Ge Merkezi statüsü kazanan merkezimiz, Muğla’nın ilk ve tek Ar-Ge Merkezi olma niteliğiyle sektörümüzde özgün ürün geliştirme, yerlileştirme ve teknoloji üretme çalışmalarına öncülük etmektedir.",
-    "p2": "Ar-Ge Merkezimizde; araştırmacı, teknisyen ve destek personeli statüsünde görev yapan 30 tam zaman eşdeğer nitelikli Ar-Ge personelimiz ile yeni ürün tasarımı, mühendislik analizleri, prototipleme, test, doğrulama, üretim yöntemi geliştirme ve fikri mülkiyet süreçlerini bütüncül bir yaklaşımla yürütüyoruz.",
+    "p2": "Ar-Ge Merkezimizde; araştırmacı, teknisyen ve destek personeli statüsünde görev yapan 30 tam zaman eşdeğer nitelikli Ar-Ge personelimiz ile yeni ürün tasarımı, mühendislik analizleri, prototipleme, test, doğrulama, üretim yöntemi geliştirme ve fikrî mülkiyet süreçlerini bütüncül bir yaklaşımla yürütüyoruz.",
     "p3": "Ülkemiz için millileştirme ve yerlileştirme çalışmalarını stratejik bir sorumluluk olarak görüyor; dışa bağımlılığı azaltan, hızlı uygulanabilir ve müşteri ihtiyaçlarına doğrudan yanıt veren çözümler geliştiriyoruz. Tasarımdan üretime, analizden saha uygulamasına kadar tüm Ar-Ge süreçlerimizde güvenlik, kalite, uluslararası standartlara uygunluk ve sürdürülebilirlik ilkelerini esas alıyoruz.",
     "innovative_title": "Yenilikçi Ürünler",
     "p4": "Polgün Ar-Ge Merkezi’nde geliştirilen projeler; su tasarrufu, kullanıcı güvenliği, kapasite artışı, tematik deneyim, modüler üretim, kompozit malzeme teknolojileri ve yeni nesil su kaydırağı geometrileri gibi alanlarda sektöre değer katmaktadır. Navatu, Savana, Monarch Butterfly ve Eclipse gibi yenilikçi ürün projelerimiz; Polgün’ün tasarım, mühendislik ve üretim gücünü uluslararası pazarda temsil eden önemli Ar-Ge çıktıları arasında yer almaktadır.",
     "continuous_title": "Sürekli Gelişim",
     "p5": "Ar-Ge faaliyetlerimiz yalnızca yeni ürün geliştirme ile sınırlı değildir. Aynı zamanda mevcut ürünlerin performansını artırmak, üretim süreçlerini iyileştirmek, çevresel etkileri azaltmak, malzeme verimliliğini yükseltmek ve uluslararası pazarlarda rekabet gücümüzü artırmak amacıyla sürekli geliştirme çalışmaları yürütüyoruz. Akademik iş birlikleri, bilimsel yayınlar, patent ve tasarım tescili süreçleri ile kurumsal bilgi birikimimizi güçlendiriyor; elde edilen çıktıları sürdürülebilir bir inovasyon kültürüne dönüştürüyoruz.",
     "misyon": "Misyonumuz",
-    "misyon_desc": "Su eğlence sektöründe yüksek kaliteli, güvenli, maliyet etkin ve yenilikçi Ar-Ge projeleri geliştirerek sektöre özgün çözümler kazandırmak ve ulusal ve uluslararası pazarda ülkemizi temsil eden öncü ürünler ortaya koymaktır. Ar-Ge süreçlerimizde iş programına sadakat, mühendislik doğrulamaları, standartlara uygunluk ve sürdürülebilir üretim ilkelerini esas alarak sektörümüze nitelikli bilgi, teknoloji ve insan kaynağı kazandırmayı hedefliyoruz.",
+    "misyon_desc": "Su eğlence sektöründe yüksek kaliteli, güvenli, maliyet etkin ve yenilikçi Ar-Ge projeleri geliştirerek sektöre özgün çözümler kazandırmak, ulusal ve uluslararası pazarda ülkemizi temsil eden öncü ürünler ortaya koymaktır. Ar-Ge süreçlerimizde iş programına sadakat, mühendislik doğrulamaları, standartlara uygunluk ve sürdürülebilir üretim ilkelerini esas alarak sektörümüze nitelikli bilgi, teknoloji ve insan kaynağı kazandırmayı hedefliyoruz.",
     "vizyon": "Vizyonumuz",
     "vizyon_desc": "Polgün Waterparks Ar-Ge Merkezi olarak vizyonumuz; özgün tasarımları, yenilikçi mühendislik çözümleri, güçlü üretim kabiliyeti ve uluslararası standartlara uygun projeleriyle su eğlence teknolojilerine yön veren, global ölçekte lider ve öncü bir Ar-Ge merkezi olmaktır. Kaliteden ödün vermeden geliştirdiğimiz projelerle hem ulusal hem de uluslararası alanda referans gösterilen bir marka olmayı amaçlıyoruz.",
     "projects_title": "Ar-Ge Projelerimiz",
@@ -694,8 +694,8 @@
         "title": "Teknik Okul Stajı",
         "desc": "Meslek lisesi ve teknik okul öğrencileri için staj imkânı."
       },
-      "apply_note_prefix": "Sayın Yetkili,\n\n{{title}} programı hakkında başvuruda bulunmak istiyorum.",
-      "general_note": "Sayın Yetkili,\n\nStaj programı / Yeni mezun gelişim programı hakkında başvuruda bulunmak istiyorum."
+      "apply_note_prefix": "Sayın Yetkili,\n\n{{title}} programı için başvuruda bulunmak istiyorum.",
+      "general_note": "Sayın Yetkili,\n\nStaj programı / Yeni mezun gelişim programı için başvuruda bulunmak istiyorum."
     },
     "testimonials_title": "Çalışanlarımız Anlatıyor",
     "testimonials_subtitle": "Polgün'de çalışmak nasıl bir deneyim? Onlardan dinleyin.",
@@ -852,15 +852,15 @@
       "greece": "Yunanistan Tescil Kesinlik Kararı",
       "form": "Polgün Başvuru Formu",
       "fluorescent": "Floresan Aydınlatma Patent Belgesi",
-      "slides": "Su Kaydırağı Tasarım Tescil Onaylı"
+      "slides": "Su Kaydırağı Tasarım Tescil Belgesi"
     },
     "kalite": {
       "iso9001": "Kalite Yönetim Sistemi",
       "iso14001": "Çevre Yönetim Sistemi",
       "iso45001": "İş Sağlığı ve Güvenliği",
-      "iso3834": "Çelik Konstrüksiyon İmalatı",
+      "iso3834": "Kaynak Sertifikası",
       "astm": "Ürün Standart Belgesi",
-      "cpr": "Kaynak Sertifikası",
+      "cpr": "Çelik Konstrüksiyon İmalatı",
       "ts_en_1069": "Su Kaydırağı Standart Belgesi",
       "ts_en_1176": "Çocuk Oyun Alanı Standart Belgesi",
       "ts_en_17232": "Su Oyun Elemanları Standart Belgesi"
@@ -972,7 +972,7 @@
       "pirate": {
         "name": "Pirate Theme",
         "location": "Antalya, Türkiye",
-        "desc": "Polgün'ün imza teması olan ve pek çok su parkı tarafından tercih edilen Korsan Tema, çocukların korsanlarla dolu açık denizlerde yelken açmaları ve bu hayal dünyasında eğlenmeleri için tasarlanmıştır. Her boyutta ve istenen her renk seçeneğinde tamamen özelleştirilebilen Korsan Tema'da dev papağanlar, ikonik köpekbalığı, interaktif su oyunları, palmiye ağaçları ve korsan kafalı dev bir su kovası bulunuyor. Minik misafirlerin eğlendiği kadar yetişkinlerin de eğlendiğini gördüğünüzde su parkınız için Polgün Korsan Tema'sını tercih etmeniz kaçınılmaz olacaktır."
+        "desc": "Polgün'ün imza teması olan ve pek çok su parkı tarafından tercih edilen Pirate Theme, çocukların korsanlarla dolu açık denizlerde yelken açmaları ve bu hayal dünyasında eğlenmeleri için tasarlanmıştır. Her boyutta ve istenen her renk seçeneğinde tamamen özelleştirilebilen Pirate Theme'de dev papağanlar, ikonik köpekbalığı, interaktif su oyunları, palmiye ağaçları ve korsan kafalı dev bir su kovası bulunuyor. Minik misafirlerin eğlendiği kadar yetişkinlerin de eğlendiğini gördüğünüzde su parkınız için Polgün Pirate Theme'i tercih etmeniz kaçınılmaz olacaktır."
       },
       "jungle": {
         "name": "Jungle Theme",
@@ -987,7 +987,7 @@
       "underwater": {
         "name": "Underwater Theme",
         "location": "Antalya, Türkiye",
-        "desc": "Okyanuslar, denizler ve su altı dünyası çocuklar için her zaman gizemli, heyecan verici ve büyülü bir dünya olmuştur. Sualtı dünyasında keşfedilmeyi bekleyen farklı türler ve rengarenk mercanlardan yola çıkılarak Polgün Sualtı Teması ile tasarlanan su parkı, çocukların hayal gücünü destekleyen, heyecanlandıran ve eğlenmelerini sağlayan renkli bir ortamdır. Su parkında kullanılan tüm renkler su altı dünyasında bulunan canlı türlerinden ve mercan renklerinden esinlenmiştir."
+        "desc": "Okyanuslar, denizler ve su altı dünyası çocuklar için her zaman gizemli, heyecan verici ve büyülü bir dünya olmuştur. Sualtı dünyasında keşfedilmeyi bekleyen farklı türler ve rengarenk mercanlardan yola çıkılarak Polgün Underwater Theme ile tasarlanan su parkı, çocukların hayal gücünü destekleyen, heyecanlandıran ve eğlenmelerini sağlayan renkli bir ortamdır. Su parkında kullanılan tüm renkler su altı dünyasında bulunan canlı türlerinden ve mercan renklerinden esinlenmiştir."
       },
       "candy": {
         "name": "Candy Theme",
@@ -997,7 +997,7 @@
       "carnaval": {
         "name": "Carnaval Theme",
         "location": "Türkiye",
-        "desc": "Çocukların hayal gücünü harekete geçirmek ve unutulmaz aile anları yaratmak için tasarlanmış canlı bir su oyun alanı olan Polgün Carnival Splash Tower ile karnavalın neşeli ruhunu hayata geçirin. Şenlikli bir panayırın büyülü atmosferinden ilham alan Karnaval Teması; renkli balonlar, şekerlemeleri andıran detaylar, devasa lolipoplar ve oyun alanını rüya gibi bir kutlama ortamına dönüştüren eğlenceli çadır tarzı dekorasyonlar içerir. Etkileşimli su unsurları ve canlı tematik öğeler, çocukları keşfetmeye, oynamaya ve sürükleyici bir su macerasının tadını çıkarmaya teşvik eder.Göz alıcı görselliği ve neşeli karakteriyle Carnival Splash Tower; tatil köyleri, oteller, su parkları ve aile eğlence merkezleri için büyüleyici bir odak noktası haline gelir. Boyut, yerleşim ve renk açısından tamamen özelleştirilebilir yapısıyla, her projenin kendine özgü konseptine ve kapasite ihtiyaçlarına göre uyarlanabilir."
+        "desc": "Çocukların hayal gücünü harekete geçirmek ve unutulmaz aile anları yaratmak için tasarlanmış canlı bir su oyun alanı olan Polgün Carnaval Splash Tower ile karnavalın neşeli ruhunu hayata geçirin. Şenlikli bir panayırın büyülü atmosferinden ilham alan Carnaval teması; renkli balonlar, şekerlemeleri andıran detaylar, devasa lolipoplar ve oyun alanını rüya gibi bir kutlama ortamına dönüştüren eğlenceli çadır tarzı dekorasyonlar içerir. Etkileşimli su unsurları ve canlı tematik öğeler, çocukları keşfetmeye, oynamaya ve sürükleyici bir su macerasının tadını çıkarmaya teşvik eder. Göz alıcı görselliği ve neşeli karakteriyle Carnaval Splash Tower; tatil köyleri, oteller, su parkları ve aile eğlence merkezleri için büyüleyici bir odak noktası haline gelir. Boyut, yerleşim ve renk açısından tamamen özelleştirilebilir yapısıyla, her projenin kendine özgü konseptine ve kapasite ihtiyaçlarına göre uyarlanabilir."
       },
       "jurassic": {
         "name": "Jurassic Theme",
