@@ -1,19 +1,12 @@
 {
   "common": {
     "all": "Tümü",
-    "view_all": "Tümünü Gör",
     "read_more": "Devamı",
-    "loading": "Yükleniyor...",
-    "error": "Hata oluştu.",
     "no_content": "İçerik bulunamadı.",
     "contact": "İletişim",
-    "send": "Gönder",
     "quote": "Teklif Al",
     "learn_more": "İncele",
-    "home": "Ana Sayfa",
-    "back": "Geri",
     "explore_projects": "Projelerimizi Keşfedin",
-    "all_products": "Tüm Ürünler",
     "all_projects": "Tüm Projeler",
     "sending": "Gönderiliyor...",
     "select": "Seçiniz",
@@ -24,8 +17,6 @@
     "turkey": "Türkiye",
     "spain": "İspanya",
     "not_found": "İçerik Bulunamadı",
-    "pause": "Durdur",
-    "play": "Oynat",
     "close": "Kapat"
   },
   "nav": {
@@ -51,21 +42,15 @@
     "knowledge_center": "Bilgi Merkezi",
     "arge": "Ar-Ge",
     "arge_center": "Ar-Ge Merkezi",
-    "fikri_sinai_haklar": "Fikri ve Sınai Mülkiyet",
+    "fikri_sinai_haklar": "Fikrî ve Sınai Mülkiyet",
     "utility_models": "Faydalı Modeller",
     "designs": "Endüstriyel Tasarımlar",
-    "publications": "Bilimsel Yayınlar",
+    "publications": "Akademik Yayınlar",
     "patents": "Patentler",
     "career": "Kariyer",
     "brands": "Markalarımız",
-    "renovation": "Modernizasyon & Yenileme",
     "all_products": "Tüm Ürünler",
     "contact": "İletişim",
-    "fast_contact": "Hızlı İletişim",
-    "portal": "Müşteri Portalı",
-    "production": "Üretim & Montaj",
-    "quality_mgmt": "Kalite Yönetimi",
-    "quote_btn": "Teklif Al",
     "view_all": "Tümünü Gör",
     "cta_products": "Tüm ürün ve mekan tiplerini keşfedin",
     "cta_services": "Anahtar teslim proje süreçlerimizi inceleyin",
@@ -73,7 +58,8 @@
     "cta_about": "Polgün'ün 40 yıllık hikayesini keşfedin",
     "cta_arge": "Yenilikçi su parkı teknolojileri ve tescillerimiz",
     "arge_products": "Ar-Ge Ürünleri",
-    "all_services": "Tüm Hizmetler"
+    "region_projects": "{{region}} Projeleri",
+    "menu": "Menü"
   },
   "footer": {
     "products_title": "ÜRÜNLER",
@@ -81,8 +67,6 @@
     "projects_title": "PROJELER",
     "corporate_title": "KURUMSAL",
     "quality_title": "KALİTE & GÜVEN",
-    "brand_desc": "Dünya standartlarında su kaydırakları ve su parkı çözümleri.",
-    "quality_mgmt": "Kalite Yönetimi",
     "sustainability": "Sürdürülebilirlik",
     "newsletter_title": "E-Bültenimize Abone Olun",
     "newsletter_desc": "Sektördeki yenilikler, projelerimiz ve en son gelişmelerden ilk siz haberdar olun.",
@@ -96,33 +80,15 @@
     "ethics": "Etik İlkelerimiz",
     "info_security": "Bilgi Güvenliği Politikası",
     "products": "Ürünler",
-    "corporate": "Kurumsal",
-    "support": "Destek",
-    "tech_support": "Teknik Destek",
-    "spare_parts": "Yedek Parça",
-    "maintenance_services": "Bakım Hizmetleri",
-    "copyright": "© 2026 Polgün Waterparks. Tüm hakları saklıdır.",
-    "kvkk": "KVKK",
-    "kvkk_policy": "KVKK Aydınlatma Metni",
-    "privacy": "Gizlilik Politikası",
-    "projects": "Projeler",
-    "quality": "Kalite & Güven",
-    "services": "Hizmetler"
+    "location": "Muğla, Türkiye"
   },
   "home": {
-    "hero_title": "Bir su parkından daha fazlasını tasarlıyoruz.",
-    "lets_color": "LET'S COLOR THE WATER",
+    "hero_title": "Bir su parkından daha fazlasını tasarlıyoruz",
     "hero_desc": "İlham veren, heyecan yaratan ve unutulmaz deneyimleri hayata geçiren yenilikçi su eğlence sistemleri tasarlıyoruz.",
     "eng_tag": "Yenilikçi Tasarım / Güvenilir Mühendislik",
     "turnkey_tag": "Anahtar Teslim Projeler / Dünya Çapında Deneyim",
-    "categories_title": "Ürün Kategorileri",
-    "categories_subtitle": "Su parkının her köşesi için çözüm",
-    "slides_sub": "Tüp, açık & thrill",
-    "tower_sub": "İmza Temalar",
-    "arge_sub": "Navatu & Savana",
-    "zone_sub": "Çocuk & Aile",
-    "why_title": "Neden Polgün?",
-    "why_subtitle": "20+ yıllık deneyimle ikonik su parkı deneyimleri yaratıyoruz",
+    "why_title": "Neden Polgün",
+    "why_subtitle": "20+ yıllık tecrübeyle ikonik su parkı deneyimleri yaratıyoruz",
     "why_desc": "Polgün, su parkı projelerinde tasarım, mühendislik, üretim ve uygulama süreçlerini tek çatı altında yöneten güçlü bir çözüm ortağıdır. Yirmi yılı aşkın sektör tecrübemiz, yüksek üretim kapasitemiz ve uluslararası proje deneyimimizle, her ölçekte projeye güvenilir, yenilikçi ve sürdürülebilir çözümler sunuyoruz. Estetik, güvenlik, kalite ve operasyonel verimliliği bir araya getirerek, markalara ve yatırımcılara uzun vadeli değer katan özgün su parkı deneyimleri tasarlıyor ve hayata geçiriyoruz.",
     "why_pillars": {
       "service": "Tam Hizmet",
@@ -148,51 +114,19 @@
       "grp": "GRP Üretim",
       "design3d": "3D Tasarım",
       "turnkey": "Anahtar Teslim"
-    },
-    "cta_btn": "预约专家咨询",
-    "feature_1_desc": "根据客户场地特点与游客体验量身打造独具吸引力的主题景观。",
-    "feature_1_title": "独特的主题化定制",
-    "feature_2_desc": "双面光滑的高品质玻璃钢滑道，确保极致耐磨与持久光泽度。",
-    "feature_2_title": "先进 RTM 闭模成型",
-    "feature_3_desc": "严格遵循 EN 1069 及 ASTM 国际顶级安全与工程规范。",
-    "feature_3_title": "严谨的国际安全认证",
-    "feature_4_desc": "提供从项目可行性研究、工程制造到现场组装与定期保养的全方位支持。",
-    "feature_4_title": "全生命周期一站式服务",
-    "featured_projects_desc": "探索我们在世界各地奢华度假村、水上乐园及商业中心打造的经典之作。",
-    "featured_projects_tag": "标杆工程",
-    "featured_projects_title": "全球代表项目",
-    "features_subtitle": "从设计蓝图到卓越交付的品质保证",
-    "features_title": "为何选择 Polgün？",
-    "hero_badge": "全球领先的水上乐园制造商",
-    "hero_cta_primary": "探索产品系列",
-    "hero_cta_secondary": "查看经典项目",
-    "hero_title_1": "打造无限激情的",
-    "hero_title_2": "水上奇迹",
-    "stats": {
-      "capacity": "100,000 m²",
-      "capacity_label": "综合生产基地",
-      "countries": "70+",
-      "countries_label": "出口国家",
-      "experience": "40+",
-      "experience_label": "年行业积淀",
-      "projects": "3000+",
-      "projects_label": "交付项目"
-    },
-    "testimonials_tag": "合作伙伴评价",
-    "testimonials_title": "来自全球业主的信赖"
+    }
   },
   "about": {
-    "title": "Hakkımızda",
-    "experience": "20 Yılı Aşkın Waterpark Deneyimi",
+    "experience": "20 Yılı Aşkın Su Parkı Deneyimi",
     "desc": "Polgün, su parkı projelerinde tasarım, mühendislik, üretim ve uygulama süreçlerini tek çatı altında yöneten güçlü bir çözüm ortağıdır. Yirmi yılı aşkın sektör tecrübemiz, yüksek üretim kapasitemiz ve uluslararası proje deneyimimizle her ölçekte projeye güvenilir, yenilikçi ve sürdürülebilir çözümler sunuyoruz.",
     "power_title": "Uluslararası Sahnede Büyüyen Güç",
     "power_desc1": "Polgün, 2002 yılında Muğla-Menteşe’de faaliyete başlamıştır. Bugün Muğla’daki 4 ana üretim merkezi ile birlikte İstanbul ve İspanya ofisleri, 2022 yılında kurulan Antalya fabrikası ve yeni Bursa yatırımıyla faaliyetlerini sürdürmektedir.",
-    "power_desc2": "120.000 m²’lik entegre üretim altyapısı, tam otomatik makine parkuru ve uzman kadrosuyla; çelik konstrüksiyon ve polyester imalatını aynı çatı altında gerçekleştirebilen sektörün öncü firmalarından biridir.",
+    "power_desc2": "120.000 m²’lik entegre üretim altyapısı, tam otomatik makine parkı ve uzman kadrosuyla; çelik konstrüksiyon ve polyester imalatını aynı çatı altında gerçekleştirebilen sektörün öncü firmalarından biridir.",
     "power_desc3": "425 çalışanı ve 30 kişilik Ar-Ge ekibiyle Polgün, tasarımdan üretime kadar tüm süreçleri yöneterek anahtar teslim projeler gerçekleştirmektedir.",
     "arge_title": "Muğla'nın İlk ve Tek Ar-Ge Merkezi",
     "arge_desc1": "Polgün Waterparks olarak Ar-Ge yaklaşımımızın temelinde; güvenli, yenilikçi, sürdürülebilir ve yüksek katma değerli su eğlence teknolojileri geliştirmek yer almaktadır. 2021 yılında Bakanlık onayıyla Ar-Ge Merkezi statüsü kazanan merkezimiz, Muğla'nın ilk ve tek Ar-Ge Merkezi olma niteliğiyle sektörümüzde özgün ürün geliştirme, yerlileştirme ve teknoloji üretme çalışmalarına öncülük etmektedir.",
     "arge_desc2": "Ar-Ge Merkezimizde; araştırmacı, teknisyen ve destek personeli statüsünde görev yapan 30 tam zaman eşdeğer nitelikli Ar-Ge personelimiz ile yeni ürün tasarımı, mühendislik analizleri, prototipleme, test, doğrulama, üretim yöntemi geliştirme ve fikri mülkiyet süreçlerini bütüncül bir yaklaşımla yürütüyoruz.",
-    "arge_desc3": "Navatu, Savanna, Monarch Butterfly ve Eclipse gibi yenilikçi ürün projelerimiz; Polgün'ün tasarım, mühendislik ve üretim gücünü uluslararası pazarda temsil eden önemli Ar-Ge çıktıları arasında yer almaktadır.",
+    "arge_desc3": "Navatu, Savana, Monarch Butterfly ve Eclipse gibi yenilikçi ürün projelerimiz; Polgün'ün tasarım, mühendislik ve üretim gücünü uluslararası pazarda temsil eden önemli Ar-Ge çıktıları arasında yer almaktadır.",
     "misyon": "Misyonumuz",
     "misyon_desc": "Yüksek kaliteli, güvenli, uygun maliyetli ve yenilikçi Ar-Ge projeleri geliştirerek su eğlence sektörüne özgün çözümler kazandırmak.",
     "vizyon": "Vizyonumuz",
@@ -203,14 +137,14 @@
       "status": "Ar-Ge Merkezi Statüsü",
       "status_desc": "Bakanlık onaylı, Muğla'nın ilk ve tek merkezi",
       "projects": "Özgün Ürün Projesi",
-      "projects_desc": "Navatu, Savanna, Eclipse, Monarch Butterfly",
+      "projects_desc": "Navatu, Savana, Eclipse, Monarch Butterfly",
       "countries": "Ülke",
       "countries_desc": "Global proje ve pazar deneyimi"
     },
     "production_title": "Üretim Altyapımız",
-    "production_subtitle": "Tasarımdan üretime, tüm süreçleri tek çatı altında yönetiyoruz.",
+    "production_subtitle": "Tasarımdan üretime tüm süreçleri tek çatı altında yönetiyoruz",
     "production_desc": "Polgün; su parkı ve eğlence sistemleri için geliştirdiği çözümleri, çelik konstrüksiyon, mekanik işleme, kompozit üretim, yüzey uygulamaları ve dijital üretim teknolojilerini bir araya getiren entegre üretim altyapısıyla hayata geçirir.",
-    "production_power": "Üretim Gücümüzü Projelerimize Yansıtıyoruz.",
+    "production_power": "Üretim Gücümüzü Projelerimize Yansıtıyoruz",
     "production_power_desc": "Mühendislik, üretim ve kalite kontrol süreçlerini aynı çatı altında yöneterek; her projeye özel, güvenilir ve yüksek kaliteli çözümler geliştiriyoruz.",
     "btn_projects": "Projelerimizi İnceleyin",
     "production_sections": {
@@ -227,7 +161,7 @@
         "desc": "Polgün, kompozit üretim süreçlerinde kullanılan cam elyafı ve takviye malzemelerini CNC kontrollü otomatik kesim sistemleri ile hassas ölçülerde hazırlar. Dijital kesim verilerine göre çalışan sistem sayesinde farklı ürün geometrilerine uygun parçalar hızlı, tekrarlanabilir ve kontrollü şekilde kesilir. Bu teknoloji; malzeme firesinin azaltılmasına, kesim hassasiyetinin artırılmasına ve üretim hazırlık sürelerinin kısaltılmasına katkı sağlar. Elyaf kesim ve hazırlama sürecinin Polgün bünyesinde yürütülmesi, kompozit üretimde kalite ve proses kontrolünün sürekliliğini destekler."
       },
       "kompozit": {
-        "title": "Son Kontrol & Ürün Koruma",
+        "title": "RTM Hazırlık",
         "desc": "Polgün, su kaydırağı ve su parkı ürünlerinde kullanılan kompozit parçaların üretimini RTM, L-RTM, el yatırma ve püskürtme gibi farklı üretim yöntemleri ile kendi bünyesinde gerçekleştirir. Ürün geometrisine ve performans gereksinimlerine uygun reçine, takviye malzemesi ve katman yapıları kullanılarak dayanıklı ve tekrarlanabilir üretim sağlanır. Üretim sürecinin devamında uygulanan jelkot, yüzey düzeltme, renklendirme, parlatma ve son kat işlemleri ile ürünlerin yüzey kalitesi ve görsel bütünlüğü tamamlanır. Kompozit üretimden yüzey uygulamalarına kadar tüm aşamaların Polgün bünyesinde yürütülmesi, ürün kalitesinin ve proses kontrolünün her aşamada korunmasını sağlar."
       },
       "çelik_işleme": {
@@ -247,7 +181,7 @@
         "desc": "Polgün, çelik konstrüksiyon ve metal parçaların kullanım koşullarına uygun şekilde yüzey hazırlığı, boya ve koruyucu kaplama işlemlerini kendi bünyesinde gerçekleştirir. Uygulanan sistemler, metal yüzeylerin korozyon ve çevresel etkilere karşı korunmasını desteklerken ürünlerin estetik bütünlüğünü de tamamlar. Kontrollü yüzey hazırlığı ve kaplama süreçleri sayesinde farklı iklim ve proje koşullarına uygun, dayanıklı, uzun ömürlü ve yüksek yüzey kalitesine sahip çözümler elde edilir."
       },
       "kalite": {
-        "title": "RTM Hazırlık",
+        "title": "Son Kontrol & Ürün Koruma",
         "desc": "Polgün’de üretimi tamamlanan kompozit parçalar, yüzey kalitesi ve ürün bütünlüğü açısından kontrol edilerek bir sonraki aşamaya hazırlanır. Ürün yüzeylerinin üretim, taşıma ve montaj süreçlerinde korunmasına yönelik uygulamalar kontrollü şekilde gerçekleştirilir. Yüzey kontrolü, koruyucu uygulamalar ve sevkiyata hazırlık süreçlerinin kendi bünyemizde yürütülmesi, ürünlerin üretim tesisinden proje sahasına kadar kalitesinin korunmasına katkı sağlar."
       },
       "paketleme": {
@@ -269,43 +203,19 @@
         "desc": "Ar-Ge ve inovasyon çalışmalarının yürütüldüğü Marmara Teknopark ofisi. Yeni ürün geliştirme ve teknik analiz merkezi."
       }
     },
-    "story_title": "Geleceği Tasarlıyoruz",
-    "hero_stat1": "1985",
-    "hero_stat1_label": "创立年份",
-    "hero_stat2": "70+",
-    "hero_stat2_label": "出口国家与地区",
-    "hero_stat3": "3000+",
-    "hero_stat3_label": "全球竣工项目",
-    "hero_stat4": "100,000 m²",
-    "hero_stat4_label": "综合生产面积",
-    "story_desc1": "1985 年创立于土耳其穆拉，Polgün 从高性能复合材料制造起步，逐步成长为享誉全球的水上乐园设计与建造专家。",
-    "story_desc2": "我们在水动力学仿真、游客安全保障及绿色环保生产方面精益求精，致力于为全球家庭带来安全与欢乐。",
-    "tag": "关于 Polgün",
-    "value1_desc": "坚守全球最严苛的安全标准（EN 1069, ASTM, ISO）。",
-    "value1_title": "安全第一",
-    "value2_desc": "持续研发颠覆性的滑梯几何构型与沉浸式声光电游乐系统。",
-    "value2_title": "科技与创新",
-    "value3_desc": "采用国际顶级原料与尖端 RTM 制造工艺，确保极长使用寿命。",
-    "value3_title": "匠心品质",
-    "value4_desc": "提供从概念设计到终身维护的全程贴心陪伴。",
-    "value4_title": "客户至上",
-    "values_desc": "指引我们在全球每一个项目中追求卓越的核心准则。",
-    "values_title": "核心价值观"
+    "story_title": "Geleceği Tasarlıyoruz"
   },
   "services": {
-    "title": "Hizmetlerimiz",
     "subtitle": "Bütünsel Proje Yönetimi",
-    "desc": "Polgün, su parkı projelerinin her aşamasında yüksek standartlarda ve profesyonel hizmet sunar. Planlamadan tasarıma, mühendislikten kuruluma kadar tüm süreçleri kendi uzman kadrosuyla yürüterek anahtar teslim projeler teslim eder.",
+    "desc": "Polgün, su parkı projelerinin her aşamasında yüksek standartlarda ve profesyonel hizmet sunar. Planlamadan tasarıma, mühendislikten kuruluma kadar tüm süreçleri kendi uzman kadrosuyla yürüterek anahtar teslim projeler gerçekleştirir.",
     "process_tag": "Hizmet Sürecimiz",
     "process_title": "Başından sonuna her adımda yanınızdayız",
     "cta_title": "Hayalinizi birlikte inşa edelim",
     "cta_desc": "Proje büyüklüğü ne olursa olsun, ilk günden son güne kadar yanınızdayız.",
-    "cta_btn": "Teklif Al",
-    "cta_tag": "Hizmetlerimiz",
     "why": {
       "service": {
         "title": "Tam Hizmet",
-        "desc": "Tasarımdan montaja, bakımdan yazılıma her adımda."
+        "desc": "Tasarımdan üretime, montajdan bakıma kadar her adımda."
       },
       "countries": {
         "title": "70+ Ülke",
@@ -316,8 +226,8 @@
         "desc": "Sertifikalı üretim ve kalite süreçleri."
       },
       "lifetime": {
-        "title": "Ömür Boyu",
-        "desc": "Uzun vadeli teknik destek ve yedek parça garantisi."
+        "title": "Uzun Vadeli Destek",
+        "desc": "Satış sonrası teknik destek ve yedek parça temini."
       }
     },
     "steps": {
@@ -347,45 +257,11 @@
         "desc": "Kaydıraklar, çelik konstrüksiyonlar ve ilgili ekipmanlar deneyimli saha ekipleri tarafından veya Polgün teknik gözetimi altında monte edilir. Montaj sonrasında bağlantılar, kayma yüzeyleri, su akışı ve sistem fonksiyonları detaylı olarak kontrol edilir."
       }
     },
-    "sections": {
-      "planlama": {
-        "title": "Planlama",
-        "desc": "Her su parkı projesinin başarısı, doğru planlama ile başlar. Yatırımcının bütçesi, arazi yapısı, hedef kitlesi ve pazar dinamikleri analiz edilerek en uygun yerleşim planı ve konsept tasarlanır."
-      },
-      "tasarim": {
-        "title": "Tasarım",
-        "desc": "Yenilikçi ve özgün tasarımlarla heyecan verici su parkı konseptleri yaratıyoruz. 3D modelleme teknolojileri kullanarak, projenin tamamlandığında nasıl görüneceğini gerçeğe en yakın şekilde sunuyoruz."
-      },
-      "muhendislik": {
-        "title": "Mühendislik",
-        "desc": "Uluslararası standartlara uygun, güvenli ve dayanıklı yapılar tasarlıyoruz. Çelik konstrüksiyon ve GRP (fiberglas) parçaların yapısal analizleri yapılarak, en yüksek güvenlik ve kalite standartları sağlanır."
-      },
-      "montaj": {
-        "title": "Kurulum & Montaj",
-        "desc": "Uzman montaj ekiplerimiz ve şantiye yöneticilerimiz ile projelerin saha kurulumlarını en kısa sürede ve sorunsuz şekilde tamamlıyoruz. İş sağlığı ve güvenliği kurallarına tam uyum sağlıyoruz."
-      },
-      "bakim": {
-        "title": "Bakım & Onarım",
-        "desc": "Su parklarının uzun ömürlü ve güvenli bir şekilde çalışabilmesi için düzenli bakım hizmetleri sunuyoruz. Sezon öncesi kontroller, parça değişimleri ve teknik destek ile kesintisiz eğlenceyi garanti ediyoruz."
-      },
-      "yenileme": {
-        "title": "Yenileme",
-        "desc": "Mevcut su parklarını modern teknolojiler ve trend tasarımlarla yeniliyoruz. Yeni kaydıraklar, çocuk oyun grupları ve temalı ögeler ekleyerek parkların cazibesini yeniden artırıyoruz."
-      }
-    },
     "all": "Tüm Hizmetler"
   },
   "projects": {
-    "title": "Projelerimiz",
-    "hero_title_1": "Global",
     "hero_title_2": "Projelerimiz",
-    "subtitle": "Dünya Çapında Referanslarımız",
     "desc": "Dünyanın 70'ten fazla ülkesinde hayata geçirdiğimiz imza projelerimizi inceleyin.",
-    "filter_all": "Tüm Projeler",
-    "category": "Kategori",
-    "country": "Ülke",
-    "year": "Yıl",
-    "back_to_projects": "Tüm Projelere Geri Dön",
     "portfolio_tag": "Proje Portföyümüz",
     "stats": {
       "completed": "Tamamlanan Proje",
@@ -394,8 +270,7 @@
     },
     "filters": {
       "region": "Bölge",
-      "type": "Tür",
-      "all": "全部"
+      "type": "Tür"
     },
     "types": {
       "outdoor": "Açık Alan Su Parkı",
@@ -404,37 +279,135 @@
       "resort": "Resort Tatil Köyü"
     },
     "cta_tag": "Sonraki Proje",
-    "cta_title": "Projeniz bu listede olsun.",
+    "cta_title": "Projeniz bu listede olsun",
     "cta_desc": "Hayalinizdeki su parkını veya eğlence merkezini tasarlamak için uzman mühendis ve mimar kadromuzla iletişime geçin.",
-    "cta_btn": "Projeyi Başlat"
+    "cta_btn": "Projeyi Başlat",
+    "list_title": "Tamamlanan Projelerimizden Bazıları",
+    "locations": {
+      "girit": "Girit",
+      "hanya": "Hanya",
+      "kefalonya": "Kefalonya",
+      "moravya": "Moravya",
+      "rethymno": "Rethymno",
+      "selangor": "Selangor",
+      "timisoara": "Timișoara",
+      "benidorm": "Benidorm",
+      "tenerife": "Tenerife",
+      "gran_canaria": "Gran Canaria",
+      "mallorca": "Mallorca",
+      "torremolinos": "Torremolinos",
+      "saint_cyprien": "Saint-Cyprien",
+      "torreilles": "Torreilles",
+      "saint_jean_de_monts": "Saint-Jean-de-Monts",
+      "marsa_alam": "Marsa Alam",
+      "hurghada": "Hurghada",
+      "hurgada": "Hurghada",
+      "sharm_el_sheikh": "Sharm El Sheikh",
+      "sarm_el_seyh": "Şarm El-Şeyh",
+      "bigacs": "Bogács",
+      "bogacs": "Bogács",
+      "gyula": "Gyula",
+      "nyiregyhaza": "Nyíregyháza",
+      "sarvar": "Sárvár",
+      "zalakaros": "Zalakaros",
+      "jakovo": "Jakovo",
+      "novi_sad": "Novi Sad",
+      "vrnjacka_banja": "Vrnjačka Banja",
+      "jeddah": "Cidde",
+      "cidde": "Cidde",
+      "riyadh": "Riyad",
+      "doha": "Doha",
+      "seoul": "Seul",
+      "almaty": "Almatı",
+      "tashkent": "Taşkent",
+      "baku": "Bakü",
+      "budva": "Budva",
+      "zakopane": "Zakopane",
+      "senec": "Senec",
+      "chisinau": "Kişinev",
+      "tbilisi": "Tiflis",
+      "kyrenia": "Girne",
+      "oran": "Vahran",
+      "marrakech": "Marakeş",
+      "marakes": "Marakeş",
+      "agadir": "Agadir",
+      "sousse": "Susa",
+      "antalya": "Antalya",
+      "mugla": "Muğla",
+      "izmir": "İzmir",
+      "bodrum": "Bodrum",
+      "fethiye": "Fethiye",
+      "didim": "Didim",
+      "aydin": "Aydın",
+      "asan": "Asan",
+      "bagdat": "Bağdat",
+      "bangalore": "Bangalore",
+      "d_city": "D City",
+      "fafe": "Fafe",
+      "karayipler": "Karayipler",
+      "makadi_bay": "Makadi Bay",
+      "nasiriye": "Nasıriye",
+      "porec": "Poreč",
+      "port_ghalib": "Port Ghalib",
+      "seignosse": "Seignosse",
+      "skikda": "Skikda",
+      "sofya": "Sofya",
+      "soma_bay": "Soma Bay",
+      "sterlitamak": "Sterlitamak",
+      "vendays_montalivet": "Vendays-Montalivet",
+      "volgograd": "Volgograd",
+      "turkiye": "Türkiye",
+      "romanya": "Romanya",
+      "yunanistan": "Yunanistan",
+      "fransa": "Fransa",
+      "malezya": "Malezya",
+      "misir": "Mısır",
+      "macaristan": "Macaristan",
+      "bulgaristan": "Bulgaristan",
+      "sirbistan": "Sırbistan",
+      "katar": "Katar",
+      "vietnam": "Vietnam",
+      "ozbekistan": "Özbekistan",
+      "guney_kore": "Güney Kore",
+      "kuzey_kibris": "Kuzey Kıbrıs",
+      "kazakistan": "Kazakistan",
+      "karadag": "Karadağ",
+      "curacao": "Curaçao",
+      "irak": "Irak",
+      "azerbaycan": "Azerbaycan",
+      "polonya": "Polonya",
+      "slovakya": "Slovakya",
+      "moldova": "Moldova",
+      "gurcistan": "Gürcistan",
+      "cezayir": "Cezayir",
+      "fas": "Fas",
+      "tunus": "Tunus",
+      "ispanya": "İspanya",
+      "suudi_arabistan": "Suudi Arabistan",
+      "portekiz": "Portekiz",
+      "hirvatistan": "Hırvatistan",
+      "rusya": "Rusya",
+      "hindistan": "Hindistan"
+    }
   },
   "products": {
     "title": "Ürünlerimiz",
-    "subtitle": "Yenilikçi ve Güvenli Su Eğlence Sistemleri",
     "desc": "Estetik, heyecan ve en yüksek güvenlik standartlarını bir araya getiren ürün yelpazemizi keşfedin.",
     "slides": {
-      "title": "Su Kaydırakları",
-      "desc": "Hız, heyecan ve adrenalini bir arada sunan, her yaş grubuna uygun açık ve kapalı tüp su kaydıraklarımız."
+      "title": "Su Kaydırakları"
     },
     "tower": {
-      "title": "Splash Tower",
-      "desc": "Çocukların ve ailelerin güvenle vakit geçirebileceği, farklı temalarda tasarlanan interaktif su oyun kuleleri."
+      "title": "Splash Tower"
     },
     "zone": {
-      "title": "Splash Zone",
-      "desc": "Fıskiyeler, su tabancaları ve küçük oyun ögeleriyle çocukların suyla güvenle buluştuğu alanlar."
+      "title": "Splash Zone"
     },
     "categories": {
-      "body_slides": "Vücut Kaydırakları",
       "classic_slides": "Klasik Kaydıraklar",
-      "extreme_slides": "Ekstrem Kaydıraklar",
       "family_slides": "Aile Kaydırakları",
       "fast_slide": "Hızlı Kaydıraklar",
       "jumbo_slides": "Jumbo Kaydıraklar",
-      "kids_slides": "Çocuk Kaydırakları",
-      "racer_slides": "Yarış Kaydırakları",
-      "rafting_slides": "Rafting Kaydırakları",
-      "tube_slides": "Tüp Kaydıraklar"
+      "racer_slides": "Yarış Kaydırakları"
     },
     "specs": {
       "tema": "Tema",
@@ -490,16 +463,16 @@
         "desc": "Big Raft, ortak kullanım için tasarlanmış geniş ve konforlu bir aile botu kaydırağıdır. Geniş kayma yüzeyi sayesinde ailelerin ve arkadaş gruplarının akış, hız ve heyecanı birlikte deneyimlemesine olanak tanır. Yüksek aile çekiciliğine sahip bu kaydırak, eğlenceyi ve sosyal etkileşimi bir araya getiren keyifli bir su parkı deneyimi sunar."
       },
       "family_slide": {
-        "desc": "Family Slide, ailelerin ve grupların birlikte keyifle kullanabilmesi için tasarlanmış çok kişilik botlu bir su kaydırağıdır. Geniş virajları, yumuşak geçişleri ve dört kişiye kadar kullanım imkânı sunan botları sayesinde etkileşimli eğlence, dinamik bir kayış deneyimi ve yüksek kapasiteli su parkı eğlencesi sunar."
+        "desc": "Family Slide, ailelerin ve grupların birlikte keyifle kullanabilmesi için tasarlanmış çok kişilik botlu bir su kaydırağıdır. Geniş virajları, yumuşak geçişleri ve dört kişiye kadar kullanım imkânı sunan botları sayesinde etkileşimli eğlence, dinamik bir kayma deneyimi ve yüksek kapasiteli bir su parkı deneyimi sunar."
       },
       "family_tornado": {
-        "desc": "Family Tornado, ikonik huni (funnel) deneyimini daha büyük ölçekte sunarak daha kalabalık grupların heyecanı birlikte yaşamasına olanak tanır. Geniş huni yapısı ve güçlü salınım hareketi sayesinde yüksek hızlanma, anlık ağırlıksızlık hissi ve dinamik geçişler sunar."
+        "desc": "Family Tornado, ikonik huni (funnel) deneyimini daha büyük ölçekte sunarak daha kalabalık grupların heyecanı birlikte yaşamasına olanak tanır. Geniş huni yapısı ve güçlü salınım hareketi sayesinde yüksek hızlanma, anlık ağırlıksızlık hissi ve dinamik geçişler sunar. Yüksek kapasitesi, etkileyici görsel yapısı ve tekrar binme isteği uyandıran deneyimiyle su parklarının öne çıkan aile tipi kaydıraklarından biridir."
       },
       "mid_hole": {
         "desc": "Mid Hole, geniş ve etkileyici bir sürüş deneyimi sunan kapalı aile tipi bir su kaydırağıdır. Kapalı tüp tasarımı, yolculuk boyunca merak ve heyecan duygusunu artırırken, aileler ve gruplar için eğlenceli, konforlu ve birlikte paylaşılabilen bir kayma deneyimi sunar."
       },
       "ufo_slide": {
-        "desc": "UFO Slide, kendine özgü eliptik formundan ilham alan aile dostu bir botlu su kaydırağıdır. Kapalı tüp yapısı sayesinde dört kişiye kadar kullanıcı için akıcı ve konforlu bir kayma deneyimi sunarken, paylaşılan eğlenceyi yüksek eğlence değeriyle birleştirerek su parklarına dikkat çekici bir aile atraksiyonu kazandırır."
+        "desc": "UFO Slide, uçan dairelerin eliptik formundan ilham alan aile dostu bir botlu su kaydırağıdır. Kapalı tüp yapısı sayesinde dört kişiye kadar kullanıcı için akıcı ve konforlu bir kayma deneyimi sunarken, paylaşılan eğlenceyi yüksek oyun değeriyle birleştirerek su parklarına dikkat çekici bir aile atraksiyonu kazandırır."
       },
       "freefall": {
         "desc": "Freefall, serbest düşüş hissini en yoğun şekilde yaşatmak için tasarlanmış yüksek adrenalinli bir su kaydırağıdır. Neredeyse dikey iniş açısı ve kesintisiz yüksek hızlı parkuru sayesinde kısa ancak son derece etkileyici bir kayma deneyimi sunar. Heyecan arayan kullanıcılar için vazgeçilmez bir su parkı atraksiyonudur."
@@ -514,7 +487,7 @@
         "desc": "Uphill Slide, dalgalı parkuru boyunca ardışık iniş ve çıkışlar sunarak dinamik bir kayma deneyimi yaşatır. Değişen hızlanma ve yavaşlama etkisi, akıcı ve ritmik bir hareket hissi oluşturarak kullanıcılarına uzun süreli heyecan ve yüksek eğlence değeri sunar."
       },
       "kamikaze": {
-        "desc": "Kamikaze, kademeli kayma yüzeyi sayesinde yüksek hız ve yoğun adrenalin sunan klasik bir su kaydırağıdır. Ani hızlanma ve yavaşlama etkileri, hız hissini daha da artırırken akıcı kayma deneyimiyle heyecan arayan kullanıcılar için su parklarının en popüler atraksiyonlarından biridir."
+        "desc": "Kamikaze, kademeli kayma yüzeyi sayesinde yüksek hız ve yoğun adrenalin sunan klasik bir su kaydırağıdır. Ani hızlanma ve yavaşlama etkileri hız hissini daha da artırır; akıcı kayma deneyimiyle Kamikaze, heyecan arayan kullanıcılar için su parklarının en popüler atraksiyonlarından biridir."
       },
       "slip_fly": {
         "desc": "Slip & Fly, Polgün tarafından geliştirilen özgün bir su kaydırağı olup, su yüzeyinin üzerinde sıçrama ve uçuyormuş hissi yaşatacak şekilde tasarlanmıştır. Yüksek hız, etkileyici görsel deneyim ve yoğun adrenalin hissini bir araya getirerek heyecanı bir üst seviyeye taşıyan, su parklarının öne çıkan atraksiyonlarından biridir."
@@ -523,100 +496,87 @@
         "desc": "Babochka, kelebekten ilham alan özgün geometrisini aile tipi botlu kaydırak deneyimiyle birleştirir. Geniş eğimli geçişleri ve kontrollü hızlanma yapısı sayesinde akıcı ve dinamik bir kayma deneyimi sunarken, simetrik ve dikkat çekici tasarımı su parklarına güçlü bir görsel etki ve farklı tema konseptlerine uyarlanabilen özelleştirme imkânı sağlar."
       },
       "boomerango": {
-        "desc": "Boomerango, bumerangın geri dönüş hareketinden ilham alan yüksek adrenalinli bir botlu su kaydırağıdır. Kullanıcılar yüksek hızla iniş yaptıktan sonra neredeyse dik bir duvara tırmanır, anlık ağırlıksızlık hissini yaşar ve ardından kaydırak parkuruna geri dönerek yolculuğuna devam eder."
+        "desc": "Boomerango, bumerangın geri dönüş hareketinden ilham alan yüksek adrenalinli bir botlu su kaydırağıdır. Kullanıcılar yüksek hızla iniş yaptıktan sonra neredeyse dik bir duvara tırmanır, anlık ağırlıksızlık hissini yaşar ve ardından kaydırak parkuruna geri dönerek yolculuğuna devam eder. Dinamik hareket yapısı ve ikonik tasarımıyla, adrenalin odaklı su parklarının en dikkat çekici atraksiyonlarından biridir."
       },
       "canyon_slide": {
         "desc": "Canyon, kompakt ve alan tasarrufu sağlayan tasarımıyla heyecan verici bir botlu su kaydırağı deneyimi sunar. Dinamik parkuru boyunca kullanıcılar yükselme, savrulma ve geri dönüş hissini bir arada yaşarken, sınırlı kurulum alanlarında bile unutulmaz bir kayma deneyimi sunan etkileyici bir atraksiyon oluşturur."
       },
       "crazy_cone": {
-        "desc": "Crazy Cone, kendine özgü konik tasarımı ve akıcı salınım hareketiyle eğlenceli ve enerjik bir kayma deneyimi sunar. Kullanıcılar geniş koni bölümüne geçiş yaptıktan sonra değişen yön hareketleri sayesinde heyecan verici ve sürprizlerle dolu bir yolculuk yaşar."
+        "desc": "Crazy Cone, kendine özgü konik tasarımı ve akıcı salınım hareketiyle eğlenceli ve enerjik bir kayma deneyimi sunar. Kullanıcılar geniş koni bölümüne geçiş yaptıktan sonra değişen yön hareketleri sayesinde heyecan verici ve sürprizlerle dolu bir yolculuk yaşar. Dikkat çekici görünümü ve farklı yerleşim seçeneklerine uyum sağlayan yapısıyla, ailelere ve gençlere yönelik su parkı projeleri için öne çıkan bir atraksiyondur."
       },
       "drone": {
-        "desc": "Drone, ani genişleme etkisi ve etkileyici mekânsal hissiyle kayma deneyimini zenginleştiren, görsel açıdan dikkat çekici bir kaydırak modülüdür. Geniş kubbe formundaki bölüm, kullanıcıya ferah ve etkileyici bir alan hissi yaşattıktan sonra kayma parkuru devam eder."
+        "desc": "Drone, ani genişleme etkisi ve güçlü mekânsal hissiyle kayma deneyimini zenginleştiren, görsel açıdan dikkat çekici bir kaydırak modülüdür. Geniş kubbe formundaki bölüm, kullanıcıya ferah ve geniş bir alan hissi yaşattıktan sonra kayma parkuru devam eder. Görsel etkisi, aydınlatma uygulamalarına uygun yapısı ve farklı kaydırak sistemlerine kolayca entegre edilebilmesi sayesinde su parklarına heyecan ve estetik değer katan yenilikçi bir çözümdür."
       },
       "hill_slide": {
         "desc": "Hill Slide, dik bir inişin ardından etkileyici bir yokuş tırmanışı sunarak yüksek hız ve adrenalin hissi yaşatan botlu bir su kaydırağıdır. Dinamik parkur yapısı, tekrar binme isteği uyandıran sürüş deneyimi ve farklı renk ile desen seçenekleriyle özelleştirilebilen tasarımı sayesinde her su parkına dikkat çekici ve özgün bir atraksiyon kazandırır."
       },
       "hydra_slide": {
-        "desc": "Hydra, yüksek kapasiteyi cesur ve ikonik bir mimari tasarımla bir araya getiren çok şeritli bir yarış kaydırağıdır. Çok başlı özgün yapısı, eş zamanlı yüksek hızlı inişler sunarak rekabet duygusunu ve kullanıcı etkileşimini artırır."
+        "desc": "Hydra, yüksek kapasiteyi cesur ve ikonik bir mimari tasarımla bir araya getiren çok şeritli bir yarış kaydırağıdır. Çok başlı özgün yapısı, eş zamanlı yüksek hızlı inişler sunarak rekabet duygusunu ve kullanıcı etkileşimini artırır. Klasik mat yarış kaydırağı konseptini, su parklarının simge atraksiyonlarından biri hâline getiren etkileyici bir deneyime dönüştürür."
       },
       "magic_tray": {
         "desc": "Magic Tray, akıcı eğimli dönüşler, sürekli yön değişimleri ve kontrollü hızlanma sayesinde dinamik bir botlu kaydırak deneyimi sunar. Tabak (saucer) formundan ilham alan özgün tasarımı, kesintisiz ve ritmik bir kayma hissi oluştururken; aile dostu heyecanı, konforu ve güçlü görsel etkisiyle su parklarına dikkat çekici bir atraksiyon kazandırır."
       },
       "mini_boomerango": {
-        "desc": "Mini Boomerango, bumerang kaydırağının karakteristik ileri–geri hareketini ve heyecanını kompakt bir tasarımla sunar. Daha düşük yüksekliği ve daha az yer kaplayan yapısı sayesinde sınırlı alana sahip projeler, Splash Tower sistemleri ve kompakt su parkları için ideal bir çözümdür."
+        "desc": "Mini Boomerango, bumerang kaydırağının karakteristik ileri–geri hareketini ve heyecanını kompakt bir tasarımla sunar. Daha düşük yüksekliği ve daha az yer kaplayan yapısı sayesinde sınırlı alana sahip projeler, Splash Tower sistemleri ve kompakt su parkları için ideal bir çözümdür. Küçük ölçülerine rağmen büyük bir kayma deneyimi sunarak esnek ve verimli bir atraksiyon alternatifi oluşturur."
       },
       "space_rocket": {
-        "desc": "Space Rocket, fütüristik tasarımı yüksek hızlı kayma deneyimiyle birleştirerek heyecan dolu tematik bir macera sunar. Roketten ilham alan özgün yapısı boyunca kullanıcılar hızlı ve akıcı geçişler yaşarken, güçlü görsel etkisiyle unutulmaz bir kayma deneyimi elde eder."
+        "desc": "Space Rocket, fütüristik tasarımı yüksek hızlı kayma deneyimiyle birleştirerek heyecan dolu tematik bir macera sunar. Roketten ilham alan özgün yapısı boyunca kullanıcılar hızlı ve akıcı geçişler yaşar; güçlü görsel etkisiyle Space Rocket unutulmaz bir kayma deneyimi sunar."
       },
       "super_bowl": {
-        "desc": "Super Bowl, klasik çanak (bowl) kaydırak deneyimini daha uzun dönüş hareketi ve dinamik hızlanma ile yeniden yorumlar. Kullanıcılar, geniş çanak bölümünün içinde birden fazla tur attıktan sonra çıkış parkuruna geçerek yüksek adrenalinli ve görsel açıdan etkileyici bir kayma deneyimi yaşar."
+        "desc": "Super Bowl, klasik çanak (bowl) kaydırak deneyimini daha uzun dönüş hareketi ve dinamik hızlanma ile yeniden yorumlar. Kullanıcılar, geniş çanak bölümünün içinde birden fazla tur attıktan sonra çıkış parkuruna geçerek yüksek adrenalinli ve görsel açıdan etkileyici bir kayma deneyimi yaşar. Esnek tasarım seçenekleri ve yüksek operasyonel verimliliği sayesinde su parkları için öne çıkan, dikkat çekici bir atraksiyondur."
       },
       "space_bowl": {
-        "desc": "Space Bowl, hız, dönüş hareketi ve görsel heyecanı bir araya getiren kompakt ancak etkileyici bir su kaydırağıdır. Kullanıcılar yüksek hızlı kapalı tüp parkurundan çanak bölümüne girer, burada birden fazla tur attıktan sonra heyecan verici son düşüşle kayma deneyimini tamamlar."
+        "desc": "Space Bowl, hız, dönüş hareketi ve görsel heyecanı bir araya getiren kompakt ancak etkileyici bir su kaydırağıdır. Kullanıcılar yüksek hızlı kapalı tüp parkurundan çanak bölümüne girer, burada birden fazla tur attıktan sonra heyecan verici son düşüşle kayma deneyimini tamamlar. İkonik tasarımı, izleyiciler üzerinde bıraktığı güçlü görsel etki ve az alan gerektiren kompakt yapısıyla her su parkına değer katan dikkat çekici bir atraksiyondur."
       },
       "tornado_slide": {
-        "desc": "Tornado, geniş huni (funnel) yapısı ve güçlü salınım hareketiyle yüksek adrenalinli bir botlu su kaydırağı deneyimi sunar. Kullanıcılar huni duvarlarında yüksek noktalara kadar yükseldikten sonra dinamik geçişlerle parkura devam ederek doğal bir girdabın içinde hareket ediyormuş hissini yaşar."
+        "desc": "Tornado, geniş huni (funnel) yapısı ve güçlü salınım hareketiyle yüksek adrenalinli bir botlu su kaydırağı deneyimi sunar. Kullanıcılar huni duvarlarında yüksek noktalara kadar yükseldikten sonra dinamik geçişlerle parkura devam ederek doğal bir girdabın içinde hareket ediyormuş hissini yaşar. Etkileyici tasarımı ve yoğun heyecan sunan sürüş deneyimiyle, su parklarının simge atraksiyonlarından biri olarak öne çıkar."
       },
       "planeta": {
-        "desc": "Planeta, gezegeni andıran yuvarlak formu ve etkileyici kayma profiliyle aile dostu heyecanı dinamik hareketlerle buluşturan ikonik bir su kaydırağıdır. Kullanıcılar akıcı geçişler, geniş dönüşler ve hızlanan spiral hareketler boyunca uzayda yörüngede ilerliyormuş hissini deneyimler."
+        "desc": "Planeta, gezegeni andıran yuvarlak formu ve etkileyici kayma profiliyle aile dostu heyecanı dinamik hareketlerle buluşturan ikonik bir su kaydırağıdır. Kullanıcılar akıcı geçişler, geniş dönüşler ve hızlanan spiral hareketler boyunca uzayda yörüngede ilerliyormuş hissini deneyimler. Heykelsi tasarımı su parkının görsel kimliğini güçlendirirken, her yaştan ziyaretçi için eğlenceyi, hareketi ve tekrar binme isteğini bir araya getiren dengeli ve unutulmaz bir atraksiyon sunar."
       },
       "body_racer": {
-        "desc": "Body Racer, kullanıcıların yan yana yarışabildiği, rekabet odaklı çok şeritli bir vücut kaydırağıdır. Açık veya kapalı tüp seçenekleriyle üretilebilen tasarımı, yarış boyunca kullanıcıların birbirini görebilmesini sağlayarak rekabet heyecanını artırır."
+        "desc": "Body Racer, kullanıcıların yan yana yarışabildiği, rekabet odaklı çok şeritli bir vücut kaydırağıdır. Açık veya kapalı tüp seçenekleriyle üretilebilen tasarımı, yarış boyunca kullanıcıların birbirini görebilmesini sağlayarak rekabet heyecanını artırır. Yüksek hız, eğlence ve etkileşimi bir araya getiren bu atraksiyon, modern su parklarının vazgeçilmez yarış kaydıraklarından biridir."
       },
       "multi_slide": {
         "desc": "Multi Slide, çoklu şerit seçenekleri ve heyecan verici serbest düşüş başlangıcıyla yan yana yarışmanın keyfini sunan çok şeritli bir su kaydırağıdır. Yüksek hız, rekabet dolu eğlence ve yüksek kullanıcı kapasitesini bir araya getirerek su parkları için dinamik, sosyal ve dikkat çekici bir atraksiyon oluşturur."
       },
       "twister_slide": {
-        "desc": "Twister Slide, 2 veya 3 spiral tüpten oluşan, rekabet odaklı çok şeritli bir su kaydırağıdır. Kullanıcılar kapalı spiral parkurlar boyunca yan yana yarışırken, kıvrımlı geçişler ve sürekli yön değişimleri heyecanı artırır."
+        "desc": "Twister Slide, 2 veya 3 spiral tüpten oluşan, rekabet odaklı çok şeritli bir su kaydırağıdır. Kullanıcılar kapalı spiral parkurlar boyunca yan yana yarışırken, kıvrımlı geçişler ve sürekli yön değişimleri heyecanı artırır. Yarışın galibinin bitiş çizgisine kadar belli olmaması ise sürpriz, rekabet ve yüksek eğlence değerini bir araya getirerek unutulmaz bir deneyim sunar."
       },
       "racer_slide": {
-        "desc": "Racer Slide, hız, rekabet ve sosyal etkileşimi bir araya getiren iki şeritli bir yarış kaydırağıdır. Kullanıcılar eş zamanlı parkurlarda yan yana yarışarak eğlenceli ve tekrar binme isteği uyandıran bir deneyim yaşar."
+        "desc": "Racer Slide, hız, rekabet ve sosyal etkileşimi bir araya getiren iki şeritli bir yarış kaydırağıdır. Kullanıcılar eş zamanlı parkurlarda yan yana yarışarak eğlenceli ve tekrar binme isteği uyandıran bir deneyim yaşar. Farklı renk ve desen seçenekleriyle özelleştirilebilen tasarımı sayesinde her su parkına dinamik ve dikkat çekici bir görünüm kazandırır."
       },
       "spider_slide": {
-        "desc": "Spider Slide, sıkı dönüşleri ve keskin virajlarıyla dinamik ve rekabet dolu bir kayma deneyimi sunan çok şeritli bir su kaydırağıdır. Birbirine dolanmış tünel yapısı sayesinde aynı anda dört kullanıcıya kadar yan yana yarışma imkânı sunarak heyecanı ve etkileşimi artırır."
+        "desc": "Spider Slide, sıkı dönüşleri ve keskin virajlarıyla dinamik ve rekabet dolu bir kayma deneyimi sunan çok şeritli bir su kaydırağıdır. Birbirine dolanmış tünel yapısı sayesinde aynı anda dört kullanıcıya kadar yan yana yarışma imkânı sunarak heyecanı ve etkileşimi artırır. Etkileyici mimari tasarımı ve güçlü görsel görünümüyle su parklarının dikkat çeken yarış atraksiyonlarından biridir."
       },
       "aquatube": {
-        "desc": "Aquatube, yüksek hızı etkileyici kapalı tüp deneyimiyle birleştiren klasik bir vücut kaydırağıdır. Aydınlatma efektleri ile şeffaf veya yarı şeffaf bölümlerle zenginleştirilebilen tasarımı, kullanıcılarına görsel açıdan etkileyici bir kayma deneyimi sunar."
+        "desc": "Aquatube, yüksek hızı etkileyici kapalı tüp deneyimiyle birleştiren klasik bir vücut kaydırağıdır. Aydınlatma efektleri ile şeffaf veya yarı şeffaf bölümlerle zenginleştirilebilen tasarımı, kullanıcılarına görsel açıdan etkileyici bir kayma deneyimi sunar. Zamansız tasarımı ve geniş kullanıcı kitlesine hitap eden yapısıyla, su parklarının en popüler ve vazgeçilmez atraksiyonlarından biri olmaya devam etmektedir."
       },
       "black_hole": {
-        "desc": "Black Hole, etkileyici ışık efektleriyle zenginleştirilmiş klasik bir botlu su kaydırağıdır. Kapalı tüp yapısı boyunca sunulan görsel efektler, kayma deneyimini sürükleyici bir maceraya dönüştürür."
+        "desc": "Black Hole, etkileyici ışık efektleriyle zenginleştirilmiş klasik bir botlu su kaydırağıdır. Kapalı tüp yapısı boyunca sunulan görsel efektler, kayma deneyimini sürükleyici bir maceraya dönüştürür. Hızı, atmosferi ve eğlenceyi bir araya getiren yapısıyla, su parklarının en popüler ve zamana meydan okuyan atraksiyonlarından biri olmaya devam etmektedir."
       },
       "compact_slide": {
-        "desc": "Compact Slide, sınırlı alanlar için geliştirilmiş, kolay montaj ve bakım avantajı sunan pratik bir su kaydırağı çözümüdür. Splash Tower sistemlerinde, su parklarında veya bağımsız uygulamalarda kullanılabilen bu model; farklı ölçü, renk ve tasarım seçenekleriyle özelleştirilebilir."
+        "desc": "Compact Slide, sınırlı alanlar için geliştirilmiş, kolay montaj ve bakım avantajı sunan pratik bir su kaydırağı çözümüdür. Splash Tower sistemlerinde, su parklarında veya bağımsız uygulamalarda kullanılabilen bu model; farklı ölçü, renk ve tasarım seçenekleriyle özelleştirilebilir. Esnek yapısı ve verimli alan kullanımı sayesinde her ölçekten projeye uygun, fonksiyonel ve ekonomik bir atraksiyon sunar."
       },
       "rafting_slide": {
-        "desc": "Rafting Slide, dünyanın en başarılı aile tipi botlu kaydıraklarından ilham alınarak tasarlanmış, yüksek kapasiteli bir grup kaydırağıdır. Hız, geniş duvar geçişleri ve kesintisiz yön değişimleri üzerine kurgulanan parkuru sayesinde kullanıcılarına dinamik bir kayma deneyimi sunar."
+        "desc": "Rafting Slide, dünyanın en başarılı aile tipi botlu kaydıraklarından ilham alınarak tasarlanmış, yüksek kapasiteli bir grup kaydırağıdır. Hız, geniş duvar geçişleri ve kesintisiz yön değişimleri üzerine kurgulanan parkuru sayesinde kullanıcılarına dinamik bir kayma deneyimi sunar. Etkileyici inişler, geniş yarıçaplı virajlar ve akıcı parkur geçişleri; aileler ve heyecan arayan kullanıcılar için konfor ile adrenalini dengeli şekilde bir araya getirerek unutulmaz bir su parkı deneyimi oluşturur."
       },
       "wide_slide": {
-        "desc": "Wide Slide, aynı anda üç kullanıcıya kadar birlikte kayma imkânı sunan eğlenceli ve sosyal bir su kaydırağıdır. Geniş kayma yüzeyi sayesinde ailelerin ve arkadaş gruplarının birlikte keyifli bir deneyim yaşamasına olanak tanır."
+        "desc": "Wide Slide, aynı anda üç kullanıcıya kadar birlikte kayma imkânı sunan eğlenceli ve sosyal bir su kaydırağıdır. Geniş kayma yüzeyi sayesinde ailelerin ve arkadaş gruplarının birlikte keyifli bir deneyim yaşamasına olanak tanır. Farklı renk, desen ve ölçü seçenekleriyle özelleştirilebilen yapısı, her su parkına uyum sağlayan esnek ve görsel açıdan dikkat çekici bir atraksiyon sunar."
       },
       "body_slide": {
-        "desc": "Body Slide, canlı renkleri ve RTM teknolojisiyle kullanıcılara akıcı, konforlu ve keyifli bir kayma deneyimi sunan klasik su kaydırağı modellerinden biridir. Esnek ve uyarlanabilir yapısı sayesinde, tek başına bir atraksiyon olarak veya farklı kaydırak kombinasyonlarının bir parçası şeklinde her türlü su parkına kolaylıkla entegre edilebilir."
+        "desc": "Body Slide, canlı renkleri ve RTM teknolojisiyle kullanıcılara akıcı, konforlu ve keyifli bir kayma deneyimi sunan klasik su kaydırağı modellerinden biridir. Esnek ve uyarlanabilir yapısı sayesinde, tek başına bir atraksiyon olarak veya farklı kaydırak kombinasyonlarının bir parçası şeklinde her türlü su parkına kolaylıkla entegre edilebilir. Zamansız tasarımı ve geniş kullanım alanıyla Body Slide, su parkları için vazgeçilmez kaydırak çözümlerinden biridir."
       }
     },
     "catalog_title": "Ürün Kataloğu",
     "request_btn": "Ürün Talebi",
     "download_btn": "Katalog İndir",
     "custom_project_tag": "Özel Proje",
-    "not_found_title": "Aradığınızı bulamadınız mı?",
-    "not_found_desc": "Hayalinizdeki su parkını gerçeğe dönüştürmek için geniş ürün yelpazemizi inceleyin ve projenize en uygun çözümleri birlikte tasarlayalım.",
-    "custom_request_btn": "Özel Çözüm Talep Et",
-    "filters": {
-      "all": "所有产品",
-      "capacity": "接待量",
-      "category": "产品类别",
-      "space_type": "场地类型",
-      "thrill_level": "惊险等级"
-    }
+    "not_found_title": "Aradığınızı bulamadınız mı",
+    "not_found_desc": "Hayalinizdeki su parkını gerçeğe dönüştürmek için bizimle iletişime geçin; projenize en uygun çözümleri birlikte tasarlayalım.",
+    "custom_request_btn": "Özel Çözüm Talep Et"
   },
   "arge": {
-    "title": "Ar-Ge & İnovasyon",
-    "subtitle": "Geleceğin Su Eğlence Teknolojileri",
-    "desc": "Muğla'nın ilk onaylı Ar-Ge merkezi olan Polgün Ar-Ge Merkezi, sektöre yön veren yenilikçi teknolojiler ve ürünler tasarlamaktadır.",
-    "section1_title": "Ar-Ge Yetkinliğimiz",
-    "section1_desc": "Mühendislik yazılımları, akış analizleri ve yeni nesil üretim yöntemleri kullanarak ürünlerimizin performansını ve dayanıklılığını optimize ediyoruz.",
-    "section2_title": "Öne Çıkan Ar-Ge Ürünleri",
     "header_title": "Ar-Ge Merkezi",
     "hero_desc": "Polgün Waterparks olarak Ar-Ge yaklaşımımızın temelinde; güvenli, yenilikçi, sürdürülebilir ve yüksek katma değerli su eğlence teknolojileri geliştirmek yer almaktadır.",
     "p1": "2021 yılında Bakanlık onayıyla Ar-Ge Merkezi statüsü kazanan merkezimiz, Muğla’nın ilk ve tek Ar-Ge Merkezi olma niteliğiyle sektörümüzde özgün ürün geliştirme, yerlileştirme ve teknoloji üretme çalışmalarına öncülük etmektedir.",
@@ -627,14 +587,13 @@
     "continuous_title": "Sürekli Gelişim",
     "p5": "Ar-Ge faaliyetlerimiz yalnızca yeni ürün geliştirme ile sınırlı değildir. Aynı zamanda mevcut ürünlerin performansını artırmak, üretim süreçlerini iyileştirmek, çevresel etkileri azaltmak, malzeme verimliliğini yükseltmek ve uluslararası pazarlarda rekabet gücümüzü artırmak amacıyla sürekli geliştirme çalışmaları yürütüyoruz. Akademik iş birlikleri, bilimsel yayınlar, patent ve tasarım tescili süreçleri ile kurumsal bilgi birikimimizi güçlendiriyor; elde edilen çıktıları sürdürülebilir bir inovasyon kültürüne dönüştürüyoruz.",
     "misyon": "Misyonumuz",
-    "misyon_desc": "Su eğlence sektöründe yüksek kaliteli, güvenli, maliyet etkin ve yenilikçi Ar-Ge projeleri geliştirerek sektöre özgün çözümler kazandırmak; ulusal ve uluslararası pazarda ülkemizi temsil eden öncü ürünler ortaya koymaktır. Ar-Ge süreçlerimizde iş programına sadakat, mühendislik doğrulamaları, standartlara uygunluk ve sürdürülebilir üretim ilkelerini esas alarak sektörümüze nitelikli bilgi, teknoloji ve insan kaynağı kazandırmayı hedefliyoruz.",
+    "misyon_desc": "Su eğlence sektöründe yüksek kaliteli, güvenli, maliyet etkin ve yenilikçi Ar-Ge projeleri geliştirerek sektöre özgün çözümler kazandırmak ve ulusal ve uluslararası pazarda ülkemizi temsil eden öncü ürünler ortaya koymaktır. Ar-Ge süreçlerimizde iş programına sadakat, mühendislik doğrulamaları, standartlara uygunluk ve sürdürülebilir üretim ilkelerini esas alarak sektörümüze nitelikli bilgi, teknoloji ve insan kaynağı kazandırmayı hedefliyoruz.",
     "vizyon": "Vizyonumuz",
     "vizyon_desc": "Polgün Waterparks Ar-Ge Merkezi olarak vizyonumuz; özgün tasarımları, yenilikçi mühendislik çözümleri, güçlü üretim kabiliyeti ve uluslararası standartlara uygun projeleriyle su eğlence teknolojilerine yön veren, global ölçekte lider ve öncü bir Ar-Ge merkezi olmaktır. Kaliteden ödün vermeden geliştirdiğimiz projelerle hem ulusal hem de uluslararası alanda referans gösterilen bir marka olmayı amaçlıyoruz.",
     "projects_title": "Ar-Ge Projelerimiz",
     "navatu_desc": "Doğal dalga deneyimini yeni bir boyuta taşıyan yenilikçi su parkı sistemi.",
     "savana_sub": "Çoklu Kayma Yollu Temalı Su Kaydırağı",
     "savana_desc": "Aynı gövdede dört farklı kayma yolunu bir araya getiren yenilikçi Ar-Ge projesi.",
-    "monarch_desc": "Kelebek kanatlarının estetik formunu su kaydırağı geometrisiyle buluşturan, yüksek hızlı ve çift yönlü kayma deneyimi sunan özel tasarım.",
     "fikri_sinai_tag": "FİKRİ MÜLKİYET",
     "fikri_sinai_title": "Fikrî ve Sınai Mülkiyet Haklarımız",
     "fikri_sinai_desc": "Polgün Ar-Ge Merkezi tarafından geliştirilen teknolojik yenilikler ve tasarımlar, ulusal ve uluslararası tescillerle koruma altına alınmaktadır.",
@@ -652,7 +611,6 @@
     "project_code": "Proje Kodu",
     "work_name": "Eser Adı",
     "scope": "Kapsam",
-    "status": "Durum",
     "app_date": "Başvuru Tarihi",
     "reg_date": "Tescil Tarihi",
     "registered": "Tescilli",
@@ -665,41 +623,15 @@
     "official_record": "Resmî Kayıt",
     "patent_management": "© Polgün Waterparks Patent Yönetimi",
     "project_type": "Ar-Ge Projesi",
-    "center_location": "Ar-Ge Merkezi"
+    "center_location": "Ar-Ge Merkezi",
+    "design_slide": "{{name}} Tasarım {{number}}"
   },
   "career": {
     "title": "Polgün'de Kariyer",
-    "subtitle": "Polgün Ailesine Katılın",
-    "desc": "Sürekli büyüyen, yenilikçi ve dinamik ekibimizde yer alarak uluslararası projelerde birlikte değer üretelim.",
-    "why_join": "Neden Polgün?",
-    "form_title": "Başvuru Formu",
-    "name": "Adınız Soyadınız",
-    "email": "E-posta Adresiniz",
-    "phone": "Telefon Numaranız",
-    "position": "Başvurulan Pozisyon",
-    "cv": "CV / Özgeçmiş Yükle",
-    "message": "Mesajınız",
-    "submit": "Başvuruyu Gönder",
-    "form_success": "Başvurunuz başarıyla alındı. Teşekkür ederiz.",
-    "form_error": "Form gönderilirken bir hata oluştu. Lütfen tekrar deneyin.",
-    "why_pillars": {
-      "projects": "Uluslararası Projeler",
-      "projects_desc": "Dünyanın dört bir yanında heyecan verici projelerde çalışma fırsatı.",
-      "innovation": "Ar-Ge ve İnovasyon",
-      "innovation_desc": "Yenilikçi fikirlerin desteklendiği, gelişime açık bir çalışma ortamı.",
-      "team": "Güçlü Ekip Ruhu",
-      "team_desc": "Uzman ve dinamik ekibimizle birlikte üretimden başarıya uzanan yolculuk.",
-      "growth": "Kariyer ve Gelişim",
-      "growth_desc": "Eğitimler, mentorluk ve terfi imkânlarıyla kariyerinizi birlikte büyütüyoruz.",
-      "environment": "Modern Çalışma Alanı",
-      "environment_desc": "Konforlu, modern ve sosyal imkanlara sahip çalışma ortamı.",
-      "benefits": "Sosyal Haklar",
-      "benefits_desc": "Çalışanlarımızın motivasyonunu ve huzurunu destekleyen sosyal olanaklar."
-    },
     "hero_desc": "Su eğlence sektörüne yön veren projelerde yer almak, üretimden tasarıma, Ar-Ge'den saha uygulamalarına uzanan güçlü bir ekibin parçası olmak için bize katılın.",
     "view_jobs": "Açık Pozisyonları Gör",
     "general_apply": "Genel Başvuru Yap",
-    "why_title": "Neden Polgün?",
+    "why_title": "Neden Polgün",
     "open_positions": "Açık Pozisyonlar",
     "jobs_subtitle": "Sizin için uygun pozisyonları keşfedin.",
     "filters": {
@@ -716,7 +648,7 @@
     "clear_filters": "Filtreleri Temizle",
     "all_jobs_btn": "Tüm Pozisyonları Gör",
     "apply_desc": "Size uygun bir pozisyon yoksa genel başvurunuzu bırakabilir, uygun fırsatlarda sizinle iletişime geçebiliriz.",
-    "success_title": "Başvurunuz Alındı!",
+    "success_title": "Başvurunuz Alındı",
     "success_desc": "Kariyer başvurunuz veritabanımıza kaydedilmiştir. İnsan Kaynakları ekibimiz profilinizi değerlendirerek sizinle iletişime geçecektir.",
     "new_apply_btn": "Yeni Başvuru Yap",
     "form": {
@@ -738,7 +670,9 @@
       "cv_required": "Lütfen CV belgenizi yükleyin.",
       "apply_error": "Başvuru gönderilemedi. Lütfen tekrar deneyiniz.",
       "general_error": "Bir hata oluştu. Lütfen tekrar deneyin.",
-      "apply_note_prefix": "Pozisyon Başvurusu: "
+      "apply_note_prefix": "Sayın Yetkili,\n\n{{title}} pozisyonu için başvuruda bulunmak istiyorum.",
+      "file_hint": "PDF, DOCX (Maks. 10 MB)",
+      "kvkk_suffix": "ni okudum."
     },
     "internship_programs": "Staj ve Yeni Mezun Programları",
     "internships_subtitle": "Geleceğin profesyonellerini yetiştiriyoruz.",
@@ -760,14 +694,14 @@
         "title": "Teknik Okul Stajı",
         "desc": "Meslek lisesi ve teknik okul öğrencileri için staj imkânı."
       },
-      "apply_note_prefix": "Başvuru Notu: ",
+      "apply_note_prefix": "Sayın Yetkili,\n\n{{title}} programı hakkında başvuruda bulunmak istiyorum.",
       "general_note": "Sayın Yetkili,\n\nStaj programı / Yeni mezun gelişim programı hakkında başvuruda bulunmak istiyorum."
     },
     "testimonials_title": "Çalışanlarımız Anlatıyor",
     "testimonials_subtitle": "Polgün'de çalışmak nasıl bir deneyim? Onlardan dinleyin.",
     "process_title": "Başvuru Sürecimiz",
-    "process_subtitle": "Şeffaf ve hızlı bir süreç ile adaylarimizi değerlendiriyoruz.",
-    "cta_title": "Sizin yeteneğiniz, bizim geleceğimiz.",
+    "process_subtitle": "Şeffaf ve hızlı bir süreç ile adaylarımızı değerlendiriyoruz.",
+    "cta_title": "Sizin yeteneğiniz bizim geleceğimiz",
     "cta_desc": "Polgün ailesine katılmak ve geleceğin projelerinde yer almak için bugün başvurunuzu yapın.",
     "depts": {
       "project_management": "Proje Yönetimi",
@@ -779,7 +713,8 @@
     },
     "locations": {
       "field": "Saha (Şantiyeler)",
-      "any": "Fark etmez"
+      "any": "Fark etmez",
+      "technopark": "Marmara Teknopark"
     },
     "why": {
       "intl": {
@@ -825,7 +760,7 @@
         "desc": "Uygun görülen adaylara teklif sunulur."
       },
       "step5": {
-        "title": "Hoş Geldiniz!",
+        "title": "Hoş Geldiniz",
         "desc": "Ekibimize katılımınızla birlikte yolculuğumuz başlar."
       }
     },
@@ -843,33 +778,16 @@
         "role": "Saha Şefi"
       }
     },
-    "internships_title": "实习生与青年人才发展计划",
-    "positions_title": "最新热招职位",
-    "values_title": "为什么选择加入 Polgün？"
+    "prev_testimonial": "Önceki Yorum",
+    "next_testimonial": "Sonraki Yorum"
   },
   "contact": {
     "title": "İletişim",
-    "subtitle": "Bizimle İletişime Geçin",
-    "desc": "Su parkı projeleriniz ve tüm sorularınız için bizimle iletişime geçebilirsiniz.",
-    "form_title": "İletişim Formu",
-    "name": "Adınız Soyadınız",
-    "email": "E-posta Adresiniz",
-    "phone": "Telefon Numaranız",
-    "subject": "Konu",
-    "message": "Mesajınız",
-    "submit": "Gönder",
-    "form_success": "Mesajınız başarıyla gönderildi. En kısa sürede dönüş yapılacaktır.",
-    "office": "Ofisler & Fabrikalar",
-    "address": "Adres",
-    "phone_label": "Telefon",
-    "email_label": "E-posta",
     "offices": {
       "hq": "Merkez",
-      "antalya": "Antalya Ofis",
-      "spain": "İspanya Satış Ofisi",
-      "bursa": "Bursa Fabrika",
+      "antalya": "Antalya Ofisi",
       "hq_address_label": "Merkez Adres",
-      "europe": "Avrupa Ofis"
+      "europe": "Avrupa Ofisi"
     },
     "hero_title": "Sizinle Tanışalım",
     "hero_desc": "Yeni bir su parkı projesi geliştirmek, mevcut tesisinizi yenilemek veya ürünlerimiz hakkında detaylı bilgi almak için uzman ekibimizle iletişime geçebilirsiniz.",
@@ -896,7 +814,10 @@
         "custom_project": "Özel Proje",
         "maintenance": "Bakım & Servis"
       },
-      "submit_error": "发送失败，请稍后重试。"
+      "submit_error": "Mesaj gönderilemedi. Lütfen tekrar deneyin.",
+      "kvkk_link": "Aydınlatma Metni",
+      "name_placeholder": "Ahmet Yılmaz",
+      "email_placeholder": "ornek@sirketiniz.com"
     },
     "info_title": "İletişim Bilgileri",
     "hours_label": "Çalışma Saatleri",
@@ -905,22 +826,11 @@
     "offices_title": "Ofislerimiz"
   },
   "awards": {
-    "title": "Ödüller, Patentler & Sertifikalar",
-    "subtitle": "Ödüller ve Ziyaretler",
+    "title": "Ödüller Patentler & Sertifikalar",
     "desc": "Polgün'ün tasarım, kalite ve Ar-Ge alanındaki küresel başarıları.",
-    "awards_section": "🏆 Ödüllerimiz",
-    "visits_section": "🤝 Kurumsal Ziyaretler",
-    "no_awards": "Henüz yayınlanmış ödül bulunmuyor.",
-    "cta_title": "Yenilikçi Projelerle Geleceği Tasarlıyoruz.",
-    "cta_desc": "Polgün, tasarım ve mühendislik yetkinliğini Ar-Ge çalışmalarıyla birleştirerek su parkı sektörüne değer katan yenilikçi çözümler geliştirmeye devam etmektedir.",
-    "cta_btn": "İletişime Geç",
-    "intellectual_property": "Fikri Mülkiyet",
-    "patents_title": "Tasarım Tescilleri & Patentler",
-    "quality_documents": "Sertifikalar",
-    "quality_title": "Kalite Belgelerimiz",
     "visits": {
       "minister": {
-        "title": "Sanayi ve Teknoloji Bakanımız Sayın Mehmet Fatih Kacır’ı Polgun Waterparks’ta ağırlamanın onurunu yaşadık.",
+        "title": "Sanayi ve Teknoloji Bakanımız Sayın Mehmet Fatih Kacır’ı Polgün Waterparks’ta ağırlamanın onurunu yaşadık",
         "desc": "Muğla Valimiz Sayın İdris Akbıyık, Muğla Milletvekillerimiz Sayın Kadem Mete ve Sayın Yakup Otgöz, Menteşe Kaymakamı Sayın Mehmet Eriş, AK Parti İl Başkanı Sayın Haluk Laçin, MHP İl Başkanı Sayın Burak Demirel ve Kavaklıdere Belediye Başkanı Sayın Mehmet Demir’in eşlik ettiği heyeti fabrikamızda ağırlamaktan gurur duyduk. Heyet, Muğla’daki üretim tesisimizi ziyaret ederek Ar-Ge merkezimizi inceledi.\n\nSektörün küresel liderlerinden biri olarak, inovasyon, kalite ve mükemmeliyete olan bağlılığımızdan büyük gurur duyuyoruz. Ziyaretleri, ileri üretim teknolojileri ve Ar-Ge’nin geleceği şekillendirmedeki önemini bir kez daha göstermiştir. Nazik ziyaretleri, ilgileri ve destekleri için kendilerine içten teşekkürlerimizi sunarız."
       },
       "egekaf": {
@@ -932,10 +842,7 @@
         "desc": "MSKÜ yönetiminin Polgün ziyareti kapsamında; Ar-Ge, üretim ve tasarım faaliyetleri yerinde incelendi. Üniversite-sanayi iş birliği güçlendirildi."
       },
       "title": "Kurumsal Ziyaretler",
-      "dates": {
-        "2023": "2023 年",
-        "2024": "2024 年"
-      }
+      "tag": "Ağırladığımız Misafirler"
     },
     "tesciller": {
       "benelux": "Benelux Tescil Kesinlik Kararı",
@@ -944,7 +851,7 @@
       "egypt": "Mısır Tescil Kesinlik Kararı",
       "greece": "Yunanistan Tescil Kesinlik Kararı",
       "form": "Polgün Başvuru Formu",
-      "fluorescent": "Floresans Işıklandırma Patent Belgesi",
+      "fluorescent": "Floresan Aydınlatma Patent Belgesi",
       "slides": "Su Kaydırağı Tasarım Tescil Onaylı"
     },
     "kalite": {
@@ -958,11 +865,11 @@
       "ts_en_1176": "Çocuk Oyun Alanı Standart Belgesi",
       "ts_en_17232": "Su Oyun Elemanları Standart Belgesi"
     },
-    "patent_title": "Fikri Mülkiyet",
+    "patent_title": "Fikrî Mülkiyet",
     "cert_title": "Sertifikalar",
     "cert_subtitle": "Kalite Belgelerimiz",
     "certificates": "Sertifikalar",
-    "tag": "Kalite & Başarı"
+    "awards_title": "Ödüllerimiz"
   },
   "factories": {
     "title": "Fabrikalarımız",
@@ -980,40 +887,24 @@
       "hungary": "Macaristan",
       "south_korea": "Güney Kore",
       "greece": "Yunanistan",
-      "composite": "Kompozit & RTM Üretim Tesisi",
-      "mold": "Model & CNC Kalıphane",
-      "steel": "Çelik Konstrüksiyon Fabrikası"
-    },
-    "areas": {
-      "composite": "45.000 m²",
-      "mold": "15.000 m²",
-      "steel": "25.000 m²"
+      "switzerland": "İsviçre",
+      "benelux": "Benelux (Belçika, Hollanda, Lüksemburg)"
     }
   },
   "history": {
     "title": "Tarihçemiz",
-    "journey": "Polgün'ün 2002'den Günümüze Yolculuğu",
     "milestones_tag": "Kilometre Taşları",
-    "milestones_title": "Kilometre Taşları",
     "growth_title": "Büyüme Hikayemiz",
     "facilities": "Tesislerimiz",
     "growing_power": "Büyüyen Üretim Gücü",
     "desc": "Yıllar içinde üretim gücümüzü, mühendislik yetkinliğimizi ve global proje deneyimimizi sürekli geliştirerek büyüdük. Attığımız her adım; daha güçlü bir üretim altyapısının, yenilikçi ürünlerin ve bugün 70’ten fazla ülkeye ulaşan Polgün yolculuğunun bir parçası oldu.",
     "desc1": "Polgün, artan kapasite ihtiyacını karşılamak ve üretim kabiliyetlerini ileriye taşımak amacıyla altyapı yatırımlarını aralıksız sürdürmektedir; Muğla'daki mevcut tesislerinde polyester, termoplastik kaplama ve boya süreçleri için yeni üretim alanları oluştururken, Bursa'daki yeni fabrika yatırımıyla birlikte toplam 120.000 m² üretim alanına ulaşarak uluslararası ölçekte büyüyen operasyonel gücünü pekiştirmektedir.",
-    "desc2": "Ar-Ge ve Tasarım yetkinliğini daha da ileriye taşımak amacıyla Marmara Teknokent ofisi başvuru süreci tamamlanarak sözleşme imzalanmış, yapılanma resmiyet kazanmıştır. Bu yapılanma üniversite iş birliklerini güçlendirmeyi hedeflemektedir.",
+    "desc2": "Ar-Ge ve Tasarım yetkinliğini daha da ileriye taşımak amacıyla Marmara Teknopark ofisi için başvuru süreci tamamlanmış, sözleşme imzalanarak ofis resmiyet kazanmıştır. Bu adım, üniversite iş birliklerini güçlendirmeyi hedeflemektedir.",
     "bold_summary": "Bugün Polgün, Türkiye'deki üretim yapılanması ve İspanya'daki satış ofisiyle, uluslararası pazardaki konumunu güçlendirmektedir.",
-    "tag": "Gelişim Yolculuğumuz",
-    "intro": "2002'den bu yana su parkı sektöründe yenilikçi mühendislik ve güvenilir üretim.",
-    "milestones_desc": "Polgün'ün kuruluşundan bugüne küresel başarısının dönüm noktaları.",
-    "cta_title": "Geleceğin Su Parklarını Birlikte Tasarlayalım",
-    "cta_desc": "20 yılı aşkın tecrübemiz ve güçlü mühendislik kadromuzla projelerinize değer katıyoruz.",
-    "cta_btn": "Bize Ulaşın",
     "stats": {
-      "completed": "Tamamlanan Proje",
       "countries": "Ülke",
       "production": "Entegre Üretim",
       "team": "Çalışan",
-      "experience": "Yıllık Tecrübe",
       "projects": "Proje",
       "countries_sub": "Küresel İhracat & Varlık",
       "projects_sub": "Tamamlanan Su Parkı",
@@ -1041,7 +932,6 @@
   },
   "news": {
     "title": "Haberler & Etkinlikler",
-    "subtitle": "Polgün'den Haberler",
     "desc": "Şirketimizdeki güncel gelişmeler, katıldığımız fuarlar ve etkinlikler.",
     "tabs": {
       "articles": "Haberler & Etkinlikler",
@@ -1053,14 +943,6 @@
     "bulletins_desc": "Geçmişten günümüze şirket içi gelişmeleri ve yayınlarımızı derlediğimiz aylık e-bültenlerimiz.",
     "fairs_title": "Katıldığımız Fuarlar",
     "fairs_desc": "Sektörümüzün küresel ölçekteki en önemli buluşma noktalarında Polgün olarak yerimizi alıyoruz.",
-    "fairs": {
-      "iaapa_barcelona_2025": "IAAPA Expo Barcelona 2025",
-      "iaapa_orlando_2025": "IAAPA Expo Orlando 2025",
-      "iaapa_orlando_2024": "IAAPA Expo Orlando 2024",
-      "deal_dubai_2026": "Deal Dubai 2026",
-      "tashkent_2026": "Tashkent Özbekistan 2026",
-      "piscina_barcelona_2025": "Piscina & Wellness Barcelona 2025"
-    },
     "open_flipbook": "Bülteni Oku",
     "flipbook_loading": "Bülten Yükleniyor...",
     "flipbook_error": "Bülten yüklenemedi. Lütfen tekrar deneyin.",
@@ -1083,102 +965,56 @@
       "november": "Kasım",
       "december": "Aralık"
     },
-    "articles": {
-      "gunes_bakim_evi": {
-        "title": "Özel Güneş Gündüz Bakımevi Açılışı",
-        "desc": "Sosyal sorumluluk projelerine yönelik desteklerimiz aralıksız sürmektedir. Menteşe Belediyesi tarafından hayata geçirilen Özel Güneş Gündüz Bakımevi’nin açılışı, Genel Müdürümüz Sayın İbrahim Güngör’ün katılımıyla gerçekleştirildi. Polgün Ailesi olarak bugün de minik kalplere dokunmanın mutluluğunu yaşıyoruz."
-      },
-      "aile_sosyal_hizmetler": {
-        "title": "Aile ve Sosyal Hizmetler İl Müdürlüğü İş Birliği",
-        "desc": "Muğla Aile ve Sosyal Hizmetler İl Müdürlüğü’nün yürüttüğü anlamlı bir çalışmaya Polgün ailesi olarak destek vermekten mutluluk duyuyoruz. Sayın Valimiz İdris Akbıyık’ın vesilesiyle hayata geçen bu iş birliği sayesinde, çocuklar için daha sıcak ve güvenli yaşam alanları oluşturuluyor. Toplumsal dayanışmanın gücüne inanıyor, geleceğe umutla bakan her adımda bu tür katkıların önemini benimsiyoruz."
-      },
-      "iftar_programi": {
-        "title": "Geleneksel İftar Davetimiz",
-        "desc": "Muğla Valimiz Sayın İdris Akbıyık, Menteşe Kaymakamı Sayın Mehmet Eriş, MSKÜ Rektörü Sayın Prof. Dr. Turhan Kaçar, Yatağan Belediye Başkanı Sayın Mesut Günay, 27. Dönem Muğla Milletvekili Sayın Yelda Erol, TÜBİTAK MARTEK Başkanı ve 24. Dönem Milletvekili Sayın Mehmet Ali Okur, Muğla’nın değerli iş insanları, siyasi parti temsilcileri ve büyük Polgün ailemizin onurlandırdığı geleneksel iftar davetimiz, 14 Mart 2026 tarihinde Türkan Saylan Eğitim ve Kültür Merkezi’nde 600’den fazla davetlinin katılımıyla gerçekleşti. Polgün Waterparks & Attractions Yönetim Kurulu Başkanı İbrahim Güngör ve kıymetli ailesi tarafından düzenlenen iftar programında, Türk Tasavvuf Müziği sanatçısı Abdurrahman Önül’ün seslendirdiği ilahiler eşliğinde, Enes Çiftçi’nin sunumuyla gerçekleştirilen programda semazen gösterisi büyük ilgi gördü. Katılım sağlayan ve davetimizi onurlandıran tüm ailemize teşekkürlerimizi sunuyoruz."
-      },
-      "msku_kariyer_fuari": {
-        "title": "MSKÜ Kariyer Fuarı",
-        "desc": "Polgün Waterparks & Attractions Yönetim Kurulu Başkanı Sayın İbrahim Güngör, Muğla Sıtkı Koçman Üniversitesi’nde düzenlenen Kariyer Fuarı’nda geleceğin profesyonannyaşarıyla bir araya geldi. Genç yeteneklerle sektördeki bilgi birikimini ve tecrübelerini paylaşan İbrahim Güngör, su parkı ve eğlence sektörünün dinamikleri, yenilikçi projelerimiz ve kariyer planlaması üzerine öğrencilerle ilham verici bir sohbet gerçekleştirdi. Sektörümüzün geleceğini şekillendirecek olan gençlerin heyecanı ve vizyonu bizlere bir kez daha büyük bir motivasyon kaynağı oldu. Polgün ailesi olarak, genç yeteneklerin yanında olmaktan ve kariyer yolculuklarında onlara destek vermekten büyük gurur duyuyoruz!"
-      }
-    },
-    "all_news": "全部新闻",
-    "bulletin": "电子期刊",
-    "flipbook_open": "在线阅读期刊画册",
-    "read_more": "阅读全文"
-  },
-  "team": {
-    "title": "Ekibimiz",
-    "subtitle": "Polgün Ailesi",
-    "desc": "Projelerimize değer katan, alanında uzman yönetim ve teknik kadromuz.",
-    "board": "Yönetim Kurulu",
-    "technical_staff": "Teknik Kadro",
-    "departments": {
-      "all": "所有部门",
-      "design": "设计与建筑部",
-      "engineering": "工程与研发部",
-      "management": "管理决策层",
-      "production": "生产与质检部",
-      "sales": "全球商务与客户成功部"
-    },
-    "tag": "核心团队"
+    "pdf_badge": "PDF · GÜVENLİ"
   },
   "splashtower": {
-    "title": "Splash Tower",
-    "subtitle": "Eğlenceli Su Oyun Kuleleri",
-    "desc": "Çocukların suyla buluştuğu, güvenli ve tematik interaktif macera alanları.",
     "themes": {
       "pirate": {
-        "name": "Korsan Teması",
+        "name": "Pirate Theme",
         "location": "Antalya, Türkiye",
-        "desc": "Polgün'ün imza teması olan ve pek çok su parkı tarafından tercih edilen Korsan Tema çocukların korsanlarla dolu açık denizlerde yelken açmaları ve bu hayal dünyasında eğlenmeleri için tasarlanmıştır. Her boyutta ve istenen her renk seçeneğinde tamamen özelleştirilebilen Korsan Tema'da dev papağanlar, ikonik köpekbalığı, interaktif su oyunları, palmiye ağaçları ve korsan kafalı dev bir su kovası bulunuyor. Minik misafirlerin eğlendiği kadar yetişkinlerin de eğlendiğini gördüğünüzde su parkınız için Polgün Korsan Tema'sını tercih etmeniz kaçınılmaz olacaktır."
+        "desc": "Polgün'ün imza teması olan ve pek çok su parkı tarafından tercih edilen Korsan Tema, çocukların korsanlarla dolu açık denizlerde yelken açmaları ve bu hayal dünyasında eğlenmeleri için tasarlanmıştır. Her boyutta ve istenen her renk seçeneğinde tamamen özelleştirilebilen Korsan Tema'da dev papağanlar, ikonik köpekbalığı, interaktif su oyunları, palmiye ağaçları ve korsan kafalı dev bir su kovası bulunuyor. Minik misafirlerin eğlendiği kadar yetişkinlerin de eğlendiğini gördüğünüzde su parkınız için Polgün Korsan Tema'sını tercih etmeniz kaçınılmaz olacaktır."
       },
       "jungle": {
-        "name": "Orman Teması",
+        "name": "Jungle Theme",
         "location": "Türkiye",
         "desc": "Tropikal yağmur ormanlarının güzelliğinden, enerjisinden ve gizeminden ilham alan temalı bir su oyun alanı olan Polgün Jungle Splash Tower ile vahşi doğaya adım atın. Fil, papağan, baykuş, sincap ve dev ağaçlar gibi hayal gücünü harekete geçiren orman karakterleriyle hayat bulan bu tema; çocukların keşfedebileceği, oyun oynayabileceği ve hayal güçlerini özgürce kullanabileceği heyecan verici bir ortam yaratıyor. Doğadan ilham alan detaylar, interaktif su özellikleri ve macera dolu dekoratif unsurlar, oyun alanını canlı bir orman yolculuğuna dönüştürüyor. Toprak tonları, ahşap görünümlü yüzeyler ve zengin doğa temalı grafiklerle tasarlanan Jungle Splash Tower; su parkları, tatil köyleri ve aile eğlence merkezleri için özgün bir görsel kimlik sunuyor. Boyut, yerleşim düzeni, renk paleti ve tematik detaylar açısından tamamen özelleştirilebilir yapısıyla, her projenin konseptine ve kapasite ihtiyaçlarına göre uyarlanabiliyor."
       },
       "custom": {
-        "name": "Özel Tasarımlar",
+        "name": "Custom Theme",
         "location": "Türkiye",
-        "desc": "Polgün'de her proje, eşsiz bir hikayeye dönüştürülebilir. Özel Tema hizmetimiz; yaratıcı tasarımı, kavramsal geliştirmeyi ve özenle seçilmiş renk paletlerini bir araya getirerek, her bir mekanın kimliğini ve vizyonunu yansıtan su oyun alanları yaratır. Onlarca yıllık sektör deneyimi, şirket içi Ar-Ge ekibi ve gelişmiş CAD tasarım yetkinlikleriyle desteklenen tasarımcılarımız, her projenin gereksinimlerine özel özgün konseptler geliştirir. İlk fikirden nihai temalı eğlence alanına kadar her ayrıntı, ziyaretçiler için ilgi çekici, görsel açıdan etkileyici ve unutulmaz bir deneyim sunmak üzere titizlikle ele alınır. İster doğadan, fantastik dünyalardan veya maceradan ilham alsın, isterse tamamen özgün bir konseptten yola çıksın; Polgün; su parkları, tatil köyleri, oteller ve aile eğlence merkezleri için tamamen kişiselleştirilmiş tematik çözümler üretir."
+        "desc": "Polgün'de her proje, eşsiz bir hikayeye dönüştürülebilir. Özel Tema hizmetimiz; yaratıcı tasarımı, kavramsal geliştirmeyi ve özenle seçilmiş renk paletlerini bir araya getirerek, her bir mekanın kimliğini ve vizyonunu yansıtan su oyun alanları yaratır. Onlarca yıllık sektör deneyimi, şirket içi Ar-Ge ekibi ve gelişmiş CAD tasarım yetkinlikleriyle desteklenen tasarımcılarımız, her projenin gereksinimlerine özel özgün konseptler geliştirir. İlk fikirden nihai temalı eğlence alanına kadar her ayrıntı, ziyaretçiler için ilgi çekici, görsel açıdan etkileyici ve unutulmaz bir deneyim sunmak üzere titizlikle ele alınır. Konsept ister doğadan, fantastik dünyalardan veya maceradan ilham alsın, ister tamamen özgün bir fikirden yola çıksın; Polgün su parkları, tatil köyleri, oteller ve aile eğlence merkezleri için tamamen kişiselleştirilmiş tematik çözümler üretir."
       },
       "underwater": {
         "name": "Underwater Theme",
         "location": "Antalya, Türkiye",
-        "desc": "Okyanuslar, denizler ve su altı dünyası çocuklar için her zaman gizemli, heyecan verici ve büyülü bir dünya olmuştur."
+        "desc": "Okyanuslar, denizler ve su altı dünyası çocuklar için her zaman gizemli, heyecan verici ve büyülü bir dünya olmuştur. Sualtı dünyasında keşfedilmeyi bekleyen farklı türler ve rengarenk mercanlardan yola çıkılarak Polgün Sualtı Teması ile tasarlanan su parkı, çocukların hayal gücünü destekleyen, heyecanlandıran ve eğlenmelerini sağlayan renkli bir ortamdır. Su parkında kullanılan tüm renkler su altı dünyasında bulunan canlı türlerinden ve mercan renklerinden esinlenmiştir."
       },
       "candy": {
         "name": "Candy Theme",
         "location": "Türkiye",
-        "desc": "Şeker ve tatlı dünyasından ilham alan Candy Theme, canlı renkler ve eğlenceli tasarımıyla su parklarına neşe katıyor."
+        "desc": "Şeker ve tatlı dünyasından ilham alan Candy Theme, canlı renkler ve eğlenceli tasarımıyla su parklarına neşe katıyor. Çocukların hayal gücünü besleyen renk paleti ve özgün animasyon ürünleriyle Candy Theme, su parkınıza farklı bir kimlik kazandırır. Pembe, sarı ve pastel tonların buluştuğu bu tematik yapı, küçük misafirlerin unutamayacakları anlar yaşamasını sağlar."
       },
       "carnaval": {
         "name": "Carnaval Theme",
         "location": "Türkiye",
-        "desc": "Çocukların hayal gücünü harekete geçirmek ve unutulmaz aile anları yaratmak için tasarlanmış canlı bir su oyun alanı olan Polgün Carnival Splash Tower ile karnavalın neşeli ruhunu hayata geçirin."
+        "desc": "Çocukların hayal gücünü harekete geçirmek ve unutulmaz aile anları yaratmak için tasarlanmış canlı bir su oyun alanı olan Polgün Carnival Splash Tower ile karnavalın neşeli ruhunu hayata geçirin. Şenlikli bir panayırın büyülü atmosferinden ilham alan Karnaval Teması; renkli balonlar, şekerlemeleri andıran detaylar, devasa lolipoplar ve oyun alanını rüya gibi bir kutlama ortamına dönüştüren eğlenceli çadır tarzı dekorasyonlar içerir. Etkileşimli su unsurları ve canlı tematik öğeler, çocukları keşfetmeye, oynamaya ve sürükleyici bir su macerasının tadını çıkarmaya teşvik eder.Göz alıcı görselliği ve neşeli karakteriyle Carnival Splash Tower; tatil köyleri, oteller, su parkları ve aile eğlence merkezleri için büyüleyici bir odak noktası haline gelir. Boyut, yerleşim ve renk açısından tamamen özelleştirilebilir yapısıyla, her projenin kendine özgü konseptine ve kapasite ihtiyaçlarına göre uyarlanabilir."
       },
       "jurassic": {
         "name": "Jurassic Theme",
         "location": "Türkiye",
-        "desc": "Merak, heyecan ve macera duygularını harekete geçirmek üzere tasarlanan temalı bir su oyun alanı olan Polgün Jurassic Splash Tower ile tarih öncesi dünyayı canlandırın."
+        "desc": "Merak, heyecan ve macera duygularını harekete geçirmek üzere tasarlanan temalı bir su oyun alanı olan Polgün Jurassic Splash Tower ile tarih öncesi dünyayı canlandırın. Dinozorların büyüleyici çağından ilham alan Jurassic teması; Apatosaurus figürleri, dinozor yumurtaları, vahşi doğa bitkileri ve sevimli yavru T-Rex karakterleri gibi etkileyici unsurları, Mezozoik Çağ'ı anımsatan bir atmosferde bir araya getiriyor. Bu yaratıcı detaylar, çocukların tarih öncesi biyoçeşitlilikten ilham alan bir dünyayı keşfederken hareketli su oyunlarının keyfini çıkarabilecekleri ilgi çekici bir ortam yaratıyor. Macera dolu görselleri interaktif su özellikleriyle birleştiren Jurassic Splash Tower; su parkları, tatil köyleri ve aile eğlence merkezleri için büyüleyici bir odak noktası haline geliyor. Boyut, yerleşim düzeni, renk paleti ve tematik bileşenler açısından tamamen özelleştirilebilir yapısıyla, her projenin konseptine ve kapasite ihtiyaçlarına göre uyarlanabiliyor."
       },
       "galaxy": {
         "name": "Galaxy Theme",
         "location": "Türkiye",
-        "desc": "Çocukları evrenin harikaları arasında heyecan verici bir yolculuğa çıkarmak için tasarlanmış temalı bir su oyun alanı olan Polgün Galaxy Splash Tower ile kalkışa hazır olun."
-      },
-      "castle": {
-        "name": "Kale Teması",
-        "desc": "Masalsı kuleler, asma köprüler ve temalı kaydıraklarla dolu su krallığı."
+        "desc": "Çocukları evrenin harikaları arasında heyecan verici bir yolculuğa çıkarmak için tasarlanmış temalı bir su oyun alanı olan Polgün Galaxy Splash Tower ile kalkışa hazır olun. Uzayın gizeminden ilham alan Galaxy teması; roketler, gezegenler, uzaylılar ve kozmik esintili animasyonlar gibi hayal gücünü harekete geçiren unsurları çarpıcı sanatsal detaylarla bir araya getiriyor. İnteraktif su özellikleri ve macera dolu tematik bileşenler; çocukları oynamaya, kaymaya ve keşfetmeye teşvik ederken, aynı zamanda hayal güçlerini ve bilinmeyene dair meraklarını canlandırıyor. Dinamik konsepti ve uzaydan ilham alan, görsel açıdan büyüleyici tasarımıyla Galaxy Splash Tower; su parkları, tatil köyleri ve aile eğlence merkezleri için unutulmaz bir cazibe noktası oluşturuyor. Boyut, yerleşim düzeni, renk paleti ve tematik detaylar açısından tamamen özelleştirilebilir yapısıyla, her projenin konseptine ve kapasite ihtiyaçlarına uyarlanabiliyor."
       }
     },
     "hero_subtitle": "Farklı temalar ile tasarlanmış su kaydırakları ve eğlence alanları",
     "theme_categories": "Tema Kategorileri"
   },
   "splashzone": {
-    "title": "Splash Zone",
-    "subtitle": "Güvenli Çocuk Su Oyun Alanları",
-    "desc": "Fıskiyeli oyun ögeleri, su tabancaları ve dökülen kovalarla çocukların gözde eğlence noktaları."
+    "desc": "Fıskiyeli oyun ögeleri, su tabancaları ve su döken kovalarla çocukların gözde eğlence noktaları."
   },
   "regions": {
     "asia": "Asya",
@@ -1197,7 +1033,6 @@
     },
     "card": {
       "registered": "Tescilli",
-      "project": "Proje Adı",
       "independent_label": "Bağımsız Tasarım",
       "design_name": "Hak / Çalışma Adı",
       "registration_no": "Tescil No",
@@ -1205,14 +1040,18 @@
       "scope": "Kapsam",
       "app_date": "Başvuru Tarihi",
       "reg_date": "Tescil Tarihi",
-      "inspect": "Detayları İncele",
       "national": "Ulusal"
+    },
+    "work_names": {
+      "water_slide": "Su Kaydırağı",
+      "waterpark_layout": "Su Parkı Yerleşim Dizaynı",
+      "waterpark_elements_set": "Su Parkı Elemanları Seti",
+      "water_slide_accessory": "Su Kaydırağı Aksesuarı"
     }
   },
   "publicationsPage": {
     "title": "Akademik Yayınlarımız",
-    "desc": "Polgün'ün akademik, teknik ve sektörel yayın çalışmaları; yeni nesil mühendislik çözümleri ve sektörel literatüre katkı sağlamaktadır.",
-    "search_placeholder": "Yayın adı, proje adı veya proje kodu ile ara...",
+    "desc": "Polgün'ün akademik, teknik ve sektörel yayın çalışmaları; yeni nesil mühendislik çözümlerine ve sektörel literatüre katkı sağlamaktadır.",
     "filters": {
       "all": "Tümü",
       "national": "Ulusal",
@@ -1224,33 +1063,18 @@
     },
     "card": {
       "published": "Yayımlandı",
-      "preparing": "Hazırlanıyor",
-      "submitted": "Gönderildi",
-      "accepted": "Kabul Edildi",
-      "project_code": "Proje Kodu",
-      "project_name": "Proje Adı",
       "type": "Yayın Türü",
       "scope": "Kapsam",
-      "isbn": "ISBN",
-      "issn": "ISSN",
-      "e_isbn": "E-ISBN",
-      "e_issn": "E-ISSN",
-      "online_issn": "Online ISSN",
       "pub_date": "Yayın Tarihi",
       "inspect": "Yayını İncele",
       "view_proceedings": "Bildiriyi Görüntüle",
       "open_doc": "Dokümanı Aç",
-      "details": "Detaylı Bilgi",
-      "authors": "Yazarlar:",
-      "project": "Proje / Konu",
-      "international": "Uluslararası",
-      "national": "Ulusal",
-      "download": "PDF İndir"
+      "authors": "Yazarlar:"
     }
   },
   "patentsPage": {
     "title": "Patentlerimiz",
-    "desc": "Polgün'ün sektöre öncülük eden ve teknolojik inovasyonu koruma altına alan resmi patent ve buluş kayıtları.",
+    "desc": "Polgün'ün sektöre öncülük eden ve teknolojik inovasyonu koruma altına alan resmî patent ve buluş kayıtları.",
     "filters": {
       "all": "Tümü",
       "registered": "Tescilli",
@@ -1259,8 +1083,6 @@
       "international": "Uluslararası"
     },
     "card": {
-      "project": "Proje Adı",
-      "patent_name": "Patent / Buluş Adı",
       "scope": "Kapsam",
       "app_no": "Başvuru No",
       "pct_no": "PCT No",
@@ -1293,7 +1115,7 @@
     }
   },
   "flipbook": {
-    "single_page": "Büyük Boyut",
+    "single_page": "Tek Sayfa",
     "dual_page": "Çift Sayfa",
     "single_page_title": "Tek Sayfa (Büyük Okuma)",
     "dual_page_title": "Çift Sayfa (Dergi Görünümü)",
@@ -1306,26 +1128,21 @@
   },
   "knowledgeCenter": {
     "title": "Bilgi Merkezi",
-    "desc": "Polgün Waterparks & Attractions mühendislik, tasarım, üretim teknolojileri ve su parkı yönetimi konusundaki zengin teknik makalelerini keşfedin.",
+    "desc": "Polgün Waterparks & Attractions mühendislik, tasarım, üretim teknolojileri ve su parkı yönetimi konularındaki zengin teknik makalelerini keşfedin.",
     "read_more": "Devamını Oku",
     "faqs_title": "Sık Sorulan Sorular",
     "related_title": "İlgili Yazılar",
     "not_found_desc": "Aradığınız makale veya içerik Bilgi Merkezi'mizde mevcut değil.",
     "back_to_list": "Bilgi Merkezi'ne Dön"
   },
-  "factoriesPage": {
-    "desc": "Dünya standartlarında su kaydırakları ve su parkı ekipmanlarının üretildiği modern entegre tesislerimizi keşfedin.",
-    "subtitle": "Modern ve Sürdürülebilir Üretim Tesisleri",
-    "title": "Üretim Tesislerimiz"
-  },
   "notFound": {
     "tag": "404 · Sayfa Bulunamadı",
-    "hero_title": "Rotadan Çıktınız!",
+    "hero_title": "Rotadan Çıktınız",
     "hero_desc": "Aradığınız sayfa kaldırılmış, adı değiştirilmiş veya sularımıza kapılıp gitmiş olabilir. Sizi ana rotaya güvenle geri döndürelim.",
     "home_btn": "Ana Sayfaya Dön",
     "back_btn": "Geri Dön",
     "badge": "Su Parkuru Rotası Kayıp",
-    "heading": "Bu Kaydırağın Sonu Açık Sulara Çıkıyor!",
+    "heading": "Bu Kaydırağın Sonu Açık Sulara Çıkıyor",
     "message": "Aradığınız bağlantı taşınmış, güncellenmiş veya yanlış yazılmış olabilir. Aşağıdaki popüler bölümlerden yolculuğunuza devam edebilirsiniz.",
     "card1_tag": "Ürünlerimiz",
     "card1_title": "Su Kaydırakları & Splash Sistemleri",
@@ -1343,6 +1160,6 @@
     "card4_title": "Bize Ulaşın",
     "card4_desc": "Yeni bir su parkı yatırımı veya ürün talebi için uzman mühendis ve proje ekibimizle iletişime geçin.",
     "card4_cta": "İletişime Geç",
-    "quick_links": "Hızlı Erişim:"
+    "quick_links": "Hızlı Erişim"
   }
 }

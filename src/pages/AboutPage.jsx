@@ -138,10 +138,10 @@ const BRANDS_DATA = [
   },
   {
     id: 10,
-    name: 'WIPO Madrid – Benelüks',
+    name: 'WIPO Madrid – Benelux',
     appNo: '2023-GE-613330',
     scope: 'international',
-    country: 'Benelüks',
+    country: 'Benelux',
     status: 'registered',
     appDate: '19.09.2023',
     regDate: '19.09.2023',
@@ -265,7 +265,7 @@ export default function AboutPage() {
   ]
 
   const tesciller = [
-    { title: t('awards.tesciller.benelux'), country: t('factories.names.france', { defaultValue: 'Benelux' }), file: '/documents/tesciller/Benelux-Tescil.pdf' },
+    { title: t('awards.tesciller.benelux'), country: t('factories.names.benelux', { defaultValue: 'Benelux' }), file: '/documents/tesciller/Benelux-Tescil.pdf' },
     { title: t('awards.tesciller.france'), country: t('factories.names.france'), file: '/documents/tesciller/Fransa-Tescil.pdf' },
     { title: t('awards.tesciller.spain'), country: t('factories.names.spain'), file: '/documents/tesciller/Ispanya-Tescil.pdf' },
     { title: t('awards.tesciller.egypt'), country: t('factories.names.egypt'), file: '/documents/tesciller/Misir-Tescil.pdf' },
@@ -588,12 +588,11 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-6 max-w-[var(--layout-max)] lg:px-12">
           <div className="text-center mb-20">
             <p className="text-xs font-bold tracking-[0.25em] uppercase mb-4" style={{ color: 'var(--th-polgun-blue)' }}>{t('awards.title')}</p>
-            <h2 className="text-4xl font-black" style={{ color: 'var(--th-text)' }}>{t('awards.title')}</h2>
+            <h2 className="text-4xl font-black" style={{ color: 'var(--th-text)' }}>{t('awards.awards_title', { defaultValue: 'Ödüllerimiz' })}</h2>
           </div>
 
           {/* Ödüller */}
           <div className="mb-20">
-            <h3 className="text-xl font-black mb-10" style={{ color: 'var(--th-text)' }}>🏆 {t('awards.title')}</h3>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {liveAwards.length === 0 && (
                 <p className="sm:col-span-2 lg:col-span-3 text-center text-sm" style={{ color: 'var(--th-text-muted)' }}>
@@ -620,7 +619,10 @@ export default function AboutPage() {
 
           {/* Ziyaretler */}
           <div>
-            <h3 className="text-xl font-black mb-10" style={{ color: 'var(--th-text)' }}>🤝 {t('awards.visits.title', { defaultValue: 'Kurumsal Ziyaretler' })}</h3>
+            <div className="text-center mb-20">
+              <p className="text-xs font-bold tracking-[0.25em] uppercase mb-4" style={{ color: 'var(--th-polgun-blue)' }}>{t('awards.visits.tag', { defaultValue: 'Ağırladığımız Misafirler' })}</p>
+              <h2 className="text-4xl font-black" style={{ color: 'var(--th-text)' }}>{t('awards.visits.title', { defaultValue: 'Kurumsal Ziyaretler' })}</h2>
+            </div>
             <div className="grid sm:grid-cols-2 gap-6">
               {visits.map((visit, i) => (
                 <div key={i} className="rounded-2xl overflow-hidden group" style={{ backgroundColor: 'var(--th-surface)', border: '1px solid color-mix(in srgb, var(--th-border) 12%, transparent)', boxShadow: '0 4px 24px rgba(0,0,0,0.06)' }}>

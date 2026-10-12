@@ -1,13 +1,6 @@
 // Comprehensive Multilingual Translations for Polgün Knowledge Center Articles
 export const BLOG_TRANSLATIONS = {
   1: {
-    tr: {
-      title: "Su Kaydırağı Çeşitleri",
-      description: "Su kaydırağı çeşitlerini, kullanım alanlarını ve doğru ürün seçimi kriterlerini detaylı olarak inceleyin.",
-      seoTitle: "Su Kaydırağı Çeşitleri | Ticari Su Parkları İçin Kapsamlı Rehber",
-      metaDesc: "Su kaydırağı çeşitlerini, kullanım alanlarını ve doğru ürün seçimi kriterlerini detaylı olarak inceleyin.",
-      focusKeyword: "su kaydırağı çeşitleri"
-    },
     en: {
       title: "Types of Water Slides",
       description: "Explore water slide types, applications, and key criteria for selecting the right products for commercial water parks.",
@@ -154,13 +147,6 @@ export const BLOG_TRANSLATIONS = {
     }
   },
   2: {
-    tr: {
-      title: "Su Kaydırağı Üreticisi Nasıl Seçilir?",
-      description: "Su kaydırağı üreticisi seçerken dikkat edilmesi gereken mühendislik, güvenlik, kalite, üretim teknolojisi ve satış sonrası hizmet kriterlerini keşfedin.",
-      seoTitle: "Su Kaydırağı Üreticisi Nasıl Seçilir? Profesyonel Satın Alma Rehberi",
-      metaDesc: "Su kaydırağı üreticisi seçerken dikkat edilmesi gereken mühendislik, güvenlik, kalite, üretim teknolojisi ve satış sonrası hizmet kriterlerini keşfedin.",
-      focusKeyword: "su kaydırağı üreticisi"
-    },
     en: {
       title: "How to Choose a Water Slide Manufacturer",
       description: "Discover key engineering, safety, quality, production technology, and after-sales service criteria when choosing a water slide manufacturer.",
@@ -301,13 +287,6 @@ export const BLOG_TRANSLATIONS = {
     }
   },
   3: {
-    tr: {
-      title: "Fiberglas Su Kaydırakları",
-      description: "Fiberglas su kaydıraklarının avantajlarını, üretim sürecini, dayanıklılığını ve neden ticari su parklarında tercih edildiğini keşfedin.",
-      seoTitle: "Fiberglas Su Kaydırakları | Dayanıklı ve Güvenli Su Parkı Çözümleri",
-      metaDesc: "Fiberglas su kaydıraklarının avantajlarını, üretim sürecini, dayanıklılığını ve neden ticari su parklarında tercih edildiğini keşfedin.",
-      focusKeyword: "fiberglas su kaydırakları"
-    },
     en: {
       title: "Fiberglass Water Slides",
       description: "Explore the advantages, manufacturing process, durability, and commercial value of fiberglass water slides.",
@@ -442,13 +421,6 @@ export const BLOG_TRANSLATIONS = {
     }
   },
   4: {
-    tr: {
-      title: "EN 1069 Standardı Nedir?",
-      description: "EN 1069 standardı nedir? Su kaydıraklarının tasarım, üretim, test ve güvenlik gerekliliklerini kapsayan Avrupa standardını detaylı olarak inceleyin.",
-      seoTitle: "EN 1069 Standardı Nedir? Su Kaydıraklarında Güvenlik Rehberi",
-      metaDesc: "EN 1069 standardı nedir? Su kaydıraklarının tasarım, üretim, test ve güvenlik gerekliliklerini kapsayan Avrupa standardını detaylı olarak inceleyin.",
-      focusKeyword: "EN 1069 Standardı"
-    },
     en: {
       title: "What is the EN 1069 Standard?",
       description: "Comprehensive overview of EN 1069, the European standard governing water slide design, manufacturing, testing, and safety.",
@@ -583,13 +555,6 @@ export const BLOG_TRANSLATIONS = {
     }
   },
   5: {
-    tr: {
-      title: "Çocuk Su Oyun Grupları",
-      description: "Çocuk su oyun grupları seçerken dikkat edilmesi gereken güvenlik, tasarım, kapasite ve malzeme kriterlerini keşfedin.",
-      seoTitle: "Çocuk Su Oyun Grupları | Güvenli ve Eğlenceli Su Oyun Alanları",
-      metaDesc: "Çocuk su oyun grupları seçerken dikkat edilmesi gereken güvenlik, tasarım, kapasite ve malzeme kriterlerini keşfedin.",
-      focusKeyword: "çocuk su oyun grupları"
-    },
     en: {
       title: "Children's Water Play Structures",
       description: "Discover essential safety, design, capacity, and material criteria when selecting water play structures for kids.",
@@ -724,13 +689,6 @@ export const BLOG_TRANSLATIONS = {
     }
   },
   6: {
-    tr: {
-      title: "Oteller İçin Su Parkı Çözümleri",
-      description: "Oteller ve resortlar için su parkı çözümlerini, doğru ürün seçimini, kapasite planlamasını ve yatırım avantajlarını keşfedin.",
-      seoTitle: "Oteller İçin Su Parkı Çözümleri | Misafir Deneyimini Artıran Tasarımlar",
-      metaDesc: "Oteller ve resortlar için su parkı çözümlerini, doğru ürün seçimini, kapasite planlamasını ve yatırım avantajlarını keşfedin.",
-      focusKeyword: "oteller için su parkı çözümleri"
-    },
     en: {
       title: "Waterpark Solutions for Hotels & Resorts",
       description: "Explore custom waterpark concepts, product selection, capacity planning, and investment ROI for hotels and resorts.",
@@ -865,13 +823,6 @@ export const BLOG_TRANSLATIONS = {
     }
   },
   7: {
-    tr: {
-      title: "Su Kaydırağı Bakımı",
-      description: "Su kaydıraklarının güvenli, verimli ve uzun ömürlü kullanılabilmesi için uygulanması gereken bakım süreçlerini keşfedin.",
-      seoTitle: "Su Kaydırağı Bakımı | Uzun Ömürlü ve Güvenli Kullanım Rehberi",
-      metaDesc: "Su kaydıraklarının güvenli, verimli ve uzun ömürlü kullanılabilmesi için uygulanması gereken bakım süreçlerini keşfedin.",
-      focusKeyword: "su kaydırağı bakımı"
-    },
     en: {
       title: "Water Slide Maintenance Guide",
       description: "Essential maintenance protocols, gelcoat care, structural inspections, and safety practices for waterpark longevity.",
@@ -1006,13 +957,6 @@ export const BLOG_TRANSLATIONS = {
     }
   },
   8: {
-    tr: {
-      title: "Su Parkı Yatırım Maliyeti Nasıl Hesaplanır?",
-      description: "Yatırımcılar, oteller, resortlar ve belediyeler için kapsamlı maliyet planlama rehberi.",
-      seoTitle: "Su Parkı Yatırım Maliyeti Nasıl Hesaplanır? | Yatırım Rehberi",
-      metaDesc: "Su parkı yatırım maliyetini etkileyen arazi, ürün, havuz, çelik konstrüksiyon, mekanik sistem, montaj ve işletme kalemlerini kapsamlı biçimde inceleyin.",
-      focusKeyword: "su parkı yatırım maliyeti"
-    },
     en: {
       title: "How to Calculate Waterpark Investment Cost",
       description: "Comprehensive cost planning and feasibility guide for investors, hotel resorts, municipalities, and leisure developers.",
@@ -1222,13 +1166,6 @@ export const BLOG_TRANSLATIONS = {
     }
   },
   9: {
-    tr: {
-      title: "Su Parkı Projelendirme Süreci",
-      description: "Su parkı projelendirme süreci; ihtiyaç analizinden mühendisliğe, üretimden montaja kadar tüm aşamalarıyla bu kapsamlı rehberde.",
-      seoTitle: "Su Parkı Projelendirme Süreci | Profesyonel Aquapark Tasarım Rehberi",
-      metaDesc: "Su parkı projelendirme süreci; ihtiyaç analizinden mühendisliğe, üretimden montaja kadar tüm aşamalarıyla bu kapsamlı rehberde.",
-      focusKeyword: "su parkı projelendirme süreci"
-    },
     en: {
       title: "Waterpark Project Planning & Engineering Process",
       description: "Step-by-step master planning guide from initial feasibility and 3D concept design to manufacturing, installation, and commissioning.",
@@ -1381,13 +1318,6 @@ export const BLOG_TRANSLATIONS = {
     }
   },
   10: {
-    tr: {
-      title: "Su Parkı Kapasite Planlaması",
-      description: "Su parkı kapasite planlamasının nasıl yapıldığını, ziyaretçi akışını etkileyen faktörleri ve doğru mühendislik yaklaşımını öğrenin.",
-      seoTitle: "Su Parkı Kapasite Planlaması | Verimli ve Karlı Tesis Tasarımı",
-      metaDesc: "Su parkı kapasite planlamasının nasıl yapıldığını, ziyaretçi akışını etkileyen faktörleri ve doğru mühendislik yaklaşımını öğrenin.",
-      focusKeyword: "su parkı kapasite planlaması"
-    },
     en: {
       title: "Waterpark Capacity Planning",
       description: "Learn how to optimize visitor flow, calculate hourly throughput, reduce queue times, and design profitable waterparks.",

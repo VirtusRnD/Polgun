@@ -294,16 +294,6 @@ const PRODUCTS = [
 	},
 	{
 		category: 'Jumbo Slides',
-		title: 'Hydra Slide',
-		sub: '',
-		desc: `Hydra, yüksek kapasiteyi cesur ve ikonik bir mimari tasarımla bir araya getiren çok şeritli bir yarış kaydırağıdır. Çok başlı özgün yapısı, eş zamanlı yüksek hızlı inişler sunarak rekabet duygusunu ve kullanıcı etkileşimini artırır. Klasik mat yarış kaydırağı konseptini, su parklarının simge atraksiyonlarından biri hâline getiren etkileyici bir deneyime dönüştürür.`,
-		specs: [],
-		img: hydraslideImg,
-		imgAlt: 'Hydra Slide',
-		badge: null,
-	},
-	{
-		category: 'Jumbo Slides',
 		title: 'Magic Tray',
 		sub: '',
 		desc: `Magic Tray, akıcı eğimli dönüşler, sürekli yön değişimleri ve kontrollü hızlanma sayesinde dinamik bir botlu kaydırak deneyimi sunar. Tabak (saucer) formundan ilham alan özgün tasarımı, kesintisiz ve ritmik bir kayma hissi oluştururken; aile dostu heyecanı, konforu ve güçlü görsel etkisiyle su parklarına dikkat çekici bir atraksiyon kazandırır.`,
@@ -370,6 +360,16 @@ const PRODUCTS = [
 		specs: [],
 		img: planetaImg,
 		imgAlt: 'Planeta',
+		badge: null,
+	},
+	{
+		category: 'Racer Slides',
+		title: 'Hydra Slide',
+		sub: '',
+		desc: `Hydra, yüksek kapasiteyi cesur ve ikonik bir mimari tasarımla bir araya getiren çok şeritli bir yarış kaydırağıdır. Çok başlı özgün yapısı, eş zamanlı yüksek hızlı inişler sunarak rekabet duygusunu ve kullanıcı etkileşimini artırır. Klasik mat yarış kaydırağı konseptini, su parklarının simge atraksiyonlarından biri hâline getiren etkileyici bir deneyime dönüştürür.`,
+		specs: [],
+		img: hydraslideImg,
+		imgAlt: 'Hydra Slide',
 		badge: null,
 	},
 	{
@@ -585,7 +585,7 @@ export default function ProductsPage() {
 
 	const normalizeKey = (str) => {
 		if (!str) return '';
-		return str.toLowerCase()
+		return str.replace(/İ/g, 'I').toLowerCase()
 			.replace(/ğ/g, 'g')
 			.replace(/ü/g, 'u')
 			.replace(/ş/g, 's')

@@ -608,7 +608,7 @@ export default function NewsPage() {
                         {/* Dark Overlay Hover Actions */}
                         <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between p-6 z-20">
                           <span className="text-[10px] font-black uppercase tracking-widest px-2.5 py-1 rounded bg-white/20 text-white self-start backdrop-blur-xs">
-                            PDF · SECURE
+                            {t('news.pdf_badge', { defaultValue: 'PDF · SECURE' })}
                           </span>
 
                           <div className="w-12 h-12 rounded-full bg-white text-[var(--th-polgun-blue)] flex items-center justify-center shadow-lg transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 self-center">

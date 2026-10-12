@@ -399,7 +399,7 @@ export default function FlipbookModal({ pdfUrl, title, onClose }) {
               disabled={currentPage === 1}
               className={`fixed left-3 sm:left-6 top-1/2 -translate-y-1/2 z-40 w-12 h-12 sm:w-14 sm:h-14 rounded-full flex items-center justify-center bg-black/60 hover:bg-black/85 border border-white/15 text-white backdrop-blur-md shadow-2xl hover:scale-105 transition-all ${currentPage === 1 ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}
               title={t('news.flipbook_prev', { defaultValue: 'Önceki Sayfa (Sol Ok)' })}
-              aria-label="Önceki Sayfa"
+              aria-label={t('news.flipbook_prev', { defaultValue: 'Önceki Sayfa' })}
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
@@ -441,7 +441,7 @@ export default function FlipbookModal({ pdfUrl, title, onClose }) {
               disabled={isActualSingleMode ? currentPage >= numPages : currentPage >= numPages - 1}
               className={`fixed right-3 sm:right-6 top-1/2 -translate-y-1/2 z-40 w-12 h-12 sm:w-14 sm:h-14 rounded-full flex items-center justify-center bg-black/60 hover:bg-black/85 border border-white/15 text-white backdrop-blur-md shadow-2xl hover:scale-105 transition-all ${(isActualSingleMode ? currentPage >= numPages : currentPage >= numPages - 1) ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}
               title={t('news.flipbook_next', { defaultValue: 'Sonraki Sayfa (Sağ Ok)' })}
-              aria-label="Sonraki Sayfa"
+              aria-label={t('news.flipbook_next', { defaultValue: 'Sonraki Sayfa' })}
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />

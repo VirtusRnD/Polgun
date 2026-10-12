@@ -168,6 +168,21 @@ export default function ArGePage({ setActivePage }) {
   const [isNavatuModalOpen, setIsNavatuModalOpen] = useState(false);
   const [isSavanaModalOpen, setIsSavanaModalOpen] = useState(false);
 
+  // Modal verisindeki sabit metinleri çeviri dosyasına bağlar
+  const translateProject = (project, subKey) => ({
+    ...project,
+    location: t(subKey, { defaultValue: project.location }),
+    type: t('arge.project_type', { defaultValue: project.type }),
+    slides: project.slides.map((slide) => {
+      const [, name, number] = slide.title.match(/^(.+) Tasarım (\d+)$/) || []
+      return {
+        ...slide,
+        title: name ? t('arge.design_slide', { name, number, defaultValue: slide.title }) : slide.title,
+        location: t('arge.center_location', { defaultValue: slide.location }),
+      }
+    }),
+  })
+
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     const anchor = params.get('anchor');
@@ -240,12 +255,12 @@ export default function ArGePage({ setActivePage }) {
 
             <h3 className="text-2xl font-black mt-12 mb-4" style={{ color: 'var(--th-text)' }}>{t('arge.innovative_title', { defaultValue: 'Yenilikçi Ürünler' })}</h3>
             <p className="mb-6 leading-relaxed text-justify" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 80%, transparent)' }}>
-              {t('arge.p4', { defaultValue: 'Polgün Ar-Ge Merkezi’nde geliştirilen projeler; su tasarrufu, kullanıcı güvenliği, kapasite artışı, tematik deneyim, modüler üretim, kompozit malzeme teknolojileri ve yeni nesil su kaydırağı geometrileri gibi alanlarda sektöre değer katmaktadır. Navatu, Savanna, Monarch Butterfly ve Eclipse gibi yenilikçi ürün projelerimiz; Polgün’ün tasarım, mühendislik og üretim gücünü uluslararası pazarda temsil eden önemli Ar-Ge çıktıları arasında yer almaktadır.' })}
+              {t('arge.p4', { defaultValue: 'Polgün Ar-Ge Merkezi’nde geliştirilen projeler; su tasarrufu, kullanıcı güvenliği, kapasite artışı, tematik deneyim, modüler üretim, kompozit malzeme teknolojileri ve yeni nesil su kaydırağı geometrileri gibi alanlarda sektöre değer katmaktadır. Navatu, Savana, Monarch Butterfly ve Eclipse gibi yenilikçi ürün projelerimiz; Polgün’ün tasarım, mühendislik ve üretim gücünü uluslararası pazarda temsil eden önemli Ar-Ge çıktıları arasında yer almaktadır.' })}
             </p>
 
             <h3 className="text-2xl font-black mt-12 mb-4" style={{ color: 'var(--th-text)' }}>{t('arge.continuous_title', { defaultValue: 'Sürekli Gelişim' })}</h3>
             <p className="mb-6 leading-relaxed text-justify" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 80%, transparent)' }}>
-              {t('arge.p5', { defaultValue: 'Ar-Ge faaliyetlerimiz yalnızca yeni ürün geliştirme ile sınırlı değildir. Aynı zamanda mevcut ürünlerin performansını artırmak, üretim süreçlerini iyileştirmek, çevresel etkileri azaltmak, malzeme verimliliğini yükseltmek ve uluslararası pazarlarda rekabet gücümüzü artırmak amacıyla sürekli geliştirme çalışmaları yürütüyoruz. Akademik iş birlikleri, bilimsel yayınlar, patent og tasarım tescili süreçleri ile kurumsal bilgi birikimimizi güçlendiriyor; elde edilen çıktıları sürdürülebilir bir inovasyon kültürüne dönüştürüyoruz.' })}
+              {t('arge.p5', { defaultValue: 'Ar-Ge faaliyetlerimiz yalnızca yeni ürün geliştirme ile sınırlı değildir. Aynı zamanda mevcut ürünlerin performansını artırmak, üretim süreçlerini iyileştirmek, çevresel etkileri azaltmak, malzeme verimliliğini yükseltmek ve uluslararası pazarlarda rekabet gücümüzü artırmak amacıyla sürekli geliştirme çalışmaları yürütüyoruz. Akademik iş birlikleri, bilimsel yayınlar, patent ve tasarım tescili süreçleri ile kurumsal bilgi birikimimizi güçlendiriyor; elde edilen çıktıları sürdürülebilir bir inovasyon kültürüne dönüştürüyoruz.' })}
             </p>
 
             <div className="grid md:grid-cols-2 gap-8 mt-16">
@@ -284,7 +299,7 @@ export default function ArGePage({ setActivePage }) {
               </div>
               <div className="p-8">
                 <h3 className="text-2xl font-black mb-2" style={{ color: 'var(--th-text)' }}>Navatu</h3>
-                <p className="text-sm mb-4" style={{ color: 'var(--th-polgun-blue)' }}>IAAPA Brass Ring {t('awards.patent_title', { defaultValue: 'Ödüllü Dalga Sistemi' })}</p>
+                <p className="text-sm mb-4" style={{ color: 'var(--th-polgun-blue)' }}>{t('products.items.navatu.sub', { defaultValue: 'IAAPA Brass Ring Ödüllü Dalga Sistemi' })}</p>
                 <p className="text-sm leading-relaxed" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 80%, transparent)' }}>{t('arge.navatu_desc', { defaultValue: 'Doğal dalga deneyimini yeni bir boyuta taşıyan yenilikçi su parkı sistemi.' })}</p>
               </div>
             </div>
@@ -514,12 +529,12 @@ export default function ArGePage({ setActivePage }) {
 
       {/* ── Modal Component Bağlantıları ── */}
       <ProjectSliderModal
-        project={navatuProjectData}
+        project={translateProject(navatuProjectData, 'products.items.navatu.sub')}
         isOpen={isNavatuModalOpen}
         onClose={() => setIsNavatuModalOpen(false)}
       />
       <ProjectSliderModal
-        project={savanaProjectData}
+        project={translateProject(savanaProjectData, 'arge.savana_sub')}
         isOpen={isSavanaModalOpen}
         onClose={() => setIsSavanaModalOpen(false)}
       />

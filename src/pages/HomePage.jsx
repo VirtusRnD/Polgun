@@ -673,7 +673,7 @@ export default function HomePage() {
                 {t('home.cta_tag')}
               </p>
               <h2 className="font-black text-white leading-tight mb-8" style={{ fontSize: 'clamp(2rem,4.5vw,3.75rem)' }}>
-                {t('home.cta_title').includes(' hayata ') ? <>{t('home.cta_title').split(' hayata ')[0]}<br />{t('home.cta_title').split(' hayata ')[1]}</> : t('home.cta_title')}
+                {t('home.cta_title').includes(' hayata ') ? <>{t('home.cta_title').split(' hayata ')[0]}<br />hayata {t('home.cta_title').split(' hayata ')[1]}</> : t('home.cta_title')}
               </h2>
               <p className="text-white/80 mb-12 max-w-lg mx-auto leading-relaxed">
                 {t('home.cta_desc')}

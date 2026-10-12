@@ -309,9 +309,9 @@ export default function ContactPage({ setActivePage }) {
                 <form onSubmit={handleSubmit} className="flex flex-col gap-6">
                   {/* Ad - Soyad / E-posta */}
                   <div className="grid sm:grid-cols-2 gap-6">
-                    <Field label={t('contact.form.name', { defaultValue: 'Ad Soyad' })} name="name" placeholder="Ahmet Yılmaz"
+                    <Field label={t('contact.form.name', { defaultValue: 'Ad Soyad' })} name="name" placeholder={t('contact.form.name_placeholder', { defaultValue: 'Ahmet Yılmaz' })}
                       value={form.name} onChange={handleChange} required />
-                    <Field label={t('contact.form.email', { defaultValue: 'E-posta' })} name="email" type="email" placeholder="ornek@sirketiniz.com"
+                    <Field label={t('contact.form.email', { defaultValue: 'E-posta' })} name="email" type="email" placeholder={t('contact.form.email_placeholder', { defaultValue: 'ornek@sirketiniz.com' })}
                       value={form.email} onChange={handleChange} required />
                   </div>
 
@@ -359,7 +359,7 @@ export default function ContactPage({ setActivePage }) {
                       className="mt-0.5 w-4 h-4 rounded cursor-pointer shrink-0 border-[color-mix(in_srgb,var(--th-border)_30%,transparent)] accent-[var(--th-polgun-blue)]" />
                     <span className="text-xs leading-relaxed" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 60%, transparent)' }}>
                       {t('contact.form.kvkk_desc_prefix', { defaultValue: 'Müşteri - Tedarikçi' })}{' '}
-                      <a href="/documents/kvkk/musteri-tedarikci-aydinlatma.doc" target="_blank" className="hover:underline" style={{ color: 'var(--th-polgun-blue)' }}>{t('career.form.kvkk_link', { defaultValue: 'Aday Çalışan Aydınlatma Metni' })}</a>'{t('contact.form.kvkk_desc_suffix', { defaultValue: 'ni okudum ve onaylıyorum.' })}
+                      <a href="/documents/kvkk/musteri-tedarikci-aydinlatma.doc" target="_blank" className="hover:underline" style={{ color: 'var(--th-polgun-blue)' }}>{t('contact.form.kvkk_link', { defaultValue: t('career.form.kvkk_link', { defaultValue: 'Aday Çalışan Aydınlatma Metni' }) })}</a>{t('contact.form.kvkk_desc_suffix', { defaultValue: 'ni okudum ve onaylıyorum.' })}
                     </span>
                   </label>
 

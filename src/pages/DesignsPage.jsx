@@ -2,6 +2,13 @@ import { useState, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useNavigate } from 'react-router-dom'
 
+const WORK_NAME_KEYS = {
+  'Su Kaydırağı': 'water_slide',
+  'Su Parkı Yerleşim Dizaynı': 'waterpark_layout',
+  'Su Parkı Elemanları Seti': 'waterpark_elements_set',
+  'Su Kaydırağı Aksesuarı': 'water_slide_accessory',
+}
+
 const DESIGNS_DATA = [
   {
     id: 1,
@@ -358,7 +365,9 @@ export default function DesignsPage() {
                           {t('designsPage.card.design_name', { defaultValue: 'Hak / Çalışma Adı' })}
                         </span>
                         <span className="text-sm font-semibold" style={{ color: 'var(--th-text)' }}>
-                          {item.workName}
+                          {WORK_NAME_KEYS[item.workName]
+                            ? t(`designsPage.work_names.${WORK_NAME_KEYS[item.workName]}`, { defaultValue: item.workName })
+                            : item.workName}
                         </span>
                       </div>
                       <div>

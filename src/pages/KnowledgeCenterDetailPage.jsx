@@ -103,9 +103,6 @@ export default function KnowledgeCenterDetailPage() {
           <p style={{ color: 'var(--th-text-muted)' }}>
             {t('knowledgeCenter.not_found_desc', { defaultValue: "Aradığınız makale veya içerik Bilgi Merkezi'mizde mevcut değil." })}
           </p>
-          <div className="p-4 rounded-xl border border-amber-500/20 bg-amber-500/10 text-amber-600 dark:text-amber-400 text-xs text-left leading-relaxed">
-            💡 <strong>İpucu:</strong> Makaleyi Admin Paneli'nde yeni oluşturduysanız, <strong>"Yayın Durumu: Herkese Açık (Yayında)"</strong> seçeneğinin açık (is_visible = true) olduğundan emin olun.
-          </div>
           <Link
             to="/knowledge-center"
             className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-xs font-bold text-white transition-all hover:bg-opacity-90"

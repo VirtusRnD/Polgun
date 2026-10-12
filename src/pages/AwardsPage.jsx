@@ -58,7 +58,7 @@ export default function AwardsPage({ setActivePage }) {
   ]
 
   const tesciller = [
-    { title: t('awards.tesciller.benelux'), country: t('factories.names.france', { defaultValue: 'Benelux' }), file: '/documents/tesciller/Benelux-Tescil.pdf' },
+    { title: t('awards.tesciller.benelux'), country: t('factories.names.benelux', { defaultValue: 'Benelux' }), file: '/documents/tesciller/Benelux-Tescil.pdf' },
     { title: t('awards.tesciller.france'), country: t('factories.names.france'), file: '/documents/tesciller/Fransa-Tescil.pdf' },
     { title: t('awards.tesciller.spain'), country: t('factories.names.spain'), file: '/documents/tesciller/Ispanya-Tescil.pdf' },
     { title: t('awards.tesciller.egypt'), country: t('factories.names.egypt'), file: '/documents/tesciller/Misir-Tescil.pdf' },
@@ -72,12 +72,12 @@ export default function AwardsPage({ setActivePage }) {
     { title: 'ISO 9001:2015', desc: t('awards.kalite.iso9001'), file: '/documents/kalite/ISO-9001.pdf', icon: 'ISO' },
     { title: 'ISO 14001:2015', desc: t('awards.kalite.iso14001'), file: '/documents/kalite/ISO-14001.pdf', icon: 'ISO' },
     { title: 'ISO 45001:2018', desc: t('awards.kalite.iso45001'), file: '/documents/kalite/ISO-45001.pdf', icon: 'ISO' },
-    { title: 'ISO 3834-2', desc: 'Çelik Konstrüksiyon İmalatı', file: '/documents/kalite/ISO-3834-2.pdf', icon: 'ISO' },
-    { title: 'ASTM F2376-22', desc: 'Ürün Standart Belgesi', file: '/documents/kalite/ASTM-F2376-22.pdf', icon: 'ASTM' },
-    { title: 'CPR 15473-1090', desc: 'Kaynak Sertifikası', file: '/documents/kalite/CPR-15473-1090.pdf', icon: 'CPR' },
-    { title: 'TS-EN 1069', desc: 'Ürün Standart Belgesi', file: '/documents/kalite/TS-EN-1069.pdf', icon: 'TS-EN' },
-    { title: 'TS-EN 1176-1', desc: 'Ürün Standart Belgesi', file: '/documents/kalite/TS-EN-1176-1.pdf', icon: 'TS-EN' },
-    { title: 'TS-EN 17232', desc: 'Ürün Standart Belgesi', file: '/documents/kalite/TS-EN-17232.pdf', icon: 'TS-EN' },
+    { title: 'ISO 3834-2', desc: t('awards.kalite.iso3834', { defaultValue: 'Çelik Konstrüksiyon İmalatı' }), file: '/documents/kalite/ISO-3834-2.pdf', icon: 'ISO' },
+    { title: 'ASTM F2376-22', desc: t('awards.kalite.astm', { defaultValue: 'Ürün Standart Belgesi' }), file: '/documents/kalite/ASTM-F2376-22.pdf', icon: 'ASTM' },
+    { title: 'CPR 15473-1090', desc: t('awards.kalite.cpr', { defaultValue: 'Kaynak Sertifikası' }), file: '/documents/kalite/CPR-15473-1090.pdf', icon: 'CPR' },
+    { title: 'TS-EN 1069', desc: t('awards.kalite.ts_en_1069', { defaultValue: 'Ürün Standart Belgesi' }), file: '/documents/kalite/TS-EN-1069.pdf', icon: 'TS-EN' },
+    { title: 'TS-EN 1176-1', desc: t('awards.kalite.ts_en_1176', { defaultValue: 'Ürün Standart Belgesi' }), file: '/documents/kalite/TS-EN-1176-1.pdf', icon: 'TS-EN' },
+    { title: 'TS-EN 17232', desc: t('awards.kalite.ts_en_17232', { defaultValue: 'Ürün Standart Belgesi' }), file: '/documents/kalite/TS-EN-17232.pdf', icon: 'TS-EN' },
 
   ]
   return (
@@ -122,12 +122,11 @@ export default function AwardsPage({ setActivePage }) {
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <div className="text-center mb-20">
             <p className="text-xs font-bold tracking-[0.25em] uppercase mb-4" style={{ color: 'var(--th-polgun-blue)' }}>{t('awards.title')}</p>
-            <h2 className="text-4xl font-black" style={{ color: 'var(--th-text)' }}>{t('awards.title')}</h2>
+            <h2 className="text-4xl font-black" style={{ color: 'var(--th-text)' }}>{t('awards.awards_title', { defaultValue: 'Ödüllerimiz' })}</h2>
           </div>
 
           {/* Ödüller */}
           <div className="mb-20">
-            <h3 className="text-xl font-black mb-10" style={{ color: 'var(--th-text)' }}>🏆 {t('awards.title')}</h3>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {liveAwards.length === 0 && (
                 <p className="sm:col-span-2 lg:col-span-3 text-center text-sm" style={{ color: 'var(--th-text-muted)' }}>
@@ -154,7 +153,10 @@ export default function AwardsPage({ setActivePage }) {
 
           {/* Ziyaretler */}
           <div>
-            <h3 className="text-xl font-black mb-10" style={{ color: 'var(--th-text)' }}>🤝 {t('awards.visits.title', { defaultValue: 'Kurumsal Ziyaretler' })}</h3>
+            <div className="text-center mb-20">
+              <p className="text-xs font-bold tracking-[0.25em] uppercase mb-4" style={{ color: 'var(--th-polgun-blue)' }}>{t('awards.visits.tag', { defaultValue: 'Ağırladığımız Misafirler' })}</p>
+              <h2 className="text-4xl font-black" style={{ color: 'var(--th-text)' }}>{t('awards.visits.title', { defaultValue: 'Kurumsal Ziyaretler' })}</h2>
+            </div>
             <div className="grid sm:grid-cols-2 gap-6">
               {visits.map((visit, i) => (
                 <div key={i} className="rounded-2xl overflow-hidden group" style={{ backgroundColor: 'var(--th-bg)', border: '1px solid color-mix(in srgb, var(--th-border) 12%, transparent)', boxShadow: '0 4px 24px rgba(0,0,0,0.06)' }}>

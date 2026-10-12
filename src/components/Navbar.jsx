@@ -66,10 +66,10 @@ export default function Navbar({ activePage, setActivePage, colorPalette, locati
           title: t('projects.filters.region', { defaultValue: 'Bölgeye Göre' }),
           links: [
             { label: t('common.all_projects', { defaultValue: 'Tüm Projeler' }), desc: '', page: 'projects', to: '/projects' },
-            { label: `${t('regions.europe', { defaultValue: 'Avrupa' })} ${t('footer.projects_title', { defaultValue: 'Projeleri' })}`, desc: '', page: 'projects', to: '/projects?region=Avrupa' },
-            { label: `${t('regions.asia', { defaultValue: 'Asya' })} ${t('footer.projects_title', { defaultValue: 'Projeleri' })}`, desc: '', page: 'projects', to: '/projects?region=Asya' },
-            { label: `${t('regions.africa', { defaultValue: 'Afrika' })} ${t('footer.projects_title', { defaultValue: 'Projeleri' })}`, desc: '', page: 'projects', to: '/projects?region=Afrika' },
-            { label: `${t('regions.america', { defaultValue: 'Amerika' })} ${t('footer.projects_title', { defaultValue: 'Projeleri' })}`, desc: '', page: 'projects', to: '/projects?region=Amerika' },
+            { label: t('nav.region_projects', { region: t('regions.europe', { defaultValue: 'Avrupa' }), defaultValue: `${t('regions.europe', { defaultValue: 'Avrupa' })} ${t('footer.projects_title', { defaultValue: 'Projeleri' })}` }), desc: '', page: 'projects', to: '/projects?region=Avrupa' },
+            { label: t('nav.region_projects', { region: t('regions.asia', { defaultValue: 'Asya' }), defaultValue: `${t('regions.asia', { defaultValue: 'Asya' })} ${t('footer.projects_title', { defaultValue: 'Projeleri' })}` }), desc: '', page: 'projects', to: '/projects?region=Asya' },
+            { label: t('nav.region_projects', { region: t('regions.africa', { defaultValue: 'Afrika' }), defaultValue: `${t('regions.africa', { defaultValue: 'Afrika' })} ${t('footer.projects_title', { defaultValue: 'Projeleri' })}` }), desc: '', page: 'projects', to: '/projects?region=Afrika' },
+            { label: t('nav.region_projects', { region: t('regions.america', { defaultValue: 'Amerika' }), defaultValue: `${t('regions.america', { defaultValue: 'Amerika' })} ${t('footer.projects_title', { defaultValue: 'Projeleri' })}` }), desc: '', page: 'projects', to: '/projects?region=Amerika' },
           ],
         },
         {
@@ -495,7 +495,7 @@ export default function Navbar({ activePage, setActivePage, colorPalette, locati
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
           className="lg:hidden p-2 flex flex-col gap-[5px] justify-center"
-          aria-label="Menü"
+          aria-label={t('nav.menu', { defaultValue: 'Menü' })}
         >
           <span className={`block w-6 h-[2px] transition-all duration-200 ${isLightNavbar ? 'bg-[var(--th-text)]' : 'bg-[var(--th-text)]'} ${mobileOpen ? 'rotate-45 translate-y-[7px]' : ''}`} />
           <span className={`block w-6 h-[2px] transition-all duration-200

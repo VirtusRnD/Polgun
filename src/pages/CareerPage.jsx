@@ -1007,7 +1007,7 @@ export default function CareerPage() {
                       >
                         <option value="">{t('common.select', { defaultValue: 'Seçiniz' })}</option>
                         <option value="Muğla Merkez">{t('factories.names.mugla')} {t('common.hq', { defaultValue: 'Merkez' })}</option>
-                        <option value="Marmara Teknopark">{t('factories.names.istanbul')} Technopark</option>
+                        <option value="Marmara Teknopark">{t('career.locations.technopark', { defaultValue: `${t('factories.names.istanbul')} Technopark` })}</option>
                         <option value="Saha (Şantiyeler)">{t('career.locations.field', { defaultValue: 'Saha (Şantiyeler)' })}</option>
                         <option value="Fark etmez">{t('career.locations.any', { defaultValue: 'Fark etmez' })}</option>
                       </select>
@@ -1070,7 +1070,7 @@ export default function CareerPage() {
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
                             </svg>
                             <p className="text-xs text-gray-700 font-semibold">{t('career.form.drag_file', { defaultValue: 'Dosyanızı sürükleyin veya seçin' })}</p>
-                            <p className="text-[10px] text-gray-400 mt-1">PDF, DOCX (Maks. 10 MB)</p>
+                            <p className="text-[10px] text-gray-400 mt-1">{t('career.form.file_hint', { defaultValue: 'PDF, DOCX (Maks. 10 MB)' })}</p>
                           </>
                         )}
                       </div>
@@ -1088,7 +1088,7 @@ export default function CareerPage() {
                           className="mt-0.5 rounded text-blue-500 focus:ring-blue-400 w-3.5 h-3.5 border-gray-300 cursor-pointer"
                         />
                         <span className="text-[10px] text-gray-500 leading-normal">
-                          <a href="#" className="text-blue-500 hover:underline font-semibold">{t('career.form.kvkk_link', { defaultValue: 'Aday Çalışan Aydınlatma Metni' })}</a>'ni {t('career.form.read_approved', { defaultValue: 'okudum.' })}
+                          <a href="#" className="text-blue-500 hover:underline font-semibold">{t('career.form.kvkk_link', { defaultValue: 'Aday Çalışan Aydınlatma Metni' })}</a>{t('career.form.kvkk_suffix', { defaultValue: ` ${t('career.form.read_approved', { defaultValue: 'okudum.' })}` })}
                         </span>
                       </label>
 
@@ -1208,7 +1208,7 @@ export default function CareerPage() {
                 <button
                   onClick={prevSlide}
                   className="absolute left-[-20px] top-1/2 -translate-y-1/2 w-10 h-10 bg-white border border-gray-150 rounded-full shadow-md flex items-center justify-center text-gray-600 hover:text-[#22ABE6] z-10 transition-colors focus:outline-none cursor-pointer animate-pulse"
-                  aria-label="Önceki Yorum"
+                  aria-label={t('career.prev_testimonial', { defaultValue: 'Önceki Yorum' })}
                 >
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M15 19l-7-7 7-7" />
@@ -1218,7 +1218,7 @@ export default function CareerPage() {
                 <button
                   onClick={nextSlide}
                   className="absolute right-[-20px] top-1/2 -translate-y-1/2 w-10 h-10 bg-white border border-gray-150 rounded-full shadow-md flex items-center justify-center text-gray-600 hover:text-[#22ABE6] z-10 transition-colors focus:outline-none cursor-pointer animate-pulse"
-                  aria-label="Sonraki Yorum"
+                  aria-label={t('career.next_testimonial', { defaultValue: 'Sonraki Yorum' })}
                 >
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M9 5l7 7-7 7" />
