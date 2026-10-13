@@ -359,7 +359,7 @@ export default function ContactPage({ setActivePage }) {
                       className="mt-0.5 w-4 h-4 rounded cursor-pointer shrink-0 border-[color-mix(in_srgb,var(--th-border)_30%,transparent)] accent-[var(--th-polgun-blue)]" />
                     <span className="text-xs leading-relaxed" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 60%, transparent)' }}>
                       {t('contact.form.kvkk_desc_prefix', { defaultValue: 'Müşteri - Tedarikçi' })}{' '}
-                      <a href="/documents/kvkk/musteri-tedarikci-aydinlatma.doc" target="_blank" className="hover:underline" style={{ color: 'var(--th-polgun-blue)' }}>{t('contact.form.kvkk_link', { defaultValue: t('career.form.kvkk_link', { defaultValue: 'Aday Çalışan Aydınlatma Metni' }) })}</a>{t('contact.form.kvkk_desc_suffix', { defaultValue: 'ni okudum ve anladım.' })}
+                      <a href="/documents/kvkk/musteri-tedarikci-aydinlatma.pdf" target="_blank" className="hover:underline" style={{ color: 'var(--th-polgun-blue)' }}>{t('contact.form.kvkk_link', { defaultValue: t('career.form.kvkk_link', { defaultValue: 'Aday Çalışan Aydınlatma Metni' }) })}</a>{t('contact.form.kvkk_desc_suffix', { defaultValue: 'ni okudum ve anladım.' })}
                     </span>
                   </label>
 

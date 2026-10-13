@@ -390,7 +390,7 @@ export default function Footer({ setActivePage }) {
           {/* Orta: Yasal Politikalar */}
           <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-2">
             <a
-              href="/documents/kvkk/calisan-adayi-aydinlatma.doc"
+              href="/documents/kvkk/calisan-adayi-aydinlatma.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-white transition-colors"
@@ -399,7 +399,7 @@ export default function Footer({ setActivePage }) {
             </a>
             <span className="text-white/25">|</span>
             <a
-              href="/documents/kvkk/cerez-aydinlatma.doc"
+              href="/documents/kvkk/cerez-aydinlatma.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-white transition-colors"
@@ -417,7 +417,7 @@ export default function Footer({ setActivePage }) {
             </a>
             <span className="text-white/25">|</span>
             <a
-              href="/documents/kvkk/musteri-tedarikci-aydinlatma.doc"
+              href="/documents/kvkk/musteri-tedarikci-aydinlatma.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-white transition-colors"
