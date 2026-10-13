@@ -390,7 +390,7 @@ export default function Footer({ setActivePage }) {
           {/* Orta: Yasal Politikalar */}
           <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-2">
             <a
-              href="/documents/kvkk/calisan-adayi-aydinlatma.pdf"
+              href="/documents/kurumsal/aydinlatma-metni.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-white transition-colors"
