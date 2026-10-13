@@ -456,7 +456,7 @@ export default function AboutPage() {
               {t('arge.brands_title', { defaultValue: 'Markalarımız' })}
             </h2>
             <p className="max-w-2xl mx-auto text-sm leading-relaxed" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 80%, transparent)' }}>
-              {t('arge.brands_desc', { defaultValue: 'Polgün’ün ulusal ve uluslararası tescilli marka kayıtları, küresel pazardaki özgün kimliğimizi ve güvenirliğimizi temsil etmektedir.' })}
+              {t('arge.brands_desc', { defaultValue: 'Polgün’ün ulusal ve uluslararası tescilli marka kayıtları, küresel pazardaki özgün kimliğimizi ve güvenilirliğimizi temsil etmektedir.' })}
             </p>
           </div>
 
