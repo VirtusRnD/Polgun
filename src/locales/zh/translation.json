@@ -197,10 +197,6 @@
       "bursa": {
         "label": "布尔萨生产基地",
         "desc": "Polgün 的北部生产中心。从事钢制零件加工和半成品生产的基地。"
-      },
-      "istanbul": {
-        "label": "马尔马拉科技园",
-        "desc": "开展研发与创新工作的马尔马拉科技园办公室。新产品开发与技术分析中心。"
       }
     },
     "story_title": "设计未来"
@@ -661,18 +657,18 @@
       "remove_file": "移除文件",
       "drag_file": "拖放或选择您的文件",
       "kvkk_link": "候选员工隐私告知书",
-      "read_approved": "我已阅读。",
+      "read_approved": "我已阅读并理解。",
       "cv_consent_label": "我同意在当前职位之外出现合适职位时，评估我的简历信息。",
       "submit_btn": "提交申请",
       "security_label": "您的个人数据依据 KVKK（土耳其个人数据保护法）受到安全保护。",
       "cv_invalid": "请上传有效格式（PDF、DOCX）且小于 10 MB 的文件。",
-      "kvkk_required": "请阅读并确认候选员工隐私告知书。",
+      "kvkk_required": "请确认您已阅读并理解候选员工隐私告知书。",
       "cv_required": "请上传您的简历。",
       "apply_error": "申请提交失败，请重试。",
       "general_error": "发生错误，请重试。",
       "apply_note_prefix": "尊敬的负责人：\n\n我希望申请{{title}}职位。",
       "file_hint": "PDF、DOCX（最大 10 MB）",
-      "kvkk_suffix": "，我已阅读。"
+      "kvkk_suffix": "，我已阅读并理解。"
     },
     "internship_programs": "实习与应届毕业生项目",
     "internships_subtitle": "我们培养未来的专业人才。",
@@ -803,7 +799,7 @@
       "interest_label": "感兴趣的产品",
       "message": "您的留言",
       "message_placeholder": "您可以详细介绍您的项目或需求...",
-      "kvkk_desc_prefix": "我已阅读并同意客户 - 供应商",
+      "kvkk_desc_prefix": "我已阅读并理解客户 - 供应商",
       "kvkk_desc_suffix": "。",
       "submit_btn": "发送消息",
       "interest": {

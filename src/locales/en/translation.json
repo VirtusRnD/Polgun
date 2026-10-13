@@ -197,10 +197,6 @@
       "bursa": {
         "label": "Bursa Production Facility",
         "desc": "Polgün's northern production center. The facility handles steel parts fabrication and semi-finished product manufacturing."
-      },
-      "istanbul": {
-        "label": "Marmara Technopark",
-        "desc": "Marmara Technopark office where R&D and innovation studies are conducted. New product development and technical analysis center."
       }
     },
     "story_title": "Designing the Future"
@@ -661,18 +657,18 @@
       "remove_file": "Remove File",
       "drag_file": "Drag your file here or select",
       "kvkk_link": "Candidate Privacy Notice",
-      "read_approved": "I have read it.",
+      "read_approved": "I have read and understood it.",
       "cv_consent_label": "I allow my CV to be evaluated for other suitable positions that may arise outside of the current posting.",
       "submit_btn": "Submit Application",
       "security_label": "Your personal data is securely protected under the KVKK (Turkish Personal Data Protection Law).",
       "cv_invalid": "Please upload a valid document (PDF, DOCX) under 10 MB.",
-      "kvkk_required": "Please read and confirm the Candidate Employee Privacy Notice.",
+      "kvkk_required": "Please confirm that you have read and understood the Candidate Employee Privacy Notice.",
       "cv_required": "Please upload your CV document.",
       "apply_error": "Application could not be submitted. Please try again.",
       "general_error": "An error occurred. Please try again.",
       "apply_note_prefix": "Dear Sir/Madam,\n\nI would like to apply for the {{title}} position.",
       "file_hint": "PDF, DOCX (Max. 10 MB)",
-      "kvkk_suffix": " – I have read it."
+      "kvkk_suffix": " – I have read and understood it."
     },
     "internship_programs": "Internship & Graduate Programs",
     "internships_subtitle": "We train the professionals of the future.",
@@ -803,7 +799,7 @@
       "interest_label": "Product of Interest",
       "message": "Your Message",
       "message_placeholder": "You can provide detailed information about your project or request...",
-      "kvkk_desc_prefix": "I have read and accept the Customer - Supplier",
+      "kvkk_desc_prefix": "I have read and understood the Customer - Supplier",
       "kvkk_desc_suffix": ".",
       "submit_btn": "Send Message",
       "interest": {

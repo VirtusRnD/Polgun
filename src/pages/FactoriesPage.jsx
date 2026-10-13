@@ -1,15 +1,10 @@
 import { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 
-import istanbulImg from '../assets/factories/istanbul-factory.avif'
 import bursaImg from '../assets/factories/bursa-factory.avif'
 import muglaImg from '../assets/factories/mugla-factory.avif'
 
 const FACTORIES = [
-  {
-    id: 'istanbul',
-    image: istanbulImg,
-  },
   {
     id: 'bursa',
     image: bursaImg,

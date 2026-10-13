@@ -197,10 +197,6 @@
       "bursa": {
         "label": "Planta de Producción de Bursa",
         "desc": "Centro de producción del norte de Polgün. Planta donde se fabrican piezas de acero y productos semielaborados."
-      },
-      "istanbul": {
-        "label": "Tecnoparque de Mármara",
-        "desc": "Oficina del Tecnoparque de Mármara donde se llevan a cabo los trabajos de I+D e innovación. Centro de desarrollo de nuevos productos y análisis técnico."
       }
     },
     "story_title": "Diseñamos el Futuro"
@@ -661,18 +657,18 @@
       "remove_file": "Eliminar Archivo",
       "drag_file": "Arrastre o seleccione su archivo",
       "kvkk_link": "Aviso de Privacidad para Candidatos",
-      "read_approved": "lo he leído.",
+      "read_approved": "lo he leído y comprendido.",
       "cv_consent_label": "Autorizo que los datos de mi CV se evalúen para puestos adecuados que puedan surgir fuera de la oferta actual.",
       "submit_btn": "Enviar Candidatura",
       "security_label": "Sus datos personales están protegidos de forma segura en el marco de la KVKK (Ley turca de Protección de Datos Personales).",
       "cv_invalid": "Suba un archivo en un formato válido (PDF, DOCX) y de menos de 10 MB.",
-      "kvkk_required": "Lea y confirme el Aviso de Privacidad para Candidatos.",
+      "kvkk_required": "Confirme que ha leído y comprendido el Aviso de Privacidad para Candidatos.",
       "cv_required": "Suba su CV.",
       "apply_error": "No se pudo enviar la candidatura. Inténtelo de nuevo.",
       "general_error": "Se ha producido un error. Inténtelo de nuevo.",
       "apply_note_prefix": "Estimado/a responsable:\n\nDeseo postularme al puesto de {{title}}.",
       "file_hint": "PDF, DOCX (Máx. 10 MB)",
-      "kvkk_suffix": ": lo he leído."
+      "kvkk_suffix": ": lo he leído y comprendido."
     },
     "internship_programs": "Programas de Prácticas y para Recién Graduados",
     "internships_subtitle": "Formamos a los profesionales del futuro.",
@@ -803,7 +799,7 @@
       "interest_label": "Producto de Interés",
       "message": "Su Mensaje",
       "message_placeholder": "Puede darnos información detallada sobre su proyecto o solicitud...",
-      "kvkk_desc_prefix": "He leído y acepto el",
+      "kvkk_desc_prefix": "He leído y comprendido el",
       "kvkk_desc_suffix": " para Clientes - Proveedores.",
       "submit_btn": "Enviar Mensaje",
       "interest": {

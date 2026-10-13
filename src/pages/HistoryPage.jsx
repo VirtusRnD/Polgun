@@ -2,7 +2,6 @@ import { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 
 import bursaFactory from '../assets/factories/bursa-factory.avif'
-import istanbulFactory from '../assets/factories/istanbul-factory.png'
 import muglaFactory from '../assets/factories/mugla-factory.avif'
 
 export default function HistoryPage({ setActivePage }) {
@@ -94,7 +93,6 @@ export default function HistoryPage({ setActivePage }) {
   const factories = [
     { city: t('factories.names.mugla'), label: t('about.factories.mugla.label'), desc: t('about.factories.mugla.desc'), img: muglaFactory },
     { city: t('factories.names.bursa'), label: t('about.factories.bursa.label'), desc: t('about.factories.bursa.desc'), img: bursaFactory },
-    { city: t('factories.names.istanbul'), label: t('about.factories.istanbul.label'), desc: t('about.factories.istanbul.desc'), img: istanbulFactory },
   ]
 
   return (

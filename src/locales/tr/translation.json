@@ -197,10 +197,6 @@
       "bursa": {
         "label": "Bursa Üretim Tesisi",
         "desc": "Polgün’ün kuzey üretim merkezi. Çelik parça imalatı ve yarı mamul üretiminin yapıldığı tesis."
-      },
-      "istanbul": {
-        "label": "Marmara Teknopark",
-        "desc": "Ar-Ge ve inovasyon çalışmalarının yürütüldüğü Marmara Teknopark ofisi. Yeni ürün geliştirme ve teknik analiz merkezi."
       }
     },
     "story_title": "Geleceği Tasarlıyoruz"
@@ -661,18 +657,18 @@
       "remove_file": "Dosyayı Kaldır",
       "drag_file": "Dosyanızı sürükleyin veya seçin",
       "kvkk_link": "Aday Çalışan Aydınlatma Metni",
-      "read_approved": "okudum.",
+      "read_approved": "okudum ve anladım.",
       "cv_consent_label": "Mevcut ilan dışında doğabilecek uygun pozisyonlar için CV bilgilerimin değerlendirilmesine izin veriyorum.",
       "submit_btn": "Başvuruyu Gönder",
       "security_label": "Kişisel verileriniz KVKK kapsamında güvenli bir şekilde korunmaktadır.",
       "cv_invalid": "Lütfen geçerli formatta (PDF, DOCX) ve 10 MB altında bir dosya yükleyiniz.",
-      "kvkk_required": "Lütfen Aday Çalışan Aydınlatma Metnini okuyup onaylayınız.",
+      "kvkk_required": "Lütfen Aday Çalışan Aydınlatma Metnini okuyup anladığınızı işaretleyiniz.",
       "cv_required": "Lütfen CV belgenizi yükleyin.",
       "apply_error": "Başvuru gönderilemedi. Lütfen tekrar deneyiniz.",
       "general_error": "Bir hata oluştu. Lütfen tekrar deneyin.",
       "apply_note_prefix": "Sayın Yetkili,\n\n{{title}} pozisyonu için başvuruda bulunmak istiyorum.",
       "file_hint": "PDF, DOCX (Maks. 10 MB)",
-      "kvkk_suffix": "ni okudum."
+      "kvkk_suffix": "ni okudum ve anladım."
     },
     "internship_programs": "Staj ve Yeni Mezun Programları",
     "internships_subtitle": "Geleceğin profesyonellerini yetiştiriyoruz.",
@@ -804,7 +800,7 @@
       "message": "Mesajınız",
       "message_placeholder": "Projeniz veya talebiniz hakkında detaylı bilgi verebilirsiniz...",
       "kvkk_desc_prefix": "Müşteri - Tedarikçi",
-      "kvkk_desc_suffix": "ni okudum ve onaylıyorum.",
+      "kvkk_desc_suffix": "ni okudum ve anladım.",
       "submit_btn": "Mesajı Gönder",
       "interest": {
         "slides": "Su Kaydırakları",

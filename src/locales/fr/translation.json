@@ -197,10 +197,6 @@
       "bursa": {
         "label": "Site de Production de Bursa",
         "desc": "Centre de production nord de Polgün. Site où sont fabriqués les pièces en acier et les produits semi-finis."
-      },
-      "istanbul": {
-        "label": "Technoparc de Marmara",
-        "desc": "Bureau du Technoparc de Marmara où sont menés les travaux de R&D et d'innovation. Centre de développement de nouveaux produits et d'analyse technique."
       }
     },
     "story_title": "Nous Concevons l'Avenir"
@@ -661,18 +657,18 @@
       "remove_file": "Supprimer le Fichier",
       "drag_file": "Glissez ou sélectionnez votre fichier",
       "kvkk_link": "Notice d'Information pour les Candidats",
-      "read_approved": "j'en ai pris connaissance.",
+      "read_approved": "je l'ai lue et comprise.",
       "cv_consent_label": "J'autorise l'évaluation des informations de mon CV pour des postes adaptés pouvant se présenter en dehors de l'offre actuelle.",
       "submit_btn": "Envoyer la Candidature",
       "security_label": "Vos données personnelles sont protégées en toute sécurité dans le cadre de la KVKK (loi turque sur la protection des données personnelles).",
       "cv_invalid": "Veuillez télécharger un fichier dans un format valide (PDF, DOCX) et de moins de 10 Mo.",
-      "kvkk_required": "Veuillez lire et confirmer la Notice d'Information pour les Candidats.",
+      "kvkk_required": "Veuillez confirmer que vous avez lu et compris la Notice d'Information pour les Candidats.",
       "cv_required": "Veuillez télécharger votre CV.",
       "apply_error": "La candidature n'a pas pu être envoyée. Veuillez réessayer.",
       "general_error": "Une erreur s'est produite. Veuillez réessayer.",
       "apply_note_prefix": "Madame, Monsieur,\n\nJe souhaite postuler au poste de {{title}}.",
       "file_hint": "PDF, DOCX (10 Mo max.)",
-      "kvkk_suffix": " : j'en ai pris connaissance."
+      "kvkk_suffix": " : je l'ai lue et comprise."
     },
     "internship_programs": "Programmes de Stage et Jeunes Diplômés",
     "internships_subtitle": "Nous formons les professionnels de demain.",
@@ -803,7 +799,7 @@
       "interest_label": "Produit qui Vous Intéresse",
       "message": "Votre Message",
       "message_placeholder": "Vous pouvez nous donner des informations détaillées sur votre projet ou votre demande...",
-      "kvkk_desc_prefix": "J'ai lu et j'accepte la",
+      "kvkk_desc_prefix": "J'ai lu et compris la",
       "kvkk_desc_suffix": " Clients - Fournisseurs.",
       "submit_btn": "Envoyer le Message",
       "interest": {
