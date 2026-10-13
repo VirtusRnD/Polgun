@@ -55,7 +55,7 @@
     "cta_products": "Explore all products and aquatic venue types",
     "cta_services": "Discover our turnkey project execution processes",
     "cta_projects": "Explore 3000+ completed global waterpark projects",
-    "cta_about": "Discover Polgün's 40-year story of innovation",
+    "cta_about": "Discover Polgün's story of more than 20 years",
     "cta_arge": "Innovative waterpark technologies and our registrations",
     "arge_products": "R&D Products",
     "region_projects": "{{region}} Projects",
@@ -120,7 +120,7 @@
     "experience": "Over 20 Years of Waterpark Experience",
     "desc": "Polgün is a strong solution partner that manages the design, engineering, production, and implementation processes of waterpark projects under one roof. With more than twenty years of industry experience, high production capacity, and international project experience, we offer reliable, innovative, and sustainable solutions for projects of every scale.",
     "power_title": "A Growing Power on the International Stage",
-    "power_desc1": "Polgün started operating in Muğla-Menteşe in 2002. Today it continues its operations with 4 main production centers in Muğla, together with its offices in Istanbul and Spain, the Antalya factory established in 2022, and the new Bursa investment.",
+    "power_desc1": "Polgün started operating in Muğla-Menteşe in 2002. Today it continues its operations with 4 main production centers in Muğla, together with its offices in Istanbul and Spain, the Antalya office opened in 2022, and the new Bursa investment.",
     "power_desc2": "With its 120,000 m² integrated production infrastructure, fully automated machine park, and expert staff, it is one of the leading companies in the sector able to carry out steel construction and polyester manufacturing under the same roof.",
     "power_desc3": "With 425 employees and a 30-person R&D team, Polgün manages all processes from design to production and realizes turnkey projects.",
     "arge_title": "Muğla's First and Only R&D Center",
@@ -908,7 +908,7 @@
       "projects": "Projects",
       "countries_sub": "Global Export & Presence",
       "projects_sub": "Completed Projects",
-      "production_sub": "3 Advanced Factories",
+      "production_sub": "4 Advanced Factories",
       "team_sub": "Engineering & Production Team"
     },
     "tags": {

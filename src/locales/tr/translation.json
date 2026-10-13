@@ -55,7 +55,7 @@
     "cta_products": "Tüm ürün ve mekan tiplerini keşfedin",
     "cta_services": "Anahtar teslim proje süreçlerimizi inceleyin",
     "cta_projects": "3000+ tamamlanan global su parkı projesini inceleyin",
-    "cta_about": "Polgün'ün 40 yıllık hikayesini keşfedin",
+    "cta_about": "Polgün'ün 20 yılı aşkın hikayesini keşfedin",
     "cta_arge": "Yenilikçi su parkı teknolojileri ve tescillerimiz",
     "arge_products": "Ar-Ge Ürünleri",
     "region_projects": "{{region}} Projeleri",
@@ -120,7 +120,7 @@
     "experience": "20 Yılı Aşkın Su Parkı Deneyimi",
     "desc": "Polgün, su parkı projelerinde tasarım, mühendislik, üretim ve uygulama süreçlerini tek çatı altında yöneten güçlü bir çözüm ortağıdır. Yirmi yılı aşkın sektör tecrübemiz, yüksek üretim kapasitemiz ve uluslararası proje deneyimimizle her ölçekte projeye güvenilir, yenilikçi ve sürdürülebilir çözümler sunuyoruz.",
     "power_title": "Uluslararası Sahnede Büyüyen Güç",
-    "power_desc1": "Polgün, 2002 yılında Muğla-Menteşe’de faaliyete başlamıştır. Bugün Muğla’daki 4 ana üretim merkezi ile birlikte İstanbul ve İspanya ofisleri, 2022 yılında kurulan Antalya fabrikası ve yeni Bursa yatırımıyla faaliyetlerini sürdürmektedir.",
+    "power_desc1": "Polgün, 2002 yılında Muğla-Menteşe’de faaliyete başlamıştır. Bugün Muğla’daki 4 ana üretim merkezi ile birlikte İstanbul ve İspanya ofisleri, 2022 yılında açılan Antalya ofisi ve yeni Bursa yatırımıyla faaliyetlerini sürdürmektedir.",
     "power_desc2": "120.000 m²’lik entegre üretim altyapısı, tam otomatik makine parkı ve uzman kadrosuyla; çelik konstrüksiyon ve polyester imalatını aynı çatı altında gerçekleştirebilen sektörün öncü firmalarından biridir.",
     "power_desc3": "425 çalışanı ve 30 kişilik Ar-Ge ekibiyle Polgün, tasarımdan üretime kadar tüm süreçleri yöneterek anahtar teslim projeler gerçekleştirmektedir.",
     "arge_title": "Muğla'nın İlk ve Tek Ar-Ge Merkezi",
@@ -908,7 +908,7 @@
       "projects": "Proje",
       "countries_sub": "Küresel İhracat & Varlık",
       "projects_sub": "Tamamlanan Proje",
-      "production_sub": "3 İleri Düzey Fabrika",
+      "production_sub": "4 İleri Düzey Fabrika",
       "team_sub": "Mühendis & Üretim Kadrosu"
     },
     "tags": {

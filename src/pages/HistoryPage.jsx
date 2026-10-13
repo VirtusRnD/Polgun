@@ -277,7 +277,7 @@ export default function HistoryPage({ setActivePage }) {
                     {t('history.stats.production', { defaultValue: 'Entegre Üretim' })}
                   </span>
                   <span className="text-[11px] text-[var(--th-text-muted)] font-medium block">
-                    {t('history.stats.production_sub', { defaultValue: '3 İleri Düzey Fabrika' })}
+                    {t('history.stats.production_sub', { defaultValue: '4 İleri Düzey Fabrika' })}
                   </span>
                 </div>
               </div>

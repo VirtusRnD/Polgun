@@ -352,7 +352,7 @@ export default function Navbar({ activePage, setActivePage, colorPalette, locati
                       {item.id === 'products' && t('nav.cta_products', { defaultValue: 'Tüm ürün ve mekan tiplerini keşfedin' })}
                       {item.id === 'services' && t('nav.cta_services', { defaultValue: 'Anahtar teslim proje süreçlerimizi inceleyin' })}
                       {item.id === 'projects' && t('nav.cta_projects', { defaultValue: '3000+ tamamlanan global su parkı projesini inceleyin' })}
-                      {item.id === 'about' && t('nav.cta_about', { defaultValue: "Polgün'ün 40 yıllık hikayesini keşfedin" })}
+                      {item.id === 'about' && t('nav.cta_about', { defaultValue: "Polgün'ün 20 yılı aşkın hikayesini keşfedin" })}
                       {(item.id === 'r-and-d' || item.id === 'arge') && t('nav.cta_arge', { defaultValue: 'Yenilikçi su parkı teknolojileri ve tescillerimiz' })}
                     </span>
                     <Link

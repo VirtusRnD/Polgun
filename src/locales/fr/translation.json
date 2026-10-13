@@ -55,7 +55,7 @@
     "cta_products": "Découvrez tous nos produits et types d'espaces",
     "cta_services": "Découvrez nos processus de projets clés en main",
     "cta_projects": "Découvrez plus de 3000 projets de parcs aquatiques réalisés dans le monde",
-    "cta_about": "Découvrez l'histoire de 40 ans de Polgün",
+    "cta_about": "Découvrez l'histoire de Polgün, riche de plus de 20 ans",
     "cta_arge": "Technologies innovantes pour parcs aquatiques et nos enregistrements",
     "arge_products": "Produits R&D",
     "region_projects": "Projets en {{region}}",
@@ -120,7 +120,7 @@
     "experience": "Plus de 20 Ans d'Expérience dans les Parcs Aquatiques",
     "desc": "Polgün est un partenaire solide qui gère sous un même toit les processus de conception, d'ingénierie, de production et de mise en œuvre des projets de parcs aquatiques. Grâce à plus de vingt ans d'expérience dans le secteur, à une grande capacité de production et à notre expérience des projets internationaux, nous proposons des solutions fiables, innovantes et durables pour des projets de toutes tailles.",
     "power_title": "Une Force qui Grandit sur la Scène Internationale",
-    "power_desc1": "Polgün a commencé ses activités à Muğla-Menteşe en 2002. Aujourd'hui, elle poursuit ses activités avec ses 4 principaux centres de production à Muğla, ses bureaux d'Istanbul et d'Espagne, l'usine d'Antalya créée en 2022 et le nouvel investissement de Bursa.",
+    "power_desc1": "Polgün a commencé ses activités à Muğla-Menteşe en 2002. Aujourd'hui, elle poursuit ses activités avec ses 4 principaux centres de production à Muğla, ses bureaux d'Istanbul et d'Espagne, le bureau d'Antalya ouvert en 2022 et le nouvel investissement de Bursa.",
     "power_desc2": "Avec ses 120 000 m² d'infrastructure de production intégrée, son parc de machines entièrement automatisé et son équipe d'experts, elle est l'une des entreprises pionnières du secteur capables de réaliser sous un même toit la fabrication de structures en acier et de polyester.",
     "power_desc3": "Avec 425 employés et une équipe R&D de 30 personnes, Polgün gère tous les processus, de la conception à la production, et réalise des projets clés en main.",
     "arge_title": "Le Premier et Unique Centre de R&D de Muğla",
@@ -908,7 +908,7 @@
       "projects": "Projets",
       "countries_sub": "Exportation et Présence Mondiales",
       "projects_sub": "Projets Réalisés",
-      "production_sub": "3 Usines de Pointe",
+      "production_sub": "4 Usines de Pointe",
       "team_sub": "Ingénieurs et Personnel de Production"
     },
     "tags": {
