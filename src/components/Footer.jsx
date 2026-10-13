@@ -408,7 +408,7 @@ export default function Footer({ setActivePage }) {
             </a>
             <span className="text-white/25">|</span>
             <a
-              href="/documents/kvkk/musteri-tedarikci-aydinlatma.doc"
+              href="/documents/kurumsal/kullanim-kosullari.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-white transition-colors"
@@ -426,7 +426,7 @@ export default function Footer({ setActivePage }) {
             </a>
             <span className="text-white/25">|</span>
             <a
-              href="/documents/kvkk/musteri-tedarikci-aydinlatma.doc"
+              href="/documents/kurumsal/etik-ilkeler.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-white transition-colors"
@@ -435,7 +435,7 @@ export default function Footer({ setActivePage }) {
             </a>
             <span className="text-white/25">|</span>
             <a
-              href="/documents/kvkk/musteri-tedarikci-aydinlatma.doc"
+              href="/documents/kurumsal/bilgi-guvenligi-politikasi.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-white transition-colors"
