@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 
 import bursaFactory from '../assets/factories/bursa-factory.avif'
+import istanbulFactory from '../assets/factories/istanbul-factory.png'
 import muglaFactory from '../assets/factories/mugla-factory.avif'
 
 export default function HistoryPage({ setActivePage }) {
@@ -93,6 +94,7 @@ export default function HistoryPage({ setActivePage }) {
   const factories = [
     { city: t('factories.names.mugla'), label: t('about.factories.mugla.label'), desc: t('about.factories.mugla.desc'), img: muglaFactory },
     { city: t('factories.names.bursa'), label: t('about.factories.bursa.label'), desc: t('about.factories.bursa.desc'), img: bursaFactory },
+    { city: t('factories.names.istanbul'), label: t('about.factories.istanbul.label'), desc: t('about.factories.istanbul.desc'), img: istanbulFactory },
   ]
 
   return (
@@ -313,10 +315,10 @@ export default function HistoryPage({ setActivePage }) {
             <h2 className="text-4xl font-black mb-6" style={{ color: 'var(--th-text)' }}>{t('history.growing_power')}</h2>
           </div>
           <div className="max-w-3xl mx-auto mb-16 text-center">
-            <p className="leading-relaxed mb-6" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 70%, transparent)' }}>
+            <p className="leading-relaxed text-justify mb-6" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 70%, transparent)' }}>
               {t('history.desc1')}
             </p>
-            <p className="leading-relaxed mb-6" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 70%, transparent)' }}>
+            <p className="leading-relaxed text-justify mb-6" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 70%, transparent)' }}>
               {t('history.desc2')}
             </p>
             <p className="leading-relaxed font-bold" style={{ color: 'var(--th-polgun-blue)' }}>

@@ -92,7 +92,7 @@
     "why_desc": "Polgün, su parkı projelerinde tasarım, mühendislik, üretim ve uygulama süreçlerini tek çatı altında yöneten güçlü bir çözüm ortağıdır. Yirmi yılı aşkın sektör tecrübemiz, yüksek üretim kapasitemiz ve uluslararası proje deneyimimizle, her ölçekte projeye güvenilir, yenilikçi ve sürdürülebilir çözümler sunuyoruz. Estetik, güvenlik, kalite ve operasyonel verimliliği bir araya getirerek, markalara ve yatırımcılara uzun vadeli değer katan özgün su parkı deneyimleri tasarlıyor ve hayata geçiriyoruz.",
     "why_pillars": {
       "service": "Tam Hizmet",
-      "service_desc": "Tasarım & üretim & montaj",
+      "service_desc": "Üretim ve Montaj",
       "countries": "70+ Ülke",
       "countries_desc": "Global deneyim",
       "quality": "ISO Kalitesi",
@@ -197,6 +197,10 @@
       "bursa": {
         "label": "Bursa Üretim Tesisi",
         "desc": "Polgün’ün kuzey üretim merkezi. Çelik parça imalatı ve yarı mamul üretiminin yapıldığı tesis."
+      },
+      "istanbul": {
+        "label": "Marmara Teknopark",
+        "desc": "Ar-Ge ve inovasyon çalışmalarının yürütüldüğü Marmara Teknopark ofisi. Yeni ürün geliştirme ve teknik analiz merkezi."
       }
     },
     "story_title": "Geleceği Tasarlıyoruz"

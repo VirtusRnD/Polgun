@@ -92,7 +92,7 @@
     "why_desc": "Polgün es un sólido socio de soluciones que gestiona bajo un mismo techo los procesos de diseño, ingeniería, producción e implementación de proyectos de parques acuáticos. Con más de veinte años de experiencia en el sector, una alta capacidad de producción y experiencia en proyectos internacionales, ofrecemos soluciones fiables, innovadoras y sostenibles para proyectos de cualquier escala. Combinando estética, seguridad, calidad y eficiencia operativa, diseñamos y hacemos realidad experiencias originales de parques acuáticos que aportan valor a largo plazo a marcas e inversores.",
     "why_pillars": {
       "service": "Servicio Integral",
-      "service_desc": "Diseño, producción y montaje",
+      "service_desc": "Producción y montaje",
       "countries": "70+ Países",
       "countries_desc": "Experiencia global",
       "quality": "Calidad ISO",
@@ -197,6 +197,10 @@
       "bursa": {
         "label": "Planta de Producción de Bursa",
         "desc": "Centro de producción del norte de Polgün. Planta donde se fabrican piezas de acero y productos semielaborados."
+      },
+      "istanbul": {
+        "label": "Tecnoparque de Mármara",
+        "desc": "Oficina del Tecnoparque de Mármara donde se llevan a cabo los trabajos de I+D e innovación. Centro de desarrollo de nuevos productos y análisis técnico."
       }
     },
     "story_title": "Diseñamos el Futuro"

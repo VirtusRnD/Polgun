@@ -92,7 +92,7 @@
     "why_desc": "Polgün is a strong solution partner managing design, engineering, production, and implementation processes of waterpark projects under a single roof. With more than twenty years of industry experience, high production capacity, and international project experience, we offer reliable, innovative, and sustainable solutions for projects of all sizes. Combining aesthetics, safety, quality, and operational efficiency, we design and build unique waterpark experiences that deliver long-term value for brands and investors.",
     "why_pillars": {
       "service": "Full Service",
-      "service_desc": "Design & production & assembly",
+      "service_desc": "Production and Assembly",
       "countries": "70+ Countries",
       "countries_desc": "Global experience",
       "quality": "ISO Quality",
@@ -197,6 +197,10 @@
       "bursa": {
         "label": "Bursa Production Facility",
         "desc": "Polgün's northern production center. The facility handles steel parts fabrication and semi-finished product manufacturing."
+      },
+      "istanbul": {
+        "label": "Marmara Technopark",
+        "desc": "Marmara Technopark office where R&D and innovation studies are conducted. New product development and technical analysis center."
       }
     },
     "story_title": "Designing the Future"
