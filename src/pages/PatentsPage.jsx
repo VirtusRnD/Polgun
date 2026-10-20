@@ -116,9 +116,7 @@ export default function PatentsPage() {
                 <span
                   className="block"
                   style={{
-                    color: 'var(--th-primary)',
-                    WebkitTextStroke: '15.5px var(--th-polgun-antrasit)',
-                    paintOrder: 'stroke fill',
+                    color: 'var(--th-polgun-antrasit)',
                   }}
                 >
                   {t('patentsPage.title', { defaultValue: 'Patentlerimiz' })}
