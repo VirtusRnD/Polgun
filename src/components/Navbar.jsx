@@ -140,7 +140,7 @@ export default function Navbar({ activePage, setActivePage, colorPalette, locati
         {
           title: null,
           links: [
-            { label: t('nav.arge_center', { defaultValue: 'Ar-Ge Merkezi' }), desc: '', page: 'r-and-d', to: '/r-and-d' },
+            { label: t('arge.projects_title', { defaultValue: 'Ar-Ge Projelerimiz' }), desc: '', page: 'r-and-d', anchor: 'arge-projelerimiz', to: '/r-and-d?anchor=arge-projelerimiz' },
             { label: t('nav.fikri_sinai_haklar', { defaultValue: 'Fikrî ve Sınai Mülkiyet' }), desc: '', page: 'r-and-d', anchor: 'fikri-ve-sinai-mulkiyet-haklari', to: '/r-and-d?anchor=fikri-ve-sinai-mulkiyet-haklari' },
             { label: t('nav.utility_models', { defaultValue: 'Faydalı Modeller' }), desc: '', page: 'r-and-d', anchor: 'faydali-modeller', to: '/r-and-d?anchor=faydali-modeller' },
             { label: t('nav.patents', { defaultValue: 'Patentler' }), desc: '', page: 'patents', to: '/patents' },

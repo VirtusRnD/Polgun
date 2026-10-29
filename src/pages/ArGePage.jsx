@@ -280,43 +280,40 @@ export default function ArGePage({ setActivePage }) {
       </section>
 
       {/* ── Ar-Ge Çıktıları ── */}
-      <section className="py-28" style={{ backgroundColor: 'var(--th-bg)' }}>
+      <section id="arge-projelerimiz" className="py-28" style={{ background: 'linear-gradient(160deg, var(--color-navy) 0%, #0A1F42 60%, var(--color-teal-dark) 140%)' }}>
         <div className="max-w-7xl mx-auto px-6 max-w-[var(--layout-max)] lg:px-12">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-black" style={{ color: 'var(--th-text)' }}>{t('arge.projects_title', { defaultValue: 'Ar-Ge Projelerimiz' })}</h2>
+            <div className="w-16 h-1 mx-auto mb-6 rounded-full" style={{ backgroundColor: 'var(--color-teal)' }} />
+            <h2 className="text-4xl md:text-5xl font-black text-white">{t('arge.projects_title', { defaultValue: 'Ar-Ge Projelerimiz' })}</h2>
           </div>
           <div className="grid sm:grid-cols-2 gap-8">
-            {/* Navatu Modal Tetikleyicisi */}
-            <div
-              className="rounded-2xl overflow-hidden group cursor-pointer"
-              onClick={() => setIsNavatuModalOpen(true)}
-              style={{ backgroundColor: 'var(--th-surface)', border: '1px solid color-mix(in srgb, var(--th-border) 12%, transparent)' }}
-            >
-              <div className="h-64 overflow-hidden">
-                <img src={navatu1} alt="Navatu" className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105" />
-              </div>
-              <div className="p-8">
-                <h3 className="text-2xl font-black mb-2" style={{ color: 'var(--th-text)' }}>Navatu</h3>
-                <p className="text-sm mb-4" style={{ color: 'var(--th-polgun-blue)' }}>{t('products.items.navatu.sub', { defaultValue: 'IAAPA Brass Ring Ödüllü Dalga Sistemi' })}</p>
-                <p className="text-sm leading-relaxed" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 80%, transparent)' }}>{t('arge.navatu_desc', { defaultValue: 'Doğal dalga deneyimini yeni bir boyuta taşıyan yenilikçi su parkı sistemi.' })}</p>
-              </div>
-            </div>
-
-            {/* Savana Modal Tetikleyicisi */}
-            <div
-              className="rounded-2xl overflow-hidden group cursor-pointer"
-              onClick={() => setIsSavanaModalOpen(true)}
-              style={{ backgroundColor: 'var(--th-surface)', border: '1px solid color-mix(in srgb, var(--th-border) 12%, transparent)' }}
-            >
-              <div className="h-64 overflow-hidden">
-                <img src={savana1} alt="Savana" className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105" />
-              </div>
-              <div className="p-8">
-                <h3 className="text-2xl font-black mb-2" style={{ color: 'var(--th-text)' }}>Savana</h3>
-                <p className="text-sm mb-4" style={{ color: 'var(--th-polgun-blue)' }}>{t('arge.savana_sub', { defaultValue: 'Çoklu Kayma Yollu Temalı Su Kaydırağı' })}</p>
-                <p className="text-sm leading-relaxed" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 80%, transparent)' }}>{t('arge.savana_desc', { defaultValue: 'Aynı gövdede dört farklı kayma yolunu bir araya getiren yenilikçi Ar-Ge projesi.' })}</p>
-              </div>
-            </div>
+            {[
+              { name: 'Navatu', img: navatu1, open: () => setIsNavatuModalOpen(true), award: t('products.values.iaapa_brass_ring', { defaultValue: 'IAAPA Brass Ring' }), sub: t('products.items.navatu.sub', { defaultValue: 'IAAPA Brass Ring Ödüllü Dalga Sistemi' }), desc: t('arge.navatu_desc', { defaultValue: 'Doğal dalga deneyimini yeni bir boyuta taşıyan yenilikçi su parkı sistemi.' }) },
+              { name: 'Savana', img: savana1, open: () => setIsSavanaModalOpen(true), sub: t('arge.savana_sub', { defaultValue: 'Çoklu Kayma Yollu Temalı Su Kaydırağı' }), desc: t('arge.savana_desc', { defaultValue: 'Aynı gövdede dört farklı kayma yolunu bir araya getiren yenilikçi Ar-Ge projesi.' }) },
+            ].map((p) => (
+              <button
+                key={p.name}
+                type="button"
+                onClick={p.open}
+                className="relative aspect-[4/5] md:aspect-[4/3] rounded-3xl overflow-hidden group text-start shadow-2xl ring-1 ring-white/10 hover:ring-[var(--color-teal)] hover:scale-[1.03] hover:-translate-y-1 hover:z-10 transition duration-300 motion-reduce:hover:scale-100 motion-reduce:hover:translate-y-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-teal)]"
+              >
+                <img src={p.img} alt={p.name} className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, rgba(10,31,66,0.95) 0%, rgba(10,31,66,0.6) 40%, transparent 70%)' }} />
+                {p.award && (
+                  <span className="absolute top-5 start-5 inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider text-white shadow-lg" style={{ backgroundColor: 'var(--color-teal)' }}>
+                    🏆 {p.award}
+                  </span>
+                )}
+                <div className="absolute inset-x-0 bottom-0 p-8">
+                  <p className="text-xs font-bold uppercase tracking-[0.2em] mb-2" style={{ color: 'var(--color-teal)' }}>{p.sub}</p>
+                  <h3 className="text-4xl md:text-5xl font-black text-white mb-3">{p.name}</h3>
+                  <p className="text-sm md:text-base leading-relaxed text-white/80 max-w-md mb-5">{p.desc}</p>
+                  <span className="inline-flex items-center gap-2 text-sm font-bold text-white border-b-2 pb-1 transition group-hover:gap-3" style={{ borderColor: 'var(--color-teal)' }}>
+                    {t('common.learn_more', { defaultValue: 'İncele' })} <span aria-hidden="true" className="rtl:rotate-180">→</span>
+                  </span>
+                </div>
+              </button>
+            ))}
           </div>
         </div>
       </section>
