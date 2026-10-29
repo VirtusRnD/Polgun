@@ -125,7 +125,7 @@ export default function HistoryPage({ setActivePage }) {
                 </span>
               </h1>
             </div>
-            <p className="text-white/70 text-lg leading-relaxed text-justify">
+            <p className="text-white/70 text-lg leading-relaxed text-start">
               {t('history.desc', { defaultValue: 'Yıllar içinde üretim gücümüzü, mühendislik yetkinliğimizi ve global proje deneyimimizi sürekli geliştirerek büyüdük. Attığımız her adım; daha güçlü bir üretim altyapısının, yenilikçi ürünlerin ve bugün 70’ten fazla ülkeye ulaşan Polgün yolculuğunun bir parçası oldu.' })}
             </p>
           </div>
@@ -313,10 +313,10 @@ export default function HistoryPage({ setActivePage }) {
             <h2 className="text-4xl font-black mb-6" style={{ color: 'var(--th-text)' }}>{t('history.growing_power')}</h2>
           </div>
           <div className="max-w-3xl mx-auto mb-16 text-center">
-            <p className="leading-relaxed text-justify mb-6" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 70%, transparent)' }}>
+            <p className="leading-relaxed text-start mb-6" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 70%, transparent)' }}>
               {t('history.desc1')}
             </p>
-            <p className="leading-relaxed text-justify mb-6" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 70%, transparent)' }}>
+            <p className="leading-relaxed text-start mb-6" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 70%, transparent)' }}>
               {t('history.desc2')}
             </p>
             <p className="leading-relaxed font-bold" style={{ color: 'var(--th-polgun-blue)' }}>

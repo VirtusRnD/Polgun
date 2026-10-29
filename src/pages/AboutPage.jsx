@@ -315,7 +315,7 @@ export default function AboutPage() {
                 </span>
               </h1>
             </div>
-            <p className="text-white/70 text-lg leading-relaxed text-justify">
+            <p className="text-white/70 text-lg leading-relaxed text-start">
               {t('about.desc')}
             </p>
           </div>
@@ -331,13 +331,13 @@ export default function AboutPage() {
               <h2 className="text-4xl font-black leading-tight mb-8" style={{ color: 'var(--th-text)' }}>
                 {t('about.power_title')}
               </h2>
-              <p className="text-justify leading-relaxed mb-6" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 70%, transparent)' }}>
+              <p className="text-start leading-relaxed mb-6" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 70%, transparent)' }}>
                 {t('about.power_desc1')}
               </p>
-              <p className="text-justify leading-relaxed mb-6" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 70%, transparent)' }}>
+              <p className="text-start leading-relaxed mb-6" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 70%, transparent)' }}>
                 {t('about.power_desc2')}
               </p>
-              <p className="text-justify leading-relaxed" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 70%, transparent)' }}>
+              <p className="text-start leading-relaxed" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 70%, transparent)' }}>
                 {t('about.power_desc3')}
               </p>
             </div>
@@ -352,7 +352,7 @@ export default function AboutPage() {
           <div className="text-center mb-20">
             <p className="text-xs font-bold tracking-[0.25em] uppercase mb-4" style={{ color: 'var(--th-polgun-blue)' }}>{t('about.production_title')}</p>
             <h2 className="text-4xl font-black mb-6" style={{ color: 'var(--th-text)' }}>{t('about.production_subtitle')}</h2>
-            <p className="max-w-2xl mx-auto text-justify leading-relaxed" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 70%, transparent)' }}>
+            <p className="max-w-2xl mx-auto text-start leading-relaxed" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 70%, transparent)' }}>
               {t('about.production_desc')}
             </p>
           </div>
@@ -361,7 +361,7 @@ export default function AboutPage() {
               <div key={i} className={`grid lg:grid-cols-2 gap-16 items-center ${i % 2 === 1 ? 'lg:[&>*:first-child]:order-2' : ''}`}>
                 <div>
                   <h3 className="text-2xl font-black mb-5" style={{ color: 'var(--th-text)' }}>{t('about.production_sections.' + sec.id + '.title')}</h3>
-                  <p className="text-justify leading-relaxed" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 70%, transparent)' }}>{t('about.production_sections.' + sec.id + '.desc')}</p>
+                  <p className="text-start leading-relaxed" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 70%, transparent)' }}>{t('about.production_sections.' + sec.id + '.desc')}</p>
                 </div>
                 <div className={sec.img2 ? 'grid grid-cols-2 gap-3' : ''}>
                   <img src={sec.img} alt={t('about.production_sections.' + sec.id + '.title')} className="w-full aspect-[4/3] rounded-2xl object-cover" />
@@ -397,25 +397,25 @@ export default function AboutPage() {
               <h2 className="text-3xl font-black leading-tight mb-6" style={{ color: 'var(--th-text)' }}>
                 {t('about.arge_title')}
               </h2>
-              <p className="text-justify leading-relaxed mb-6" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 70%, transparent)' }}>
+              <p className="text-start leading-relaxed mb-6" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 70%, transparent)' }}>
                 {t('about.arge_desc1')}
               </p>
-              <p className="text-justify leading-relaxed mb-6" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 70%, transparent)' }}>
+              <p className="text-start leading-relaxed mb-6" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 70%, transparent)' }}>
                 {t('about.arge_desc2')}
               </p>
-              <p className="text-justify leading-relaxed mb-8" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 70%, transparent)' }}>
+              <p className="text-start leading-relaxed mb-8" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 70%, transparent)' }}>
                 {t('about.arge_desc3')}
               </p>
               <div className="grid sm:grid-cols-2 gap-4">
                 <div className="p-5 rounded-2xl" style={{ backgroundColor: 'color-mix(in srgb, var(--th-polgun-blue) 8%, transparent)', border: '1px solid color-mix(in srgb, var(--th-polgun-blue) 15%, transparent)' }}>
                   <p className="text-xs font-black tracking-widest uppercase mb-2" style={{ color: 'var(--th-polgun-blue)' }}>{t('about.misyon')}</p>
-                  <p className="text-sm text-justify leading-relaxed" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 70%, transparent)' }}>
+                  <p className="text-sm text-start leading-relaxed" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 70%, transparent)' }}>
                     {t('about.misyon_desc')}
                   </p>
                 </div>
                 <div className="p-5 rounded-2xl" style={{ backgroundColor: 'color-mix(in srgb, var(--th-primary) 8%, transparent)', border: '1px solid color-mix(in srgb, var(--th-primary) 15%, transparent)' }}>
                   <p className="text-xs font-black tracking-widest uppercase mb-2" style={{ color: 'var(--th-primary)' }}>{t('about.vizyon')}</p>
-                  <p className="text-sm text-justify leading-relaxed" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 70%, transparent)' }}>
+                  <p className="text-sm text-start leading-relaxed" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 70%, transparent)' }}>
                     {t('about.vizyon_desc')}
                   </p>
                 </div>
@@ -659,13 +659,13 @@ export default function AboutPage() {
             <h2 className="text-4xl font-black mb-6" style={{ color: 'var(--th-text)' }}>{t('history.growing_power')}</h2>
           </div>
           <div className="max-w-3xl mx-auto mb-16 text-center">
-            <p className="leading-relaxed text-justify mb-6" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 70%, transparent)' }}>
+            <p className="leading-relaxed text-start mb-6" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 70%, transparent)' }}>
               {t('history.desc1')}
             </p>
-            <p className="leading-relaxed text-justify mb-6" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 70%, transparent)' }}>
+            <p className="leading-relaxed text-start mb-6" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 70%, transparent)' }}>
               {t('history.desc2')}
             </p>
-            <p className="leading-relaxed text-justify font-bold" style={{ color: 'var(--th-polgun-blue)' }}>
+            <p className="leading-relaxed text-start font-bold" style={{ color: 'var(--th-polgun-blue)' }}>
               {t('history.bold_summary')}
             </p>
           </div>
@@ -678,7 +678,7 @@ export default function AboutPage() {
                 <div className="p-6">
                   <span className="text-xs font-black tracking-widest uppercase px-2.5 py-1 rounded-full mb-3 inline-block" style={{ backgroundColor: 'color-mix(in srgb, var(--th-primary) 10%, transparent)', color: 'var(--th-primary)' }}>{fac.city}</span>
                   <h4 className="font-black text-base mb-2" style={{ color: 'var(--th-text)' }}>{fac.label}</h4>
-                  <p className="text-sm text-justify  leading-relaxed" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 70%, transparent)' }}>{fac.desc}</p>
+                  <p className="text-sm text-start  leading-relaxed" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 70%, transparent)' }}>{fac.desc}</p>
                 </div>
               </div>
             ))}

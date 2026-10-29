@@ -829,7 +829,7 @@ export default function ProductsPage() {
 										{product.title}
 									</h2>
 									<p
-										className="text-sm leading-relaxed mb-6 text-justify"
+										className="text-sm leading-relaxed mb-6 text-start"
 										style={{
 											color:
 												'color-mix(in srgb,var(--th-text-muted) 70%,transparent)',

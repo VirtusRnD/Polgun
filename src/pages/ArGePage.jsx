@@ -241,36 +241,36 @@ export default function ArGePage({ setActivePage }) {
         <div className="max-w-4xl mx-auto px-6 max-w-[var(--layout-max)] lg:px-12">
           <div className="prose prose-lg">
             <h2 className="text-3xl font-black mb-6" style={{ color: 'var(--th-text)' }}>{t('about.story_title', { defaultValue: 'Geleceği Tasarlıyoruz' })}</h2>
-            <p className="mb-6 leading-relaxed text-justify" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 80%, transparent)' }}>
+            <p className="mb-6 leading-relaxed text-start" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 80%, transparent)' }}>
               {t('arge.p1', { defaultValue: '2021 yılında Bakanlık onayıyla Ar-Ge Merkezi statüsü kazanan merkezimiz, Muğla’nın ilk ve tek Ar-Ge Merkezi olma niteliğiyle sektörümüzde özgün ürün geliştirme, yerlileştirme ve teknoloji üretme çalışmalarına öncülük etmektedir.' })}
             </p>
-            <p className="mb-6 leading-relaxed text-justify" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 80%, transparent)' }}>
+            <p className="mb-6 leading-relaxed text-start" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 80%, transparent)' }}>
               {t('arge.p2', { defaultValue: 'Ar-Ge Merkezimizde; araştırmacı, teknisyen ve destek personeli statüsünde görev yapan 30 tam zaman eşdeğer nitelikli Ar-Ge personelimiz ile yeni ürün tasarımı, mühendislik analizleri, prototipleme, test, doğrulama, üretim yöntemi geliştirme ve fikri mülkiyet süreçlerini bütüncül bir yaklaşımla yürütüyoruz.' })}
             </p>
-            <p className="mb-6 leading-relaxed text-justify" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 80%, transparent)' }}>
+            <p className="mb-6 leading-relaxed text-start" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 80%, transparent)' }}>
               {t('arge.p3', { defaultValue: 'Ülkemiz için millileştirme ve yerlileştirme çalışmalarını stratejik bir sorumluluk olarak görüyor; dışa bağımlılığı azaltan, hızlı uygulanabilir ve müşteri ihtiyaçlarına doğrudan yanıt veren çözümler geliştiriyoruz. Tasarımdan üretime, analizden saha uygulamasına kadar tüm Ar-Ge süreçlerimizde güvenlik, kalite, uluslararası standartlara uygunluk ve sürdürülebilirlik ilkelerini esas alıyoruz.' })}
             </p>
 
             <h3 className="text-2xl font-black mt-12 mb-4" style={{ color: 'var(--th-text)' }}>{t('arge.innovative_title', { defaultValue: 'Yenilikçi Ürünler' })}</h3>
-            <p className="mb-6 leading-relaxed text-justify" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 80%, transparent)' }}>
+            <p className="mb-6 leading-relaxed text-start" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 80%, transparent)' }}>
               {t('arge.p4', { defaultValue: 'Polgün Ar-Ge Merkezi’nde geliştirilen projeler; su tasarrufu, kullanıcı güvenliği, kapasite artışı, tematik deneyim, modüler üretim, kompozit malzeme teknolojileri ve yeni nesil su kaydırağı geometrileri gibi alanlarda sektöre değer katmaktadır. Navatu, Savana, Monarch Butterfly ve Eclipse gibi yenilikçi ürün projelerimiz; Polgün’ün tasarım, mühendislik ve üretim gücünü uluslararası pazarda temsil eden önemli Ar-Ge çıktıları arasında yer almaktadır.' })}
             </p>
 
             <h3 className="text-2xl font-black mt-12 mb-4" style={{ color: 'var(--th-text)' }}>{t('arge.continuous_title', { defaultValue: 'Sürekli Gelişim' })}</h3>
-            <p className="mb-6 leading-relaxed text-justify" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 80%, transparent)' }}>
+            <p className="mb-6 leading-relaxed text-start" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 80%, transparent)' }}>
               {t('arge.p5', { defaultValue: 'Ar-Ge faaliyetlerimiz yalnızca yeni ürün geliştirme ile sınırlı değildir. Aynı zamanda mevcut ürünlerin performansını artırmak, üretim süreçlerini iyileştirmek, çevresel etkileri azaltmak, malzeme verimliliğini yükseltmek ve uluslararası pazarlarda rekabet gücümüzü artırmak amacıyla sürekli geliştirme çalışmaları yürütüyoruz. Akademik iş birlikleri, bilimsel yayınlar, patent ve tasarım tescili süreçleri ile kurumsal bilgi birikimimizi güçlendiriyor; elde edilen çıktıları sürdürülebilir bir inovasyon kültürüne dönüştürüyoruz.' })}
             </p>
 
             <div className="grid md:grid-cols-2 gap-8 mt-16">
               <div className="p-8 rounded-2xl" style={{ backgroundColor: 'var(--th-bg)', border: '1px solid color-mix(in srgb, var(--th-primary) 20%, transparent)' }}>
                 <h4 className="text-xl font-black mb-4" style={{ color: 'var(--th-primary)' }}>{t('arge.misyon', { defaultValue: 'Misyonumuz' })}</h4>
-                <p className="text-sm leading-relaxed text-justify" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 80%, transparent)' }}>
+                <p className="text-sm leading-relaxed text-start" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 80%, transparent)' }}>
                   {t('arge.misyon_desc')}
                 </p>
               </div>
               <div className="p-8 rounded-2xl" style={{ backgroundColor: 'var(--th-bg)', border: '1px solid color-mix(in srgb, var(--th-polgun-blue) 20%, transparent)' }}>
                 <h4 className="text-xl font-black mb-4" style={{ color: 'var(--th-polgun-blue)' }}>{t('arge.vizyon', { defaultValue: 'Vizyonumuz' })}</h4>
-                <p className="text-sm leading-relaxed text-justify" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 80%, transparent)' }}>
+                <p className="text-sm leading-relaxed text-start" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 80%, transparent)' }}>
                   {t('arge.vizyon_desc')}
                 </p>
               </div>

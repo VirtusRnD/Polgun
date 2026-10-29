@@ -591,7 +591,7 @@ export default function HomePage() {
               <h2 className="font-black leading-tight mb-6" style={{ color: 'var(--th-text)', fontSize: 'clamp(1.5rem,2.5vw,2.25rem)' }}>
                 {t('home.why_subtitle')}
               </h2>
-              <p className="leading-relaxed mb-6 text-base text-justify" style={{ color: 'color-mix(in srgb,var(--th-text-muted) 70%,transparent)' }}>
+              <p className="leading-relaxed mb-6 text-base text-start" style={{ color: 'color-mix(in srgb,var(--th-text-muted) 70%,transparent)' }}>
                 {t('home.why_desc')}
               </p>
               <div className="grid grid-cols-2 gap-3 mb-8">

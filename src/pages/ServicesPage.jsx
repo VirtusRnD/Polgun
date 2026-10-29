@@ -132,7 +132,7 @@ export default function ServicesPage({ setActivePage }) {
 								</span>
 							</h1>
 						</div>
-						<p className="text-white/70 text-lg leading-relaxed text-justify">
+						<p className="text-white/70 text-lg leading-relaxed text-start">
 							{t('services.desc')}
 						</p>
 					</div>
@@ -187,7 +187,7 @@ export default function ServicesPage({ setActivePage }) {
 											<h2 className="font-black leading-tight" style={{ color: 'var(--th-text)', fontSize: 'clamp(1.5rem,2.5vw,2rem)' }}>{step.title}</h2>
 										</div>
 									</div>
-									<p className="leading-relaxed mb-8 text-justify" style={{ color: 'color-mix(in srgb,var(--th-text-muted) 70%,transparent)' }}>{step.desc}</p>
+									<p className="leading-relaxed mb-8 text-start" style={{ color: 'color-mix(in srgb,var(--th-text-muted) 70%,transparent)' }}>{step.desc}</p>
 
 								</div>
 
