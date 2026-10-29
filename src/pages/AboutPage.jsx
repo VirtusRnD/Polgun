@@ -350,11 +350,8 @@ export default function AboutPage() {
       <section className="py-28" style={{ backgroundColor: 'var(--th-surface)' }}>
         <div className="max-w-7xl mx-auto px-6 max-w-[var(--layout-max)] lg:px-12">
           <div className="text-center mb-20">
-            <p className="text-xs font-bold tracking-[0.25em] uppercase mb-4" style={{ color: 'var(--th-polgun-blue)' }}>{t('about.production_title')}</p>
-            <h2 className="text-4xl font-black mb-6" style={{ color: 'var(--th-text)' }}>{t('about.production_subtitle')}</h2>
-            <p className="max-w-2xl mx-auto text-start leading-relaxed" style={{ color: 'color-mix(in srgb, var(--th-text-muted) 70%, transparent)' }}>
-              {t('about.production_desc')}
-            </p>
+            <p className="text-xl font-bold tracking-[0.25em] uppercase mb-4" style={{ color: 'var(--th-polgun-blue)' }}>{t('about.production_title')}</p>
+            
           </div>
           <div className="flex flex-col gap-24">
             {productionSections.map((sec, i) => (

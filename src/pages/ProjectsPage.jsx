@@ -473,9 +473,11 @@ export default function ProjectsPage({ setActivePage }) {
               >{typeTranslationMap[t] || t}</button>
             ))}
           </div>
-          <div className="ml-auto text-xs font-bold shrink-0" style={{ color: 'var(--th-text-muted)' }}>
+           {/**
+            <div className="ml-auto text-xs font-bold shrink-0" style={{ color: 'var(--th-text-muted)' }}>
             {filtered.length} {t('projects.stats.project_count', { defaultValue: 'proje' })}
-          </div>
+          </div> */}
+          
         </div>
       </div>
 
