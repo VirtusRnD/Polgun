@@ -390,7 +390,7 @@ export default function Footer({ setActivePage }) {
           {/* Orta: Yasal Politikalar */}
           <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-2">
             <a
-              href="/documents/kurumsal/aydinlatma-metni.pdf"
+              href="/document?src=/documents/kurumsal/aydinlatma-metni.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-white transition-colors"
@@ -399,7 +399,7 @@ export default function Footer({ setActivePage }) {
             </a>
             <span className="text-white/25">|</span>
             <a
-              href="/documents/kvkk/cerez-aydinlatma.pdf"
+              href="/document?src=/documents/kvkk/cerez-aydinlatma.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-white transition-colors"
@@ -408,7 +408,7 @@ export default function Footer({ setActivePage }) {
             </a>
             <span className="text-white/25">|</span>
             <a
-              href="/documents/kurumsal/kullanim-kosullari.pdf"
+              href="/document?src=/documents/kurumsal/kullanim-kosullari.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-white transition-colors"
@@ -417,7 +417,7 @@ export default function Footer({ setActivePage }) {
             </a>
             <span className="text-white/25">|</span>
             <a
-              href="/documents/kvkk/musteri-tedarikci-aydinlatma.pdf"
+              href="/document?src=/documents/kvkk/musteri-tedarikci-aydinlatma.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-white transition-colors"
@@ -426,7 +426,7 @@ export default function Footer({ setActivePage }) {
             </a>
             <span className="text-white/25">|</span>
             <a
-              href="/documents/kurumsal/etik-ilkeler.pdf"
+              href="/document?src=/documents/kurumsal/etik-ilkeler.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-white transition-colors"
@@ -435,7 +435,7 @@ export default function Footer({ setActivePage }) {
             </a>
             <span className="text-white/25">|</span>
             <a
-              href="/documents/kurumsal/bilgi-guvenligi-politikasi.pdf"
+              href="/document?src=/documents/kurumsal/bilgi-guvenligi-politikasi.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-white transition-colors"

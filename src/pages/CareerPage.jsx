@@ -1088,7 +1088,7 @@ export default function CareerPage() {
                           className="mt-0.5 rounded text-blue-500 focus:ring-blue-400 w-3.5 h-3.5 border-gray-300 cursor-pointer"
                         />
                         <span className="text-[10px] text-gray-500 leading-normal">
-                          <a href="/documents/kvkk/calisan-adayi-aydinlatma.pdf" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline font-semibold">{t('career.form.kvkk_link', { defaultValue: 'Aday Çalışan Aydınlatma Metni' })}</a>{t('career.form.kvkk_suffix', { defaultValue: ` ${t('career.form.read_approved', { defaultValue: 'okudum ve anladım.' })}` })}
+                          <a href="/document?src=/documents/kvkk/calisan-adayi-aydinlatma.pdf" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline font-semibold">{t('career.form.kvkk_link', { defaultValue: 'Aday Çalışan Aydınlatma Metni' })}</a>{t('career.form.kvkk_suffix', { defaultValue: ` ${t('career.form.read_approved', { defaultValue: 'okudum ve anladım.' })}` })}
                         </span>
                       </label>
 

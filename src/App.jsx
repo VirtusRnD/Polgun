@@ -39,6 +39,7 @@ import PatentsPage from './pages/PatentsPage';
 import KnowledgeCenterPage from './pages/KnowledgeCenterPage';
 import KnowledgeCenterDetailPage from './pages/KnowledgeCenterDetailPage';
 import NotFoundPage from './pages/NotFoundPage';
+import DocumentPage from './pages/DocumentPage';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -212,6 +213,7 @@ export default function App() {
           <Route path="/history" element={<HistoryPage />} />
           <Route path="/awards" element={<AwardsPage />} />
           <Route path="/news" element={<NewsPage />} />
+          <Route path="/document" element={<DocumentPage />} />
           <Route path="/knowledge-center" element={<KnowledgeCenterPage />} />
           <Route path="/bilgi-merkezi" element={<Navigate to="/knowledge-center" replace />} />
           <Route path="/knowled-center" element={<Navigate to="/knowledge-center" replace />} />
