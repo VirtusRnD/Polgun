@@ -5,19 +5,9 @@ import React, { useState, useEffect, useRef } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useNavigate } from 'react-router-dom'
 import heroImage from '../assets/polgun-featured-projects-4.avif'
-import navatu1 from '../assets/navatu/navatu1.avif'
+
 import savana1 from '../assets/savana/savana5.avif'
 import n1 from '../assets/navatu/1.avif'
-import n2 from '../assets/navatu/2.avif'
-import n3 from '../assets/navatu/3.avif'
-import n4 from '../assets/navatu/4.avif'
-import n5 from '../assets/navatu/5.avif'
-import n6 from '../assets/navatu/6.avif'
-import n7 from '../assets/navatu/7.avif'
-import n8 from '../assets/navatu/8.avif'
-import n9 from '../assets/navatu/9.avif'
-import n10 from '../assets/navatu/10.avif'
-import n11 from '../assets/navatu/11.avif'
 import s1 from '../assets/savana/1.avif'
 import s2 from '../assets/savana/2.avif'
 import s3 from '../assets/savana/3.avif'
@@ -32,17 +22,8 @@ const navatuProjectData = {
   location: 'IAAPA Brass Ring Ödüllü Dalga Sistemi',
   type: 'Ar-Ge Projesi',
   slides: [
-    { img: n1, title: 'Navatu Tasarım 1', location: 'Ar-Ge Merkezi' },
-    { img: n2, title: 'Navatu Tasarım 2', location: 'Ar-Ge Merkezi' },
-    { img: n3, title: 'Navatu Tasarım 3', location: 'Ar-Ge Merkezi' },
-    { img: n4, title: 'Navatu Tasarım 4', location: 'Ar-Ge Merkezi' },
-    { img: n5, title: 'Navatu Tasarım 5', location: 'Ar-Ge Merkezi' },
-    { img: n6, title: 'Navatu Tasarım 6', location: 'Ar-Ge Merkezi' },
-    { img: n7, title: 'Navatu Tasarım 7', location: 'Ar-Ge Merkezi' },
-    { img: n8, title: 'Navatu Tasarım 8', location: 'Ar-Ge Merkezi' },
-    { img: n9, title: 'Navatu Tasarım 9', location: 'Ar-Ge Merkezi' },
-    { img: n10, title: 'Navatu Tasarım 10', location: 'Ar-Ge Merkezi' },
-    { img: n11, title: 'Navatu Tasarım 11', location: 'Ar-Ge Merkezi' },
+    { img: n1, title: 'Navatu Tasarım 1', location: 'Ar-Ge Merkezi' }
+    
   ]
 }
 
@@ -288,7 +269,7 @@ export default function ArGePage({ setActivePage }) {
           </div>
           <div className="grid sm:grid-cols-2 gap-8">
             {[
-              { name: 'Navatu', img: navatu1, open: () => setIsNavatuModalOpen(true), award: t('products.values.iaapa_brass_ring', { defaultValue: 'IAAPA Brass Ring' }), sub: t('products.items.navatu.sub', { defaultValue: 'IAAPA Brass Ring Ödüllü Dalga Sistemi' }), desc: t('arge.navatu_desc', { defaultValue: 'Doğal dalga deneyimini yeni bir boyuta taşıyan yenilikçi su parkı sistemi.' }) },
+              { name: 'Navatu', img: n1, open: () => setIsNavatuModalOpen(true), award: t('products.values.iaapa_brass_ring', { defaultValue: 'IAAPA Brass Ring' }), sub: t('products.items.navatu.sub', { defaultValue: 'IAAPA Brass Ring Ödüllü Dalga Sistemi' }), desc: t('arge.navatu_desc', { defaultValue: 'Doğal dalga deneyimini yeni bir boyuta taşıyan yenilikçi su parkı sistemi.' }) },
               { name: 'Savana', img: savana1, open: () => setIsSavanaModalOpen(true), sub: t('arge.savana_sub', { defaultValue: 'Çoklu Kayma Yollu Temalı Su Kaydırağı' }), desc: t('arge.savana_desc', { defaultValue: 'Aynı gövdede dört farklı kayma yolunu bir araya getiren yenilikçi Ar-Ge projesi.' }) },
             ].map((p) => (
               <button
