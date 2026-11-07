@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next'
 import bursaFactory from '../assets/factories/bursa-factory.avif'
 import istanbulFactory from '../assets/factories/istanbul-factory.png'
 import muglaFactory from '../assets/factories/mugla-factory.avif'
+import antalyaOffice from '../assets/factories/antalya-office.webp'
 
 export default function HistoryPage({ setActivePage }) {
   const { t } = useTranslation()
@@ -95,6 +96,7 @@ export default function HistoryPage({ setActivePage }) {
     { city: t('factories.names.mugla'), label: t('about.factories.mugla.label'), desc: t('about.factories.mugla.desc'), img: muglaFactory },
     { city: t('factories.names.bursa'), label: t('about.factories.bursa.label'), desc: t('about.factories.bursa.desc'), img: bursaFactory },
     { city: t('factories.names.istanbul'), label: t('about.factories.istanbul.label'), desc: t('about.factories.istanbul.desc'), img: istanbulFactory },
+    { city: t('factories.names.antalya'), label: t('contact.offices.antalya'), desc: t('about.factories.antalya.desc'), img: antalyaOffice },
   ]
 
   return (
@@ -323,7 +325,7 @@ export default function HistoryPage({ setActivePage }) {
               {t('history.bold_summary')}
             </p>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {factories.map((fac, i) => (
               <div key={i} className="rounded-2xl overflow-hidden group" style={{ backgroundColor: 'var(--th-surface)', border: '1px solid color-mix(in srgb, var(--th-border) 12%, transparent)', boxShadow: '0 4px 24px rgba(0,0,0,0.06)' }}>
                 <div className="overflow-hidden h-52">

@@ -201,6 +201,9 @@
       "istanbul": {
         "label": "Marmara Teknopark",
         "desc": "Ar-Ge ve inovasyon çalışmalarının yürütüldüğü Marmara Teknopark ofisi. Yeni ürün geliştirme ve teknik analiz merkezi."
+      },
+      "antalya": {
+        "desc": "Soğucaksu Mahallesi, Serik Caddesi No:113, Antalya"
       }
     },
     "story_title": "Geleceği Tasarlıyoruz"
@@ -876,6 +879,7 @@
     "desc": "Üretim gücümüzü yansıtan modern tesislerimizde, en yüksek kalite standartlarında, doğaya ve insana saygılı bir şekilde üretim yapıyoruz.",
     "names": {
       "istanbul": "İstanbul",
+      "antalya": "Antalya",
       "bursa": "Bursa",
       "mugla": "Muğla",
       "france": "Fransa",

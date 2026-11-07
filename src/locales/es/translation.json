@@ -201,6 +201,9 @@
       "istanbul": {
         "label": "Tecnoparque de Mármara",
         "desc": "Oficina del Tecnoparque de Mármara donde se llevan a cabo los trabajos de I+D e innovación. Centro de desarrollo de nuevos productos y análisis técnico."
+      },
+      "antalya": {
+        "desc": "Soğucaksu Mahallesi, Serik Caddesi No:113, Antalya"
       }
     },
     "story_title": "Diseñamos el Futuro"
@@ -876,6 +879,7 @@
     "desc": "En nuestras modernas instalaciones, que reflejan nuestra capacidad de producción, fabricamos con los más altos estándares de calidad y respetando la naturaleza y a las personas.",
     "names": {
       "istanbul": "Estambul",
+      "antalya": "Antalya",
       "bursa": "Bursa",
       "mugla": "Muğla",
       "france": "Francia",

@@ -201,6 +201,9 @@
       "istanbul": {
         "label": "马尔马拉科技园",
         "desc": "开展研发与创新工作的马尔马拉科技园办公室。新产品开发与技术分析中心。"
+      },
+      "antalya": {
+        "desc": "Soğucaksu Mahallesi, Serik Caddesi No:113, Antalya"
       }
     },
     "story_title": "设计未来"
@@ -876,6 +879,7 @@
     "desc": "在体现我们生产实力的现代化工厂中，我们以最高质量标准、以尊重自然和人的方式进行生产。",
     "names": {
       "istanbul": "伊斯坦布尔",
+      "antalya": "安塔利亚",
       "bursa": "布尔萨",
       "mugla": "穆拉",
       "france": "法国",

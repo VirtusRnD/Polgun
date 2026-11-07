@@ -201,6 +201,9 @@
       "istanbul": {
         "label": "Technoparc de Marmara",
         "desc": "Bureau du Technoparc de Marmara où sont menés les travaux de R&D et d'innovation. Centre de développement de nouveaux produits et d'analyse technique."
+      },
+      "antalya": {
+        "desc": "Soğucaksu Mahallesi, Serik Caddesi No:113, Antalya"
       }
     },
     "story_title": "Nous Concevons l'Avenir"
@@ -876,6 +879,7 @@
     "desc": "Dans nos installations modernes qui reflètent notre force de production, nous produisons selon les normes de qualité les plus élevées, dans le respect de la nature et de l'humain.",
     "names": {
       "istanbul": "Istanbul",
+      "antalya": "Antalya",
       "bursa": "Bursa",
       "mugla": "Muğla",
       "france": "France",

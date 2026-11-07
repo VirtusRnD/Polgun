@@ -201,6 +201,9 @@
       "istanbul": {
         "label": "Marmara Technopark",
         "desc": "Marmara Technopark office where R&D and innovation studies are conducted. New product development and technical analysis center."
+      },
+      "antalya": {
+        "desc": "Soğucaksu Mahallesi, Serik Caddesi No:113, Antalya"
       }
     },
     "story_title": "Designing the Future"
@@ -876,6 +879,7 @@
     "desc": "In our modern facilities that reflect our production power, we manufacture to the highest quality standards, with respect for nature and people.",
     "names": {
       "istanbul": "Istanbul",
+      "antalya": "Antalya",
       "bursa": "Bursa",
       "mugla": "Muğla",
       "france": "France",
