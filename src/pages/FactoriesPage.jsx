@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next'
 import istanbulImg from '../assets/factories/istanbul-factory.avif'
 import bursaImg from '../assets/factories/bursa-factory.avif'
 import muglaImg from '../assets/factories/mugla-factory.avif'
+import antalyaImg from '../assets/factories/antalya-office.webp'
 
 const FACTORIES = [
   {
@@ -17,6 +18,10 @@ const FACTORIES = [
   {
     id: 'mugla',
     image: muglaImg,
+  },
+  {
+    id: 'antalya',
+    image: antalyaImg,
   },
 ]
 
@@ -63,7 +68,7 @@ export default function FactoriesPage({ setActivePage }) {
 
       {/* Factories Grid */}
       <section className="container mx-auto px-6 max-w-7xl py-20 lg:py-28">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {FACTORIES.map((factory) => (
             <div 
               key={factory.id}
